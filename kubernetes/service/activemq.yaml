@@ -32,20 +32,3 @@ spec:
     io.kompose.service: activemq
 status:
   loadBalancer: {}
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    io.kompose.service: activemq-service-external
-  name: activemq-service-external
-spec:
-  type: "LoadBalancer"
-  ports:
-  - name: "8161"
-    port: 8161
-    targetPort: 8161
-  selector:
-    io.kompose.service: activemq
-status:
-  loadBalancer: {}
