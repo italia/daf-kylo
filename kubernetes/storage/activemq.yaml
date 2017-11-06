@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: activemq
+  labels:
+    type: activemq-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 5Gi
+  storageClassName: standard
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /data/activemq
