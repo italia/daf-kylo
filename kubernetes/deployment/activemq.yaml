@@ -1,0 +1,49 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: activemq
+  name: activemq
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        io.kompose.service: activemq
+    spec:
+      containers:
+      - image: 10.98.74.120:5000/tba-activemq:1.0.0-SNAPSHOT
+        name: activemq
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5601
+        - containerPort: 61616
+        - containerPort: 8161
+        - containerPort: 5672
+        - containerPort: 61613
+        - containerPort: 1883
+        - containerPort: 61614
+        resources: {}
+        # livenessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: 8161
+        #   initialDelaySeconds: 5
+        # readinessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: 8161
+        #   initialDelaySeconds: 20
+        #   failureThreshold: 5
+        volumeMounts:
+        - mountPath: /opt/activemq/data
+          name: activemq-data-volume
+      restartPolicy: Always
+      volumes:
+      - name: activemq-data-volume
+        persistentVolumeClaim:
+          claimName: activemq-data-claim
+      imagePullSecrets:
+      - name: regsecret
+status: {}
