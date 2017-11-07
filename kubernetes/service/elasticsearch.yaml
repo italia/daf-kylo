@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: tba-elasticsearch
+  name: tba-elasticsearch
+spec:
+  type: "NodePort"
+  ports:
+  - name: "9200"
+    port: 9200
+    targetPort: 9200
+  - name: "9300"
+    port: 9300
+    targetPort: 9300
+  selector:
+    io.kompose.service: tba-elasticsearch-service
+status:
+  loadBalancer: {}
