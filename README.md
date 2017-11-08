@@ -9,7 +9,7 @@
 | Name 			| Version |
 |:--- 				|:--- 		|
 | ActiveMQ 		| 5.15.1 	|
-| Elasticsearch 	| 2.3.5 	|
+| Elasticsearch 	| 5.6.4 	|
 
 ### Install required dependencies
 
