@@ -29,6 +29,6 @@ spec:
     port: 8161
     targetPort: 8161
   selector:
-    io.kompose.service: tba-activemq-service
+    io.kompose.service: tba-activemq
 status:
   loadBalancer: {}
