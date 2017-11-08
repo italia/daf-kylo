@@ -8,21 +8,29 @@ activemq:
 	docker build -t tba-activemq -f docker/activemq/Dockerfile activemq
 	docker tag tba-activemq $(REGISTRY)/tba-activemq
 
-
 .PHONY: elasticsearch
 elasticsearch:
 	mkdir -p docker/elasticsearch/dist
 	cp -R ../kylok8s/install/install-tar/target/kylo/bin/* docker/elasticsearch/dist
 	docker build -t tba-elasticsearch -f docker/elasticsearch/Dockerfile docker/elasticsearch
 	docker tag tba-elasticsearch $(REGISTRY)/tba-elasticsearch
-	rm -dr docker/elasticsearch/dist 
+	rm -dr docker/elasticsearch/dist
+
 .PHONY: elasticsearch5
 elasticsearch5:
 	mkdir -p docker/elasticsearch5/dist
 	cp -R ../kylok8s/install/install-tar/target/kylo/bin/* docker/elasticsearch5/dist
 	docker build -t tba-elasticsearch5 -f docker/elasticsearch5/Dockerfile docker/elasticsearch5
 	docker tag tba-elasticsearch5 $(REGISTRY)/tba-elasticsearch5
-	rm -dr docker/elasticsearch5/dist 
+	rm -dr docker/elasticsearch5/dist
+
+.PHONY: mysql
+mysql:
+		mkdir -p docker/mysql/dist
+		cp -R ../kylok8s/install/install-tar/target/kylo/setup/sql/mysql/kylo/* docker/mysql/dist
+		docker build -t tba-mysql -f docker/mysql/Dockerfile docker/mysql
+		docker tag tba-mysql $(REGISTRY)/tba-mysql
+		rm -dr docker/mysql/dist
 
 .PHONY: build-kylo
 build-kylo:

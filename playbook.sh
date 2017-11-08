@@ -21,5 +21,11 @@ case $1 in
 	kubectl apply -f kubernetes/deployment/activemq.yaml
 	kubectl apply -f kubernetes/service/activemq.yaml
 	;;
+  mysql)
+	kubectl apply -f kubernetes/storage/mysql.yaml
+	kubectl apply -f kubernetes/pvc/mysql.yaml
+	kubectl apply -f kubernetes/deployment/mysql.yaml
+	kubectl apply -f kubernetes/service/mysql.yaml
+	;;
 
 esac
