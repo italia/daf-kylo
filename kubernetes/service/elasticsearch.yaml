@@ -14,6 +14,6 @@ spec:
     port: 9300
     targetPort: 9300
   selector:
-    io.kompose.service: tba-elasticsearch-service
+    io.kompose.service: tba-elasticsearch
 status:
   loadBalancer: {}

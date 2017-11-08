@@ -16,6 +16,13 @@ elasticsearch:
 	docker build -t tba-elasticsearch -f docker/elasticsearch/Dockerfile docker/elasticsearch
 	docker tag tba-elasticsearch $(REGISTRY)/tba-elasticsearch
 	rm -dr docker/elasticsearch/dist 
+.PHONY: elasticsearch5
+elasticsearch5:
+	mkdir -p docker/elasticsearch5/dist
+	cp -R ../kylok8s/install/install-tar/target/kylo/bin/* docker/elasticsearch5/dist
+	docker build -t tba-elasticsearch5 -f docker/elasticsearch5/Dockerfile docker/elasticsearch5
+	docker tag tba-elasticsearch5 $(REGISTRY)/tba-elasticsearch5
+	rm -dr docker/elasticsearch5/dist 
 
 .PHONY: build-kylo
 build-kylo:
