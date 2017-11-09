@@ -27,5 +27,16 @@ case $1 in
 	kubectl apply -f kubernetes/deployment/mysql.yaml
 	kubectl apply -f kubernetes/service/mysql.yaml
 	;;
-
+  kylo-spark)
+	kubectl apply -f kubernetes/config-map/hadoop-config.yaml
+	kubectl apply -f kubernetes/deployment/kylo-spark.yaml
+	kubectl apply -f kubernetes/service/kylo-spark.yaml
+	;;
+  kylo-services)
+	kubectl apply -f kubernetes/config-map/kylo-services.yaml
+  	kubectl apply -f kubernetes/storage/kylo-services.yaml
+  	kubectl apply -f kubernetes/pvc/kylo-services.yaml
+  	kubectl apply -f kubernetes/deployment/kylo-services.yaml
+  	kubectl apply -f kubernetes/service/kylo-services.yaml
+	;;
 esac

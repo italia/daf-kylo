@@ -14,4 +14,22 @@ case $1 in
 	kubectl delete -f kubernetes/deployment/activemq.yaml
 	kubectl delete -f kubernetes/service/activemq.yaml
 	;;
+  mysql)
+	kubectl delete -f kubernetes/storage/mysql.yaml
+	kubectl delete -f kubernetes/pvc/mysql.yaml
+	kubectl delete -f kubernetes/deployment/mysql.yaml
+	kubectl delete -f kubernetes/service/mysql.yaml
+	;;
+  kylo-spark)
+	kubectl delete -f kubernetes/config-map/hadoop-config.yaml
+	kubectl delete -f kubernetes/deployment/kylo-spark.yaml
+	kubectl delete -f kubernetes/service/kylo-spark.yaml
+	;;
+  kylo-services)
+	kubectl delete -f kubernetes/config-map/kylo-services.yaml
+	kubectl delete -f kubernetes/storage/kylo-services.yaml
+	kubectl delete -f kubernetes/pvc/kylo-services.yaml
+	kubectl delete -f kubernetes/deployment/kylo-services.yaml
+	kubectl delete -f kubernetes/service/kylo-services.yaml
+	;;
 esac
