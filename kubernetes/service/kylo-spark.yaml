@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: tba-kylo-spark
+  name: tba-kylo-spark
+spec:
+  type: "NodePort"
+  ports:
+  - name: "8451"
+    port: 8451
+    targetPort: 8451
+  - name: "8450"
+    port: 8450
+    targetPort: 8450    
+  selector:
+    io.kompose.service: tab-kylo-spark
+status:
+  loadBalancer: {}

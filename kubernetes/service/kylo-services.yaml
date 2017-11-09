@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: tba-kylo-services
+  name: tba-kylo-services
+spec:
+  type: "NodePort"
+  ports:
+  - name: "8420"
+    port: 8420
+    targetPort: 8420
+    nodePort: 31420
+  selector:
+    io.kompose.service: tba-kylo-services
+status:
+  loadBalancer: {}
