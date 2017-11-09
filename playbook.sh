@@ -3,11 +3,11 @@
 case $1 in
 
   all)
-	kubectl apply -f k8s/config-map --recursive
-	kubectl apply -f k8s/storage --recursive
-	kubectl apply -f k8s/pvc --recursive
-	kubectl apply -f k8s/deployment --recursive
-	kubectl apply -f k8s/service --recursive
+	kubectl apply -f kubernetes/config-map --recursive
+	kubectl apply -f kubernetes/storage --recursive
+	kubectl apply -f kubernetes/pvc --recursive
+	kubectl apply -f kubernetes/deployment --recursive
+	kubectl apply -f kubernetes/service --recursive
 	;;
   elasticsearch)
 	kubectl apply -f kubernetes/storage/elasticsearch.yaml
