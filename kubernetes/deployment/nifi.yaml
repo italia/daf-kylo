@@ -1,0 +1,54 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: tba-nifi
+  name: nifi
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: tba-nifi
+    spec:
+      containers:
+      - image: 10.98.74.120:5000/tba-nifi.1.3.0:1.0.0-SNAPSHOT
+        name: tba-nifi
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        - containerPort: 8033 # To test basic templates inside nifi
+        resources: {}
+        volumeMounts:
+        - mountPath: /usr/nifi/data
+          name: nifi-data
+        - mountPath: /usr/nifi/logs
+          name: nifi-logs
+        - mountPath: /usr/nifi/conf
+          name: nifi-config
+        - mountPath: /etc/hadoop/conf
+          name: hadoop-config
+        - mountPath: /usr/nifi/ext-config
+          name: nifi-kylo
+      restartPolicy: Always
+      volumes:
+      - name: nifi-data
+        persistentVolumeClaim:
+          claimName: nifi-data
+      - name: nifi-logs
+        persistentVolumeClaim:
+          claimName: nifi-logs
+      - name: nifi-config
+        configMap:
+          name: nifi
+      - name: hadoop-config
+        configMap:
+          name: hadoop-config
+      - name: nifi-kylo
+        configMap:
+          name: nifi-kylo
+      imagePullSecrets:
+      - name: regsecret
+status: {}

@@ -212,7 +212,7 @@ data:
     # NOTE: For Cloudera hive.datasource.username=hive is required
     hive.userImpersonation.enabled=false
     hive.datasource.driverClassName=org.apache.hive.jdbc.HiveDriver
-    hive.datasource.url=jdbc:hive2://hadoop-master:10000/default
+    hive.datasource.url=jdbc:hive2://localhost:10000/default
     hive.datasource.username=kylo
     hive.datasource.password=
     hive.datasource.validationQuery=show tables 'test'
@@ -221,7 +221,7 @@ data:
     # NOTE: For Cloudera hive.metastore.datasource.password=cloudera is required
     ##Also Clouder  url should be /metastore instead of /hive
     hive.metastore.datasource.driverClassName=org.mariadb.jdbc.Driver
-    hive.metastore.datasource.url=jdbc:mysql://hadoop-master:3306/hive
+    hive.metastore.datasource.url=jdbc:mysql://localhost:3306/hive
     #hive.metastore.datasource.url=jdbc:mysql://localhost:3306/metastore
     hive.metastore.datasource.username=root
     hive.metastore.datasource.password=hadoop
@@ -234,7 +234,7 @@ data:
     modeshape.datasource.password=${spring.datasource.password}
     modeshape.index.dir=/opt/kylo/modeshape/modeshape-local-index
 
-    nifi.rest.host=nifi
+    nifi.rest.host=tba-nifi
     nifi.rest.port=8080
 
     ###

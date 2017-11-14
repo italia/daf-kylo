@@ -39,4 +39,11 @@ case $1 in
 	kubectl delete -f kubernetes/deployment/kylo-ui.yaml
 	kubectl delete -f kubernetes/service/kylo-ui.yaml
 	;;
+  nifi)
+	kubectl delete -f kubernetes/config-map/nifi.yaml
+	kubectl delete -f kubernetes/config-map/nifi-kylo.yaml
+  kubectl delete -f kubernetes/storage/nifi.yaml
+  kubectl delete -f kubernetes/pvc/nifi.yaml
+  kubectl delete -f kubernetes/deployment/nifi.yaml
+  kubectl delete -f kubernetes/service/nifi.yaml
 esac
