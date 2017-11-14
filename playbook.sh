@@ -34,9 +34,16 @@ case $1 in
 	;;
   kylo-services)
 	kubectl apply -f kubernetes/config-map/kylo-services.yaml
-  	kubectl apply -f kubernetes/storage/kylo-services.yaml
-  	kubectl apply -f kubernetes/pvc/kylo-services.yaml
-  	kubectl apply -f kubernetes/deployment/kylo-services.yaml
-  	kubectl apply -f kubernetes/service/kylo-services.yaml
+  kubectl apply -f kubernetes/storage/kylo-services.yaml
+  kubectl apply -f kubernetes/pvc/kylo-services.yaml
+  kubectl apply -f kubernetes/deployment/kylo-services.yaml
+  kubectl apply -f kubernetes/service/kylo-services.yaml
+	;;
+  kylo-ui)
+	kubectl apply -f kubernetes/config-map/kylo-ui.yaml
+  kubectl apply -f kubernetes/storage/kylo-ui.yaml
+  kubectl apply -f kubernetes/pvc/kylo-ui.yaml
+  kubectl apply -f kubernetes/deployment/kylo-ui.yaml
+  kubectl apply -f kubernetes/service/kylo-ui.yaml
 	;;
 esac
