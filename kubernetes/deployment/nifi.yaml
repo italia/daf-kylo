@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     io.kompose.service: tba-nifi
-  name: nifi
+  name: tba-nifi
 spec:
   replicas: 1
   strategy:
