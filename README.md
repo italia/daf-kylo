@@ -35,6 +35,7 @@ Once this is completed build every image:
 `make kylo-spark`
 `make kylo-services`
 
+
 Then push them to repository please have a look at:
 [https://docs.google.com/document/d/1KqeaZ2yj7rofslqzklYTCLb3AxPnV1mzOgSXOuTHTyw/edit?ts=59faf23f&pli=1#heading=h.xbaiz1wufxmp]
 

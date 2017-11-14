@@ -31,5 +31,12 @@ case $1 in
 	kubectl delete -f kubernetes/pvc/kylo-services.yaml
 	kubectl delete -f kubernetes/deployment/kylo-services.yaml
 	kubectl delete -f kubernetes/service/kylo-services.yaml
+  ;;
+  kylo-ui)
+	kubectl delete -f kubernetes/config-map/kylo-ui.yaml
+	kubectl delete -f kubernetes/storage/kylo-ui.yaml
+	kubectl delete -f kubernetes/pvc/kylo-ui.yaml
+	kubectl delete -f kubernetes/deployment/kylo-ui.yaml
+	kubectl delete -f kubernetes/service/kylo-ui.yaml
 	;;
 esac
