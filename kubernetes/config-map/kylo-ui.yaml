@@ -62,7 +62,7 @@ data:
     #
 
     #spring.profiles.active=native,auth-kylo,auth-file
-    spring.profiles.active=native,auth-ldap
+    spring.profiles.active=native,auth-kylo,auth-ldap
 
 
     ###
