@@ -1,0 +1,36 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: tba-mysql
+  name: tba-mysql
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: tba-mysql
+    spec:
+      containers:
+      - env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: hadoop
+        image: 10.98.74.120:5000/tba-mysql.10.3:1.0.0-SNAPSHOT
+        name: tba-mysql
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3306
+        resources: {}
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: tba-mysql-claim0
+      restartPolicy: Always
+      volumes:
+      - name: tba-mysql-claim0
+        persistentVolumeClaim:
+          claimName: tba-mysql-claim0
+      imagePullSecrets:
+      - name: regsecret
+status: {}

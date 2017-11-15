@@ -1,0 +1,40 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: tba-kylo-ui
+  name: tba-kylo-ui
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: tba-kylo-ui
+    spec:
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+      containers:
+      - image: 10.98.74.120:5000/tba-kylo-ui.8.3.3:1.0.0-SNAPSHOT
+        name: tba-kylo-ui
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8400
+        resources: {}
+        volumeMounts:
+        - mountPath: /opt/kylo/kylo-ui/conf
+          name: kylo-ui-config
+        - mountPath: /var/log/kylo-ui
+          name: tba-kylo-ui-logs
+      restartPolicy: Always
+      volumes:
+      - name: tba-kylo-ui-logs
+        persistentVolumeClaim:
+          claimName: tba-kylo-ui-logs
+      - name: kylo-ui-config
+        configMap:
+          name: kylo-ui
+      imagePullSecrets:
+      - name: regsecret
+status: {}
