@@ -62,6 +62,14 @@ kylo-ui:
 			docker tag tba-kylo-ui $(REGISTRY)/tba-kylo-ui.8.3.3:1.0.0-SNAPSHOT
 			rm -dr docker/kylo-ui/dist
 
+.PHONY: nifi
+nifi:
+			mkdir -p docker/nifi/dist
+			cp -R ../kylok8s/install/install-tar/target/kylo/setup/nifi/* docker/nifi/dist
+			docker build -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
+			docker tag tba-nifi $(REGISTRY)/tba-nifi.1.3.0:1.0.0-SNAPSHOT
+			rm -dr docker/nifi/dist
+
 .PHONY: build-kylo
 build-kylo:
 	git clone https://github.com/Teradata/kylo.git ../kylok8s | true

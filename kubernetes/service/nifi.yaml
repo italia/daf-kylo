@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: tba-nifi
+  name: tba-nifi
+spec:
+  type: "NodePort"
+  ports:
+  - name: "8033"
+    port: 8033
+    targetPort: 8033
+    nodePort: 31083
+  - name: "8080"
+    port: 8080
+    targetPort: 8080
+    nodePort: 31080
+  selector:
+    io.kompose.service: tba-nifi
+status:
+  loadBalancer: {}
