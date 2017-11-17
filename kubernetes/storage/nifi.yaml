@@ -12,7 +12,7 @@ spec:
   storageClassName: standard
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /data/nifi
+    path: /tba/data/nifi
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -28,4 +28,4 @@ spec:
   storageClassName: standard
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /data/nifi/logs
+    path: /tba/data/nifi/logs
