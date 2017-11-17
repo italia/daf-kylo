@@ -12,4 +12,4 @@ spec:
   storageClassName: standard
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: /data/kylo-ui/logs
+    path: /tba/data/kylo-ui/logs

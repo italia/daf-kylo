@@ -25,12 +25,12 @@ spec:
         resources: {}
         volumeMounts:
         - mountPath: /var/lib/mysql
-          name: tba-mysql-claim0
+          name: tba-mysql-data
       restartPolicy: Always
       volumes:
-      - name: tba-mysql-claim0
+      - name: tba-mysql-data
         persistentVolumeClaim:
-          claimName: tba-mysql-claim0
+          claimName: tba-mysql-data
       imagePullSecrets:
       - name: regsecret
 status: {}

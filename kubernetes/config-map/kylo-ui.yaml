@@ -61,6 +61,7 @@ data:
     # Other properties are in the ui-app/application.properties
     #
 
+    #Default profile
     #spring.profiles.active=native,auth-kylo,auth-file
     spring.profiles.active=native,auth-kylo,auth-ldap
 
