@@ -26,13 +26,13 @@ spec:
         volumeMounts:
         - name: glusterfsvol
           mountPath: /var/lib/mysql
-          subPath: tba/mysql/data
+          subPath: tba/evergreen/mysql/data
           readOnly: false
       restartPolicy: Always
       volumes:
       - name: glusterfsvol
         persistentVolumeClaim:
-          claimName: gluster-claim          
+          claimName: gluster-claim
       imagePullSecrets:
       - name: regsecret
 status: {}
