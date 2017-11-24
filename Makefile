@@ -43,32 +43,41 @@ kylo-spark:
 .PHONY: kylo-services
 kylo-services:
 		mkdir -p docker/kylo-services/dist/kylo-services && \
+		if [ ! -f ../kylok8s/install/install-tar/target/kylo/kylo-services/lib/postgresql-42.1.4.jar ] ;then curl -o ../kylok8s/install/install-tar/target/kylo/kylo-services/lib/postgresql-42.1.4.jar http://central.maven.org/maven2/org/postgresql/postgresql/42.1.4/postgresql-42.1.4.jar  ;fi
 		cp -R ../kylok8s/install/install-tar/target/kylo/kylo-services/lib docker/kylo-services/dist/kylo-services
 		cp -R ../kylok8s/install/install-tar/target/kylo/kylo-services/plugin docker/kylo-services/dist/kylo-services
 		cp -R ../kylok8s/install/install-tar/target/kylo/bin docker/kylo-services/dist
 		cp -R ../kylok8s/install/install-tar/target/kylo/lib docker/kylo-services/dist
 		docker build -t tba-kylo-services -f docker/kylo-services/Dockerfile docker/kylo-services
-		docker tag tba-kylo-services $(REGISTRY)/tba-kylo-services.8.3.3:1.0.0-SNAPSHOT
+		docker tag tba-kylo-services $(REGISTRY)/tba-kylo-services.8.3.3:1.2.0-SNAPSHOT
 		rm -dr docker/kylo-services/dist
 
 .PHONY: kylo-ui
 kylo-ui:
-			mkdir -p docker/kylo-ui/dist/kylo-ui
-			cp -R ../kylok8s/install/install-tar/target/kylo/kylo-ui/lib docker/kylo-ui/dist/kylo-ui
-			cp -R ../kylok8s/install/install-tar/target/kylo/kylo-ui/plugin docker/kylo-ui/dist/kylo-ui
-			cp -R ../kylok8s/install/install-tar/target/kylo/bin docker/kylo-ui/dist
-			cp -R ../kylok8s/install/install-tar/target/kylo/lib docker/kylo-ui/dist
-			docker build -t tba-kylo-ui -f docker/kylo-ui/Dockerfile docker/kylo-ui
-			docker tag tba-kylo-ui $(REGISTRY)/tba-kylo-ui.8.3.3:1.0.0-SNAPSHOT
-			rm -dr docker/kylo-ui/dist
+		mkdir -p docker/kylo-ui/dist/kylo-ui
+		cp -R ../kylok8s/install/install-tar/target/kylo/kylo-ui/lib docker/kylo-ui/dist/kylo-ui
+		cp -R ../kylok8s/install/install-tar/target/kylo/kylo-ui/plugin docker/kylo-ui/dist/kylo-ui
+		cp -R ../kylok8s/install/install-tar/target/kylo/bin docker/kylo-ui/dist
+		cp -R ../kylok8s/install/install-tar/target/kylo/lib docker/kylo-ui/dist
+		docker build -t tba-kylo-ui -f docker/kylo-ui/Dockerfile docker/kylo-ui
+		docker tag tba-kylo-ui $(REGISTRY)/tba-kylo-ui.8.3.3:1.0.0-SNAPSHOT
+		rm -dr docker/kylo-ui/dist
 
 .PHONY: nifi
 nifi:
-			mkdir -p docker/nifi/dist
-			cp -R ../kylok8s/install/install-tar/target/kylo/setup/nifi/* docker/nifi/dist
-			docker build -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
-			docker tag tba-nifi $(REGISTRY)/tba-nifi.1.3.0:1.0.0-SNAPSHOT
-			rm -dr docker/nifi/dist
+		mkdir -p docker/nifi/dist
+		cp -R ../kylok8s/install/install-tar/target/kylo/setup/nifi/* docker/nifi/dist
+		docker build -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
+		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.3.0:1.4.0-SNAPSHOT
+		rm -dr docker/nifi/dist
+
+.PHONY: nifi-tba-daf
+nifi-tba-daf:
+		mkdir -p docker/nifi-tba-daf/dist
+		cp -R ../kylok8s/install/install-tar/target/kylo/setup/nifi/* docker/nifi-tba-daf/dist
+		docker build -t tba-nifi-daf -f docker/nifi-tba-daf/Dockerfile docker/nifi-tba-daf
+		docker tag tba-nifi-daf $(REGISTRY)/tba-nifi-daf.1.3.0:2.0.0-SNAPSHOT
+		rm -dr docker/nifi-tba-daf/dist
 
 .PHONY: build-kylo
 build-kylo:

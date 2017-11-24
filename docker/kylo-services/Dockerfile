@@ -4,7 +4,7 @@ FROM openjdk:alpine
 ENV GLIBC_VERSION=2.25-r0
 
 # Install required packages
-RUN apk add --update --no-cache wget mysql-client ca-certificates bash java-snappy python py-pip && \
+RUN apk add --update --no-cache wget mysql-client ca-certificates bash java-snappy python py-pip krb5 sudo && \
     update-ca-certificates
 
 # Install glibc
@@ -20,6 +20,15 @@ RUN rm -f /opt/kylo/kylo-services/lib/jetty*
 RUN rm -f /opt/kylo/kylo-services/lib/servlet-api*
 ADD dist/lib /opt/kylo/lib
 ADD dist/bin /opt/kylo/bin
+
+#Create kylo user and groups
+RUN adduser -S -s /bin/bash kylo
+RUN addgroup kylo
+RUN adduser kylo kylo
+
+#Grant ownership to kylo over kylo :)
+RUN chown -R kylo:kylo /opt/kylo
+
 
 EXPOSE 8420
 # RUN kylo-service

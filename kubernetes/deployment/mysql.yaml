@@ -24,13 +24,15 @@ spec:
         - containerPort: 3306
         resources: {}
         volumeMounts:
-        - mountPath: /var/lib/mysql
-          name: tba-mysql-data
+        - name: glusterfsvol
+          mountPath: /var/lib/mysql
+          subPath: tba/mysql/data
+          readOnly: false
       restartPolicy: Always
       volumes:
-      - name: tba-mysql-data
+      - name: glusterfsvol
         persistentVolumeClaim:
-          claimName: tba-mysql-data
+          claimName: gluster-claim          
       imagePullSecrets:
       - name: regsecret
 status: {}
