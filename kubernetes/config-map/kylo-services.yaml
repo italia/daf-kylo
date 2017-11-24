@@ -84,8 +84,8 @@ data:
     ###  - For NiFi 1.2.x or 1.3.x:    nifi-v1.2
 
     #Default profile
-    #spring.profiles.include=native,nifi-v1.2,auth-file,auth-kylo,search-esr,jms-activemq
-    spring.profiles.include=native,nifi-v1.2,auth-ldap,auth-kylo,search-esr,jms-activemq
+    spring.profiles.include=native,nifi-v1.2,auth-file,auth-kylo,search-esr,jms-activemq
+    #spring.profiles.include=native,nifi-v1.2,auth-ldap,auth-kylo,search-esr,jms-activemq
 
 
 
@@ -214,19 +214,19 @@ data:
     # NOTE: For Cloudera hive.datasource.username=hive is required
     hive.userImpersonation.enabled=false
     hive.datasource.driverClassName=org.apache.hive.jdbc.HiveDriver
-    hive.datasource.url=jdbc:hive2://localhost:10000/default
-    hive.datasource.username=kylo
-    hive.datasource.password=
+    hive.datasource.url=jdbc:hive2://master.platform.daf.gov.it:10000/default;principal=hive/master.platform.daf.gov.it@DAF.GOV.IT
+    hive.datasource.username=daf
+    hive.datasource.password=xxxxxx
     hive.datasource.validationQuery=show tables 'test'
 
 
     # NOTE: For Cloudera hive.metastore.datasource.password=cloudera is required
     ##Also Clouder  url should be /metastore instead of /hive
-    hive.metastore.datasource.driverClassName=org.mariadb.jdbc.Driver
-    hive.metastore.datasource.url=jdbc:mysql://localhost:3306/hive
+    hive.metastore.datasource.driverClassName=org.postgresql.Driver
+    hive.metastore.datasource.url=jdbc:postgresql://master/metastore
     #hive.metastore.datasource.url=jdbc:mysql://localhost:3306/metastore
-    hive.metastore.datasource.username=root
-    hive.metastore.datasource.password=hadoop
+    hive.metastore.datasource.username=hive
+    hive.metastore.datasource.password=xxxxxx
     hive.metastore.datasource.validationQuery=SELECT 1
     hive.metastore.datasource.testOnBorrow=true
 
@@ -258,10 +258,10 @@ data:
     #nifi.rest.keystoreType=PKCS12
     #
 
-    kerberos.hive.kerberosEnabled=false
-    #kerberos.hive.hadoopConfigurationResources=/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml
-    #kerberos.hive.kerberosPrincipal=hive/sandbox.hortonworks.com
-    #kerberos.hive.keytabLocation=/etc/security/keytabs/hive-thinkbig.headless.keytab
+    kerberos.hive.kerberosEnabled=true
+    kerberos.hive.hadoopConfigurationResources=/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml
+    kerberos.hive.kerberosPrincipal=daf@DAF.GOV.IT
+    kerberos.hive.keytabLocation=/etc/security/daf.keytab
 
     ## used to map Nifi Controller Service connections to the User Interface
     ## naming convention for the property is nifi.service.NIFI_CONTROLLER_SERVICE_NAME.NIFI_PROPERTY_NAME
@@ -273,12 +273,12 @@ data:
     nifi.service.kylo_mysql.database_user=root
     nifi.service.kylo_mysql.password=hadoop
 
-    nifi.service.hive_thrift_service.database_connection_url=jdbc:hive2://hadoop-master:10000/default
-    #nifi.service.hive_thrift_service.kerberos_principal=nifi
-    #nifi.service.hive_thrift_service.kerberos_keytab=/etc/security/keytabs/nifi.headless.keytab
-    #nifi.service.hive_thrift_service.hadoop_configuration_resources=/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml
+    nifi.service.hive_thrift_service.database_connection_url=jdbc:hive2://master.platform.daf.gov.it:10000/default;principal=hive/master.platform.daf.gov.it@DAF.GOV.IT
+    nifi.service.hive_thrift_service.kerberos_principal=nifi
+    nifi.service.hive_thrift_service.kerberos_keytab=/usr/nifi/daf.keytab
+    nifi.service.hive_thrift_service.hadoop_configuration_resources=/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml
 
-    nifi.service.kylo_metadata_service.rest_client_url=http://kylo-ui:8400/proxy/v1/metadata
+    nifi.service.kylo_metadata_service.rest_client_url=http://tba-kylo-ui:8400/proxy/v1/metadata/feed
     nifi.service.kylo_metadata_service.rest_client_password=thinkbig
 
     jms.client.id=thinkbig.feedmgr
@@ -293,25 +293,25 @@ data:
     config.metadata.url=http://kylo-ui:8400/proxy/v1/metadata
 
     ## Spark configuration
-    nifi.executesparkjob.sparkhome=/usr/hdp/current/spark-client
+    nifi.executesparkjob.sparkhome=/opt/cloudera/parcels/spark2
     nifi.executesparkjob.sparkmaster=local
     nifi.executesparkjob.driver_memory=1024m
     nifi.executesparkjob.number_of_executors=1
     nifi.executesparkjob.executor_cores=1
     ##comment the line below on cloudera
-    config.spark.validateAndSplitRecords.extraJars=/usr/hdp/current/hive-webhcat/share/hcatalog/hive-hcatalog-core.jar
+    #config.spark.validateAndSplitRecords.extraJars=/usr/hdp/current/hive-webhcat/share/hcatalog/hive-hcatalog-core.jar
     #config.spark.version=2
 
     ## Specify to override the default HDFS locations for feed tables and multi-tenancy.
 
     # Root HDFS locations for new raw files
-    config.hdfs.ingest.root=/etl
+    config.hdfs.ingest.root=/app/tba/etl
     # Root Archive location for new raw files
-    config.hdfs.archive.root=/archive
+    config.hdfs.archive.root=/app/tba/archive
     # Root HDFS location for Hive ingest processing tables (raw,valid,invalid)
-    config.hive.ingest.root=/model.db
+    config.hive.ingest.root=/app/tba/model.db
     # Root HDFS location for Hive profile table
-    config.hive.profile.root=/model.db
+    config.hive.profile.root=/app/tba/model.db
     # Root HDFS location for Hive master table
     config.hive.master.root=/app/warehouse
 
@@ -322,13 +322,13 @@ data:
     config.elasticsearch.jms.url=tcp://tba-activemq:61616
 
     # Set the nifi home folder
-    config.nifi.home=/opt/nifi
+    config.nifi.home=/usr/nifi
 
 
     #example of replacing global properties
-    #nifi.all_processors.kerberos_principal=nifi
-    #nifi.all_processors.kerberos_keytab=/etc/security/keytabs/nifi.headless.keytab
-    #nifi.all_processors.hadoop_configuration_resources=/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml
+    nifi.all_processors.kerberos_principal=daf@DAF.GOV.IT
+    nifi.all_processors.kerberos_keytab=/usr/nifi/daf.keytab
+    nifi.all_processors.hadoop_configuration_resources=/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml
 
 
     ##cloudera config
@@ -397,7 +397,7 @@ data:
     nifi.service.kylo_metadata_service.rest_client_user_name=dladmin
 
     nifi.service.jmsconnectionfactoryprovider.mq_client_libraries_path_(i.e.,_/usr/jms/lib)=/usr/nifi/activemq
-    nifi.service.jmsconnectionfactoryprovider.broker_uri=tcp://activemq:61616
+    nifi.service.jmsconnectionfactoryprovider.broker_uri=tcp://tba-activemq:61616
 
 
     nifi.service.hive_thrift_service.database_user=root

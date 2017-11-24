@@ -16,7 +16,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: 10.98.74.120:5000/tba-kylo-services.8.3.3:1.0.0-SNAPSHOT
+      - image: 10.98.74.120:5000/tba-kylo-services.8.3.3:1.2.0-SNAPSHOT
         name: tba-kylo-services
         imagePullPolicy: IfNotPresent
         ports:
@@ -27,8 +27,18 @@ spec:
           name: kylo-services-config
         - mountPath: /var/log/kylo-services
           name: tba-kylo-services-logs
-        - mountPath: /etc/hadoop/conf
-          name: hadoop-config
+        - name: glusterfsvol
+          mountPath: /etc/security/daf.keytab
+          subPath: tba/nifi/daf.keytab
+          readOnly: true
+        - name: krb5conf
+          mountPath: /etc/krb5.conf
+          readOnly: true
+        - name: hadoopconf
+          mountPath: /etc/hadoop/conf
+          readOnly: true
+        - name: daf-root-ca
+          mountPath: /etc/ssl/certs
       restartPolicy: Always
       volumes:
       - name: tba-kylo-services-logs
@@ -37,9 +47,21 @@ spec:
       - name: kylo-services-config
         configMap:
           name: kylo-services
-      - name: hadoop-config
-        configMap:
-          name: hadoop-config
+      - name: glusterfsvol
+        persistentVolumeClaim:
+          claimName: gluster-claim
+      - name: hosts
+        hostPath:
+          path: /etc/hosts
+      - name: krb5conf
+        hostPath:
+          path: /etc/krb5.conf
+      - name: hadoopconf
+        hostPath:
+          path: /etc/hadoop/conf
+      - name: daf-root-ca
+        secret:
+          secretName: daf-root-ca
       imagePullSecrets:
       - name: regsecret
 status: {}
