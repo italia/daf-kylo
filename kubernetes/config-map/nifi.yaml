@@ -198,11 +198,11 @@ data:
     nifi.zookeeper.root.node=/nifi
 
     # kerberos #
-    nifi.kerberos.krb5.file=
+    nifi.kerberos.krb5.file=/etc/krb5.conf
 
     # kerberos service principal #
-    nifi.kerberos.service.principal=
-    nifi.kerberos.service.keytab.location=
+    nifi.kerberos.service.principal=daf@PLATFORM.DAF.LOCAL
+    nifi.kerberos.service.keytab.location=/usr/nifi/daf.keytab
 
     # kerberos spnego principal #
     nifi.kerberos.spnego.principal=
