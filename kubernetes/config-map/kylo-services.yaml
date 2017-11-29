@@ -217,7 +217,7 @@ data:
     hive.datasource.url=jdbc:hive2://master.platform.daf.gov.it:10000/default;principal=hive/master.platform.daf.gov.it@DAF.GOV.IT
     hive.datasource.username=daf
     hive.datasource.password=daf_user_31415
-    hive.datasource.validationQuery=show tables 'test'
+    hive.datasource.validationQuery=show tables
 
 
     # NOTE: For Cloudera hive.metastore.datasource.password=cloudera is required
@@ -300,7 +300,7 @@ data:
     nifi.executesparkjob.executor_cores=1
     ##comment the line below on cloudera
     #config.spark.validateAndSplitRecords.extraJars=/usr/hdp/current/hive-webhcat/share/hcatalog/hive-hcatalog-core.jar
-    #config.spark.version=2
+    config.spark.version=2
 
     ## Specify to override the default HDFS locations for feed tables and multi-tenancy.
 
