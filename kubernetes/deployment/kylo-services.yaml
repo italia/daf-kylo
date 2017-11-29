@@ -23,6 +23,13 @@ spec:
           #postStart:
             #exec:
              #command: ["/bin/sh", "-c", "/opt/kylo/kylo-services/spark-shell/kylo-spark-shell-starter.sh"]
+        lifecycle:
+          postStart:
+            exec:
+              command:
+                - "sh"
+                - "-c"
+                - "/opt/kylo/kylo-services/spark-shell/kylo-spark-shell-starter.sh &"
         ports:
         - containerPort: 8420
         - containerPort: 8450
