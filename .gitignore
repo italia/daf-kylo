@@ -1,7 +1,11 @@
+.idea
+.classpath
+.project
+.settings
+.factorypath
+target
+bin
 .DS_Store
-docker/.DS_Store
-kubernetes/.DS_Store
-kubernetes/deployment/.DS_Store
-kubernetes/pvc/.DS_Store
-kubernetes/service/.DS_Store
-kubernetes/storage/.DS_Store
+*.iml
+*.bak
+*.swp
