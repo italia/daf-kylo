@@ -26,13 +26,14 @@ spec:
         - containerPort: 61614
         resources: {}
         volumeMounts:
-        - mountPath: /opt/activemq/data
-          name: activemq-data-volume
+        - name: glusterfsvol
+          mountPath: /opt/activemq/data
+          subPath: tba/evergreen/activemq/data
       restartPolicy: Always
       volumes:
-      - name: activemq-data-volume
+      - name: glusterfsvol
         persistentVolumeClaim:
-          claimName: tba-activemq-claim0
+          claimName: gluster-claim
       imagePullSecrets:
       - name: regsecret
 status: {}
