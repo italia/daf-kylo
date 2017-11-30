@@ -217,7 +217,7 @@ data:
     hive.datasource.url=jdbc:hive2://master.platform.daf.gov.it:10000/default;principal=hive/master.platform.daf.gov.it@DAF.GOV.IT
     hive.datasource.username=daf
     hive.datasource.password=xxxxxx
-    hive.datasource.validationQuery=show tables 'test'
+    hive.datasource.validationQuery=show tables
 
 
     # NOTE: For Cloudera hive.metastore.datasource.password=cloudera is required
@@ -278,7 +278,7 @@ data:
     nifi.service.hive_thrift_service.kerberos_keytab=/usr/nifi/daf.keytab
     nifi.service.hive_thrift_service.hadoop_configuration_resources=/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml
 
-    nifi.service.kylo_metadata_service.rest_client_url=http://tba-kylo-ui:8400/proxy/v1/metadata/feed
+    nifi.service.kylo_metadata_service.rest_client_url=http://tba-kylo-ui:8400/proxy/v1/metadata
     nifi.service.kylo_metadata_service.rest_client_password=thinkbig
 
     jms.client.id=thinkbig.feedmgr
@@ -293,14 +293,14 @@ data:
     config.metadata.url=http://kylo-ui:8400/proxy/v1/metadata
 
     ## Spark configuration
-    nifi.executesparkjob.sparkhome=/opt/cloudera/parcels/spark2
-    nifi.executesparkjob.sparkmaster=local
+    nifi.executesparkjob.sparkhome=/opt/cloudera/parcels/SPARK2/lib/spark2
+    nifi.executesparkjob.sparkmaster=yarn
     nifi.executesparkjob.driver_memory=1024m
     nifi.executesparkjob.number_of_executors=1
     nifi.executesparkjob.executor_cores=1
     ##comment the line below on cloudera
     #config.spark.validateAndSplitRecords.extraJars=/usr/hdp/current/hive-webhcat/share/hcatalog/hive-hcatalog-core.jar
-    #config.spark.version=2
+    config.spark.version=2
 
     ## Specify to override the default HDFS locations for feed tables and multi-tenancy.
 
@@ -333,7 +333,6 @@ data:
 
     ##cloudera config
     #config.hive.schema=metastore
-    #nifi.executesparkjob.sparkhome=/usr/lib/spark
 
 
     ## how often should SLAs be checked
@@ -466,7 +465,7 @@ data:
     # Indicates how to communicate with the Spark Shell process when it is managed
     # externally using an init script or systemd. Comment the below lines to have
     # Kylo manage the Spark Shell process.
-    spark.shell.server.host = tba-kylo-spark
+    spark.shell.server.host = localhost
     spark.shell.server.port = 8450
   solrsearch.properties: |-
     ###

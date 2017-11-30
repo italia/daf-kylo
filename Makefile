@@ -37,7 +37,7 @@ kylo-spark:
 	mkdir -p docker/kylo-spark/dist/kylo-services && \
 		cp -R ../kylok8s/install/install-tar/target/kylo/kylo-services/lib/app docker/kylo-spark/dist/kylo-services/lib
 	docker build -t tba-kylo-spark -f docker/kylo-spark/Dockerfile docker/kylo-spark
-	docker tag tba-kylo-spark $(REGISTRY)/tba-kylo-spark.2.2.0:1.0.0-SNAPSHOT
+	docker tag tba-kylo-spark $(REGISTRY)/tba-kylo-spark.2.2.0:1.1.0-SNAPSHOT
 	rm -dr docker/kylo-spark/dist
 
 .PHONY: kylo-services
@@ -49,7 +49,7 @@ kylo-services:
 		cp -R ../kylok8s/install/install-tar/target/kylo/bin docker/kylo-services/dist
 		cp -R ../kylok8s/install/install-tar/target/kylo/lib docker/kylo-services/dist
 		docker build -t tba-kylo-services -f docker/kylo-services/Dockerfile docker/kylo-services
-		docker tag tba-kylo-services $(REGISTRY)/tba-kylo-services.8.3.3:1.2.0-SNAPSHOT
+		docker tag tba-kylo-services $(REGISTRY)/tba-kylo-services.8.3.3:1.3.0-SNAPSHOT
 		rm -dr docker/kylo-services/dist
 
 .PHONY: kylo-ui
@@ -68,7 +68,7 @@ nifi:
 		mkdir -p docker/nifi/dist
 		cp -R ../kylok8s/install/install-tar/target/kylo/setup/nifi/* docker/nifi/dist
 		docker build -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
-		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.3.0:1.4.0-SNAPSHOT
+		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.3.0:1.5.0-SNAPSHOT
 		rm -dr docker/nifi/dist
 
 .PHONY: nifi-tba-daf

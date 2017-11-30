@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kylo-services-spark
+  namespace: default
+data:
+  kylo-spark-shell-starter.sh: |-
+    kinit -k -t /etc/security/daf.keytab daf@DAF.GOV.IT
+    /opt/cloudera/parcels/SPARK2/bin/spark-submit  --master  yarn  --conf  spark.driver.userClassPathFirst=true  --class  com.thinkbiganalytics.spark.SparkShellApp  --driver-class-path  /opt/kylo/kylo-services/conf:/opt/kylo/drivers/mariadb-java-client-1.5.7.jar  --driver-java-options  -Dlog4j.configuration=log4j-spark.properties  /opt/kylo/kylo-services/lib/app/kylo-spark-shell-client-v2-0.8.3.3.jar &

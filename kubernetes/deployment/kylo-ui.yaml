@@ -26,12 +26,13 @@ spec:
         - mountPath: /opt/kylo/kylo-ui/conf
           name: kylo-ui-config
         - mountPath: /var/log/kylo-ui
-          name: tba-kylo-ui-logs
+          subPath: tba/evergreen/kylo-ui/log
+          name: glusterfsvol
       restartPolicy: Always
       volumes:
-      - name: tba-kylo-ui-logs
+      - name: glusterfsvol
         persistentVolumeClaim:
-          claimName: tba-kylo-ui-logs
+          claimName: gluster-claim
       - name: kylo-ui-config
         configMap:
           name: kylo-ui

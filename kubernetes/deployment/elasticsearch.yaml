@@ -30,13 +30,14 @@ spec:
         - containerPort: 9300
         resources: {}
         volumeMounts:
-        - mountPath: /usr/share/elasticsearch/data
-          name: elasticsearch-claim0
+        - name: glusterfsvol
+          mountPath: /usr/share/elasticsearch/data
+          subPath: tba/evergreen/elasticsearch/data
       restartPolicy: Always
       volumes:
-      - name: elasticsearch-claim0
+      - name: glusterfsvol
         persistentVolumeClaim:
-          claimName: tba-elasticsearch-claim0
+          claimName: gluster-claim
       imagePullSecrets:
       - name: regsecret
 

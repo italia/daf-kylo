@@ -4,7 +4,7 @@ FROM openjdk:alpine
 ENV GLIBC_VERSION=2.25-r0
 
 # Install required packages
-RUN apk add --update --no-cache wget mysql-client ca-certificates bash java-snappy python py-pip krb5 sudo && \
+RUN apk add --update --no-cache wget mysql-client ca-certificates bash java-snappy python py-pip krb5 sudo coreutils && \
     update-ca-certificates
 
 # Install glibc

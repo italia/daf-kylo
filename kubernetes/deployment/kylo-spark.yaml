@@ -14,21 +14,64 @@ spec:
         io.kompose.service: tab-kylo-spark
     spec:
       containers:
-      - image: 10.98.74.120:5000/tba-kylo-spark.2.2.0:1.0.0-SNAPSHOT
+      - image: 10.98.74.120:5000/tba-kylo-spark.2.2.0:1.1.0-SNAPSHOT
         name: tab-kylo-spark
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 8451
         - containerPort: 8450
         resources: {}
         volumeMounts:
-        - mountPath: /etc/hadoop/conf
-          name: hadoop-config
+        - name: sparkhome
+          mountPath: /opt/cloudera/parcels/
+          readOnly: true
+        - name: sparkconf
+          mountPath: /etc/spark2/
+          readOnly: true
+        - name: alternatives
+          mountPath: /etc/alternatives/
+          readOnly: true
+        - name: glusterfsvol
+          mountPath: /usr/security/daf.keytab
+          subPath: tba/security/daf.keytab
+          readOnly: true
+        - name: hosts
+          mountPath: /etc/extra_hosts
+          readOnly: true
+        - name: krb5conf
+          mountPath: /etc/krb5.conf
+          readOnly: true
+        - name: hadoop
+          mountPath: /etc/hadoop
+          readOnly: true
+        - name: daf-root-ca
+          mountPath: /etc/ssl/certs
       restartPolicy: Always
       volumes:
-      - name: hadoop-config
-        configMap:
-          name: hadoop-config
+        - name: glusterfsvol
+          persistentVolumeClaim:
+            claimName: gluster-claim
+        - name: hosts
+          hostPath:
+            path: /etc/hosts
+        - name: krb5conf
+          hostPath:
+            path: /etc/krb5.conf
+        - name: hadoop
+          hostPath:
+            path: /etc/hadoop
+        - name: sparkhome
+          hostPath:
+            path: /opt/cloudera/parcels/
+        - name: alternatives
+          hostPath:
+            path: /etc/alternatives/
+        - name: sparkconf
+          hostPath:
+            path: /etc/spark2/
+        - name: daf-root-ca
+          secret:
+            secretName: daf-root-ca
       imagePullSecrets:
       - name: regsecret
 status: {}

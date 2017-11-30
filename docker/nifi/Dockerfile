@@ -70,7 +70,7 @@ RUN wget http://central.maven.org/maven2/org/mariadb/jdbc/mariadb-java-client/2.
 EXPOSE 8080
 
 # krb5-user
-RUN apk add krb5-libs krb5 sudo coreutils && \
+RUN apk add krb5-libs krb5 sudo coreutils python && \
 # sasl2-bin libsasl2-2 libsasl2-modules libsasl2-dev libldap2-dev \
 apk add cyrus-sasl  && \
 
