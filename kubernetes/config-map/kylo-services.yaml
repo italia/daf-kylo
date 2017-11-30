@@ -216,7 +216,7 @@ data:
     hive.datasource.driverClassName=org.apache.hive.jdbc.HiveDriver
     hive.datasource.url=jdbc:hive2://master.platform.daf.gov.it:10000/default;principal=hive/master.platform.daf.gov.it@DAF.GOV.IT
     hive.datasource.username=daf
-    hive.datasource.password=daf_user_31415
+    hive.datasource.password=xxxxxx
     hive.datasource.validationQuery=show tables
 
 
@@ -226,7 +226,7 @@ data:
     hive.metastore.datasource.url=jdbc:postgresql://master/metastore
     #hive.metastore.datasource.url=jdbc:mysql://localhost:3306/metastore
     hive.metastore.datasource.username=hive
-    hive.metastore.datasource.password=ohk4ieC6
+    hive.metastore.datasource.password=xxxxxx
     hive.metastore.datasource.validationQuery=SELECT 1
     hive.metastore.datasource.testOnBorrow=true
 
