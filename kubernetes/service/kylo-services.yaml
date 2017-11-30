@@ -11,6 +11,14 @@ spec:
     port: 8420
     targetPort: 8420
     nodePort: 31420
+  - name: "8450"
+    port: 8450
+    targetPort: 8450
+    nodePort: 31429
+  - name: "8451"
+    port: 8451
+    targetPort: 8451
+    nodePort: 31493
   selector:
     io.kompose.service: tba-kylo-services
 status:
