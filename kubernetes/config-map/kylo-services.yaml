@@ -157,8 +157,8 @@ data:
 
     ## auth-ad: If this profile is active then these properties should uncommented and updated appropriately
 
-    #security.auth.ad.server.uri=ldap://example.com/
-    #security.auth.ad.server.domain=test.example.com
+    #security.auth.ad.server.uri=ldap://idm.daf.gov.it
+    #security.auth.ad.server.domain=cn=users,cn=accounts,dc=daf,dc=gov,dc=it
     #security.auth.ad.server.searchFilter=(&(objectClass=user)(sAMAccountName={1}))
     #security.auth.ad.user.enableGroups=true
     ## group attribute patterns are separated by '|'
@@ -441,8 +441,8 @@ data:
     # Indicates how to communicate with the Spark Shell process when it is managed
     # externally using an init script or systemd. Comment the below lines to have
     # Kylo manage the Spark Shell process.
-    spark.shell.server.host = localhost
-    spark.shell.server.port = 8450
+    #spark.shell.server.host = localhost
+    #spark.shell.server.port = 8450
   solrsearch.properties: |-
     ###
     # #%L
