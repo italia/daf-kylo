@@ -79,13 +79,10 @@ data:
     # -Dspring.profiles.active=hdp24,gmail,cdh
     # Extra profiles will add to this set of profiles and override properties given in this file
     ### Indicate the NiFi version you are using with the correct spring profile.
-    ###  - For NiFi 1.0.x:   nifi-v1
-    ###  - For NiFi 1.1.x:  nifi-v1.1
-    ###  - For NiFi 1.2.x or 1.3.x:    nifi-v1.2
-
-    #Default profile
-    spring.profiles.include=native,nifi-v1.2,auth-file,auth-kylo,search-esr,jms-activemq
-    #spring.profiles.include=native,nifi-v1.2,auth-ldap,auth-kylo,search-esr,jms-activemq
+    ###  - For NiFi 1.0.x:                      nifi-v1
+    ###  - For NiFi 1.1.x:                      nifi-v1.1
+    ###  - For NiFi 1.2.x or 1.3.x or 1.4.x:    nifi-v1.2
+    spring.profiles.include=native,nifi-v1.2,auth-kylo,auth-file,search-esr,jms-activemq
 
 
 
@@ -136,15 +133,15 @@ data:
 
     security.auth.file.users=file:///opt/kylo/kylo-services/conf/users.properties
     security.auth.file.groups=file:///opt/kylo/kylo-services/conf/groups.properties
-    #security.auth.file.password.hash.enabled=false
-    #security.auth.file.password.hash.algorithm=MD5
-    #security.auth.file.password.hash.encoding=base64
+    security.auth.file.password.hash.enabled=false
+    security.auth.file.password.hash.algorithm=MD5
+    security.auth.file.password.hash.encoding=base64
 
     ## auth-simple: If this profile is active these authenticationService properties are used:
 
-    #authenticationService.username=dladmin
-    #authenticationService.password={cipher}52fd39e4e4f7d0f6a91989efbfa870f1a543550401e6ab0b17f3059c1ada9b5f
-    #authenticationService.password=thinkbig
+    #authenticationService.username=
+    #authenticationService.password={cipher}
+    #authenticationService.password=
 
     ## auth-ldap: If this profile is active then these properties should uncommented and updated appropriately
 
@@ -160,8 +157,8 @@ data:
 
     ## auth-ad: If this profile is active then these properties should uncommented and updated appropriately
 
-    #security.auth.ad.server.uri=ldap://idm.daf.gov.it
-    #security.auth.ad.server.domain=cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    #security.auth.ad.server.uri=ldap://example.com/
+    #security.auth.ad.server.domain=test.example.com
     #security.auth.ad.server.searchFilter=(&(objectClass=user)(sAMAccountName={1}))
     #security.auth.ad.user.enableGroups=true
     ## group attribute patterns are separated by '|'
@@ -174,11 +171,11 @@ data:
     # server.port=8443
     ##### ADD IF SSL is needed
     ###
-    #server.ssl.key-store=/Users/sr186054/tools/test-ssl/test/localhost/keystore.jks
-    #server.ssl.key-store-password=sxkJ96yw2ZZktkVFtflln2IqjxkXPCD+vh3gAPDhQ18
+    #server.ssl.key-store=
+    #server.ssl.key-store-password=
     #server.ssl.key-store-type=jks
-    #server.ssl.trust-store=/Users/sr186054/tools/test-ssl/test/localhost/truststore.jks
-    #server.ssl.trust-store-password=S1+cc2FKMzk2td/p6OJE0U6FUM3fV5jnlrYj46CoUSU
+    #server.ssl.trust-store=
+    #server.ssl.trust-store-password=
     #server.ssl.trust-store-type=JKS
 
     #
@@ -202,7 +199,7 @@ data:
     #spring.jpa.show-sql=true
     #spring.jpa.hibernate.ddl-auto=validate
 
-    # NOTE: For Cloudera metadata.datasource.password=cloudera is required
+
     metadata.datasource.driverClassName=${spring.datasource.driverClassName}
     metadata.datasource.url=${spring.datasource.url}
     metadata.datasource.username=${spring.datasource.username}
@@ -211,7 +208,7 @@ data:
     metadata.datasource.testOnBorrow=true
 
 
-    # NOTE: For Cloudera hive.datasource.username=hive is required
+
     hive.userImpersonation.enabled=false
     hive.datasource.driverClassName=org.apache.hive.jdbc.HiveDriver
     hive.datasource.url=jdbc:hive2://master.platform.daf.gov.it:10000/default;principal=hive/master.platform.daf.gov.it@DAF.GOV.IT
@@ -220,7 +217,7 @@ data:
     hive.datasource.validationQuery=show tables
 
 
-    # NOTE: For Cloudera hive.metastore.datasource.password=cloudera is required
+
     ##Also Clouder  url should be /metastore instead of /hive
     hive.metastore.datasource.driverClassName=org.postgresql.Driver
     hive.metastore.datasource.url=jdbc:postgresql://master/metastore
@@ -232,8 +229,8 @@ data:
 
     modeshape.datasource.driverClassName=${spring.datasource.driverClassName}
     modeshape.datasource.url=${spring.datasource.url}
-    modeshape.datasource.username=${spring.datasource.username}
-    modeshape.datasource.password=${spring.datasource.password}
+    #modeshape.datasource.username=${spring.datasource.username}
+    #modeshape.datasource.password=${spring.datasource.password}
     modeshape.index.dir=/opt/kylo/modeshape/modeshape-local-index
 
     nifi.rest.host=tba-nifi
@@ -248,13 +245,13 @@ data:
     #nifi.rest.port=9443
     #nifi.rest.https=true
     #nifi.rest.useConnectionPooling=false
-    #nifi.rest.truststorePath=/opt/nifi/data/ssl/localhost/truststore.jks
+    #nifi.rest.truststorePath=
     #####the truststore password below needs to match that found in the nifi.properties file (nifi.security.truststorePasswd)
-    #nifi.rest.truststorePassword=Zl1mAbMm0v4UkGV8VYjTi2ZP8NdwUL9CW7nsjGo47Fs
+    #nifi.rest.truststorePassword=
     #nifi.rest.truststoreType=JKS
-    #nifi.rest.keystorePath=/opt/nifi/data/ssl/CN=kylo_OU=NIFI.p12
+    #nifi.rest.keystorePath=
     ###value found in the .password file /opt/nifi/data/ssl/CN=kylo_OU=NIFI.password
-    #nifi.rest.keystorePassword=ydPkkba
+    #nifi.rest.keystorePassword=
     #nifi.rest.keystoreType=PKCS12
     #
 
@@ -333,6 +330,7 @@ data:
 
     ##cloudera config
     #config.hive.schema=metastore
+    #nifi.executesparkjob.sparkhome=/usr/lib/spark
 
 
     ## how often should SLAs be checked
@@ -378,6 +376,9 @@ data:
     kylo.ops.mgr.stats.nifi.bulletins.mem.size=30
 
     kylo.feed.mgr.cleanup.timeout=60000
+
+    ## Align the process groups when saving you feed in NiFi.  By default it is set to true.
+    #nifi.auto.align=false
 
     # update database on kylo-services start
     liquibase.enabled=true
@@ -2065,3 +2066,4 @@ data:
   version.txt: |-
     version=0.8.4
     build.date=2017-10-18 17:13
+
