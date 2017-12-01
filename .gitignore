@@ -10,3 +10,4 @@ bin
 *.iml
 *.bak
 *.swp
+*.sensitive
