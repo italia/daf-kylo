@@ -1,4 +1,4 @@
 #!/bin/bash
-nifiservicepod=$(kubectl get pods --selector=io.kompose.service=tba-nifi -o yaml | sed -En 's/name: tba-nifi-(.*)-(.*)/tba-nifi-\1-\2/p')
-echo "NiFi pod is nifiservicepod"
-kubectl exec -it nifiservicepod -- tail -1000f /usr/nifi/logs/nifi-app.log
+kyloservicepod=$(kubectl get pods --selector=io.kompose.service=tba-kylo-services -o yaml | sed -En 's/name: tba-kylo-services-(.*)-(.*)/tba-kylo-services-\1-\2/p')
+echo "kylo service pod is $kyloservicepod"
+kubectl exec -it $kyloservicepod -- tail -1000f /var/log/kylo-services/kylo-services.log
