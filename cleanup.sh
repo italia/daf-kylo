@@ -13,7 +13,6 @@ case $1 in
   mysql)
 	kubectl delete -f kubernetes/deployment/mysql.yaml
 	kubectl delete -f kubernetes/service/mysql.yaml
-
 	;;
   kylo-services)
 	kubectl delete -f kubernetes/config-map/kylo-services.yaml
@@ -28,6 +27,7 @@ case $1 in
   nifi)
 	kubectl delete -f kubernetes/config-map/nifi.yaml
 	kubectl delete -f kubernetes/config-map/nifi-kylo.yaml
+
   kubectl delete -f kubernetes/deployment/nifi.yaml
   kubectl delete -f kubernetes/service/nifi.yaml
 esac
