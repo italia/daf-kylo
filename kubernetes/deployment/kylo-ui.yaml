@@ -16,7 +16,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: 10.98.74.120:5000/tba-kylo-ui.8.3.3:1.0.0-SNAPSHOT
+      - image: 10.98.74.120:5000/tba-kylo-ui.8.4:1.0.0-SNAPSHOT
         name: tba-kylo-ui
         imagePullPolicy: IfNotPresent
         ports:
@@ -26,7 +26,7 @@ spec:
         - mountPath: /opt/kylo/kylo-ui/conf
           name: kylo-ui-config
         - mountPath: /var/log/kylo-ui
-          subPath: tba/evergreen/kylo-ui/log
+          subPath: tba/evergreen2/kylo-ui/log
           name: glusterfsvol
       restartPolicy: Always
       volumes:

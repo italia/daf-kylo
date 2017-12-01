@@ -16,7 +16,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: 10.98.74.120:5000/tba-kylo-services.8.3.3:1.3.0-SNAPSHOT
+      - image: 10.98.74.120:5000/tba-kylo-services.8.4:1.0.0-SNAPSHOT
         name: tba-kylo-services
         imagePullPolicy: IfNotPresent
         #lifecycle:
@@ -34,7 +34,7 @@ spec:
           name: kylo-services-spark
         - name: glusterfsvol
           mountPath: /var/log/kylo-services
-          subPath: tba/evergreen/kylo-services/log
+          subPath: tba/evergreen2/kylo-services/log
         - name: glusterfsvol
           mountPath: /etc/security/daf.keytab
           subPath: tba/security/daf.keytab
@@ -71,7 +71,9 @@ spec:
       - name: kylo-services-spark
         configMap:
           name: kylo-services-spark
-
+      - name: kylo-auth-config
+        configMap:
+          name: kylo-auth-config
       - name: hosts
         hostPath:
           path: /etc/hosts
