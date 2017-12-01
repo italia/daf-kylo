@@ -13,7 +13,7 @@ spec:
         io.kompose.service: tba-activemq
     spec:
       containers:
-      - image: 10.98.74.120:5000/tba-activemq.5.15.1:1.0.0-SNAPSHOT
+      - image: 10.98.74.120:5000/tba-activemq.5.15.1:2.0.0-SNAPSHOT
         name: tba-activemq
         imagePullPolicy: IfNotPresent
         ports:
@@ -28,7 +28,7 @@ spec:
         volumeMounts:
         - name: glusterfsvol
           mountPath: /opt/activemq/data
-          subPath: tba/evergreen/activemq/data
+          subPath: tba/evergreen2/activemq/data
       restartPolicy: Always
       volumes:
       - name: glusterfsvol
