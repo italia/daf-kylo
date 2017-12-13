@@ -276,8 +276,8 @@ data:
     java.arg.1=-Dorg.apache.jasper.compiler.disablejsr199=true
 
     # JVM memory settings
-    java.arg.2=-Xms512m
-    java.arg.3=-Xmx512m
+    java.arg.2=-Xms4g
+    java.arg.3=-Xmx4g
 
     # Enable Remote Debugging
     #java.arg.debug=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000
@@ -397,14 +397,14 @@ data:
                   To GZIP rolled files, replace '.log' with '.log.gz'.
                   To ZIP rolled files, replace '.log' with '.log.zip'.
                 -->
-                <fileNamePattern>${org.apache.nifi.bootstrap.config.log.dir}/nifi-app_%d{yyyy-MM-dd_HH}.%i.log</fileNamePattern>
-                <maxFileSize>100MB</maxFileSize>
+                <fileNamePattern>${org.apache.nifi.bootstrap.config.log.dir}/nifi-app_%d.%i.log</fileNamePattern>
+                <maxFileSize>1024MB</maxFileSize>
                 <!-- keep 30 log files worth of history -->
                 <maxHistory>30</maxHistory>
             </rollingPolicy>
             <immediateFlush>true</immediateFlush>
             <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-                <pattern>%date %level [%thread] %logger{40} %msg%n</pattern>
+                <pattern>%date %level [%thread] %F:%L %msg%n</pattern>
             </encoder>
         </appender>
 
@@ -422,7 +422,7 @@ data:
                 <maxHistory>30</maxHistory>
             </rollingPolicy>
             <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-                <pattern>%date %level [%thread] %logger{40} %msg%n</pattern>
+                <pattern>%date %level [%thread] %F:%L %msg%n</pattern>
             </encoder>
         </appender>
 
@@ -440,12 +440,13 @@ data:
                 <maxHistory>5</maxHistory>
             </rollingPolicy>
             <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-                <pattern>%date %level [%thread] %logger{40} %msg%n</pattern>
+                <pattern>%date %level [%thread] %F:%L %msg%n</pattern>
             </encoder>
         </appender>
+
         <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
             <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-                <pattern>%date %level [%thread] %logger{40} %msg%n</pattern>
+                <pattern>%date %level [%thread] %F:%L %msg%n</pattern>
             </encoder>
         </appender>
         <!-- valid logging levels: TRACE, DEBUG, INFO, WARN, ERROR -->
