@@ -64,6 +64,9 @@ spec:
           readOnly: true
         - name: daf-root-ca
           mountPath: /etc/ssl/certs
+        - name: home
+          mountPath: /home
+          readOnly: false
       restartPolicy: Always
       volumes:
       - name: nifi-config
@@ -96,6 +99,9 @@ spec:
       - name: daf-root-ca
         secret:
           secretName: daf-root-ca
+      - name: home
+        hostPath:
+          path: /home
       imagePullSecrets:
       - name: regsecret
 status: {}
