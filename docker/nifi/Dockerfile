@@ -23,18 +23,6 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/
 
 RUN rm -r /usr/nifi/conf
 
-#Create default users and groups
-RUN adduser -S -s /bin/bash nifi
-RUN adduser -S -s /bin/bash kylo
-RUN adduser -S -s /bin/bash activemq
-RUN addgroup kylo
-RUN addgroup nifi
-RUN addgroup activemq
-RUN adduser nifi nifi
-RUN adduser kylo kylo
-RUN adduser activemq activemq
-
-
 # Link kylo jars
 
 ADD dist/ /usr/nifi/kylo
