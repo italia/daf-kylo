@@ -1,0 +1,12 @@
+{DAF_DATASET_NAME} : DAF Feed Name
+{DAF_DATASET_DESCRIPTION} : DAF Feed Description
+{DAF_TABLE_NAME} : db table name
+{DAF_NORMALIZED_DATASET_NAME} : daf_feed_name
+{DAF_INPUT_DIRECTORY} : /daf_input_directory
+{DAF_INPUT_REGEXP_FILTER} : daf_input_regexp_filter //check how to escape
+{DAF_ORGANIZATION} : DAF Category, daf_category, daf_organization
+{DAF_PROPERTY_1} : daf_property
+{DAF_PROPERTY_1_VALUE} : daf_property_value
+{DAF_CATEGORY.id}
+{DAF_PARSER.hiveFormat} : hiveFormat value from parser API response
+{DAF_PARSER.fields} : fields value from parser API response //check if we have to add missing properties

@@ -1,0 +1,246 @@
+{
+  "dcatapit": {
+    "name": "prova_post_agency_infer_1512494533042",
+    "title": "prova_post_agency_infer_1512494533042",
+    "identifier": "prova_post_agency_infer_1512494533042",
+    "alternate_identifier": "prova_post_agency_infer_1512494533042",
+    "notes": "pippopost",
+    "theme": "AGRI",
+    "publisher_name": "opendata",
+    "publisher_editor": "opendata",
+    "publisher_identifier": "opendata",
+    "modified": "2017-07-23",
+    "holder_name": "opendata",
+    "holder_identifier": "opendata",
+    "license_title": "Altro (Non Commerciale)",
+    "owner_org": "opendata",
+    "frequency": "unknown",
+    "creation_date": "2017-07-23",
+    "groups": [],
+    "resources": [],
+    "relationships_as_object": [],
+    "relationships_as_subject": [],
+    "tags": [
+      {
+        "name": "AGRI",
+        "state": "active",
+        "vocabulary_id": null,
+        "display_name": "AGRI",
+        "id": "f5feb374-3e24-417a-969e-17f00d7e6458"
+      }
+    ]
+  },
+  "dataschema": {
+    "avro": {
+      "namespace": "daf://opendata/AGRI/prova_post_agency_infer_1512494533042",
+      "separator": ",",
+      "name": "prova_post_agency_infer_1512494533042",
+      "aliases": [
+        "prova_post_agency_infer_1512494533042"
+      ],
+      "fields": [
+        {
+          "name": "agency_url",
+          "`type`": "string"
+        },
+        {
+          "name": "agency_name",
+          "`type`": "string"
+        },
+        {
+          "name": "agency_phone",
+          "`type`": "string"
+        },
+        {
+          "name": "num",
+          "`type`": "int"
+        },
+        {
+          "name": "agency_id",
+          "`type`": "string"
+        },
+        {
+          "name": "agency_timezone",
+          "`type`": "string"
+        },
+        {
+          "name": "agency_lang",
+          "`type`": "string"
+        }
+      ],
+      "`type`": "record"
+    },
+    "flatSchema": [
+      {
+        "name": "agency_url",
+        "`type`": "string",
+        "metadata": {
+          "desc": "",
+          "required": 0,
+          "field_type": "",
+          "cat": "",
+          "tag": [],
+          "constr": [
+            {
+              "`type`": "",
+              "param": ""
+            }
+          ],
+          "semantics": {
+            "id": "",
+            "context": ""
+          }
+        }
+      },
+      {
+        "name": "agency_name",
+        "`type`": "string",
+        "metadata": {
+          "desc": "",
+          "required": 0,
+          "field_type": "",
+          "cat": "",
+          "tag": [],
+          "constr": [
+            {
+              "`type`": "",
+              "param": ""
+            }
+          ],
+          "semantics": {
+            "id": "",
+            "context": ""
+          }
+        }
+      },
+      {
+        "name": "agency_phone",
+        "`type`": "string",
+        "metadata": {
+          "desc": "",
+          "required": 0,
+          "field_type": "",
+          "cat": "",
+          "tag": [],
+          "constr": [
+            {
+              "`type`": "",
+              "param": ""
+            }
+          ],
+          "semantics": {
+            "id": "",
+            "context": ""
+          }
+        }
+      },
+      {
+        "name": "num",
+        "`type`": "int",
+        "metadata": {
+          "desc": "",
+          "required": 0,
+          "field_type": "",
+          "cat": "",
+          "tag": [],
+          "constr": [
+            {
+              "`type`": "",
+              "param": ""
+            }
+          ],
+          "semantics": {
+            "id": "",
+            "context": ""
+          }
+        }
+      },
+      {
+        "name": "agency_id",
+        "`type`": "string",
+        "metadata": {
+          "desc": "",
+          "required": 0,
+          "field_type": "",
+          "cat": "",
+          "tag": [],
+          "constr": [
+            {
+              "`type`": "",
+              "param": ""
+            }
+          ],
+          "semantics": {
+            "id": "",
+            "context": ""
+          }
+        }
+      },
+      {
+        "name": "agency_timezone",
+        "`type`": "string",
+        "metadata": {
+          "desc": "",
+          "required": 0,
+          "field_type": "",
+          "cat": "",
+          "tag": [],
+          "constr": [
+            {
+              "`type`": "",
+              "param": ""
+            }
+          ],
+          "semantics": {
+            "id": "",
+            "context": ""
+          }
+        }
+      },
+      {
+        "name": "agency_lang",
+        "`type`": "string",
+        "metadata": {
+          "desc": "",
+          "required": 0,
+          "field_type": "",
+          "cat": "",
+          "tag": [],
+          "constr": [
+            {
+              "`type`": "",
+              "param": ""
+            }
+          ],
+          "semantics": {
+            "id": "",
+            "context": ""
+          }
+        }
+      }
+    ]
+  },
+  "operational": {
+    "logical_uri": "test1",
+    "group_own": "davide",
+    "dataset_type": "batch",
+    "is_std": false,
+    "theme": "AGRI",
+    "subtheme": "policy",
+    "std_schema": null,
+    "read_type": "update",
+    "input_src": {
+      "sftp": [
+        {
+          "name": "sftp_daf",
+          "param": "format=csv, sep=,"
+        }
+      ]
+    },
+    "storage_info": {
+      "hdfs": {
+        "name": "hdfs_daf"
+      }
+    }
+  }
+}

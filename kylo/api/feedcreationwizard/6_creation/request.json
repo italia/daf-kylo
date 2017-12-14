@@ -1,0 +1,2056 @@
+{
+  "id": null,
+  "versionName": null,
+  "templateId": "07b7509c-4916-48fe-9dd0-4e184ddcc4ec",
+  "feedName": "DAF Feed Name",
+  "description": "DAF Feed Description",
+  "systemFeedName": "daf_feed_name",
+  "inputProcessorType": "org.apache.nifi.processors.standard.GetFile",
+  "inputProcessorName": "Filesystem",
+  "inputProcessor": {
+    "properties": [
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Input Directory",
+        "value": "/daf_input_directory",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Input Directory",
+          "displayName": "Input Directory",
+          "description": "The input directory from which to pull files",
+          "defaultValue": null,
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": true,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": true,
+        "renderType": "text",
+        "renderOptions": {},
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Input Directory",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Input Directory",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Input Directory",
+        "renderWithCodeMirror": false,
+        "displayValue": "/var/dropzone",
+        "formKey": "input_directoryfilesystem"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "File Filter",
+        "value": "daf_input_regexp_filter",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "File Filter",
+          "displayName": "File Filter",
+          "description": "Only files whose names match the given regular expression will be picked up",
+          "defaultValue": "[^\\.].*",
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": true,
+        "renderType": "text",
+        "renderOptions": {},
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-File Filter",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-File Filter",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-File Filter",
+        "renderWithCodeMirror": false,
+        "displayValue": "mydata\\d{1,3}.csv",
+        "formKey": "file_filterfilesystem"
+      }
+    ],
+    "type": "org.apache.nifi.processors.standard.GetFile",
+    "name": "Filesystem",
+    "id": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+    "groupName": "NiFi Flow",
+    "groupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+    "inputProcessor": true,
+    "userDefinedInputProcessor": false,
+    "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+    "userEditable": true,
+    "feedPropertiesUrl": null,
+    "allProperties": [
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Input Directory",
+        "value": "/daf_input_directory",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Input Directory",
+          "displayName": "Input Directory",
+          "description": "The input directory from which to pull files",
+          "defaultValue": null,
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": true,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": true,
+        "renderType": "text",
+        "renderOptions": {},
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Input Directory",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Input Directory",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Input Directory",
+        "renderWithCodeMirror": false,
+        "displayValue": "/var/dropzone",
+        "formKey": "input_directoryfilesystem"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "File Filter",
+        "value": "daf_input_regexp_filter",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "File Filter",
+          "displayName": "File Filter",
+          "description": "Only files whose names match the given regular expression will be picked up",
+          "defaultValue": "[^\\.].*",
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": true,
+        "renderType": "text",
+        "renderOptions": {},
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-File Filter",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-File Filter",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-File Filter",
+        "renderWithCodeMirror": false,
+        "displayValue": "mydata\\d{1,3}.csv",
+        "formKey": "file_filterfilesystem"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Path Filter",
+        "value": null,
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Path Filter",
+          "displayName": "Path Filter",
+          "description": "When Recurse Subdirectories is true, then only subdirectories whose path matches the given regular expression will be scanned",
+          "defaultValue": null,
+          "allowableValues": null,
+          "required": false,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": false,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Path Filter",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Path Filter",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Path Filter",
+        "renderWithCodeMirror": false,
+        "displayValue": null
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Batch Size",
+        "value": "100",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Batch Size",
+          "displayName": "Batch Size",
+          "description": "The maximum number of files to pull in each iteration",
+          "defaultValue": "10",
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Batch Size",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Batch Size",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Batch Size",
+        "renderWithCodeMirror": false,
+        "displayValue": "100"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Keep Source File",
+        "value": "false",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Keep Source File",
+          "displayName": "Keep Source File",
+          "description": "If true, the file is not deleted after it has been copied to the Content Repository; this causes the file to be picked up continually and is useful for testing purposes.  If not keeping original NiFi will need write permissions on the directory it is pulling from otherwise it will ignore the file.",
+          "defaultValue": "false",
+          "allowableValues": [
+            {
+              "displayName": "true",
+              "value": "true",
+              "description": null
+            },
+            {
+              "displayName": "false",
+              "value": "false",
+              "description": null
+            }
+          ],
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Keep Source File",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Keep Source File",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Keep Source File",
+        "renderWithCodeMirror": false,
+        "displayValue": "false"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Recurse Subdirectories",
+        "value": "false",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Recurse Subdirectories",
+          "displayName": "Recurse Subdirectories",
+          "description": "Indicates whether or not to pull files from subdirectories",
+          "defaultValue": "true",
+          "allowableValues": [
+            {
+              "displayName": "true",
+              "value": "true",
+              "description": null
+            },
+            {
+              "displayName": "false",
+              "value": "false",
+              "description": null
+            }
+          ],
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Recurse Subdirectories",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Recurse Subdirectories",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Recurse Subdirectories",
+        "renderWithCodeMirror": false,
+        "displayValue": "false"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Polling Interval",
+        "value": "0 sec",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Polling Interval",
+          "displayName": "Polling Interval",
+          "description": "Indicates how long to wait before performing a directory listing",
+          "defaultValue": "0 sec",
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Polling Interval",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Polling Interval",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Polling Interval",
+        "renderWithCodeMirror": false,
+        "displayValue": "0 sec"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Ignore Hidden Files",
+        "value": "true",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Ignore Hidden Files",
+          "displayName": "Ignore Hidden Files",
+          "description": "Indicates whether or not hidden files should be ignored",
+          "defaultValue": "true",
+          "allowableValues": [
+            {
+              "displayName": "true",
+              "value": "true",
+              "description": null
+            },
+            {
+              "displayName": "false",
+              "value": "false",
+              "description": null
+            }
+          ],
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Ignore Hidden Files",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Ignore Hidden Files",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Ignore Hidden Files",
+        "renderWithCodeMirror": false,
+        "displayValue": "true"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Minimum File Age",
+        "value": "0 sec",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Minimum File Age",
+          "displayName": "Minimum File Age",
+          "description": "The minimum age that a file must be in order to be pulled; any file younger than this amount of time (according to last modification date) will be ignored",
+          "defaultValue": "0 sec",
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Minimum File Age",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Minimum File Age",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Minimum File Age",
+        "renderWithCodeMirror": false,
+        "displayValue": "0 sec"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Maximum File Age",
+        "value": null,
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Maximum File Age",
+          "displayName": "Maximum File Age",
+          "description": "The maximum age that a file must be in order to be pulled; any file older than this amount of time (according to last modification date) will be ignored",
+          "defaultValue": null,
+          "allowableValues": null,
+          "required": false,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": false,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Maximum File Age",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Maximum File Age",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Maximum File Age",
+        "renderWithCodeMirror": false,
+        "displayValue": null
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Minimum File Size",
+        "value": "0 B",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Minimum File Size",
+          "displayName": "Minimum File Size",
+          "description": "The minimum size that a file must be in order to be pulled",
+          "defaultValue": "0 B",
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Minimum File Size",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Minimum File Size",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Minimum File Size",
+        "renderWithCodeMirror": false,
+        "displayValue": "0 B"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Maximum File Size",
+        "value": null,
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Maximum File Size",
+          "displayName": "Maximum File Size",
+          "description": "The maximum size that a file can be in order to be pulled",
+          "defaultValue": null,
+          "allowableValues": null,
+          "required": false,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": false,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Maximum File Size",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Maximum File Size",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Maximum File Size",
+        "renderWithCodeMirror": false,
+        "displayValue": null
+      }
+    ],
+    "sortIndex": 0
+  },
+  "nonInputProcessors": [],
+  "properties": [
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "Filesystem",
+      "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+      "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+      "processorType": "org.apache.nifi.processors.standard.GetFile",
+      "key": "Input Directory",
+      "value": "/daf_input_directory",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Input Directory",
+        "displayName": "Input Directory",
+        "description": "The input directory from which to pull files",
+        "defaultValue": null,
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": null,
+      "userEditable": true,
+      "renderType": "text",
+      "renderOptions": {},
+      "selected": false,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-Filesystem-Input Directory",
+      "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Input Directory",
+      "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Input Directory",
+      "renderWithCodeMirror": false,
+      "displayValue": "/var/dropzone",
+      "formKey": "input_directoryfilesystem"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "Filesystem",
+      "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+      "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+      "processorType": "org.apache.nifi.processors.standard.GetFile",
+      "key": "File Filter",
+      "value": "daf_input_regexp_filter",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "File Filter",
+        "displayName": "File Filter",
+        "description": "Only files whose names match the given regular expression will be picked up",
+        "defaultValue": "[^\\.].*",
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": false,
+        "identifiesControllerService": null
+      },
+      "templateValue": null,
+      "userEditable": true,
+      "renderType": "text",
+      "renderOptions": {},
+      "selected": false,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-Filesystem-File Filter",
+      "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-File Filter",
+      "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-File Filter",
+      "renderWithCodeMirror": false,
+      "displayValue": "mydata\\d{1,3}.csv",
+      "formKey": "file_filterfilesystem"
+    }
+  ],
+  "securityGroups": [],
+  "schedule": {
+    "schedulingPeriod": "10 sec",
+    "schedulingStrategy": "TIMER_DRIVEN",
+    "concurrentTasks": 1,
+    "schedulingStrategyTouched": true
+  },
+  "defineTable": true,
+  "allowPreconditions": false,
+  "dataTransformationFeed": false,
+  "table": {
+    "tableSchema": {
+      "name": "daf_feed_name",
+      "fields": [
+        {
+          "name": "agency_id",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "GTT",
+            "GTT_E",
+            "GTT_F",
+            "GTT_T",
+            "FS"
+          ],
+          "selectedSampleValue": "GTT",
+          "tags": null,
+          "_id": "15",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_id",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_id",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_name",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "Gruppo Torinese Trasporti",
+            "GTT servizio extraurbano",
+            "Gruppo Torinese Trasporti",
+            "GTT Servizi Turistici",
+            "Trenitalia"
+          ],
+          "selectedSampleValue": "Gruppo Torinese Trasporti",
+          "tags": null,
+          "_id": "17",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_name",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_name",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_url",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.trenitalia.com"
+          ],
+          "selectedSampleValue": "http://www.gtt.to.it",
+          "tags": null,
+          "_id": "19",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_url",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_url",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_timezone",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome"
+          ],
+          "selectedSampleValue": "Europe/Rome",
+          "tags": null,
+          "_id": "21",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_timezone",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_timezone",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_lang",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "it",
+            "it",
+            "it",
+            "it",
+            "it"
+          ],
+          "selectedSampleValue": "it",
+          "tags": null,
+          "_id": "23",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_lang",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_lang",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_phone",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "800-019152",
+            "800-019152",
+            "800-019152",
+            "800-019152",
+            "199-892021"
+          ],
+          "selectedSampleValue": "800-019152",
+          "tags": null,
+          "_id": "25",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_phone",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_phone",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "num",
+          "description": "",
+          "derivedDataType": "int",
+          "precisionScale": null,
+          "dataTypeDisplay": "int",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "21",
+            "43",
+            "0",
+            "121",
+            "2"
+          ],
+          "selectedSampleValue": "21",
+          "tags": null,
+          "_id": "27",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": true,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "int",
+          "descriptionWithoutNewLines": "",
+          "origName": "num",
+          "origDataType": "int",
+          "deleted": false,
+          "history": [
+            {
+              "name": "num",
+              "derivedDataType": "int",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        }
+      ]
+    },
+    "sourceTableSchema": {
+      "name": null,
+      "tableSchema": null,
+      "fields": [
+        {
+          "name": "agency_id",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "GTT",
+            "GTT_E",
+            "GTT_F",
+            "GTT_T",
+            "FS"
+          ],
+          "selectedSampleValue": "GTT",
+          "tags": null,
+          "_id": "15",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_id",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_id",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_name",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "Gruppo Torinese Trasporti",
+            "GTT servizio extraurbano",
+            "Gruppo Torinese Trasporti",
+            "GTT Servizi Turistici",
+            "Trenitalia"
+          ],
+          "selectedSampleValue": "Gruppo Torinese Trasporti",
+          "tags": null,
+          "_id": "17",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_name",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_name",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_url",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.trenitalia.com"
+          ],
+          "selectedSampleValue": "http://www.gtt.to.it",
+          "tags": null,
+          "_id": "19",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_url",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_url",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_timezone",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome"
+          ],
+          "selectedSampleValue": "Europe/Rome",
+          "tags": null,
+          "_id": "21",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_timezone",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_timezone",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_lang",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "it",
+            "it",
+            "it",
+            "it",
+            "it"
+          ],
+          "selectedSampleValue": "it",
+          "tags": null,
+          "_id": "23",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_lang",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_lang",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_phone",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "800-019152",
+            "800-019152",
+            "800-019152",
+            "800-019152",
+            "199-892021"
+          ],
+          "selectedSampleValue": "800-019152",
+          "tags": null,
+          "_id": "25",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_phone",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_phone",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "num",
+          "description": "",
+          "derivedDataType": "int",
+          "precisionScale": null,
+          "dataTypeDisplay": "int",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "21",
+            "43",
+            "0",
+            "121",
+            "2"
+          ],
+          "selectedSampleValue": "21",
+          "tags": null,
+          "_id": "27",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": true,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "int",
+          "descriptionWithoutNewLines": "",
+          "origName": "num",
+          "origDataType": "int",
+          "deleted": false,
+          "history": [
+            {
+              "name": "num",
+              "derivedDataType": "int",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        }
+      ]
+    },
+    "feedTableSchema": {
+      "name": null,
+      "fields": [
+        {
+          "name": "agency_id",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "GTT",
+            "GTT_E",
+            "GTT_F",
+            "GTT_T",
+            "FS"
+          ],
+          "selectedSampleValue": "GTT",
+          "tags": null,
+          "_id": "15",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_id",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_id",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_name",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "Gruppo Torinese Trasporti",
+            "GTT servizio extraurbano",
+            "Gruppo Torinese Trasporti",
+            "GTT Servizi Turistici",
+            "Trenitalia"
+          ],
+          "selectedSampleValue": "Gruppo Torinese Trasporti",
+          "tags": null,
+          "_id": "17",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_name",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_name",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_url",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.trenitalia.com"
+          ],
+          "selectedSampleValue": "http://www.gtt.to.it",
+          "tags": null,
+          "_id": "19",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_url",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_url",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_timezone",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome"
+          ],
+          "selectedSampleValue": "Europe/Rome",
+          "tags": null,
+          "_id": "21",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_timezone",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_timezone",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_lang",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "it",
+            "it",
+            "it",
+            "it",
+            "it"
+          ],
+          "selectedSampleValue": "it",
+          "tags": null,
+          "_id": "23",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_lang",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_lang",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "agency_phone",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "800-019152",
+            "800-019152",
+            "800-019152",
+            "800-019152",
+            "199-892021"
+          ],
+          "selectedSampleValue": "800-019152",
+          "tags": null,
+          "_id": "25",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_phone",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_phone",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        {
+          "name": "num",
+          "description": "",
+          "derivedDataType": "int",
+          "precisionScale": null,
+          "dataTypeDisplay": "int",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "21",
+            "43",
+            "0",
+            "121",
+            "2"
+          ],
+          "selectedSampleValue": "21",
+          "tags": null,
+          "_id": "27",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": true,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "int",
+          "descriptionWithoutNewLines": "",
+          "origName": "num",
+          "origDataType": "int",
+          "deleted": false,
+          "history": [
+            {
+              "name": "num",
+              "derivedDataType": "int",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        }
+      ]
+    },
+    "method": "SAMPLE_FILE",
+    "existingTableName": null,
+    "structured": false,
+    "targetMergeStrategy": "DEDUPE_AND_MERGE",
+    "feedFormat": "ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'\n WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\\\' ,'quoteChar' = '\\\"') STORED AS TEXTFILE",
+    "targetFormat": "STORED AS PARQUET",
+    "fieldPolicies": [
+      {
+        "name": "agency_id",
+        "partition": null,
+        "profile": false,
+        "standardization": null,
+        "validation": null,
+        "field": {
+          "name": "agency_id",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "GTT",
+            "GTT_E",
+            "GTT_F",
+            "GTT_T",
+            "FS"
+          ],
+          "selectedSampleValue": "GTT",
+          "tags": null,
+          "_id": "15",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_id",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_id",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        "feedFieldName": "agency_id"
+      },
+      {
+        "name": "agency_name",
+        "partition": null,
+        "profile": false,
+        "standardization": null,
+        "validation": null,
+        "field": {
+          "name": "agency_name",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "Gruppo Torinese Trasporti",
+            "GTT servizio extraurbano",
+            "Gruppo Torinese Trasporti",
+            "GTT Servizi Turistici",
+            "Trenitalia"
+          ],
+          "selectedSampleValue": "Gruppo Torinese Trasporti",
+          "tags": null,
+          "_id": "17",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_name",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_name",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        "feedFieldName": "agency_name"
+      },
+      {
+        "name": "agency_url",
+        "partition": null,
+        "profile": false,
+        "standardization": null,
+        "validation": null,
+        "field": {
+          "name": "agency_url",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.gtt.to.it",
+            "http://www.trenitalia.com"
+          ],
+          "selectedSampleValue": "http://www.gtt.to.it",
+          "tags": null,
+          "_id": "19",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_url",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_url",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        "feedFieldName": "agency_url"
+      },
+      {
+        "name": "agency_timezone",
+        "partition": null,
+        "profile": false,
+        "standardization": null,
+        "validation": null,
+        "field": {
+          "name": "agency_timezone",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome",
+            "Europe/Rome"
+          ],
+          "selectedSampleValue": "Europe/Rome",
+          "tags": null,
+          "_id": "21",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_timezone",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_timezone",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        "feedFieldName": "agency_timezone"
+      },
+      {
+        "name": "agency_lang",
+        "partition": null,
+        "profile": false,
+        "standardization": null,
+        "validation": null,
+        "field": {
+          "name": "agency_lang",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "it",
+            "it",
+            "it",
+            "it",
+            "it"
+          ],
+          "selectedSampleValue": "it",
+          "tags": null,
+          "_id": "23",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_lang",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_lang",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        "feedFieldName": "agency_lang"
+      },
+      {
+        "name": "agency_phone",
+        "partition": null,
+        "profile": false,
+        "standardization": null,
+        "validation": null,
+        "field": {
+          "name": "agency_phone",
+          "description": "",
+          "derivedDataType": "string",
+          "precisionScale": null,
+          "dataTypeDisplay": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "800-019152",
+            "800-019152",
+            "800-019152",
+            "800-019152",
+            "199-892021"
+          ],
+          "selectedSampleValue": "800-019152",
+          "tags": null,
+          "_id": "25",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_phone",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "agency_phone",
+              "derivedDataType": "string",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        "feedFieldName": "agency_phone"
+      },
+      {
+        "name": "num",
+        "partition": null,
+        "profile": false,
+        "standardization": null,
+        "validation": null,
+        "field": {
+          "name": "num",
+          "description": "",
+          "derivedDataType": "int",
+          "precisionScale": null,
+          "dataTypeDisplay": "int",
+          "primaryKey": false,
+          "nullable": true,
+          "createdTracker": false,
+          "updatedTracker": false,
+          "sampleValues": [
+            "21",
+            "43",
+            "0",
+            "121",
+            "2"
+          ],
+          "selectedSampleValue": "21",
+          "tags": null,
+          "_id": "27",
+          "nativeDataType": null,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": true,
+            "date": false,
+            "complex": false
+          },
+          "dataTypeWithPrecisionAndScale": "int",
+          "descriptionWithoutNewLines": "",
+          "origName": "num",
+          "origDataType": "int",
+          "deleted": false,
+          "history": [
+            {
+              "name": "num",
+              "derivedDataType": "int",
+              "precisionScale": null,
+              "deleted": false,
+              "primaryKey": false,
+              "updatedTracker": false,
+              "createdTracker": false
+            }
+          ]
+        },
+        "feedFieldName": "num"
+      }
+    ],
+    "partitions": [],
+    "options": {
+      "compress": false,
+      "compressionFormat": "SNAPPY",
+      "auditLogging": true,
+      "encrypt": false,
+      "trackHistory": false
+    },
+    "sourceTableIncrementalDateField": null
+  },
+  "category": {
+    "id": "efc036fe-ef47-42a6-bb00-7067efb358a5",
+    "name": "DAF Category",
+    "systemName": "daf_category"
+  },
+  "dataOwner": "daf_organization",
+  "tags": [],
+  "reusableFeed": false,
+  "dataTransformation": {
+    "chartViewModel": null,
+    "datasourceIds": null,
+    "datasources": null,
+    "dataTransformScript": null,
+    "sql": null,
+    "states": []
+  },
+  "userProperties": [
+    {
+      "description": null,
+      "displayName": null,
+      "locked": false,
+      "order": 0,
+      "required": true,
+      "systemName": "daf_property",
+      "value": "daf_property_value",
+      "$error": {
+        "duplicate": false,
+        "missingName": false,
+        "missingValue": false
+      }
+    }
+  ],
+  "options": {
+    "skipHeader": true
+  },
+  "active": true,
+  "roleMemberships": [],
+  "owner": {
+    "displayName": "Data Lake Administrator",
+    "email": null,
+    "enabled": true,
+    "groups": [
+      "admin",
+      "user"
+    ],
+    "systemName": "dladmin",
+    "name": "Data Lake Administrator",
+    "title": "Data Lake Administrator",
+    "type": "user",
+    "_lowername": "data lake administrator",
+    "_lowerSystemName": "dladmin",
+    "_lowerDisplayName": "data lake administrator"
+  },
+  "roleMembershipsUpdated": false,
+  "tableOption": {},
+  "cloned": false,
+  "usedByFeeds": [],
+  "totalSteps": 7,
+  "feedDescriptor": "",
+  "templateName": "Dataset Ingest",
+  "templateTableOption": "DEFINE_TABLE",
+  "allowSkipHeaderOption": true
+}

@@ -1,0 +1,10 @@
+{DAF_DATASET_NAME} : Test Feed API
+{DAF_DATASET_DESCRIPTION} : Test Feed API Description
+{DAF_NORMALIZED_DATASET_NAME} : test_feed_api
+{DAF_INPUT_DIRECTORY} : /home/fnecci/test_feed_api
+{DAF_INPUT_REGEXP_FILTER} : .*
+{DAF_ORGANIZATION} : fnecci
+{DAF_PROPERTY_1} : type
+{DAF_PROPERTY_1_VALUE} : ordinary
+{DAF_PARSER.hiveFormat} : ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'\n WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\\\' ,'quoteChar' = '\\\"') STORED AS TEXTFILE
+{DAF_PARSER.fields} : fields value from parser API response //check if we have to add missing properties

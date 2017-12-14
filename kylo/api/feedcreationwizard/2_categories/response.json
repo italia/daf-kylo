@@ -1,0 +1,277 @@
+[
+  {
+    "owner": {
+      "displayName": "Data Lake Administrator",
+      "email": null,
+      "enabled": true,
+      "groups": [
+        "admin",
+        "user"
+      ],
+      "systemName": "dladmin"
+    },
+    "allowedActions": {
+      "actions": [
+        {
+          "systemName": "accessCategory",
+          "actions": [
+            {
+              "systemName": "editCategorySummary"
+            },
+            {
+              "systemName": "accessCategoryDetails",
+              "actions": [
+                {
+                  "systemName": "editCategoryDetails"
+                },
+                {
+                  "systemName": "deleteCategory"
+                }
+              ]
+            },
+            {
+              "systemName": "createFeedUnderCategory"
+            },
+            {
+              "systemName": "changeCategoryPermissions"
+            }
+          ]
+        }
+      ]
+    },
+    "roleMemberships": [],
+    "feedRoleMemberships": [],
+    "id": "54d7acc0-9005-45e6-9a35-8aa5ee823a36",
+    "name": "fnecci",
+    "systemName": "fnecci",
+    "icon": null,
+    "iconColor": null,
+    "description": "fnecci",
+    "securityGroups": [],
+    "userFields": [],
+    "userProperties": [],
+    "relatedFeeds": 0,
+    "createDate": 1513263323427,
+    "updateDate": 1513263323427
+  },
+  {
+    "owner": {
+      "displayName": "Data Lake Administrator",
+      "email": null,
+      "enabled": true,
+      "groups": [
+        "admin",
+        "user"
+      ],
+      "systemName": "dladmin"
+    },
+    "allowedActions": {
+      "actions": [
+        {
+          "systemName": "accessCategory",
+          "actions": [
+            {
+              "systemName": "editCategorySummary"
+            },
+            {
+              "systemName": "accessCategoryDetails",
+              "actions": [
+                {
+                  "systemName": "editCategoryDetails"
+                },
+                {
+                  "systemName": "deleteCategory"
+                }
+              ]
+            },
+            {
+              "systemName": "createFeedUnderCategory"
+            },
+            {
+              "systemName": "changeCategoryPermissions"
+            }
+          ]
+        }
+      ]
+    },
+    "roleMemberships": [],
+    "feedRoleMemberships": [],
+    "id": "34c5bc6c-4acc-4651-b3a9-29cf873497da",
+    "name": "testnew",
+    "systemName": "testnew",
+    "icon": null,
+    "iconColor": null,
+    "description": null,
+    "securityGroups": [],
+    "userFields": [],
+    "userProperties": [],
+    "relatedFeeds": 0,
+    "createDate": 1512127284344,
+    "updateDate": 1513186708362
+  },
+  {
+    "owner": {
+      "displayName": "Data Lake Administrator",
+      "email": null,
+      "enabled": true,
+      "groups": [
+        "admin",
+        "user"
+      ],
+      "systemName": "dladmin"
+    },
+    "allowedActions": {
+      "actions": [
+        {
+          "systemName": "accessCategory",
+          "actions": [
+            {
+              "systemName": "editCategorySummary"
+            },
+            {
+              "systemName": "accessCategoryDetails",
+              "actions": [
+                {
+                  "systemName": "editCategoryDetails"
+                },
+                {
+                  "systemName": "deleteCategory"
+                }
+              ]
+            },
+            {
+              "systemName": "createFeedUnderCategory"
+            },
+            {
+              "systemName": "changeCategoryPermissions"
+            }
+          ]
+        }
+      ]
+    },
+    "roleMemberships": [],
+    "feedRoleMemberships": [],
+    "id": "0676ff3a-2066-480b-ac9c-b391fe24c039",
+    "name": "test_opendata",
+    "systemName": "test_opendata",
+    "icon": "extension",
+    "iconColor": "#66BB6A",
+    "description": null,
+    "securityGroups": [],
+    "userFields": [],
+    "userProperties": [],
+    "relatedFeeds": 0,
+    "createDate": 1513186979953,
+    "updateDate": 1513262984487
+  },
+  {
+    "owner": {
+      "displayName": "Data Lake Administrator",
+      "email": null,
+      "enabled": true,
+      "groups": [
+        "admin",
+        "user"
+      ],
+      "systemName": "dladmin"
+    },
+    "allowedActions": {
+      "actions": [
+        {
+          "systemName": "accessCategory",
+          "actions": [
+            {
+              "systemName": "editCategorySummary"
+            },
+            {
+              "systemName": "accessCategoryDetails",
+              "actions": [
+                {
+                  "systemName": "editCategoryDetails"
+                },
+                {
+                  "systemName": "deleteCategory"
+                }
+              ]
+            },
+            {
+              "systemName": "createFeedUnderCategory"
+            },
+            {
+              "systemName": "changeCategoryPermissions"
+            }
+          ]
+        }
+      ]
+    },
+    "roleMemberships": [],
+    "feedRoleMemberships": [],
+    "id": "efc036fe-ef47-42a6-bb00-7067efb358a5",
+    "name": "DAF Category",
+    "systemName": "daf_category",
+    "icon": "donut_small",
+    "iconColor": "#90CAF9",
+    "description": "daf_category_description",
+    "securityGroups": [],
+    "userFields": [],
+    "userProperties": [],
+    "relatedFeeds": 0,
+    "createDate": 1513258067871,
+    "updateDate": 1513264017885
+  },
+  {
+    "owner": {
+      "displayName": "Data Lake Administrator",
+      "email": null,
+      "enabled": true,
+      "groups": [
+        "admin",
+        "user"
+      ],
+      "systemName": "dladmin"
+    },
+    "allowedActions": {
+      "actions": [
+        {
+          "systemName": "accessCategory",
+          "actions": [
+            {
+              "systemName": "editCategorySummary"
+            },
+            {
+              "systemName": "accessCategoryDetails",
+              "actions": [
+                {
+                  "systemName": "editCategoryDetails"
+                },
+                {
+                  "systemName": "deleteCategory"
+                }
+              ]
+            },
+            {
+              "systemName": "createFeedUnderCategory"
+            },
+            {
+              "systemName": "changeCategoryPermissions"
+            }
+          ]
+        }
+      ]
+    },
+    "roleMemberships": [],
+    "feedRoleMemberships": [],
+    "id": "ac148153-e54f-41f6-b9f4-f1c190eb0d5f",
+    "name": "System",
+    "systemName": "system",
+    "icon": "cloud",
+    "iconColor": "#FFCA28",
+    "description": "System Data",
+    "securityGroups": [],
+    "userFields": [],
+    "userProperties": [],
+    "relatedFeeds": 0,
+    "createDate": 1512127244328,
+    "updateDate": 1512127246778
+  }
+]

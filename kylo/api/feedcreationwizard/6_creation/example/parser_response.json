@@ -1,0 +1,67 @@
+{
+  "name": null,
+  "description": null,
+  "charset": "UTF-8",
+  "properties": {},
+  "fields": [
+    {
+      "sampleValues": [
+        "GTT",
+        "GTT_E",
+        "GTT_F",
+        "GTT_T",
+        "FS"
+      ],
+      "name": "agency_id",
+      "description": "",
+      "nativeDataType": null,
+      "derivedDataType": "string",
+      "primaryKey": false,
+      "nullable": true,
+      "modifiable": true,
+      "dataTypeDescriptor": {
+        "numeric": false,
+        "date": false,
+        "complex": false
+      },
+      "updatedTracker": false,
+      "precisionScale": null,
+      "createdTracker": false,
+      "tags": null,
+      "dataTypeWithPrecisionAndScale": "string",
+      "descriptionWithoutNewLines": ""
+    },
+    {
+      "sampleValues": [
+        "Gruppo Torinese Trasporti",
+        "GTT servizio extraurbano",
+        "Gruppo Torinese Trasporti",
+        "GTT Servizi Turistici",
+        "Trenitalia"
+      ],
+      "name": "agency_name",
+      "description": "",
+      "nativeDataType": null,
+      "derivedDataType": "string",
+      "primaryKey": false,
+      "nullable": true,
+      "modifiable": true,
+      "dataTypeDescriptor": {
+        "numeric": false,
+        "date": false,
+        "complex": false
+      },
+      "updatedTracker": false,
+      "precisionScale": null,
+      "createdTracker": false,
+      "tags": null,
+      "dataTypeWithPrecisionAndScale": "string",
+      "descriptionWithoutNewLines": ""
+    }
+  ],
+  "schemaName": null,
+  "databaseName": null,
+  "hiveFormat": "ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'\n WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\\\' ,'quoteChar' = '\\\"') STORED AS TEXTFILE",
+  "structured": false,
+  "id": "cd75fdcb-ca73-429c-8ab5-e9e16c5c197a"
+}

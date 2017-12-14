@@ -1,0 +1,271 @@
+{
+  "name": "CSV",
+  "displayName": null,
+  "description": "Supports delimited text files with a field delimiter and optional escape and quote characters.",
+  "shortDescription": null,
+  "properties": [
+    {
+      "name": "Auto Detect?",
+      "displayName": "Auto Detect?",
+      "value": "true",
+      "values": null,
+      "placeholder": "",
+      "type": "select",
+      "hint": "Auto detect will attempt to infer delimiter from the sample file.",
+      "objectProperty": "autoDetect",
+      "selectableValues": [
+        {
+          "label": "true",
+          "value": "true",
+          "hint": null,
+          "properties": null
+        },
+        {
+          "label": "false",
+          "value": "false",
+          "hint": null,
+          "properties": null
+        }
+      ],
+      "required": false,
+      "group": "",
+      "groupOrder": 1,
+      "layout": "column",
+      "hidden": false,
+      "pattern": "",
+      "patternInvalidMessage": "Invalid Input",
+      "formKey": "property_5"
+    },
+    {
+      "name": "Header?",
+      "displayName": "Header?",
+      "value": "true",
+      "values": null,
+      "placeholder": "",
+      "type": "select",
+      "hint": "Whether file has a header.",
+      "objectProperty": "headerRow",
+      "selectableValues": [
+        {
+          "label": "true",
+          "value": "true",
+          "hint": null,
+          "properties": null
+        },
+        {
+          "label": "false",
+          "value": "false",
+          "hint": null,
+          "properties": null
+        }
+      ],
+      "required": false,
+      "group": "",
+      "groupOrder": 2,
+      "layout": "column",
+      "hidden": false,
+      "pattern": "",
+      "patternInvalidMessage": "Invalid Input",
+      "formKey": "property_6"
+    },
+    {
+      "name": "Delimiter Char",
+      "displayName": "Delimiter Char",
+      "value": ",",
+      "values": null,
+      "placeholder": "",
+      "type": "string",
+      "hint": "Character separating fields",
+      "objectProperty": "separatorChar",
+      "selectableValues": [],
+      "required": false,
+      "group": "",
+      "groupOrder": 3,
+      "layout": "column",
+      "hidden": false,
+      "pattern": "",
+      "patternInvalidMessage": "Invalid Input",
+      "formKey": "property_7"
+    },
+    {
+      "name": "Quote Char",
+      "displayName": "Quote Char",
+      "value": "'",
+      "values": null,
+      "placeholder": "",
+      "type": "string",
+      "hint": "Character enclosing a quoted string",
+      "objectProperty": "quoteChar",
+      "selectableValues": [],
+      "required": false,
+      "group": "",
+      "groupOrder": 4,
+      "layout": "column",
+      "hidden": false,
+      "pattern": "",
+      "patternInvalidMessage": "Invalid Input",
+      "formKey": "property_8"
+    },
+    {
+      "name": "Escape Char",
+      "displayName": "Escape Char",
+      "value": "\\",
+      "values": null,
+      "placeholder": "",
+      "type": "string",
+      "hint": "Escape character",
+      "objectProperty": "escapeChar",
+      "selectableValues": [],
+      "required": false,
+      "group": "",
+      "groupOrder": 5,
+      "layout": "column",
+      "hidden": false,
+      "pattern": "",
+      "patternInvalidMessage": "Invalid Input",
+      "formKey": "property_9"
+    }
+  ],
+  "objectClassType": "com.thinkbiganalytics.discovery.parsers.csv.CSVFileSchemaParser",
+  "objectShortClassType": "CSVFileSchemaParser",
+  "propertyValuesDisplayString": null,
+  "sequence": null,
+  "supportsBinary": false,
+  "generatesHiveSerde": true,
+  "tags": [
+    "CSV",
+    "TSV"
+  ],
+  "clientHelper": null,
+  "allowSkipHeader": true,
+  "groups": [
+    {
+      "group": "",
+      "layout": "column",
+      "properties": [
+        {
+          "name": "Auto Detect?",
+          "displayName": "Auto Detect?",
+          "value": "true",
+          "values": null,
+          "placeholder": "",
+          "type": "select",
+          "hint": "Auto detect will attempt to infer delimiter from the sample file.",
+          "objectProperty": "autoDetect",
+          "selectableValues": [
+            {
+              "label": "true",
+              "value": "true",
+              "hint": null,
+              "properties": null
+            },
+            {
+              "label": "false",
+              "value": "false",
+              "hint": null,
+              "properties": null
+            }
+          ],
+          "required": false,
+          "group": "",
+          "groupOrder": 1,
+          "layout": "column",
+          "hidden": false,
+          "pattern": "",
+          "patternInvalidMessage": "Invalid Input",
+          "formKey": "property_5"
+        },
+        {
+          "name": "Header?",
+          "displayName": "Header?",
+          "value": "true",
+          "values": null,
+          "placeholder": "",
+          "type": "select",
+          "hint": "Whether file has a header.",
+          "objectProperty": "headerRow",
+          "selectableValues": [
+            {
+              "label": "true",
+              "value": "true",
+              "hint": null,
+              "properties": null
+            },
+            {
+              "label": "false",
+              "value": "false",
+              "hint": null,
+              "properties": null
+            }
+          ],
+          "required": false,
+          "group": "",
+          "groupOrder": 2,
+          "layout": "column",
+          "hidden": false,
+          "pattern": "",
+          "patternInvalidMessage": "Invalid Input",
+          "formKey": "property_6"
+        },
+        {
+          "name": "Delimiter Char",
+          "displayName": "Delimiter Char",
+          "value": ",",
+          "values": null,
+          "placeholder": "",
+          "type": "string",
+          "hint": "Character separating fields",
+          "objectProperty": "separatorChar",
+          "selectableValues": [],
+          "required": false,
+          "group": "",
+          "groupOrder": 3,
+          "layout": "column",
+          "hidden": false,
+          "pattern": "",
+          "patternInvalidMessage": "Invalid Input",
+          "formKey": "property_7"
+        },
+        {
+          "name": "Quote Char",
+          "displayName": "Quote Char",
+          "value": "'",
+          "values": null,
+          "placeholder": "",
+          "type": "string",
+          "hint": "Character enclosing a quoted string",
+          "objectProperty": "quoteChar",
+          "selectableValues": [],
+          "required": false,
+          "group": "",
+          "groupOrder": 4,
+          "layout": "column",
+          "hidden": false,
+          "pattern": "",
+          "patternInvalidMessage": "Invalid Input",
+          "formKey": "property_8"
+        },
+        {
+          "name": "Escape Char",
+          "displayName": "Escape Char",
+          "value": "\\",
+          "values": null,
+          "placeholder": "",
+          "type": "string",
+          "hint": "Escape character",
+          "objectProperty": "escapeChar",
+          "selectableValues": [],
+          "required": false,
+          "group": "",
+          "groupOrder": 5,
+          "layout": "column",
+          "hidden": false,
+          "pattern": "",
+          "patternInvalidMessage": "Invalid Input",
+          "formKey": "property_9"
+        }
+      ]
+    }
+  ],
+  "editable": true
+}

@@ -1,0 +1,3325 @@
+{
+  "feedMetadata": {
+    "owner": {
+      "displayName": "Data Lake Administrator",
+      "email": null,
+      "enabled": true,
+      "groups": [
+        "admin",
+        "user"
+      ],
+      "systemName": "dladmin"
+    },
+    "allowedActions": {
+      "actions": [
+        {
+          "systemName": "accessFeed",
+          "actions": [
+            {
+              "systemName": "editFeedSummary"
+            },
+            {
+              "systemName": "accessFeedDetails",
+              "actions": [
+                {
+                  "systemName": "editFeedDetails"
+                },
+                {
+                  "systemName": "deleteFeed"
+                },
+                {
+                  "systemName": "enableFeed"
+                },
+                {
+                  "systemName": "exportFeed"
+                }
+              ]
+            },
+            {
+              "systemName": "accessFeedOperations"
+            },
+            {
+              "systemName": "changeFeedPermissions"
+            }
+          ]
+        }
+      ]
+    },
+    "id": "5828348a-1e14-4856-98cb-210dd67323ac",
+    "feedId": "5828348a-1e14-4856-98cb-210dd67323ac",
+    "templateId": "07b7509c-4916-48fe-9dd0-4e184ddcc4ec",
+    "inputProcessorType": "org.apache.nifi.processors.standard.GetFile",
+    "inputProcessorName": "Filesystem",
+    "templateName": "Dataset Ingest",
+    "properties": [
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "Input Directory",
+        "value": "/daf_input_directory",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Input Directory",
+          "displayName": "Input Directory",
+          "description": "The input directory from which to pull files",
+          "defaultValue": null,
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": true,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": true,
+        "renderType": "text",
+        "renderOptions": {},
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-Input Directory",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Input Directory",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Input Directory"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Filesystem",
+        "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+        "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+        "processorType": "org.apache.nifi.processors.standard.GetFile",
+        "key": "File Filter",
+        "value": "daf_input_regexp_filter",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "File Filter",
+          "displayName": "File Filter",
+          "description": "Only files whose names match the given regular expression will be picked up",
+          "defaultValue": "[^\\.].*",
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": true,
+        "renderType": "text",
+        "renderOptions": {},
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Filesystem-File Filter",
+        "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-File Filter",
+        "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-File Filter"
+      }
+    ],
+    "schedule": {
+      "processorId": null,
+      "schedulingPeriod": "10 sec",
+      "schedulingStrategy": "TIMER_DRIVEN",
+      "concurrentTasks": 1,
+      "executionNode": null,
+      "preconditions": null
+    },
+    "feedName": "DAF Feed Name",
+    "systemFeedName": "daf_feed_name",
+    "description": "DAF Feed Description",
+    "category": {
+      "owner": null,
+      "allowedActions": null,
+      "roleMemberships": [],
+      "feedRoleMemberships": [],
+      "id": "efc036fe-ef47-42a6-bb00-7067efb358a5",
+      "name": "DAF Category",
+      "systemName": "daf_category",
+      "icon": "donut_small",
+      "iconColor": "#90CAF9",
+      "description": "daf_category_description",
+      "securityGroups": null,
+      "userFields": null,
+      "userProperties": null,
+      "relatedFeeds": 0,
+      "createDate": 1513258067871,
+      "updateDate": 1513258675667
+    },
+    "table": {
+      "fieldStructure": "agency_id|string||0|0|0|agency_id\nagency_name|string||0|0|0|agency_name\nagency_url|string||0|0|0|agency_url\nagency_timezone|string||0|0|0|agency_timezone\nagency_lang|string||0|0|0|agency_lang\nagency_phone|string||0|0|0|agency_phone\nnum|int||0|0|0|num",
+      "existingTableName": null,
+      "tableSchema": {
+        "name": "daf_feed_name",
+        "description": null,
+        "charset": null,
+        "properties": {},
+        "fields": [
+          {
+            "sampleValues": [
+              "GTT",
+              "GTT_E",
+              "GTT_F",
+              "GTT_T",
+              "FS"
+            ],
+            "name": "agency_id",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "Gruppo Torinese Trasporti",
+              "GTT servizio extraurbano",
+              "Gruppo Torinese Trasporti",
+              "GTT Servizi Turistici",
+              "Trenitalia"
+            ],
+            "name": "agency_name",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "http://www.gtt.to.it",
+              "http://www.gtt.to.it",
+              "http://www.gtt.to.it",
+              "http://www.gtt.to.it",
+              "http://www.trenitalia.com"
+            ],
+            "name": "agency_url",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "Europe/Rome",
+              "Europe/Rome",
+              "Europe/Rome",
+              "Europe/Rome",
+              "Europe/Rome"
+            ],
+            "name": "agency_timezone",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "it",
+              "it",
+              "it",
+              "it",
+              "it"
+            ],
+            "name": "agency_lang",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "800-019152",
+              "800-019152",
+              "800-019152",
+              "800-019152",
+              "199-892021"
+            ],
+            "name": "agency_phone",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "21",
+              "43",
+              "0",
+              "121",
+              "2"
+            ],
+            "name": "num",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "int",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": true,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "int",
+            "descriptionWithoutNewLines": ""
+          }
+        ],
+        "schemaName": null,
+        "databaseName": null,
+        "id": "b3a4a92d-3aa8-4b64-a060-20bbe9cc3044"
+      },
+      "sourceTableSchema": {
+        "name": "NA",
+        "description": null,
+        "charset": null,
+        "properties": {},
+        "fields": [
+          {
+            "sampleValues": [
+              "GTT",
+              "GTT_E",
+              "GTT_F",
+              "GTT_T",
+              "FS"
+            ],
+            "name": "agency_id",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "Gruppo Torinese Trasporti",
+              "GTT servizio extraurbano",
+              "Gruppo Torinese Trasporti",
+              "GTT Servizi Turistici",
+              "Trenitalia"
+            ],
+            "name": "agency_name",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "http://www.gtt.to.it",
+              "http://www.gtt.to.it",
+              "http://www.gtt.to.it",
+              "http://www.gtt.to.it",
+              "http://www.trenitalia.com"
+            ],
+            "name": "agency_url",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "Europe/Rome",
+              "Europe/Rome",
+              "Europe/Rome",
+              "Europe/Rome",
+              "Europe/Rome"
+            ],
+            "name": "agency_timezone",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "it",
+              "it",
+              "it",
+              "it",
+              "it"
+            ],
+            "name": "agency_lang",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "800-019152",
+              "800-019152",
+              "800-019152",
+              "800-019152",
+              "199-892021"
+            ],
+            "name": "agency_phone",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "21",
+              "43",
+              "0",
+              "121",
+              "2"
+            ],
+            "name": "num",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "int",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": true,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "int",
+            "descriptionWithoutNewLines": ""
+          }
+        ],
+        "schemaName": null,
+        "databaseName": null,
+        "id": "17ea634b-ccdc-46b2-800e-7d24da415086"
+      },
+      "feedTableSchema": {
+        "name": null,
+        "description": null,
+        "charset": null,
+        "properties": {},
+        "fields": [
+          {
+            "sampleValues": [
+              "GTT",
+              "GTT_E",
+              "GTT_F",
+              "GTT_T",
+              "FS"
+            ],
+            "name": "agency_id",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "Gruppo Torinese Trasporti",
+              "GTT servizio extraurbano",
+              "Gruppo Torinese Trasporti",
+              "GTT Servizi Turistici",
+              "Trenitalia"
+            ],
+            "name": "agency_name",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "http://www.gtt.to.it",
+              "http://www.gtt.to.it",
+              "http://www.gtt.to.it",
+              "http://www.gtt.to.it",
+              "http://www.trenitalia.com"
+            ],
+            "name": "agency_url",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "Europe/Rome",
+              "Europe/Rome",
+              "Europe/Rome",
+              "Europe/Rome",
+              "Europe/Rome"
+            ],
+            "name": "agency_timezone",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "it",
+              "it",
+              "it",
+              "it",
+              "it"
+            ],
+            "name": "agency_lang",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "800-019152",
+              "800-019152",
+              "800-019152",
+              "800-019152",
+              "199-892021"
+            ],
+            "name": "agency_phone",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": false,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [
+              "21",
+              "43",
+              "0",
+              "121",
+              "2"
+            ],
+            "name": "num",
+            "description": "",
+            "nativeDataType": null,
+            "derivedDataType": "int",
+            "primaryKey": false,
+            "nullable": true,
+            "modifiable": true,
+            "dataTypeDescriptor": {
+              "numeric": true,
+              "date": false,
+              "complex": false
+            },
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "int",
+            "descriptionWithoutNewLines": ""
+          }
+        ],
+        "schemaName": null,
+        "databaseName": null,
+        "id": "07f7fa9c-3048-43d6-96ed-fb6334ee67dc"
+      },
+      "method": "SAMPLE_FILE",
+      "description": "",
+      "fieldPolicies": [
+        {
+          "profile": false,
+          "index": false,
+          "fieldName": "agency_id",
+          "feedFieldName": "agency_id",
+          "standardization": null,
+          "validation": null,
+          "domainTypeId": null,
+          "partitionColumn": false
+        },
+        {
+          "profile": false,
+          "index": false,
+          "fieldName": "agency_name",
+          "feedFieldName": "agency_name",
+          "standardization": null,
+          "validation": null,
+          "domainTypeId": null,
+          "partitionColumn": false
+        },
+        {
+          "profile": false,
+          "index": false,
+          "fieldName": "agency_url",
+          "feedFieldName": "agency_url",
+          "standardization": null,
+          "validation": null,
+          "domainTypeId": null,
+          "partitionColumn": false
+        },
+        {
+          "profile": false,
+          "index": false,
+          "fieldName": "agency_timezone",
+          "feedFieldName": "agency_timezone",
+          "standardization": null,
+          "validation": null,
+          "domainTypeId": null,
+          "partitionColumn": false
+        },
+        {
+          "profile": false,
+          "index": false,
+          "fieldName": "agency_lang",
+          "feedFieldName": "agency_lang",
+          "standardization": null,
+          "validation": null,
+          "domainTypeId": null,
+          "partitionColumn": false
+        },
+        {
+          "profile": false,
+          "index": false,
+          "fieldName": "agency_phone",
+          "feedFieldName": "agency_phone",
+          "standardization": null,
+          "validation": null,
+          "domainTypeId": null,
+          "partitionColumn": false
+        },
+        {
+          "profile": false,
+          "index": false,
+          "fieldName": "num",
+          "feedFieldName": "num",
+          "standardization": null,
+          "validation": null,
+          "domainTypeId": null,
+          "partitionColumn": false
+        }
+      ],
+      "partitions": [],
+      "tableType": null,
+      "incrementalDateField": null,
+      "sourceTableIncrementalDateField": null,
+      "options": {
+        "compress": false,
+        "auditLogging": true,
+        "encrypt": false,
+        "trackHistory": false,
+        "compressionFormat": "SNAPPY"
+      },
+      "feedFormat": "ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'\n WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\\\' ,'quoteChar' = '\\\"') STORED AS TEXTFILE",
+      "targetFormat": "STORED AS PARQUET",
+      "targetTblProperties": "tblproperties(\"parquet.compression\"=\"SNAPPY\")",
+      "targetMergeStrategy": "DEDUPE_AND_MERGE",
+      "fieldPoliciesJson": "[{\"profile\":false,\"index\":false,\"fieldName\":\"agency_id\",\"feedFieldName\":\"agency_id\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"agency_name\",\"feedFieldName\":\"agency_name\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"agency_url\",\"feedFieldName\":\"agency_url\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"agency_timezone\",\"feedFieldName\":\"agency_timezone\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"agency_lang\",\"feedFieldName\":\"agency_lang\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"agency_phone\",\"feedFieldName\":\"agency_phone\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"num\",\"feedFieldName\":\"num\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false}]",
+      "fieldIndexString": "",
+      "partitionStructure": "",
+      "partitionSpecs": "",
+      "fieldsString": "agency_id\nagency_name\nagency_url\nagency_timezone\nagency_lang\nagency_phone\nnum",
+      "sourceFields": "agency_id\nagency_name\nagency_url\nagency_timezone\nagency_lang\nagency_phone\nnum",
+      "sourceFieldsCommaString": "agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,num",
+      "feedFieldStructure": "agency_id|string||0|0|0|agency_id\nagency_name|string||0|0|0|agency_name\nagency_url|string||0|0|0|agency_url\nagency_timezone|string||0|0|0|agency_timezone\nagency_lang|string||0|0|0|agency_lang\nagency_phone|string||0|0|0|agency_phone\nnum|int||0|0|0|num",
+      "nullableFields": "agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,num",
+      "primaryKeyFields": "",
+      "sourceTargetFieldMap": {
+        "agency_timezone": "agency_timezone",
+        "agency_name": "agency_name",
+        "agency_url": "agency_url",
+        "agency_phone": "agency_phone",
+        "num": "num",
+        "agency_id": "agency_id",
+        "agency_lang": "agency_lang"
+      },
+      "targetSourceFieldMap": {
+        "agency_timezone": "agency_timezone",
+        "agency_name": "agency_name",
+        "agency_url": "agency_url",
+        "agency_phone": "agency_phone",
+        "num": "num",
+        "agency_id": "agency_id",
+        "agency_lang": "agency_lang"
+      }
+    },
+    "createDate": 1513258675667,
+    "updateDate": 1513258675667,
+    "dataTransformation": {
+      "chartViewModel": null,
+      "datasourceIds": null,
+      "dataTransformScript": null,
+      "sql": null,
+      "states": []
+    },
+    "active": true,
+    "state": "ENABLED",
+    "nifiProcessGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+    "options": {
+      "skipHeader": true
+    },
+    "registeredTemplate": {
+      "owner": {
+        "displayName": "Data Lake Administrator",
+        "email": null,
+        "enabled": true,
+        "groups": [
+          "admin",
+          "user"
+        ],
+        "systemName": "dladmin"
+      },
+      "allowedActions": {
+        "actions": [
+          {
+            "systemName": "accessTemplate",
+            "actions": [
+              {
+                "systemName": "editTemplate"
+              },
+              {
+                "systemName": "deleteTemplate"
+              },
+              {
+                "systemName": "exportTemplate"
+              },
+              {
+                "systemName": "createFeedFromTemplate"
+              },
+              {
+                "systemName": "changeTemplatePermissions"
+              }
+            ]
+          }
+        ]
+      },
+      "roleMemberships": [],
+      "feedRoleMemberships": [],
+      "properties": [
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Filesystem",
+          "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.standard.GetFile",
+          "key": "File Filter",
+          "value": "mydata\\d{1,3}.csv",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "File Filter",
+            "displayName": "File Filter",
+            "description": "Only files whose names match the given regular expression will be picked up",
+            "defaultValue": "[^\\.].*",
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null
+          },
+          "templateValue": "mydata\\d{1,3}.csv",
+          "userEditable": true,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": true,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Filesystem-File Filter",
+          "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-File Filter",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-File Filter"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Filesystem",
+          "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.standard.GetFile",
+          "key": "Input Directory",
+          "value": "/var/dropzone",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Input Directory",
+            "displayName": "Input Directory",
+            "description": "The input directory from which to pull files",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "/var/dropzone",
+          "userEditable": true,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": true,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Filesystem-Input Directory",
+          "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Input Directory",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Input Directory"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "category",
+          "value": "${metadata.category.systemName}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "category",
+            "displayName": "category",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.category.systemName}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-category",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-category",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-category"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "feed",
+          "value": "${metadata.systemFeedName}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "feed",
+            "displayName": "feed",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.systemFeedName}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-feed",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-feed",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-feed"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "hdfs.archive.root",
+          "value": "${config.hdfs.archive.root}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "hdfs.archive.root",
+            "displayName": "hdfs.archive.root",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.hdfs.archive.root}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-hdfs.archive.root",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hdfs.archive.root",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-hdfs.archive.root"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "hdfs.ingest.root",
+          "value": "${config.hdfs.ingest.root}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "hdfs.ingest.root",
+            "displayName": "hdfs.ingest.root",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.hdfs.ingest.root}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-hdfs.ingest.root",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hdfs.ingest.root",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-hdfs.ingest.root"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "hive.ingest.root",
+          "value": "${config.hive.ingest.root}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "hive.ingest.root",
+            "displayName": "hive.ingest.root",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.hive.ingest.root}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.ingest.root",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.ingest.root",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-hive.ingest.root"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "hive.master.root",
+          "value": "${config.hive.master.root}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "hive.master.root",
+            "displayName": "hive.master.root",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.hive.master.root}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.master.root",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.master.root",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-hive.master.root"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "hive.profile.root",
+          "value": "${config.hive.profile.root}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "hive.profile.root",
+            "displayName": "hive.profile.root",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.hive.profile.root}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.profile.root",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.profile.root",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-hive.profile.root"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.feedFieldStructure",
+          "value": "${metadata.table.feedFieldStructure}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.feedFieldStructure",
+            "displayName": "metadata.table.feedFieldStructure",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.feedFieldStructure}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.feedFieldStructure",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.feedFieldStructure",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-metadata.table.feedFieldStructure"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.feedFormat",
+          "value": "${metadata.table.feedFormat}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.feedFormat",
+            "displayName": "metadata.table.feedFormat",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.feedFormat}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.feedFormat",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.feedFormat",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-metadata.table.feedFormat"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.fieldIndexString",
+          "value": "${metadata.table.fieldIndexString}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.fieldIndexString",
+            "displayName": "metadata.table.fieldIndexString",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.fieldIndexString}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldIndexString",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldIndexString",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-metadata.table.fieldIndexString"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.fieldPoliciesJson",
+          "value": "${metadata.table.fieldPoliciesJson}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.fieldPoliciesJson",
+            "displayName": "metadata.table.fieldPoliciesJson",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.fieldPoliciesJson}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldPoliciesJson",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldPoliciesJson",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-metadata.table.fieldPoliciesJson"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.fieldStructure",
+          "value": "${metadata.table.fieldStructure}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.fieldStructure",
+            "displayName": "metadata.table.fieldStructure",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.fieldStructure}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldStructure",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldStructure",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-metadata.table.fieldStructure"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.partitionSpecs",
+          "value": "${metadata.table.partitionSpecs}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.partitionSpecs",
+            "displayName": "metadata.table.partitionSpecs",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.partitionSpecs}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.partitionSpecs",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionSpecs",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-metadata.table.partitionSpecs"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.partitionStructure",
+          "value": "${metadata.table.partitionStructure}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.partitionStructure",
+            "displayName": "metadata.table.partitionStructure",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.partitionStructure}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.partitionStructure",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionStructure",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-metadata.table.partitionStructure"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.targetFormat",
+          "value": "${metadata.table.targetFormat}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.targetFormat",
+            "displayName": "metadata.table.targetFormat",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.targetFormat}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetFormat",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetFormat",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-metadata.table.targetFormat"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.targetMergeStrategy",
+          "value": "${metadata.table.targetMergeStrategy}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.targetMergeStrategy",
+            "displayName": "metadata.table.targetMergeStrategy",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.targetMergeStrategy}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetMergeStrategy",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetMergeStrategy",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-metadata.table.targetMergeStrategy"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.targetTblProperties",
+          "value": "${metadata.table.targetTblProperties}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.targetTblProperties",
+            "displayName": "metadata.table.targetTblProperties",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.targetTblProperties}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetTblProperties",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetTblProperties",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-metadata.table.targetTblProperties"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "nifi.home",
+          "value": "${config.nifi.home}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "nifi.home",
+            "displayName": "nifi.home",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.nifi.home}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-nifi.home",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-nifi.home",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-nifi.home"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Initialize Feed Parameters",
+          "processorId": "552ef4d4-6075-34f0-5da9-d2329afa6581",
+          "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "skipHeader",
+          "value": "${metadata.options.skipHeader}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "skipHeader",
+            "displayName": "skipHeader",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.options.skipHeader}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Initialize Feed Parameters-skipHeader",
+          "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-skipHeader",
+          "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-552ef4d4-6075-34f0-5da9-d2329afa6581-skipHeader"
+        }
+      ],
+      "nonInputProcessors": null,
+      "inputProcessors": [
+        {
+          "properties": [
+            {
+              "processGroupName": "NiFi Flow",
+              "processorName": "Filesystem",
+              "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+              "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+              "processorType": "org.apache.nifi.processors.standard.GetFile",
+              "key": "File Filter",
+              "value": "mydata\\d{1,3}.csv",
+              "expressionProperties": null,
+              "propertyDescriptor": {
+                "name": "File Filter",
+                "displayName": "File Filter",
+                "description": "Only files whose names match the given regular expression will be picked up",
+                "defaultValue": "[^\\.].*",
+                "allowableValues": null,
+                "required": true,
+                "sensitive": false,
+                "dynamic": false,
+                "supportsEl": false,
+                "identifiesControllerService": null
+              },
+              "templateValue": "mydata\\d{1,3}.csv",
+              "userEditable": true,
+              "renderType": "text",
+              "renderOptions": {},
+              "selected": true,
+              "inputProperty": true,
+              "containsConfigurationVariables": false,
+              "sensitive": false,
+              "required": true,
+              "templateProperty": null,
+              "nameKey": "NiFi Flow-Filesystem-File Filter",
+              "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-File Filter",
+              "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-File Filter"
+            },
+            {
+              "processGroupName": "NiFi Flow",
+              "processorName": "Filesystem",
+              "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+              "processGroupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+              "processorType": "org.apache.nifi.processors.standard.GetFile",
+              "key": "Input Directory",
+              "value": "/var/dropzone",
+              "expressionProperties": null,
+              "propertyDescriptor": {
+                "name": "Input Directory",
+                "displayName": "Input Directory",
+                "description": "The input directory from which to pull files",
+                "defaultValue": null,
+                "allowableValues": null,
+                "required": true,
+                "sensitive": false,
+                "dynamic": false,
+                "supportsEl": true,
+                "identifiesControllerService": null
+              },
+              "templateValue": "/var/dropzone",
+              "userEditable": true,
+              "renderType": "text",
+              "renderOptions": {},
+              "selected": true,
+              "inputProperty": true,
+              "containsConfigurationVariables": false,
+              "sensitive": false,
+              "required": true,
+              "templateProperty": null,
+              "nameKey": "NiFi Flow-Filesystem-Input Directory",
+              "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Input Directory",
+              "idKey": "552f863b-0160-1000-5bfb-8fc4f21853ef-1c643713-3d59-3540-d4f6-485fa7d81dbe-Input Directory"
+            }
+          ],
+          "type": "org.apache.nifi.processors.standard.GetFile",
+          "name": "Filesystem",
+          "id": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+          "groupName": "NiFi Flow",
+          "groupId": "552f863b-0160-1000-5bfb-8fc4f21853ef",
+          "inputProcessor": true,
+          "userDefinedInputProcessor": false
+        }
+      ],
+      "id": "07b7509c-4916-48fe-9dd0-4e184ddcc4ec",
+      "nifiTemplateId": "d0f26cf7-3e78-4482-af2b-3022d50dc78e",
+      "templateName": "Dataset Ingest",
+      "updateDate": 1513258675667,
+      "createDate": 1513181399486,
+      "icon": "get_app",
+      "iconColor": "#66BB6A",
+      "description": "Dataset Ingest",
+      "state": "ENABLED",
+      "defineTable": true,
+      "reusableTemplate": false,
+      "reusableTemplateConnections": [
+        {
+          "feedOutputPortName": "to-dataset-ingest",
+          "reusableTemplateInputPortName": "dataset-ingest",
+          "inputPortDisplayName": "dataset-ingest"
+        }
+      ],
+      "registeredDatasourceDefinitions": [
+        {
+          "processorType": "org.apache.nifi.processors.standard.GetFile",
+          "processorName": "Filesystem",
+          "processorId": "1c643713-3d59-3540-0000-000000000000",
+          "datasourceDefinition": {
+            "processorType": "org.apache.nifi.processors.standard.GetFile",
+            "connectionType": "SOURCE",
+            "datasourcePropertyKeys": [
+              "Input Directory",
+              "File Filter"
+            ],
+            "datasourceType": "DirectoryDatasource",
+            "identityString": "${Input Directory}/${File Filter}",
+            "description": " Directory or File source",
+            "title": "${Input Directory}/${File Filter}"
+          }
+        },
+        {
+          "processorType": "com.thinkbiganalytics.nifi.v2.ingest.MergeTable",
+          "processorName": "Merge Table",
+          "processorId": "cd9f851b-4f87-322f-79e6-a45cd4cd804d",
+          "datasourceDefinition": {
+            "processorType": "com.thinkbiganalytics.nifi.v2.ingest.MergeTable",
+            "connectionType": "DESTINATION",
+            "datasourcePropertyKeys": [
+              "Target schema",
+              "Target table"
+            ],
+            "datasourceType": "HiveDatasource",
+            "identityString": "${Target schema}.${Target table}",
+            "description": null,
+            "title": "${Target schema}.${Target table}"
+          }
+        }
+      ],
+      "order": 2,
+      "templateOrder": null,
+      "feedsCount": 1,
+      "templateTableOption": "DEFINE_TABLE",
+      "timeBetweenStartingBatchJobs": 1000,
+      "stream": false,
+      "allowPreconditions": false,
+      "dataTransformation": false,
+      "isStream": false
+    },
+    "userProperties": [
+      {
+        "description": null,
+        "displayName": null,
+        "order": null,
+        "required": null,
+        "systemName": "daf_property",
+        "locked": false,
+        "value": "daf_property_value"
+      }
+    ],
+    "systemCategoryName": "daf_category",
+    "categoryIcon": "donut_small",
+    "categoryIconColor": "#90CAF9",
+    "categoryId": "efc036fe-ef47-42a6-bb00-7067efb358a5",
+    "new": false,
+    "categoryAndFeedDisplayName": "DAF Category.DAF Feed Name",
+    "categoryName": "DAF Category",
+    "reusableFeed": false
+  },
+  "feedProcessGroup": {
+    "processGroupEntity": {
+      "id": "553ee781-0160-1000-5699-a75e50e93a16",
+      "parentGroupId": "553d13d5-0160-1000-c976-0dbc20c81e8a",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "name": "daf_feed_name",
+      "comments": "",
+      "runningCount": 0,
+      "stoppedCount": 5,
+      "invalidCount": 0,
+      "disabledCount": 0,
+      "activeRemotePortCount": 0,
+      "inactiveRemotePortCount": 0,
+      "inputPortCount": 0,
+      "outputPortCount": 1,
+      "contents": {
+        "processGroups": [],
+        "remoteProcessGroups": [],
+        "processors": [
+          {
+            "id": "a9f06f58-3e80-315a-6f92-ee2d1fc11226",
+            "parentGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+            "position": {
+              "x": 1865.0786996430652,
+              "y": 13.268927910702587
+            },
+            "name": "DB Avro Ingest Parameters",
+            "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-update-attribute-nar",
+              "version": "1.4.0"
+            },
+            "state": "STOPPED",
+            "style": {},
+            "relationships": [
+              {
+                "name": "set state fail",
+                "description": "A failure to set the state after adding the attributes to the FlowFile will route the FlowFile here.",
+                "autoTerminate": true
+              },
+              {
+                "name": "success",
+                "description": "All successful FlowFiles are routed to this relationship",
+                "autoTerminate": false
+              }
+            ],
+            "description": null,
+            "supportsParallelProcessing": true,
+            "supportsEventDriven": true,
+            "supportsBatching": true,
+            "persistsState": true,
+            "restricted": false,
+            "multipleVersionsAvailable": false,
+            "inputRequirement": "INPUT_REQUIRED",
+            "config": {
+              "properties": {
+                "Delete Attributes Expression": null,
+                "Store State": "Store state locally",
+                "Stateful Variables Initial Value": "",
+                "metadata.table.feedFieldStructure": "${db.table.avro.schema}",
+                "skipHeader": "false"
+              },
+              "descriptors": {
+                "Delete Attributes Expression": {
+                  "name": "Delete Attributes Expression",
+                  "displayName": "Delete Attributes Expression",
+                  "description": "Regular expression for attributes to be deleted from FlowFiles.  Existing attributes that match will be deleted regardless of whether they are updated by this processor.",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Store State": {
+                  "name": "Store State",
+                  "displayName": "Store State",
+                  "description": "Select whether or not state will be stored. Selecting 'Stateless' will offer the default functionality of purely updating the attributes on a FlowFile in a stateless manner. Selecting a stateful option will not only store the attributes on the FlowFile but also in the Processors state. See the 'Stateful Usage' topic of the 'Additional Details' section of this processor's documentation for more information",
+                  "defaultValue": "Do not store state",
+                  "allowableValues": [
+                    {
+                      "allowableValue": {
+                        "displayName": "Do not store state",
+                        "value": "Do not store state",
+                        "description": null
+                      },
+                      "canRead": true
+                    },
+                    {
+                      "allowableValue": {
+                        "displayName": "Store state locally",
+                        "value": "Store state locally",
+                        "description": null
+                      },
+                      "canRead": true
+                    }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Stateful Variables Initial Value": {
+                  "name": "Stateful Variables Initial Value",
+                  "displayName": "Stateful Variables Initial Value",
+                  "description": "If using state to set/reference variables then this value is used to set the initial value of the stateful variable. This will only be used in the @OnScheduled method when state does not contain a value for the variable. This is required if running statefully but can be empty if needed.",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.feedFieldStructure": {
+                  "name": "metadata.table.feedFieldStructure",
+                  "displayName": "metadata.table.feedFieldStructure",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "skipHeader": {
+                  "name": "skipHeader",
+                  "displayName": "skipHeader",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                }
+              },
+              "schedulingPeriod": "0 sec",
+              "schedulingStrategy": "TIMER_DRIVEN",
+              "executionNode": "ALL",
+              "penaltyDuration": "30 sec",
+              "yieldDuration": "1 sec",
+              "bulletinLevel": "WARN",
+              "runDurationMillis": 0,
+              "concurrentlySchedulableTaskCount": 1,
+              "autoTerminatedRelationships": null,
+              "comments": "",
+              "customUiUrl": "/nifi-update-attribute-ui-1.4.0/configure",
+              "lossTolerant": false,
+              "annotationData": null,
+              "defaultConcurrentTasks": {
+                "TIMER_DRIVEN": "1",
+                "EVENT_DRIVEN": "0",
+                "CRON_DRIVEN": "1"
+              },
+              "defaultSchedulingPeriod": {
+                "TIMER_DRIVEN": "0 sec",
+                "CRON_DRIVEN": "* * * * * ?"
+              }
+            },
+            "validationErrors": null,
+            "extensionMissing": false
+          },
+          {
+            "id": "1c643713-3d59-3540-8ee1-f644b35e7407",
+            "parentGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+            "position": {
+              "x": 10.0,
+              "y": 10.0
+            },
+            "name": "Filesystem",
+            "type": "org.apache.nifi.processors.standard.GetFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "1.4.0"
+            },
+            "state": "STOPPED",
+            "style": {
+              "background-color": "#11f237"
+            },
+            "relationships": [
+              {
+                "name": "success",
+                "description": "All files are routed to success",
+                "autoTerminate": false
+              }
+            ],
+            "description": null,
+            "supportsParallelProcessing": true,
+            "supportsEventDriven": false,
+            "supportsBatching": false,
+            "persistsState": false,
+            "restricted": true,
+            "multipleVersionsAvailable": false,
+            "inputRequirement": "INPUT_FORBIDDEN",
+            "config": {
+              "properties": {
+                "Input Directory": "/daf_input_directory",
+                "File Filter": "daf_input_regexp_filter",
+                "Path Filter": null,
+                "Batch Size": "100",
+                "Keep Source File": "false",
+                "Recurse Subdirectories": "false",
+                "Polling Interval": "0 sec",
+                "Ignore Hidden Files": "true",
+                "Minimum File Age": "0 sec",
+                "Maximum File Age": null,
+                "Minimum File Size": "0 B",
+                "Maximum File Size": null
+              },
+              "descriptors": {
+                "Input Directory": {
+                  "name": "Input Directory",
+                  "displayName": "Input Directory",
+                  "description": "The input directory from which to pull files",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "File Filter": {
+                  "name": "File Filter",
+                  "displayName": "File Filter",
+                  "description": "Only files whose names match the given regular expression will be picked up",
+                  "defaultValue": "[^\\.].*",
+                  "allowableValues": null,
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Path Filter": {
+                  "name": "Path Filter",
+                  "displayName": "Path Filter",
+                  "description": "When Recurse Subdirectories is true, then only subdirectories whose path matches the given regular expression will be scanned",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Batch Size": {
+                  "name": "Batch Size",
+                  "displayName": "Batch Size",
+                  "description": "The maximum number of files to pull in each iteration",
+                  "defaultValue": "10",
+                  "allowableValues": null,
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Keep Source File": {
+                  "name": "Keep Source File",
+                  "displayName": "Keep Source File",
+                  "description": "If true, the file is not deleted after it has been copied to the Content Repository; this causes the file to be picked up continually and is useful for testing purposes.  If not keeping original NiFi will need write permissions on the directory it is pulling from otherwise it will ignore the file.",
+                  "defaultValue": "false",
+                  "allowableValues": [
+                    {
+                      "allowableValue": {
+                        "displayName": "true",
+                        "value": "true",
+                        "description": null
+                      },
+                      "canRead": true
+                    },
+                    {
+                      "allowableValue": {
+                        "displayName": "false",
+                        "value": "false",
+                        "description": null
+                      },
+                      "canRead": true
+                    }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Recurse Subdirectories": {
+                  "name": "Recurse Subdirectories",
+                  "displayName": "Recurse Subdirectories",
+                  "description": "Indicates whether or not to pull files from subdirectories",
+                  "defaultValue": "true",
+                  "allowableValues": [
+                    {
+                      "allowableValue": {
+                        "displayName": "true",
+                        "value": "true",
+                        "description": null
+                      },
+                      "canRead": true
+                    },
+                    {
+                      "allowableValue": {
+                        "displayName": "false",
+                        "value": "false",
+                        "description": null
+                      },
+                      "canRead": true
+                    }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Polling Interval": {
+                  "name": "Polling Interval",
+                  "displayName": "Polling Interval",
+                  "description": "Indicates how long to wait before performing a directory listing",
+                  "defaultValue": "0 sec",
+                  "allowableValues": null,
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Ignore Hidden Files": {
+                  "name": "Ignore Hidden Files",
+                  "displayName": "Ignore Hidden Files",
+                  "description": "Indicates whether or not hidden files should be ignored",
+                  "defaultValue": "true",
+                  "allowableValues": [
+                    {
+                      "allowableValue": {
+                        "displayName": "true",
+                        "value": "true",
+                        "description": null
+                      },
+                      "canRead": true
+                    },
+                    {
+                      "allowableValue": {
+                        "displayName": "false",
+                        "value": "false",
+                        "description": null
+                      },
+                      "canRead": true
+                    }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Minimum File Age": {
+                  "name": "Minimum File Age",
+                  "displayName": "Minimum File Age",
+                  "description": "The minimum age that a file must be in order to be pulled; any file younger than this amount of time (according to last modification date) will be ignored",
+                  "defaultValue": "0 sec",
+                  "allowableValues": null,
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Maximum File Age": {
+                  "name": "Maximum File Age",
+                  "displayName": "Maximum File Age",
+                  "description": "The maximum age that a file must be in order to be pulled; any file older than this amount of time (according to last modification date) will be ignored",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Minimum File Size": {
+                  "name": "Minimum File Size",
+                  "displayName": "Minimum File Size",
+                  "description": "The minimum size that a file must be in order to be pulled",
+                  "defaultValue": "0 B",
+                  "allowableValues": null,
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Maximum File Size": {
+                  "name": "Maximum File Size",
+                  "displayName": "Maximum File Size",
+                  "description": "The maximum size that a file can be in order to be pulled",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                }
+              },
+              "schedulingPeriod": "15 sec",
+              "schedulingStrategy": "TIMER_DRIVEN",
+              "executionNode": "ALL",
+              "penaltyDuration": "30 sec",
+              "yieldDuration": "1 sec",
+              "bulletinLevel": "WARN",
+              "runDurationMillis": 0,
+              "concurrentlySchedulableTaskCount": 1,
+              "autoTerminatedRelationships": null,
+              "comments": "",
+              "customUiUrl": null,
+              "lossTolerant": false,
+              "annotationData": null,
+              "defaultConcurrentTasks": {
+                "TIMER_DRIVEN": "1",
+                "EVENT_DRIVEN": "0",
+                "CRON_DRIVEN": "1"
+              },
+              "defaultSchedulingPeriod": {
+                "TIMER_DRIVEN": "0 sec",
+                "CRON_DRIVEN": "* * * * * ?"
+              }
+            },
+            "validationErrors": null,
+            "extensionMissing": false
+          },
+          {
+            "id": "510c7217-8841-374a-dd99-a9deabe06800",
+            "parentGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+            "position": {
+              "x": 1260.3227785927702,
+              "y": 16.346586073774233
+            },
+            "name": "Detect DB Avro Ingest",
+            "type": "org.apache.nifi.processors.standard.RouteOnAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "1.4.0"
+            },
+            "state": "STOPPED",
+            "style": {},
+            "relationships": [
+              {
+                "name": "table-avro",
+                "description": "",
+                "autoTerminate": false
+              },
+              {
+                "name": "unmatched",
+                "description": "FlowFiles that do not match any user-define expression will be routed here",
+                "autoTerminate": false
+              }
+            ],
+            "description": null,
+            "supportsParallelProcessing": true,
+            "supportsEventDriven": true,
+            "supportsBatching": true,
+            "persistsState": false,
+            "restricted": false,
+            "multipleVersionsAvailable": false,
+            "inputRequirement": "INPUT_REQUIRED",
+            "config": {
+              "properties": {
+                "Routing Strategy": "Route to Property name",
+                "table-avro": "${db.table.output.format:equals('AVRO')}"
+              },
+              "descriptors": {
+                "Routing Strategy": {
+                  "name": "Routing Strategy",
+                  "displayName": "Routing Strategy",
+                  "description": "Specifies how to determine which relationship to use when evaluating the Expression Language",
+                  "defaultValue": "Route to Property name",
+                  "allowableValues": [
+                    {
+                      "allowableValue": {
+                        "displayName": "Route to Property name",
+                        "value": "Route to Property name",
+                        "description": "A copy of the FlowFile will be routed to each relationship whose corresponding expression evaluates to 'true'"
+                      },
+                      "canRead": true
+                    },
+                    {
+                      "allowableValue": {
+                        "displayName": "Route to 'matched' if all match",
+                        "value": "Route to 'match' if all match",
+                        "description": "Requires that all user-defined expressions evaluate to 'true' for the FlowFile to be considered a match"
+                      },
+                      "canRead": true
+                    },
+                    {
+                      "allowableValue": {
+                        "displayName": "Route to 'matched' if any matches",
+                        "value": "Route to 'match' if any matches",
+                        "description": "Requires that at least one user-defined expression evaluate to 'true' for the FlowFile to be considered a match"
+                      },
+                      "canRead": true
+                    }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "table-avro": {
+                  "name": "table-avro",
+                  "displayName": "table-avro",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                }
+              },
+              "schedulingPeriod": "0 sec",
+              "schedulingStrategy": "TIMER_DRIVEN",
+              "executionNode": "ALL",
+              "penaltyDuration": "30 sec",
+              "yieldDuration": "1 sec",
+              "bulletinLevel": "WARN",
+              "runDurationMillis": 0,
+              "concurrentlySchedulableTaskCount": 1,
+              "autoTerminatedRelationships": null,
+              "comments": "",
+              "customUiUrl": null,
+              "lossTolerant": false,
+              "annotationData": null,
+              "defaultConcurrentTasks": {
+                "TIMER_DRIVEN": "1",
+                "EVENT_DRIVEN": "0",
+                "CRON_DRIVEN": "1"
+              },
+              "defaultSchedulingPeriod": {
+                "TIMER_DRIVEN": "0 sec",
+                "CRON_DRIVEN": "* * * * * ?"
+              }
+            },
+            "validationErrors": null,
+            "extensionMissing": false
+          },
+          {
+            "id": "552ef4d4-6075-34f0-5ea4-579338c45b53",
+            "parentGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+            "position": {
+              "x": 658.7000789642334,
+              "y": 14.001336021423413
+            },
+            "name": "Initialize Feed Parameters",
+            "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-update-attribute-nar",
+              "version": "1.4.0"
+            },
+            "state": "STOPPED",
+            "style": {
+              "background-color": "#11f237"
+            },
+            "relationships": [
+              {
+                "name": "set state fail",
+                "description": "A failure to set the state after adding the attributes to the FlowFile will route the FlowFile here.",
+                "autoTerminate": true
+              },
+              {
+                "name": "success",
+                "description": "All successful FlowFiles are routed to this relationship",
+                "autoTerminate": false
+              }
+            ],
+            "description": null,
+            "supportsParallelProcessing": true,
+            "supportsEventDriven": true,
+            "supportsBatching": true,
+            "persistsState": true,
+            "restricted": false,
+            "multipleVersionsAvailable": false,
+            "inputRequirement": "INPUT_REQUIRED",
+            "config": {
+              "properties": {
+                "Delete Attributes Expression": null,
+                "Store State": "Store state locally",
+                "Stateful Variables Initial Value": "",
+                "archiveId": "${now():format('yyyyMMddHHmmss')}_${UUID()}",
+                "category": "daf_category",
+                "feed": "daf_feed_name",
+                "hdfs.archive.root": "/app/tba/archive",
+                "hdfs.ingest.root": "/app/tba/etl",
+                "hive.ingest.root": "/app/tba/model.db",
+                "hive.master.root": "/app/warehouse",
+                "hive.profile.root": "/app/tba/model.db",
+                "kylo.tmp.baseFolder": "/tmp/kylo-nifi",
+                "metadata.table.feedFieldStructure": "agency_id|string||0|0|0|agency_id\nagency_name|string||0|0|0|agency_name\nagency_url|string||0|0|0|agency_url\nagency_timezone|string||0|0|0|agency_timezone\nagency_lang|string||0|0|0|agency_lang\nagency_phone|string||0|0|0|agency_phone\nnum|int||0|0|0|num",
+                "metadata.table.feedFormat": "ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'\n WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\\\' ,'quoteChar' = '\\\"') STORED AS TEXTFILE",
+                "metadata.table.fieldPoliciesJson": "[{\"profile\":false,\"index\":false,\"fieldName\":\"agency_id\",\"feedFieldName\":\"agency_id\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"agency_name\",\"feedFieldName\":\"agency_name\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"agency_url\",\"feedFieldName\":\"agency_url\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"agency_timezone\",\"feedFieldName\":\"agency_timezone\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"agency_lang\",\"feedFieldName\":\"agency_lang\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"agency_phone\",\"feedFieldName\":\"agency_phone\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"num\",\"feedFieldName\":\"num\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false}]",
+                "metadata.table.fieldStructure": "agency_id|string||0|0|0|agency_id\nagency_name|string||0|0|0|agency_name\nagency_url|string||0|0|0|agency_url\nagency_timezone|string||0|0|0|agency_timezone\nagency_lang|string||0|0|0|agency_lang\nagency_phone|string||0|0|0|agency_phone\nnum|int||0|0|0|num",
+                "metadata.table.targetFormat": "STORED AS PARQUET",
+                "metadata.table.targetMergeStrategy": "DEDUPE_AND_MERGE",
+                "metadata.table.targetTblProperties": "tblproperties(\"parquet.compression\"=\"SNAPPY\")",
+                "nifi.home": "/usr/nifi",
+                "skipHeader": "true",
+                "spark.input_folder": "/tmp/kylo-nifi/spark"
+              },
+              "descriptors": {
+                "Delete Attributes Expression": {
+                  "name": "Delete Attributes Expression",
+                  "displayName": "Delete Attributes Expression",
+                  "description": "Regular expression for attributes to be deleted from FlowFiles.  Existing attributes that match will be deleted regardless of whether they are updated by this processor.",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Store State": {
+                  "name": "Store State",
+                  "displayName": "Store State",
+                  "description": "Select whether or not state will be stored. Selecting 'Stateless' will offer the default functionality of purely updating the attributes on a FlowFile in a stateless manner. Selecting a stateful option will not only store the attributes on the FlowFile but also in the Processors state. See the 'Stateful Usage' topic of the 'Additional Details' section of this processor's documentation for more information",
+                  "defaultValue": "Do not store state",
+                  "allowableValues": [
+                    {
+                      "allowableValue": {
+                        "displayName": "Do not store state",
+                        "value": "Do not store state",
+                        "description": null
+                      },
+                      "canRead": true
+                    },
+                    {
+                      "allowableValue": {
+                        "displayName": "Store state locally",
+                        "value": "Store state locally",
+                        "description": null
+                      },
+                      "canRead": true
+                    }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Stateful Variables Initial Value": {
+                  "name": "Stateful Variables Initial Value",
+                  "displayName": "Stateful Variables Initial Value",
+                  "description": "If using state to set/reference variables then this value is used to set the initial value of the stateful variable. This will only be used in the @OnScheduled method when state does not contain a value for the variable. This is required if running statefully but can be empty if needed.",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "archiveId": {
+                  "name": "archiveId",
+                  "displayName": "archiveId",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "category": {
+                  "name": "category",
+                  "displayName": "category",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "feed": {
+                  "name": "feed",
+                  "displayName": "feed",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "hdfs.archive.root": {
+                  "name": "hdfs.archive.root",
+                  "displayName": "hdfs.archive.root",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "hdfs.ingest.root": {
+                  "name": "hdfs.ingest.root",
+                  "displayName": "hdfs.ingest.root",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "hive.ingest.root": {
+                  "name": "hive.ingest.root",
+                  "displayName": "hive.ingest.root",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "hive.master.root": {
+                  "name": "hive.master.root",
+                  "displayName": "hive.master.root",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "hive.profile.root": {
+                  "name": "hive.profile.root",
+                  "displayName": "hive.profile.root",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "kylo.tmp.baseFolder": {
+                  "name": "kylo.tmp.baseFolder",
+                  "displayName": "kylo.tmp.baseFolder",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.feedFieldStructure": {
+                  "name": "metadata.table.feedFieldStructure",
+                  "displayName": "metadata.table.feedFieldStructure",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.feedFormat": {
+                  "name": "metadata.table.feedFormat",
+                  "displayName": "metadata.table.feedFormat",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.fieldPoliciesJson": {
+                  "name": "metadata.table.fieldPoliciesJson",
+                  "displayName": "metadata.table.fieldPoliciesJson",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.fieldStructure": {
+                  "name": "metadata.table.fieldStructure",
+                  "displayName": "metadata.table.fieldStructure",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.targetFormat": {
+                  "name": "metadata.table.targetFormat",
+                  "displayName": "metadata.table.targetFormat",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.targetMergeStrategy": {
+                  "name": "metadata.table.targetMergeStrategy",
+                  "displayName": "metadata.table.targetMergeStrategy",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.targetTblProperties": {
+                  "name": "metadata.table.targetTblProperties",
+                  "displayName": "metadata.table.targetTblProperties",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "nifi.home": {
+                  "name": "nifi.home",
+                  "displayName": "nifi.home",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "skipHeader": {
+                  "name": "skipHeader",
+                  "displayName": "skipHeader",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "spark.input_folder": {
+                  "name": "spark.input_folder",
+                  "displayName": "spark.input_folder",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                }
+              },
+              "schedulingPeriod": "0 sec",
+              "schedulingStrategy": "TIMER_DRIVEN",
+              "executionNode": "ALL",
+              "penaltyDuration": "30 sec",
+              "yieldDuration": "1 sec",
+              "bulletinLevel": "WARN",
+              "runDurationMillis": 0,
+              "concurrentlySchedulableTaskCount": 1,
+              "autoTerminatedRelationships": null,
+              "comments": "",
+              "customUiUrl": "/nifi-update-attribute-ui-1.4.0/configure",
+              "lossTolerant": false,
+              "annotationData": null,
+              "defaultConcurrentTasks": {
+                "TIMER_DRIVEN": "1",
+                "EVENT_DRIVEN": "0",
+                "CRON_DRIVEN": "1"
+              },
+              "defaultSchedulingPeriod": {
+                "TIMER_DRIVEN": "0 sec",
+                "CRON_DRIVEN": "* * * * * ?"
+              }
+            },
+            "validationErrors": null,
+            "extensionMissing": false
+          }
+        ],
+        "inputPorts": [],
+        "outputPorts": [
+          {
+            "id": "6087621f-baf5-3e5c-be63-e752d945b6fc",
+            "parentGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+            "position": {
+              "x": 1316.7510541285974,
+              "y": 288.29008686391444
+            },
+            "name": "to-dataset-ingest",
+            "comments": "",
+            "state": "STOPPED",
+            "type": "OUTPUT_PORT",
+            "transmitting": null,
+            "concurrentlySchedulableTaskCount": 1,
+            "userAccessControl": null,
+            "groupAccessControl": null,
+            "validationErrors": null
+          }
+        ],
+        "connections": [
+          {
+            "id": "9addcccf-7efa-319e-ca72-881a63d8b208",
+            "parentGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+            "position": null,
+            "source": {
+              "id": "1c643713-3d59-3540-8ee1-f644b35e7407",
+              "type": "PROCESSOR",
+              "groupId": "553ee781-0160-1000-5699-a75e50e93a16",
+              "name": "Filesystem",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "destination": {
+              "id": "552ef4d4-6075-34f0-5ea4-579338c45b53",
+              "type": "PROCESSOR",
+              "groupId": "553ee781-0160-1000-5699-a75e50e93a16",
+              "name": "Initialize Feed Parameters",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "name": "",
+            "labelIndex": 1,
+            "zIndex": 0,
+            "selectedRelationships": [
+              "success"
+            ],
+            "availableRelationships": [
+              "success"
+            ],
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "bends": []
+          },
+          {
+            "id": "d28e9d3a-2fd5-3bba-b212-bdac0a6b62a6",
+            "parentGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+            "position": null,
+            "source": {
+              "id": "510c7217-8841-374a-dd99-a9deabe06800",
+              "type": "PROCESSOR",
+              "groupId": "553ee781-0160-1000-5699-a75e50e93a16",
+              "name": "Detect DB Avro Ingest",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "destination": {
+              "id": "a9f06f58-3e80-315a-6f92-ee2d1fc11226",
+              "type": "PROCESSOR",
+              "groupId": "553ee781-0160-1000-5699-a75e50e93a16",
+              "name": "DB Avro Ingest Parameters",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "name": "",
+            "labelIndex": 1,
+            "zIndex": 0,
+            "selectedRelationships": [
+              "table-avro"
+            ],
+            "availableRelationships": [
+              "table-avro",
+              "unmatched"
+            ],
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "bends": []
+          },
+          {
+            "id": "3ede1ed1-6cfe-33c2-18df-7bc61ce718d3",
+            "parentGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+            "position": null,
+            "source": {
+              "id": "510c7217-8841-374a-dd99-a9deabe06800",
+              "type": "PROCESSOR",
+              "groupId": "553ee781-0160-1000-5699-a75e50e93a16",
+              "name": "Detect DB Avro Ingest",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "destination": {
+              "id": "6087621f-baf5-3e5c-be63-e752d945b6fc",
+              "type": "OUTPUT_PORT",
+              "groupId": "553ee781-0160-1000-5699-a75e50e93a16",
+              "name": "to-dataset-ingest",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "name": "",
+            "labelIndex": 1,
+            "zIndex": 0,
+            "selectedRelationships": [
+              "unmatched"
+            ],
+            "availableRelationships": [
+              "table-avro",
+              "unmatched"
+            ],
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "bends": []
+          },
+          {
+            "id": "41cb11ea-7f7b-36c1-1800-3ffb2fe0eb78",
+            "parentGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+            "position": null,
+            "source": {
+              "id": "552ef4d4-6075-34f0-5ea4-579338c45b53",
+              "type": "PROCESSOR",
+              "groupId": "553ee781-0160-1000-5699-a75e50e93a16",
+              "name": "Initialize Feed Parameters",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "destination": {
+              "id": "510c7217-8841-374a-dd99-a9deabe06800",
+              "type": "PROCESSOR",
+              "groupId": "553ee781-0160-1000-5699-a75e50e93a16",
+              "name": "Detect DB Avro Ingest",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "name": "",
+            "labelIndex": 1,
+            "zIndex": 0,
+            "selectedRelationships": [
+              "success"
+            ],
+            "availableRelationships": [
+              "set state fail",
+              "success"
+            ],
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "bends": []
+          },
+          {
+            "id": "5d759149-a1f4-3e37-5fca-d4320919a070",
+            "parentGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+            "position": null,
+            "source": {
+              "id": "a9f06f58-3e80-315a-6f92-ee2d1fc11226",
+              "type": "PROCESSOR",
+              "groupId": "553ee781-0160-1000-5699-a75e50e93a16",
+              "name": "DB Avro Ingest Parameters",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "destination": {
+              "id": "6087621f-baf5-3e5c-be63-e752d945b6fc",
+              "type": "OUTPUT_PORT",
+              "groupId": "553ee781-0160-1000-5699-a75e50e93a16",
+              "name": "to-dataset-ingest",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "name": "",
+            "labelIndex": 1,
+            "zIndex": 0,
+            "selectedRelationships": [
+              "success"
+            ],
+            "availableRelationships": [
+              "set state fail",
+              "success"
+            ],
+            "backPressureObjectThreshold": 10000,
+            "backPressureDataSizeThreshold": "1 GB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "bends": []
+          }
+        ],
+        "labels": [],
+        "funnels": [],
+        "controllerServices": []
+      }
+    },
+    "inputProcessor": {
+      "id": "1c643713-3d59-3540-8ee1-f644b35e7407",
+      "parentGroupId": "553ee781-0160-1000-5699-a75e50e93a16",
+      "position": {
+        "x": 10.0,
+        "y": 10.0
+      },
+      "name": "Filesystem",
+      "type": "org.apache.nifi.processors.standard.GetFile",
+      "bundle": {
+        "group": "org.apache.nifi",
+        "artifact": "nifi-standard-nar",
+        "version": "1.4.0"
+      },
+      "state": "STOPPED",
+      "style": {
+        "background-color": "#11f237"
+      },
+      "relationships": [
+        {
+          "name": "success",
+          "description": "All files are routed to success",
+          "autoTerminate": false
+        }
+      ],
+      "description": null,
+      "supportsParallelProcessing": true,
+      "supportsEventDriven": false,
+      "supportsBatching": false,
+      "persistsState": false,
+      "restricted": true,
+      "multipleVersionsAvailable": false,
+      "inputRequirement": "INPUT_FORBIDDEN",
+      "config": {
+        "properties": {
+          "Input Directory": "/daf_input_directory",
+          "File Filter": "daf_input_regexp_filter",
+          "Path Filter": null,
+          "Batch Size": "100",
+          "Keep Source File": "false",
+          "Recurse Subdirectories": "false",
+          "Polling Interval": "0 sec",
+          "Ignore Hidden Files": "true",
+          "Minimum File Age": "0 sec",
+          "Maximum File Age": null,
+          "Minimum File Size": "0 B",
+          "Maximum File Size": null
+        },
+        "descriptors": {
+          "Input Directory": {
+            "name": "Input Directory",
+            "displayName": "Input Directory",
+            "description": "The input directory from which to pull files",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "File Filter": {
+            "name": "File Filter",
+            "displayName": "File Filter",
+            "description": "Only files whose names match the given regular expression will be picked up",
+            "defaultValue": "[^\\.].*",
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Path Filter": {
+            "name": "Path Filter",
+            "displayName": "Path Filter",
+            "description": "When Recurse Subdirectories is true, then only subdirectories whose path matches the given regular expression will be scanned",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Batch Size": {
+            "name": "Batch Size",
+            "displayName": "Batch Size",
+            "description": "The maximum number of files to pull in each iteration",
+            "defaultValue": "10",
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Keep Source File": {
+            "name": "Keep Source File",
+            "displayName": "Keep Source File",
+            "description": "If true, the file is not deleted after it has been copied to the Content Repository; this causes the file to be picked up continually and is useful for testing purposes.  If not keeping original NiFi will need write permissions on the directory it is pulling from otherwise it will ignore the file.",
+            "defaultValue": "false",
+            "allowableValues": [
+              {
+                "allowableValue": {
+                  "displayName": "true",
+                  "value": "true",
+                  "description": null
+                },
+                "canRead": true
+              },
+              {
+                "allowableValue": {
+                  "displayName": "false",
+                  "value": "false",
+                  "description": null
+                },
+                "canRead": true
+              }
+            ],
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Recurse Subdirectories": {
+            "name": "Recurse Subdirectories",
+            "displayName": "Recurse Subdirectories",
+            "description": "Indicates whether or not to pull files from subdirectories",
+            "defaultValue": "true",
+            "allowableValues": [
+              {
+                "allowableValue": {
+                  "displayName": "true",
+                  "value": "true",
+                  "description": null
+                },
+                "canRead": true
+              },
+              {
+                "allowableValue": {
+                  "displayName": "false",
+                  "value": "false",
+                  "description": null
+                },
+                "canRead": true
+              }
+            ],
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Polling Interval": {
+            "name": "Polling Interval",
+            "displayName": "Polling Interval",
+            "description": "Indicates how long to wait before performing a directory listing",
+            "defaultValue": "0 sec",
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Ignore Hidden Files": {
+            "name": "Ignore Hidden Files",
+            "displayName": "Ignore Hidden Files",
+            "description": "Indicates whether or not hidden files should be ignored",
+            "defaultValue": "true",
+            "allowableValues": [
+              {
+                "allowableValue": {
+                  "displayName": "true",
+                  "value": "true",
+                  "description": null
+                },
+                "canRead": true
+              },
+              {
+                "allowableValue": {
+                  "displayName": "false",
+                  "value": "false",
+                  "description": null
+                },
+                "canRead": true
+              }
+            ],
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Minimum File Age": {
+            "name": "Minimum File Age",
+            "displayName": "Minimum File Age",
+            "description": "The minimum age that a file must be in order to be pulled; any file younger than this amount of time (according to last modification date) will be ignored",
+            "defaultValue": "0 sec",
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Maximum File Age": {
+            "name": "Maximum File Age",
+            "displayName": "Maximum File Age",
+            "description": "The maximum age that a file must be in order to be pulled; any file older than this amount of time (according to last modification date) will be ignored",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Minimum File Size": {
+            "name": "Minimum File Size",
+            "displayName": "Minimum File Size",
+            "description": "The minimum size that a file must be in order to be pulled",
+            "defaultValue": "0 B",
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Maximum File Size": {
+            "name": "Maximum File Size",
+            "displayName": "Maximum File Size",
+            "description": "The maximum size that a file can be in order to be pulled",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          }
+        },
+        "schedulingPeriod": "15 sec",
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "executionNode": "ALL",
+        "penaltyDuration": "30 sec",
+        "yieldDuration": "1 sec",
+        "bulletinLevel": "WARN",
+        "runDurationMillis": 0,
+        "concurrentlySchedulableTaskCount": 1,
+        "autoTerminatedRelationships": null,
+        "comments": "",
+        "customUiUrl": null,
+        "lossTolerant": false,
+        "annotationData": null,
+        "defaultConcurrentTasks": {
+          "TIMER_DRIVEN": "1",
+          "EVENT_DRIVEN": "0",
+          "CRON_DRIVEN": "1"
+        },
+        "defaultSchedulingPeriod": {
+          "TIMER_DRIVEN": "0 sec",
+          "CRON_DRIVEN": "* * * * * ?"
+        }
+      },
+      "validationErrors": null,
+      "extensionMissing": false
+    },
+    "success": true,
+    "errors": [],
+    "rolledBack": false,
+    "allErrors": [],
+    "controllerServiceErrors": []
+  },
+  "success": true,
+  "enableAfterSave": true,
+  "errorMessages": null
+}

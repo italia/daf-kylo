@@ -1,0 +1,44 @@
+{
+  "name": "agency_id",
+  "description": "",
+  "derivedDataType": "string",
+  "precisionScale": null,
+  "dataTypeDisplay": "string",
+  "primaryKey": false,
+  "nullable": true,
+  "createdTracker": false,
+  "updatedTracker": false,
+  "sampleValues": [
+    "GTT",
+    "GTT_E",
+    "GTT_F",
+    "GTT_T",
+    "FS"
+  ],
+  "selectedSampleValue": "GTT",
+  "tags": null,
+  "_id": "15",
+  "nativeDataType": null,
+  "modifiable": true,
+  "dataTypeDescriptor": {
+    "numeric": false,
+    "date": false,
+    "complex": false
+  },
+  "dataTypeWithPrecisionAndScale": "string",
+  "descriptionWithoutNewLines": "",
+  "origName": "agency_id",
+  "origDataType": "string",
+  "deleted": false,
+  "history": [
+    {
+      "name": "agency_id",
+      "derivedDataType": "string",
+      "precisionScale": null,
+      "deleted": false,
+      "primaryKey": false,
+      "updatedTracker": false,
+      "createdTracker": false
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+GET http://tba-kylo-services.default.svc.cluster.local:8420/api/v1/feedmgr/metadata-properties

@@ -1,0 +1,242 @@
+[
+  {
+    "name": "metadata.feedId",
+    "description": "The unique feed GUID",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.feedName",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.systemFeedName",
+    "description": "The system feed name",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.description",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.dataOwner",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.createDate",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.updateDate",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.hadoopSecurityGroups",
+    "description": "List of Ranger/Sentry groups that you want to grant access for this feed",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.hadoopAuthorizationType",
+    "description": "Type of authorization system used. NONE, RANGER, or SENTRY",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.schedule.schedulingPeriod",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.schedule.schedulingStrategy",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.schedule.concurrentTasks",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.schedule.executionNode",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.category.name",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.category.systemName",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.fieldStructure",
+    "description": "Nifi property name 'table_column_specs'",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.incrementalDateField",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.sourceTableIncrementalDateField",
+    "description": "Source Field to be used when incrementally querying Table Data ",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.feedFormat",
+    "description": "Hive Row Format String for the Feed Table (example: ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\\n' STORED AS\n  TEXTFILE ",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.targetFormat",
+    "description": "Format of the Destination Table storage. Supported Values are: [STORED AS PARQUET, STORED AS ORC]",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.targetTblProperties",
+    "description": "Destination Hive Table Properties string (i.e.  tblproperties(\"orc.compress\"=\"SNAPPY\") ",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.targetMergeStrategy",
+    "description": "Strategy for merging data into the destination.  Supported Values are [Sync, Merge, Dedupe and Merge]",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.fieldPoliciesJson",
+    "description": "JSON array of FieldPolicy objects",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.fieldIndexString",
+    "description": "Nifi propety name 'elasticsearch.columns'",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.partitionStructure",
+    "description": "Nifi property name 'table_partition_specs'",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.partitionSpecs",
+    "description": "Nifi property name 'partition_specs'",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.fieldsString",
+    "description": "List of destination (feed table) field names separated by a new line",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.sourceFields",
+    "description": "List of source table field names separated by a new line",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.sourceFieldsCommaString",
+    "description": "List of source table field names separated by a comma",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.feedFieldStructure",
+    "description": "Structure of the feed table",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.nullableFields",
+    "description": "List of fields that can be null separated by a comma",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.primaryKeyFields",
+    "description": "List of fields that are primary keys separated by a comma",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.tableSchema.schemaName",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.tableSchema.name",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.sourceTableSchema.schemaName",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.sourceTableSchema.name",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.feedTableSchema.schemaName",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.table.feedTableSchema.name",
+    "description": "",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.dataTransformation.dataTransformScript",
+    "description": "The Data Transformation Spark Script",
+    "dataType": null,
+    "annotation": {}
+  },
+  {
+    "name": "metadata.options.skipHeader",
+    "description": "When processing data should the system skip the header row? (true/false)",
+    "dataType": null,
+    "annotation": {}
+  }
+]
