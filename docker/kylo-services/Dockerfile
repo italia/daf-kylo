@@ -29,6 +29,7 @@ RUN adduser kylo kylo
 #Grant ownership to kylo over kylo :)
 RUN chown -R kylo:kylo /opt/kylo
 
+ENV SPARK_HOME=/opt/cloudera/parcels/SPARK2/lib/spark2
 
 EXPOSE 8420
 # RUN kylo-service
