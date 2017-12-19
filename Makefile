@@ -81,9 +81,9 @@ nifi-tba-daf:
 
 .PHONY: build-kylo
 build-kylo:
-	git clone https://github.com/Teradata/kylo.git ../kylok8s | true
+	git clone https://github.com/fabiannecci/kylo.git ../kylok8s | true
 	cd ../kylok8s && \
-	git checkout tags/v0.8.4 && \
+	git checkout teamdigitale && \
 	mvn clean install -DskipTests && \
 	mkdir install/install-tar/target/kylo && \
 	tar -C install/install-tar/target/kylo -xvf install/install-tar/target/kylo-*-dependencies.tar.gz
