@@ -57,8 +57,8 @@ spec:
         - name: hadoop
           mountPath: /etc/hadoop
           readOnly: true
-        - name: daf-root-ca
-          mountPath: /etc/ssl/certs
+        #- name: daf-root-ca
+        #  mountPath: /etc/ssl/certs
       restartPolicy: Always
       volumes:
       - name: glusterfsvol
@@ -71,9 +71,6 @@ spec:
       - name: kylo-services-spark
         configMap:
           name: kylo-services-spark
-      - name: kylo-auth-config
-        configMap:
-          name: kylo-auth-config
       - name: hosts
         hostPath:
           path: /etc/hosts
@@ -93,9 +90,9 @@ spec:
         hostPath:
           path: /etc/spark2/
 
-      - name: daf-root-ca
-        secret:
-          secretName: daf-root-ca
+     # - name: daf-root-ca
+     #   secret:
+     #     secretName: daf-root-ca
       imagePullSecrets:
       - name: regsecret
 status: {}
