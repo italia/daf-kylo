@@ -1,0 +1,55 @@
+{
+  "owner": {
+    "displayName": "Data Lake Administrator",
+    "email": null,
+    "enabled": true,
+    "groups": [
+      "admin",
+      "user"
+    ],
+    "systemName": "dladmin"
+  },
+  "allowedActions": {
+    "actions": [
+      {
+        "systemName": "accessCategory",
+        "actions": [
+          {
+            "systemName": "editCategorySummary"
+          },
+          {
+            "systemName": "accessCategoryDetails",
+            "actions": [
+              {
+                "systemName": "editCategoryDetails"
+              },
+              {
+                "systemName": "deleteCategory"
+              }
+            ]
+          },
+          {
+            "systemName": "createFeedUnderCategory"
+          },
+          {
+            "systemName": "changeCategoryPermissions"
+          }
+        ]
+      }
+    ]
+  },
+  "roleMemberships": [],
+  "feedRoleMemberships": [],
+  "id": "9ce0b7be-9f55-4e2d-bbd4-ff0b22121cb1",
+  "name": "new category",
+  "systemName": "new_category",
+  "icon": null,
+  "iconColor": null,
+  "description": null,
+  "securityGroups": [],
+  "userFields": [],
+  "userProperties": [],
+  "relatedFeeds": 0,
+  "createDate": 1513791551701,
+  "updateDate": 1513791551701
+}

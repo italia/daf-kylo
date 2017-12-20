@@ -1,0 +1,15 @@
+{
+  "id": null,
+  "name": "{DAF_CATEGORY_NAME}",
+  "description": null,
+  "icon": null,
+  "iconColor": null,
+  "userFields": [],
+  "userProperties": [],
+  "relatedFeedSummaries": [],
+  "securityGroups": [],
+  "roleMemberships": [],
+  "feedRoleMemberships": [],
+  "owner": null,
+  "systemName": "{DAF_CATEGORY_SYSTEM_NAME}"
+}
