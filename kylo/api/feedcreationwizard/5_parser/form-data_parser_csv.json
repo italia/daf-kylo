@@ -1,0 +1,8 @@
+{
+  "name": "CSV",
+  "objectClassType": "com.thinkbiganalytics.discovery.parsers.csv.CSVFileSchemaParser",
+  "objectShortClassType": "CSVFileSchemaParser",
+  "supportsBinary": false,
+  "generatesHiveSerde": true,
+  "clientHelper": null
+}
