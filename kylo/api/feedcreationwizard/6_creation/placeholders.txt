@@ -1,12 +1,36 @@
+{DAF_TEMPLATE.id}
+{DAF_TEMPLATE.inputProcessors[0].name}
+{DAF_TEMPLATE.inputProcessors[0].type}
 {DAF_DATASET_NAME} : DAF Feed Name
 {DAF_DATASET_DESCRIPTION} : DAF Feed Description
 {DAF_TABLE_NAME} : db table name
 {DAF_NORMALIZED_DATASET_NAME} : daf_feed_name
-{DAF_INPUT_DIRECTORY} : /daf_input_directory
-{DAF_INPUT_REGEXP_FILTER} : daf_input_regexp_filter //check how to escape
 {DAF_ORGANIZATION} : DAF Category, daf_category, daf_organization
-{DAF_PROPERTY_1} : daf_property
-{DAF_PROPERTY_1_VALUE} : daf_property_value
+{DAF_TYPE} : DAF type: ordinary/standard
+{DAF_DOMAIN} : DAF domain
+{DAF_SUBDOMAIN} : DAF subdomain
 {DAF_CATEGORY.id}
 {DAF_PARSER.hiveFormat} : hiveFormat value from parser API response
 {DAF_PARSER.fields} : fields value from parser API response //check if we have to add missing properties
+{DAF_PROFILING.fields}: for each field from {DAF_PARSER.fields} create an object like this setting the fieldName and feedFieldName
+{
+    "fieldName":"agency_id",
+    "feedFieldName":"agency_id",
+    "index": false,
+    "partitionColumn":false,
+    "profile":false,
+    "validation": [],
+    "standardization": []
+}
+
+{DAF_TEMPLATE.inputProcessors[0].properties[userEditable==true]}
+From the specific template response we have to take the user editable properties, they are under
+the path DAF_TEMPLATE.inputProcessors[0].properties and have the userEditable property to true. Inside these properties
+there are other template  specific placeholders
+
+Specific for template:
+
+Template: Dataset Ingest
+{DAF_INPUT_DIRECTORY} : /daf_input_directory
+{DAF_INPUT_REGEXP_FILTER} : daf_input_regexp_filter //check how to escape
+
