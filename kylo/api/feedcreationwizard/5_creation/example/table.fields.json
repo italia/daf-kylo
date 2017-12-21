@@ -1,0 +1,310 @@
+[
+  {
+    "name": "agency_id",
+    "description": "",
+    "derivedDataType": "string",
+    "precisionScale": null,
+    "dataTypeDisplay": "string",
+    "primaryKey": false,
+    "nullable": true,
+    "createdTracker": false,
+    "updatedTracker": false,
+    "sampleValues": [
+      "GTT",
+      "GTT_E",
+      "GTT_F",
+      "GTT_T",
+      "FS"
+    ],
+    "selectedSampleValue": "GTT",
+    "tags": null,
+    "_id": "15",
+    "nativeDataType": null,
+    "modifiable": true,
+    "dataTypeDescriptor": {
+      "numeric": false,
+      "date": false,
+      "complex": false
+    },
+    "dataTypeWithPrecisionAndScale": "string",
+    "descriptionWithoutNewLines": "",
+    "origName": "agency_id",
+    "origDataType": "string",
+    "deleted": false,
+    "history": [
+      {
+        "name": "agency_id",
+        "derivedDataType": "string",
+        "precisionScale": null,
+        "deleted": false,
+        "primaryKey": false,
+        "updatedTracker": false,
+        "createdTracker": false
+      }
+    ]
+  },
+  {
+    "name": "agency_name",
+    "description": "",
+    "derivedDataType": "string",
+    "precisionScale": null,
+    "dataTypeDisplay": "string",
+    "primaryKey": false,
+    "nullable": true,
+    "createdTracker": false,
+    "updatedTracker": false,
+    "sampleValues": [
+      "Gruppo Torinese Trasporti",
+      "GTT servizio extraurbano",
+      "Gruppo Torinese Trasporti",
+      "GTT Servizi Turistici",
+      "Trenitalia"
+    ],
+    "selectedSampleValue": "Gruppo Torinese Trasporti",
+    "tags": null,
+    "_id": "17",
+    "nativeDataType": null,
+    "modifiable": true,
+    "dataTypeDescriptor": {
+      "numeric": false,
+      "date": false,
+      "complex": false
+    },
+    "dataTypeWithPrecisionAndScale": "string",
+    "descriptionWithoutNewLines": "",
+    "origName": "agency_name",
+    "origDataType": "string",
+    "deleted": false,
+    "history": [
+      {
+        "name": "agency_name",
+        "derivedDataType": "string",
+        "precisionScale": null,
+        "deleted": false,
+        "primaryKey": false,
+        "updatedTracker": false,
+        "createdTracker": false
+      }
+    ]
+  },
+  {
+    "name": "agency_url",
+    "description": "",
+    "derivedDataType": "string",
+    "precisionScale": null,
+    "dataTypeDisplay": "string",
+    "primaryKey": false,
+    "nullable": true,
+    "createdTracker": false,
+    "updatedTracker": false,
+    "sampleValues": [
+      "http://www.gtt.to.it",
+      "http://www.gtt.to.it",
+      "http://www.gtt.to.it",
+      "http://www.gtt.to.it",
+      "http://www.trenitalia.com"
+    ],
+    "selectedSampleValue": "http://www.gtt.to.it",
+    "tags": null,
+    "_id": "19",
+    "nativeDataType": null,
+    "modifiable": true,
+    "dataTypeDescriptor": {
+      "numeric": false,
+      "date": false,
+      "complex": false
+    },
+    "dataTypeWithPrecisionAndScale": "string",
+    "descriptionWithoutNewLines": "",
+    "origName": "agency_url",
+    "origDataType": "string",
+    "deleted": false,
+    "history": [
+      {
+        "name": "agency_url",
+        "derivedDataType": "string",
+        "precisionScale": null,
+        "deleted": false,
+        "primaryKey": false,
+        "updatedTracker": false,
+        "createdTracker": false
+      }
+    ]
+  },
+  {
+    "name": "agency_timezone",
+    "description": "",
+    "derivedDataType": "string",
+    "precisionScale": null,
+    "dataTypeDisplay": "string",
+    "primaryKey": false,
+    "nullable": true,
+    "createdTracker": false,
+    "updatedTracker": false,
+    "sampleValues": [
+      "Europe/Rome",
+      "Europe/Rome",
+      "Europe/Rome",
+      "Europe/Rome",
+      "Europe/Rome"
+    ],
+    "selectedSampleValue": "Europe/Rome",
+    "tags": null,
+    "_id": "21",
+    "nativeDataType": null,
+    "modifiable": true,
+    "dataTypeDescriptor": {
+      "numeric": false,
+      "date": false,
+      "complex": false
+    },
+    "dataTypeWithPrecisionAndScale": "string",
+    "descriptionWithoutNewLines": "",
+    "origName": "agency_timezone",
+    "origDataType": "string",
+    "deleted": false,
+    "history": [
+      {
+        "name": "agency_timezone",
+        "derivedDataType": "string",
+        "precisionScale": null,
+        "deleted": false,
+        "primaryKey": false,
+        "updatedTracker": false,
+        "createdTracker": false
+      }
+    ]
+  },
+  {
+    "name": "agency_lang",
+    "description": "",
+    "derivedDataType": "string",
+    "precisionScale": null,
+    "dataTypeDisplay": "string",
+    "primaryKey": false,
+    "nullable": true,
+    "createdTracker": false,
+    "updatedTracker": false,
+    "sampleValues": [
+      "it",
+      "it",
+      "it",
+      "it",
+      "it"
+    ],
+    "selectedSampleValue": "it",
+    "tags": null,
+    "_id": "23",
+    "nativeDataType": null,
+    "modifiable": true,
+    "dataTypeDescriptor": {
+      "numeric": false,
+      "date": false,
+      "complex": false
+    },
+    "dataTypeWithPrecisionAndScale": "string",
+    "descriptionWithoutNewLines": "",
+    "origName": "agency_lang",
+    "origDataType": "string",
+    "deleted": false,
+    "history": [
+      {
+        "name": "agency_lang",
+        "derivedDataType": "string",
+        "precisionScale": null,
+        "deleted": false,
+        "primaryKey": false,
+        "updatedTracker": false,
+        "createdTracker": false
+      }
+    ]
+  },
+  {
+    "name": "agency_phone",
+    "description": "",
+    "derivedDataType": "string",
+    "precisionScale": null,
+    "dataTypeDisplay": "string",
+    "primaryKey": false,
+    "nullable": true,
+    "createdTracker": false,
+    "updatedTracker": false,
+    "sampleValues": [
+      "800-019152",
+      "800-019152",
+      "800-019152",
+      "800-019152",
+      "199-892021"
+    ],
+    "selectedSampleValue": "800-019152",
+    "tags": null,
+    "_id": "25",
+    "nativeDataType": null,
+    "modifiable": true,
+    "dataTypeDescriptor": {
+      "numeric": false,
+      "date": false,
+      "complex": false
+    },
+    "dataTypeWithPrecisionAndScale": "string",
+    "descriptionWithoutNewLines": "",
+    "origName": "agency_phone",
+    "origDataType": "string",
+    "deleted": false,
+    "history": [
+      {
+        "name": "agency_phone",
+        "derivedDataType": "string",
+        "precisionScale": null,
+        "deleted": false,
+        "primaryKey": false,
+        "updatedTracker": false,
+        "createdTracker": false
+      }
+    ]
+  },
+  {
+    "name": "num",
+    "description": "",
+    "derivedDataType": "int",
+    "precisionScale": null,
+    "dataTypeDisplay": "int",
+    "primaryKey": false,
+    "nullable": true,
+    "createdTracker": false,
+    "updatedTracker": false,
+    "sampleValues": [
+      "21",
+      "43",
+      "0",
+      "121",
+      "2"
+    ],
+    "selectedSampleValue": "21",
+    "tags": null,
+    "_id": "27",
+    "nativeDataType": null,
+    "modifiable": true,
+    "dataTypeDescriptor": {
+      "numeric": true,
+      "date": false,
+      "complex": false
+    },
+    "dataTypeWithPrecisionAndScale": "int",
+    "descriptionWithoutNewLines": "",
+    "origName": "num",
+    "origDataType": "int",
+    "deleted": false,
+    "history": [
+      {
+        "name": "num",
+        "derivedDataType": "int",
+        "precisionScale": null,
+        "deleted": false,
+        "primaryKey": false,
+        "updatedTracker": false,
+        "createdTracker": false
+      }
+    ]
+  }
+]

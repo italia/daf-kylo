@@ -84,21 +84,21 @@
       "order": 1,
       "required": true,
       "systemName": "daf_domain",
-      "value": "{DAF_TYPE}",
+      "value": "{DAF_DOMAIN}",
       "$error": {
         "duplicate": false,
         "missingName": false,
         "missingValue": false
       }
-    }
+    },
     {
       "description": null,
       "displayName": null,
       "locked": false,
       "order": 2,
       "required": true,
-      "systemName": "daf_type",
-      "value": "{DAF_TYPE}",
+      "systemName": "daf_subdomain",
+      "value": "{DAF_SUBDOMAIN}",
       "$error": {
         "duplicate": false,
         "missingName": false,

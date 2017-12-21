@@ -1,0 +1,36 @@
+{
+  "processGroupName": "NiFi Flow",
+  "processorName": "Filesystem",
+  "processorId": "1c643713-3d59-3540-40b9-74f5e7dfc08c",
+  "processGroupId": "39b53e05-3812-1f4d-893d-3b73f8752e98",
+  "processorType": "org.apache.nifi.processors.standard.GetFile",
+  "key": "Input Directory",
+  "value": "{DAF_INPUT_DIRECTORY}",
+  "expressionProperties": null,
+  "propertyDescriptor": {
+    "name": "Input Directory",
+    "displayName": "Input Directory",
+    "description": "The input directory from which to pull files",
+    "defaultValue": null,
+    "allowableValues": null,
+    "required": true,
+    "sensitive": false,
+    "dynamic": false,
+    "supportsEl": true,
+    "identifiesControllerService": null
+  },
+  "templateValue": null,
+  "userEditable": true,
+  "renderType": "text",
+  "renderOptions": {
+  },
+  "selected": true,
+  "inputProperty": true,
+  "containsConfigurationVariables": false,
+  "sensitive": false,
+  "required": true,
+  "templateProperty": null,
+  "nameKey": "NiFi Flow-Filesystem-Input Directory",
+  "idKey": "39b53e05-3812-1f4d-893d-3b73f8752e98-1c643713-3d59-3540-40b9-74f5e7dfc08c-Input Directory",
+  "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Input Directory"
+}

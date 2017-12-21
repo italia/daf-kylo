@@ -1,0 +1,382 @@
+{
+  "id": null,
+  "versionName": null,
+  "templateId": "e3fc11ab-c546-485a-b12d-3f361719d8f6",
+  "templateName": "Dataset Ingest",
+  "feedName": "Test2",
+  "description": "Test Feed API Description",
+  "systemFeedName": "test_feed_api2",
+  "inputProcessorType": "org.apache.nifi.processors.standard.GetFile",
+  "inputProcessorName": "Filesystem",
+  "properties": [
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "Filesystem",
+      "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+      "processGroupId": "baf53e69-621f-1087-2a98-9fa7f55d7133",
+      "processorType": "org.apache.nifi.processors.standard.GetFile",
+      "key": "Input Directory",
+      "value": "/opt/nifi/dropzone",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Input Directory",
+        "displayName": "Input Directory",
+        "description": "The input directory from which to pull files",
+        "defaultValue": null,
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": null,
+      "userEditable": true,
+      "renderType": "text",
+      "renderOptions": {},
+      "selected": false,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-Filesystem-Input Directory",
+      "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Input Directory",
+      "idKey": "baf53e69-621f-1087-2a98-9fa7f55d7133-1c643713-3d59-3540-d4f6-485fa7d81dbe-Input Directory",
+      "renderWithCodeMirror": false,
+      "displayValue": "/var/dropzone",
+      "formKey": "input_directoryfilesystem"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "Filesystem",
+      "processorId": "1c643713-3d59-3540-d4f6-485fa7d81dbe",
+      "processGroupId": "baf53e69-621f-1087-2a98-9fa7f55d7133",
+      "processorType": "org.apache.nifi.processors.standard.GetFile",
+      "key": "File Filter",
+      "value": ".*",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "File Filter",
+        "displayName": "File Filter",
+        "description": "Only files whose names match the given regular expression will be picked up",
+        "defaultValue": "[^\\.].*",
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": false,
+        "identifiesControllerService": null
+      },
+      "templateValue": null,
+      "userEditable": true,
+      "renderType": "text",
+      "renderOptions": {},
+      "selected": false,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-Filesystem-File Filter",
+      "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-File Filter",
+      "idKey": "baf53e69-621f-1087-2a98-9fa7f55d7133-1c643713-3d59-3540-d4f6-485fa7d81dbe-File Filter",
+      "renderWithCodeMirror": false,
+      "displayValue": "mydata\\d{1,3}.csv",
+      "formKey": "file_filterfilesystem"
+    }
+  ],
+  "securityGroups": [],
+  "schedule": {
+    "schedulingPeriod": "10 sec",
+    "schedulingStrategy": "TIMER_DRIVEN",
+    "concurrentTasks": 1,
+    "schedulingStrategyTouched": true
+  },
+  "defineTable": true,
+  "allowPreconditions": false,
+  "dataTransformationFeed": false,
+  "table": {
+    "tableSchema": {
+      "name": "test_feed_api2",
+      "fields":  [
+        {
+          "sampleValues": [
+            "GTT",
+            "GTT_E",
+            "GTT_F",
+            "GTT_T",
+            "FS"
+          ],
+          "name": "agency_id",
+          "description": "",
+          "nativeDataType": null,
+          "derivedDataType": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "updatedTracker": false,
+          "precisionScale": null,
+          "createdTracker": false,
+          "tags": null,
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_id",
+          "origDataType": "string"
+        },
+        {
+          "sampleValues": [
+            "Gruppo Torinese Trasporti",
+            "GTT servizio extraurbano",
+            "Gruppo Torinese Trasporti",
+            "GTT Servizi Turistici",
+            "Trenitalia"
+          ],
+          "name": "agency_name",
+          "description": "",
+          "nativeDataType": null,
+          "derivedDataType": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "updatedTracker": false,
+          "precisionScale": null,
+          "createdTracker": false,
+          "tags": null,
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_name",
+          "origDataType": "string"
+        }
+      ]
+    },
+    "sourceTableSchema": {
+      "name": null,
+      "tableSchema": null,
+      "fields":  [
+        {
+          "sampleValues": [
+            "GTT",
+            "GTT_E",
+            "GTT_F",
+            "GTT_T",
+            "FS"
+          ],
+          "name": "agency_id",
+          "description": "",
+          "nativeDataType": null,
+          "derivedDataType": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "updatedTracker": false,
+          "precisionScale": null,
+          "createdTracker": false,
+          "tags": null,
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_id",
+          "origDataType": "string"
+        },
+        {
+          "sampleValues": [
+            "Gruppo Torinese Trasporti",
+            "GTT servizio extraurbano",
+            "Gruppo Torinese Trasporti",
+            "GTT Servizi Turistici",
+            "Trenitalia"
+          ],
+          "name": "agency_name",
+          "description": "",
+          "nativeDataType": null,
+          "derivedDataType": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "updatedTracker": false,
+          "precisionScale": null,
+          "createdTracker": false,
+          "tags": null,
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_name",
+          "origDataType": "string"
+        }
+      ]
+    },
+    "feedTableSchema": {
+      "name": null,
+      "fields":  [
+        {
+          "sampleValues": [
+            "GTT",
+            "GTT_E",
+            "GTT_F",
+            "GTT_T",
+            "FS"
+          ],
+          "name": "agency_id",
+          "description": "",
+          "nativeDataType": null,
+          "derivedDataType": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "updatedTracker": false,
+          "precisionScale": null,
+          "createdTracker": false,
+          "tags": null,
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_id",
+          "origDataType": "string"
+        },
+        {
+          "sampleValues": [
+            "Gruppo Torinese Trasporti",
+            "GTT servizio extraurbano",
+            "Gruppo Torinese Trasporti",
+            "GTT Servizi Turistici",
+            "Trenitalia"
+          ],
+          "name": "agency_name",
+          "description": "",
+          "nativeDataType": null,
+          "derivedDataType": "string",
+          "primaryKey": false,
+          "nullable": true,
+          "modifiable": true,
+          "dataTypeDescriptor": {
+            "numeric": false,
+            "date": false,
+            "complex": false
+          },
+          "updatedTracker": false,
+          "precisionScale": null,
+          "createdTracker": false,
+          "tags": null,
+          "dataTypeWithPrecisionAndScale": "string",
+          "descriptionWithoutNewLines": "",
+          "origName": "agency_name",
+          "origDataType": "string"
+        }
+      ]
+    },
+    "method": "SAMPLE_FILE",
+    "existingTableName": null,
+    "structured": false,
+    "targetMergeStrategy": "DEDUPE_AND_MERGE",
+    "feedFormat": "ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'\n WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\\\' ,'quoteChar' = '\\\"') STORED AS TEXTFILE",
+    "targetFormat": "STORED AS PARQUET",
+    "fieldPolicies": [
+      {
+        "fieldName":"agency_id",
+        "feedFieldName":"agency_id",
+        "index": false,
+        "partitionColumn":false,
+        "profile":false,
+        "validation": [],
+        "standardization": []
+      },
+      {
+        "fieldName":"agency_name",
+        "feedFieldName":"agency_name",
+        "index": false,
+        "partitionColumn":false,
+        "profile":false,
+        "validation": [],
+        "standardization": []
+      }
+    ],
+    "partitions": [],
+    "options": {
+      "compress": false,
+      "compressionFormat": "SNAPPY",
+      "auditLogging": true,
+      "encrypt": false,
+      "trackHistory": false
+    },
+    "sourceTableIncrementalDateField": null
+  },
+  "category": {
+    "id": "d2148ba0-974f-42b6-a2f9-b8cf0853b062",
+    "name": "fnecci",
+    "systemName": "fnecci"
+  },
+  "dataOwner": "fnecci",
+  "tags": [],
+  "reusableFeed": false,
+  "userProperties": [
+    {
+      "description": null,
+      "displayName": null,
+      "locked": false,
+      "order": 0,
+      "required": true,
+      "systemName": "daf_type",
+      "value": "ordinary",
+      "$error": {
+        "duplicate": false,
+        "missingName": false,
+        "missingValue": false
+      }
+    },
+    {
+      "description": null,
+      "displayName": null,
+      "locked": false,
+      "order": 0,
+      "required": true,
+      "systemName": "daf_domain",
+      "value": "agency",
+      "$error": {
+        "duplicate": false,
+        "missingName": false,
+        "missingValue": false
+      }
+    },
+    {
+      "description": null,
+      "displayName": null,
+      "locked": false,
+      "order": 0,
+      "required": true,
+      "systemName": "daf_subdomain",
+      "value": "infer",
+      "$error": {
+        "duplicate": false,
+        "missingName": false,
+        "missingValue": false
+      }
+    }
+  ],
+  "options": {
+    "skipHeader": true
+  },
+  "active": true
+}
