@@ -447,10 +447,11 @@ data:
     spark.shell.deployMode=cluster
     spark.shell.master=yarn
     spark.shell.sparkHome=/opt/cloudera/parcels/SPARK2/lib/spark2
-    spark.shell.jars=/opt/kylo/drivers/mariadb-java-client-1.5.7.jar
+    spark.shell.jars=/opt/kylo/kylo-services/lib/mariadb-java-client-1.5.7.jar
     spark.shell.sparkArgs=--driver-memory 3g --executor-memory 5g --driver-java-options -XX:MaxPermSize=256M
-    spark.shell.registrationUrl=http://10.109.152.178:8400/proxy/v1/spark/shell/register
+    spark.shell.registrationUrl=http://192.168.0.20:8420/api/v1/spark/shell/register
     spark.shell.appResource=/opt/kylo/kylo-services/lib/app/kylo-spark-shell-client-v2-0.8.4.jar
+    spark.shell.verbose=true
 
     kerberos.spark.kerberosEnabled=true
     kerberos.spark.keytabLocation=/etc/security/daf.keytab
@@ -780,7 +781,7 @@ data:
 
     log4j.appender.file=org.apache.log4j.DailyRollingFileAppender
     log4j.appender.myAppender.DatePattern='.'yyyy-MM-dd
-    log4j.appender.file.File=/var/log/kylo-spark-shell/kylo-spark-shell.log
+    log4j.appender.file.File=/var/log/kylo-services/kylo-spark-shell.log
     log4j.appender.file.append=true
     log4j.appender.file.layout=org.apache.log4j.PatternLayout
     log4j.appender.file.Threshold=INFO
