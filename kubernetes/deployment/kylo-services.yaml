@@ -19,13 +19,8 @@ spec:
       - image: 10.98.74.120:5000/tba-kylo-services.8.4:1.0.0-SNAPSHOT
         name: tba-kylo-services
         imagePullPolicy: IfNotPresent
-        #lifecycle:
-          #postStart:
-            #exec:
-             #command: ["/bin/sh", "-c", "/opt/kylo/kylo-services/spark-shell/kylo-spark-shell-starter.sh"]
         ports:
         - containerPort: 8420
-        - containerPort: 8450
         resources: {}
         volumeMounts:
         - mountPath: /opt/kylo/kylo-services/conf
