@@ -8,14 +8,6 @@ activemq:
 	docker build -t tba-activemq -f docker/activemq/Dockerfile docker/activemq
 	docker tag tba-activemq $(REGISTRY)/tba-activemq.5.15.1:2.0.0-SNAPSHOT
 
-.PHONY: elasticsearch
-elasticsearch:
-	mkdir -p docker/elasticsearch/dist
-	cp -R ../kylok8s/install/install-tar/target/kylo/bin/* docker/elasticsearch/dist
-	docker build -t tba-elasticsearch -f docker/elasticsearch/Dockerfile docker/elasticsearch
-	docker tag tba-elasticsearch $(REGISTRY)/tba-elasticsearch
-	rm -dr docker/elasticsearch/dist
-
 .PHONY: elasticsearch5
 elasticsearch5:
 	mkdir -p docker/elasticsearch5/dist
@@ -31,14 +23,6 @@ mysql:
 	docker build -t tba-mysql -f docker/mysql/Dockerfile docker/mysql
 	docker tag tba-mysql $(REGISTRY)/tba-mysql.10.3:2.0.0-SNAPSHOT
 	rm -dr docker/mysql/dist
-
-.PHONY: kylo-spark
-kylo-spark:
-	mkdir -p docker/kylo-spark/dist/kylo-services && \
-		cp -R ../kylok8s/install/install-tar/target/kylo/kylo-services/lib/app docker/kylo-spark/dist/kylo-services/lib
-	docker build -t tba-kylo-spark -f docker/kylo-spark/Dockerfile docker/kylo-spark
-	docker tag tba-kylo-spark $(REGISTRY)/tba-kylo-spark.2.2.0:1.1.0-SNAPSHOT
-	rm -dr docker/kylo-spark/dist
 
 .PHONY: kylo-services
 kylo-services:
@@ -70,14 +54,6 @@ nifi:
 		docker build -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
 		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.4.0:1.0.0-SNAPSHOT
 		rm -dr docker/nifi/dist
-
-.PHONY: nifi-tba-daf
-nifi-tba-daf:
-		mkdir -p docker/nifi-tba-daf/dist
-		cp -R ../kylok8s/install/install-tar/target/kylo/setup/nifi/* docker/nifi-tba-daf/dist
-		docker build -t tba-nifi-daf -f docker/nifi-tba-daf/Dockerfile docker/nifi-tba-daf
-		docker tag tba-nifi-daf $(REGISTRY)/tba-nifi-daf.1.3.0:2.0.0-SNAPSHOT
-		rm -dr docker/nifi-tba-daf/dist
 
 .PHONY: build-kylo
 build-kylo:
