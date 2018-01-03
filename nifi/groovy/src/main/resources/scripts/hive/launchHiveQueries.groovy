@@ -20,7 +20,7 @@ def sql = new Sql(hiveConnection)
 
 try {
     // this can fail
-    sql.rows(createTableRoleQueryValue)
+    sql.execute(createTableRoleQueryValue)
 } catch (Exception ex) {
     log.info(ex.message)
 }
