@@ -188,8 +188,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -219,8 +219,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -250,8 +250,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -281,8 +281,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -312,8 +312,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "double",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "double"
         },
         {
           "sampleValues": [
@@ -343,8 +343,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": [],
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -374,8 +374,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": [],
-          "dataTypeWithPrecisionAndScale": "double",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "double"
         },
         {
           "sampleValues": [
@@ -405,13 +405,13 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": [],
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         }
       ],
       "schemaName": null,
       "databaseName": null,
-      "id": "b158c44c-76b4-4905-869b-fa205590c0b0"
+      "id": "6ff26e4d-17a5-475b-8913-0ca71db45680"
     },
     "sourceTableSchema": {
       "name": "NA",
@@ -447,8 +447,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -478,8 +478,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -509,8 +509,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -540,8 +540,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -571,8 +571,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "double",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "double"
         },
         {
           "sampleValues": [
@@ -602,8 +602,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": [],
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -633,8 +633,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": [],
-          "dataTypeWithPrecisionAndScale": "double",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "double"
         },
         {
           "sampleValues": [
@@ -664,13 +664,13 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": [],
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         }
       ],
       "schemaName": null,
       "databaseName": null,
-      "id": "46ee0fc8-9a64-4649-b994-edc44914ec19"
+      "id": "8fc6e285-e067-4f39-8283-4e6a6ff42214"
     },
     "feedTableSchema": {
       "name": null,
@@ -706,8 +706,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -737,8 +737,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -768,8 +768,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -799,8 +799,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -830,8 +830,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": null,
-          "dataTypeWithPrecisionAndScale": "double",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "double"
         },
         {
           "sampleValues": [
@@ -861,8 +861,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": [],
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         },
         {
           "sampleValues": [
@@ -892,8 +892,8 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": [],
-          "dataTypeWithPrecisionAndScale": "double",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "double"
         },
         {
           "sampleValues": [
@@ -923,13 +923,13 @@
           "precisionScale": null,
           "createdTracker": false,
           "tags": [],
-          "dataTypeWithPrecisionAndScale": "string",
-          "descriptionWithoutNewLines": ""
+          "descriptionWithoutNewLines": "",
+          "dataTypeWithPrecisionAndScale": "string"
         }
       ],
       "schemaName": null,
       "databaseName": null,
-      "id": "02e85746-d610-4e10-9078-8d71e9cf18c7"
+      "id": "2b7f0a27-a3e1-42c8-a8da-563600844686"
     },
     "method": "SAMPLE_FILE",
     "description": "",
@@ -1117,8 +1117,8 @@
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Filesystem",
-        "processorId": "1c643713-3d59-3540-b326-966b1d90807b",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "1c643713-3d59-3540-74bb-90ac879b3f85",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.standard.GetFile",
         "key": "File Filter",
         "value": "{DAF_INPUT_REGEXP_FILTER}",
@@ -1147,13 +1147,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Filesystem-File Filter",
         "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-File Filter",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-1c643713-3d59-3540-b326-966b1d90807b-File Filter"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-1c643713-3d59-3540-74bb-90ac879b3f85-File Filter"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Filesystem",
-        "processorId": "1c643713-3d59-3540-b326-966b1d90807b",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "1c643713-3d59-3540-74bb-90ac879b3f85",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.standard.GetFile",
         "key": "Input Directory",
         "value": "{DAF_INPUT_DIRECTORY}",
@@ -1182,13 +1182,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Filesystem-Input Directory",
         "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Input Directory",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-1c643713-3d59-3540-b326-966b1d90807b-Input Directory"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-1c643713-3d59-3540-74bb-90ac879b3f85-Input Directory"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "category",
         "value": "${metadata.category.systemName}",
@@ -1217,13 +1217,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-category",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-category",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-category"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-category"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "feed",
         "value": "${metadata.systemFeedName}",
@@ -1252,13 +1252,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-feed",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-feed",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-feed"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-feed"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "hdfs.archive.root",
         "value": "${config.hdfs.archive.root}",
@@ -1287,13 +1287,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-hdfs.archive.root",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hdfs.archive.root",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-hdfs.archive.root"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-hdfs.archive.root"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "hdfs.ingest.root",
         "value": "${config.hdfs.ingest.root}",
@@ -1322,13 +1322,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-hdfs.ingest.root",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hdfs.ingest.root",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-hdfs.ingest.root"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-hdfs.ingest.root"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "hive.ingest.root",
         "value": "${config.hive.ingest.root}",
@@ -1357,13 +1357,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.ingest.root",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.ingest.root",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-hive.ingest.root"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-hive.ingest.root"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "hive.master.root",
         "value": "${config.hive.master.root}",
@@ -1392,13 +1392,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.master.root",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.master.root",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-hive.master.root"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-hive.master.root"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "hive.profile.root",
         "value": "${config.hive.profile.root}",
@@ -1427,13 +1427,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.profile.root",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.profile.root",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-hive.profile.root"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-hive.profile.root"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "metadata.table.feedFieldStructure",
         "value": "${metadata.table.feedFieldStructure}",
@@ -1462,13 +1462,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.feedFieldStructure",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.feedFieldStructure",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-metadata.table.feedFieldStructure"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-metadata.table.feedFieldStructure"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "metadata.table.feedFormat",
         "value": "${metadata.table.feedFormat}",
@@ -1497,13 +1497,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.feedFormat",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.feedFormat",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-metadata.table.feedFormat"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-metadata.table.feedFormat"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "metadata.table.fieldIndexString",
         "value": "${metadata.table.fieldIndexString}",
@@ -1532,13 +1532,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldIndexString",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldIndexString",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-metadata.table.fieldIndexString"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-metadata.table.fieldIndexString"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "metadata.table.fieldPoliciesJson",
         "value": "${metadata.table.fieldPoliciesJson}",
@@ -1567,13 +1567,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldPoliciesJson",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldPoliciesJson",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-metadata.table.fieldPoliciesJson"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-metadata.table.fieldPoliciesJson"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "metadata.table.fieldStructure",
         "value": "${metadata.table.fieldStructure}",
@@ -1602,13 +1602,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldStructure",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldStructure",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-metadata.table.fieldStructure"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-metadata.table.fieldStructure"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "metadata.table.partitionSpecs",
         "value": "${metadata.table.partitionSpecs}",
@@ -1637,13 +1637,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.partitionSpecs",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionSpecs",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-metadata.table.partitionSpecs"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-metadata.table.partitionSpecs"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "metadata.table.partitionStructure",
         "value": "${metadata.table.partitionStructure}",
@@ -1672,13 +1672,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.partitionStructure",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionStructure",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-metadata.table.partitionStructure"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-metadata.table.partitionStructure"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "metadata.table.targetFormat",
         "value": "${metadata.table.targetFormat}",
@@ -1707,13 +1707,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetFormat",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetFormat",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-metadata.table.targetFormat"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-metadata.table.targetFormat"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "metadata.table.targetMergeStrategy",
         "value": "${metadata.table.targetMergeStrategy}",
@@ -1742,13 +1742,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetMergeStrategy",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetMergeStrategy",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-metadata.table.targetMergeStrategy"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-metadata.table.targetMergeStrategy"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "metadata.table.targetTblProperties",
         "value": "${metadata.table.targetTblProperties}",
@@ -1777,13 +1777,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetTblProperties",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetTblProperties",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-metadata.table.targetTblProperties"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-metadata.table.targetTblProperties"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "nifi.home",
         "value": "${config.nifi.home}",
@@ -1812,13 +1812,13 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-nifi.home",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-nifi.home",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-nifi.home"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-nifi.home"
       },
       {
         "processGroupName": "NiFi Flow",
         "processorName": "Initialize Feed Parameters",
-        "processorId": "552ef4d4-6075-34f0-03e0-d8d5cce02557",
-        "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "processorId": "552ef4d4-6075-34f0-be85-e3bde639496b",
+        "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
         "key": "skipHeader",
         "value": "${metadata.options.skipHeader}",
@@ -1847,7 +1847,7 @@
         "templateProperty": null,
         "nameKey": "NiFi Flow-Initialize Feed Parameters-skipHeader",
         "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-skipHeader",
-        "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-552ef4d4-6075-34f0-03e0-d8d5cce02557-skipHeader"
+        "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-552ef4d4-6075-34f0-be85-e3bde639496b-skipHeader"
       }
     ],
     "nonInputProcessors": null,
@@ -1857,8 +1857,8 @@
           {
             "processGroupName": "NiFi Flow",
             "processorName": "Filesystem",
-            "processorId": "1c643713-3d59-3540-b326-966b1d90807b",
-            "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+            "processorId": "1c643713-3d59-3540-74bb-90ac879b3f85",
+            "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
             "processorType": "org.apache.nifi.processors.standard.GetFile",
             "key": "File Filter",
             "value": "{DAF_INPUT_REGEXP_FILTER}",
@@ -1887,13 +1887,13 @@
             "templateProperty": null,
             "nameKey": "NiFi Flow-Filesystem-File Filter",
             "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-File Filter",
-            "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-1c643713-3d59-3540-b326-966b1d90807b-File Filter"
+            "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-1c643713-3d59-3540-74bb-90ac879b3f85-File Filter"
           },
           {
             "processGroupName": "NiFi Flow",
             "processorName": "Filesystem",
-            "processorId": "1c643713-3d59-3540-b326-966b1d90807b",
-            "processGroupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+            "processorId": "1c643713-3d59-3540-74bb-90ac879b3f85",
+            "processGroupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
             "processorType": "org.apache.nifi.processors.standard.GetFile",
             "key": "Input Directory",
             "value": "{DAF_INPUT_DIRECTORY}",
@@ -1922,14 +1922,14 @@
             "templateProperty": null,
             "nameKey": "NiFi Flow-Filesystem-Input Directory",
             "processorNameTypeKey": "Filesystem-org.apache.nifi.processors.standard.GetFile-Input Directory",
-            "idKey": "39b53ec3-3812-1f4d-783e-39b6367633ae-1c643713-3d59-3540-b326-966b1d90807b-Input Directory"
+            "idKey": "934d1ee7-0160-1000-c7b6-6262c98e735d-1c643713-3d59-3540-74bb-90ac879b3f85-Input Directory"
           }
         ],
         "type": "org.apache.nifi.processors.standard.GetFile",
         "name": "Filesystem",
-        "id": "1c643713-3d59-3540-b326-966b1d90807b",
+        "id": "1c643713-3d59-3540-74bb-90ac879b3f85",
         "groupName": "NiFi Flow",
-        "groupId": "39b53ec3-3812-1f4d-783e-39b6367633ae",
+        "groupId": "934d1ee7-0160-1000-c7b6-6262c98e735d",
         "inputProcessor": true,
         "userDefinedInputProcessor": false
       }
@@ -1937,7 +1937,7 @@
     "id": "07b7509c-4916-48fe-9dd0-4e184ddcc4ec",
     "nifiTemplateId": "d0f26cf7-3e78-4482-af2b-3022d50dc78e",
     "templateName": "Dataset Ingest",
-    "updateDate": 1513881611197,
+    "updateDate": 1514992438079,
     "createDate": 1513181399486,
     "icon": "get_app",
     "iconColor": "#66BB6A",
@@ -2027,10 +2027,10 @@
       "value": "tecnologia"
     }
   ],
-  "new": false,
-  "categoryId": "f8209368-54dc-4ba2-874a-900ac4ec5978",
-  "systemCategoryName": "pac_cdc",
   "categoryAndFeedDisplayName": "pac_cdc.cdc_o_apm",
   "categoryName": "pac_cdc",
+  "systemCategoryName": "pac_cdc",
+  "new": false,
+  "categoryId": "f8209368-54dc-4ba2-874a-900ac4ec5978",
   "reusableFeed": false
 }
