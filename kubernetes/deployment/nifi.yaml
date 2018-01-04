@@ -62,6 +62,9 @@ spec:
         - name: hadoop
           mountPath: /etc/hadoop
           readOnly: true
+        - name: hive
+          mountPath: /etc/hive
+          readOnly: true
         #- name: daf-root-ca
         #  mountPath: /etc/ssl/certs
         - name: home
@@ -96,6 +99,9 @@ spec:
       - name: sparkconf
         hostPath:
           path: /etc/spark2/
+      - name: hive
+        hostPath:
+          path: /etc/hive/
       #- name: daf-root-ca
       #  secret:
       #    secretName: daf-root-ca
