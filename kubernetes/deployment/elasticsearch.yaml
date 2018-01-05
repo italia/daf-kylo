@@ -13,7 +13,7 @@ spec:
         io.kompose.service: tba-elasticsearch
     spec:
       containers:
-      - image:  10.98.74.120:5000/tba-elasticsearch.5.6.4:2.0.0-SNAPSHOT
+      - image:  10.98.74.120:5000/tba-elasticsearch.5.6.4:1.0.1-SNAPSHOT
         name: tba-elasticsearch
         imagePullPolicy: IfNotPresent
         lifecycle:

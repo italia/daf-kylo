@@ -57,7 +57,7 @@ After config and proper tagging has been done, push can be performed by: `docker
 
 for instance:
   ```
-  docker push nexus.default.svc.cluster.local:5000/tba-kylo-services.8.3.3:1.0.0-SNAPSHOT
+  docker push nexus.default.svc.cluster.local:5000/tba-kylo-services.8.4.0:1.0.0
   ```
 
 ### Deploy components in kubernetes cluster
