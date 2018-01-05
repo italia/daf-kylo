@@ -4,7 +4,7 @@
 
   <groupId>it.gov.daf</groupId>
   <artifactId>teamdigitale-daf-nifi-groovy-scripts</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2-SNAPSHOT</version>
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
