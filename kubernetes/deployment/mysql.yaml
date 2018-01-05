@@ -17,7 +17,7 @@ spec:
       - env:
         - name: MYSQL_ROOT_PASSWORD
           value: hadoop
-        image: 10.98.74.120:5000/tba-mysql.10.3:2.0.0-SNAPSHOT
+        image: 10.98.74.120:5000/tba-mysql.10.3:1.0.1
         name: tba-mysql
         imagePullPolicy: IfNotPresent
         ports:

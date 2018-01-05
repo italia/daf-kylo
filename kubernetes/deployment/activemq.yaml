@@ -13,7 +13,7 @@ spec:
         io.kompose.service: tba-activemq
     spec:
       containers:
-      - image: 10.98.74.120:5000/tba-activemq.5.15.1:2.0.0-SNAPSHOT
+      - image: 10.98.74.120:5000/tba-activemq.5.15.1:1.0.1
         name: tba-activemq
         imagePullPolicy: IfNotPresent
         ports:

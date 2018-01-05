@@ -11,6 +11,5 @@ bin
 *.bak
 *.swp
 *.sensitive
-nifi/
 samples/
 tmp/
