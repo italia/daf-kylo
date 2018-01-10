@@ -58,22 +58,11 @@ RUN wget http://central.maven.org/maven2/org/mariadb/jdbc/mariadb-java-client/2.
 EXPOSE 8080
 
 RUN apk update
-# krb5-user
-RUN apk add krb5-libs krb5 sudo coreutils python && \
-# sasl2-bin libsasl2-2 libsasl2-modules libsasl2-dev libldap2-dev \
-apk add cyrus-sasl  && \
-
-# python3 python3-dev python3-pip python3-requests-kerberos build-essential && \
-# pip3 install --upgrade pip && \
-# pip3 install setuptools && \
+RUN apk add --no-cache krb5-libs krb5 krb5-dev sudo coreutils python cyrus-sasl alpine-sdk libsasl libffi-dev openssl-dev cyrus-sasl-dev && \
 apk add --no-cache python3 python3-dev  && \
 python3 -m ensurepip && \
 rm -r /usr/lib/python*/ensurepip && \
-pip3 install --upgrade pip setuptools
-## pip3 install thrift_sasl sasl impyla hdfs polling && \
-## rm -rf /hadoop/etc/hadoop && \
-## ln -sf /etc/hadoop/conf /hadoop/etc/hadoop && \
+pip3 install --upgrade pip setuptools thrift_sasl==0.2.1 sasl impyla hdfs polling requests_kerberos
 
-# Change to user nifi
 # Start nifi
 CMD ["/usr/nifi/bin/nifi.sh", "run"]

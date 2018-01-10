@@ -65,6 +65,10 @@ spec:
         - name: hive
           mountPath: /etc/hive
           readOnly: true
+        - name: glusterfsvol
+          mountPath: /usr/nifi/scripts
+          subPath: nifi/scripts/edge1
+          readOnly: true
         #- name: daf-root-ca
         #  mountPath: /etc/ssl/certs
         - name: home
@@ -110,4 +114,6 @@ spec:
           path: /home
       imagePullSecrets:
       - name: regsecret
+      nodeSelector:
+        kubernetes.io/hostname: edge1.platform.daf.gov.it
 status: {}
