@@ -81,6 +81,11 @@
       <!-- any version of Groovy \>= 1.8.2 should work here -->
       <version>2.4.12</version>
     </dependency>
+    <dependency>
+      <groupId>com.opencsv</groupId>
+      <artifactId>opencsv</artifactId>
+      <version>4.1</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
