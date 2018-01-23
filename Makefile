@@ -52,7 +52,7 @@ nifi:
 		mkdir -p docker/nifi/dist
 		cp -R ../kylok8s/install/install-tar/target/kylo/setup/nifi/* docker/nifi/dist
 		docker build -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
-		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.4.0:1.0.2-SNAPSHOT
+		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.4.0:1.0.3-SNAPSHOT
 		rm -dr docker/nifi/dist
 
 .PHONY: build-kylo
