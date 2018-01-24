@@ -16,7 +16,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: 10.98.74.120:5000/tba-kylo-services.8.4:1.0.2-SNAPSHOT
+      - image: 10.98.74.120:5000/tba-kylo-services.8.4:1.0.3-SNAPSHOT
         name: tba-kylo-services
         imagePullPolicy: IfNotPresent
         ports:
@@ -31,8 +31,8 @@ spec:
           mountPath: /var/log/kylo-services
           subPath: tba/evergreen2/kylo-services/log
         - name: glusterfsvol
-          mountPath: /etc/security/daf.keytab
-          subPath: tba/security/daf.keytab
+          mountPath: /etc/security/
+          subPath: tba/security/
           readOnly: true
         - name: sparkhome
           mountPath: /opt/cloudera/parcels/

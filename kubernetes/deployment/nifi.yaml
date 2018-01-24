@@ -16,7 +16,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: 10.98.74.120:5000/tba-nifi.1.4.0:1.0.3-SNAPSHOT
+      - image: 10.98.74.120:5000/tba-nifi.1.4.0:1.0.4-SNAPSHOT
         name: tba-nifi
         imagePullPolicy: IfNotPresent
         lifecycle:
@@ -51,6 +51,10 @@ spec:
         - name: glusterfsvol
           mountPath: /usr/nifi/daf.keytab
           subPath: tba/security/daf.keytab
+          readOnly: true
+        - name: glusterfsvol
+          mountPath: /etc/security/
+          subPath: tba/security/
           readOnly: true
         - name: nifi-config
           mountPath: /usr/nifi/conf

@@ -51,9 +51,17 @@ RUN ln -f -s /usr/nifi/kylo/kylo-spark-interpreter-v2-*-jar-with-dependencies.ja
 
 RUN mkdir -p /usr/nifi/activemq
 RUN mkdir -p /usr/nifi/drivers
+RUN mkdir -p /usr/nifi/drivers/impala
 
 RUN wget http://central.maven.org/maven2/org/apache/activemq/activemq-all/5.15.0/activemq-all-5.15.0.jar -P /usr/nifi/activemq/
 RUN wget http://central.maven.org/maven2/org/mariadb/jdbc/mariadb-java-client/2.1.0/mariadb-java-client-2.1.0.jar -P /usr/nifi/drivers/
+
+#download Impala JDBC driver
+RUN wget -q https://downloads.cloudera.com/connectors/impala_jdbc_2.5.42.1062.zip
+RUN unzip impala_jdbc_2.5.42.1062.zip
+RUN unzip ClouderaImpalaJDBC-2.5.42.1062/ClouderaImpalaJDBC4_2.5.42.zip
+RUN mv ClouderaImpalaJDBC4_2.5.42/* /usr/nifi/drivers/impala
+
 # Expose default nifi port
 EXPOSE 8080
 
