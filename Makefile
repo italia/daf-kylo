@@ -49,10 +49,11 @@ kylo-ui:
 
 .PHONY: nifi
 nifi:
-		mkdir -p docker/nifi/dist
+		mkdir -p docker/nifi/dist/daf
 		cp -R ../kylok8s/install/install-tar/target/kylo/setup/nifi/* docker/nifi/dist
+		cp -R ../daf-kylo8s/nifi/extensions/processors/target/*.nar docker/nifi/dist/daf
 		docker build -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
-		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.4.0:1.0.4-SNAPSHOT
+		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.4.0:1.0.5-SNAPSHOT
 		rm -dr docker/nifi/dist
 
 .PHONY: build-kylo
@@ -69,5 +70,6 @@ daf-kylo:
 	git clone https://github.com/italia/daf-kylo.git ../daf-kylo8s | true
 	cd ../daf-kylo8s && \
     git checkout develop && \
+    git pull && \
     cd nifi/extensions && \
     mvn clean install -DskipTests
