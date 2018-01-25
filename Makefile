@@ -63,3 +63,11 @@ build-kylo:
 	mvn clean install -DskipTests && \
 	mkdir install/install-tar/target/kylo && \
 	tar -C install/install-tar/target/kylo -xvf install/install-tar/target/kylo-*-dependencies.tar.gz
+
+.PHONY: daf-kylo
+daf-kylo:
+	git clone https://github.com/italia/daf-kylo.git ../daf-kylo8s | true
+	cd ../daf-kylo8s && \
+    git checkout develop && \
+    cd nifi/extensions && \
+    mvn clean install -DskipTests
