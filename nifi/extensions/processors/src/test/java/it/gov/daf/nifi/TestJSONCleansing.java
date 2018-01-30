@@ -83,4 +83,28 @@ public class TestJSONCleansing {
         MockFlowFile result = successFlowFiles.get(0);
         result.assertContentEquals(classLoader.getResourceAsStream("json/testarray.json"));
     }
+
+    @Test
+    public void testJSONValidationFailure() throws Exception {
+        final TestRunner runner = TestRunners.newTestRunner(new DafJSONCleansing());
+        runner.setValidateExpressionUsage(false);
+        runner.assertValid();
+
+        ClassLoader classLoader = getClass().getClassLoader();
+        String testJson = "";
+        try {
+            testJson = IOUtils.toString(classLoader.getResourceAsStream("json/notvalid.json"));
+        } catch (IOException e) {
+            log.error("", e);
+        }
+
+        byte[] flowContent = testJson.getBytes();
+
+        runner.enqueue(flowContent);
+        runner.run();
+
+        final List<MockFlowFile> successFlowFiles = runner.getFlowFilesForRelationship("failure");
+        MockFlowFile result = successFlowFiles.get(0);
+        result.assertContentEquals(classLoader.getResourceAsStream("json/notvalid.json"));
+    }
 }
