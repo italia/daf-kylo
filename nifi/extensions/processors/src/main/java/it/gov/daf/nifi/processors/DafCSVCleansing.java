@@ -6,8 +6,8 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.CSVWriter;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.text.StringEscapeUtils;
 import org.apache.nifi.annotation.behavior.EventDriven;
 import org.apache.nifi.annotation.behavior.InputRequirement;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
@@ -24,7 +24,6 @@ import org.apache.nifi.processor.exception.ProcessException;
 import org.apache.nifi.processor.util.StandardValidators;
 import org.apache.nifi.util.StopWatch;
 
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
@@ -123,18 +122,33 @@ public class DafCSVCleansing extends AbstractProcessor {
             return;
         }
 
-        String separatorChar = context.getProperty(SEPARATOR_CHAR).evaluateAttributeExpressions(flowFile).getValue().trim();
-        String quoteChar = context.getProperty(QUOTE_CHAR).evaluateAttributeExpressions(flowFile).getValue().trim();
-        String escapeChar = context.getProperty(ESCAPE_CHAR).evaluateAttributeExpressions(flowFile).getValue().trim();
-        CSVParser parser = new CSVParserBuilder().withSeparator(separatorChar.charAt(0)).withQuoteChar(quoteChar.charAt(0)).withEscapeChar(escapeChar.charAt(0)).build();
+        String separatorString = context.getProperty(SEPARATOR_CHAR).evaluateAttributeExpressions(flowFile).getValue().trim();
+        String quoteString = context.getProperty(QUOTE_CHAR).evaluateAttributeExpressions(flowFile).getValue().trim();
+        String escapeString = context.getProperty(ESCAPE_CHAR).evaluateAttributeExpressions(flowFile).getValue().trim();
 
+        if (StringUtils.startsWith(separatorString, "\\")) {
+            separatorString = StringEscapeUtils.unescapeJava(separatorString);
+        }
+
+        if (StringUtils.startsWith(quoteString, "\\")) {
+            quoteString = StringEscapeUtils.unescapeJava(quoteString);
+        }
+
+        if (StringUtils.startsWith(escapeString, "\\")) {
+            escapeString = StringEscapeUtils.unescapeJava(escapeString);
+        }
+
+        char separatorChar = separatorString.charAt(0);
+        char quoteChar = quoteString.charAt(0);
+        char escapeChar = escapeString.charAt(0);
+
+        CSVParser parser = new CSVParserBuilder().withSeparator(separatorChar).withQuoteChar(quoteChar).withEscapeChar(escapeChar).build();
         StopWatch stopWatch = new StopWatch(true);
 
-        InputStream inputStream = session.read(flowFile);
-        CSVReader reader = new CSVReaderBuilder(new InputStreamReader(inputStream)).withCSVParser(parser).build();
         try {
-            flowFile = session.write(flowFile, out -> {
-                CSVWriter writer = new CSVWriter(new OutputStreamWriter(out), separatorChar.charAt(0), quoteChar.charAt(0), escapeChar.charAt(0), CSVWriter.DEFAULT_LINE_END);
+            flowFile = session.write(flowFile, (in, out) -> {
+                CSVReader reader = new CSVReaderBuilder(new InputStreamReader(in)).withCSVParser(parser).build();
+                CSVWriter writer = new CSVWriter(new OutputStreamWriter(out), separatorChar, quoteChar, escapeChar, CSVWriter.DEFAULT_LINE_END);
 
                 reader.forEach(row -> {
                     String[] cleanLine = new String[row.length];
@@ -145,17 +159,13 @@ public class DafCSVCleansing extends AbstractProcessor {
                     writer.writeNext(cleanLine);
                     writer.flushQuietly();
                 });
-                writer.close();
             });
-            reader.close();
         } catch (Exception ex) {
             logger.error("Error CSV processing", ex);
             logger.info("Transferred {} to 'failure'", new Object[]{flowFile});
             session.getProvenanceReporter().modifyContent(flowFile, stopWatch.getElapsed(TimeUnit.MILLISECONDS));
             session.transfer(flowFile, REL_FAILURE);
             return;
-        } finally {
-            IOUtils.closeQuietly(inputStream);
         }
 
         logger.info("Transferred {} to 'success'", new Object[]{flowFile});
