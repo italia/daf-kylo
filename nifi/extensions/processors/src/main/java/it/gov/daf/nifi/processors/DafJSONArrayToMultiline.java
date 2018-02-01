@@ -107,6 +107,8 @@ public class DafJSONArrayToMultiline extends AbstractProcessor {
                     IOUtils.copy(new StringReader(json), out);
                 }
             } catch (Exception e) {
+                in.reset();
+                IOUtils.copy(in, out);
                 valid.set(false);
             }
         });
