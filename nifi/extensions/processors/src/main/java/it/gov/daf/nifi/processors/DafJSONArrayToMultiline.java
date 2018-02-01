@@ -21,6 +21,7 @@ import org.apache.nifi.processor.exception.ProcessException;
 
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
+import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -103,7 +104,7 @@ public class DafJSONArrayToMultiline extends AbstractProcessor {
                     }
                     bw.flush();
                 } else {
-                    IOUtils.copy(in, out);
+                    IOUtils.copy(new StringReader(json), out);
                 }
             } catch (Exception e) {
                 valid.set(false);
