@@ -36,6 +36,10 @@ spec:
           mountPath: /usr/nifi/logs
           subPath: tba/evergreen2/nifi/log
           readOnly: false
+        - name: glusterfsvol
+          mountPath: /tmp/kylo-nifi/failed-flows
+          subPath: tba/evergreen2/nifi/failed-flows
+          readOnly: false
         - name: sparkhome
           mountPath: /opt/cloudera/parcels/
           readOnly: true
