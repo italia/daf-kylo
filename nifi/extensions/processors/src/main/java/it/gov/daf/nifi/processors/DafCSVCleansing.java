@@ -54,7 +54,7 @@ public class DafCSVCleansing extends AbstractProcessor {
         .name("Separator Char")
         .description("The CSV Separator Char")
         .required(true)
-        .defaultValue("local")
+        .defaultValue(",")
         .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
         .expressionLanguageSupported(true)
         .build();
@@ -63,7 +63,7 @@ public class DafCSVCleansing extends AbstractProcessor {
         .name("Quote Char")
         .description("The CSV Quote Char")
         .required(true)
-        .defaultValue("local")
+        .defaultValue("\"")
         .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
         .expressionLanguageSupported(true)
         .build();
@@ -72,7 +72,7 @@ public class DafCSVCleansing extends AbstractProcessor {
         .name("Escape Char")
         .description("The CSV Escape Char")
         .required(true)
-        .defaultValue("local")
+        .defaultValue("\\")
         .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
         .expressionLanguageSupported(true)
         .build();
@@ -122,9 +122,9 @@ public class DafCSVCleansing extends AbstractProcessor {
             return;
         }
 
-        String separatorString = context.getProperty(SEPARATOR_CHAR).evaluateAttributeExpressions(flowFile).getValue().trim();
-        String quoteString = context.getProperty(QUOTE_CHAR).evaluateAttributeExpressions(flowFile).getValue().trim();
-        String escapeString = context.getProperty(ESCAPE_CHAR).evaluateAttributeExpressions(flowFile).getValue().trim();
+        String separatorString = context.getProperty(SEPARATOR_CHAR).evaluateAttributeExpressions(flowFile).getValue();
+        String quoteString = context.getProperty(QUOTE_CHAR).evaluateAttributeExpressions(flowFile).getValue();
+        String escapeString = context.getProperty(ESCAPE_CHAR).evaluateAttributeExpressions(flowFile).getValue();
 
         if (StringUtils.startsWith(separatorString, "\\")) {
             separatorString = StringEscapeUtils.unescapeJava(separatorString);
