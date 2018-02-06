@@ -202,15 +202,51 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>URL</key>
+            <key>Proxy Host</key>
             <value>
-              <name>URL</name>
+              <name>Proxy Host</name>
+            </value>
+          </entry>
+          <entry>
+            <key>redirect-cookie-policy</key>
+            <value>
+              <name>redirect-cookie-policy</name>
             </value>
           </entry>
           <entry>
             <key>Filename</key>
             <value>
               <name>Filename</name>
+            </value>
+          </entry>
+          <entry>
+            <key>User Agent</key>
+            <value>
+              <name>User Agent</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Proxy Port</key>
+            <value>
+              <name>Proxy Port</name>
+            </value>
+          </entry>
+          <entry>
+            <key>URL</key>
+            <value>
+              <name>URL</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Timeout</key>
+            <value>
+              <name>Connection Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Data Timeout</key>
+            <value>
+              <name>Data Timeout</name>
             </value>
           </entry>
           <entry>
@@ -227,30 +263,6 @@
             </value>
           </entry>
           <entry>
-            <key>Password</key>
-            <value>
-              <name>Password</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Connection Timeout</key>
-            <value>
-              <name>Connection Timeout</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Data Timeout</key>
-            <value>
-              <name>Data Timeout</name>
-            </value>
-          </entry>
-          <entry>
-            <key>User Agent</key>
-            <value>
-              <name>User Agent</name>
-            </value>
-          </entry>
-          <entry>
             <key>Accept Content-Type</key>
             <value>
               <name>Accept Content-Type</name>
@@ -263,21 +275,9 @@
             </value>
           </entry>
           <entry>
-            <key>redirect-cookie-policy</key>
+            <key>Password</key>
             <value>
-              <name>redirect-cookie-policy</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Proxy Host</key>
-            <value>
-              <name>Proxy Host</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Proxy Port</key>
-            <value>
-              <name>Proxy Port</name>
+              <name>Password</name>
             </value>
           </entry>
         </descriptors>
@@ -286,22 +286,25 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>URL</key>
-            <value>{DAF_WS_URL}</value>
+            <key>Proxy Host</key>
+          </entry>
+          <entry>
+            <key>redirect-cookie-policy</key>
+            <value>default</value>
           </entry>
           <entry>
             <key>Filename</key>
             <value>{DAF_DATASET_NAME}_${now():format('yyyyMMddHHmmss')}</value>
           </entry>
           <entry>
-            <key>SSL Context Service</key>
+            <key>User Agent</key>
           </entry>
           <entry>
-            <key>Username</key>
-            <value>{DAF_WS_USERNAME}</value>
+            <key>Proxy Port</key>
           </entry>
           <entry>
-            <key>Password</key>
+            <key>URL</key>
+            <value>{DAF_WS_URL}</value>
           </entry>
           <entry>
             <key>Connection Timeout</key>
@@ -312,7 +315,11 @@
             <value>30 sec</value>
           </entry>
           <entry>
-            <key>User Agent</key>
+            <key>SSL Context Service</key>
+          </entry>
+          <entry>
+            <key>Username</key>
+            <value>{DAF_WS_USERNAME}</value>
           </entry>
           <entry>
             <key>Accept Content-Type</key>
@@ -323,14 +330,7 @@
             <value>true</value>
           </entry>
           <entry>
-            <key>redirect-cookie-policy</key>
-            <value>default</value>
-          </entry>
-          <entry>
-            <key>Proxy Host</key>
-          </entry>
-          <entry>
-            <key>Proxy Port</key>
+            <key>Password</key>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -377,12 +377,6 @@
             </value>
           </entry>
           <entry>
-            <key>Stateful Variables Initial Value</key>
-            <value>
-              <name>Stateful Variables Initial Value</name>
-            </value>
-          </entry>
-          <entry>
             <key>metadata.table.feedFieldStructure</key>
             <value>
               <name>metadata.table.feedFieldStructure</name>
@@ -392,6 +386,12 @@
             <key>skipHeader</key>
             <value>
               <name>skipHeader</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value>
+              <name>Stateful Variables Initial Value</name>
             </value>
           </entry>
         </descriptors>
@@ -407,16 +407,16 @@
             <value>Store state locally</value>
           </entry>
           <entry>
-            <key>Stateful Variables Initial Value</key>
-            <value></value>
-          </entry>
-          <entry>
             <key>metadata.table.feedFieldStructure</key>
             <value>${db.table.avro.schema}</value>
           </entry>
           <entry>
             <key>skipHeader</key>
             <value>false</value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value></value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -455,9 +455,9 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Delete Attributes Expression</key>
+            <key>hive.profile.root</key>
             <value>
-              <name>Delete Attributes Expression</name>
+              <name>hive.profile.root</name>
             </value>
           </entry>
           <entry>
@@ -467,9 +467,9 @@
             </value>
           </entry>
           <entry>
-            <key>Stateful Variables Initial Value</key>
+            <key>spark.input_folder</key>
             <value>
-              <name>Stateful Variables Initial Value</name>
+              <name>spark.input_folder</name>
             </value>
           </entry>
           <entry>
@@ -479,15 +479,9 @@
             </value>
           </entry>
           <entry>
-            <key>category</key>
+            <key>metadata.table.fieldPoliciesJson</key>
             <value>
-              <name>category</name>
-            </value>
-          </entry>
-          <entry>
-            <key>feed</key>
-            <value>
-              <name>feed</name>
+              <name>metadata.table.fieldPoliciesJson</name>
             </value>
           </entry>
           <entry>
@@ -497,27 +491,15 @@
             </value>
           </entry>
           <entry>
-            <key>hdfs.ingest.root</key>
+            <key>Delete Attributes Expression</key>
             <value>
-              <name>hdfs.ingest.root</name>
+              <name>Delete Attributes Expression</name>
             </value>
           </entry>
           <entry>
-            <key>hive.ingest.root</key>
+            <key>metadata.table.targetTblProperties</key>
             <value>
-              <name>hive.ingest.root</name>
-            </value>
-          </entry>
-          <entry>
-            <key>hive.master.root</key>
-            <value>
-              <name>hive.master.root</name>
-            </value>
-          </entry>
-          <entry>
-            <key>hive.profile.root</key>
-            <value>
-              <name>hive.profile.root</name>
+              <name>metadata.table.targetTblProperties</name>
             </value>
           </entry>
           <entry>
@@ -533,9 +515,21 @@
             </value>
           </entry>
           <entry>
-            <key>metadata.table.feedFormat</key>
+            <key>metadata.table.partitionStructure</key>
             <value>
-              <name>metadata.table.feedFormat</name>
+              <name>metadata.table.partitionStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hive.ingest.root</key>
+            <value>
+              <name>hive.ingest.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hive.master.root</key>
+            <value>
+              <name>hive.master.root</name>
             </value>
           </entry>
           <entry>
@@ -545,45 +539,15 @@
             </value>
           </entry>
           <entry>
-            <key>metadata.table.fieldPoliciesJson</key>
-            <value>
-              <name>metadata.table.fieldPoliciesJson</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.fieldStructure</key>
-            <value>
-              <name>metadata.table.fieldStructure</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionSpecs</key>
-            <value>
-              <name>metadata.table.partitionSpecs</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionStructure</key>
-            <value>
-              <name>metadata.table.partitionStructure</name>
-            </value>
-          </entry>
-          <entry>
             <key>metadata.table.targetFormat</key>
             <value>
               <name>metadata.table.targetFormat</name>
             </value>
           </entry>
           <entry>
-            <key>metadata.table.targetMergeStrategy</key>
+            <key>metadata.table.fieldStructure</key>
             <value>
-              <name>metadata.table.targetMergeStrategy</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetTblProperties</key>
-            <value>
-              <name>metadata.table.targetTblProperties</name>
+              <name>metadata.table.fieldStructure</name>
             </value>
           </entry>
           <entry>
@@ -599,9 +563,45 @@
             </value>
           </entry>
           <entry>
-            <key>spark.input_folder</key>
+            <key>Stateful Variables Initial Value</key>
             <value>
-              <name>spark.input_folder</name>
+              <name>Stateful Variables Initial Value</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionSpecs</key>
+            <value>
+              <name>metadata.table.partitionSpecs</name>
+            </value>
+          </entry>
+          <entry>
+            <key>feed</key>
+            <value>
+              <name>feed</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hdfs.ingest.root</key>
+            <value>
+              <name>hdfs.ingest.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>category</key>
+            <value>
+              <name>category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetMergeStrategy</key>
+            <value>
+              <name>metadata.table.targetMergeStrategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFormat</key>
+            <value>
+              <name>metadata.table.feedFormat</name>
             </value>
           </entry>
         </descriptors>
@@ -610,47 +610,35 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Delete Attributes Expression</key>
+            <key>hive.profile.root</key>
+            <value>${config.hive.profile.root}</value>
           </entry>
           <entry>
             <key>Store State</key>
             <value>Store state locally</value>
           </entry>
           <entry>
-            <key>Stateful Variables Initial Value</key>
-            <value></value>
+            <key>spark.input_folder</key>
+            <value>/tmp/kylo-nifi/spark</value>
           </entry>
           <entry>
             <key>archiveId</key>
             <value>${now():format('yyyyMMddHHmmss')}_${UUID()}</value>
           </entry>
           <entry>
-            <key>category</key>
-            <value>${metadata.category.systemName}</value>
-          </entry>
-          <entry>
-            <key>feed</key>
-            <value>${metadata.systemFeedName}</value>
+            <key>metadata.table.fieldPoliciesJson</key>
+            <value>${metadata.table.fieldPoliciesJson}</value>
           </entry>
           <entry>
             <key>hdfs.archive.root</key>
             <value>${config.hdfs.archive.root}</value>
           </entry>
           <entry>
-            <key>hdfs.ingest.root</key>
-            <value>${config.hdfs.ingest.root}</value>
+            <key>Delete Attributes Expression</key>
           </entry>
           <entry>
-            <key>hive.ingest.root</key>
-            <value>${config.hive.ingest.root}</value>
-          </entry>
-          <entry>
-            <key>hive.master.root</key>
-            <value>${config.hive.master.root}</value>
-          </entry>
-          <entry>
-            <key>hive.profile.root</key>
-            <value>${config.hive.profile.root}</value>
+            <key>metadata.table.targetTblProperties</key>
+            <value>${metadata.table.targetTblProperties}</value>
           </entry>
           <entry>
             <key>kylo.tmp.baseFolder</key>
@@ -661,40 +649,28 @@
             <value>${metadata.table.feedFieldStructure}</value>
           </entry>
           <entry>
-            <key>metadata.table.feedFormat</key>
-            <value>${metadata.table.feedFormat}</value>
+            <key>metadata.table.partitionStructure</key>
+            <value>${metadata.table.partitionStructure}</value>
+          </entry>
+          <entry>
+            <key>hive.ingest.root</key>
+            <value>${config.hive.ingest.root}</value>
+          </entry>
+          <entry>
+            <key>hive.master.root</key>
+            <value>${config.hive.master.root}</value>
           </entry>
           <entry>
             <key>metadata.table.fieldIndexString</key>
             <value>${metadata.table.fieldIndexString}</value>
           </entry>
           <entry>
-            <key>metadata.table.fieldPoliciesJson</key>
-            <value>${metadata.table.fieldPoliciesJson}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.fieldStructure</key>
-            <value>${metadata.table.fieldStructure}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionSpecs</key>
-            <value>${metadata.table.partitionSpecs}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionStructure</key>
-            <value>${metadata.table.partitionStructure}</value>
-          </entry>
-          <entry>
             <key>metadata.table.targetFormat</key>
             <value>${metadata.table.targetFormat}</value>
           </entry>
           <entry>
-            <key>metadata.table.targetMergeStrategy</key>
-            <value>${metadata.table.targetMergeStrategy}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetTblProperties</key>
-            <value>${metadata.table.targetTblProperties}</value>
+            <key>metadata.table.fieldStructure</key>
+            <value>${metadata.table.fieldStructure}</value>
           </entry>
           <entry>
             <key>nifi.home</key>
@@ -705,8 +681,32 @@
             <value>${metadata.options.skipHeader}</value>
           </entry>
           <entry>
-            <key>spark.input_folder</key>
-            <value>/tmp/kylo-nifi/spark</value>
+            <key>Stateful Variables Initial Value</key>
+            <value></value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionSpecs</key>
+            <value>${metadata.table.partitionSpecs}</value>
+          </entry>
+          <entry>
+            <key>feed</key>
+            <value>${metadata.systemFeedName}</value>
+          </entry>
+          <entry>
+            <key>hdfs.ingest.root</key>
+            <value>${config.hdfs.ingest.root}</value>
+          </entry>
+          <entry>
+            <key>category</key>
+            <value>${metadata.category.systemName}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetMergeStrategy</key>
+            <value>${metadata.table.targetMergeStrategy}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFormat</key>
+            <value>${metadata.table.feedFormat}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
