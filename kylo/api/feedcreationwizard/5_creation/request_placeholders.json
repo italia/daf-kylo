@@ -104,10 +104,24 @@
         "missingName": false,
         "missingValue": false
       }
+    },
+    {
+      "description": null,
+      "displayName": null,
+      "locked": false,
+      "order": 2,
+      "required": true,
+      "systemName": "daf_format",
+      "value": "{DAF_FORMAT}",
+      "$error": {
+        "duplicate": false,
+        "missingName": false,
+        "missingValue": false
+      }
     }
   ],
   "options": {
-    "skipHeader": true
+    "skipHeader": {DAF_SKIPHEADER}
   },
   "active": true
 }
