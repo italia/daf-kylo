@@ -290,7 +290,7 @@ data:
     config.metadata.url=http://kylo-ui:8400/proxy/v1/metadata
 
     ## Spark configuration
-    nifi.executesparkjob.sparkhome=/opt/cloudera/parcels/SPARK2/lib/spark2
+    nifi.executesparkjob.sparkhome=/opt/cloudera/parcels/CDH/lib/spark
     nifi.executesparkjob.sparkmaster=yarn
     nifi.executesparkjob.driver_memory=1024m
     nifi.executesparkjob.number_of_executors=1
