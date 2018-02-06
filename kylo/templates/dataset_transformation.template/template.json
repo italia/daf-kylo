@@ -1314,7 +1314,7 @@
   "id": "d318502f-6c9d-4584-91a1-5586231dcdf3",
   "nifiTemplateId": "cb552baa-2fd5-40af-93bd-96e4e935b2eb",
   "templateName": "Dataset Transformation",
-  "updateDate": 1517940462644,
+  "updateDate": 1517941500236,
   "createDate": 1517918789742,
   "icon": "polymer",
   "iconColor": "#AB47BC",
@@ -1325,15 +1325,15 @@
   "reusableTemplateConnections": [
     {
       "feedOutputPortName": "to-dataset-transformation-port",
-      "reusableTemplateInputPortName": "dataset-transformation",
-      "inputPortDisplayName": "dataset-transformation"
+      "reusableTemplateInputPortName": "dataset-transformation-input-port",
+      "inputPortDisplayName": "dataset-transformation-input-port"
     }
   ],
   "registeredDatasourceDefinitions": [
     {
       "processorType": "com.thinkbiganalytics.nifi.v2.ingest.MergeTable",
       "processorName": "Merge Table",
-      "processorId": "95f13673-dbdd-3bbf-f7cb-a90c53322239",
+      "processorId": "98ca9ba3-e81a-3405-392c-e9d2f9a404c0",
       "datasourceDefinition": {
         "processorType": "com.thinkbiganalytics.nifi.v2.ingest.MergeTable",
         "connectionType": "DESTINATION",
@@ -1350,7 +1350,7 @@
   ],
   "order": 2,
   "templateOrder": null,
-  "feedsCount": 1,
+  "feedsCount": 0,
   "templateTableOption": "DATA_TRANSFORMATION",
   "timeBetweenStartingBatchJobs": 1000,
   "stream": false,
