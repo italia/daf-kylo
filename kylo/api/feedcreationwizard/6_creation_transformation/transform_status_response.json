@@ -1,0 +1,5407 @@
+{
+  "profile": [
+    {
+      "columnName": "time",
+      "metricType": "COLUMN_DATATYPE",
+      "metricValue": "StringType"
+    },
+    {
+      "columnName": "time",
+      "metricType": "COLUMN_NULLABLE",
+      "metricValue": "true"
+    },
+    {
+      "columnName": "time",
+      "metricType": "COLUMN_METADATA",
+      "metricValue": "{\"HIVE_TYPE_STRING\":\"string\"}"
+    },
+    {
+      "columnName": "time",
+      "metricType": "NULL_COUNT",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "time",
+      "metricType": "TOTAL_COUNT",
+      "metricValue": "1000"
+    },
+    {
+      "columnName": "time",
+      "metricType": "UNIQUE_COUNT",
+      "metricValue": "273"
+    },
+    {
+      "columnName": "time",
+      "metricType": "PERC_NULL_VALUES",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "time",
+      "metricType": "PERC_UNIQUE_VALUES",
+      "metricValue": "27.3"
+    },
+    {
+      "columnName": "time",
+      "metricType": "PERC_DUPLICATE_VALUES",
+      "metricValue": "72.7"
+    },
+    {
+      "columnName": "time",
+      "metricType": "TOP_N_VALUES",
+      "metricValue": "1^A23/01/2018 11:00^A16^B2^A02/02/2018 10:00^A14^B3^A29/01/2018 10:00^A13^B"
+    },
+    {
+      "columnName": "time",
+      "metricType": "MAX_LENGTH",
+      "metricValue": "16"
+    },
+    {
+      "columnName": "time",
+      "metricType": "MIN_LENGTH",
+      "metricValue": "16"
+    },
+    {
+      "columnName": "time",
+      "metricType": "LONGEST_STRING",
+      "metricValue": "25/01/2018 02:00"
+    },
+    {
+      "columnName": "time",
+      "metricType": "SHORTEST_STRING",
+      "metricValue": "25/01/2018 02:00"
+    },
+    {
+      "columnName": "time",
+      "metricType": "EMPTY_COUNT",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "time",
+      "metricType": "PERC_EMPTY_VALUES",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "time",
+      "metricType": "MIN_STRING_CASE",
+      "metricValue": "01/02/2018 00:00"
+    },
+    {
+      "columnName": "time",
+      "metricType": "MAX_STRING_CASE",
+      "metricValue": "30/01/2018 22:00"
+    },
+    {
+      "columnName": "time",
+      "metricType": "MIN_STRING_ICASE",
+      "metricValue": "01/02/2018 00:00"
+    },
+    {
+      "columnName": "time",
+      "metricType": "MAX_STRING_ICASE",
+      "metricValue": "30/01/2018 22:00"
+    },
+    {
+      "columnName": "application",
+      "metricType": "COLUMN_DATATYPE",
+      "metricValue": "StringType"
+    },
+    {
+      "columnName": "application",
+      "metricType": "COLUMN_NULLABLE",
+      "metricValue": "true"
+    },
+    {
+      "columnName": "application",
+      "metricType": "COLUMN_METADATA",
+      "metricValue": "{\"HIVE_TYPE_STRING\":\"string\"}"
+    },
+    {
+      "columnName": "application",
+      "metricType": "NULL_COUNT",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "application",
+      "metricType": "TOTAL_COUNT",
+      "metricValue": "1000"
+    },
+    {
+      "columnName": "application",
+      "metricType": "UNIQUE_COUNT",
+      "metricValue": "14"
+    },
+    {
+      "columnName": "application",
+      "metricType": "PERC_NULL_VALUES",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "application",
+      "metricType": "PERC_UNIQUE_VALUES",
+      "metricValue": "1.4"
+    },
+    {
+      "columnName": "application",
+      "metricType": "PERC_DUPLICATE_VALUES",
+      "metricValue": "98.6"
+    },
+    {
+      "columnName": "application",
+      "metricType": "TOP_N_VALUES",
+      "metricValue": "1^AACTIVEDIRECTORY CDC^A660^B2^AOPENCMS^A86^B3^AGESTIONE DOCUMENTALE^A79^B"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MAX_LENGTH",
+      "metricValue": "27"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MIN_LENGTH",
+      "metricValue": "4"
+    },
+    {
+      "columnName": "application",
+      "metricType": "LONGEST_STRING",
+      "metricValue": "AMMINISTRAZIONE ATTIVA SIAM"
+    },
+    {
+      "columnName": "application",
+      "metricType": "SHORTEST_STRING",
+      "metricValue": "SICR"
+    },
+    {
+      "columnName": "application",
+      "metricType": "EMPTY_COUNT",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "application",
+      "metricType": "PERC_EMPTY_VALUES",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MIN_STRING_CASE",
+      "metricValue": "ACTIVEDIRECTORY CDC"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MAX_STRING_CASE",
+      "metricValue": "SICR"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MIN_STRING_ICASE",
+      "metricValue": "ACTIVEDIRECTORY CDC"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MAX_STRING_ICASE",
+      "metricValue": "SICR"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "COLUMN_DATATYPE",
+      "metricValue": "DoubleType"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "COLUMN_NULLABLE",
+      "metricValue": "true"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "COLUMN_METADATA",
+      "metricValue": "{\"HIVE_TYPE_STRING\":\"double\"}"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "NULL_COUNT",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "TOTAL_COUNT",
+      "metricValue": "1000"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "UNIQUE_COUNT",
+      "metricValue": "114"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "PERC_NULL_VALUES",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "PERC_UNIQUE_VALUES",
+      "metricValue": "11.4"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "PERC_DUPLICATE_VALUES",
+      "metricValue": "88.6"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "TOP_N_VALUES",
+      "metricValue": "1^A0.0^A763^B2^A1.0^A35^B3^A2.0^A17^B"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "MAX",
+      "metricValue": "16276.0"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "MIN",
+      "metricValue": "0.0"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "SUM",
+      "metricValue": "94633.0"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "MEAN",
+      "metricValue": "94.63299999999983"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "STDDEV",
+      "metricValue": "901.3753370882746"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "VARIANCE",
+      "metricValue": "812477.4983110006"
+    }
+  ],
+  "results": {
+    "query": "SELECT * FROM b7272f92fcdb4a2cbdfeed87919fd51c",
+    "columns": [
+      {
+        "displayName": "time",
+        "hiveColumnLabel": "time",
+        "field": "time",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b7272f92fcdb4a2cbdfeed87919fd51c",
+        "databaseName": null,
+        "index": 0,
+        "comment": null,
+        "precisionScale": null
+      },
+      {
+        "displayName": "application",
+        "hiveColumnLabel": "application",
+        "field": "application",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b7272f92fcdb4a2cbdfeed87919fd51c",
+        "databaseName": null,
+        "index": 1,
+        "comment": null,
+        "precisionScale": null
+      },
+      {
+        "displayName": "failures_total",
+        "hiveColumnLabel": "failures_total",
+        "field": "failures_total",
+        "dataType": "double",
+        "nativeDataType": null,
+        "tableName": "b7272f92fcdb4a2cbdfeed87919fd51c",
+        "databaseName": null,
+        "index": 2,
+        "comment": null,
+        "precisionScale": null
+      }
+    ],
+    "columnFieldMap": {
+      "failures_total": {
+        "displayName": "failures_total",
+        "hiveColumnLabel": "failures_total",
+        "field": "failures_total",
+        "dataType": "double",
+        "nativeDataType": null,
+        "tableName": "b7272f92fcdb4a2cbdfeed87919fd51c",
+        "databaseName": null,
+        "index": 2,
+        "comment": null,
+        "precisionScale": null
+      },
+      "application": {
+        "displayName": "application",
+        "hiveColumnLabel": "application",
+        "field": "application",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b7272f92fcdb4a2cbdfeed87919fd51c",
+        "databaseName": null,
+        "index": 1,
+        "comment": null,
+        "precisionScale": null
+      },
+      "time": {
+        "displayName": "time",
+        "hiveColumnLabel": "time",
+        "field": "time",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b7272f92fcdb4a2cbdfeed87919fd51c",
+        "databaseName": null,
+        "index": 0,
+        "comment": null,
+        "precisionScale": null
+      }
+    },
+    "columnDisplayNameMap": {
+      "failures_total": {
+        "displayName": "failures_total",
+        "hiveColumnLabel": "failures_total",
+        "field": "failures_total",
+        "dataType": "double",
+        "nativeDataType": null,
+        "tableName": "b7272f92fcdb4a2cbdfeed87919fd51c",
+        "databaseName": null,
+        "index": 2,
+        "comment": null,
+        "precisionScale": null
+      },
+      "application": {
+        "displayName": "application",
+        "hiveColumnLabel": "application",
+        "field": "application",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b7272f92fcdb4a2cbdfeed87919fd51c",
+        "databaseName": null,
+        "index": 1,
+        "comment": null,
+        "precisionScale": null
+      },
+      "time": {
+        "displayName": "time",
+        "hiveColumnLabel": "time",
+        "field": "time",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b7272f92fcdb4a2cbdfeed87919fd51c",
+        "databaseName": null,
+        "index": 0,
+        "comment": null,
+        "precisionScale": null
+      }
+    },
+    "rows": [
+      {
+        "failures_total": 10.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 04:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 06:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 14:00"
+      },
+      {
+        "failures_total": 3.0,
+        "application": "OPENCMS",
+        "time": "04/02/2018 16:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 22:00"
+      },
+      {
+        "failures_total": 212.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 15:00"
+      },
+      {
+        "failures_total": 9.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "05/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "24/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "22/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "29/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "02/02/2018 13:00"
+      },
+      {
+        "failures_total": 16276.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 04:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 10:00"
+      },
+      {
+        "failures_total": 31.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 16:00"
+      },
+      {
+        "failures_total": 3.0,
+        "application": "OPENCMS",
+        "time": "28/01/2018 18:00"
+      },
+      {
+        "failures_total": 72.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "23/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "24/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "30/01/2018 10:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 14:00"
+      },
+      {
+        "failures_total": 167.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "30/01/2018 14:00"
+      },
+      {
+        "failures_total": 18.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 17:00"
+      },
+      {
+        "failures_total": 124.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 17:00"
+      },
+      {
+        "failures_total": 6.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 23:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "30/01/2018 08:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "AREA GIURIDICA",
+        "time": "01/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "29/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM",
+        "time": "02/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 15:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "24/01/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "30/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 13:00"
+      },
+      {
+        "failures_total": 294.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "02/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 18:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "30/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "30/01/2018 07:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "PORTALE SOLE",
+        "time": "22/01/2018 02:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 18:00"
+      },
+      {
+        "failures_total": 84.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "24/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "25/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "02/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 23:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "01/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "22/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "PORTALE SOLE",
+        "time": "22/01/2018 03:00"
+      },
+      {
+        "failures_total": 339.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 12:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM",
+        "time": "02/02/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "22/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 03:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 116.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "29/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "24/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM",
+        "time": "26/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "05/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "25/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "29/01/2018 08:00"
+      },
+      {
+        "failures_total": 74.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "24/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "22/01/2018 09:00"
+      },
+      {
+        "failures_total": 21.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 01:00"
+      },
+      {
+        "failures_total": 37.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "05/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "05/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SICR",
+        "time": "05/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "PORTALE SOLE",
+        "time": "25/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "01/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "29/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 04:00"
+      },
+      {
+        "failures_total": 57.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 08:00"
+      },
+      {
+        "failures_total": 12.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "23/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 07:00"
+      },
+      {
+        "failures_total": 254.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "25/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 09:00"
+      },
+      {
+        "failures_total": 13.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 21:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "26/01/2018 08:00"
+      },
+      {
+        "failures_total": 217.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "05/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "30/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 16:00"
+      },
+      {
+        "failures_total": 79.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 02:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "02/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM",
+        "time": "05/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 23:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "03/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "22/01/2018 09:00"
+      },
+      {
+        "failures_total": 7.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SICR",
+        "time": "28/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "02/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 13:00"
+      },
+      {
+        "failures_total": 6.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 04:00"
+      },
+      {
+        "failures_total": 55.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "24/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 17:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "30/01/2018 10:00"
+      },
+      {
+        "failures_total": 84.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "24/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "26/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "PORTALE SOLE",
+        "time": "03/02/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 12:00"
+      },
+      {
+        "failures_total": 3277.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 15:00"
+      },
+      {
+        "failures_total": 5.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "04/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM",
+        "time": "01/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "26/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "25/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 45.0,
+        "application": "PORTALE SOLE",
+        "time": "23/01/2018 15:00"
+      },
+      {
+        "failures_total": 46.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 17:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 09:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 11:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 08:00"
+      },
+      {
+        "failures_total": 469.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "01/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 16:00"
+      },
+      {
+        "failures_total": 912.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 15:00"
+      },
+      {
+        "failures_total": 568.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 22:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 42.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "22/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM",
+        "time": "05/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 03:00"
+      },
+      {
+        "failures_total": 20.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 13:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 21:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "29/01/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "01/02/2018 10:00"
+      },
+      {
+        "failures_total": 1080.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 00:00"
+      },
+      {
+        "failures_total": 3.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "22/01/2018 20:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "22/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "25/01/2018 15:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "PORTALE SOLE",
+        "time": "05/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "22/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "23/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "05/02/2018 02:00"
+      },
+      {
+        "failures_total": 103.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 13:00"
+      },
+      {
+        "failures_total": 3.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "26/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 04:00"
+      },
+      {
+        "failures_total": 56.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 06:00"
+      },
+      {
+        "failures_total": 89.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "24/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 09:00"
+      },
+      {
+        "failures_total": 199.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "22/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 22:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 18:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "AREA GIURIDICA",
+        "time": "02/02/2018 18:00"
+      },
+      {
+        "failures_total": 1213.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "PORTALE SOLE",
+        "time": "30/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "24/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "25/01/2018 16:00"
+      },
+      {
+        "failures_total": 9.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA CONTROLLO ENTI",
+        "time": "05/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM",
+        "time": "05/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "05/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "01/02/2018 10:00"
+      },
+      {
+        "failures_total": 154.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 23:00"
+      },
+      {
+        "failures_total": 22.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 07:00"
+      },
+      {
+        "failures_total": 4034.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 05:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "01/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "28/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 06:00"
+      },
+      {
+        "failures_total": 404.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "22/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "02/02/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 19:00"
+      },
+      {
+        "failures_total": 3.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 14:00"
+      },
+      {
+        "failures_total": 21.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 05:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "25/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "01/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 09:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 17:00"
+      },
+      {
+        "failures_total": 639.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 07:00"
+      },
+      {
+        "failures_total": 4.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "26/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "22/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 13:00"
+      },
+      {
+        "failures_total": 23.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "25/01/2018 02:00"
+      },
+      {
+        "failures_total": 6.0,
+        "application": "OPENCMS",
+        "time": "04/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 01:00"
+      },
+      {
+        "failures_total": 154.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 23:00"
+      },
+      {
+        "failures_total": 174.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 17:00"
+      },
+      {
+        "failures_total": 55.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "29/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "25/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "22/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "03/02/2018 07:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "22/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 00:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "PORTALE SOLE",
+        "time": "29/01/2018 04:00"
+      },
+      {
+        "failures_total": 319.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "05/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "26/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "02/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM",
+        "time": "24/01/2018 03:00"
+      },
+      {
+        "failures_total": 9.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "05/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 23:00"
+      },
+      {
+        "failures_total": 2212.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 11:00"
+      },
+      {
+        "failures_total": 13.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 23:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "05/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "01/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "25/01/2018 17:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "OPENCMS",
+        "time": "23/01/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "30/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "01/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM",
+        "time": "25/01/2018 10:00"
+      },
+      {
+        "failures_total": 3.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 14:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "05/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "04/02/2018 06:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 08:00"
+      },
+      {
+        "failures_total": 586.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "23/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "01/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 11:00"
+      },
+      {
+        "failures_total": 14.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 05:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "01/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "05/02/2018 11:00"
+      },
+      {
+        "failures_total": 5.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 02:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 18:00"
+      },
+      {
+        "failures_total": 167.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 08:00"
+      },
+      {
+        "failures_total": 70.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "01/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 10:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "25/01/2018 11:00"
+      },
+      {
+        "failures_total": 35.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 21:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "22/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 10:00"
+      },
+      {
+        "failures_total": 501.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "30/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 13:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 03:00"
+      },
+      {
+        "failures_total": 8843.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 06:00"
+      },
+      {
+        "failures_total": 42.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "23/01/2018 13:00"
+      },
+      {
+        "failures_total": 458.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 05:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "03/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "27/01/2018 21:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 17:00"
+      },
+      {
+        "failures_total": 12.0,
+        "application": "OPENCMS",
+        "time": "02/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "02/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 04:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 06:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "03/02/2018 21:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "05/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 15:00"
+      },
+      {
+        "failures_total": 8.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "01/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 13:00"
+      },
+      {
+        "failures_total": 151.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 12:00"
+      },
+      {
+        "failures_total": 31.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 11:00"
+      },
+      {
+        "failures_total": 62.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 13:00"
+      },
+      {
+        "failures_total": 62.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "PORTALE SOLE",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 21:00"
+      },
+      {
+        "failures_total": 17.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 15:00"
+      },
+      {
+        "failures_total": 8.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "27/01/2018 02:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SICR",
+        "time": "01/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 09:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "22/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "27/01/2018 02:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 04:00"
+      },
+      {
+        "failures_total": 4.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "01/02/2018 10:00"
+      },
+      {
+        "failures_total": 343.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 13:00"
+      },
+      {
+        "failures_total": 26.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "30/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "22/01/2018 02:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 227.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "PORTALE SOLE",
+        "time": "24/01/2018 02:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA CONTROLLO ENTI",
+        "time": "26/01/2018 12:00"
+      },
+      {
+        "failures_total": 64.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "05/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "26/01/2018 12:00"
+      },
+      {
+        "failures_total": 16.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "24/01/2018 09:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI ARUBA",
+        "time": "03/02/2018 07:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 20:00"
+      },
+      {
+        "failures_total": 46.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 04:00"
+      },
+      {
+        "failures_total": 7.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 20:00"
+      },
+      {
+        "failures_total": 35.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 14:00"
+      },
+      {
+        "failures_total": 1851.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "22/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "22/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "25/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "02/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 13:00"
+      },
+      {
+        "failures_total": 179.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 08:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "24/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "05/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "02/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "22/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 04:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "22/01/2018 12:00"
+      },
+      {
+        "failures_total": 22.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 13:00"
+      },
+      {
+        "failures_total": 64.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "28/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "05/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "04/02/2018 04:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "02/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "23/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 15:00"
+      },
+      {
+        "failures_total": 14.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 13:00"
+      },
+      {
+        "failures_total": 22.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 12:00"
+      },
+      {
+        "failures_total": 4.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 12:00"
+      },
+      {
+        "failures_total": 22.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "24/01/2018 13:00"
+      },
+      {
+        "failures_total": 73.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "30/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "PORTALE SOLE",
+        "time": "03/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "23/01/2018 07:00"
+      },
+      {
+        "failures_total": 9.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "01/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "01/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 23:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "24/01/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "01/02/2018 14:00"
+      },
+      {
+        "failures_total": 437.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "26/01/2018 13:00"
+      },
+      {
+        "failures_total": 1313.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 10:00"
+      },
+      {
+        "failures_total": 50.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 11:00"
+      },
+      {
+        "failures_total": 22.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "30/01/2018 16:00"
+      },
+      {
+        "failures_total": 41.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 20:00"
+      },
+      {
+        "failures_total": 155.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 06:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "30/01/2018 14:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "OPENCMS",
+        "time": "02/02/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 12:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "OPENCMS",
+        "time": "27/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "03/02/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "05/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "05/02/2018 13:00"
+      },
+      {
+        "failures_total": 46.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 18:00"
+      },
+      {
+        "failures_total": 9.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 04:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 12:00"
+      },
+      {
+        "failures_total": 107.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 04:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "26/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "PORTALE SOLE",
+        "time": "29/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "23/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "23/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "01/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "26/01/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 12:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "01/02/2018 11:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 03:00"
+      },
+      {
+        "failures_total": 124.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "23/01/2018 07:00"
+      },
+      {
+        "failures_total": 41.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 32.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 12.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 23:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "29/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "30/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SICR",
+        "time": "05/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SICR",
+        "time": "05/02/2018 21:00"
+      },
+      {
+        "failures_total": 177.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 21.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 02:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "02/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "23/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "05/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "29/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "23/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "25/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "23/01/2018 13:00"
+      },
+      {
+        "failures_total": 7.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "02/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 21:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA CONTROLLO",
+        "time": "01/02/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 20:00"
+      },
+      {
+        "failures_total": 48.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 04:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "29/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 47.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 06:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "23/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "26/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "30/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "29/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 02:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 11:00"
+      },
+      {
+        "failures_total": 5.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 02:00"
+      },
+      {
+        "failures_total": 82.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 13:00"
+      },
+      {
+        "failures_total": 112.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "02/02/2018 12:00"
+      },
+      {
+        "failures_total": 6.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 07:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "AREA GIURIDICA",
+        "time": "02/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 21:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "05/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 06:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "22/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "24/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "01/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 14:00"
+      },
+      {
+        "failures_total": 32.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "30/01/2018 10:00"
+      },
+      {
+        "failures_total": 68.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 05:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "22/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "24/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM",
+        "time": "28/01/2018 23:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "30/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "02/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "22/01/2018 13:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "22/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 15:00"
+      },
+      {
+        "failures_total": 17.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "26/01/2018 15:00"
+      },
+      {
+        "failures_total": 21.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 17:00"
+      },
+      {
+        "failures_total": 85.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 09:00"
+      },
+      {
+        "failures_total": 6.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SICR",
+        "time": "26/01/2018 01:00"
+      },
+      {
+        "failures_total": 178.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI ARUBA",
+        "time": "29/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "30/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "02/02/2018 08:00"
+      },
+      {
+        "failures_total": 8.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "29/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM",
+        "time": "05/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "02/02/2018 19:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "24/01/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 19:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 20:00"
+      },
+      {
+        "failures_total": 13.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "26/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI ARUBA",
+        "time": "30/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 06:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 08:00"
+      },
+      {
+        "failures_total": 88.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "27/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 15:00"
+      },
+      {
+        "failures_total": 11.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 04:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 16:00"
+      },
+      {
+        "failures_total": 1204.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "24/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "01/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "25/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "22/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "24/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "24/01/2018 08:00"
+      },
+      {
+        "failures_total": 11.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 00:00"
+      },
+      {
+        "failures_total": 6.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "02/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "PORTALE SOLE",
+        "time": "01/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "24/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 23:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 23:00"
+      },
+      {
+        "failures_total": 13.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "05/02/2018 11:00"
+      },
+      {
+        "failures_total": 110.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "24/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 12:00"
+      },
+      {
+        "failures_total": 355.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 11:00"
+      },
+      {
+        "failures_total": 13.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "02/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 10:00"
+      },
+      {
+        "failures_total": 8.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 20:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "26/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "27/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 15:00"
+      },
+      {
+        "failures_total": 52.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 09:00"
+      },
+      {
+        "failures_total": 32.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 05:00"
+      },
+      {
+        "failures_total": 11.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "29/01/2018 17:00"
+      },
+      {
+        "failures_total": 8.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 11:00"
+      },
+      {
+        "failures_total": 99.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "22/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "02/02/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 21:00"
+      },
+      {
+        "failures_total": 367.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "02/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "23/01/2018 08:00"
+      },
+      {
+        "failures_total": 141.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "29/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "05/02/2018 11:00"
+      },
+      {
+        "failures_total": 1044.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 21:00"
+      },
+      {
+        "failures_total": 163.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "01/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "29/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 21:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 09:00"
+      },
+      {
+        "failures_total": 110.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 16:00"
+      },
+      {
+        "failures_total": 627.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "22/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "PORTALE SOLE",
+        "time": "02/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "02/02/2018 23:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 12122.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 16:00"
+      },
+      {
+        "failures_total": 12.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 11:00"
+      },
+      {
+        "failures_total": 26.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA CONTROLLO ENTI",
+        "time": "05/02/2018 06:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 14:00"
+      },
+      {
+        "failures_total": 12.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "02/02/2018 10:00"
+      },
+      {
+        "failures_total": 3.0,
+        "application": "OPENCMS",
+        "time": "29/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "30/01/2018 12:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "25/01/2018 16:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 13:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "01/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "23/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "30/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "02/02/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 09:00"
+      },
+      {
+        "failures_total": 177.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 6.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "03/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "22/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 04:00"
+      },
+      {
+        "failures_total": 4.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "02/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 22:00"
+      },
+      {
+        "failures_total": 37.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 14:00"
+      },
+      {
+        "failures_total": 500.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "01/02/2018 10:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "22/01/2018 11:00"
+      },
+      {
+        "failures_total": 27.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 10.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA CONTROLLO",
+        "time": "04/02/2018 05:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "05/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 14:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "24/01/2018 11:00"
+      },
+      {
+        "failures_total": 7.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "26/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "02/02/2018 12:00"
+      },
+      {
+        "failures_total": 637.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 03:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "24/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "26/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "05/02/2018 17:00"
+      },
+      {
+        "failures_total": 28.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 18:00"
+      },
+      {
+        "failures_total": 12.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 05:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA GIURIDICA",
+        "time": "05/02/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "01/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "23/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 4.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 04:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 04:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "AREA CONTROLLO ENTI",
+        "time": "23/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 00:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 22:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "02/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 14:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "27/01/2018 17:00"
+      },
+      {
+        "failures_total": 21.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 18:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "01/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 09:00"
+      },
+      {
+        "failures_total": 32.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "26/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DEL PERSONALE",
+        "time": "01/02/2018 04:00"
+      },
+      {
+        "failures_total": 4.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "28/01/2018 19:00"
+      },
+      {
+        "failures_total": 354.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 05:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 16:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "05/02/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 07:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "05/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "05/02/2018 13:00"
+      },
+      {
+        "failures_total": 15129.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 00:00"
+      },
+      {
+        "failures_total": 7374.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 01:00"
+      },
+      {
+        "failures_total": 2.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "01/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "26/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "02/02/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "29/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 23:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "22/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "23/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "24/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "OPENCMS",
+        "time": "22/01/2018 15:00"
+      },
+      {
+        "failures_total": 220.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 07:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "02/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "02/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "30/01/2018 15:00"
+      },
+      {
+        "failures_total": 209.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 08:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "25/01/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "SERVIZI DI UTILITA",
+        "time": "04/02/2018 04:00"
+      },
+      {
+        "failures_total": 17.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "25/01/2018 13:00"
+      },
+      {
+        "failures_total": 58.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "30/01/2018 18:00"
+      },
+      {
+        "failures_total": 164.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "26/01/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "29/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "04/02/2018 13:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 01:00"
+      },
+      {
+        "failures_total": 1.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "04/02/2018 15:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "01/02/2018 09:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "29/01/2018 19:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 17:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 12:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "23/01/2018 10:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 14:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "25/01/2018 20:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "GESTIONE DOCUMENTALE",
+        "time": "01/02/2018 11:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "FINANZA TERRITORIALE",
+        "time": "23/01/2018 10:00"
+      },
+      {
+        "failures_total": 28.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 01:00"
+      },
+      {
+        "failures_total": 0.0,
+        "application": "ACTIVEDIRECTORY FS CDC",
+        "time": "25/01/2018 10:00"
+      },
+      {
+        "failures_total": 313.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "02/02/2018 00:00"
+      },
+      {
+        "failures_total": 54.0,
+        "application": "ACTIVEDIRECTORY CDC",
+        "time": "05/02/2018 15:00"
+      }
+    ],
+    "validationResults": null,
+    "empty": false
+  },
+  "status": "SUCCESS",
+  "table": "b7272f92fcdb4a2cbdfeed87919fd51c"
+}
