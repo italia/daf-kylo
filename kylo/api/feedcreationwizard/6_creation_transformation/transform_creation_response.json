@@ -1,0 +1,1008 @@
+{
+  "id": null,
+  "versionName": null,
+  "templateId": "d318502f-6c9d-4584-91a1-5586231dcdf3",
+  "feedName": "cdc_o_apm_derived",
+  "description": "",
+  "systemFeedName": "cdc_o_apm_derived",
+  "inputProcessorType": "org.apache.nifi.processors.standard.GenerateFlowFile",
+  "inputProcessorName": "Run Feed",
+  "inputProcessor": {
+    "properties": [],
+    "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+    "name": "Run Feed",
+    "id": "f542bd08-418a-3aac-b201-4ba56a12884b",
+    "groupName": "NiFi Flow",
+    "groupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+    "inputProcessor": true,
+    "userDefinedInputProcessor": false,
+    "processorId": "f542bd08-418a-3aac-b201-4ba56a12884b",
+    "feedPropertiesUrl": null,
+    "allProperties": [
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Run Feed",
+        "processorId": "f542bd08-418a-3aac-b201-4ba56a12884b",
+        "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+        "processorType": "org.apache.nifi.processors.standard.GenerateFlowFile",
+        "key": "File Size",
+        "value": "0 B",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "File Size",
+          "displayName": "File Size",
+          "description": "The size of the file that will be used",
+          "defaultValue": "0B",
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Run Feed-File Size",
+        "processorNameTypeKey": "Run Feed-org.apache.nifi.processors.standard.GenerateFlowFile-File Size",
+        "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-f542bd08-418a-3aac-b201-4ba56a12884b-File Size",
+        "renderWithCodeMirror": false,
+        "displayValue": "0 B"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Run Feed",
+        "processorId": "f542bd08-418a-3aac-b201-4ba56a12884b",
+        "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+        "processorType": "org.apache.nifi.processors.standard.GenerateFlowFile",
+        "key": "Batch Size",
+        "value": "1",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Batch Size",
+          "displayName": "Batch Size",
+          "description": "The number of FlowFiles to be transferred in each invocation",
+          "defaultValue": "1",
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Run Feed-Batch Size",
+        "processorNameTypeKey": "Run Feed-org.apache.nifi.processors.standard.GenerateFlowFile-Batch Size",
+        "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-f542bd08-418a-3aac-b201-4ba56a12884b-Batch Size",
+        "renderWithCodeMirror": false,
+        "displayValue": "1"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Run Feed",
+        "processorId": "f542bd08-418a-3aac-b201-4ba56a12884b",
+        "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+        "processorType": "org.apache.nifi.processors.standard.GenerateFlowFile",
+        "key": "Data Format",
+        "value": "Binary",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Data Format",
+          "displayName": "Data Format",
+          "description": "Specifies whether the data should be Text or Binary",
+          "defaultValue": "Text",
+          "allowableValues": [
+            {
+              "displayName": "Binary",
+              "value": "Binary",
+              "description": null
+            },
+            {
+              "displayName": "Text",
+              "value": "Text",
+              "description": null
+            }
+          ],
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Run Feed-Data Format",
+        "processorNameTypeKey": "Run Feed-org.apache.nifi.processors.standard.GenerateFlowFile-Data Format",
+        "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-f542bd08-418a-3aac-b201-4ba56a12884b-Data Format",
+        "renderWithCodeMirror": false,
+        "displayValue": "Binary"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Run Feed",
+        "processorId": "f542bd08-418a-3aac-b201-4ba56a12884b",
+        "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+        "processorType": "org.apache.nifi.processors.standard.GenerateFlowFile",
+        "key": "Unique FlowFiles",
+        "value": "false",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Unique FlowFiles",
+          "displayName": "Unique FlowFiles",
+          "description": "If true, each FlowFile that is generated will be unique. If false, a random value will be generated and all FlowFiles will get the same content but this offers much higher throughput",
+          "defaultValue": "false",
+          "allowableValues": [
+            {
+              "displayName": "true",
+              "value": "true",
+              "description": null
+            },
+            {
+              "displayName": "false",
+              "value": "false",
+              "description": null
+            }
+          ],
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Run Feed-Unique FlowFiles",
+        "processorNameTypeKey": "Run Feed-org.apache.nifi.processors.standard.GenerateFlowFile-Unique FlowFiles",
+        "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-f542bd08-418a-3aac-b201-4ba56a12884b-Unique FlowFiles",
+        "renderWithCodeMirror": false,
+        "displayValue": "false"
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Run Feed",
+        "processorId": "f542bd08-418a-3aac-b201-4ba56a12884b",
+        "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+        "processorType": "org.apache.nifi.processors.standard.GenerateFlowFile",
+        "key": "generate-ff-custom-text",
+        "value": null,
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "generate-ff-custom-text",
+          "displayName": "Custom Text",
+          "description": "If Data Format is text and if Unique FlowFiles is false, then this custom text will be used as content of the generated FlowFiles and the File Size will be ignored. Finally, if Expression Language is used, evaluation will be performed only once per batch of generated FlowFiles",
+          "defaultValue": null,
+          "allowableValues": null,
+          "required": false,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": true,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": false,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Run Feed-generate-ff-custom-text",
+        "processorNameTypeKey": "Run Feed-org.apache.nifi.processors.standard.GenerateFlowFile-generate-ff-custom-text",
+        "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-f542bd08-418a-3aac-b201-4ba56a12884b-generate-ff-custom-text",
+        "renderWithCodeMirror": false,
+        "displayValue": null
+      },
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "Run Feed",
+        "processorId": "f542bd08-418a-3aac-b201-4ba56a12884b",
+        "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+        "processorType": "org.apache.nifi.processors.standard.GenerateFlowFile",
+        "key": "character-set",
+        "value": "UTF-8",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "character-set",
+          "displayName": "Character Set",
+          "description": "Specifies the character set to use when writing the bytes of Custom Text to a flow file.",
+          "defaultValue": "UTF-8",
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": false,
+          "identifiesControllerService": null
+        },
+        "templateValue": null,
+        "userEditable": false,
+        "renderType": null,
+        "renderOptions": null,
+        "selected": false,
+        "inputProperty": true,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "nameKey": "NiFi Flow-Run Feed-character-set",
+        "processorNameTypeKey": "Run Feed-org.apache.nifi.processors.standard.GenerateFlowFile-character-set",
+        "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-f542bd08-418a-3aac-b201-4ba56a12884b-character-set",
+        "renderWithCodeMirror": false,
+        "displayValue": "UTF-8"
+      }
+    ],
+    "sortIndex": 0
+  },
+  "nonInputProcessors": [],
+  "properties": [],
+  "securityGroups": [],
+  "schedule": {
+    "schedulingPeriod": "0 0 12 1/1 * ? *",
+    "schedulingStrategy": "CRON_DRIVEN",
+    "concurrentTasks": 1,
+    "schedulingStrategyTouched": true
+  },
+  "defineTable": false,
+  "allowPreconditions": false,
+  "dataTransformationFeed": true,
+  "table": {
+    "tableSchema": {
+      "name": "cdc_o_apm_derived",
+      "fields": [
+        {
+          "name": "application",
+          "description": null,
+          "dataType": "string",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "string",
+          "origName": "application",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "application",
+              "derivedDataType": "string",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "string"
+        },
+        {
+          "name": "failures_total",
+          "description": null,
+          "dataType": "double",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "double",
+          "origName": "failures_total",
+          "origDataType": "double",
+          "deleted": false,
+          "history": [
+            {
+              "name": "failures_total",
+              "derivedDataType": "double",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "double"
+        },
+        {
+          "name": "datetime",
+          "description": null,
+          "dataType": "timestamp",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "timestamp",
+          "origName": "datetime",
+          "origDataType": "timestamp",
+          "deleted": false,
+          "history": [
+            {
+              "name": "datetime",
+              "derivedDataType": "timestamp",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "timestamp"
+        }
+      ]
+    },
+    "sourceTableSchema": {
+      "name": "",
+      "tableSchema": null,
+      "fields": [
+        {
+          "name": "application",
+          "description": null,
+          "dataType": "string",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "string",
+          "origName": "application",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "application",
+              "derivedDataType": "string",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "string"
+        },
+        {
+          "name": "failures_total",
+          "description": null,
+          "dataType": "double",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "double",
+          "origName": "failures_total",
+          "origDataType": "double",
+          "deleted": false,
+          "history": [
+            {
+              "name": "failures_total",
+              "derivedDataType": "double",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "double"
+        },
+        {
+          "name": "datetime",
+          "description": null,
+          "dataType": "timestamp",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "timestamp",
+          "origName": "datetime",
+          "origDataType": "timestamp",
+          "deleted": false,
+          "history": [
+            {
+              "name": "datetime",
+              "derivedDataType": "timestamp",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "timestamp"
+        }
+      ]
+    },
+    "feedTableSchema": {
+      "name": null,
+      "fields": [
+        {
+          "name": "application",
+          "description": null,
+          "dataType": "string",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "string",
+          "origName": "application",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "application",
+              "derivedDataType": "string",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "string"
+        },
+        {
+          "name": "failures_total",
+          "description": null,
+          "dataType": "double",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "double",
+          "origName": "failures_total",
+          "origDataType": "double",
+          "deleted": false,
+          "history": [
+            {
+              "name": "failures_total",
+              "derivedDataType": "double",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "double"
+        },
+        {
+          "name": "datetime",
+          "description": null,
+          "dataType": "timestamp",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "timestamp",
+          "origName": "datetime",
+          "origDataType": "timestamp",
+          "deleted": false,
+          "history": [
+            {
+              "name": "datetime",
+              "derivedDataType": "timestamp",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "timestamp"
+        }
+      ]
+    },
+    "method": "EXISTING_TABLE",
+    "existingTableName": "",
+    "structured": false,
+    "targetMergeStrategy": "DEDUPE_AND_MERGE",
+    "feedFormat": "ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde' WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\\\' ,'quoteChar' = '\"') STORED AS TEXTFILE",
+    "targetFormat": "STORED AS PARQUET",
+    "fieldPolicies": [
+      {
+        "name": "application",
+        "partition": null,
+        "profile": false,
+        "standardization": null,
+        "validation": null,
+        "field": {
+          "name": "application",
+          "description": null,
+          "dataType": "string",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "string",
+          "origName": "application",
+          "origDataType": "string",
+          "deleted": false,
+          "history": [
+            {
+              "name": "application",
+              "derivedDataType": "string",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "string"
+        },
+        "fieldName": "application",
+        "feedFieldName": "application"
+      },
+      {
+        "name": "failures_total",
+        "partition": null,
+        "profile": false,
+        "standardization": null,
+        "validation": null,
+        "field": {
+          "name": "failures_total",
+          "description": null,
+          "dataType": "double",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "double",
+          "origName": "failures_total",
+          "origDataType": "double",
+          "deleted": false,
+          "history": [
+            {
+              "name": "failures_total",
+              "derivedDataType": "double",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "double"
+        },
+        "fieldName": "failures_total",
+        "feedFieldName": "failures_total"
+      },
+      {
+        "name": "datetime",
+        "partition": null,
+        "profile": false,
+        "standardization": null,
+        "validation": null,
+        "field": {
+          "name": "datetime",
+          "description": null,
+          "dataType": "timestamp",
+          "primaryKey": false,
+          "nullable": false,
+          "sampleValues": [],
+          "derivedDataType": "timestamp",
+          "origName": "datetime",
+          "origDataType": "timestamp",
+          "deleted": false,
+          "history": [
+            {
+              "name": "datetime",
+              "derivedDataType": "timestamp",
+              "deleted": false,
+              "primaryKey": false
+            }
+          ],
+          "dataTypeDisplay": "timestamp"
+        },
+        "fieldName": "datetime",
+        "feedFieldName": "datetime"
+      }
+    ],
+    "partitions": [],
+    "options": {
+      "compress": false,
+      "compressionFormat": "SNAPPY",
+      "auditLogging": true,
+      "encrypt": false,
+      "trackHistory": false
+    },
+    "sourceTableIncrementalDateField": null
+  },
+  "category": {
+    "id": "efa020e6-696a-42f8-93e2-01c7eb9ceb6b",
+    "name": "transformation_test",
+    "systemName": "transformation_test"
+  },
+  "dataOwner": "",
+  "tags": [],
+  "reusableFeed": false,
+  "dataTransformation": {
+    "chartViewModel": {
+      "nodes": [
+        {
+          "name": "tecnologia__monitoraggio.cdc_o_apm",
+          "id": 10,
+          "datasourceId": "HIVE",
+          "x": 20,
+          "y": 20,
+          "nodeAttributes": {
+            "attributes": [
+              {
+                "sampleValues": [],
+                "name": "time",
+                "description": null,
+                "nativeDataType": "VARCHAR",
+                "derivedDataType": "string",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "string",
+                "descriptionWithoutNewLines": "",
+                "selected": true
+              },
+              {
+                "sampleValues": [],
+                "name": "application",
+                "description": null,
+                "nativeDataType": "VARCHAR",
+                "derivedDataType": "string",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "string",
+                "descriptionWithoutNewLines": "",
+                "selected": true
+              },
+              {
+                "sampleValues": [],
+                "name": "transaction",
+                "description": null,
+                "nativeDataType": "VARCHAR",
+                "derivedDataType": "string",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "string",
+                "descriptionWithoutNewLines": "",
+                "selected": false
+              },
+              {
+                "sampleValues": [],
+                "name": "client_ip_address",
+                "description": null,
+                "nativeDataType": "VARCHAR",
+                "derivedDataType": "string",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "string",
+                "descriptionWithoutNewLines": "",
+                "selected": false
+              },
+              {
+                "sampleValues": [],
+                "name": "operations",
+                "description": null,
+                "nativeDataType": "DOUBLE",
+                "derivedDataType": "double",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "double",
+                "descriptionWithoutNewLines": "",
+                "selected": false
+              },
+              {
+                "sampleValues": [],
+                "name": "operation_time_ms",
+                "description": null,
+                "nativeDataType": "VARCHAR",
+                "derivedDataType": "string",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "string",
+                "descriptionWithoutNewLines": "",
+                "selected": false
+              },
+              {
+                "sampleValues": [],
+                "name": "failures_total",
+                "description": null,
+                "nativeDataType": "DOUBLE",
+                "derivedDataType": "double",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "double",
+                "descriptionWithoutNewLines": "",
+                "selected": true
+              },
+              {
+                "sampleValues": [],
+                "name": "empty_column",
+                "description": null,
+                "nativeDataType": "VARCHAR",
+                "derivedDataType": "string",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "string",
+                "descriptionWithoutNewLines": "",
+                "selected": false
+              },
+              {
+                "sampleValues": [],
+                "name": "processing_dttm",
+                "description": null,
+                "nativeDataType": "VARCHAR",
+                "derivedDataType": "string",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "string",
+                "descriptionWithoutNewLines": "",
+                "selected": false
+              }
+            ],
+            "reference": [
+              "tecnologia__monitoraggio",
+              "cdc_o_apm"
+            ],
+            "selected": [
+              {
+                "sampleValues": [],
+                "name": "time",
+                "description": null,
+                "nativeDataType": "VARCHAR",
+                "derivedDataType": "string",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "string",
+                "descriptionWithoutNewLines": "",
+                "selected": true
+              },
+              {
+                "sampleValues": [],
+                "name": "application",
+                "description": null,
+                "nativeDataType": "VARCHAR",
+                "derivedDataType": "string",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "string",
+                "descriptionWithoutNewLines": "",
+                "selected": true
+              },
+              {
+                "sampleValues": [],
+                "name": "failures_total",
+                "description": null,
+                "nativeDataType": "DOUBLE",
+                "derivedDataType": "double",
+                "primaryKey": false,
+                "nullable": true,
+                "modifiable": true,
+                "dataTypeDescriptor": null,
+                "updatedTracker": false,
+                "precisionScale": null,
+                "createdTracker": false,
+                "tags": null,
+                "dataTypeWithPrecisionAndScale": "double",
+                "descriptionWithoutNewLines": "",
+                "selected": true
+              }
+            ]
+          },
+          "connectors": {
+            "top": {
+              "location": "TOP",
+              "id": 11
+            },
+            "bottom": {
+              "location": "BOTTOM",
+              "id": 12
+            },
+            "left": {
+              "location": "LEFT",
+              "id": 9
+            },
+            "right": {
+              "location": "RIGHT",
+              "id": 10
+            }
+          },
+          "inputConnectors": [
+            {
+              "name": ""
+            }
+          ],
+          "outputConnectors": [
+            {
+              "name": ""
+            }
+          ],
+          "width": 250
+        }
+      ],
+      "connections": []
+    },
+    "datasourceIds": [],
+    "datasources": null,
+    "dataTransformScript": "import org.apache.spark.sql._\nvar df = sqlContext.sql(\"SELECT tbl10.`time`, tbl10.`application`, tbl10.`failures_total` FROM `tecnologia__monitoraggio`.`cdc_o_apm` tbl10\")\ndf = df\ndf = df.select(df(\"*\"), functions.unix_timestamp(functions.trim(df(\"time\")), \"dd/MM/yyyy HH:mm\").cast(\"timestamp\").as(\"datetime\"))\ndf = df.drop(\"time\")\ndf\n",
+    "sql": "SELECT tbl10.`time`, tbl10.`application`, tbl10.`failures_total` FROM `tecnologia__monitoraggio`.`cdc_o_apm` tbl10",
+    "states": [
+      {
+        "context": {
+          "formula": "unix_timestamp(trim(time), \"dd/MM/yyyy HH:mm\").cast(\"timestamp\").as(\"datetime\")",
+          "icon": "code",
+          "name": "unix_timestamp(trim(time), \"dd/MM/yyyy HH:mm\").cast(\"timestamp\").as(\"datetime\")"
+        },
+        "script": ".select(df(\"*\"), functions.unix_timestamp(functions.trim(df(\"time\")), \"dd/MM/yyyy HH:mm\").cast(\"timestamp\").as(\"datetime\"))"
+      },
+      {
+        "context": {
+          "formula": "drop(\"time\")",
+          "icon": "remove_circle",
+          "name": "Hide time"
+        },
+        "script": ".drop(\"time\")"
+      }
+    ],
+    "$selectedColumnsAndTables": [
+      {
+        "column": "time",
+        "alias": "tbl10",
+        "tableName": "tecnologia__monitoraggio.cdc_o_apm",
+        "tableColumn": "time"
+      },
+      {
+        "column": "application",
+        "alias": "tbl10",
+        "tableName": "tecnologia__monitoraggio.cdc_o_apm",
+        "tableColumn": "application"
+      },
+      {
+        "column": "failures_total",
+        "alias": "tbl10",
+        "tableName": "tecnologia__monitoraggio.cdc_o_apm",
+        "tableColumn": "failures_total"
+      }
+    ],
+    "$datasources": [
+      {
+        "id": "HIVE",
+        "name": "Hive"
+      }
+    ],
+    "$selectedDatasourceId": "HIVE"
+  },
+  "userProperties": [
+    {
+      "description": "The type of the Dataset ordinary/standard/derived",
+      "displayName": "daf_type",
+      "order": 0,
+      "required": true,
+      "systemName": "daf_type",
+      "locked": true,
+      "value": "derived",
+      "$error": {
+        "duplicate": false,
+        "missingName": false,
+        "missingValue": false
+      }
+    },
+    {
+      "description": "The domain of the Dataset",
+      "displayName": "daf_domain",
+      "order": 1,
+      "required": true,
+      "systemName": "daf_domain",
+      "locked": true,
+      "value": "tecnologia",
+      "$error": {
+        "duplicate": false,
+        "missingName": false,
+        "missingValue": false
+      }
+    },
+    {
+      "description": "The sub domain of the Dataset",
+      "displayName": "daf_subdomain",
+      "order": 2,
+      "required": true,
+      "systemName": "daf_subdomain",
+      "locked": true,
+      "value": "monitoraggio",
+      "$error": {
+        "duplicate": false,
+        "missingName": false,
+        "missingValue": false
+      }
+    },
+    {
+      "description": "The format of the Dataset, current supported values are json or csv. If specified there will be a validation of the input file, otherwise the file will be ingested as it is.",
+      "displayName": "daf_format",
+      "order": 3,
+      "required": false,
+      "systemName": "daf_format",
+      "locked": true,
+      "value": null,
+      "$error": {
+        "duplicate": false,
+        "missingName": false,
+        "missingValue": false
+      }
+    }
+  ],
+  "options": {
+    "skipHeader": false
+  },
+  "active": true,
+  "roleMemberships": [],
+  "owner": {
+    "displayName": "Data Lake Administrator",
+    "email": null,
+    "enabled": true,
+    "groups": [
+      "admin",
+      "user"
+    ],
+    "systemName": "dladmin",
+    "name": "Data Lake Administrator",
+    "title": "Data Lake Administrator",
+    "type": "user",
+    "_lowername": "data lake administrator",
+    "_lowerSystemName": "dladmin",
+    "_lowerDisplayName": "data lake administrator"
+  },
+  "roleMembershipsUpdated": false,
+  "tableOption": {},
+  "cloned": false,
+  "usedByFeeds": [],
+  "totalSteps": 9,
+  "feedDescriptor": "",
+  "templateName": "Dataset Transformation",
+  "templateTableOption": "DATA_TRANSFORMATION"
+}
