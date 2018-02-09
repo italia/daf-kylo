@@ -7,6 +7,10 @@
     <version>1.0.2-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
   <packaging>nar</packaging>
   <artifactId>teamdigitale-daf-nifi-processors</artifactId>
   <version>1.0.2-SNAPSHOT</version>
@@ -51,6 +55,14 @@
         <artifactId>nifi-nar-maven-plugin</artifactId>
         <version>${nifi.nar.maven.plugin.version}</version>
         <extensions>true</extensions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
       </plugin>
     </plugins>
   </build>
