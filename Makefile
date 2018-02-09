@@ -64,4 +64,4 @@ daf-kylo:
     git checkout develop && \
     git pull && \
     cd nifi/extensions && \
-    mvn clean install -DskipTests
+    mvn clean install
