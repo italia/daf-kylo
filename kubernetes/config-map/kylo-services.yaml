@@ -403,8 +403,8 @@ data:
     nifi.service.hive_thrift_service.database_user=root
     nifi.service.hive_thrift_service.password=hadoop
 
-    nifi.executesparkjob[validate_and_split_records].extra_jars=/usr/nifi/drivers/mariadb-java-client-2.1.0.jar
-    nifi.executesparkjob[profile_data].extra_jars=/usr/nifi/drivers/mariadb-java-client-2.1.0.jar
+    nifi.executesparkjob[validate_and_split_records].extra_jars=/opt/cloudera/parcels/CDH/lib/hive-hcatalog/share/hcatalog/hive-hcatalog-core.jar,/usr/nifi/drivers/mariadb-java-client-2.1.0.jar
+    nifi.executesparkjob[profile_data].extra_jars=/opt/cloudera/parcels/CDH/lib/hive-hcatalog/share/hcatalog/hive-hcatalog-core.jar,/usr/nifi/drivers/mariadb-java-client-2.1.0.jar
 
     nifi.executesparkjob[validate_and_split_records].spark_configurations=spark.default.parallelism=4
     nifi.executesparkjob[profile_data].spark_configurations=spark.default.parallelism=4
