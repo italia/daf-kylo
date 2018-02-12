@@ -1,0 +1,244 @@
+{
+  "dataschema": {
+    "avro": {
+      "name": "reg_sardegna_mov_turistici_s",
+      "type": "record",
+      "namespace": "daf://default_org/AGRI/reg_sardegna_mov_turistici_s",
+      "aliases": [
+        "reg_sardegna_mov_turistici_s"
+      ],
+      "fields": [
+        {
+          "name": "anno",
+          "type": "int"
+        },
+        {
+          "name": "provincia",
+          "type": "string"
+        },
+        {
+          "name": "mese",
+          "type": "int"
+        },
+        {
+          "name": "macrotipologia",
+          "type": "string"
+        },
+        {
+          "name": "descrizione",
+          "type": "string"
+        },
+        {
+          "name": "arrivi",
+          "type": "int"
+        },
+        {
+          "name": "presenze",
+          "type": "int"
+        }
+      ]
+    },
+    "flatSchema": [
+      {
+        "name": "anno",
+        "type": "int",
+        "metadata": {
+          "semantics": {
+            "id": "latitudine",
+            "context": "[Indirizzi(Luoghi)]"
+          },
+          "tag": [],
+          "field_type": "",
+          "constr": [
+            {
+              "type": "",
+              "param": ""
+            }
+          ],
+          "required": 0,
+          "cat": ""
+        }
+      },
+      {
+        "name": "provincia",
+        "type": "string",
+        "metadata": {
+          "semantics": {
+            "id": "",
+            "context": ""
+          },
+          "desc": "",
+          "tag": [],
+          "field_type": "",
+          "constr": [
+            {
+              "type": "",
+              "param": ""
+            }
+          ],
+          "required": 0,
+          "cat": ""
+        }
+      },
+      {
+        "name": "mese",
+        "type": "int",
+        "metadata": {
+          "semantics": {
+            "id": "",
+            "context": ""
+          },
+          "desc": "",
+          "tag": [],
+          "field_type": "",
+          "constr": [
+            {
+              "type": "",
+              "param": ""
+            }
+          ],
+          "required": 0,
+          "cat": ""
+        }
+      },
+      {
+        "name": "macrotipologia",
+        "type": "string",
+        "metadata": {
+          "semantics": {
+            "id": "",
+            "context": ""
+          },
+          "desc": "",
+          "tag": [],
+          "field_type": "",
+          "constr": [
+            {
+              "type": "",
+              "param": ""
+            }
+          ],
+          "required": 0,
+          "cat": ""
+        }
+      },
+      {
+        "name": "descrizione",
+        "type": "string",
+        "metadata": {
+          "semantics": {
+            "id": "",
+            "context": ""
+          },
+          "desc": "",
+          "tag": [],
+          "field_type": "",
+          "constr": [
+            {
+              "type": "",
+              "param": ""
+            }
+          ],
+          "required": 0,
+          "cat": ""
+        }
+      },
+      {
+        "name": "arrivi",
+        "type": "int",
+        "metadata": {
+          "semantics": {
+            "id": "",
+            "context": ""
+          },
+          "desc": "",
+          "tag": [],
+          "field_type": "",
+          "constr": [
+            {
+              "type": "",
+              "param": ""
+            }
+          ],
+          "required": 0,
+          "cat": ""
+        }
+      },
+      {
+        "name": "presenze",
+        "type": "int",
+        "metadata": {
+          "semantics": {
+            "id": "",
+            "context": ""
+          },
+          "desc": "",
+          "tag": [],
+          "field_type": "",
+          "constr": [
+            {
+              "type": "",
+              "param": ""
+            }
+          ],
+          "required": 0,
+          "cat": ""
+        }
+      }
+    ],
+    "kyloSchema": "{\"name\":null,\"description\":null,\"charset\":\"UTF-8\",\"properties\":{},\"fields\":[{\"sampleValues\":[\"2013\",\"2013\",\"2013\",\"2013\",\"2013\",\"2013\",\"2013\",\"2013\",\"2013\"],\"name\":\"anno\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"int\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":true,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"int\"},{\"sampleValues\":[\"CA\",\"CA\",\"CA\",\"CA\",\"CA\",\"CA\",\"CA\",\"CA\",\"CA\"],\"name\":\"provincia\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"string\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":false,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"string\"},{\"sampleValues\":[\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\"],\"name\":\"mese\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"int\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":true,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"int\"},{\"sampleValues\":[\"ExtraAlberghiero - Complementari\",\"ExtraAlberghiero - B&B e Alloggi Privati\",\"Alberghiero\",\"Alberghiero\",\"ExtraAlberghiero - Complementari\",\"ExtraAlberghiero - B&B e Alloggi Privati\",\"ExtraAlberghiero - Complementari\",\"Alberghiero\",\"ExtraAlberghiero - B&B e Alloggi Privati\"],\"name\":\"macrotipologia\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"string\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":false,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"string\"},{\"sampleValues\":[\"Francia\",\"Francia\",\"Francia\",\"Paesi Bassi\",\"Paesi Bassi\",\"Paesi Bassi\",\"Germania\",\"Germania\",\"Germania\"],\"name\":\"descrizione\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"string\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":false,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"string\"},{\"sampleValues\":[\"62\",\"7\",\"98\",\"22\",\"6\",\"2\",\"15\",\"119\",\"1\"],\"name\":\"arrivi\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"int\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":true,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"int\"},{\"sampleValues\":[\"190\",\"13\",\"228\",\"80\",\"20\",\"15\",\"39\",\"254\",\"1\"],\"name\":\"presenze\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"int\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":true,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"int\"}],\"schemaName\":null,\"databaseName\":null,\"hiveFormat\":\"ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'\\n WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\\\\\\\' ,'quoteChar' = '\\\\\\\"') STORED AS TEXTFILE\",\"structured\":false,\"id\":\"fe29c55d-18ee-4710-8e04-e853797ac5bc\"}"
+  },
+  "operational": {
+    "dataset_type": "batch",
+    "read_type": "update",
+    "is_std": false,
+    "logical_uri": "daf://dataset/default_org/AGRI__policy/reg_sardegna_mov_turistici_s",
+    "theme": "AGRI",
+    "subtheme": "policy",
+    "group_own": "d_ale",
+    "storage_info": {
+      "hdfs": {
+        "name": "hdfs_daf"
+      }
+    },
+    "physical_uri": "/daf/ordinary/default_org/AGRI__policy/default_org_o_reg_sardegna_mov_turistici_s",
+    "input_src": {
+      "sftp": [
+        {
+          "name": "sftp_daf",
+          "param": "format=csv, sep=undefined"
+        }
+      ]
+    },
+    "ingestion_pipeline": [
+      "utf-8", "empty not null", "date to ISO8601", "urls", "vocabulary check", "address check", "row id", "ingestion date", "update date"
+    ]
+  },
+  "dcatapit": {
+    "name": "reg_sardegna_mov_turistici_s",
+    "notes": "reg_sardegna_mov_turistici_s",
+    "relationships_as_object": [],
+    "holder_identifier": "default_org",
+    "identifier": "reg_sardegna_mov_turistici_s",
+    "tags": [
+      {
+        "name": "AGRI",
+        "state": "active",
+        "display_name": "AGRI",
+        "id": "f5feb374-3e24-417a-969e-17f00d7e6458"
+      }
+    ],
+    "groups": [],
+    "modified": "2017-07-23",
+    "alternate_identifier": "reg_sardegna_mov_turistici_s",
+    "relationships_as_subject": [],
+    "holder_name": "default_org",
+    "publisher_identifier": "default_org",
+    "resources": [],
+    "frequency": "unknown",
+    "title": "reg_sardegna_mov_turistici_s",
+    "owner_org": "default_org",
+    "theme": "AGRI",
+    "publisher_name": "default_org"
+  }
+}
