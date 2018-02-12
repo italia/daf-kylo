@@ -76,10 +76,4 @@ public class TestMetaCatalogParsing {
 
         System.out.println(list);
     }
-
-    @Test
-    public void test() throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper();
-        System.out.println(mapper.writeValueAsString(new Utf8()));
-    }
 }
