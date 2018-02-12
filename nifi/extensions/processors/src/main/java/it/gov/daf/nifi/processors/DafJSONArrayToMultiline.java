@@ -6,7 +6,6 @@ import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.core.TreeNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.nifi.annotation.behavior.EventDriven;
 import org.apache.nifi.annotation.behavior.InputRequirement;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
@@ -89,42 +88,60 @@ public class DafJSONArrayToMultiline extends AbstractProcessor {
 
         final ComponentLog logger = getLogger();
         final AtomicBoolean valid = new AtomicBoolean(true);
+        final AtomicBoolean isArray = new AtomicBoolean(true);
         final ObjectMapper objectMapper = new ObjectMapper();
         final JsonFactory jsonFactory = new JsonFactory(objectMapper);
 
-        flowFile = session.write(flowFile, (in, out) -> {
+        session.read(flowFile, in -> {
             try {
-                BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(out));
                 JsonParser jsonParser = jsonFactory.createParser(in);
                 JsonToken jsonToken = jsonParser.nextToken();
-                if (jsonToken == JsonToken.START_ARRAY) {
-                    while (jsonParser.nextToken() != JsonToken.END_ARRAY) {
-                        TreeNode treeNode = jsonParser.readValueAsTree();
-                        bw.write(treeNode.toString());
-                        bw.newLine();
-                    }
-                    bw.close();
-                } else {
-                    in.reset();
-                    IOUtils.copy(in, out);
+                if (jsonToken != JsonToken.START_ARRAY) {
+                    isArray.set(false);
                 }
             } catch (Exception e) {
                 logger.error("Error parsing JSON", e);
-                in.reset();
-                IOUtils.copy(in, out);
                 valid.set(false);
             }
         });
 
-        if (valid.get()) {
-            logger.debug("Successfully validated {}; routing to 'valid'", new Object[]{flowFile});
-            session.getProvenanceReporter().route(flowFile, REL_SUCCESS);
-            session.transfer(flowFile, REL_SUCCESS);
-        } else {
+        if (valid.get() && isArray.get()) {
+            FlowFile computedFlowFile = session.write(flowFile, (in, out) -> {
+                try {
+                    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(out));
+                    JsonParser jsonParser = jsonFactory.createParser(in);
+                    JsonToken jsonToken = jsonParser.nextToken();
+                    if (jsonToken == JsonToken.START_ARRAY) {
+                        while (jsonParser.nextToken() != JsonToken.END_ARRAY) {
+                            TreeNode treeNode = jsonParser.readValueAsTree();
+                            bw.write(treeNode.toString());
+                            bw.newLine();
+                        }
+                        bw.close();
+                    } else {
+                        isArray.set(false);
+                    }
+                } catch (Exception e) {
+                    logger.error("Error parsing JSON", e);
+                    valid.set(false);
+                }
+            });
+
+            if (valid.get()) {
+                logger.debug("Successfully splitted Array {}; routing to 'valid'", new Object[]{flowFile});
+                session.getProvenanceReporter().route(computedFlowFile, REL_SUCCESS);
+                session.transfer(computedFlowFile, REL_SUCCESS);
+            }
+        }
+
+        if (!valid.get()) {
             logger.debug("Failed to validate {}; routing to 'invalid'", new Object[]{flowFile});
             session.getProvenanceReporter().route(flowFile, REL_FAILURE);
             session.transfer(flowFile, REL_FAILURE);
+        } else if (!isArray.get()) {
+            logger.debug("JSON is not an Array {}; routing to 'valid'", new Object[]{flowFile});
+            session.getProvenanceReporter().route(flowFile, REL_SUCCESS);
+            session.transfer(flowFile, REL_SUCCESS);
         }
-
     }
 }
