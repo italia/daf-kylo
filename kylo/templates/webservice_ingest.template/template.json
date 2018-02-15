@@ -39,8 +39,8 @@
     {
       "processGroupName": "NiFi Flow",
       "processorName": "GetHTTP",
-      "processorId": "8cdce117-789c-36a7-21d3-0243684a568e",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "2e6c4019-9ab1-3154-2948-47769f0859eb",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.standard.GetHTTP",
       "key": "Filename",
       "value": "{DAF_DATASET_NAME}_${now():format('yyyyMMddHHmmss')}",
@@ -69,13 +69,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-GetHTTP-Filename",
       "processorNameTypeKey": "GetHTTP-org.apache.nifi.processors.standard.GetHTTP-Filename",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-8cdce117-789c-36a7-21d3-0243684a568e-Filename"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-2e6c4019-9ab1-3154-2948-47769f0859eb-Filename"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "GetHTTP",
-      "processorId": "8cdce117-789c-36a7-21d3-0243684a568e",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "2e6c4019-9ab1-3154-2948-47769f0859eb",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.standard.GetHTTP",
       "key": "Password",
       "value": "{cipher}{DAF_WS_PASSWORD}",
@@ -104,13 +104,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-GetHTTP-Password",
       "processorNameTypeKey": "GetHTTP-org.apache.nifi.processors.standard.GetHTTP-Password",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-8cdce117-789c-36a7-21d3-0243684a568e-Password"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-2e6c4019-9ab1-3154-2948-47769f0859eb-Password"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "GetHTTP",
-      "processorId": "8cdce117-789c-36a7-21d3-0243684a568e",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "2e6c4019-9ab1-3154-2948-47769f0859eb",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.standard.GetHTTP",
       "key": "URL",
       "value": "{DAF_WS_URL}",
@@ -139,13 +139,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-GetHTTP-URL",
       "processorNameTypeKey": "GetHTTP-org.apache.nifi.processors.standard.GetHTTP-URL",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-8cdce117-789c-36a7-21d3-0243684a568e-URL"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-2e6c4019-9ab1-3154-2948-47769f0859eb-URL"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "GetHTTP",
-      "processorId": "8cdce117-789c-36a7-21d3-0243684a568e",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "2e6c4019-9ab1-3154-2948-47769f0859eb",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.standard.GetHTTP",
       "key": "Username",
       "value": "{DAF_WS_USERNAME}",
@@ -174,13 +174,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-GetHTTP-Username",
       "processorNameTypeKey": "GetHTTP-org.apache.nifi.processors.standard.GetHTTP-Username",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-8cdce117-789c-36a7-21d3-0243684a568e-Username"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-2e6c4019-9ab1-3154-2948-47769f0859eb-Username"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "category",
       "value": "${metadata.category.systemName}",
@@ -209,13 +209,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-category",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-category",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-category"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-category"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "feed",
       "value": "${metadata.systemFeedName}",
@@ -244,13 +244,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-feed",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-feed",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-feed"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-feed"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "hdfs.archive.root",
       "value": "${config.hdfs.archive.root}",
@@ -279,13 +279,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-hdfs.archive.root",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hdfs.archive.root",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-hdfs.archive.root"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-hdfs.archive.root"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "hdfs.ingest.root",
       "value": "${config.hdfs.ingest.root}",
@@ -314,13 +314,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-hdfs.ingest.root",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hdfs.ingest.root",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-hdfs.ingest.root"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-hdfs.ingest.root"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "hive.ingest.root",
       "value": "${config.hive.ingest.root}",
@@ -349,13 +349,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.ingest.root",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.ingest.root",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-hive.ingest.root"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-hive.ingest.root"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "hive.master.root",
       "value": "${config.hive.master.root}",
@@ -384,13 +384,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.master.root",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.master.root",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-hive.master.root"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-hive.master.root"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "hive.profile.root",
       "value": "${config.hive.profile.root}",
@@ -419,13 +419,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.profile.root",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.profile.root",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-hive.profile.root"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-hive.profile.root"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.feedFieldStructure",
       "value": "${metadata.table.feedFieldStructure}",
@@ -454,13 +454,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.feedFieldStructure",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.feedFieldStructure",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.feedFieldStructure"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.feedFieldStructure"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.feedFormat",
       "value": "${metadata.table.feedFormat}",
@@ -489,13 +489,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.feedFormat",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.feedFormat",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.feedFormat"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.feedFormat"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.fieldIndexString",
       "value": "${metadata.table.fieldIndexString}",
@@ -524,13 +524,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldIndexString",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldIndexString",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.fieldIndexString"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.fieldIndexString"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.fieldPoliciesJson",
       "value": "${metadata.table.fieldPoliciesJson}",
@@ -559,13 +559,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldPoliciesJson",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldPoliciesJson",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.fieldPoliciesJson"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.fieldPoliciesJson"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.fieldStructure",
       "value": "${metadata.table.fieldStructure}",
@@ -594,13 +594,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldStructure",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldStructure",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.fieldStructure"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.fieldStructure"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.partitionSpecs",
       "value": "${metadata.table.partitionSpecs}",
@@ -629,13 +629,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.partitionSpecs",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionSpecs",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.partitionSpecs"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.partitionSpecs"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.partitionStructure",
       "value": "${metadata.table.partitionStructure}",
@@ -664,13 +664,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.partitionStructure",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionStructure",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.partitionStructure"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.partitionStructure"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.targetFormat",
       "value": "${metadata.table.targetFormat}",
@@ -699,13 +699,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetFormat",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetFormat",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.targetFormat"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.targetFormat"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.targetMergeStrategy",
       "value": "${metadata.table.targetMergeStrategy}",
@@ -734,13 +734,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetMergeStrategy",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetMergeStrategy",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.targetMergeStrategy"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.targetMergeStrategy"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.targetTblProperties",
       "value": "${metadata.table.targetTblProperties}",
@@ -769,13 +769,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetTblProperties",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetTblProperties",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.targetTblProperties"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.targetTblProperties"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "nifi.home",
       "value": "${config.nifi.home}",
@@ -804,13 +804,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-nifi.home",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-nifi.home",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-nifi.home"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-nifi.home"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Initialize Feed Parameters",
-      "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-      "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+      "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "skipHeader",
       "value": "${metadata.options.skipHeader}",
@@ -839,7 +839,7 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Initialize Feed Parameters-skipHeader",
       "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-skipHeader",
-      "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-skipHeader"
+      "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-skipHeader"
     }
   ],
   "nonInputProcessors": [
@@ -848,8 +848,8 @@
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "category",
           "value": "${metadata.category.systemName}",
@@ -878,13 +878,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-category",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-category",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-category"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-category"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "feed",
           "value": "${metadata.systemFeedName}",
@@ -913,13 +913,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-feed",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-feed",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-feed"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-feed"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "hdfs.archive.root",
           "value": "${config.hdfs.archive.root}",
@@ -948,13 +948,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-hdfs.archive.root",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hdfs.archive.root",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-hdfs.archive.root"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-hdfs.archive.root"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "hdfs.ingest.root",
           "value": "${config.hdfs.ingest.root}",
@@ -983,13 +983,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-hdfs.ingest.root",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hdfs.ingest.root",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-hdfs.ingest.root"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-hdfs.ingest.root"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "hive.ingest.root",
           "value": "${config.hive.ingest.root}",
@@ -1018,13 +1018,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.ingest.root",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.ingest.root",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-hive.ingest.root"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-hive.ingest.root"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "hive.master.root",
           "value": "${config.hive.master.root}",
@@ -1053,13 +1053,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.master.root",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.master.root",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-hive.master.root"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-hive.master.root"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "hive.profile.root",
           "value": "${config.hive.profile.root}",
@@ -1088,13 +1088,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-hive.profile.root",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.profile.root",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-hive.profile.root"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-hive.profile.root"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.feedFieldStructure",
           "value": "${metadata.table.feedFieldStructure}",
@@ -1123,13 +1123,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.feedFieldStructure",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.feedFieldStructure",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.feedFieldStructure"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.feedFieldStructure"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.feedFormat",
           "value": "${metadata.table.feedFormat}",
@@ -1158,13 +1158,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.feedFormat",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.feedFormat",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.feedFormat"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.feedFormat"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.fieldIndexString",
           "value": "${metadata.table.fieldIndexString}",
@@ -1193,13 +1193,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldIndexString",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldIndexString",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.fieldIndexString"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.fieldIndexString"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.fieldPoliciesJson",
           "value": "${metadata.table.fieldPoliciesJson}",
@@ -1228,13 +1228,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldPoliciesJson",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldPoliciesJson",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.fieldPoliciesJson"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.fieldPoliciesJson"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.fieldStructure",
           "value": "${metadata.table.fieldStructure}",
@@ -1263,13 +1263,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.fieldStructure",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldStructure",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.fieldStructure"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.fieldStructure"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.partitionSpecs",
           "value": "${metadata.table.partitionSpecs}",
@@ -1298,13 +1298,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.partitionSpecs",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionSpecs",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.partitionSpecs"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.partitionSpecs"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.partitionStructure",
           "value": "${metadata.table.partitionStructure}",
@@ -1333,13 +1333,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.partitionStructure",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionStructure",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.partitionStructure"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.partitionStructure"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.targetFormat",
           "value": "${metadata.table.targetFormat}",
@@ -1368,13 +1368,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetFormat",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetFormat",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.targetFormat"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.targetFormat"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.targetMergeStrategy",
           "value": "${metadata.table.targetMergeStrategy}",
@@ -1403,13 +1403,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetMergeStrategy",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetMergeStrategy",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.targetMergeStrategy"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.targetMergeStrategy"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.targetTblProperties",
           "value": "${metadata.table.targetTblProperties}",
@@ -1438,13 +1438,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-metadata.table.targetTblProperties",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetTblProperties",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-metadata.table.targetTblProperties"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-metadata.table.targetTblProperties"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "nifi.home",
           "value": "${config.nifi.home}",
@@ -1473,13 +1473,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-nifi.home",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-nifi.home",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-nifi.home"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-nifi.home"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Initialize Feed Parameters",
-          "processorId": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "skipHeader",
           "value": "${metadata.options.skipHeader}",
@@ -1508,14 +1508,14 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Initialize Feed Parameters-skipHeader",
           "processorNameTypeKey": "Initialize Feed Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-skipHeader",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80-skipHeader"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-3e4916ee-5b61-3e14-07a5-c42b15c94eb5-skipHeader"
         }
       ],
       "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "name": "Initialize Feed Parameters",
-      "id": "66e99f1b-0f6d-3da0-bf09-d4fdbcee6f80",
+      "id": "3e4916ee-5b61-3e14-07a5-c42b15c94eb5",
       "groupName": "NiFi Flow",
-      "groupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "groupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "inputProcessor": false,
       "userDefinedInputProcessor": false
     }
@@ -1526,8 +1526,8 @@
         {
           "processGroupName": "NiFi Flow",
           "processorName": "GetHTTP",
-          "processorId": "8cdce117-789c-36a7-21d3-0243684a568e",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "2e6c4019-9ab1-3154-2948-47769f0859eb",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.standard.GetHTTP",
           "key": "Filename",
           "value": "{DAF_DATASET_NAME}_${now():format('yyyyMMddHHmmss')}",
@@ -1556,13 +1556,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-GetHTTP-Filename",
           "processorNameTypeKey": "GetHTTP-org.apache.nifi.processors.standard.GetHTTP-Filename",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-8cdce117-789c-36a7-21d3-0243684a568e-Filename"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-2e6c4019-9ab1-3154-2948-47769f0859eb-Filename"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "GetHTTP",
-          "processorId": "8cdce117-789c-36a7-21d3-0243684a568e",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "2e6c4019-9ab1-3154-2948-47769f0859eb",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.standard.GetHTTP",
           "key": "Password",
           "value": "{cipher}{DAF_WS_PASSWORD}",
@@ -1591,13 +1591,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-GetHTTP-Password",
           "processorNameTypeKey": "GetHTTP-org.apache.nifi.processors.standard.GetHTTP-Password",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-8cdce117-789c-36a7-21d3-0243684a568e-Password"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-2e6c4019-9ab1-3154-2948-47769f0859eb-Password"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "GetHTTP",
-          "processorId": "8cdce117-789c-36a7-21d3-0243684a568e",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "2e6c4019-9ab1-3154-2948-47769f0859eb",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.standard.GetHTTP",
           "key": "URL",
           "value": "{DAF_WS_URL}",
@@ -1626,13 +1626,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-GetHTTP-URL",
           "processorNameTypeKey": "GetHTTP-org.apache.nifi.processors.standard.GetHTTP-URL",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-8cdce117-789c-36a7-21d3-0243684a568e-URL"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-2e6c4019-9ab1-3154-2948-47769f0859eb-URL"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "GetHTTP",
-          "processorId": "8cdce117-789c-36a7-21d3-0243684a568e",
-          "processGroupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+          "processorId": "2e6c4019-9ab1-3154-2948-47769f0859eb",
+          "processGroupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
           "processorType": "org.apache.nifi.processors.standard.GetHTTP",
           "key": "Username",
           "value": "{DAF_WS_USERNAME}",
@@ -1661,25 +1661,25 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-GetHTTP-Username",
           "processorNameTypeKey": "GetHTTP-org.apache.nifi.processors.standard.GetHTTP-Username",
-          "idKey": "39b53e2b-3812-1f4d-71e2-810b095080c1-8cdce117-789c-36a7-21d3-0243684a568e-Username"
+          "idKey": "38121f6a-3df9-19b5-7c16-d9c97a2bb639-2e6c4019-9ab1-3154-2948-47769f0859eb-Username"
         }
       ],
       "type": "org.apache.nifi.processors.standard.GetHTTP",
       "name": "GetHTTP",
-      "id": "8cdce117-789c-36a7-21d3-0243684a568e",
+      "id": "2e6c4019-9ab1-3154-2948-47769f0859eb",
       "groupName": "NiFi Flow",
-      "groupId": "39b53e2b-3812-1f4d-71e2-810b095080c1",
+      "groupId": "38121f6a-3df9-19b5-7c16-d9c97a2bb639",
       "inputProcessor": true,
       "userDefinedInputProcessor": false
     }
   ],
   "id": "797a5e04-121d-470a-b145-f4d336f0e23c",
-  "nifiTemplateId": "f445e1a2-9691-40d1-98f0-59d64e99f0f8",
+  "nifiTemplateId": "4c63e2f8-981e-400a-9147-1bb1a5e959a7",
   "templateName": "Webservice Ingest",
-  "updateDate": 1518600767455,
+  "updateDate": 1518686626329,
   "createDate": 1517324586203,
   "icon": "http",
-  "iconColor": "#FF5252",
+  "iconColor": "#66BB6A",
   "description": null,
   "state": "ENABLED",
   "defineTable": true,
@@ -1695,7 +1695,7 @@
     {
       "processorType": "org.apache.nifi.processors.standard.GetHTTP",
       "processorName": "GetHTTP",
-      "processorId": "8cdce117-789c-36a7-0000-000000000000",
+      "processorId": "2e6c4019-9ab1-3154-0000-000000000000",
       "datasourceDefinition": {
         "processorType": "org.apache.nifi.processors.standard.GetHTTP",
         "connectionType": "SOURCE",
@@ -1743,9 +1743,9 @@
       }
     }
   ],
-  "order": 1,
+  "order": 2,
   "templateOrder": null,
-  "feedsCount": 9,
+  "feedsCount": 11,
   "templateTableOption": "DEFINE_TABLE",
   "timeBetweenStartingBatchJobs": 1000,
   "stream": false,

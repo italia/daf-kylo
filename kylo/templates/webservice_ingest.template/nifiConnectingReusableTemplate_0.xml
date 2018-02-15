@@ -1450,9 +1450,33 @@
       <comments></comments>
       <descriptors>
         <entry>
+          <key>Hadoop Configuration Resources</key>
+          <value>
+            <name>Hadoop Configuration Resources</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Validation Query Timeout</key>
+          <value>
+            <name>Validation Query Timeout</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Kerberos Keytab</key>
+          <value>
+            <name>Kerberos Keytab</name>
+          </value>
+        </entry>
+        <entry>
           <key>Database Connection URL</key>
           <value>
             <name>Database Connection URL</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Max Wait Time</key>
+          <value>
+            <name>Max Wait Time</name>
           </value>
         </entry>
         <entry>
@@ -1462,15 +1486,27 @@
           </value>
         </entry>
         <entry>
+          <key>Database User</key>
+          <value>
+            <name>Database User</name>
+          </value>
+        </entry>
+        <entry>
           <key>Database Driver Jar Url</key>
           <value>
             <name>Database Driver Jar Url</name>
           </value>
         </entry>
         <entry>
-          <key>Database User</key>
+          <key>Kerberos Principal</key>
           <value>
-            <name>Database User</name>
+            <name>Kerberos Principal</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Max Total Connections</key>
+          <value>
+            <name>Max Total Connections</name>
           </value>
         </entry>
         <entry>
@@ -1485,60 +1521,48 @@
             <name>Validation Query</name>
           </value>
         </entry>
-        <entry>
-          <key>Validation Query Timeout</key>
-          <value>
-            <name>Validation Query Timeout</name>
-          </value>
-        </entry>
-        <entry>
-          <key>Max Wait Time</key>
-          <value>
-            <name>Max Wait Time</name>
-          </value>
-        </entry>
-        <entry>
-          <key>Max Total Connections</key>
-          <value>
-            <name>Max Total Connections</name>
-          </value>
-        </entry>
-        <entry>
-          <key>Hadoop Configuration Resources</key>
-          <value>
-            <name>Hadoop Configuration Resources</name>
-          </value>
-        </entry>
-        <entry>
-          <key>Kerberos Principal</key>
-          <value>
-            <name>Kerberos Principal</name>
-          </value>
-        </entry>
-        <entry>
-          <key>Kerberos Keytab</key>
-          <value>
-            <name>Kerberos Keytab</name>
-          </value>
-        </entry>
       </descriptors>
       <name>Hive Thrift Service</name>
       <persistsState>false</persistsState>
       <properties>
         <entry>
+          <key>Hadoop Configuration Resources</key>
+          <value>/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml</value>
+        </entry>
+        <entry>
+          <key>Validation Query Timeout</key>
+          <value>10 s</value>
+        </entry>
+        <entry>
+          <key>Kerberos Keytab</key>
+          <value>/usr/nifi/daf.keytab</value>
+        </entry>
+        <entry>
           <key>Database Connection URL</key>
           <value>jdbc:hive2://master.platform.daf.gov.it:10000/default;principal=hive/master.platform.daf.gov.it@DAF.GOV.IT?hive.aux.jars.path=/opt/cloudera/parcels/CDH/lib/hive-hcatalog/share/hcatalog/hive-hcatalog-core.jar</value>
+        </entry>
+        <entry>
+          <key>Max Wait Time</key>
+          <value>500 millis</value>
         </entry>
         <entry>
           <key>Database Driver Class Name</key>
           <value>org.apache.hive.jdbc.HiveDriver</value>
         </entry>
         <entry>
+          <key>Database User</key>
+          <value>hive</value>
+        </entry>
+        <entry>
           <key>Database Driver Jar Url</key>
         </entry>
         <entry>
-          <key>Database User</key>
-          <value>hive</value>
+          <key>Kerberos Principal</key>
+          <value>daf@DAF.GOV.IT</value>
+        </entry>
+        <entry>
+          <key>Max Total Connections</key>
+          <value>8</value>
         </entry>
         <entry>
           <key>Password</key>
@@ -1546,30 +1570,6 @@
         <entry>
           <key>Validation Query</key>
           <value>select 1</value>
-        </entry>
-        <entry>
-          <key>Validation Query Timeout</key>
-          <value>10 s</value>
-        </entry>
-        <entry>
-          <key>Max Wait Time</key>
-          <value>500 millis</value>
-        </entry>
-        <entry>
-          <key>Max Total Connections</key>
-          <value>8</value>
-        </entry>
-        <entry>
-          <key>Hadoop Configuration Resources</key>
-          <value>/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml</value>
-        </entry>
-        <entry>
-          <key>Kerberos Principal</key>
-          <value>daf@DAF.GOV.IT</value>
-        </entry>
-        <entry>
-          <key>Kerberos Keytab</key>
-          <value>/usr/nifi/daf.keytab</value>
         </entry>
       </properties>
       <state>ENABLED</state>
@@ -1586,21 +1586,9 @@
       <comments></comments>
       <descriptors>
         <entry>
-          <key>cf</key>
-          <value>
-            <name>cf</name>
-          </value>
-        </entry>
-        <entry>
           <key>cflib</key>
           <value>
             <name>cflib</name>
-          </value>
-        </entry>
-        <entry>
-          <key>broker</key>
-          <value>
-            <name>broker</name>
           </value>
         </entry>
         <entry>
@@ -1610,24 +1598,36 @@
             <name>SSL Context Service</name>
           </value>
         </entry>
+        <entry>
+          <key>cf</key>
+          <value>
+            <name>cf</name>
+          </value>
+        </entry>
+        <entry>
+          <key>broker</key>
+          <value>
+            <name>broker</name>
+          </value>
+        </entry>
       </descriptors>
       <name>JMSConnectionFactoryProvider</name>
       <persistsState>false</persistsState>
       <properties>
         <entry>
-          <key>cf</key>
-          <value>org.apache.activemq.ActiveMQConnectionFactory</value>
-        </entry>
-        <entry>
           <key>cflib</key>
           <value>/usr/nifi/activemq</value>
         </entry>
         <entry>
-          <key>broker</key>
-          <value>tcp://tba-activemq:61616</value>
+          <key>SSL Context Service</key>
         </entry>
         <entry>
-          <key>SSL Context Service</key>
+          <key>cf</key>
+          <value>org.apache.activemq.ActiveMQConnectionFactory</value>
+        </entry>
+        <entry>
+          <key>broker</key>
+          <value>tcp://tba-activemq:61616</value>
         </entry>
       </properties>
       <state>ENABLED</state>
@@ -1644,24 +1644,6 @@
       <comments></comments>
       <descriptors>
         <entry>
-          <key>Implementation</key>
-          <value>
-            <name>Implementation</name>
-          </value>
-        </entry>
-        <entry>
-          <key>rest-client-url</key>
-          <value>
-            <name>rest-client-url</name>
-          </value>
-        </entry>
-        <entry>
-          <key>client-username</key>
-          <value>
-            <name>client-username</name>
-          </value>
-        </entry>
-        <entry>
           <key>client-password</key>
           <value>
             <name>client-password</name>
@@ -1674,10 +1656,38 @@
             <name>SSL Context Service</name>
           </value>
         </entry>
+        <entry>
+          <key>client-username</key>
+          <value>
+            <name>client-username</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Implementation</key>
+          <value>
+            <name>Implementation</name>
+          </value>
+        </entry>
+        <entry>
+          <key>rest-client-url</key>
+          <value>
+            <name>rest-client-url</name>
+          </value>
+        </entry>
       </descriptors>
       <name>Kylo Metadata Service</name>
       <persistsState>false</persistsState>
       <properties>
+        <entry>
+          <key>client-password</key>
+        </entry>
+        <entry>
+          <key>SSL Context Service</key>
+        </entry>
+        <entry>
+          <key>client-username</key>
+          <value>dladmin</value>
+        </entry>
         <entry>
           <key>Implementation</key>
           <value>REMOTE</value>
@@ -1685,16 +1695,6 @@
         <entry>
           <key>rest-client-url</key>
           <value>http://tba-kylo-ui:8400/proxy/v1/metadata</value>
-        </entry>
-        <entry>
-          <key>client-username</key>
-          <value>dladmin</value>
-        </entry>
-        <entry>
-          <key>client-password</key>
-        </entry>
-        <entry>
-          <key>SSL Context Service</key>
         </entry>
       </properties>
       <state>ENABLED</state>
@@ -1753,34 +1753,9 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Connection Factory Service</key>
-            <value>
-              <identifiesControllerService>org.apache.nifi.jms.cf.JMSConnectionFactoryProviderDefinition</identifiesControllerService>
-              <name>Connection Factory Service</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Destination Name</key>
-            <value>
-              <name>Destination Name</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Destination Type</key>
-            <value>
-              <name>Destination Type</name>
-            </value>
-          </entry>
-          <entry>
             <key>User Name</key>
             <value>
               <name>User Name</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Password</key>
-            <value>
-              <name>Password</name>
             </value>
           </entry>
           <entry>
@@ -1790,9 +1765,34 @@
             </value>
           </entry>
           <entry>
+            <key>Destination Name</key>
+            <value>
+              <name>Destination Name</name>
+            </value>
+          </entry>
+          <entry>
             <key>Session Cache size</key>
             <value>
               <name>Session Cache size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Destination Type</key>
+            <value>
+              <name>Destination Type</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Factory Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.jms.cf.JMSConnectionFactoryProviderDefinition</identifiesControllerService>
+              <name>Connection Factory Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
             </value>
           </entry>
         </descriptors>
@@ -1801,29 +1801,29 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Connection Factory Service</key>
-            <value>bff4e34a-7112-393c-0000-000000000000</value>
+            <key>User Name</key>
+          </entry>
+          <entry>
+            <key>Connection Client ID</key>
           </entry>
           <entry>
             <key>Destination Name</key>
             <value>daf.nifi.mongodb</value>
           </entry>
           <entry>
+            <key>Session Cache size</key>
+            <value>1</value>
+          </entry>
+          <entry>
             <key>Destination Type</key>
             <value>QUEUE</value>
           </entry>
           <entry>
-            <key>User Name</key>
+            <key>Connection Factory Service</key>
+            <value>bff4e34a-7112-393c-0000-000000000000</value>
           </entry>
           <entry>
             <key>Password</key>
-          </entry>
-          <entry>
-            <key>Connection Client ID</key>
-          </entry>
-          <entry>
-            <key>Session Cache size</key>
-            <value>1</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -1862,15 +1862,21 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Merge Strategy</key>
+            <key>Keep Path</key>
             <value>
-              <name>Merge Strategy</name>
+              <name>Keep Path</name>
             </value>
           </entry>
           <entry>
-            <key>Merge Format</key>
+            <key>Maximum Group Size</key>
             <value>
-              <name>Merge Format</name>
+              <name>Maximum Group Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Merge Strategy</key>
+            <value>
+              <name>Merge Strategy</name>
             </value>
           </entry>
           <entry>
@@ -1880,21 +1886,9 @@
             </value>
           </entry>
           <entry>
-            <key>Correlation Attribute Name</key>
+            <key>Compression Level</key>
             <value>
-              <name>Correlation Attribute Name</name>
-            </value>
-          </entry>
-          <entry>
-            <key>mergecontent-metadata-strategy</key>
-            <value>
-              <name>mergecontent-metadata-strategy</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Minimum Number of Entries</key>
-            <value>
-              <name>Minimum Number of Entries</name>
+              <name>Compression Level</name>
             </value>
           </entry>
           <entry>
@@ -1910,21 +1904,15 @@
             </value>
           </entry>
           <entry>
-            <key>Maximum Group Size</key>
-            <value>
-              <name>Maximum Group Size</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Max Bin Age</key>
-            <value>
-              <name>Max Bin Age</name>
-            </value>
-          </entry>
-          <entry>
             <key>Maximum number of Bins</key>
             <value>
               <name>Maximum number of Bins</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Tar Modified Time</key>
+            <value>
+              <name>Tar Modified Time</name>
             </value>
           </entry>
           <entry>
@@ -1934,9 +1922,9 @@
             </value>
           </entry>
           <entry>
-            <key>Header File</key>
+            <key>Merge Format</key>
             <value>
-              <name>Header File</name>
+              <name>Merge Format</name>
             </value>
           </entry>
           <entry>
@@ -1946,27 +1934,39 @@
             </value>
           </entry>
           <entry>
+            <key>Max Bin Age</key>
+            <value>
+              <name>Max Bin Age</name>
+            </value>
+          </entry>
+          <entry>
             <key>Demarcator File</key>
             <value>
               <name>Demarcator File</name>
             </value>
           </entry>
           <entry>
-            <key>Compression Level</key>
+            <key>Correlation Attribute Name</key>
             <value>
-              <name>Compression Level</name>
+              <name>Correlation Attribute Name</name>
             </value>
           </entry>
           <entry>
-            <key>Keep Path</key>
+            <key>Header File</key>
             <value>
-              <name>Keep Path</name>
+              <name>Header File</name>
             </value>
           </entry>
           <entry>
-            <key>Tar Modified Time</key>
+            <key>mergecontent-metadata-strategy</key>
             <value>
-              <name>Tar Modified Time</name>
+              <name>mergecontent-metadata-strategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum Number of Entries</key>
+            <value>
+              <name>Minimum Number of Entries</name>
             </value>
           </entry>
         </descriptors>
@@ -1975,27 +1975,22 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Merge Strategy</key>
-            <value>Bin-Packing Algorithm</value>
+            <key>Keep Path</key>
+            <value>false</value>
           </entry>
           <entry>
-            <key>Merge Format</key>
-            <value>Binary Concatenation</value>
+            <key>Maximum Group Size</key>
+          </entry>
+          <entry>
+            <key>Merge Strategy</key>
+            <value>Bin-Packing Algorithm</value>
           </entry>
           <entry>
             <key>Attribute Strategy</key>
             <value>Keep Only Common Attributes</value>
           </entry>
           <entry>
-            <key>Correlation Attribute Name</key>
-            <value>merge.correlation</value>
-          </entry>
-          <entry>
-            <key>mergecontent-metadata-strategy</key>
-            <value>Do Not Merge Uncommon Metadata</value>
-          </entry>
-          <entry>
-            <key>Minimum Number of Entries</key>
+            <key>Compression Level</key>
             <value>1</value>
           </entry>
           <entry>
@@ -2007,25 +2002,27 @@
             <value>0 B</value>
           </entry>
           <entry>
-            <key>Maximum Group Size</key>
-          </entry>
-          <entry>
-            <key>Max Bin Age</key>
-            <value>10s</value>
-          </entry>
-          <entry>
             <key>Maximum number of Bins</key>
             <value>100</value>
+          </entry>
+          <entry>
+            <key>Tar Modified Time</key>
+            <value>${file.lastModifiedTime}</value>
           </entry>
           <entry>
             <key>Delimiter Strategy</key>
             <value>Text</value>
           </entry>
           <entry>
-            <key>Header File</key>
+            <key>Merge Format</key>
+            <value>Binary Concatenation</value>
           </entry>
           <entry>
             <key>Footer File</key>
+          </entry>
+          <entry>
+            <key>Max Bin Age</key>
+            <value>10s</value>
           </entry>
           <entry>
             <key>Demarcator File</key>
@@ -2033,16 +2030,19 @@
 </value>
           </entry>
           <entry>
-            <key>Compression Level</key>
+            <key>Correlation Attribute Name</key>
+            <value>merge.correlation</value>
+          </entry>
+          <entry>
+            <key>Header File</key>
+          </entry>
+          <entry>
+            <key>mergecontent-metadata-strategy</key>
+            <value>Do Not Merge Uncommon Metadata</value>
+          </entry>
+          <entry>
+            <key>Minimum Number of Entries</key>
             <value>1</value>
-          </entry>
-          <entry>
-            <key>Keep Path</key>
-            <value>false</value>
-          </entry>
-          <entry>
-            <key>Tar Modified Time</key>
-            <value>${file.lastModifiedTime}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -2096,6 +2096,12 @@
             </value>
           </entry>
           <entry>
+            <key>sendToMongodb</key>
+            <value>
+              <name>sendToMongodb</name>
+            </value>
+          </entry>
+          <entry>
             <key>sendToHbase</key>
             <value>
               <name>sendToHbase</name>
@@ -2105,12 +2111,6 @@
             <key>sendToKudu</key>
             <value>
               <name>sendToKudu</name>
-            </value>
-          </entry>
-          <entry>
-            <key>sendToMongodb</key>
-            <value>
-              <name>sendToMongodb</name>
             </value>
           </entry>
         </descriptors>
@@ -2123,16 +2123,16 @@
             <value>Route to Property name</value>
           </entry>
           <entry>
+            <key>sendToMongodb</key>
+            <value>${daf.external.target:contains('mongodb')}</value>
+          </entry>
+          <entry>
             <key>sendToHbase</key>
             <value>${daf.external.target:contains("hbase")}</value>
           </entry>
           <entry>
             <key>sendToKudu</key>
             <value>${daf.external.target:contains("kudu")}</value>
-          </entry>
-          <entry>
-            <key>sendToMongodb</key>
-            <value>${daf.external.target:contains('mongodb')}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -2185,24 +2185,6 @@
             </value>
           </entry>
           <entry>
-            <key>Store State</key>
-            <value>
-              <name>Store State</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Stateful Variables Initial Value</key>
-            <value>
-              <name>Stateful Variables Initial Value</name>
-            </value>
-          </entry>
-          <entry>
-            <key>daf.db.role</key>
-            <value>
-              <name>daf.db.role</name>
-            </value>
-          </entry>
-          <entry>
             <key>daf.table.role</key>
             <value>
               <name>daf.table.role</name>
@@ -2214,6 +2196,24 @@
               <name>daf.type.folder</name>
             </value>
           </entry>
+          <entry>
+            <key>Store State</key>
+            <value>
+              <name>Store State</name>
+            </value>
+          </entry>
+          <entry>
+            <key>daf.db.role</key>
+            <value>
+              <name>daf.db.role</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value>
+              <name>Stateful Variables Initial Value</name>
+            </value>
+          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
@@ -2223,23 +2223,23 @@
             <key>Delete Attributes Expression</key>
           </entry>
           <entry>
-            <key>Store State</key>
-            <value>Do not store state</value>
-          </entry>
-          <entry>
-            <key>Stateful Variables Initial Value</key>
-          </entry>
-          <entry>
-            <key>daf.db.role</key>
-            <value>db_${daf.domain}__${daf.subdomain}_role</value>
-          </entry>
-          <entry>
             <key>daf.table.role</key>
             <value>table_${daf.domain}__${daf.subdomain}__${feed}_role</value>
           </entry>
           <entry>
             <key>daf.type.folder</key>
             <value>${hive.master.root}/${daf.type}/${daf.organization}</value>
+          </entry>
+          <entry>
+            <key>Store State</key>
+            <value>Do not store state</value>
+          </entry>
+          <entry>
+            <key>daf.db.role</key>
+            <value>db_${daf.domain}__${daf.subdomain}_role</value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -2323,15 +2323,51 @@
         <concurrentlySchedulableTaskCount>10</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>Permissions umask</key>
+            <value>
+              <name>Permissions umask</name>
+            </value>
+          </entry>
+          <entry>
             <key>Hadoop Configuration Resources</key>
             <value>
               <name>Hadoop Configuration Resources</name>
             </value>
           </entry>
           <entry>
-            <key>Kerberos Principal</key>
+            <key>Remote Owner</key>
             <value>
-              <name>Kerberos Principal</name>
+              <name>Remote Owner</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Additional Classpath Resources</key>
+            <value>
+              <name>Additional Classpath Resources</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Compression codec</key>
+            <value>
+              <name>Compression codec</name>
+            </value>
+          </entry>
+          <entry>
+            <key>IO Buffer Size</key>
+            <value>
+              <name>IO Buffer Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Remote Group</key>
+            <value>
+              <name>Remote Group</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Block Size</key>
+            <value>
+              <name>Block Size</name>
             </value>
           </entry>
           <entry>
@@ -2341,15 +2377,21 @@
             </value>
           </entry>
           <entry>
-            <key>Kerberos Relogin Period</key>
+            <key>Kerberos Principal</key>
             <value>
-              <name>Kerberos Relogin Period</name>
+              <name>Kerberos Principal</name>
             </value>
           </entry>
           <entry>
-            <key>Additional Classpath Resources</key>
+            <key>Replication</key>
             <value>
-              <name>Additional Classpath Resources</name>
+              <name>Replication</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Kerberos Relogin Period</key>
+            <value>
+              <name>Kerberos Relogin Period</name>
             </value>
           </entry>
           <entry>
@@ -2364,71 +2406,53 @@
               <name>Conflict Resolution Strategy</name>
             </value>
           </entry>
-          <entry>
-            <key>Block Size</key>
-            <value>
-              <name>Block Size</name>
-            </value>
-          </entry>
-          <entry>
-            <key>IO Buffer Size</key>
-            <value>
-              <name>IO Buffer Size</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Replication</key>
-            <value>
-              <name>Replication</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Permissions umask</key>
-            <value>
-              <name>Permissions umask</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Remote Owner</key>
-            <value>
-              <name>Remote Owner</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Remote Group</key>
-            <value>
-              <name>Remote Group</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Compression codec</key>
-            <value>
-              <name>Compression codec</name>
-            </value>
-          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
+            <key>Permissions umask</key>
+          </entry>
+          <entry>
             <key>Hadoop Configuration Resources</key>
             <value>/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml</value>
           </entry>
           <entry>
-            <key>Kerberos Principal</key>
-            <value>daf@DAF.GOV.IT</value>
+            <key>Remote Owner</key>
+            <value>${daf.organization}</value>
+          </entry>
+          <entry>
+            <key>Additional Classpath Resources</key>
+          </entry>
+          <entry>
+            <key>Compression codec</key>
+            <value>BZIP</value>
+          </entry>
+          <entry>
+            <key>IO Buffer Size</key>
+          </entry>
+          <entry>
+            <key>Remote Group</key>
+            <value>${daf.organization}</value>
+          </entry>
+          <entry>
+            <key>Block Size</key>
           </entry>
           <entry>
             <key>Kerberos Keytab</key>
             <value>/usr/nifi/daf.keytab</value>
           </entry>
           <entry>
-            <key>Kerberos Relogin Period</key>
-            <value>4 hours</value>
+            <key>Kerberos Principal</key>
+            <value>daf@DAF.GOV.IT</value>
           </entry>
           <entry>
-            <key>Additional Classpath Resources</key>
+            <key>Replication</key>
+          </entry>
+          <entry>
+            <key>Kerberos Relogin Period</key>
+            <value>4 hours</value>
           </entry>
           <entry>
             <key>Directory</key>
@@ -2437,30 +2461,6 @@
           <entry>
             <key>Conflict Resolution Strategy</key>
             <value>fail</value>
-          </entry>
-          <entry>
-            <key>Block Size</key>
-          </entry>
-          <entry>
-            <key>IO Buffer Size</key>
-          </entry>
-          <entry>
-            <key>Replication</key>
-          </entry>
-          <entry>
-            <key>Permissions umask</key>
-          </entry>
-          <entry>
-            <key>Remote Owner</key>
-            <value>${daf.organization}</value>
-          </entry>
-          <entry>
-            <key>Remote Group</key>
-            <value>${daf.organization}</value>
-          </entry>
-          <entry>
-            <key>Compression codec</key>
-            <value>BZIP</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -2510,15 +2510,15 @@
             </value>
           </entry>
           <entry>
-            <key>Quote Char</key>
-            <value>
-              <name>Quote Char</name>
-            </value>
-          </entry>
-          <entry>
             <key>Escape Char</key>
             <value>
               <name>Escape Char</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Quote Char</key>
+            <value>
+              <name>Quote Char</name>
             </value>
           </entry>
         </descriptors>
@@ -2531,12 +2531,12 @@
             <value>${daf.separator.char}</value>
           </entry>
           <entry>
-            <key>Quote Char</key>
-            <value>${daf.quote.char}</value>
-          </entry>
-          <entry>
             <key>Escape Char</key>
             <value>${daf.escape.char}</value>
+          </entry>
+          <entry>
+            <key>Quote Char</key>
+            <value>${daf.quote.char}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -2580,15 +2580,15 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Script Engine</key>
-            <value>
-              <name>Script Engine</name>
-            </value>
-          </entry>
-          <entry>
             <key>Script File</key>
             <value>
               <name>Script File</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Script Engine</key>
+            <value>
+              <name>Script Engine</name>
             </value>
           </entry>
           <entry>
@@ -2609,11 +2609,11 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Script Engine</key>
-            <value>Groovy</value>
+            <key>Script File</key>
           </entry>
           <entry>
-            <key>Script File</key>
+            <key>Script Engine</key>
+            <value>Groovy</value>
           </entry>
           <entry>
             <key>Script Body</key>
@@ -2685,15 +2685,15 @@
             </value>
           </entry>
           <entry>
-            <key>System feed name</key>
-            <value>
-              <name>System feed name</name>
-            </value>
-          </entry>
-          <entry>
             <key>Cache Expiry Duration</key>
             <value>
               <name>Cache Expiry Duration</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>
+              <name>System feed name</name>
             </value>
           </entry>
         </descriptors>
@@ -2710,12 +2710,12 @@
             <value>${category}</value>
           </entry>
           <entry>
-            <key>System feed name</key>
-            <value>${feed}</value>
-          </entry>
-          <entry>
             <key>Cache Expiry Duration</key>
             <value>1 secs</value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>${feed}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -2750,9 +2750,63 @@
         <concurrentlySchedulableTaskCount>4</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>Spark YARN Deploy Mode</key>
+            <value>
+              <name>Spark YARN Deploy Mode</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Hadoop Configuration Resources</key>
+            <value>
+              <name>Hadoop Configuration Resources</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SparkHome</key>
+            <value>
+              <name>SparkHome</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Executor Memory</key>
+            <value>
+              <name>Executor Memory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Yarn Queue</key>
+            <value>
+              <name>Yarn Queue</name>
+            </value>
+          </entry>
+          <entry>
             <key>ApplicationJAR</key>
             <value>
               <name>ApplicationJAR</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Data Sources</key>
+            <value>
+              <name>Data Sources</name>
+            </value>
+          </entry>
+          <entry>
+            <key>MainArgs</key>
+            <value>
+              <name>MainArgs</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Spark Application Name</key>
+            <value>
+              <name>Spark Application Name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Spark Process Timeout</key>
+            <value>
+              <name>Spark Process Timeout</name>
             </value>
           </entry>
           <entry>
@@ -2768,81 +2822,9 @@
             </value>
           </entry>
           <entry>
-            <key>MainArgs</key>
-            <value>
-              <name>MainArgs</name>
-            </value>
-          </entry>
-          <entry>
-            <key>SparkMaster</key>
-            <value>
-              <name>SparkMaster</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Spark YARN Deploy Mode</key>
-            <value>
-              <name>Spark YARN Deploy Mode</name>
-            </value>
-          </entry>
-          <entry>
-            <key>SparkHome</key>
-            <value>
-              <name>SparkHome</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Spark Process Timeout</key>
-            <value>
-              <name>Spark Process Timeout</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Driver Memory</key>
-            <value>
-              <name>Driver Memory</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Executor Memory</key>
-            <value>
-              <name>Executor Memory</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Number of Executors</key>
-            <value>
-              <name>Number of Executors</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Spark Application Name</key>
-            <value>
-              <name>Spark Application Name</name>
-            </value>
-          </entry>
-          <entry>
             <key>Executor Cores</key>
             <value>
               <name>Executor Cores</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Network Timeout</key>
-            <value>
-              <name>Network Timeout</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Hadoop Configuration Resources</key>
-            <value>
-              <name>Hadoop Configuration Resources</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Kerberos Principal</key>
-            <value>
-              <name>Kerberos Principal</name>
             </value>
           </entry>
           <entry>
@@ -2852,15 +2834,27 @@
             </value>
           </entry>
           <entry>
-            <key>Yarn Queue</key>
-            <value>
-              <name>Yarn Queue</name>
-            </value>
-          </entry>
-          <entry>
             <key>Spark Configurations</key>
             <value>
               <name>Spark Configurations</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SparkMaster</key>
+            <value>
+              <name>SparkMaster</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Kerberos Principal</key>
+            <value>
+              <name>Kerberos Principal</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Number of Executors</key>
+            <value>
+              <name>Number of Executors</name>
             </value>
           </entry>
           <entry>
@@ -2870,9 +2864,15 @@
             </value>
           </entry>
           <entry>
-            <key>Data Sources</key>
+            <key>Driver Memory</key>
             <value>
-              <name>Data Sources</name>
+              <name>Driver Memory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Network Timeout</key>
+            <value>
+              <name>Network Timeout</name>
             </value>
           </entry>
           <entry>
@@ -2888,8 +2888,42 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
+            <key>Spark YARN Deploy Mode</key>
+            <value>cluster</value>
+          </entry>
+          <entry>
+            <key>Hadoop Configuration Resources</key>
+            <value>/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml</value>
+          </entry>
+          <entry>
+            <key>SparkHome</key>
+            <value>/opt/cloudera/parcels/CDH/lib/spark</value>
+          </entry>
+          <entry>
+            <key>Executor Memory</key>
+            <value>1024m</value>
+          </entry>
+          <entry>
+            <key>Yarn Queue</key>
+          </entry>
+          <entry>
             <key>ApplicationJAR</key>
             <value>/usr/nifi/kylo/kylo-spark-validate-cleanse-spark-v1-0.8.4-jar-with-dependencies.jar</value>
+          </entry>
+          <entry>
+            <key>Data Sources</key>
+          </entry>
+          <entry>
+            <key>MainArgs</key>
+            <value>${daf.domain}__${daf.subdomain},${feed},${feedts},${table_field_policy_json_file}</value>
+          </entry>
+          <entry>
+            <key>Spark Application Name</key>
+            <value>Validator</value>
+          </entry>
+          <entry>
+            <key>Spark Process Timeout</key>
+            <value>1 hr</value>
           </entry>
           <entry>
             <key>Extra JARs</key>
@@ -2900,74 +2934,40 @@
             <value>com.thinkbiganalytics.spark.datavalidator.Validator</value>
           </entry>
           <entry>
-            <key>MainArgs</key>
-            <value>${daf.domain}__${daf.subdomain},${feed},${feedts},${table_field_policy_json_file}</value>
-          </entry>
-          <entry>
-            <key>SparkMaster</key>
-            <value>yarn</value>
-          </entry>
-          <entry>
-            <key>Spark YARN Deploy Mode</key>
-            <value>cluster</value>
-          </entry>
-          <entry>
-            <key>SparkHome</key>
-            <value>/opt/cloudera/parcels/CDH/lib/spark</value>
-          </entry>
-          <entry>
-            <key>Spark Process Timeout</key>
-            <value>1 hr</value>
-          </entry>
-          <entry>
-            <key>Driver Memory</key>
-            <value>1024m</value>
-          </entry>
-          <entry>
-            <key>Executor Memory</key>
-            <value>1024m</value>
-          </entry>
-          <entry>
-            <key>Number of Executors</key>
-            <value>1</value>
-          </entry>
-          <entry>
-            <key>Spark Application Name</key>
-            <value>Validator</value>
-          </entry>
-          <entry>
             <key>Executor Cores</key>
             <value>1</value>
-          </entry>
-          <entry>
-            <key>Network Timeout</key>
-            <value>120s</value>
-          </entry>
-          <entry>
-            <key>Hadoop Configuration Resources</key>
-            <value>/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml</value>
-          </entry>
-          <entry>
-            <key>Kerberos Principal</key>
-            <value>daf@DAF.GOV.IT</value>
           </entry>
           <entry>
             <key>Kerberos Keytab</key>
             <value>/usr/nifi/daf.keytab</value>
           </entry>
           <entry>
-            <key>Yarn Queue</key>
-          </entry>
-          <entry>
             <key>Spark Configurations</key>
             <value>spark.default.parallelism=4</value>
+          </entry>
+          <entry>
+            <key>SparkMaster</key>
+            <value>yarn</value>
+          </entry>
+          <entry>
+            <key>Kerberos Principal</key>
+            <value>daf@DAF.GOV.IT</value>
+          </entry>
+          <entry>
+            <key>Number of Executors</key>
+            <value>1</value>
           </entry>
           <entry>
             <key>Extra Files</key>
             <value>/etc/hive/conf/hive-site.xml,${table_field_policy_json_file}</value>
           </entry>
           <entry>
-            <key>Data Sources</key>
+            <key>Driver Memory</key>
+            <value>1024m</value>
+          </entry>
+          <entry>
+            <key>Network Timeout</key>
+            <value>120s</value>
           </entry>
           <entry>
             <key>Metadata Service</key>
@@ -3027,6 +3027,12 @@
             </value>
           </entry>
           <entry>
+            <key>Evaluation Mode</key>
+            <value>
+              <name>Evaluation Mode</name>
+            </value>
+          </entry>
+          <entry>
             <key>Character Set</key>
             <value>
               <name>Character Set</name>
@@ -3044,12 +3050,6 @@
               <name>Replacement Strategy</name>
             </value>
           </entry>
-          <entry>
-            <key>Evaluation Mode</key>
-            <value>
-              <name>Evaluation Mode</name>
-            </value>
-          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
@@ -3064,6 +3064,10 @@
             <value></value>
           </entry>
           <entry>
+            <key>Evaluation Mode</key>
+            <value>Line-by-Line</value>
+          </entry>
+          <entry>
             <key>Character Set</key>
             <value>UTF-8</value>
           </entry>
@@ -3074,10 +3078,6 @@
           <entry>
             <key>Replacement Strategy</key>
             <value>Regex Replace</value>
-          </entry>
-          <entry>
-            <key>Evaluation Mode</key>
-            <value>Line-by-Line</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -3121,10 +3121,15 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Database Connection Pooling Service</key>
+            <key>Target schema</key>
             <value>
-              <identifiesControllerService>com.thinkbiganalytics.nifi.v2.thrift.ThriftService</identifiesControllerService>
-              <name>Database Connection Pooling Service</name>
+              <name>Target schema</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Feed partition value</key>
+            <value>
+              <name>Feed partition value</name>
             </value>
           </entry>
           <entry>
@@ -3140,42 +3145,6 @@
             </value>
           </entry>
           <entry>
-            <key>Source table</key>
-            <value>
-              <name>Source table</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Target schema</key>
-            <value>
-              <name>Target schema</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Target table</key>
-            <value>
-              <name>Target table</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Feed partition value</key>
-            <value>
-              <name>Feed partition value</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Partition Specification</key>
-            <value>
-              <name>Partition Specification</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Field specification</key>
-            <value>
-              <name>Field specification</name>
-            </value>
-          </entry>
-          <entry>
             <key>Hive Configurations</key>
             <value>
               <name>Hive Configurations</name>
@@ -3188,10 +3157,41 @@
             </value>
           </entry>
           <entry>
+            <key>Database Connection Pooling Service</key>
+            <value>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.v2.thrift.ThriftService</identifiesControllerService>
+              <name>Database Connection Pooling Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Source table</key>
+            <value>
+              <name>Source table</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Target table</key>
+            <value>
+              <name>Target table</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Partition Specification</key>
+            <value>
+              <name>Partition Specification</name>
+            </value>
+          </entry>
+          <entry>
             <key>Hive Connection Pooling Service</key>
             <value>
               <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
               <name>Hive Connection Pooling Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Field specification</key>
+            <value>
+              <name>Field specification</name>
             </value>
           </entry>
         </descriptors>
@@ -3200,8 +3200,12 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Database Connection Pooling Service</key>
-            <value>9837c674-eb7f-3ef9-0000-000000000000</value>
+            <key>Target schema</key>
+            <value>${daf.domain}__${daf.subdomain}</value>
+          </entry>
+          <entry>
+            <key>Feed partition value</key>
+            <value>${feedts}</value>
           </entry>
           <entry>
             <key>Merge Strategy</key>
@@ -3212,30 +3216,6 @@
             <value>${daf.domain}__${daf.subdomain}</value>
           </entry>
           <entry>
-            <key>Source table</key>
-            <value>${feed}_valid</value>
-          </entry>
-          <entry>
-            <key>Target schema</key>
-            <value>${daf.domain}__${daf.subdomain}</value>
-          </entry>
-          <entry>
-            <key>Target table</key>
-            <value>${feed}</value>
-          </entry>
-          <entry>
-            <key>Feed partition value</key>
-            <value>${feedts}</value>
-          </entry>
-          <entry>
-            <key>Partition Specification</key>
-            <value>${metadata.table.partitionSpecs}</value>
-          </entry>
-          <entry>
-            <key>Field specification</key>
-            <value>${metadata.table.fieldStructure}</value>
-          </entry>
-          <entry>
             <key>Hive Configurations</key>
           </entry>
           <entry>
@@ -3243,7 +3223,27 @@
             <value>true</value>
           </entry>
           <entry>
+            <key>Database Connection Pooling Service</key>
+            <value>9837c674-eb7f-3ef9-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>Source table</key>
+            <value>${feed}_valid</value>
+          </entry>
+          <entry>
+            <key>Target table</key>
+            <value>${feed}</value>
+          </entry>
+          <entry>
+            <key>Partition Specification</key>
+            <value>${metadata.table.partitionSpecs}</value>
+          </entry>
+          <entry>
             <key>Hive Connection Pooling Service</key>
+          </entry>
+          <entry>
+            <key>Field specification</key>
+            <value>${metadata.table.fieldStructure}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -3287,9 +3287,9 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Command Arguments</key>
+            <key>Max Attribute Length</key>
             <value>
-              <name>Command Arguments</name>
+              <name>Max Attribute Length</name>
             </value>
           </entry>
           <entry>
@@ -3299,21 +3299,9 @@
             </value>
           </entry>
           <entry>
-            <key>Ignore STDIN</key>
-            <value>
-              <name>Ignore STDIN</name>
-            </value>
-          </entry>
-          <entry>
             <key>Working Directory</key>
             <value>
               <name>Working Directory</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Argument Delimiter</key>
-            <value>
-              <name>Argument Delimiter</name>
             </value>
           </entry>
           <entry>
@@ -3323,9 +3311,21 @@
             </value>
           </entry>
           <entry>
-            <key>Max Attribute Length</key>
+            <key>Argument Delimiter</key>
             <value>
-              <name>Max Attribute Length</name>
+              <name>Argument Delimiter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Ignore STDIN</key>
+            <value>
+              <name>Ignore STDIN</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Command Arguments</key>
+            <value>
+              <name>Command Arguments</name>
             </value>
           </entry>
         </descriptors>
@@ -3334,30 +3334,30 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Command Arguments</key>
-            <value>dfs -setfacl -R -m user:hive:rwx,user:impala:rwx,group::rwx,other::---,default:user:hive:rwx,default:user:impala:rwx,default:group::rwx,default:other::--- ${daf.type.folder}</value>
+            <key>Max Attribute Length</key>
+            <value>256</value>
           </entry>
           <entry>
             <key>Command Path</key>
             <value>/opt/cloudera/parcels/CDH/bin/hdfs</value>
           </entry>
           <entry>
-            <key>Ignore STDIN</key>
-            <value>false</value>
+            <key>Working Directory</key>
           </entry>
           <entry>
-            <key>Working Directory</key>
+            <key>Output Destination Attribute</key>
           </entry>
           <entry>
             <key>Argument Delimiter</key>
             <value> </value>
           </entry>
           <entry>
-            <key>Output Destination Attribute</key>
+            <key>Ignore STDIN</key>
+            <value>false</value>
           </entry>
           <entry>
-            <key>Max Attribute Length</key>
-            <value>256</value>
+            <key>Command Arguments</key>
+            <value>dfs -setfacl -R -m user:hive:rwx,user:impala:rwx,group::rwx,other::---,default:user:hive:rwx,default:user:impala:rwx,default:group::rwx,default:other::--- ${daf.type.folder}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -3407,24 +3407,6 @@
             </value>
           </entry>
           <entry>
-            <key>Store State</key>
-            <value>
-              <name>Store State</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Stateful Variables Initial Value</key>
-            <value>
-              <name>Stateful Variables Initial Value</name>
-            </value>
-          </entry>
-          <entry>
-            <key>daf.db.role</key>
-            <value>
-              <name>daf.db.role</name>
-            </value>
-          </entry>
-          <entry>
             <key>daf.table.role</key>
             <value>
               <name>daf.table.role</name>
@@ -3436,6 +3418,24 @@
               <name>daf.type.folder</name>
             </value>
           </entry>
+          <entry>
+            <key>Store State</key>
+            <value>
+              <name>Store State</name>
+            </value>
+          </entry>
+          <entry>
+            <key>daf.db.role</key>
+            <value>
+              <name>daf.db.role</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value>
+              <name>Stateful Variables Initial Value</name>
+            </value>
+          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
@@ -3445,23 +3445,23 @@
             <key>Delete Attributes Expression</key>
           </entry>
           <entry>
-            <key>Store State</key>
-            <value>Do not store state</value>
-          </entry>
-          <entry>
-            <key>Stateful Variables Initial Value</key>
-          </entry>
-          <entry>
-            <key>daf.db.role</key>
-            <value>db_${daf.domain}__${daf.subdomain}_role</value>
-          </entry>
-          <entry>
             <key>daf.table.role</key>
             <value>table_${daf.domain}__${daf.subdomain}__${feed}_role</value>
           </entry>
           <entry>
             <key>daf.type.folder</key>
             <value>${hive.master.root}/${daf.type}</value>
+          </entry>
+          <entry>
+            <key>Store State</key>
+            <value>Do not store state</value>
+          </entry>
+          <entry>
+            <key>daf.db.role</key>
+            <value>db_${daf.domain}__${daf.subdomain}_role</value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -3501,6 +3501,12 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>feedts</key>
+            <value>
+              <name>feedts</name>
+            </value>
+          </entry>
+          <entry>
             <key>Delete Attributes Expression</key>
             <value>
               <name>Delete Attributes Expression</name>
@@ -3518,17 +3524,15 @@
               <name>Stateful Variables Initial Value</name>
             </value>
           </entry>
-          <entry>
-            <key>feedts</key>
-            <value>
-              <name>feedts</name>
-            </value>
-          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
+          <entry>
+            <key>feedts</key>
+            <value>${now():toNumber()}</value>
+          </entry>
           <entry>
             <key>Delete Attributes Expression</key>
           </entry>
@@ -3539,10 +3543,6 @@
           <entry>
             <key>Stateful Variables Initial Value</key>
             <value></value>
-          </entry>
-          <entry>
-            <key>feedts</key>
-            <value>${now():toNumber()}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -3586,9 +3586,9 @@
         <concurrentlySchedulableTaskCount>0</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Command Arguments</key>
+            <key>Max Attribute Length</key>
             <value>
-              <name>Command Arguments</name>
+              <name>Max Attribute Length</name>
             </value>
           </entry>
           <entry>
@@ -3598,21 +3598,9 @@
             </value>
           </entry>
           <entry>
-            <key>Ignore STDIN</key>
-            <value>
-              <name>Ignore STDIN</name>
-            </value>
-          </entry>
-          <entry>
             <key>Working Directory</key>
             <value>
               <name>Working Directory</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Argument Delimiter</key>
-            <value>
-              <name>Argument Delimiter</name>
             </value>
           </entry>
           <entry>
@@ -3622,9 +3610,21 @@
             </value>
           </entry>
           <entry>
-            <key>Max Attribute Length</key>
+            <key>Argument Delimiter</key>
             <value>
-              <name>Max Attribute Length</name>
+              <name>Argument Delimiter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Ignore STDIN</key>
+            <value>
+              <name>Ignore STDIN</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Command Arguments</key>
+            <value>
+              <name>Command Arguments</name>
             </value>
           </entry>
         </descriptors>
@@ -3633,30 +3633,30 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Command Arguments</key>
-            <value>dfs;-chown;${daf.organization}:${daf.organization};${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}/0*</value>
+            <key>Max Attribute Length</key>
+            <value>256</value>
           </entry>
           <entry>
             <key>Command Path</key>
             <value>/opt/cloudera/parcels/CDH/bin/hdfs</value>
           </entry>
           <entry>
-            <key>Ignore STDIN</key>
-            <value>true</value>
+            <key>Working Directory</key>
           </entry>
           <entry>
-            <key>Working Directory</key>
+            <key>Output Destination Attribute</key>
           </entry>
           <entry>
             <key>Argument Delimiter</key>
             <value>;</value>
           </entry>
           <entry>
-            <key>Output Destination Attribute</key>
+            <key>Ignore STDIN</key>
+            <value>true</value>
           </entry>
           <entry>
-            <key>Max Attribute Length</key>
-            <value>256</value>
+            <key>Command Arguments</key>
+            <value>dfs;-chown;${daf.organization}:${daf.organization};${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}/0*</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -3700,16 +3700,15 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Metadata Service</key>
-            <value>
-              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
-              <name>Metadata Service</name>
-            </value>
-          </entry>
-          <entry>
             <key>System feed category</key>
             <value>
               <name>System feed category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Initialization Result</key>
+            <value>
+              <name>Initialization Result</name>
             </value>
           </entry>
           <entry>
@@ -3719,9 +3718,10 @@
             </value>
           </entry>
           <entry>
-            <key>Initialization Result</key>
+            <key>Metadata Service</key>
             <value>
-              <name>Initialization Result</name>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
+              <name>Metadata Service</name>
             </value>
           </entry>
         </descriptors>
@@ -3730,20 +3730,20 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Metadata Service</key>
-            <value>63175850-64cc-3631-0000-000000000000</value>
-          </entry>
-          <entry>
             <key>System feed category</key>
             <value>${category}</value>
+          </entry>
+          <entry>
+            <key>Initialization Result</key>
+            <value>FAILURE</value>
           </entry>
           <entry>
             <key>System feed name</key>
             <value>${feed}</value>
           </entry>
           <entry>
-            <key>Initialization Result</key>
-            <value>FAILURE</value>
+            <key>Metadata Service</key>
+            <value>63175850-64cc-3631-0000-000000000000</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -3787,15 +3787,51 @@
         <concurrentlySchedulableTaskCount>10</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>Permissions umask</key>
+            <value>
+              <name>Permissions umask</name>
+            </value>
+          </entry>
+          <entry>
             <key>Hadoop Configuration Resources</key>
             <value>
               <name>Hadoop Configuration Resources</name>
             </value>
           </entry>
           <entry>
-            <key>Kerberos Principal</key>
+            <key>Remote Owner</key>
             <value>
-              <name>Kerberos Principal</name>
+              <name>Remote Owner</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Additional Classpath Resources</key>
+            <value>
+              <name>Additional Classpath Resources</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Compression codec</key>
+            <value>
+              <name>Compression codec</name>
+            </value>
+          </entry>
+          <entry>
+            <key>IO Buffer Size</key>
+            <value>
+              <name>IO Buffer Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Remote Group</key>
+            <value>
+              <name>Remote Group</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Block Size</key>
+            <value>
+              <name>Block Size</name>
             </value>
           </entry>
           <entry>
@@ -3805,15 +3841,21 @@
             </value>
           </entry>
           <entry>
-            <key>Kerberos Relogin Period</key>
+            <key>Kerberos Principal</key>
             <value>
-              <name>Kerberos Relogin Period</name>
+              <name>Kerberos Principal</name>
             </value>
           </entry>
           <entry>
-            <key>Additional Classpath Resources</key>
+            <key>Replication</key>
             <value>
-              <name>Additional Classpath Resources</name>
+              <name>Replication</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Kerberos Relogin Period</key>
+            <value>
+              <name>Kerberos Relogin Period</name>
             </value>
           </entry>
           <entry>
@@ -3828,71 +3870,54 @@
               <name>Conflict Resolution Strategy</name>
             </value>
           </entry>
-          <entry>
-            <key>Block Size</key>
-            <value>
-              <name>Block Size</name>
-            </value>
-          </entry>
-          <entry>
-            <key>IO Buffer Size</key>
-            <value>
-              <name>IO Buffer Size</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Replication</key>
-            <value>
-              <name>Replication</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Permissions umask</key>
-            <value>
-              <name>Permissions umask</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Remote Owner</key>
-            <value>
-              <name>Remote Owner</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Remote Group</key>
-            <value>
-              <name>Remote Group</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Compression codec</key>
-            <value>
-              <name>Compression codec</name>
-            </value>
-          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
+            <key>Permissions umask</key>
+            <value>007</value>
+          </entry>
+          <entry>
             <key>Hadoop Configuration Resources</key>
             <value>/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml</value>
           </entry>
           <entry>
-            <key>Kerberos Principal</key>
-            <value>daf@DAF.GOV.IT</value>
+            <key>Remote Owner</key>
+            <value>${daf.organization}</value>
+          </entry>
+          <entry>
+            <key>Additional Classpath Resources</key>
+          </entry>
+          <entry>
+            <key>Compression codec</key>
+            <value>NONE</value>
+          </entry>
+          <entry>
+            <key>IO Buffer Size</key>
+          </entry>
+          <entry>
+            <key>Remote Group</key>
+            <value>${daf.organization}</value>
+          </entry>
+          <entry>
+            <key>Block Size</key>
           </entry>
           <entry>
             <key>Kerberos Keytab</key>
             <value>/usr/nifi/daf.keytab</value>
           </entry>
           <entry>
-            <key>Kerberos Relogin Period</key>
-            <value>4 hours</value>
+            <key>Kerberos Principal</key>
+            <value>daf@DAF.GOV.IT</value>
           </entry>
           <entry>
-            <key>Additional Classpath Resources</key>
+            <key>Replication</key>
+          </entry>
+          <entry>
+            <key>Kerberos Relogin Period</key>
+            <value>4 hours</value>
           </entry>
           <entry>
             <key>Directory</key>
@@ -3901,31 +3926,6 @@
           <entry>
             <key>Conflict Resolution Strategy</key>
             <value>replace</value>
-          </entry>
-          <entry>
-            <key>Block Size</key>
-          </entry>
-          <entry>
-            <key>IO Buffer Size</key>
-          </entry>
-          <entry>
-            <key>Replication</key>
-          </entry>
-          <entry>
-            <key>Permissions umask</key>
-            <value>007</value>
-          </entry>
-          <entry>
-            <key>Remote Owner</key>
-            <value>${daf.organization}</value>
-          </entry>
-          <entry>
-            <key>Remote Group</key>
-            <value>${daf.organization}</value>
-          </entry>
-          <entry>
-            <key>Compression codec</key>
-            <value>NONE</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -3969,9 +3969,9 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Command Arguments</key>
+            <key>Max Attribute Length</key>
             <value>
-              <name>Command Arguments</name>
+              <name>Max Attribute Length</name>
             </value>
           </entry>
           <entry>
@@ -3981,21 +3981,9 @@
             </value>
           </entry>
           <entry>
-            <key>Ignore STDIN</key>
-            <value>
-              <name>Ignore STDIN</name>
-            </value>
-          </entry>
-          <entry>
             <key>Working Directory</key>
             <value>
               <name>Working Directory</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Argument Delimiter</key>
-            <value>
-              <name>Argument Delimiter</name>
             </value>
           </entry>
           <entry>
@@ -4005,9 +3993,21 @@
             </value>
           </entry>
           <entry>
-            <key>Max Attribute Length</key>
+            <key>Argument Delimiter</key>
             <value>
-              <name>Max Attribute Length</name>
+              <name>Argument Delimiter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Ignore STDIN</key>
+            <value>
+              <name>Ignore STDIN</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Command Arguments</key>
+            <value>
+              <name>Command Arguments</name>
             </value>
           </entry>
         </descriptors>
@@ -4016,30 +4016,30 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Command Arguments</key>
-            <value>-k;-t;/usr/nifi/daf.keytab;daf@DAF.GOV.IT</value>
+            <key>Max Attribute Length</key>
+            <value>256</value>
           </entry>
           <entry>
             <key>Command Path</key>
             <value>/usr/bin/kinit</value>
           </entry>
           <entry>
-            <key>Ignore STDIN</key>
-            <value>false</value>
+            <key>Working Directory</key>
           </entry>
           <entry>
-            <key>Working Directory</key>
+            <key>Output Destination Attribute</key>
           </entry>
           <entry>
             <key>Argument Delimiter</key>
             <value>;</value>
           </entry>
           <entry>
-            <key>Output Destination Attribute</key>
+            <key>Ignore STDIN</key>
+            <value>false</value>
           </entry>
           <entry>
-            <key>Max Attribute Length</key>
-            <value>256</value>
+            <key>Command Arguments</key>
+            <value>-k;-t;/usr/nifi/daf.keytab;daf@DAF.GOV.IT</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -4144,16 +4144,16 @@
         <concurrentlySchedulableTaskCount>2</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>Statement</key>
+            <value>
+              <name>Statement</name>
+            </value>
+          </entry>
+          <entry>
             <key>Database Connection Pooling Service</key>
             <value>
               <identifiesControllerService>com.thinkbiganalytics.nifi.v2.thrift.ThriftService</identifiesControllerService>
               <name>Database Connection Pooling Service</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Statement</key>
-            <value>
-              <name>Statement</name>
             </value>
           </entry>
         </descriptors>
@@ -4162,14 +4162,14 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Database Connection Pooling Service</key>
-            <value>9837c674-eb7f-3ef9-0000-000000000000</value>
-          </entry>
-          <entry>
             <key>Statement</key>
             <value>alter table ${daf.domain}__${daf.subdomain}.${feed}_feed add
     if not exists partition (processing_dttm=${feedts})
     location '${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/feed/${feedts}/'</value>
+          </entry>
+          <entry>
+            <key>Database Connection Pooling Service</key>
+            <value>9837c674-eb7f-3ef9-0000-000000000000</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -4213,15 +4213,15 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Enable processing</key>
-            <value>
-              <name>Enable processing</name>
-            </value>
-          </entry>
-          <entry>
             <key>Header Line Count</key>
             <value>
               <name>Header Line Count</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Enable processing</key>
+            <value>
+              <name>Enable processing</name>
             </value>
           </entry>
         </descriptors>
@@ -4230,12 +4230,12 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Enable processing</key>
-            <value>${skipHeader}</value>
-          </entry>
-          <entry>
             <key>Header Line Count</key>
             <value>1</value>
+          </entry>
+          <entry>
+            <key>Enable processing</key>
+            <value>${skipHeader}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -4287,34 +4287,9 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Connection Factory Service</key>
-            <value>
-              <identifiesControllerService>org.apache.nifi.jms.cf.JMSConnectionFactoryProviderDefinition</identifiesControllerService>
-              <name>Connection Factory Service</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Destination Name</key>
-            <value>
-              <name>Destination Name</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Destination Type</key>
-            <value>
-              <name>Destination Type</name>
-            </value>
-          </entry>
-          <entry>
             <key>User Name</key>
             <value>
               <name>User Name</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Password</key>
-            <value>
-              <name>Password</name>
             </value>
           </entry>
           <entry>
@@ -4324,9 +4299,34 @@
             </value>
           </entry>
           <entry>
+            <key>Destination Name</key>
+            <value>
+              <name>Destination Name</name>
+            </value>
+          </entry>
+          <entry>
             <key>Session Cache size</key>
             <value>
               <name>Session Cache size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Destination Type</key>
+            <value>
+              <name>Destination Type</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Factory Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.jms.cf.JMSConnectionFactoryProviderDefinition</identifiesControllerService>
+              <name>Connection Factory Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
             </value>
           </entry>
         </descriptors>
@@ -4335,29 +4335,29 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Connection Factory Service</key>
-            <value>bff4e34a-7112-393c-0000-000000000000</value>
+            <key>User Name</key>
+          </entry>
+          <entry>
+            <key>Connection Client ID</key>
           </entry>
           <entry>
             <key>Destination Name</key>
             <value>thinkbig.nifi.index</value>
           </entry>
           <entry>
+            <key>Session Cache size</key>
+            <value>1</value>
+          </entry>
+          <entry>
             <key>Destination Type</key>
             <value>QUEUE</value>
           </entry>
           <entry>
-            <key>User Name</key>
+            <key>Connection Factory Service</key>
+            <value>bff4e34a-7112-393c-0000-000000000000</value>
           </entry>
           <entry>
             <key>Password</key>
-          </entry>
-          <entry>
-            <key>Connection Client ID</key>
-          </entry>
-          <entry>
-            <key>Session Cache size</key>
-            <value>1</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -4396,21 +4396,27 @@
         <concurrentlySchedulableTaskCount>10</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Directory</key>
+            <key>Group</key>
             <value>
-              <name>Directory</name>
+              <name>Group</name>
             </value>
           </entry>
           <entry>
-            <key>Conflict Resolution Strategy</key>
+            <key>Owner</key>
             <value>
-              <name>Conflict Resolution Strategy</name>
+              <name>Owner</name>
             </value>
           </entry>
           <entry>
             <key>Create Missing Directories</key>
             <value>
               <name>Create Missing Directories</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Permissions</key>
+            <value>
+              <name>Permissions</name>
             </value>
           </entry>
           <entry>
@@ -4426,21 +4432,15 @@
             </value>
           </entry>
           <entry>
-            <key>Permissions</key>
+            <key>Directory</key>
             <value>
-              <name>Permissions</name>
+              <name>Directory</name>
             </value>
           </entry>
           <entry>
-            <key>Owner</key>
+            <key>Conflict Resolution Strategy</key>
             <value>
-              <name>Owner</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Group</key>
-            <value>
-              <name>Group</name>
+              <name>Conflict Resolution Strategy</name>
             </value>
           </entry>
         </descriptors>
@@ -4449,16 +4449,17 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Directory</key>
-            <value>${kylo.tmp.baseFolder:replaceEmpty('/tmp/kylo-nifi')}/failed-flows/${category}/${feed}/${feedts}</value>
+            <key>Group</key>
           </entry>
           <entry>
-            <key>Conflict Resolution Strategy</key>
-            <value>ignore</value>
+            <key>Owner</key>
           </entry>
           <entry>
             <key>Create Missing Directories</key>
             <value>true</value>
+          </entry>
+          <entry>
+            <key>Permissions</key>
           </entry>
           <entry>
             <key>Maximum File Count</key>
@@ -4467,13 +4468,12 @@
             <key>Last Modified Time</key>
           </entry>
           <entry>
-            <key>Permissions</key>
+            <key>Directory</key>
+            <value>${kylo.tmp.baseFolder:replaceEmpty('/tmp/kylo-nifi')}/failed-flows/${category}/${feed}/${feedts}</value>
           </entry>
           <entry>
-            <key>Owner</key>
-          </entry>
-          <entry>
-            <key>Group</key>
+            <key>Conflict Resolution Strategy</key>
+            <value>ignore</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -4517,15 +4517,15 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Hadoop Configuration Resources</key>
+            <key>Permissions umask</key>
             <value>
-              <name>Hadoop Configuration Resources</name>
+              <name>Permissions umask</name>
             </value>
           </entry>
           <entry>
-            <key>Kerberos Principal</key>
+            <key>Hadoop Configuration Resources</key>
             <value>
-              <name>Kerberos Principal</name>
+              <name>Hadoop Configuration Resources</name>
             </value>
           </entry>
           <entry>
@@ -4535,27 +4535,21 @@
             </value>
           </entry>
           <entry>
-            <key>Kerberos Relogin Period</key>
-            <value>
-              <name>Kerberos Relogin Period</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Directory</key>
-            <value>
-              <name>Directory</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Permissions umask</key>
-            <value>
-              <name>Permissions umask</name>
-            </value>
-          </entry>
-          <entry>
             <key>Remote Owner</key>
             <value>
               <name>Remote Owner</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Kerberos Principal</key>
+            <value>
+              <name>Kerberos Principal</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Kerberos Relogin Period</key>
+            <value>
+              <name>Kerberos Relogin Period</name>
             </value>
           </entry>
           <entry>
@@ -4564,26 +4558,44 @@
               <name>Remote Group</name>
             </value>
           </entry>
+          <entry>
+            <key>Directory</key>
+            <value>
+              <name>Directory</name>
+            </value>
+          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Hadoop Configuration Resources</key>
-            <value>/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml</value>
+            <key>Permissions umask</key>
+            <value>0007</value>
           </entry>
           <entry>
-            <key>Kerberos Principal</key>
-            <value>daf@DAF.GOV.IT</value>
+            <key>Hadoop Configuration Resources</key>
+            <value>/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml</value>
           </entry>
           <entry>
             <key>Kerberos Keytab</key>
             <value>/usr/nifi/daf.keytab</value>
           </entry>
           <entry>
+            <key>Remote Owner</key>
+            <value>${daf.organization}</value>
+          </entry>
+          <entry>
+            <key>Kerberos Principal</key>
+            <value>daf@DAF.GOV.IT</value>
+          </entry>
+          <entry>
             <key>Kerberos Relogin Period</key>
             <value>4 hours</value>
+          </entry>
+          <entry>
+            <key>Remote Group</key>
+            <value>${daf.organization}</value>
           </entry>
           <entry>
             <key>Directory</key>
@@ -4597,18 +4609,6 @@ ${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/feed
 ${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/profile
 ${daf.type.folder}/${daf.domain}__${daf.subdomain}
 ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
-          </entry>
-          <entry>
-            <key>Permissions umask</key>
-            <value>0007</value>
-          </entry>
-          <entry>
-            <key>Remote Owner</key>
-            <value>${daf.organization}</value>
-          </entry>
-          <entry>
-            <key>Remote Group</key>
-            <value>${daf.organization}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -4652,12 +4652,6 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Attributes List</key>
-            <value>
-              <name>Attributes List</name>
-            </value>
-          </entry>
-          <entry>
             <key>attributes-to-json-regex</key>
             <value>
               <name>attributes-to-json-regex</name>
@@ -4670,15 +4664,21 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
             </value>
           </entry>
           <entry>
-            <key>Include Core Attributes</key>
-            <value>
-              <name>Include Core Attributes</name>
-            </value>
-          </entry>
-          <entry>
             <key>Null Value</key>
             <value>
               <name>Null Value</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Attributes List</key>
+            <value>
+              <name>Attributes List</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
+            <value>
+              <name>Include Core Attributes</name>
             </value>
           </entry>
         </descriptors>
@@ -4687,10 +4687,6 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Attributes List</key>
-            <value>feed,category,feedts,metadata.table.fieldStructure,daf.domain,daf.subdomain,daf.type,daf.organization</value>
-          </entry>
-          <entry>
             <key>attributes-to-json-regex</key>
           </entry>
           <entry>
@@ -4698,11 +4694,15 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
             <value>flowfile-content</value>
           </entry>
           <entry>
-            <key>Include Core Attributes</key>
+            <key>Null Value</key>
             <value>false</value>
           </entry>
           <entry>
-            <key>Null Value</key>
+            <key>Attributes List</key>
+            <value>feed,category,feedts,metadata.table.fieldStructure,daf.domain,daf.subdomain,daf.type,daf.organization</value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
             <value>false</value>
           </entry>
         </properties>
@@ -4742,15 +4742,15 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Script Engine</key>
-            <value>
-              <name>Script Engine</name>
-            </value>
-          </entry>
-          <entry>
             <key>Script File</key>
             <value>
               <name>Script File</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Script Engine</key>
+            <value>
+              <name>Script Engine</name>
             </value>
           </entry>
           <entry>
@@ -4771,11 +4771,11 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Script Engine</key>
-            <value>Groovy</value>
+            <key>Script File</key>
           </entry>
           <entry>
-            <key>Script File</key>
+            <key>Script Engine</key>
+            <value>Groovy</value>
           </entry>
           <entry>
             <key>Script Body</key>
@@ -4843,21 +4843,9 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Delete Attributes Expression</key>
+            <key>daf.type</key>
             <value>
-              <name>Delete Attributes Expression</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Store State</key>
-            <value>
-              <name>Store State</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Stateful Variables Initial Value</key>
-            <value>
-              <name>Stateful Variables Initial Value</name>
+              <name>daf.type</name>
             </value>
           </entry>
           <entry>
@@ -4867,15 +4855,15 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
             </value>
           </entry>
           <entry>
-            <key>daf.escape.char</key>
+            <key>hive.profile.root</key>
             <value>
-              <name>daf.escape.char</name>
+              <name>hive.profile.root</name>
             </value>
           </entry>
           <entry>
-            <key>daf.external.target</key>
+            <key>Store State</key>
             <value>
-              <name>daf.external.target</name>
+              <name>Store State</name>
             </value>
           </entry>
           <entry>
@@ -4885,75 +4873,15 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
             </value>
           </entry>
           <entry>
-            <key>daf.organization</key>
+            <key>daf.external.target</key>
             <value>
-              <name>daf.organization</name>
-            </value>
-          </entry>
-          <entry>
-            <key>daf.quote.char</key>
-            <value>
-              <name>daf.quote.char</name>
-            </value>
-          </entry>
-          <entry>
-            <key>daf.separator.char</key>
-            <value>
-              <name>daf.separator.char</name>
-            </value>
-          </entry>
-          <entry>
-            <key>daf.subdomain</key>
-            <value>
-              <name>daf.subdomain</name>
-            </value>
-          </entry>
-          <entry>
-            <key>daf.type</key>
-            <value>
-              <name>daf.type</name>
-            </value>
-          </entry>
-          <entry>
-            <key>hdfs.archive.root</key>
-            <value>
-              <name>hdfs.archive.root</name>
-            </value>
-          </entry>
-          <entry>
-            <key>hdfs.ingest.root</key>
-            <value>
-              <name>hdfs.ingest.root</name>
-            </value>
-          </entry>
-          <entry>
-            <key>hive.ingest.root</key>
-            <value>
-              <name>hive.ingest.root</name>
-            </value>
-          </entry>
-          <entry>
-            <key>hive.master.root</key>
-            <value>
-              <name>hive.master.root</name>
-            </value>
-          </entry>
-          <entry>
-            <key>hive.profile.root</key>
-            <value>
-              <name>hive.profile.root</name>
+              <name>daf.external.target</name>
             </value>
           </entry>
           <entry>
             <key>merge.correlation</key>
             <value>
               <name>merge.correlation</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetTblProperties.parquet</key>
-            <value>
-              <name>metadata.table.targetTblProperties.parquet</name>
             </value>
           </entry>
           <entry>
@@ -4968,85 +4896,110 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
               <name>skipHeader</name>
             </value>
           </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value>
+              <name>Stateful Variables Initial Value</name>
+            </value>
+          </entry>
+          <entry>
+            <key>daf.separator.char</key>
+            <value>
+              <name>daf.separator.char</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hdfs.archive.root</key>
+            <value>
+              <name>hdfs.archive.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>daf.quote.char</key>
+            <value>
+              <name>daf.quote.char</name>
+            </value>
+          </entry>
+          <entry>
+            <key>daf.subdomain</key>
+            <value>
+              <name>daf.subdomain</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hdfs.ingest.root</key>
+            <value>
+              <name>hdfs.ingest.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Delete Attributes Expression</key>
+            <value>
+              <name>Delete Attributes Expression</name>
+            </value>
+          </entry>
+          <entry>
+            <key>daf.escape.char</key>
+            <value>
+              <name>daf.escape.char</name>
+            </value>
+          </entry>
+          <entry>
+            <key>daf.organization</key>
+            <value>
+              <name>daf.organization</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetTblProperties.parquet</key>
+            <value>
+              <name>metadata.table.targetTblProperties.parquet</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hive.ingest.root</key>
+            <value>
+              <name>hive.ingest.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hive.master.root</key>
+            <value>
+              <name>hive.master.root</name>
+            </value>
+          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Delete Attributes Expression</key>
-          </entry>
-          <entry>
-            <key>Store State</key>
-            <value>Store state locally</value>
-          </entry>
-          <entry>
-            <key>Stateful Variables Initial Value</key>
-            <value></value>
+            <key>daf.type</key>
+            <value>${feedJson:jsonPath('$.userProperties.daf_type')}</value>
           </entry>
           <entry>
             <key>daf.domain</key>
             <value>${feedJson:jsonPath('$.userProperties.daf_domain')}</value>
           </entry>
           <entry>
-            <key>daf.escape.char</key>
-            <value>${metadata.table.feedFormat:substringAfterLast("escapeChar' = '"):substringBeforeLast("' ,'quoteChar' = '")}</value>
+            <key>hive.profile.root</key>
+            <value>${hive.profile.root:replaceEmpty('/model.db')}</value>
           </entry>
           <entry>
-            <key>daf.external.target</key>
-            <value>${feedJson:jsonPath('$.userProperties.daf_target')}</value>
+            <key>Store State</key>
+            <value>Store state locally</value>
           </entry>
           <entry>
             <key>daf.format</key>
             <value>${feedJson:jsonPath('$.userProperties.daf_format')}</value>
           </entry>
           <entry>
-            <key>daf.organization</key>
-            <value>${category}</value>
-          </entry>
-          <entry>
-            <key>daf.quote.char</key>
-            <value>${metadata.table.feedFormat:substringAfterLast("quoteChar' = '"):substringBeforeLast("') STORED AS TEXTFILE")}</value>
-          </entry>
-          <entry>
-            <key>daf.separator.char</key>
-            <value>${metadata.table.feedFormat:substringAfterLast("separatorChar' = '"):substringBeforeLast("' ,'escapeChar'")}</value>
-          </entry>
-          <entry>
-            <key>daf.subdomain</key>
-            <value>${feedJson:jsonPath('$.userProperties.daf_subdomain')}</value>
-          </entry>
-          <entry>
-            <key>daf.type</key>
-            <value>${feedJson:jsonPath('$.userProperties.daf_type')}</value>
-          </entry>
-          <entry>
-            <key>hdfs.archive.root</key>
-            <value>${hdfs.archive.root:replaceEmpty('/archive')}</value>
-          </entry>
-          <entry>
-            <key>hdfs.ingest.root</key>
-            <value>${hdfs.ingest.root:replaceEmpty('/etl')}</value>
-          </entry>
-          <entry>
-            <key>hive.ingest.root</key>
-            <value>${hive.ingest.root:replaceEmpty('/model.db')}</value>
-          </entry>
-          <entry>
-            <key>hive.master.root</key>
-            <value>${hive.master.root:replaceEmpty('/app/warehouse')}</value>
-          </entry>
-          <entry>
-            <key>hive.profile.root</key>
-            <value>${hive.profile.root:replaceEmpty('/model.db')}</value>
+            <key>daf.external.target</key>
+            <value>${feedJson:jsonPath('$.userProperties.daf_target')}</value>
           </entry>
           <entry>
             <key>merge.correlation</key>
             <value>${category}.${feed}.correlation</value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetTblProperties.parquet</key>
-            <value>tblproperties("parquet.compression"="SNAPPY","EXTERNAL"="TRUE")</value>
           </entry>
           <entry>
             <key>nifi.home</key>
@@ -5055,6 +5008,53 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
           <entry>
             <key>skipHeader</key>
             <value>${skipHeader:replaceEmpty('false')}</value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value></value>
+          </entry>
+          <entry>
+            <key>daf.separator.char</key>
+            <value>${metadata.table.feedFormat:substringAfterLast("separatorChar' = '"):substringBeforeLast("' ,'escapeChar'")}</value>
+          </entry>
+          <entry>
+            <key>hdfs.archive.root</key>
+            <value>${hdfs.archive.root:replaceEmpty('/archive')}</value>
+          </entry>
+          <entry>
+            <key>daf.quote.char</key>
+            <value>${metadata.table.feedFormat:substringAfterLast("quoteChar' = '"):substringBeforeLast("') STORED AS TEXTFILE")}</value>
+          </entry>
+          <entry>
+            <key>daf.subdomain</key>
+            <value>${feedJson:jsonPath('$.userProperties.daf_subdomain')}</value>
+          </entry>
+          <entry>
+            <key>hdfs.ingest.root</key>
+            <value>${hdfs.ingest.root:replaceEmpty('/etl')}</value>
+          </entry>
+          <entry>
+            <key>Delete Attributes Expression</key>
+          </entry>
+          <entry>
+            <key>daf.escape.char</key>
+            <value>${metadata.table.feedFormat:substringAfterLast("escapeChar' = '"):substringBeforeLast("' ,'quoteChar' = '")}</value>
+          </entry>
+          <entry>
+            <key>daf.organization</key>
+            <value>${category}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetTblProperties.parquet</key>
+            <value>tblproperties("parquet.compression"="SNAPPY","EXTERNAL"="TRUE")</value>
+          </entry>
+          <entry>
+            <key>hive.ingest.root</key>
+            <value>${hive.ingest.root:replaceEmpty('/model.db')}</value>
+          </entry>
+          <entry>
+            <key>hive.master.root</key>
+            <value>${hive.master.root:replaceEmpty('/app/warehouse')}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -5098,9 +5098,9 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
         <concurrentlySchedulableTaskCount>0</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Command Arguments</key>
+            <key>Max Attribute Length</key>
             <value>
-              <name>Command Arguments</name>
+              <name>Max Attribute Length</name>
             </value>
           </entry>
           <entry>
@@ -5110,21 +5110,9 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
             </value>
           </entry>
           <entry>
-            <key>Ignore STDIN</key>
-            <value>
-              <name>Ignore STDIN</name>
-            </value>
-          </entry>
-          <entry>
             <key>Working Directory</key>
             <value>
               <name>Working Directory</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Argument Delimiter</key>
-            <value>
-              <name>Argument Delimiter</name>
             </value>
           </entry>
           <entry>
@@ -5134,9 +5122,21 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
             </value>
           </entry>
           <entry>
-            <key>Max Attribute Length</key>
+            <key>Argument Delimiter</key>
             <value>
-              <name>Max Attribute Length</name>
+              <name>Argument Delimiter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Ignore STDIN</key>
+            <value>
+              <name>Ignore STDIN</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Command Arguments</key>
+            <value>
+              <name>Command Arguments</name>
             </value>
           </entry>
         </descriptors>
@@ -5145,30 +5145,30 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Command Arguments</key>
-            <value>-k;-t;/usr/nifi/daf.keytab;daf@DAF.GOV.IT</value>
+            <key>Max Attribute Length</key>
+            <value>256</value>
           </entry>
           <entry>
             <key>Command Path</key>
             <value>/usr/bin/kinit</value>
           </entry>
           <entry>
-            <key>Ignore STDIN</key>
-            <value>true</value>
+            <key>Working Directory</key>
           </entry>
           <entry>
-            <key>Working Directory</key>
+            <key>Output Destination Attribute</key>
           </entry>
           <entry>
             <key>Argument Delimiter</key>
             <value>;</value>
           </entry>
           <entry>
-            <key>Output Destination Attribute</key>
+            <key>Ignore STDIN</key>
+            <value>true</value>
           </entry>
           <entry>
-            <key>Max Attribute Length</key>
-            <value>256</value>
+            <key>Command Arguments</key>
+            <value>-k;-t;/usr/nifi/daf.keytab;daf@DAF.GOV.IT</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -5212,15 +5212,21 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>Script File</key>
+            <value>
+              <name>Script File</name>
+            </value>
+          </entry>
+          <entry>
             <key>Script Engine</key>
             <value>
               <name>Script Engine</name>
             </value>
           </entry>
           <entry>
-            <key>Script File</key>
+            <key>invalidateMetadata</key>
             <value>
-              <name>Script File</name>
+              <name>invalidateMetadata</name>
             </value>
           </entry>
           <entry>
@@ -5241,23 +5247,21 @@ ${daf.type.folder}/${daf.domain}__${daf.subdomain}/${feed}</value>
               <name>impalaThriftServiceName</name>
             </value>
           </entry>
-          <entry>
-            <key>invalidateMetadata</key>
-            <value>
-              <name>invalidateMetadata</name>
-            </value>
-          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
+            <key>Script File</key>
+          </entry>
+          <entry>
             <key>Script Engine</key>
             <value>Groovy</value>
           </entry>
           <entry>
-            <key>Script File</key>
+            <key>invalidateMetadata</key>
+            <value>invalidate metadata</value>
           </entry>
           <entry>
             <key>Script Body</key>
@@ -5300,10 +5304,6 @@ session.transfer(flowFile, REL_SUCCESS)</value>
           <entry>
             <key>impalaThriftServiceName</key>
             <value>Impala</value>
-          </entry>
-          <entry>
-            <key>invalidateMetadata</key>
-            <value>invalidate metadata</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -5354,27 +5354,15 @@ session.transfer(flowFile, REL_SUCCESS)</value>
             </value>
           </entry>
           <entry>
-            <key>Feed Category</key>
-            <value>
-              <name>Feed Category</name>
-            </value>
-          </entry>
-          <entry>
             <key>Feed Name</key>
             <value>
               <name>Feed Name</name>
             </value>
           </entry>
           <entry>
-            <key>Namespace</key>
+            <key>hiveTableNames</key>
             <value>
-              <name>Namespace</name>
-            </value>
-          </entry>
-          <entry>
-            <key>hdfsFolders</key>
-            <value>
-              <name>hdfsFolders</name>
+              <name>hiveTableNames</name>
             </value>
           </entry>
           <entry>
@@ -5384,9 +5372,21 @@ session.transfer(flowFile, REL_SUCCESS)</value>
             </value>
           </entry>
           <entry>
-            <key>hiveTableNames</key>
+            <key>Namespace</key>
             <value>
-              <name>hiveTableNames</name>
+              <name>Namespace</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Feed Category</key>
+            <value>
+              <name>Feed Category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hdfsFolders</key>
+            <value>
+              <name>hdfsFolders</name>
             </value>
           </entry>
         </descriptors>
@@ -5399,24 +5399,8 @@ session.transfer(flowFile, REL_SUCCESS)</value>
             <value>63175850-64cc-3631-0000-000000000000</value>
           </entry>
           <entry>
-            <key>Feed Category</key>
-            <value>${daf.organization}</value>
-          </entry>
-          <entry>
             <key>Feed Name</key>
             <value>${feed}</value>
-          </entry>
-          <entry>
-            <key>Namespace</key>
-            <value>registration</value>
-          </entry>
-          <entry>
-            <key>hdfsFolders</key>
-            <value>${daf.type.folder}</value>
-          </entry>
-          <entry>
-            <key>hiveSchema</key>
-            <value>${daf.domain}__${daf.subdomain}</value>
           </entry>
           <entry>
             <key>hiveTableNames</key>
@@ -5425,6 +5409,22 @@ ${feed}_valid
 ${feed}_invalid
 ${feed}_profile
 ${feed}</value>
+          </entry>
+          <entry>
+            <key>hiveSchema</key>
+            <value>${daf.domain}__${daf.subdomain}</value>
+          </entry>
+          <entry>
+            <key>Namespace</key>
+            <value>registration</value>
+          </entry>
+          <entry>
+            <key>Feed Category</key>
+            <value>${daf.organization}</value>
+          </entry>
+          <entry>
+            <key>hdfsFolders</key>
+            <value>${daf.type.folder}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -5468,6 +5468,12 @@ ${feed}</value>
         <concurrentlySchedulableTaskCount>2</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>Target Table Properties</key>
+            <value>
+              <name>Target Table Properties</name>
+            </value>
+          </entry>
+          <entry>
             <key>Database Connection Pooling Service</key>
             <value>
               <identifiesControllerService>com.thinkbiganalytics.nifi.v2.thrift.ThriftService</identifiesControllerService>
@@ -5475,57 +5481,9 @@ ${feed}</value>
             </value>
           </entry>
           <entry>
-            <key>System feed category</key>
-            <value>
-              <name>System feed category</name>
-            </value>
-          </entry>
-          <entry>
             <key>System feed name</key>
             <value>
               <name>System feed name</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Table Type</key>
-            <value>
-              <name>Table Type</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Field specification</key>
-            <value>
-              <name>Field specification</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Partition specification</key>
-            <value>
-              <name>Partition specification</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Feed Field specification</key>
-            <value>
-              <name>Feed Field specification</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Feed Table Storage Format</key>
-            <value>
-              <name>Feed Table Storage Format</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Target Table Format</key>
-            <value>
-              <name>Target Table Format</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Target Table Properties</key>
-            <value>
-              <name>Target Table Properties</name>
             </value>
           </entry>
           <entry>
@@ -5541,9 +5499,51 @@ ${feed}</value>
             </value>
           </entry>
           <entry>
+            <key>Field specification</key>
+            <value>
+              <name>Field specification</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Table Type</key>
+            <value>
+              <name>Table Type</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Feed Field specification</key>
+            <value>
+              <name>Feed Field specification</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed category</key>
+            <value>
+              <name>System feed category</name>
+            </value>
+          </entry>
+          <entry>
             <key>Master Root Path</key>
             <value>
               <name>Master Root Path</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Feed Table Storage Format</key>
+            <value>
+              <name>Feed Table Storage Format</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Partition specification</key>
+            <value>
+              <name>Partition specification</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Target Table Format</key>
+            <value>
+              <name>Target Table Format</name>
             </value>
           </entry>
         </descriptors>
@@ -5552,44 +5552,16 @@ ${feed}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
+            <key>Target Table Properties</key>
+            <value>${metadata.table.targetTblProperties.parquet}</value>
+          </entry>
+          <entry>
             <key>Database Connection Pooling Service</key>
             <value>9837c674-eb7f-3ef9-0000-000000000000</value>
           </entry>
           <entry>
-            <key>System feed category</key>
-            <value>${daf.domain}__${daf.subdomain}</value>
-          </entry>
-          <entry>
             <key>System feed name</key>
             <value>${feed}</value>
-          </entry>
-          <entry>
-            <key>Table Type</key>
-            <value>ALL</value>
-          </entry>
-          <entry>
-            <key>Field specification</key>
-            <value>${metadata.table.fieldStructure}</value>
-          </entry>
-          <entry>
-            <key>Partition specification</key>
-            <value>${metadata.table.partitionStructure}</value>
-          </entry>
-          <entry>
-            <key>Feed Field specification</key>
-            <value>${metadata.table.feedFieldStructure}</value>
-          </entry>
-          <entry>
-            <key>Feed Table Storage Format</key>
-            <value>${metadata.table.feedFormat}</value>
-          </entry>
-          <entry>
-            <key>Target Table Format</key>
-            <value>${metadata.table.targetFormat}</value>
-          </entry>
-          <entry>
-            <key>Target Table Properties</key>
-            <value>${metadata.table.targetTblProperties.parquet}</value>
           </entry>
           <entry>
             <key>Feed Root Path</key>
@@ -5600,8 +5572,36 @@ ${feed}</value>
             <value>${daf.type.folder}/kylo</value>
           </entry>
           <entry>
+            <key>Field specification</key>
+            <value>${metadata.table.fieldStructure}</value>
+          </entry>
+          <entry>
+            <key>Table Type</key>
+            <value>ALL</value>
+          </entry>
+          <entry>
+            <key>Feed Field specification</key>
+            <value>${metadata.table.feedFieldStructure}</value>
+          </entry>
+          <entry>
+            <key>System feed category</key>
+            <value>${daf.domain}__${daf.subdomain}</value>
+          </entry>
+          <entry>
             <key>Master Root Path</key>
             <value>${daf.type.folder}</value>
+          </entry>
+          <entry>
+            <key>Feed Table Storage Format</key>
+            <value>${metadata.table.feedFormat}</value>
+          </entry>
+          <entry>
+            <key>Partition specification</key>
+            <value>${metadata.table.partitionStructure}</value>
+          </entry>
+          <entry>
+            <key>Target Table Format</key>
+            <value>${metadata.table.targetFormat}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -5645,12 +5645,6 @@ ${feed}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Attributes List</key>
-            <value>
-              <name>Attributes List</name>
-            </value>
-          </entry>
-          <entry>
             <key>attributes-to-json-regex</key>
             <value>
               <name>attributes-to-json-regex</name>
@@ -5663,15 +5657,21 @@ ${feed}</value>
             </value>
           </entry>
           <entry>
-            <key>Include Core Attributes</key>
-            <value>
-              <name>Include Core Attributes</name>
-            </value>
-          </entry>
-          <entry>
             <key>Null Value</key>
             <value>
               <name>Null Value</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Attributes List</key>
+            <value>
+              <name>Attributes List</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
+            <value>
+              <name>Include Core Attributes</name>
             </value>
           </entry>
         </descriptors>
@@ -5680,10 +5680,6 @@ ${feed}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Attributes List</key>
-            <value>feed,category,feedts,metadata.table.fieldIndexString</value>
-          </entry>
-          <entry>
             <key>attributes-to-json-regex</key>
           </entry>
           <entry>
@@ -5691,11 +5687,15 @@ ${feed}</value>
             <value>flowfile-content</value>
           </entry>
           <entry>
-            <key>Include Core Attributes</key>
+            <key>Null Value</key>
             <value>false</value>
           </entry>
           <entry>
-            <key>Null Value</key>
+            <key>Attributes List</key>
+            <value>feed,category,feedts,metadata.table.fieldIndexString</value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
             <value>false</value>
           </entry>
         </properties>
@@ -5735,10 +5735,9 @@ ${feed}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Metadata Service</key>
+            <key>Release All</key>
             <value>
-              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
-              <name>Metadata Service</name>
+              <name>Release All</name>
             </value>
           </entry>
           <entry>
@@ -5748,21 +5747,9 @@ ${feed}</value>
             </value>
           </entry>
           <entry>
-            <key>System feed name</key>
-            <value>
-              <name>System feed name</name>
-            </value>
-          </entry>
-          <entry>
             <key>High-Water Mark</key>
             <value>
               <name>High-Water Mark</name>
-            </value>
-          </entry>
-          <entry>
-            <key>High-Water Mark Value Property Name</key>
-            <value>
-              <name>High-Water Mark Value Property Name</name>
             </value>
           </entry>
           <entry>
@@ -5772,9 +5759,22 @@ ${feed}</value>
             </value>
           </entry>
           <entry>
-            <key>Release All</key>
+            <key>System feed name</key>
             <value>
-              <name>Release All</name>
+              <name>System feed name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
+              <name>Metadata Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Value Property Name</key>
+            <value>
+              <name>High-Water Mark Value Property Name</name>
             </value>
           </entry>
         </descriptors>
@@ -5783,32 +5783,32 @@ ${feed}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Metadata Service</key>
-            <value>63175850-64cc-3631-0000-000000000000</value>
+            <key>Release All</key>
+            <value>true</value>
           </entry>
           <entry>
             <key>System feed category</key>
             <value>${category}</value>
           </entry>
           <entry>
-            <key>System feed name</key>
-            <value>${feed}</value>
-          </entry>
-          <entry>
             <key>High-Water Mark</key>
             <value>highWaterMark</value>
-          </entry>
-          <entry>
-            <key>High-Water Mark Value Property Name</key>
-            <value>water.mark</value>
           </entry>
           <entry>
             <key>Mode</key>
             <value>REJECT</value>
           </entry>
           <entry>
-            <key>Release All</key>
-            <value>true</value>
+            <key>System feed name</key>
+            <value>${feed}</value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>63175850-64cc-3631-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Value Property Name</key>
+            <value>water.mark</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -5891,34 +5891,9 @@ ${feed}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Connection Factory Service</key>
-            <value>
-              <identifiesControllerService>org.apache.nifi.jms.cf.JMSConnectionFactoryProviderDefinition</identifiesControllerService>
-              <name>Connection Factory Service</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Destination Name</key>
-            <value>
-              <name>Destination Name</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Destination Type</key>
-            <value>
-              <name>Destination Type</name>
-            </value>
-          </entry>
-          <entry>
             <key>User Name</key>
             <value>
               <name>User Name</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Password</key>
-            <value>
-              <name>Password</name>
             </value>
           </entry>
           <entry>
@@ -5928,9 +5903,34 @@ ${feed}</value>
             </value>
           </entry>
           <entry>
+            <key>Destination Name</key>
+            <value>
+              <name>Destination Name</name>
+            </value>
+          </entry>
+          <entry>
             <key>Session Cache size</key>
             <value>
               <name>Session Cache size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Destination Type</key>
+            <value>
+              <name>Destination Type</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Factory Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.jms.cf.JMSConnectionFactoryProviderDefinition</identifiesControllerService>
+              <name>Connection Factory Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
             </value>
           </entry>
         </descriptors>
@@ -5939,29 +5939,29 @@ ${feed}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Connection Factory Service</key>
-            <value>bff4e34a-7112-393c-0000-000000000000</value>
+            <key>User Name</key>
+          </entry>
+          <entry>
+            <key>Connection Client ID</key>
           </entry>
           <entry>
             <key>Destination Name</key>
             <value>daf.nifi.hbase</value>
           </entry>
           <entry>
+            <key>Session Cache size</key>
+            <value>1</value>
+          </entry>
+          <entry>
             <key>Destination Type</key>
             <value>QUEUE</value>
           </entry>
           <entry>
-            <key>User Name</key>
+            <key>Connection Factory Service</key>
+            <value>bff4e34a-7112-393c-0000-000000000000</value>
           </entry>
           <entry>
             <key>Password</key>
-          </entry>
-          <entry>
-            <key>Connection Client ID</key>
-          </entry>
-          <entry>
-            <key>Session Cache size</key>
-            <value>1</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -6000,27 +6000,9 @@ ${feed}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Script Engine</key>
-            <value>
-              <name>Script Engine</name>
-            </value>
-          </entry>
-          <entry>
             <key>Script File</key>
             <value>
               <name>Script File</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Script Body</key>
-            <value>
-              <name>Script Body</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Module Directory</key>
-            <value>
-              <name>Module Directory</name>
             </value>
           </entry>
           <entry>
@@ -6036,9 +6018,27 @@ ${feed}</value>
             </value>
           </entry>
           <entry>
+            <key>Script Engine</key>
+            <value>
+              <name>Script Engine</name>
+            </value>
+          </entry>
+          <entry>
             <key>hiveThriftServiceName</key>
             <value>
               <name>hiveThriftServiceName</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Script Body</key>
+            <value>
+              <name>Script Body</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Module Directory</key>
+            <value>
+              <name>Module Directory</name>
             </value>
           </entry>
         </descriptors>
@@ -6047,11 +6047,24 @@ ${feed}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
+            <key>Script File</key>
+          </entry>
+          <entry>
+            <key>createTableRoleQuery</key>
+            <value>create role ${daf.table.role}</value>
+          </entry>
+          <entry>
+            <key>grantRoleQuery</key>
+            <value>GRANT SELECT ON TABLE ${daf.domain}__${daf.subdomain}.${feed} TO ROLE ${daf.table.role};
+GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
+          </entry>
+          <entry>
             <key>Script Engine</key>
             <value>Groovy</value>
           </entry>
           <entry>
-            <key>Script File</key>
+            <key>hiveThriftServiceName</key>
+            <value>Hive Thrift Service</value>
           </entry>
           <entry>
             <key>Script Body</key>
@@ -6103,19 +6116,6 @@ session.transfer(flowFile, REL_SUCCESS)</value>
           <entry>
             <key>Module Directory</key>
           </entry>
-          <entry>
-            <key>createTableRoleQuery</key>
-            <value>create role ${daf.table.role}</value>
-          </entry>
-          <entry>
-            <key>grantRoleQuery</key>
-            <value>GRANT SELECT ON TABLE ${daf.domain}__${daf.subdomain}.${feed} TO ROLE ${daf.table.role};
-GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
-          </entry>
-          <entry>
-            <key>hiveThriftServiceName</key>
-            <value>Hive Thrift Service</value>
-          </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
         <schedulingPeriod>0 sec</schedulingPeriod>
@@ -6153,28 +6153,9 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Metadata Service</key>
-            <value>
-              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
-              <name>Metadata Service</name>
-            </value>
-          </entry>
-          <entry>
             <key>System feed category</key>
             <value>
               <name>System feed category</name>
-            </value>
-          </entry>
-          <entry>
-            <key>System feed name</key>
-            <value>
-              <name>System feed name</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Initialization Failure Strategy</key>
-            <value>
-              <name>Initialization Failure Strategy</name>
             </value>
           </entry>
           <entry>
@@ -6189,26 +6170,33 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
               <name>Max Initialization Attempts</name>
             </value>
           </entry>
+          <entry>
+            <key>Initialization Failure Strategy</key>
+            <value>
+              <name>Initialization Failure Strategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>
+              <name>System feed name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
+              <name>Metadata Service</name>
+            </value>
+          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Metadata Service</key>
-            <value>63175850-64cc-3631-0000-000000000000</value>
-          </entry>
-          <entry>
             <key>System feed category</key>
             <value>${category}</value>
-          </entry>
-          <entry>
-            <key>System feed name</key>
-            <value>${feed}</value>
-          </entry>
-          <entry>
-            <key>Initialization Failure Strategy</key>
-            <value>RETRY</value>
           </entry>
           <entry>
             <key>Initialization Retry Delay (seconds)</key>
@@ -6217,6 +6205,18 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
           <entry>
             <key>Max Initialization Attempts</key>
             <value>1</value>
+          </entry>
+          <entry>
+            <key>Initialization Failure Strategy</key>
+            <value>RETRY</value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>${feed}</value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>63175850-64cc-3631-0000-000000000000</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -6264,34 +6264,9 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Connection Factory Service</key>
-            <value>
-              <identifiesControllerService>org.apache.nifi.jms.cf.JMSConnectionFactoryProviderDefinition</identifiesControllerService>
-              <name>Connection Factory Service</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Destination Name</key>
-            <value>
-              <name>Destination Name</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Destination Type</key>
-            <value>
-              <name>Destination Type</name>
-            </value>
-          </entry>
-          <entry>
             <key>User Name</key>
             <value>
               <name>User Name</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Password</key>
-            <value>
-              <name>Password</name>
             </value>
           </entry>
           <entry>
@@ -6301,9 +6276,34 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             </value>
           </entry>
           <entry>
+            <key>Destination Name</key>
+            <value>
+              <name>Destination Name</name>
+            </value>
+          </entry>
+          <entry>
             <key>Session Cache size</key>
             <value>
               <name>Session Cache size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Destination Type</key>
+            <value>
+              <name>Destination Type</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Factory Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.jms.cf.JMSConnectionFactoryProviderDefinition</identifiesControllerService>
+              <name>Connection Factory Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
             </value>
           </entry>
         </descriptors>
@@ -6312,29 +6312,29 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Connection Factory Service</key>
-            <value>bff4e34a-7112-393c-0000-000000000000</value>
+            <key>User Name</key>
+          </entry>
+          <entry>
+            <key>Connection Client ID</key>
           </entry>
           <entry>
             <key>Destination Name</key>
             <value>daf.nifi.kudu</value>
           </entry>
           <entry>
+            <key>Session Cache size</key>
+            <value>1</value>
+          </entry>
+          <entry>
             <key>Destination Type</key>
             <value>QUEUE</value>
           </entry>
           <entry>
-            <key>User Name</key>
+            <key>Connection Factory Service</key>
+            <value>bff4e34a-7112-393c-0000-000000000000</value>
           </entry>
           <entry>
             <key>Password</key>
-          </entry>
-          <entry>
-            <key>Connection Client ID</key>
-          </entry>
-          <entry>
-            <key>Session Cache size</key>
-            <value>1</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -6373,12 +6373,6 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Attributes List</key>
-            <value>
-              <name>Attributes List</name>
-            </value>
-          </entry>
-          <entry>
             <key>attributes-to-json-regex</key>
             <value>
               <name>attributes-to-json-regex</name>
@@ -6391,15 +6385,21 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             </value>
           </entry>
           <entry>
-            <key>Include Core Attributes</key>
-            <value>
-              <name>Include Core Attributes</name>
-            </value>
-          </entry>
-          <entry>
             <key>Null Value</key>
             <value>
               <name>Null Value</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Attributes List</key>
+            <value>
+              <name>Attributes List</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
+            <value>
+              <name>Include Core Attributes</name>
             </value>
           </entry>
         </descriptors>
@@ -6408,10 +6408,6 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Attributes List</key>
-            <value>feed,category,feedts,metadata.table.fieldStructure,daf.domain,daf.subdomain,daf.type,daf.organization</value>
-          </entry>
-          <entry>
             <key>attributes-to-json-regex</key>
           </entry>
           <entry>
@@ -6419,11 +6415,15 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             <value>flowfile-content</value>
           </entry>
           <entry>
-            <key>Include Core Attributes</key>
+            <key>Null Value</key>
             <value>false</value>
           </entry>
           <entry>
-            <key>Null Value</key>
+            <key>Attributes List</key>
+            <value>feed,category,feedts,metadata.table.fieldStructure,daf.domain,daf.subdomain,daf.type,daf.organization</value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
             <value>false</value>
           </entry>
         </properties>
@@ -6463,9 +6463,63 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <concurrentlySchedulableTaskCount>2</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>Spark YARN Deploy Mode</key>
+            <value>
+              <name>Spark YARN Deploy Mode</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Hadoop Configuration Resources</key>
+            <value>
+              <name>Hadoop Configuration Resources</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SparkHome</key>
+            <value>
+              <name>SparkHome</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Executor Memory</key>
+            <value>
+              <name>Executor Memory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Yarn Queue</key>
+            <value>
+              <name>Yarn Queue</name>
+            </value>
+          </entry>
+          <entry>
             <key>ApplicationJAR</key>
             <value>
               <name>ApplicationJAR</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Data Sources</key>
+            <value>
+              <name>Data Sources</name>
+            </value>
+          </entry>
+          <entry>
+            <key>MainArgs</key>
+            <value>
+              <name>MainArgs</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Spark Application Name</key>
+            <value>
+              <name>Spark Application Name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Spark Process Timeout</key>
+            <value>
+              <name>Spark Process Timeout</name>
             </value>
           </entry>
           <entry>
@@ -6481,81 +6535,9 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             </value>
           </entry>
           <entry>
-            <key>MainArgs</key>
-            <value>
-              <name>MainArgs</name>
-            </value>
-          </entry>
-          <entry>
-            <key>SparkMaster</key>
-            <value>
-              <name>SparkMaster</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Spark YARN Deploy Mode</key>
-            <value>
-              <name>Spark YARN Deploy Mode</name>
-            </value>
-          </entry>
-          <entry>
-            <key>SparkHome</key>
-            <value>
-              <name>SparkHome</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Spark Process Timeout</key>
-            <value>
-              <name>Spark Process Timeout</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Driver Memory</key>
-            <value>
-              <name>Driver Memory</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Executor Memory</key>
-            <value>
-              <name>Executor Memory</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Number of Executors</key>
-            <value>
-              <name>Number of Executors</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Spark Application Name</key>
-            <value>
-              <name>Spark Application Name</name>
-            </value>
-          </entry>
-          <entry>
             <key>Executor Cores</key>
             <value>
               <name>Executor Cores</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Network Timeout</key>
-            <value>
-              <name>Network Timeout</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Hadoop Configuration Resources</key>
-            <value>
-              <name>Hadoop Configuration Resources</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Kerberos Principal</key>
-            <value>
-              <name>Kerberos Principal</name>
             </value>
           </entry>
           <entry>
@@ -6565,15 +6547,27 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             </value>
           </entry>
           <entry>
-            <key>Yarn Queue</key>
-            <value>
-              <name>Yarn Queue</name>
-            </value>
-          </entry>
-          <entry>
             <key>Spark Configurations</key>
             <value>
               <name>Spark Configurations</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SparkMaster</key>
+            <value>
+              <name>SparkMaster</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Kerberos Principal</key>
+            <value>
+              <name>Kerberos Principal</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Number of Executors</key>
+            <value>
+              <name>Number of Executors</name>
             </value>
           </entry>
           <entry>
@@ -6583,9 +6577,15 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             </value>
           </entry>
           <entry>
-            <key>Data Sources</key>
+            <key>Driver Memory</key>
             <value>
-              <name>Data Sources</name>
+              <name>Driver Memory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Network Timeout</key>
+            <value>
+              <name>Network Timeout</name>
             </value>
           </entry>
           <entry>
@@ -6601,8 +6601,42 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
+            <key>Spark YARN Deploy Mode</key>
+            <value>cluster</value>
+          </entry>
+          <entry>
+            <key>Hadoop Configuration Resources</key>
+            <value>/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml</value>
+          </entry>
+          <entry>
+            <key>SparkHome</key>
+            <value>/opt/cloudera/parcels/CDH/lib/spark</value>
+          </entry>
+          <entry>
+            <key>Executor Memory</key>
+            <value>512m</value>
+          </entry>
+          <entry>
+            <key>Yarn Queue</key>
+          </entry>
+          <entry>
             <key>ApplicationJAR</key>
             <value>/usr/nifi/kylo/kylo-spark-job-profiler-spark-v2-0.8.4-jar-with-dependencies.jar</value>
+          </entry>
+          <entry>
+            <key>Data Sources</key>
+          </entry>
+          <entry>
+            <key>MainArgs</key>
+            <value>table,${daf.domain}__${daf.subdomain}.${feed}_valid,10,${daf.domain}__${daf.subdomain}.${feed}_profile,${table_field_policy_json_file},${feedts}</value>
+          </entry>
+          <entry>
+            <key>Spark Application Name</key>
+            <value>Profiler</value>
+          </entry>
+          <entry>
+            <key>Spark Process Timeout</key>
+            <value>1 hr</value>
           </entry>
           <entry>
             <key>Extra JARs</key>
@@ -6613,73 +6647,39 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             <value>com.thinkbiganalytics.spark.dataprofiler.core.Profiler</value>
           </entry>
           <entry>
-            <key>MainArgs</key>
-            <value>table,${daf.domain}__${daf.subdomain}.${feed}_valid,10,${daf.domain}__${daf.subdomain}.${feed}_profile,${table_field_policy_json_file},${feedts}</value>
-          </entry>
-          <entry>
-            <key>SparkMaster</key>
-            <value>yarn</value>
-          </entry>
-          <entry>
-            <key>Spark YARN Deploy Mode</key>
-            <value>cluster</value>
-          </entry>
-          <entry>
-            <key>SparkHome</key>
-            <value>/opt/cloudera/parcels/CDH/lib/spark</value>
-          </entry>
-          <entry>
-            <key>Spark Process Timeout</key>
-            <value>1 hr</value>
-          </entry>
-          <entry>
-            <key>Driver Memory</key>
-            <value>1024m</value>
-          </entry>
-          <entry>
-            <key>Executor Memory</key>
-            <value>512m</value>
-          </entry>
-          <entry>
-            <key>Number of Executors</key>
-            <value>1</value>
-          </entry>
-          <entry>
-            <key>Spark Application Name</key>
-            <value>Profiler</value>
-          </entry>
-          <entry>
             <key>Executor Cores</key>
             <value>1</value>
-          </entry>
-          <entry>
-            <key>Network Timeout</key>
-            <value>120s</value>
-          </entry>
-          <entry>
-            <key>Hadoop Configuration Resources</key>
-            <value>/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml</value>
-          </entry>
-          <entry>
-            <key>Kerberos Principal</key>
-            <value>daf@DAF.GOV.IT</value>
           </entry>
           <entry>
             <key>Kerberos Keytab</key>
             <value>/usr/nifi/daf.keytab</value>
           </entry>
           <entry>
-            <key>Yarn Queue</key>
-          </entry>
-          <entry>
             <key>Spark Configurations</key>
             <value>spark.default.parallelism=4</value>
+          </entry>
+          <entry>
+            <key>SparkMaster</key>
+            <value>yarn</value>
+          </entry>
+          <entry>
+            <key>Kerberos Principal</key>
+            <value>daf@DAF.GOV.IT</value>
+          </entry>
+          <entry>
+            <key>Number of Executors</key>
+            <value>1</value>
           </entry>
           <entry>
             <key>Extra Files</key>
           </entry>
           <entry>
-            <key>Data Sources</key>
+            <key>Driver Memory</key>
+            <value>1024m</value>
+          </entry>
+          <entry>
+            <key>Network Timeout</key>
+            <value>120s</value>
           </entry>
           <entry>
             <key>Metadata Service</key>
@@ -6726,10 +6726,9 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Metadata Service</key>
+            <key>Release All</key>
             <value>
-              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
-              <name>Metadata Service</name>
+              <name>Release All</name>
             </value>
           </entry>
           <entry>
@@ -6739,21 +6738,9 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             </value>
           </entry>
           <entry>
-            <key>System feed name</key>
-            <value>
-              <name>System feed name</name>
-            </value>
-          </entry>
-          <entry>
             <key>High-Water Mark</key>
             <value>
               <name>High-Water Mark</name>
-            </value>
-          </entry>
-          <entry>
-            <key>High-Water Mark Value Property Name</key>
-            <value>
-              <name>High-Water Mark Value Property Name</name>
             </value>
           </entry>
           <entry>
@@ -6763,9 +6750,22 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             </value>
           </entry>
           <entry>
-            <key>Release All</key>
+            <key>System feed name</key>
             <value>
-              <name>Release All</name>
+              <name>System feed name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
+              <name>Metadata Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Value Property Name</key>
+            <value>
+              <name>High-Water Mark Value Property Name</name>
             </value>
           </entry>
         </descriptors>
@@ -6774,32 +6774,32 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Metadata Service</key>
-            <value>63175850-64cc-3631-0000-000000000000</value>
+            <key>Release All</key>
+            <value>true</value>
           </entry>
           <entry>
             <key>System feed category</key>
             <value>${category}</value>
           </entry>
           <entry>
-            <key>System feed name</key>
-            <value>${feed}</value>
-          </entry>
-          <entry>
             <key>High-Water Mark</key>
             <value>highWaterMark</value>
-          </entry>
-          <entry>
-            <key>High-Water Mark Value Property Name</key>
-            <value>water.mark</value>
           </entry>
           <entry>
             <key>Mode</key>
             <value>COMMIT</value>
           </entry>
           <entry>
-            <key>Release All</key>
-            <value>true</value>
+            <key>System feed name</key>
+            <value>${feed}</value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>63175850-64cc-3631-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Value Property Name</key>
+            <value>water.mark</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -6923,9 +6923,27 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>daf.separator.char</key>
+            <value>
+              <name>daf.separator.char</name>
+            </value>
+          </entry>
+          <entry>
+            <key>daf.quote.char</key>
+            <value>
+              <name>daf.quote.char</name>
+            </value>
+          </entry>
+          <entry>
             <key>Delete Attributes Expression</key>
             <value>
               <name>Delete Attributes Expression</name>
+            </value>
+          </entry>
+          <entry>
+            <key>daf.escape.char</key>
+            <value>
+              <name>daf.escape.char</name>
             </value>
           </entry>
           <entry>
@@ -6940,31 +6958,25 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
               <name>Stateful Variables Initial Value</name>
             </value>
           </entry>
-          <entry>
-            <key>daf.escape.char</key>
-            <value>
-              <name>daf.escape.char</name>
-            </value>
-          </entry>
-          <entry>
-            <key>daf.quote.char</key>
-            <value>
-              <name>daf.quote.char</name>
-            </value>
-          </entry>
-          <entry>
-            <key>daf.separator.char</key>
-            <value>
-              <name>daf.separator.char</name>
-            </value>
-          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
+            <key>daf.separator.char</key>
+            <value>${metadata.table.feedFormat:getDelimitedField(6,"'")}</value>
+          </entry>
+          <entry>
+            <key>daf.quote.char</key>
+            <value>${metadata.table.feedFormat:getDelimitedField(14,"'")}</value>
+          </entry>
+          <entry>
             <key>Delete Attributes Expression</key>
+          </entry>
+          <entry>
+            <key>daf.escape.char</key>
+            <value>${metadata.table.feedFormat:getDelimitedField(10,"'")}</value>
           </entry>
           <entry>
             <key>Store State</key>
@@ -6973,18 +6985,6 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
           <entry>
             <key>Stateful Variables Initial Value</key>
             <value></value>
-          </entry>
-          <entry>
-            <key>daf.escape.char</key>
-            <value>${metadata.table.feedFormat:getDelimitedField(10,"'")}</value>
-          </entry>
-          <entry>
-            <key>daf.quote.char</key>
-            <value>${metadata.table.feedFormat:getDelimitedField(14,"'")}</value>
-          </entry>
-          <entry>
-            <key>daf.separator.char</key>
-            <value>${metadata.table.feedFormat:getDelimitedField(6,"'")}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -7028,6 +7028,12 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>standard</key>
+            <value>
+              <name>standard</name>
+            </value>
+          </entry>
+          <entry>
             <key>Routing Strategy</key>
             <value>
               <name>Routing Strategy</name>
@@ -7039,17 +7045,15 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
               <name>ordinary</name>
             </value>
           </entry>
-          <entry>
-            <key>standard</key>
-            <value>
-              <name>standard</name>
-            </value>
-          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
+          <entry>
+            <key>standard</key>
+            <value>${daf.type:equals('standard')}</value>
+          </entry>
           <entry>
             <key>Routing Strategy</key>
             <value>Route to Property name</value>
@@ -7057,10 +7061,6 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
           <entry>
             <key>ordinary</key>
             <value>${daf.type:equals('ordinary')}</value>
-          </entry>
-          <entry>
-            <key>standard</key>
-            <value>${daf.type:equals('standard')}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -7108,12 +7108,6 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Attributes List</key>
-            <value>
-              <name>Attributes List</name>
-            </value>
-          </entry>
-          <entry>
             <key>attributes-to-json-regex</key>
             <value>
               <name>attributes-to-json-regex</name>
@@ -7126,15 +7120,21 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             </value>
           </entry>
           <entry>
-            <key>Include Core Attributes</key>
-            <value>
-              <name>Include Core Attributes</name>
-            </value>
-          </entry>
-          <entry>
             <key>Null Value</key>
             <value>
               <name>Null Value</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Attributes List</key>
+            <value>
+              <name>Attributes List</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
+            <value>
+              <name>Include Core Attributes</name>
             </value>
           </entry>
         </descriptors>
@@ -7143,10 +7143,6 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Attributes List</key>
-            <value>feed,category,feedts,metadata.table.fieldStructure,daf.domain,daf.subdomain,daf.type,daf.organization</value>
-          </entry>
-          <entry>
             <key>attributes-to-json-regex</key>
           </entry>
           <entry>
@@ -7154,11 +7150,15 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             <value>flowfile-content</value>
           </entry>
           <entry>
-            <key>Include Core Attributes</key>
+            <key>Null Value</key>
             <value>false</value>
           </entry>
           <entry>
-            <key>Null Value</key>
+            <key>Attributes List</key>
+            <value>feed,category,feedts,metadata.table.fieldStructure,daf.domain,daf.subdomain,daf.type,daf.organization</value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
             <value>false</value>
           </entry>
         </properties>
@@ -7198,16 +7198,15 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Metadata Service</key>
-            <value>
-              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
-              <name>Metadata Service</name>
-            </value>
-          </entry>
-          <entry>
             <key>System feed category</key>
             <value>
               <name>System feed category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Initialization Result</key>
+            <value>
+              <name>Initialization Result</name>
             </value>
           </entry>
           <entry>
@@ -7217,9 +7216,10 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
             </value>
           </entry>
           <entry>
-            <key>Initialization Result</key>
+            <key>Metadata Service</key>
             <value>
-              <name>Initialization Result</name>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
+              <name>Metadata Service</name>
             </value>
           </entry>
         </descriptors>
@@ -7228,20 +7228,20 @@ GRANT ROLE ${daf.table.role} TO GROUP ${daf.organization}</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Metadata Service</key>
-            <value>63175850-64cc-3631-0000-000000000000</value>
-          </entry>
-          <entry>
             <key>System feed category</key>
             <value>${category}</value>
+          </entry>
+          <entry>
+            <key>Initialization Result</key>
+            <value>SUCCESSFUL</value>
           </entry>
           <entry>
             <key>System feed name</key>
             <value>${feed}</value>
           </entry>
           <entry>
-            <key>Initialization Result</key>
-            <value>SUCCESSFUL</value>
+            <key>Metadata Service</key>
+            <value>63175850-64cc-3631-0000-000000000000</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
