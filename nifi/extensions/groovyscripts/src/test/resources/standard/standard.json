@@ -1,0 +1,263 @@
+{
+  "institutionalName": {
+    "def": "",
+    "ita": "",
+    "eng": ""
+  },
+  "description": {
+    "def": "",
+    "ita": "",
+    "eng": ""
+  },
+  "ISILIdentifier": "",
+  "type": "",
+  "disciplines": [
+    ""
+  ],
+  "sites": [
+    {
+      "name": {
+        "def": "",
+        "ita": "",
+        "eng": ""
+      },
+      "description": {
+        "def": "",
+        "ita": "",
+        "eng": ""
+      },
+      "address": {
+        "description": {
+          "def": "",
+          "ita": "",
+          "eng": ""
+        },
+        "identifier": "",
+        "fullAddress": "",
+        "city": "",
+        "province": "",
+        "addressArea": "",
+        "postalCode": "",
+        "street": "",
+        "streetNumber": "",
+        "location": {
+          "description": {
+            "def": "",
+            "ita": "",
+            "eng": ""
+          },
+          "geographicPositionMethod": "",
+          "refSystem": "",
+          "geometryType": "Point/Polygon",
+          "point": {
+            "lat": "",
+            "lon": "",
+            "alt": "100"
+          },
+          "polygon": [
+            {
+              "lat": "",
+              "lon": "",
+              "alt": ""
+            }
+          ]
+        }
+      },
+      "contactPoint": {
+        "description": {
+          "def": "",
+          "ita": "",
+          "eng": ""
+        },
+        "telephone": [
+          ""
+        ],
+        "fax": [
+          ""
+        ],
+        "emailAddresses": [
+          {
+            "email": "",
+            "emailType": "email"
+          }
+        ],
+        "webSite": "",
+        "socialMediaAccounts": [
+          {
+            "socialMedia": "",
+            "accountName": ""
+          }
+        ]
+      },
+      "available": [
+        {
+          "description": {
+            "def": "",
+            "ita": "",
+            "eng": ""
+          },
+          "duration": "",
+          "year": "",
+          "monthOfYear": "",
+          "dayOfWeek": [
+            ""
+          ],
+          "startDate": "",
+          "endDate": "",
+          "startTime": "",
+          "endTime": ""
+        }
+      ]
+    }
+  ],
+  "contactPoint": {
+    "description": {
+      "def": "",
+      "ita": "",
+      "eng": ""
+    },
+    "telephone": [
+      ""
+    ],
+    "fax": [
+      ""
+    ],
+    "emailAddresses": [
+      {
+        "email": "",
+        "emailType": "email"
+      }
+    ],
+    "webSite": "",
+    "socialMediaAccounts": [
+      {
+        "socialMedia": "",
+        "accountName": ""
+      }
+    ]
+  },
+  "services": [
+    {
+      "name": {
+        "def": "",
+        "ita": "",
+        "eng": ""
+      },
+      "description": {
+        "def": "",
+        "ita": "",
+        "eng": ""
+      },
+      "contactPoint": {
+        "description": {
+          "def": "",
+          "ita": "",
+          "eng": ""
+        },
+        "telephone": [
+          ""
+        ],
+        "fax": [
+          ""
+        ],
+        "emailAddresses": [
+          {
+            "email": "",
+            "emailType": "email"
+          }
+        ],
+        "webSite": "",
+        "socialMediaAccounts": [
+          {
+            "socialMedia": "",
+            "accountName": ""
+          }
+        ]
+      }
+    }
+  ],
+  "accessCondition": {
+    "openingHoursSpecifications": [
+      {
+        "description": {
+          "def": "",
+          "ita": "",
+          "eng": ""
+        },
+        "duration": "",
+        "year": "",
+        "monthOfYear": "",
+        "dayOfWeek": [
+          ""
+        ],
+        "startDate": "",
+        "endDate": "",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "temporaryClosures": [
+      {
+        "description": {
+          "def": "",
+          "ita": "",
+          "eng": ""
+        },
+        "duration": "",
+        "year": "",
+        "monthOfYear": "",
+        "dayOfWeek": [
+          ""
+        ],
+        "startDate": "",
+        "endDate": "",
+        "startTime": "",
+        "endTime": ""
+      }
+    ],
+    "bookings": {
+      "name": {
+        "def": "",
+        "ita": "",
+        "eng": ""
+      },
+      "description": {
+        "def": "",
+        "ita": "",
+        "eng": ""
+      }
+    }
+  },
+  "tickets": [
+    {
+      "description": {
+        "def": "",
+        "ita": ""
+      },
+      "validity": {
+        "description": {
+          "def": "",
+          "ita": "",
+          "eng": ""
+        },
+        "duration": "",
+        "year": "",
+        "monthOfYear": "",
+        "dayOfWeek": [
+          ""
+        ],
+        "startDate": "",
+        "endDate": "",
+        "startTime": "",
+        "endTime": ""
+      },
+      "priceValue": "",
+      "priceCurrency": "",
+      "eligibleUser": {
+        "def": "",
+        "ita": "",
+        "eng": ""
+      }
+    }
+  ]
+}
