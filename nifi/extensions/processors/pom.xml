@@ -52,6 +52,12 @@
       <artifactId>nifi-mock</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.github.dreamhead</groupId>
+      <artifactId>moco-core</artifactId>
+      <version>0.12.0</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

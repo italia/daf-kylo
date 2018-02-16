@@ -4,7 +4,7 @@ The goal of this component is to create
 
 This components, given a dataset name:
 
-1. retrieves the list of the transformations to apply from  `Operational.ingestion_pipeline`
+1. retrieves the list of the transformationSteps to apply from  `Operational.ingestion_pipeline`
 ```yaml
 
   ingestion_pipeline:

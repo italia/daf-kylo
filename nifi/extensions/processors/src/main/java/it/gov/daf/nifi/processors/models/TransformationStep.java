@@ -7,22 +7,25 @@ import java.util.List;
  *  This class holds the definition of all the possible transformations
  *  that can be done
  */
-public class Transformation implements Serializable {
+public class TransformationStep implements Serializable {
 
     private String name;
 
     private List<String> columns;
 
+    //the following are optionals
     private String vocabularyPath;
 
-    public Transformation() {
+    private String sourceDateFormat;
+
+    public TransformationStep() {
     }
 
-    public Transformation(String name) {
+    public TransformationStep(String name) {
         this.name = name;
     }
 
-    public Transformation(String name, List<String> columns) {
+    public TransformationStep(String name, List<String> columns) {
         this.name = name;
         this.columns = columns;
     }
@@ -51,12 +54,21 @@ public class Transformation implements Serializable {
         this.vocabularyPath = vocabularyPath;
     }
 
+    public void setSourceDateFormat(String sourceDateFormat) {
+        this.sourceDateFormat = sourceDateFormat;
+    }
+
+    public String getSourceDateFormat() {
+        return sourceDateFormat;
+    }
+
     @Override
     public String toString() {
-        return "Transformation{" +
+        return "TransformationStep{" +
                 "name='" + name + '\'' +
                 ", columns=" + columns +
                 ", vocabularyPath='" + vocabularyPath + '\'' +
+                ", sourceDateFormat='" + sourceDateFormat + '\'' +
                 '}';
     }
 }

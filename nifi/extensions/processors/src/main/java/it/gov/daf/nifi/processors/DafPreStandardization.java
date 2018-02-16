@@ -5,9 +5,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
-import com.sun.org.apache.bcel.internal.classfile.Unknown;
 import it.gov.daf.nifi.processors.models.FlatSchema;
-import it.gov.daf.nifi.processors.models.Transformation;
+import it.gov.daf.nifi.processors.models.TransformationStep;
+import it.gov.daf.nifi.processors.models.Trasnformations;
 import org.apache.nifi.annotation.behavior.EventDriven;
 import org.apache.nifi.annotation.behavior.InputRequirement;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
@@ -18,6 +18,7 @@ import org.apache.nifi.logging.ComponentLog;
 import org.apache.nifi.processor.*;
 import org.apache.nifi.processor.exception.ProcessException;
 import org.apache.nifi.processor.util.StandardValidators;
+import org.apache.nifi.util.StopWatch;
 import org.asynchttpclient.*;
 
 import static org.asynchttpclient.Dsl.*;
@@ -29,6 +30,7 @@ import java.util.*;
 import static java.util.stream.Collectors.*;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
@@ -85,8 +87,8 @@ public class DafPreStandardization extends AbstractProcessor {
             .name("catalog get path")
             .description("The path of the get used to retrieve the dataset schema from the catalog manager")
             .required(true)
-            .defaultValue("http://catalog-manager.default.svc.cluster.local:9000/catalog-manager/v1/catalog-ds/getbytitle/")
             .addValidator(StandardValidators.URL_VALIDATOR)
+            .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
             .expressionLanguageSupported(false)
             .build();
 
@@ -137,11 +139,14 @@ public class DafPreStandardization extends AbstractProcessor {
 
     @Override
     public void onTrigger(ProcessContext context, ProcessSession session) throws ProcessException {
+        StopWatch stopWatch = new StopWatch(true);
         ComponentLog logger = getLogger();
 
         FlowFile flowFile = session.get();
-        if (flowFile == null) throw new ProcessException("Flow file is null");
-
+        if (flowFile == null) {
+            logger.error("null flow file");
+            throw new ProcessException("Flow file is null");
+        }
 
         final String datasetName = context.getProperty(DATASET_NAME)
                 .evaluateAttributeExpressions(flowFile).getValue();
@@ -162,102 +167,49 @@ public class DafPreStandardization extends AbstractProcessor {
                 .encodeToString((username + ":" + password).getBytes(Charset.forName("UTF-8")));
         final String url = catalogGetPath + datasetName;
 
-        final CompletableFuture<Response> fResponse = httpClient.prepareGet(url)
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Authorization", authorization).execute().toCompletableFuture();
-
-        //FIXME naive completion
-        final Response response = fResponse.join();
-
-        if (response.getStatusCode() < 200 && response.getStatusCode() > 399)
-            throw new ProcessException("Response Status " + response.getStatusCode() + " for request " + url);
-
         //Parse the flatschema
         final ObjectMapper mapper = new ObjectMapper();
         try {
+
+            final CompletableFuture<Response> fResponse = httpClient.prepareGet(url)
+                    .addHeader("Content-Type", "application/json")
+                    .addHeader("Authorization", authorization).execute().toCompletableFuture();
+
+            //FIXME naive completion
+            final Response response = fResponse.join();
+
+            if (response.getStatusCode() < 200 && response.getStatusCode() > 399){
+                logger.error("Response Status " + response.getStatusCode() + " for request " + url);
+                throw new ProcessException("Response Status " + response.getStatusCode() + " for request " + url);
+            }
+
+            //parse the response and get the flat schema
             final JsonNode root = mapper.readTree(response.getResponseBodyAsBytes());
             final Stream<FlatSchema> flatSchemaStream = getFlatSchemas(mapper, root);
 
-            if (flatSchemaStream.count() == 0)
+            if (flatSchemaStream.count() == 0){
+                logger.error("cannot find flat schema for dataset ");
                 throw new ProcessException("Error parsing /dataschema/flatSchema");
+            }
 
             final List<String> sTransformations = getTransformations(mapper, root);
-            final List<Transformation> transformations = genTransformations(sTransformations, flatSchemaStream);
+            final List<TransformationStep> transformationSteps =
+                    Trasnformations.gensTransformations(sTransformations, flatSchemaStream);
 
-            if (!transformations.isEmpty()){
-                flowFile = session.putAttribute(flowFile, OUTPUT_JOB_PARAMS, mapper.writeValueAsString(transformations));
+            if (!transformationSteps.isEmpty()){
+                flowFile = session.putAttribute(flowFile, OUTPUT_JOB_PARAMS, mapper.writeValueAsString(transformationSteps));
             }
+            logger.info("added transformationSteps {} to flow", transformationSteps.toArray());
+            session.getProvenanceReporter().fetch(flowFile, datasetName, stopWatch.getElapsed(TimeUnit.MILLISECONDS));
+            session.transfer(flowFile, REL_SUCCESS);
 
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new ProcessException("Error parsing response body " + e.getMessage(), e);
+        } catch (Exception e) {
+            logger.error("Error parsing response body {}" + e.getMessage(), e);
+            session.getProvenanceReporter().fetch(flowFile, datasetName, stopWatch.getElapsed(TimeUnit.MILLISECONDS));
+            session.transfer(flowFile, REL_FAILURE);
         }
-
     }
 
-    //    "ingestion_pipeline": [
-    //       "ingestion date", "update date"
-    //    ]
-
-    private List<Transformation> genTransformations(List<String> list, Stream<FlatSchema> flatSchemaStream) {
-
-        List<Transformation> transformations = new ArrayList<>();
-
-        for (String value : list) {
-
-            switch (value) {
-                case "text to utf-8":
-                    transformations.add(new Transformation(value));
-                    break;
-
-                case "empty to null":
-                    transformations.add(new Transformation(value));
-                    break;
-
-                case "date to ISO8601":
-                    transformations.add(new Transformation(value));
-                    break;
-
-                case "url to standard":
-                    final List<String> urls = flatSchemaStream
-                            .filter(s -> s.getMetadata().getCat().equals("url"))
-                            .map(FlatSchema::getName)
-                            .collect(toList());
-
-                    if (!urls.isEmpty())
-                        transformations.add(new Transformation(value, urls));
-                    break;
-
-                case "vocabulary validate":
-                    //TODO for each column that has a vocabulary associated add the transformation
-                    break;
-
-                case "enrich address":
-                    //TODO for each column that his tagged as address
-                    break;
-
-                case "add row id":
-                    transformations.add(new Transformation(value));
-                    break;
-
-                case "add ingestion date":
-                    transformations.add(new Transformation(value));
-                    break;
-
-                case "add update date":
-                    transformations.add(new Transformation(value));
-                    break;
-
-                default:
-
-            }
-
-
-        }
-
-        return transformations;
-    }
 
     private List<String> getTransformations(ObjectMapper mapper, JsonNode root) throws IOException {
         final JsonNode node = root.at("/operational/ingestion_pipeline");
