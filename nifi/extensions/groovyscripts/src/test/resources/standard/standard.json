@@ -48,11 +48,11 @@
           },
           "geographicPositionMethod": "",
           "refSystem": "",
-          "geometryType": "Point/Polygon",
+          "geometryType": "",
           "point": {
             "lat": "",
             "lon": "",
-            "alt": "100"
+            "alt": ""
           },
           "polygon": [
             {

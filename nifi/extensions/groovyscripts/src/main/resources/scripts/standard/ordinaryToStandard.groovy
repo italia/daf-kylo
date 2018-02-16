@@ -29,7 +29,6 @@ standardJson = new JsonSlurper().parseText(new File(standardJsonObjectFile).getT
 
 def writeJsonValue(json, path, value) {
     def paths = StringUtils.split(path, ".")
-    log.info("json: {}, path: {}, value: {}, size: {}", json, path, value, paths.size())
     def currPath = paths[0];
     if (paths.size() == 1) {
         if (currPath.contains("[")) {
@@ -60,6 +59,8 @@ columnToJson.each { k, v ->
 }
 
 def standardJsonOutput = JsonOutput.toJson(standardJson)
+
+log.info("{}", JsonOutput.prettyPrint(standardJsonOutput))
 
 flowFile = session.write(flowFile, { outputStream ->
     IOUtils.write(standardJsonOutput, outputStream)
