@@ -63,7 +63,7 @@ data:
 
     #Default profile
     #spring.profiles.active=native,auth-kylo,auth-file
-    spring.profiles.active=native,auth-kylo-groups,auth-ldap
+    spring.profiles.active=native,auth-kylo,auth-ldap
 
 
     ###
@@ -100,7 +100,7 @@ data:
     security.auth.ldap.server.password=xxxxxx
     ### user DN patterns are separated by '|'
     security.auth.ldap.authenticator.userDnPatterns=uid={0}
-    security.auth.ldap.user.enableGroups=true
+    security.auth.ldap.user.enableGroups=false
     security.auth.ldap.user.groupNameAttr=member
     security.auth.ldap.user.groupsBase=cn=groups,cn=accounts,dc=daf,dc=gov,dc=it
 

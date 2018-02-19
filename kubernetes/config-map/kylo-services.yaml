@@ -82,7 +82,7 @@ data:
     ###  - For NiFi 1.0.x:                      nifi-v1
     ###  - For NiFi 1.1.x:                      nifi-v1.1
     ###  - For NiFi 1.2.x or 1.3.x or 1.4.x:    nifi-v1.2
-    spring.profiles.include=native,nifi-v1.2,auth-spark,auth-ldap,search-esr,jms-activemq
+    spring.profiles.include=native,nifi-v1.2,auth-spark,auth-kylo,auth-ldap,search-esr,jms-activemq
 
 
 
@@ -150,7 +150,7 @@ data:
     security.auth.ldap.server.password=xxxxx
     ### user DN patterns are separated by '|'
     security.auth.ldap.authenticator.userDnPatterns=uid={0}
-    security.auth.ldap.user.enableGroups=true
+    security.auth.ldap.user.enableGroups=false
     security.auth.ldap.user.groupNameAttr=member
     security.auth.ldap.user.groupsBase=cn=groups,cn=accounts,dc=daf,dc=gov,dc=it
 
@@ -738,7 +738,6 @@ data:
     ##log4j.logger.org.modeshape.jcr.clustering.ClusteringService=DEBUG
     ##log4j.logger.org.jgroups=DEBUG
     ##log4j.logger.org.hibernate.SQL=DEBUG
-    log4j.logger.org.springframework.security.ldap=DEBUG
 
     # Direct log messages to a log file
     log4j.appender.file=org.apache.log4j.DailyRollingFileAppender
