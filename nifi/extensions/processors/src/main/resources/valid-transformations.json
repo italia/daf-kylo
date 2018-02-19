@@ -1,0 +1,38 @@
+[
+  {
+    "name": "text to utf-8",
+    "description": "transform all the values to utf-8 charset"
+  },
+  {
+    "name": "empty to null",
+    "description": "transform all the empty values to null"
+  },
+  {
+    "name": "date to ISO8601",
+    "description": "transform all the dates to ISO8601"
+  },
+  {
+    "name": "url to standard",
+    "description": "transform all the values to utf-8 charset"
+  },
+  {
+    "name": "vocabulary validate",
+    "description": "transform all the values to utf-8 charset"
+  },
+  {
+    "name": "enrich address",
+    "description": "split the address to identify street, civic number, city and so on"
+  },
+  {
+    "name": "add row id",
+    "description": "split the address to identify street, civic number, city and so on"
+  },
+  {
+    "name": "add ingestion date",
+    "description": "split the address to identify street, civic number, city and so on"
+  },
+  {
+    "name": "add update date",
+    "description": "split the address to identify street, civic number, city and so on"
+  }
+]
