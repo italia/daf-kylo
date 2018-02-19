@@ -3,18 +3,40 @@ package it.gov.daf.nifi.processors.models;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
-public class Trasnformations implements Serializable {
+public class Transformations implements Serializable {
 
     private String datasetPath;
 
-    private List<TransformationStep> transformationList;
+    private List<TransformationStep> transformationSteps = new ArrayList<>();
 
+    public Transformations() {
+    }
 
-    public static List<TransformationStep> gensTransformations(List<String> list, Stream<FlatSchema> flatSchemaStream) {
+    public Transformations(String datasetPath, List<TransformationStep> transformationSteps) {
+        this.datasetPath = datasetPath;
+        this.transformationSteps = transformationSteps;
+    }
+
+    public void setDatasetPath(String datasetPath) {
+        this.datasetPath = datasetPath;
+    }
+
+    public String getDatasetPath() {
+        return datasetPath;
+    }
+
+    public void setTransformationSteps(List<TransformationStep> transformationSteps) {
+        this.transformationSteps = transformationSteps;
+    }
+
+    public List<TransformationStep> getTransformationSteps() {
+        return transformationSteps;
+    }
+
+    public static List<TransformationStep> gensTransformations(List<String> list, List<FlatSchema> flatSchemaStream) {
 
         List<TransformationStep> transformationSteps = new ArrayList<>();
 
@@ -25,7 +47,7 @@ public class Trasnformations implements Serializable {
                     transformationSteps.add(new TransformationStep(transformationName));
                     break;
 
-                case "empty to null":
+                case "empty values to null":
                     transformationSteps.add(new TransformationStep(transformationName));
                     break;
 
@@ -34,7 +56,7 @@ public class Trasnformations implements Serializable {
                     break;
 
                 case "url to standard":
-                    final List<String> urls = flatSchemaStream
+                    final List<String> urls = flatSchemaStream.stream()
                             .filter(s -> s.getMetadata().getCat().equals("url"))
                             .map(FlatSchema::getName)
                             .collect(toList());
@@ -43,7 +65,7 @@ public class Trasnformations implements Serializable {
                         transformationSteps.add(new TransformationStep(transformationName, urls));
                     break;
 
-                case "vocabulary validate":
+                case "vocabulary validation":
                     //TODO for each column that has a vocabulary associated add the transformation
                     break;
 

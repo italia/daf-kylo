@@ -1,11 +1,12 @@
 package it.gov.daf.nifi;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.dreamhead.moco.HttpServer;
 import com.github.dreamhead.moco.Runner;
 import it.gov.daf.nifi.processors.DafPreStandardization;
+import it.gov.daf.nifi.processors.models.Transformations;
 import org.apache.nifi.flowfile.FlowFile;
 import org.apache.nifi.processor.ProcessSession;
-import org.apache.nifi.util.MockFlowFile;
 import org.apache.nifi.util.TestRunner;
 import org.apache.nifi.util.TestRunners;
 import org.junit.Test;
@@ -17,12 +18,12 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
 
-import static org.hamcrest.CoreMatchers.*;
-import static org.junit.Assert.assertThat;
 import static com.github.dreamhead.moco.Moco.httpServer;
 import static com.github.dreamhead.moco.Runner.runner;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.junit.Assert.assertThat;
 
 public class TestPreStandardization {
 
@@ -55,7 +56,7 @@ public class TestPreStandardization {
 
     @Test
     public void testCatalogWorking() throws IOException, URISyntaxException {
-        final URI uri = getClass().getResource("/json/test-dataschema.json").toURI();
+        final URI uri = getClass().getResource("/json/standardization-dataschema.json").toURI();
         String body = new String(Files.readAllBytes(Paths.get(uri)));
 
         HttpServer server = httpServer(9000);
@@ -74,11 +75,19 @@ public class TestPreStandardization {
 
             testRunner.assertTransferCount(DafPreStandardization.REL_SUCCESS, 1);
 
-            final String parameters = testRunner.getFlowFilesForRelationship(DafPreStandardization.REL_SUCCESS)
+            final String sParamaters = testRunner.getFlowFilesForRelationship(DafPreStandardization.REL_SUCCESS)
                     .get(0)
                     .getAttribute(DafPreStandardization.OUTPUT_JOB_PARAMS);
-            System.out.println(parameters);
-            assertThat(parameters, notNullValue());
+            log.info("the sParamaters are {}", sParamaters);
+            assertThat(sParamaters.length(), notNullValue());
+
+            ObjectMapper mapper = new ObjectMapper();
+            final Transformations transformations = mapper.readValue(sParamaters, Transformations.class);
+
+            transformations.getTransformationSteps().forEach(System.out::println);
+
+            assertThat(transformations.getTransformationSteps().size(), is(6));
+
 
         } finally {
             runner.stop();

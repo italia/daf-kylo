@@ -32,13 +32,13 @@ public class TestMetaCatalogParsing {
 
     @Test
     public void readResource() throws IOException, URISyntaxException {
-        final URI uri = getClass().getResource("/json/test-dataschema.json").toURI();
+        final URI uri = getClass().getResource("/json/standardization-dataschema.json").toURI();
         assertThat(Files.lines(Paths.get(uri)).count(), not(0));
     }
 
     @Test
     public void readFlatSchema() throws IOException {
-        final URL url = getClass().getResource("/json/test-dataschema.json");
+        final URL url = getClass().getResource("/json/standardization-dataschema.json");
         final ObjectMapper objectMapper = new ObjectMapper();
         final JsonNode node = objectMapper.readTree(url);
 
@@ -61,7 +61,7 @@ public class TestMetaCatalogParsing {
 
     @Test
     public void readIngestionPipeline() throws IOException {
-        final URL url = getClass().getResource("/json/test-dataschema.json");
+        final URL url = getClass().getResource("/json/standardization-dataschema.json");
         final ObjectMapper objectMapper = new ObjectMapper();
         final JsonNode root = objectMapper.readTree(url);
 

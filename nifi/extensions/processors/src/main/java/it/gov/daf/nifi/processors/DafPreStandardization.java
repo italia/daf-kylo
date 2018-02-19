@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
 import it.gov.daf.nifi.processors.models.FlatSchema;
 import it.gov.daf.nifi.processors.models.TransformationStep;
-import it.gov.daf.nifi.processors.models.Trasnformations;
+import it.gov.daf.nifi.processors.models.Transformations;
 import org.apache.nifi.annotation.behavior.EventDriven;
 import org.apache.nifi.annotation.behavior.InputRequirement;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
@@ -185,19 +185,20 @@ public class DafPreStandardization extends AbstractProcessor {
 
             //parse the response and get the flat schema
             final JsonNode root = mapper.readTree(response.getResponseBodyAsBytes());
-            final Stream<FlatSchema> flatSchemaStream = getFlatSchemas(mapper, root);
+            final List<FlatSchema> flatSchemaList = getFlatSchemas(mapper, root).collect(toList());
 
-            if (flatSchemaStream.count() == 0){
+            if (flatSchemaList.size() == 0){
                 logger.error("cannot find flat schema for dataset ");
                 throw new ProcessException("Error parsing /dataschema/flatSchema");
             }
 
             final List<String> sTransformations = getTransformations(mapper, root);
             final List<TransformationStep> transformationSteps =
-                    Trasnformations.gensTransformations(sTransformations, flatSchemaStream);
+                    Transformations.gensTransformations(sTransformations, flatSchemaList);
+            final Transformations transformations = new Transformations(datasetName, transformationSteps);
 
             if (!transformationSteps.isEmpty()){
-                flowFile = session.putAttribute(flowFile, OUTPUT_JOB_PARAMS, mapper.writeValueAsString(transformationSteps));
+                flowFile = session.putAttribute(flowFile, OUTPUT_JOB_PARAMS, mapper.writeValueAsString(transformations));
             }
             logger.info("added transformationSteps {} to flow", transformationSteps.toArray());
             session.getProvenanceReporter().fetch(flowFile, datasetName, stopWatch.getElapsed(TimeUnit.MILLISECONDS));

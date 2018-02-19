@@ -211,7 +211,15 @@
       ]
     },
     "ingestion_pipeline": [
-      "utf-8", "empty not null", "date to ISO8601", "urls", "vocabulary check", "address check", "row id", "ingestion date", "update date"
+      "text to utf-8",
+      "empty values to null",
+      "date to ISO8601",
+      "url to standard",
+      "vocabulary validation",
+      "enrich address",
+      "add row id",
+      "add ingestion date",
+      "add update date"
     ]
   },
   "dcatapit": {

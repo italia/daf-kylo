@@ -1,10 +1,10 @@
 # Daf Prestandardization
 
-The goal of this component is to create 
+The goal of this component is to create the methods call plu the need parameters to run the standardization process.
 
-This components, given a dataset name:
+The process is composed by 4 steps:
 
-1. retrieves the list of the transformationSteps to apply from  `Operational.ingestion_pipeline`
+1. to retrieve the list of the transformationSteps to apply from  `Operational.ingestion_pipeline`
 ```yaml
 
   ingestion_pipeline:
@@ -14,7 +14,7 @@ This components, given a dataset name:
       type: string
 ```
 
-2. get all the fields of the dataset plus the semantic annotations from `flatschema`.
+2. to get all the fields of the dataset plus the semantic annotations from `flatschema`.
 
 ```json
 {
@@ -170,27 +170,7 @@ This components, given a dataset name:
 
 ```
 
-3. check if exists a vocabulary for the extracted semantic contexts and get the vocabularies path
+3. based on the transformation to execute fill the need paramaters
 
-4. create the parameters for the spark job
+4. to create an instance of the `Transformations` class with all the information. 
 
-```scala
-
-
-sealed trait Transformation
-//trasnform all the data to UTF-8
-case object Utf8 extends Transformation
-//transform all the empty strings to null
-case object EmptyToNull extends Transformation
-case object DateToISO8601 extends Transformation
-case class NormalizeUrls(columns: List[String]) extends Transformation
-case class VocabularyCheck(column: String, vocabularyPath: String) extends Transformation
-case class Address(column: String) extends Transformation
-
-case object UniqueRowId extends Transformation
-case object GenDateTime extends Transformation
-case object UpdateDateTime extends Transformation
-case class Unknown(value: String) extends Transformation
-```
-
-5. call the spark job processor passing the following parameters
