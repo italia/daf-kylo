@@ -45,7 +45,7 @@ nifi:
 		cp -R ../kylok8s/install/install-tar/target/kylo/setup/nifi/* docker/nifi/dist
 		cp -R ../daf-kylo8s/nifi/extensions/processors/target/*.nar docker/nifi/dist/daf
 		docker build -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
-		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.4.0:1.0.8-SNAPSHOT
+		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.4.0:1.0.13-SNAPSHOT
 		rm -dr docker/nifi/dist
 
 .PHONY: build-kylo
@@ -53,6 +53,7 @@ build-kylo:
 	git clone https://github.com/fabiannecci/kylo.git ../kylok8s | true
 	cd ../kylok8s && \
 	git checkout teamdigitale && \
+	git pull && \
 	mvn clean install -DskipTests && \
 	mkdir install/install-tar/target/kylo && \
 	tar -C install/install-tar/target/kylo -xvf install/install-tar/target/kylo-*-dependencies.tar.gz
@@ -64,4 +65,4 @@ daf-kylo:
     git checkout develop && \
     git pull && \
     cd nifi/extensions && \
-    mvn clean install -DskipTests
+    mvn clean install

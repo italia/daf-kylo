@@ -2,37 +2,16 @@
 <template encoding-version="1.1">
   <description></description>
   <groupId>118869f3-0160-1000-df7f-71a39e685173</groupId>
-  <name>Dataset Transformation</name>
+  <name>Dependet Dataset Transformation</name>
   <snippet>
     <connections>
-      <id>9b5f078e-0e65-3754-0000-000000000000</id>
+      <id>0f1ebaf2-ec67-32a6-0000-000000000000</id>
       <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
       <backPressureDataSizeThreshold>0 MB</backPressureDataSizeThreshold>
       <backPressureObjectThreshold>0</backPressureObjectThreshold>
       <destination>
         <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>bbe0ff22-3363-3d60-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </destination>
-      <flowFileExpiration>0 sec</flowFileExpiration>
-      <labelIndex>1</labelIndex>
-      <name></name>
-      <selectedRelationships>success</selectedRelationships>
-      <source>
-        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>f542bd08-418a-3aac-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </source>
-      <zIndex>0</zIndex>
-    </connections>
-    <connections>
-      <id>af72a16a-9f22-33ec-0000-000000000000</id>
-      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
-      <backPressureDataSizeThreshold>0 MB</backPressureDataSizeThreshold>
-      <backPressureObjectThreshold>0</backPressureObjectThreshold>
-      <destination>
-        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>a5d6a66d-aa19-3b5c-0000-000000000000</id>
+        <id>30321ee5-b638-3229-0000-000000000000</id>
         <type>OUTPUT_PORT</type>
       </destination>
       <flowFileExpiration>0 sec</flowFileExpiration>
@@ -41,17 +20,161 @@
       <selectedRelationships>success</selectedRelationships>
       <source>
         <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>bbe0ff22-3363-3d60-0000-000000000000</id>
+        <id>fbbda5c6-12b1-3d8c-0000-000000000000</id>
         <type>PROCESSOR</type>
       </source>
       <zIndex>0</zIndex>
     </connections>
+    <connections>
+      <id>65acafe9-4ffd-3b6e-0000-000000000000</id>
+      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
+        <id>fbbda5c6-12b1-3d8c-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>Success</selectedRelationships>
+      <source>
+        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
+        <id>36ead409-ff26-3781-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <controllerServices>
+      <id>b9960ea0-dd76-34b3-0000-000000000000</id>
+      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
+      <bundle>
+        <artifact>kylo-nifi-core-service-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
+      </bundle>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>Configuraton Classes</key>
+          <value>
+            <name>Configuraton Classes</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>SpringContextLoaderService</name>
+      <persistsState>false</persistsState>
+      <properties>
+        <entry>
+          <key>Configuraton Classes</key>
+        </entry>
+      </properties>
+      <state>ENABLED</state>
+      <type>com.thinkbiganalytics.nifi.v2.core.spring.SpringContextLoaderService</type>
+    </controllerServices>
+    <controllerServices>
+      <id>fa29e43b-e7be-3f27-0000-000000000000</id>
+      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
+      <bundle>
+        <artifact>kylo-nifi-core-service-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
+      </bundle>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>Spring Context Service</key>
+          <value>
+            <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.spring.SpringContextService</identifiesControllerService>
+            <name>Spring Context Service</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>JmsFeedPreconditionEventService</name>
+      <persistsState>false</persistsState>
+      <properties>
+        <entry>
+          <key>Spring Context Service</key>
+          <value>b9960ea0-dd76-34b3-0000-000000000000</value>
+        </entry>
+      </properties>
+      <state>ENABLED</state>
+      <type>com.thinkbiganalytics.nifi.v2.core.precondition.JmsFeedPreconditionEventService</type>
+    </controllerServices>
+    <controllerServices>
+      <id>63175850-64cc-3631-0000-000000000000</id>
+      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
+      <bundle>
+        <artifact>kylo-nifi-core-service-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
+      </bundle>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>client-password</key>
+          <value>
+            <name>client-password</name>
+          </value>
+        </entry>
+        <entry>
+          <key>SSL Context Service</key>
+          <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>SSL Context Service</name>
+          </value>
+        </entry>
+        <entry>
+          <key>client-username</key>
+          <value>
+            <name>client-username</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Implementation</key>
+          <value>
+            <name>Implementation</name>
+          </value>
+        </entry>
+        <entry>
+          <key>rest-client-url</key>
+          <value>
+            <name>rest-client-url</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>Kylo Metadata Service</name>
+      <persistsState>false</persistsState>
+      <properties>
+        <entry>
+          <key>client-password</key>
+        </entry>
+        <entry>
+          <key>SSL Context Service</key>
+        </entry>
+        <entry>
+          <key>client-username</key>
+          <value>dladmin</value>
+        </entry>
+        <entry>
+          <key>Implementation</key>
+          <value>REMOTE</value>
+        </entry>
+        <entry>
+          <key>rest-client-url</key>
+          <value>http://tba-kylo-ui:8400/proxy/v1/metadata</value>
+        </entry>
+      </properties>
+      <state>ENABLED</state>
+      <type>com.thinkbiganalytics.nifi.v2.core.metadata.MetadataProviderSelectorService</type>
+    </controllerServices>
     <outputPorts>
-      <id>a5d6a66d-aa19-3b5c-0000-000000000000</id>
+      <id>30321ee5-b638-3229-0000-000000000000</id>
       <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
       <position>
-        <x>1685.7079871084243</x>
-        <y>31.2940156631048</y>
+        <x>1421.6310850069917</x>
+        <y>31.662920129214854</y>
       </position>
       <comments></comments>
       <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
@@ -61,11 +184,11 @@
       <type>OUTPUT_PORT</type>
     </outputPorts>
     <processors>
-      <id>bbe0ff22-3363-3d60-0000-000000000000</id>
+      <id>fbbda5c6-12b1-3d8c-0000-000000000000</id>
       <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
       <position>
-        <x>865.7661895751953</x>
-        <y>0.5752209472657341</y>
+        <x>601.6892874737628</x>
+        <y>0.9441254133757866</y>
       </position>
       <bundle>
         <artifact>nifi-update-attribute-nar</artifact>
@@ -336,16 +459,16 @@
       <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
     </processors>
     <processors>
-      <id>f542bd08-418a-3aac-0000-000000000000</id>
+      <id>36ead409-ff26-3781-0000-000000000000</id>
       <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
       <position>
         <x>0.0</x>
         <y>0.0</y>
       </position>
       <bundle>
-        <artifact>nifi-standard-nar</artifact>
-        <group>org.apache.nifi</group>
-        <version>1.4.0</version>
+        <artifact>kylo-nifi-core-v1-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
       </bundle>
       <config>
         <bulletinLevel>WARN</bulletinLevel>
@@ -353,39 +476,35 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>character-set</key>
+            <key>System feed category</key>
             <value>
-              <name>character-set</name>
+              <name>System feed category</name>
             </value>
           </entry>
           <entry>
-            <key>File Size</key>
+            <key>Matching Execution Context Keys</key>
             <value>
-              <name>File Size</name>
+              <name>Matching Execution Context Keys</name>
             </value>
           </entry>
           <entry>
-            <key>generate-ff-custom-text</key>
+            <key>Feed Precondition Event Service</key>
             <value>
-              <name>generate-ff-custom-text</name>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.precondition.FeedPreconditionEventService</identifiesControllerService>
+              <name>Feed Precondition Event Service</name>
             </value>
           </entry>
           <entry>
-            <key>Batch Size</key>
+            <key>System feed name</key>
             <value>
-              <name>Batch Size</name>
+              <name>System feed name</name>
             </value>
           </entry>
           <entry>
-            <key>Unique FlowFiles</key>
+            <key>Metadata Service</key>
             <value>
-              <name>Unique FlowFiles</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Data Format</key>
-            <value>
-              <name>Data Format</name>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
+              <name>Metadata Service</name>
             </value>
           </entry>
         </descriptors>
@@ -394,43 +513,40 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>character-set</key>
-            <value>UTF-8</value>
+            <key>System feed category</key>
+            <value>${metadata.category.systemName}</value>
           </entry>
           <entry>
-            <key>File Size</key>
-            <value>0 B</value>
+            <key>Matching Execution Context Keys</key>
+            <value>export.kylo</value>
           </entry>
           <entry>
-            <key>generate-ff-custom-text</key>
+            <key>Feed Precondition Event Service</key>
+            <value>fa29e43b-e7be-3f27-0000-000000000000</value>
           </entry>
           <entry>
-            <key>Batch Size</key>
-            <value>1</value>
+            <key>System feed name</key>
+            <value>${metadata.systemFeedName}</value>
           </entry>
           <entry>
-            <key>Unique FlowFiles</key>
-            <value>false</value>
-          </entry>
-          <entry>
-            <key>Data Format</key>
-            <value>Binary</value>
+            <key>Metadata Service</key>
+            <value>63175850-64cc-3631-0000-000000000000</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
-        <schedulingPeriod>1 hr</schedulingPeriod>
+        <schedulingPeriod>0 sec</schedulingPeriod>
         <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
         <yieldDuration>1 sec</yieldDuration>
       </config>
-      <name>Run Feed</name>
+      <name>TriggerFeed</name>
       <relationships>
         <autoTerminate>false</autoTerminate>
-        <name>success</name>
+        <name>Success</name>
       </relationships>
       <state>STOPPED</state>
       <style></style>
-      <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+      <type>com.thinkbiganalytics.nifi.v2.metadata.TriggerFeed</type>
     </processors>
   </snippet>
-  <timestamp>02/06/2018 12:02:02 GMT</timestamp>
+  <timestamp>02/07/2018 09:55:10 GMT</timestamp>
 </template>

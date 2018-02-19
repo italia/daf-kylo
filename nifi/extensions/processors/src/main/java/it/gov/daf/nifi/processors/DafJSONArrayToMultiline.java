@@ -1,10 +1,11 @@
 package it.gov.daf.nifi.processors;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonToken;
+import com.fasterxml.jackson.core.TreeNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 
-import org.apache.commons.io.IOUtils;
 import org.apache.nifi.annotation.behavior.EventDriven;
 import org.apache.nifi.annotation.behavior.InputRequirement;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
@@ -21,8 +22,6 @@ import org.apache.nifi.processor.exception.ProcessException;
 
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
-import java.io.StringReader;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -89,39 +88,60 @@ public class DafJSONArrayToMultiline extends AbstractProcessor {
 
         final ComponentLog logger = getLogger();
         final AtomicBoolean valid = new AtomicBoolean(true);
+        final AtomicBoolean isArray = new AtomicBoolean(true);
         final ObjectMapper objectMapper = new ObjectMapper();
+        final JsonFactory jsonFactory = new JsonFactory(objectMapper);
 
-        flowFile = session.write(flowFile, (in, out) -> {
+        session.read(flowFile, in -> {
             try {
-                String json = IOUtils.toString(in, StandardCharsets.UTF_8);
-                JsonNode jsonNode = objectMapper.readTree(json);
-                if (jsonNode.isArray()) {
-                    ArrayNode arrayNode = (ArrayNode) jsonNode;
-                    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(out));
-                    for (JsonNode anArrayNode : arrayNode) {
-                        bw.write(anArrayNode.toString());
-                        bw.newLine();
-                    }
-                    bw.flush();
-                } else {
-                    IOUtils.copy(new StringReader(json), out);
+                JsonParser jsonParser = jsonFactory.createParser(in);
+                JsonToken jsonToken = jsonParser.nextToken();
+                if (jsonToken != JsonToken.START_ARRAY) {
+                    isArray.set(false);
                 }
             } catch (Exception e) {
-                in.reset();
-                IOUtils.copy(in, out);
+                logger.error("Error parsing JSON", e);
                 valid.set(false);
             }
         });
 
-        if (valid.get()) {
-            logger.debug("Successfully validated {} against schema; routing to 'valid'", new Object[]{flowFile});
-            session.getProvenanceReporter().route(flowFile, REL_SUCCESS);
-            session.transfer(flowFile, REL_SUCCESS);
-        } else {
-            logger.debug("Failed to validate {} against schema; routing to 'invalid'", new Object[]{flowFile});
-            session.getProvenanceReporter().route(flowFile, REL_FAILURE);
-            session.transfer(flowFile, REL_FAILURE);
+        if (valid.get() && isArray.get()) {
+            FlowFile computedFlowFile = session.write(flowFile, (in, out) -> {
+                try {
+                    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(out));
+                    JsonParser jsonParser = jsonFactory.createParser(in);
+                    JsonToken jsonToken = jsonParser.nextToken();
+                    if (jsonToken == JsonToken.START_ARRAY) {
+                        while (jsonParser.nextToken() != JsonToken.END_ARRAY) {
+                            TreeNode treeNode = jsonParser.readValueAsTree();
+                            bw.write(treeNode.toString());
+                            bw.newLine();
+                        }
+                        bw.close();
+                    } else {
+                        isArray.set(false);
+                    }
+                } catch (Exception e) {
+                    logger.error("Error parsing JSON", e);
+                    valid.set(false);
+                }
+            });
+
+            if (valid.get()) {
+                logger.debug("Successfully splitted Array {}; routing to 'valid'", new Object[]{flowFile});
+                session.getProvenanceReporter().route(computedFlowFile, REL_SUCCESS);
+                session.transfer(computedFlowFile, REL_SUCCESS);
+            }
         }
 
+        if (!valid.get()) {
+            logger.debug("Failed to validate {}; routing to 'invalid'", new Object[]{flowFile});
+            session.getProvenanceReporter().route(flowFile, REL_FAILURE);
+            session.transfer(flowFile, REL_FAILURE);
+        } else if (!isArray.get()) {
+            logger.debug("JSON is not an Array {}; routing to 'valid'", new Object[]{flowFile});
+            session.getProvenanceReporter().route(flowFile, REL_SUCCESS);
+            session.transfer(flowFile, REL_SUCCESS);
+        }
     }
 }

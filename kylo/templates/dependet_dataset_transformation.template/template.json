@@ -38,9 +38,79 @@
   "properties": [
     {
       "processGroupName": "NiFi Flow",
+      "processorName": "TriggerFeed",
+      "processorId": "36ead409-ff26-3781-a2d7-356d94db5e73",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
+      "processorType": "com.thinkbiganalytics.nifi.v2.metadata.TriggerFeed",
+      "key": "System feed category",
+      "value": "${metadata.category.systemName}",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "System feed category",
+        "displayName": "System feed category",
+        "description": "System category of the feed this processor supports",
+        "defaultValue": "${metadata.category.systemName}",
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": "${metadata.category.systemName}",
+      "userEditable": false,
+      "renderType": "text",
+      "renderOptions": {},
+      "selected": true,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-TriggerFeed-System feed category",
+      "processorNameTypeKey": "TriggerFeed-com.thinkbiganalytics.nifi.v2.metadata.TriggerFeed-System feed category",
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-36ead409-ff26-3781-a2d7-356d94db5e73-System feed category"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "TriggerFeed",
+      "processorId": "36ead409-ff26-3781-a2d7-356d94db5e73",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
+      "processorType": "com.thinkbiganalytics.nifi.v2.metadata.TriggerFeed",
+      "key": "System feed name",
+      "value": "${metadata.systemFeedName}",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "System feed name",
+        "displayName": "System feed name",
+        "description": "Name of feed this processor supports",
+        "defaultValue": "${metadata.systemFeedName}",
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": "${metadata.systemFeedName}",
+      "userEditable": false,
+      "renderType": "text",
+      "renderOptions": {},
+      "selected": true,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-TriggerFeed-System feed name",
+      "processorNameTypeKey": "TriggerFeed-com.thinkbiganalytics.nifi.v2.metadata.TriggerFeed-System feed name",
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-36ead409-ff26-3781-a2d7-356d94db5e73-System feed name"
+    },
+    {
+      "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "category",
       "value": "${metadata.category.systemName}",
@@ -69,13 +139,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-category",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-category",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-category"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-category"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "feed",
       "value": "${metadata.systemFeedName}",
@@ -104,13 +174,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-feed",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-feed",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-feed"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-feed"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "hdfs.ingest.root",
       "value": "${config.hdfs.ingest.root}",
@@ -139,13 +209,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-hdfs.ingest.root",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hdfs.ingest.root",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-hdfs.ingest.root"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-hdfs.ingest.root"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "hive.ingest.root",
       "value": "${config.hive.ingest.root}",
@@ -174,13 +244,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-hive.ingest.root",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.ingest.root",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-hive.ingest.root"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-hive.ingest.root"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "hive.master.root",
       "value": "${config.hive.master.root}",
@@ -209,13 +279,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-hive.master.root",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.master.root",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-hive.master.root"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-hive.master.root"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.dataTransformation.dataTransformScript",
       "value": "${metadata.dataTransformation.dataTransformScript}",
@@ -244,13 +314,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-metadata.dataTransformation.dataTransformScript",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.dataTransformation.dataTransformScript",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.dataTransformation.dataTransformScript"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.dataTransformation.dataTransformScript"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.dataTransformation.datasourceIds",
       "value": "${metadata.dataTransformation.datasourceIds}",
@@ -279,13 +349,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-metadata.dataTransformation.datasourceIds",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.dataTransformation.datasourceIds",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.dataTransformation.datasourceIds"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.dataTransformation.datasourceIds"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.feedFieldStructure",
       "value": "${metadata.table.feedFieldStructure}",
@@ -314,13 +384,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-metadata.table.feedFieldStructure",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.feedFieldStructure",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.feedFieldStructure"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.feedFieldStructure"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.fieldIndexString",
       "value": "${metadata.table.fieldIndexString}",
@@ -349,13 +419,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-metadata.table.fieldIndexString",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldIndexString",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.fieldIndexString"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.fieldIndexString"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.fieldPoliciesJson",
       "value": "${metadata.table.fieldPoliciesJson}",
@@ -384,13 +454,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-metadata.table.fieldPoliciesJson",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldPoliciesJson",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.fieldPoliciesJson"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.fieldPoliciesJson"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.fieldStructure",
       "value": "${metadata.table.fieldStructure}",
@@ -419,13 +489,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-metadata.table.fieldStructure",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldStructure",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.fieldStructure"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.fieldStructure"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.partitionSpecs",
       "value": "${metadata.table.partitionSpecs}",
@@ -454,13 +524,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-metadata.table.partitionSpecs",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionSpecs",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.partitionSpecs"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.partitionSpecs"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.partitionStructure",
       "value": "${metadata.table.partitionStructure}",
@@ -489,13 +559,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-metadata.table.partitionStructure",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionStructure",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.partitionStructure"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.partitionStructure"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.targetFormat",
       "value": "${metadata.table.targetFormat}",
@@ -524,13 +594,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-metadata.table.targetFormat",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetFormat",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.targetFormat"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.targetFormat"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.targetMergeStrategy",
       "value": "${metadata.table.targetMergeStrategy}",
@@ -559,13 +629,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-metadata.table.targetMergeStrategy",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetMergeStrategy",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.targetMergeStrategy"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.targetMergeStrategy"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "metadata.table.targetTblProperties",
       "value": "${metadata.table.targetTblProperties}",
@@ -594,13 +664,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-metadata.table.targetTblProperties",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetTblProperties",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.targetTblProperties"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.targetTblProperties"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "nifi.home",
       "value": "${config.nifi.home}",
@@ -629,13 +699,13 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-nifi.home",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-nifi.home",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-nifi.home"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-nifi.home"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update flow parameters",
-      "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-      "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+      "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "spark.version",
       "value": "${config.spark.version}",
@@ -664,7 +734,7 @@
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update flow parameters-spark.version",
       "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-spark.version",
-      "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-spark.version"
+      "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-spark.version"
     }
   ],
   "nonInputProcessors": [
@@ -673,8 +743,8 @@
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "category",
           "value": "${metadata.category.systemName}",
@@ -703,13 +773,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-category",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-category",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-category"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-category"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "feed",
           "value": "${metadata.systemFeedName}",
@@ -738,13 +808,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-feed",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-feed",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-feed"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-feed"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "hdfs.ingest.root",
           "value": "${config.hdfs.ingest.root}",
@@ -773,13 +843,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-hdfs.ingest.root",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hdfs.ingest.root",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-hdfs.ingest.root"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-hdfs.ingest.root"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "hive.ingest.root",
           "value": "${config.hive.ingest.root}",
@@ -808,13 +878,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-hive.ingest.root",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.ingest.root",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-hive.ingest.root"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-hive.ingest.root"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "hive.master.root",
           "value": "${config.hive.master.root}",
@@ -843,13 +913,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-hive.master.root",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.master.root",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-hive.master.root"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-hive.master.root"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.dataTransformation.dataTransformScript",
           "value": "${metadata.dataTransformation.dataTransformScript}",
@@ -878,13 +948,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-metadata.dataTransformation.dataTransformScript",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.dataTransformation.dataTransformScript",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.dataTransformation.dataTransformScript"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.dataTransformation.dataTransformScript"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.dataTransformation.datasourceIds",
           "value": "${metadata.dataTransformation.datasourceIds}",
@@ -913,13 +983,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-metadata.dataTransformation.datasourceIds",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.dataTransformation.datasourceIds",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.dataTransformation.datasourceIds"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.dataTransformation.datasourceIds"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.feedFieldStructure",
           "value": "${metadata.table.feedFieldStructure}",
@@ -948,13 +1018,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-metadata.table.feedFieldStructure",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.feedFieldStructure",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.feedFieldStructure"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.feedFieldStructure"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.fieldIndexString",
           "value": "${metadata.table.fieldIndexString}",
@@ -983,13 +1053,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-metadata.table.fieldIndexString",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldIndexString",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.fieldIndexString"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.fieldIndexString"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.fieldPoliciesJson",
           "value": "${metadata.table.fieldPoliciesJson}",
@@ -1018,13 +1088,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-metadata.table.fieldPoliciesJson",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldPoliciesJson",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.fieldPoliciesJson"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.fieldPoliciesJson"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.fieldStructure",
           "value": "${metadata.table.fieldStructure}",
@@ -1053,13 +1123,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-metadata.table.fieldStructure",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldStructure",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.fieldStructure"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.fieldStructure"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.partitionSpecs",
           "value": "${metadata.table.partitionSpecs}",
@@ -1088,13 +1158,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-metadata.table.partitionSpecs",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionSpecs",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.partitionSpecs"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.partitionSpecs"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.partitionStructure",
           "value": "${metadata.table.partitionStructure}",
@@ -1123,13 +1193,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-metadata.table.partitionStructure",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionStructure",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.partitionStructure"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.partitionStructure"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.targetFormat",
           "value": "${metadata.table.targetFormat}",
@@ -1158,13 +1228,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-metadata.table.targetFormat",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetFormat",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.targetFormat"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.targetFormat"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.targetMergeStrategy",
           "value": "${metadata.table.targetMergeStrategy}",
@@ -1193,13 +1263,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-metadata.table.targetMergeStrategy",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetMergeStrategy",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.targetMergeStrategy"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.targetMergeStrategy"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "metadata.table.targetTblProperties",
           "value": "${metadata.table.targetTblProperties}",
@@ -1228,13 +1298,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-metadata.table.targetTblProperties",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetTblProperties",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-metadata.table.targetTblProperties"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-metadata.table.targetTblProperties"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "nifi.home",
           "value": "${config.nifi.home}",
@@ -1263,13 +1333,13 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-nifi.home",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-nifi.home",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-nifi.home"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-nifi.home"
         },
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update flow parameters",
-          "processorId": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
-          "processGroupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+          "processorId": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
           "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
           "key": "spark.version",
           "value": "${config.spark.version}",
@@ -1298,26 +1368,108 @@
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update flow parameters-spark.version",
           "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-spark.version",
-          "idKey": "39b53de7-3812-1f4d-6753-2dd939779db2-bbe0ff22-3363-3d60-966d-2af3a98da6c2-spark.version"
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-fbbda5c6-12b1-3d8c-298e-d6a22f9b928e-spark.version"
         }
       ],
       "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "name": "Update flow parameters",
-      "id": "bbe0ff22-3363-3d60-966d-2af3a98da6c2",
+      "id": "fbbda5c6-12b1-3d8c-298e-d6a22f9b928e",
       "groupName": "NiFi Flow",
-      "groupId": "39b53de7-3812-1f4d-6753-2dd939779db2",
+      "groupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
       "inputProcessor": false,
       "userDefinedInputProcessor": false
     }
   ],
-  "inputProcessors": [],
-  "id": "d318502f-6c9d-4584-91a1-5586231dcdf3",
-  "nifiTemplateId": "cb552baa-2fd5-40af-93bd-96e4e935b2eb",
-  "templateName": "Dataset Transformation",
-  "updateDate": 1518600719252,
-  "createDate": 1517918789742,
+  "inputProcessors": [
+    {
+      "properties": [
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "TriggerFeed",
+          "processorId": "36ead409-ff26-3781-a2d7-356d94db5e73",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
+          "processorType": "com.thinkbiganalytics.nifi.v2.metadata.TriggerFeed",
+          "key": "System feed category",
+          "value": "${metadata.category.systemName}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "System feed category",
+            "displayName": "System feed category",
+            "description": "System category of the feed this processor supports",
+            "defaultValue": "${metadata.category.systemName}",
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.category.systemName}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": true,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-TriggerFeed-System feed category",
+          "processorNameTypeKey": "TriggerFeed-com.thinkbiganalytics.nifi.v2.metadata.TriggerFeed-System feed category",
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-36ead409-ff26-3781-a2d7-356d94db5e73-System feed category"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "TriggerFeed",
+          "processorId": "36ead409-ff26-3781-a2d7-356d94db5e73",
+          "processGroupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
+          "processorType": "com.thinkbiganalytics.nifi.v2.metadata.TriggerFeed",
+          "key": "System feed name",
+          "value": "${metadata.systemFeedName}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "System feed name",
+            "displayName": "System feed name",
+            "description": "Name of feed this processor supports",
+            "defaultValue": "${metadata.systemFeedName}",
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.systemFeedName}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": true,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-TriggerFeed-System feed name",
+          "processorNameTypeKey": "TriggerFeed-com.thinkbiganalytics.nifi.v2.metadata.TriggerFeed-System feed name",
+          "idKey": "53403989-1a99-1bfd-52ea-61ec769b47d7-36ead409-ff26-3781-a2d7-356d94db5e73-System feed name"
+        }
+      ],
+      "type": "com.thinkbiganalytics.nifi.v2.metadata.TriggerFeed",
+      "name": "TriggerFeed",
+      "id": "36ead409-ff26-3781-a2d7-356d94db5e73",
+      "groupName": "NiFi Flow",
+      "groupId": "53403989-1a99-1bfd-52ea-61ec769b47d7",
+      "inputProcessor": true,
+      "userDefinedInputProcessor": false
+    }
+  ],
+  "id": "06c726a1-98c4-4724-bfce-c49a42337823",
+  "nifiTemplateId": "7e1fb70d-f320-416d-b7cf-07942bb30303",
+  "templateName": "Dependet Dataset Transformation",
+  "updateDate": 1518600741009,
+  "createDate": 1517998961822,
   "icon": "polymer",
-  "iconColor": "#AB47BC",
+  "iconColor": "#66BB6A",
   "description": null,
   "state": "ENABLED",
   "defineTable": false,
@@ -1348,13 +1500,13 @@
       }
     }
   ],
-  "order": 2,
+  "order": 3,
   "templateOrder": null,
-  "feedsCount": 2,
+  "feedsCount": 0,
   "templateTableOption": "DATA_TRANSFORMATION",
   "timeBetweenStartingBatchJobs": 1000,
   "stream": false,
-  "allowPreconditions": false,
+  "allowPreconditions": true,
   "dataTransformation": true,
   "isStream": false
 }
