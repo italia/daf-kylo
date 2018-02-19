@@ -82,7 +82,7 @@ data:
     ###  - For NiFi 1.0.x:                      nifi-v1
     ###  - For NiFi 1.1.x:                      nifi-v1.1
     ###  - For NiFi 1.2.x or 1.3.x or 1.4.x:    nifi-v1.2
-    spring.profiles.include=native,nifi-v1.2,auth-spark,auth-kylo,auth-file,search-esr,jms-activemq
+    spring.profiles.include=native,nifi-v1.2,auth-spark,auth-ldap,search-esr,jms-activemq
 
 
 
@@ -146,14 +146,13 @@ data:
     ## auth-ldap: If this profile is active then these properties should uncommented and updated appropriately
 
     security.auth.ldap.server.uri=ldap://idm.daf.gov.it:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
-    #security.auth.ldap.server.authDn=uid=francisco,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
-    #security.auth.ldap.server.password=xxxxxx
+    security.auth.ldap.server.authDn=uid=admin,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxxx
     ### user DN patterns are separated by '|'
     security.auth.ldap.authenticator.userDnPatterns=uid={0}
-    #security.auth.ldap.authenticator.userDnPatterns=uid={0},ou=people
-    #security.auth.ldap.user.enableGroups=true
-    #security.auth.ldap.user.groupNameAttr=cn
-    #security.auth.ldap.user.groupsBase=cn=groups,cn=accounts
+    security.auth.ldap.user.enableGroups=true
+    security.auth.ldap.user.groupNameAttr=member
+    security.auth.ldap.user.groupsBase=cn=groups,cn=accounts,dc=daf,dc=gov,dc=it
 
     ## auth-ad: If this profile is active then these properties should uncommented and updated appropriately
 
@@ -739,6 +738,7 @@ data:
     ##log4j.logger.org.modeshape.jcr.clustering.ClusteringService=DEBUG
     ##log4j.logger.org.jgroups=DEBUG
     ##log4j.logger.org.hibernate.SQL=DEBUG
+    log4j.logger.org.springframework.security.ldap=DEBUG
 
     # Direct log messages to a log file
     log4j.appender.file=org.apache.log4j.DailyRollingFileAppender
@@ -746,7 +746,7 @@ data:
     log4j.appender.file.File=/var/log/kylo-services/kylo-services.log
     log4j.appender.file.append=true
     log4j.appender.file.layout=org.apache.log4j.PatternLayout
-    log4j.appender.file.Threshold=INFO
+    log4j.appender.file.Threshold=DEBUG
     log4j.appender.file.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %t:%c{1}:%L - %m%n
   log4j-spark.properties: |-
     ###

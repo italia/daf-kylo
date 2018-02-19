@@ -62,8 +62,8 @@ data:
     #
 
     #Default profile
-    spring.profiles.active=native,auth-kylo,auth-file
-    #spring.profiles.active=native,auth-kylo,auth-ldap
+    #spring.profiles.active=native,auth-kylo,auth-file
+    spring.profiles.active=native,auth-kylo-groups,auth-ldap
 
 
     ###
@@ -96,15 +96,13 @@ data:
     ## auth-ldap: If this profile is active then these properties should uncommented and updated appropriately
 
     security.auth.ldap.server.uri=ldap://idm.daf.gov.it:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
-    #security.auth.ldap.server.authDn=uid=francisco,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
-    ## These remaining properties are optional
-    #security.auth.ldap.server.password=xxxxxxxx
-    security.auth.ldap.authenticator.userDnPatterns=uid={0}
-    #security.auth.ldap.authenticator.userDnPatterns=uid={0}
+    security.auth.ldap.server.authDn=uid=admin,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxxxx
     ### user DN patterns are separated by '|'
-    #security.auth.ldap.user.enableGroups=true
-    #security.auth.ldap.user.groupNameAttr=cn
-    #security.auth.ldap.user.groupsBase=cn=groups,cn=accounts
+    security.auth.ldap.authenticator.userDnPatterns=uid={0}
+    security.auth.ldap.user.enableGroups=true
+    security.auth.ldap.user.groupNameAttr=member
+    security.auth.ldap.user.groupsBase=cn=groups,cn=accounts,dc=daf,dc=gov,dc=it
 
 
     ## auth-ad: If this profile is active then these properties should uncommented and updated appropriately
