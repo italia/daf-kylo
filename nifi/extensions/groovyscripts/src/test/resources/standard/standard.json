@@ -48,7 +48,7 @@
           },
           "geographicPositionMethod": "",
           "refSystem": "",
-          "geometryType": "",
+          "geometryType": "Point/Polygon",
           "point": {
             "lat": "",
             "lon": "",
