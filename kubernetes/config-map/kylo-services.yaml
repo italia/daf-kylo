@@ -82,7 +82,7 @@ data:
     ###  - For NiFi 1.0.x:                      nifi-v1
     ###  - For NiFi 1.1.x:                      nifi-v1.1
     ###  - For NiFi 1.2.x or 1.3.x or 1.4.x:    nifi-v1.2
-    spring.profiles.include=native,nifi-v1.2,auth-spark,auth-kylo,auth-file,search-esr,jms-activemq
+    spring.profiles.include=native,nifi-v1.2,auth-spark,auth-kylo,auth-ldap,search-esr,jms-activemq
 
 
 
@@ -146,14 +146,13 @@ data:
     ## auth-ldap: If this profile is active then these properties should uncommented and updated appropriately
 
     security.auth.ldap.server.uri=ldap://idm.daf.gov.it:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
-    #security.auth.ldap.server.authDn=uid=francisco,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
-    #security.auth.ldap.server.password=xxxxxx
+    security.auth.ldap.server.authDn=uid=admin,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxxx
     ### user DN patterns are separated by '|'
     security.auth.ldap.authenticator.userDnPatterns=uid={0}
-    #security.auth.ldap.authenticator.userDnPatterns=uid={0},ou=people
-    #security.auth.ldap.user.enableGroups=true
-    #security.auth.ldap.user.groupNameAttr=cn
-    #security.auth.ldap.user.groupsBase=cn=groups,cn=accounts
+    security.auth.ldap.user.enableGroups=false
+    security.auth.ldap.user.groupNameAttr=member
+    security.auth.ldap.user.groupsBase=cn=groups,cn=accounts,dc=daf,dc=gov,dc=it
 
     ## auth-ad: If this profile is active then these properties should uncommented and updated appropriately
 
@@ -290,14 +289,14 @@ data:
     config.metadata.url=http://kylo-ui:8400/proxy/v1/metadata
 
     ## Spark configuration
-    nifi.executesparkjob.sparkhome=/opt/cloudera/parcels/SPARK2/lib/spark2
+    nifi.executesparkjob.sparkhome=/opt/cloudera/parcels/CDH/lib/spark
     nifi.executesparkjob.sparkmaster=yarn
     nifi.executesparkjob.driver_memory=1024m
     nifi.executesparkjob.number_of_executors=1
     nifi.executesparkjob.executor_cores=1
     ##comment the line below on cloudera
     #config.spark.validateAndSplitRecords.extraJars=/usr/hdp/current/hive-webhcat/share/hcatalog/hive-hcatalog-core.jar
-    config.spark.version=2
+    config.spark.version=1
 
     ## Specify to override the default HDFS locations for feed tables and multi-tenancy.
 
@@ -403,8 +402,8 @@ data:
     nifi.service.hive_thrift_service.database_user=root
     nifi.service.hive_thrift_service.password=hadoop
 
-    nifi.executesparkjob[validate_and_split_records].extra_jars=/usr/nifi/drivers/mariadb-java-client-2.1.0.jar
-    nifi.executesparkjob[profile_data].extra_jars=/usr/nifi/drivers/mariadb-java-client-2.1.0.jar
+    nifi.executesparkjob[validate_and_split_records].extra_jars=/opt/cloudera/parcels/CDH/lib/hive-hcatalog/share/hcatalog/hive-hcatalog-core.jar,/usr/nifi/drivers/mariadb-java-client-2.1.0.jar
+    nifi.executesparkjob[profile_data].extra_jars=/opt/cloudera/parcels/CDH/lib/hive-hcatalog/share/hcatalog/hive-hcatalog-core.jar,/usr/nifi/drivers/mariadb-java-client-2.1.0.jar
 
     nifi.executesparkjob[validate_and_split_records].spark_configurations=spark.default.parallelism=4
     nifi.executesparkjob[profile_data].spark_configurations=spark.default.parallelism=4
@@ -676,7 +675,7 @@ data:
     # #L%
     ###
     # Elasticsearch (rest client) configuration
-    search.rest.host=tba-elasticsearch
+    search.rest.host=master.elasticsearch.daf.gov.it
     search.rest.port=9200
 
 
@@ -704,7 +703,7 @@ data:
     # #L%
     ###
     # Elasticsearch configuration
-    search.host=tba-elasticsearch
+    search.host=master.elasticsearch.daf.gov.it
     search.clusterName=demo-cluster
     search.restPort=9200
     search.transportPort=9300
@@ -746,7 +745,7 @@ data:
     log4j.appender.file.File=/var/log/kylo-services/kylo-services.log
     log4j.appender.file.append=true
     log4j.appender.file.layout=org.apache.log4j.PatternLayout
-    log4j.appender.file.Threshold=INFO
+    log4j.appender.file.Threshold=DEBUG
     log4j.appender.file.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %t:%c{1}:%L - %m%n
   log4j-spark.properties: |-
     ###

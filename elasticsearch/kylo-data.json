@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "hive-data": {
+      "properties": {
+        "timestamp": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss.SSS"
+        },
+        "datetime": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss.SSS"
+        }
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "number_of_shards": "5",
+      "number_of_replicas": "2"
+    }
+  }
+}

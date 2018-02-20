@@ -12,9 +12,9 @@
 | Elasticsearch 	| 5.6.4 	|
 | MariaDB		      | 10.3 		|
 | Spark			      | 2.2.0		|
-| Kylo-Services		| 8.3.3		|
-| Kylo-UI     		| 8.3.3		|
-| NiFi		        | 1.3.0		|
+| Kylo-Services		| 8.4.0		|
+| Kylo-UI     		| 8.4.0		|
+| NiFi		        | 1.4.0		|
 
 ### Install required dependencies
 
@@ -27,6 +27,7 @@ brew install kubectl rpm make git
 In order to be able to build most of Docker images kylo code will be required (source and compiled). To get this run:
 
 ```
+make daf-kylo
 make build-kylo
 ```
 
@@ -40,7 +41,6 @@ Once this is completed build every image:
 make activemq
 make elasticsearch
 make mysql
-make kylo-spark
 make kylo-services
 make kylo-ui
 make nifi

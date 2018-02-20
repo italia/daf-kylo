@@ -13,8 +13,8 @@
   ],
   "securityGroups": [],
   "schedule": {
-    "schedulingPeriod": "10 sec",
-    "schedulingStrategy": "TIMER_DRIVEN",
+    "schedulingPeriod": "{DAF_SCHEDULING_INTERVAL_OR_CRON}",
+    "schedulingStrategy": "{DAF_SCHEDULING_STRATEGY}",
     "concurrentTasks": 1,
     "schedulingStrategyTouched": true
   },
@@ -38,7 +38,7 @@
     "method": "SAMPLE_FILE",
     "existingTableName": null,
     "structured": false,
-    "targetMergeStrategy": "DEDUPE_AND_MERGE",
+    "targetMergeStrategy": "{DAF_MERGE_STRATEGY}",
     "feedFormat": "{DAF_PARSER.hiveFormat}",
     "targetFormat": "STORED AS PARQUET",
     "fieldPolicies": [
@@ -104,10 +104,24 @@
         "missingName": false,
         "missingValue": false
       }
+    },
+    {
+      "description": null,
+      "displayName": null,
+      "locked": false,
+      "order": 2,
+      "required": true,
+      "systemName": "daf_format",
+      "value": "{DAF_FORMAT}",
+      "$error": {
+        "duplicate": false,
+        "missingName": false,
+        "missingValue": false
+      }
     }
   ],
   "options": {
-    "skipHeader": true
+    "skipHeader": {DAF_SKIPHEADER}
   },
   "active": true
 }

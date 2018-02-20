@@ -1,0 +1,2277 @@
+{
+  "feedMetadata": {
+    "owner": {
+      "displayName": "Data Lake Administrator",
+      "email": null,
+      "enabled": true,
+      "groups": [
+        "admin",
+        "user"
+      ],
+      "systemName": "dladmin"
+    },
+    "allowedActions": {
+      "actions": [
+        {
+          "systemName": "accessFeed",
+          "actions": [
+            {
+              "systemName": "editFeedSummary"
+            },
+            {
+              "systemName": "accessFeedDetails",
+              "actions": [
+                {
+                  "systemName": "editFeedDetails"
+                },
+                {
+                  "systemName": "deleteFeed"
+                },
+                {
+                  "systemName": "enableFeed"
+                },
+                {
+                  "systemName": "exportFeed"
+                }
+              ]
+            },
+            {
+              "systemName": "accessFeedOperations"
+            },
+            {
+              "systemName": "changeFeedPermissions"
+            }
+          ]
+        }
+      ]
+    },
+    "id": "a1beaf70-7bd9-40d6-8549-4e1b31722471",
+    "feedId": "a1beaf70-7bd9-40d6-8549-4e1b31722471",
+    "templateId": "d318502f-6c9d-4584-91a1-5586231dcdf3",
+    "inputProcessorType": "org.apache.nifi.processors.standard.GenerateFlowFile",
+    "inputProcessorName": "Run Feed",
+    "templateName": "Dataset Transformation",
+    "schedule": {
+      "processorId": null,
+      "schedulingPeriod": "0 0 12 1/1 * ? *",
+      "schedulingStrategy": "CRON_DRIVEN",
+      "concurrentTasks": 1,
+      "executionNode": null,
+      "preconditions": null
+    },
+    "feedName": "cdc_o_apm_derived",
+    "systemFeedName": "cdc_o_apm_derived",
+    "category": {
+      "owner": null,
+      "allowedActions": null,
+      "roleMemberships": [],
+      "feedRoleMemberships": [],
+      "id": "efa020e6-696a-42f8-93e2-01c7eb9ceb6b",
+      "name": "transformation_test",
+      "systemName": "transformation_test",
+      "icon": null,
+      "iconColor": null,
+      "description": null,
+      "securityGroups": null,
+      "userFields": null,
+      "userProperties": null,
+      "relatedFeeds": 0,
+      "createDate": 1517392151960,
+      "updateDate": 1518088627181
+    },
+    "table": {
+      "fieldStructure": "application|string||0|0|0|application\nfailures_total|double||0|0|0|failures_total\ndatetime|timestamp||0|0|0|datetime",
+      "existingTableName": "",
+      "tableSchema": {
+        "name": "cdc_o_apm_derived",
+        "description": null,
+        "charset": null,
+        "properties": {},
+        "fields": [
+          {
+            "sampleValues": [],
+            "name": "application",
+            "description": null,
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": false,
+            "modifiable": true,
+            "dataTypeDescriptor": null,
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [],
+            "name": "failures_total",
+            "description": null,
+            "nativeDataType": null,
+            "derivedDataType": "double",
+            "primaryKey": false,
+            "nullable": false,
+            "modifiable": true,
+            "dataTypeDescriptor": null,
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "double",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [],
+            "name": "datetime",
+            "description": null,
+            "nativeDataType": null,
+            "derivedDataType": "timestamp",
+            "primaryKey": false,
+            "nullable": false,
+            "modifiable": true,
+            "dataTypeDescriptor": null,
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "timestamp",
+            "descriptionWithoutNewLines": ""
+          }
+        ],
+        "schemaName": null,
+        "databaseName": null,
+        "id": "cfedd12e-c013-49ae-b7b7-6ea37e7d1231"
+      },
+      "sourceTableSchema": {
+        "name": "NA",
+        "description": null,
+        "charset": null,
+        "properties": {},
+        "fields": [
+          {
+            "sampleValues": [],
+            "name": "application",
+            "description": null,
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": false,
+            "modifiable": true,
+            "dataTypeDescriptor": null,
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [],
+            "name": "failures_total",
+            "description": null,
+            "nativeDataType": null,
+            "derivedDataType": "double",
+            "primaryKey": false,
+            "nullable": false,
+            "modifiable": true,
+            "dataTypeDescriptor": null,
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "double",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [],
+            "name": "datetime",
+            "description": null,
+            "nativeDataType": null,
+            "derivedDataType": "timestamp",
+            "primaryKey": false,
+            "nullable": false,
+            "modifiable": true,
+            "dataTypeDescriptor": null,
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "timestamp",
+            "descriptionWithoutNewLines": ""
+          }
+        ],
+        "schemaName": null,
+        "databaseName": null,
+        "id": "42a12be1-a672-4b9c-847f-1120bd2b73da"
+      },
+      "feedTableSchema": {
+        "name": null,
+        "description": null,
+        "charset": null,
+        "properties": {},
+        "fields": [
+          {
+            "sampleValues": [],
+            "name": "application",
+            "description": null,
+            "nativeDataType": null,
+            "derivedDataType": "string",
+            "primaryKey": false,
+            "nullable": false,
+            "modifiable": true,
+            "dataTypeDescriptor": null,
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "string",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [],
+            "name": "failures_total",
+            "description": null,
+            "nativeDataType": null,
+            "derivedDataType": "double",
+            "primaryKey": false,
+            "nullable": false,
+            "modifiable": true,
+            "dataTypeDescriptor": null,
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "double",
+            "descriptionWithoutNewLines": ""
+          },
+          {
+            "sampleValues": [],
+            "name": "datetime",
+            "description": null,
+            "nativeDataType": null,
+            "derivedDataType": "timestamp",
+            "primaryKey": false,
+            "nullable": false,
+            "modifiable": true,
+            "dataTypeDescriptor": null,
+            "updatedTracker": false,
+            "precisionScale": null,
+            "createdTracker": false,
+            "tags": null,
+            "dataTypeWithPrecisionAndScale": "timestamp",
+            "descriptionWithoutNewLines": ""
+          }
+        ],
+        "schemaName": null,
+        "databaseName": null,
+        "id": "20107402-e1d3-436c-9a1e-80bdc8ea9e02"
+      },
+      "method": "EXISTING_TABLE",
+      "description": "",
+      "fieldPolicies": [
+        {
+          "profile": false,
+          "index": false,
+          "fieldName": "application",
+          "feedFieldName": "application",
+          "standardization": null,
+          "validation": null,
+          "domainTypeId": null,
+          "partitionColumn": false
+        },
+        {
+          "profile": false,
+          "index": false,
+          "fieldName": "failures_total",
+          "feedFieldName": "failures_total",
+          "standardization": null,
+          "validation": null,
+          "domainTypeId": null,
+          "partitionColumn": false
+        },
+        {
+          "profile": false,
+          "index": false,
+          "fieldName": "datetime",
+          "feedFieldName": "datetime",
+          "standardization": null,
+          "validation": null,
+          "domainTypeId": null,
+          "partitionColumn": false
+        }
+      ],
+      "partitions": [],
+      "tableType": null,
+      "incrementalDateField": null,
+      "sourceTableIncrementalDateField": null,
+      "options": {
+        "compress": false,
+        "auditLogging": true,
+        "encrypt": false,
+        "trackHistory": false,
+        "compressionFormat": "SNAPPY"
+      },
+      "feedFormat": "ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde' WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\\\' ,'quoteChar' = '\"') STORED AS TEXTFILE",
+      "targetFormat": "STORED AS PARQUET",
+      "targetTblProperties": "tblproperties(\"parquet.compression\"=\"SNAPPY\")",
+      "targetMergeStrategy": "DEDUPE_AND_MERGE",
+      "fieldPoliciesJson": "[{\"profile\":false,\"index\":false,\"fieldName\":\"application\",\"feedFieldName\":\"application\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"failures_total\",\"feedFieldName\":\"failures_total\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"datetime\",\"feedFieldName\":\"datetime\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false}]",
+      "fieldIndexString": "",
+      "partitionStructure": "",
+      "partitionSpecs": "",
+      "fieldsString": "application\nfailures_total\ndatetime",
+      "sourceFields": "application\nfailures_total\ndatetime",
+      "sourceFieldsCommaString": "application,failures_total,datetime",
+      "feedFieldStructure": "application|string||0|0|0|application\nfailures_total|double||0|0|0|failures_total\ndatetime|timestamp||0|0|0|datetime",
+      "nullableFields": "",
+      "primaryKeyFields": "",
+      "sourceTargetFieldMap": {
+        "failures_total": "failures_total",
+        "datetime": "datetime",
+        "application": "application"
+      },
+      "targetSourceFieldMap": {
+        "failures_total": "failures_total",
+        "datetime": "datetime",
+        "application": "application"
+      }
+    },
+    "createDate": 1518088627181,
+    "updateDate": 1518088627181,
+    "dataTransformation": {
+      "chartViewModel": {
+        "nodes": [
+          {
+            "name": "tecnologia__monitoraggio.cdc_o_apm",
+            "id": 10,
+            "datasourceId": "HIVE",
+            "x": 20,
+            "y": 20,
+            "nodeAttributes": {
+              "attributes": [
+                {
+                  "sampleValues": [],
+                  "name": "time",
+                  "description": null,
+                  "nativeDataType": "VARCHAR",
+                  "derivedDataType": "string",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "string",
+                  "descriptionWithoutNewLines": "",
+                  "selected": true
+                },
+                {
+                  "sampleValues": [],
+                  "name": "application",
+                  "description": null,
+                  "nativeDataType": "VARCHAR",
+                  "derivedDataType": "string",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "string",
+                  "descriptionWithoutNewLines": "",
+                  "selected": true
+                },
+                {
+                  "sampleValues": [],
+                  "name": "transaction",
+                  "description": null,
+                  "nativeDataType": "VARCHAR",
+                  "derivedDataType": "string",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "string",
+                  "descriptionWithoutNewLines": "",
+                  "selected": false
+                },
+                {
+                  "sampleValues": [],
+                  "name": "client_ip_address",
+                  "description": null,
+                  "nativeDataType": "VARCHAR",
+                  "derivedDataType": "string",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "string",
+                  "descriptionWithoutNewLines": "",
+                  "selected": false
+                },
+                {
+                  "sampleValues": [],
+                  "name": "operations",
+                  "description": null,
+                  "nativeDataType": "DOUBLE",
+                  "derivedDataType": "double",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "double",
+                  "descriptionWithoutNewLines": "",
+                  "selected": false
+                },
+                {
+                  "sampleValues": [],
+                  "name": "operation_time_ms",
+                  "description": null,
+                  "nativeDataType": "VARCHAR",
+                  "derivedDataType": "string",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "string",
+                  "descriptionWithoutNewLines": "",
+                  "selected": false
+                },
+                {
+                  "sampleValues": [],
+                  "name": "failures_total",
+                  "description": null,
+                  "nativeDataType": "DOUBLE",
+                  "derivedDataType": "double",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "double",
+                  "descriptionWithoutNewLines": "",
+                  "selected": true
+                },
+                {
+                  "sampleValues": [],
+                  "name": "empty_column",
+                  "description": null,
+                  "nativeDataType": "VARCHAR",
+                  "derivedDataType": "string",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "string",
+                  "descriptionWithoutNewLines": "",
+                  "selected": false
+                },
+                {
+                  "sampleValues": [],
+                  "name": "processing_dttm",
+                  "description": null,
+                  "nativeDataType": "VARCHAR",
+                  "derivedDataType": "string",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "string",
+                  "descriptionWithoutNewLines": "",
+                  "selected": false
+                }
+              ],
+              "reference": [
+                "tecnologia__monitoraggio",
+                "cdc_o_apm"
+              ],
+              "selected": [
+                {
+                  "sampleValues": [],
+                  "name": "time",
+                  "description": null,
+                  "nativeDataType": "VARCHAR",
+                  "derivedDataType": "string",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "string",
+                  "descriptionWithoutNewLines": "",
+                  "selected": true
+                },
+                {
+                  "sampleValues": [],
+                  "name": "application",
+                  "description": null,
+                  "nativeDataType": "VARCHAR",
+                  "derivedDataType": "string",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "string",
+                  "descriptionWithoutNewLines": "",
+                  "selected": true
+                },
+                {
+                  "sampleValues": [],
+                  "name": "failures_total",
+                  "description": null,
+                  "nativeDataType": "DOUBLE",
+                  "derivedDataType": "double",
+                  "primaryKey": false,
+                  "nullable": true,
+                  "modifiable": true,
+                  "dataTypeDescriptor": null,
+                  "updatedTracker": false,
+                  "precisionScale": null,
+                  "createdTracker": false,
+                  "tags": null,
+                  "dataTypeWithPrecisionAndScale": "double",
+                  "descriptionWithoutNewLines": "",
+                  "selected": true
+                }
+              ]
+            },
+            "connectors": {
+              "top": {
+                "location": "TOP",
+                "id": 11
+              },
+              "bottom": {
+                "location": "BOTTOM",
+                "id": 12
+              },
+              "left": {
+                "location": "LEFT",
+                "id": 9
+              },
+              "right": {
+                "location": "RIGHT",
+                "id": 10
+              }
+            },
+            "inputConnectors": [
+              {
+                "name": ""
+              }
+            ],
+            "outputConnectors": [
+              {
+                "name": ""
+              }
+            ],
+            "width": 250
+          }
+        ],
+        "connections": []
+      },
+      "datasourceIds": [],
+      "dataTransformScript": "import org.apache.spark.sql._\nvar df = sqlContext.sql(\"SELECT tbl10.`time`, tbl10.`application`, tbl10.`failures_total` FROM `tecnologia__monitoraggio`.`cdc_o_apm` tbl10\")\ndf = df\ndf = df.select(df(\"*\"), functions.unix_timestamp(functions.trim(df(\"time\")), \"dd/MM/yyyy HH:mm\").cast(\"timestamp\").as(\"datetime\"))\ndf = df.drop(\"time\")\ndf\n",
+      "sql": "SELECT tbl10.`time`, tbl10.`application`, tbl10.`failures_total` FROM `tecnologia__monitoraggio`.`cdc_o_apm` tbl10",
+      "states": [
+        {
+          "context": {
+            "formula": "unix_timestamp(trim(time), \"dd/MM/yyyy HH:mm\").cast(\"timestamp\").as(\"datetime\")",
+            "icon": "code",
+            "name": "unix_timestamp(trim(time), \"dd/MM/yyyy HH:mm\").cast(\"timestamp\").as(\"datetime\")"
+          },
+          "script": ".select(df(\"*\"), functions.unix_timestamp(functions.trim(df(\"time\")), \"dd/MM/yyyy HH:mm\").cast(\"timestamp\").as(\"datetime\"))"
+        },
+        {
+          "context": {
+            "formula": "drop(\"time\")",
+            "icon": "remove_circle",
+            "name": "Hide time"
+          },
+          "script": ".drop(\"time\")"
+        }
+      ]
+    },
+    "active": true,
+    "state": "ENABLED",
+    "nifiProcessGroupId": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+    "options": {
+      "skipHeader": false
+    },
+    "registeredTemplate": {
+      "owner": {
+        "displayName": "Data Lake Administrator",
+        "email": null,
+        "enabled": true,
+        "groups": [
+          "admin",
+          "user"
+        ],
+        "systemName": "dladmin"
+      },
+      "allowedActions": {
+        "actions": [
+          {
+            "systemName": "accessTemplate",
+            "actions": [
+              {
+                "systemName": "editTemplate"
+              },
+              {
+                "systemName": "deleteTemplate"
+              },
+              {
+                "systemName": "exportTemplate"
+              },
+              {
+                "systemName": "createFeedFromTemplate"
+              },
+              {
+                "systemName": "changeTemplatePermissions"
+              }
+            ]
+          }
+        ]
+      },
+      "roleMemberships": [],
+      "feedRoleMemberships": [],
+      "properties": [
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "category",
+          "value": "${metadata.category.systemName}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "category",
+            "displayName": "category",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.category.systemName}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-category",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-category",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-category"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "feed",
+          "value": "${metadata.systemFeedName}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "feed",
+            "displayName": "feed",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.systemFeedName}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-feed",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-feed",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-feed"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "hdfs.ingest.root",
+          "value": "${config.hdfs.ingest.root}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "hdfs.ingest.root",
+            "displayName": "hdfs.ingest.root",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.hdfs.ingest.root}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-hdfs.ingest.root",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hdfs.ingest.root",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-hdfs.ingest.root"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "hive.ingest.root",
+          "value": "${config.hive.ingest.root}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "hive.ingest.root",
+            "displayName": "hive.ingest.root",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.hive.ingest.root}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-hive.ingest.root",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.ingest.root",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-hive.ingest.root"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "hive.master.root",
+          "value": "${config.hive.master.root}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "hive.master.root",
+            "displayName": "hive.master.root",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.hive.master.root}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-hive.master.root",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-hive.master.root",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-hive.master.root"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.dataTransformation.dataTransformScript",
+          "value": "${metadata.dataTransformation.dataTransformScript}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.dataTransformation.dataTransformScript",
+            "displayName": "metadata.dataTransformation.dataTransformScript",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.dataTransformation.dataTransformScript}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-metadata.dataTransformation.dataTransformScript",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.dataTransformation.dataTransformScript",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-metadata.dataTransformation.dataTransformScript"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.dataTransformation.datasourceIds",
+          "value": "${metadata.dataTransformation.datasourceIds}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.dataTransformation.datasourceIds",
+            "displayName": "metadata.dataTransformation.datasourceIds",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.dataTransformation.datasourceIds}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-metadata.dataTransformation.datasourceIds",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.dataTransformation.datasourceIds",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-metadata.dataTransformation.datasourceIds"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.feedFieldStructure",
+          "value": "${metadata.table.feedFieldStructure}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.feedFieldStructure",
+            "displayName": "metadata.table.feedFieldStructure",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.feedFieldStructure}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-metadata.table.feedFieldStructure",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.feedFieldStructure",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-metadata.table.feedFieldStructure"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.fieldIndexString",
+          "value": "${metadata.table.fieldIndexString}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.fieldIndexString",
+            "displayName": "metadata.table.fieldIndexString",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.fieldIndexString}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-metadata.table.fieldIndexString",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldIndexString",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-metadata.table.fieldIndexString"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.fieldPoliciesJson",
+          "value": "${metadata.table.fieldPoliciesJson}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.fieldPoliciesJson",
+            "displayName": "metadata.table.fieldPoliciesJson",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.fieldPoliciesJson}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-metadata.table.fieldPoliciesJson",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldPoliciesJson",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-metadata.table.fieldPoliciesJson"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.fieldStructure",
+          "value": "${metadata.table.fieldStructure}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.fieldStructure",
+            "displayName": "metadata.table.fieldStructure",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.fieldStructure}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-metadata.table.fieldStructure",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.fieldStructure",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-metadata.table.fieldStructure"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.partitionSpecs",
+          "value": "${metadata.table.partitionSpecs}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.partitionSpecs",
+            "displayName": "metadata.table.partitionSpecs",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.partitionSpecs}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-metadata.table.partitionSpecs",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionSpecs",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-metadata.table.partitionSpecs"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.partitionStructure",
+          "value": "${metadata.table.partitionStructure}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.partitionStructure",
+            "displayName": "metadata.table.partitionStructure",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.partitionStructure}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-metadata.table.partitionStructure",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.partitionStructure",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-metadata.table.partitionStructure"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.targetFormat",
+          "value": "${metadata.table.targetFormat}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.targetFormat",
+            "displayName": "metadata.table.targetFormat",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.targetFormat}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-metadata.table.targetFormat",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetFormat",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-metadata.table.targetFormat"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.targetMergeStrategy",
+          "value": "${metadata.table.targetMergeStrategy}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.targetMergeStrategy",
+            "displayName": "metadata.table.targetMergeStrategy",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.targetMergeStrategy}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-metadata.table.targetMergeStrategy",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetMergeStrategy",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-metadata.table.targetMergeStrategy"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "metadata.table.targetTblProperties",
+          "value": "${metadata.table.targetTblProperties}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "metadata.table.targetTblProperties",
+            "displayName": "metadata.table.targetTblProperties",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${metadata.table.targetTblProperties}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-metadata.table.targetTblProperties",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-metadata.table.targetTblProperties",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-metadata.table.targetTblProperties"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "nifi.home",
+          "value": "${config.nifi.home}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "nifi.home",
+            "displayName": "nifi.home",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.nifi.home}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-nifi.home",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-nifi.home",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-nifi.home"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Update flow parameters",
+          "processorId": "bbe0ff22-3363-3d60-dbd4-3976a3dd5592",
+          "processGroupId": "39b53eb7-3812-1f4d-7991-e6feb73c8257",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "spark.version",
+          "value": "${config.spark.version}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "spark.version",
+            "displayName": "spark.version",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.spark.version}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Update flow parameters-spark.version",
+          "processorNameTypeKey": "Update flow parameters-org.apache.nifi.processors.attributes.UpdateAttribute-spark.version",
+          "idKey": "39b53eb7-3812-1f4d-7991-e6feb73c8257-bbe0ff22-3363-3d60-dbd4-3976a3dd5592-spark.version"
+        }
+      ],
+      "nonInputProcessors": null,
+      "inputProcessors": [
+        {
+          "properties": [],
+          "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+          "name": "Run Feed",
+          "id": "f542bd08-418a-3aac-0000-000000000000",
+          "groupName": null,
+          "groupId": "3ee97e4a-1798-3042-0000-000000000000",
+          "inputProcessor": true,
+          "userDefinedInputProcessor": false
+        }
+      ],
+      "id": "d318502f-6c9d-4584-91a1-5586231dcdf3",
+      "nifiTemplateId": "cb552baa-2fd5-40af-93bd-96e4e935b2eb",
+      "templateName": "Dataset Transformation",
+      "updateDate": 1518088627181,
+      "createDate": 1517918789742,
+      "icon": "polymer",
+      "iconColor": "#AB47BC",
+      "description": null,
+      "state": "ENABLED",
+      "defineTable": false,
+      "reusableTemplate": false,
+      "reusableTemplateConnections": [
+        {
+          "feedOutputPortName": "to-dataset-transformation-port",
+          "reusableTemplateInputPortName": "dataset-transformation-input-port",
+          "inputPortDisplayName": "dataset-transformation-input-port"
+        }
+      ],
+      "registeredDatasourceDefinitions": [
+        {
+          "processorType": "com.thinkbiganalytics.nifi.v2.ingest.MergeTable",
+          "processorName": "Merge Table",
+          "processorId": "98ca9ba3-e81a-3405-392c-e9d2f9a404c0",
+          "datasourceDefinition": {
+            "processorType": "com.thinkbiganalytics.nifi.v2.ingest.MergeTable",
+            "connectionType": "DESTINATION",
+            "datasourcePropertyKeys": [
+              "Target schema",
+              "Target table"
+            ],
+            "datasourceType": "HiveDatasource",
+            "identityString": "${Target schema}.${Target table}",
+            "description": null,
+            "title": "${Target schema}.${Target table}"
+          }
+        }
+      ],
+      "order": 2,
+      "templateOrder": null,
+      "feedsCount": 2,
+      "templateTableOption": "DATA_TRANSFORMATION",
+      "timeBetweenStartingBatchJobs": 1000,
+      "stream": false,
+      "allowPreconditions": false,
+      "dataTransformation": true,
+      "isStream": false
+    },
+    "userProperties": [
+      {
+        "description": "The format of the Dataset, current supported values are json or csv. If specified there will be a validation of the input file, otherwise the file will be ingested as it is.",
+        "displayName": "daf_format",
+        "order": 3,
+        "required": false,
+        "systemName": "daf_format",
+        "locked": true,
+        "value": null
+      },
+      {
+        "description": "The type of the Dataset ordinary/standard/derived",
+        "displayName": "daf_type",
+        "order": 0,
+        "required": true,
+        "systemName": "daf_type",
+        "locked": true,
+        "value": "derived"
+      },
+      {
+        "description": "The sub domain of the Dataset",
+        "displayName": "daf_subdomain",
+        "order": 2,
+        "required": true,
+        "systemName": "daf_subdomain",
+        "locked": true,
+        "value": "monitoraggio"
+      },
+      {
+        "description": "The domain of the Dataset",
+        "displayName": "daf_domain",
+        "order": 1,
+        "required": true,
+        "systemName": "daf_domain",
+        "locked": true,
+        "value": "tecnologia"
+      }
+    ],
+    "new": false,
+    "categoryId": "efa020e6-696a-42f8-93e2-01c7eb9ceb6b",
+    "categoryAndFeedDisplayName": "transformation_test.cdc_o_apm_derived",
+    "categoryName": "transformation_test",
+    "systemCategoryName": "transformation_test",
+    "reusableFeed": false
+  },
+  "feedProcessGroup": {
+    "processGroupEntity": {
+      "id": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+      "parentGroupId": "39b53e06-3812-1f4d-9941-20c673cdbb1e",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "name": "cdc_o_apm_derived",
+      "comments": "",
+      "runningCount": 0,
+      "stoppedCount": 3,
+      "invalidCount": 0,
+      "disabledCount": 0,
+      "activeRemotePortCount": 0,
+      "inactiveRemotePortCount": 0,
+      "inputPortCount": 0,
+      "outputPortCount": 1,
+      "contents": {
+        "processGroups": [],
+        "remoteProcessGroups": [],
+        "processors": [
+          {
+            "id": "bbe0ff22-3363-3d60-eccc-4edbd1438595",
+            "parentGroupId": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+            "position": {
+              "x": 875.7661895751953,
+              "y": 10.575220947265734
+            },
+            "name": "Update flow parameters",
+            "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-update-attribute-nar",
+              "version": "1.4.0"
+            },
+            "state": "STOPPED",
+            "style": {
+              "background-color": "#11f237"
+            },
+            "relationships": [
+              {
+                "name": "set state fail",
+                "description": "A failure to set the state after adding the attributes to the FlowFile will route the FlowFile here.",
+                "autoTerminate": true
+              },
+              {
+                "name": "success",
+                "description": "All successful FlowFiles are routed to this relationship",
+                "autoTerminate": false
+              }
+            ],
+            "description": null,
+            "supportsParallelProcessing": true,
+            "supportsEventDriven": true,
+            "supportsBatching": true,
+            "persistsState": true,
+            "restricted": false,
+            "multipleVersionsAvailable": false,
+            "inputRequirement": "INPUT_REQUIRED",
+            "config": {
+              "properties": {
+                "Delete Attributes Expression": null,
+                "Store State": "Store state locally",
+                "Stateful Variables Initial Value": "",
+                "category": "transformation_test",
+                "feed": "cdc_o_apm_derived",
+                "feedts": "${now():format('yyyyMMddHHmmss')}",
+                "hdfs.ingest.root": "/app/tba/etl",
+                "hive.ingest.root": "/app/tba/model.db",
+                "hive.master.root": "/daf",
+                "metadata.dataTransformation.datasourceIds": "${metadata.dataTransformation.datasourceIds}",
+                "metadata.dataTransformation.dataTransformScript": "import org.apache.spark.sql._\nvar df = sqlContext.sql(\"SELECT tbl10.`time`, tbl10.`application`, tbl10.`failures_total` FROM `tecnologia__monitoraggio`.`cdc_o_apm` tbl10\")\ndf = df\ndf = df.select(df(\"*\"), functions.unix_timestamp(functions.trim(df(\"time\")), \"dd/MM/yyyy HH:mm\").cast(\"timestamp\").as(\"datetime\"))\ndf = df.drop(\"time\")\ndf",
+                "metadata.table.feedFieldStructure": "application|string||0|0|0|application\nfailures_total|double||0|0|0|failures_total\ndatetime|timestamp||0|0|0|datetime",
+                "metadata.table.fieldPoliciesJson": "[{\"profile\":false,\"index\":false,\"fieldName\":\"application\",\"feedFieldName\":\"application\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"failures_total\",\"feedFieldName\":\"failures_total\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false},{\"profile\":false,\"index\":false,\"fieldName\":\"datetime\",\"feedFieldName\":\"datetime\",\"standardization\":null,\"validation\":null,\"domainTypeId\":null,\"partitionColumn\":false}]",
+                "metadata.table.fieldStructure": "application|string||0|0|0|application\nfailures_total|double||0|0|0|failures_total\ndatetime|timestamp||0|0|0|datetime",
+                "metadata.table.targetFormat": "STORED AS PARQUET",
+                "metadata.table.targetMergeStrategy": "DEDUPE_AND_MERGE",
+                "metadata.table.targetTblProperties": "tblproperties(\"parquet.compression\"=\"SNAPPY\")",
+                "nifi.home": "/usr/nifi",
+                "spark.input_folder": "/tmp",
+                "spark.version": "1"
+              },
+              "descriptors": {
+                "Delete Attributes Expression": {
+                  "name": "Delete Attributes Expression",
+                  "displayName": "Delete Attributes Expression",
+                  "description": "Regular expression for attributes to be deleted from FlowFiles.  Existing attributes that match will be deleted regardless of whether they are updated by this processor.",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Store State": {
+                  "name": "Store State",
+                  "displayName": "Store State",
+                  "description": "Select whether or not state will be stored. Selecting 'Stateless' will offer the default functionality of purely updating the attributes on a FlowFile in a stateless manner. Selecting a stateful option will not only store the attributes on the FlowFile but also in the Processors state. See the 'Stateful Usage' topic of the 'Additional Details' section of this processor's documentation for more information",
+                  "defaultValue": "Do not store state",
+                  "allowableValues": [
+                    {
+                      "allowableValue": {
+                        "displayName": "Do not store state",
+                        "value": "Do not store state",
+                        "description": null
+                      },
+                      "canRead": true
+                    },
+                    {
+                      "allowableValue": {
+                        "displayName": "Store state locally",
+                        "value": "Store state locally",
+                        "description": null
+                      },
+                      "canRead": true
+                    }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Stateful Variables Initial Value": {
+                  "name": "Stateful Variables Initial Value",
+                  "displayName": "Stateful Variables Initial Value",
+                  "description": "If using state to set/reference variables then this value is used to set the initial value of the stateful variable. This will only be used in the @OnScheduled method when state does not contain a value for the variable. This is required if running statefully but can be empty if needed.",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "category": {
+                  "name": "category",
+                  "displayName": "category",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "feed": {
+                  "name": "feed",
+                  "displayName": "feed",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "feedts": {
+                  "name": "feedts",
+                  "displayName": "feedts",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "hdfs.ingest.root": {
+                  "name": "hdfs.ingest.root",
+                  "displayName": "hdfs.ingest.root",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "hive.ingest.root": {
+                  "name": "hive.ingest.root",
+                  "displayName": "hive.ingest.root",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "hive.master.root": {
+                  "name": "hive.master.root",
+                  "displayName": "hive.master.root",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.dataTransformation.datasourceIds": {
+                  "name": "metadata.dataTransformation.datasourceIds",
+                  "displayName": "metadata.dataTransformation.datasourceIds",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.dataTransformation.dataTransformScript": {
+                  "name": "metadata.dataTransformation.dataTransformScript",
+                  "displayName": "metadata.dataTransformation.dataTransformScript",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.feedFieldStructure": {
+                  "name": "metadata.table.feedFieldStructure",
+                  "displayName": "metadata.table.feedFieldStructure",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.fieldPoliciesJson": {
+                  "name": "metadata.table.fieldPoliciesJson",
+                  "displayName": "metadata.table.fieldPoliciesJson",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.fieldStructure": {
+                  "name": "metadata.table.fieldStructure",
+                  "displayName": "metadata.table.fieldStructure",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.targetFormat": {
+                  "name": "metadata.table.targetFormat",
+                  "displayName": "metadata.table.targetFormat",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.targetMergeStrategy": {
+                  "name": "metadata.table.targetMergeStrategy",
+                  "displayName": "metadata.table.targetMergeStrategy",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "metadata.table.targetTblProperties": {
+                  "name": "metadata.table.targetTblProperties",
+                  "displayName": "metadata.table.targetTblProperties",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "nifi.home": {
+                  "name": "nifi.home",
+                  "displayName": "nifi.home",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "spark.input_folder": {
+                  "name": "spark.input_folder",
+                  "displayName": "spark.input_folder",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "spark.version": {
+                  "name": "spark.version",
+                  "displayName": "spark.version",
+                  "description": "",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": true,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                }
+              },
+              "schedulingPeriod": "0 sec",
+              "schedulingStrategy": "TIMER_DRIVEN",
+              "executionNode": "ALL",
+              "penaltyDuration": "30 sec",
+              "yieldDuration": "1 sec",
+              "bulletinLevel": "WARN",
+              "runDurationMillis": 0,
+              "concurrentlySchedulableTaskCount": 1,
+              "autoTerminatedRelationships": null,
+              "comments": "",
+              "customUiUrl": "/nifi-update-attribute-ui-1.4.0/configure",
+              "lossTolerant": false,
+              "annotationData": null,
+              "defaultConcurrentTasks": {
+                "TIMER_DRIVEN": "1",
+                "EVENT_DRIVEN": "0",
+                "CRON_DRIVEN": "1"
+              },
+              "defaultSchedulingPeriod": {
+                "TIMER_DRIVEN": "0 sec",
+                "CRON_DRIVEN": "* * * * * ?"
+              }
+            },
+            "validationErrors": null,
+            "extensionMissing": false
+          },
+          {
+            "id": "f542bd08-418a-3aac-ed93-6b1bcc7dc952",
+            "parentGroupId": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+            "position": {
+              "x": 10.0,
+              "y": 10.0
+            },
+            "name": "Run Feed",
+            "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+            "bundle": {
+              "group": "org.apache.nifi",
+              "artifact": "nifi-standard-nar",
+              "version": "1.4.0"
+            },
+            "state": "STOPPED",
+            "style": {},
+            "relationships": [
+              {
+                "name": "success",
+                "description": "",
+                "autoTerminate": false
+              }
+            ],
+            "description": null,
+            "supportsParallelProcessing": true,
+            "supportsEventDriven": false,
+            "supportsBatching": true,
+            "persistsState": false,
+            "restricted": false,
+            "multipleVersionsAvailable": false,
+            "inputRequirement": "INPUT_FORBIDDEN",
+            "config": {
+              "properties": {
+                "File Size": "0 B",
+                "Batch Size": "1",
+                "Data Format": "Binary",
+                "Unique FlowFiles": "false",
+                "generate-ff-custom-text": null,
+                "character-set": "UTF-8"
+              },
+              "descriptors": {
+                "File Size": {
+                  "name": "File Size",
+                  "displayName": "File Size",
+                  "description": "The size of the file that will be used",
+                  "defaultValue": "0B",
+                  "allowableValues": null,
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Batch Size": {
+                  "name": "Batch Size",
+                  "displayName": "Batch Size",
+                  "description": "The number of FlowFiles to be transferred in each invocation",
+                  "defaultValue": "1",
+                  "allowableValues": null,
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Data Format": {
+                  "name": "Data Format",
+                  "displayName": "Data Format",
+                  "description": "Specifies whether the data should be Text or Binary",
+                  "defaultValue": "Text",
+                  "allowableValues": [
+                    {
+                      "allowableValue": {
+                        "displayName": "Binary",
+                        "value": "Binary",
+                        "description": null
+                      },
+                      "canRead": true
+                    },
+                    {
+                      "allowableValue": {
+                        "displayName": "Text",
+                        "value": "Text",
+                        "description": null
+                      },
+                      "canRead": true
+                    }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "Unique FlowFiles": {
+                  "name": "Unique FlowFiles",
+                  "displayName": "Unique FlowFiles",
+                  "description": "If true, each FlowFile that is generated will be unique. If false, a random value will be generated and all FlowFiles will get the same content but this offers much higher throughput",
+                  "defaultValue": "false",
+                  "allowableValues": [
+                    {
+                      "allowableValue": {
+                        "displayName": "true",
+                        "value": "true",
+                        "description": null
+                      },
+                      "canRead": true
+                    },
+                    {
+                      "allowableValue": {
+                        "displayName": "false",
+                        "value": "false",
+                        "description": null
+                      },
+                      "canRead": true
+                    }
+                  ],
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "generate-ff-custom-text": {
+                  "name": "generate-ff-custom-text",
+                  "displayName": "Custom Text",
+                  "description": "If Data Format is text and if Unique FlowFiles is false, then this custom text will be used as content of the generated FlowFiles and the File Size will be ignored. Finally, if Expression Language is used, evaluation will be performed only once per batch of generated FlowFiles",
+                  "defaultValue": null,
+                  "allowableValues": null,
+                  "required": false,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": true,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                },
+                "character-set": {
+                  "name": "character-set",
+                  "displayName": "Character Set",
+                  "description": "Specifies the character set to use when writing the bytes of Custom Text to a flow file.",
+                  "defaultValue": "UTF-8",
+                  "allowableValues": null,
+                  "required": true,
+                  "sensitive": false,
+                  "dynamic": false,
+                  "supportsEl": false,
+                  "identifiesControllerService": null,
+                  "identifiesControllerServiceBundle": null
+                }
+              },
+              "schedulingPeriod": "1 hr",
+              "schedulingStrategy": "TIMER_DRIVEN",
+              "executionNode": "ALL",
+              "penaltyDuration": "30 sec",
+              "yieldDuration": "1 sec",
+              "bulletinLevel": "WARN",
+              "runDurationMillis": 0,
+              "concurrentlySchedulableTaskCount": 1,
+              "autoTerminatedRelationships": null,
+              "comments": "",
+              "customUiUrl": null,
+              "lossTolerant": false,
+              "annotationData": null,
+              "defaultConcurrentTasks": {
+                "TIMER_DRIVEN": "1",
+                "EVENT_DRIVEN": "0",
+                "CRON_DRIVEN": "1"
+              },
+              "defaultSchedulingPeriod": {
+                "TIMER_DRIVEN": "0 sec",
+                "CRON_DRIVEN": "* * * * * ?"
+              }
+            },
+            "validationErrors": null,
+            "extensionMissing": false
+          }
+        ],
+        "inputPorts": [],
+        "outputPorts": [
+          {
+            "id": "a5d6a66d-aa19-3b5c-4a5d-d19b5d95f599",
+            "parentGroupId": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+            "position": {
+              "x": 1695.7079871084243,
+              "y": 41.2940156631048
+            },
+            "name": "to-dataset-transformation-port",
+            "comments": "",
+            "state": "STOPPED",
+            "type": "OUTPUT_PORT",
+            "transmitting": null,
+            "concurrentlySchedulableTaskCount": 1,
+            "userAccessControl": null,
+            "groupAccessControl": null,
+            "validationErrors": null
+          }
+        ],
+        "connections": [
+          {
+            "id": "9b5f078e-0e65-3754-2074-4977246dae8e",
+            "parentGroupId": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+            "position": null,
+            "source": {
+              "id": "f542bd08-418a-3aac-ed93-6b1bcc7dc952",
+              "type": "PROCESSOR",
+              "groupId": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+              "name": "Run Feed",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "destination": {
+              "id": "bbe0ff22-3363-3d60-eccc-4edbd1438595",
+              "type": "PROCESSOR",
+              "groupId": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+              "name": "Update flow parameters",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "name": "",
+            "labelIndex": 1,
+            "zIndex": 0,
+            "selectedRelationships": [
+              "success"
+            ],
+            "availableRelationships": [
+              "success"
+            ],
+            "backPressureObjectThreshold": 0,
+            "backPressureDataSizeThreshold": "0 MB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "bends": []
+          },
+          {
+            "id": "af72a16a-9f22-33ec-432c-38581b0c6a23",
+            "parentGroupId": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+            "position": null,
+            "source": {
+              "id": "bbe0ff22-3363-3d60-eccc-4edbd1438595",
+              "type": "PROCESSOR",
+              "groupId": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+              "name": "Update flow parameters",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "destination": {
+              "id": "a5d6a66d-aa19-3b5c-4a5d-d19b5d95f599",
+              "type": "OUTPUT_PORT",
+              "groupId": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+              "name": "to-dataset-transformation-port",
+              "running": false,
+              "transmitting": null,
+              "exists": null,
+              "comments": ""
+            },
+            "name": "",
+            "labelIndex": 1,
+            "zIndex": 0,
+            "selectedRelationships": [
+              "success"
+            ],
+            "availableRelationships": [
+              "set state fail",
+              "success"
+            ],
+            "backPressureObjectThreshold": 0,
+            "backPressureDataSizeThreshold": "0 MB",
+            "flowFileExpiration": "0 sec",
+            "prioritizers": [],
+            "bends": []
+          }
+        ],
+        "labels": [],
+        "funnels": [],
+        "controllerServices": []
+      }
+    },
+    "inputProcessor": {
+      "id": "f542bd08-418a-3aac-ed93-6b1bcc7dc952",
+      "parentGroupId": "39b53e16-3812-1f4d-d3f9-2092f355b9da",
+      "position": {
+        "x": 10.0,
+        "y": 10.0
+      },
+      "name": "Run Feed",
+      "type": "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "bundle": {
+        "group": "org.apache.nifi",
+        "artifact": "nifi-standard-nar",
+        "version": "1.4.0"
+      },
+      "state": "STOPPED",
+      "style": {},
+      "relationships": [
+        {
+          "name": "success",
+          "description": "",
+          "autoTerminate": false
+        }
+      ],
+      "description": null,
+      "supportsParallelProcessing": true,
+      "supportsEventDriven": false,
+      "supportsBatching": true,
+      "persistsState": false,
+      "restricted": false,
+      "multipleVersionsAvailable": false,
+      "inputRequirement": "INPUT_FORBIDDEN",
+      "config": {
+        "properties": {
+          "File Size": "0 B",
+          "Batch Size": "1",
+          "Data Format": "Binary",
+          "Unique FlowFiles": "false",
+          "generate-ff-custom-text": null,
+          "character-set": "UTF-8"
+        },
+        "descriptors": {
+          "File Size": {
+            "name": "File Size",
+            "displayName": "File Size",
+            "description": "The size of the file that will be used",
+            "defaultValue": "0B",
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Batch Size": {
+            "name": "Batch Size",
+            "displayName": "Batch Size",
+            "description": "The number of FlowFiles to be transferred in each invocation",
+            "defaultValue": "1",
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Data Format": {
+            "name": "Data Format",
+            "displayName": "Data Format",
+            "description": "Specifies whether the data should be Text or Binary",
+            "defaultValue": "Text",
+            "allowableValues": [
+              {
+                "allowableValue": {
+                  "displayName": "Binary",
+                  "value": "Binary",
+                  "description": null
+                },
+                "canRead": true
+              },
+              {
+                "allowableValue": {
+                  "displayName": "Text",
+                  "value": "Text",
+                  "description": null
+                },
+                "canRead": true
+              }
+            ],
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "Unique FlowFiles": {
+            "name": "Unique FlowFiles",
+            "displayName": "Unique FlowFiles",
+            "description": "If true, each FlowFile that is generated will be unique. If false, a random value will be generated and all FlowFiles will get the same content but this offers much higher throughput",
+            "defaultValue": "false",
+            "allowableValues": [
+              {
+                "allowableValue": {
+                  "displayName": "true",
+                  "value": "true",
+                  "description": null
+                },
+                "canRead": true
+              },
+              {
+                "allowableValue": {
+                  "displayName": "false",
+                  "value": "false",
+                  "description": null
+                },
+                "canRead": true
+              }
+            ],
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "generate-ff-custom-text": {
+            "name": "generate-ff-custom-text",
+            "displayName": "Custom Text",
+            "description": "If Data Format is text and if Unique FlowFiles is false, then this custom text will be used as content of the generated FlowFiles and the File Size will be ignored. Finally, if Expression Language is used, evaluation will be performed only once per batch of generated FlowFiles",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          },
+          "character-set": {
+            "name": "character-set",
+            "displayName": "Character Set",
+            "description": "Specifies the character set to use when writing the bytes of Custom Text to a flow file.",
+            "defaultValue": "UTF-8",
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null,
+            "identifiesControllerServiceBundle": null
+          }
+        },
+        "schedulingPeriod": "1 hr",
+        "schedulingStrategy": "TIMER_DRIVEN",
+        "executionNode": "ALL",
+        "penaltyDuration": "30 sec",
+        "yieldDuration": "1 sec",
+        "bulletinLevel": "WARN",
+        "runDurationMillis": 0,
+        "concurrentlySchedulableTaskCount": 1,
+        "autoTerminatedRelationships": null,
+        "comments": "",
+        "customUiUrl": null,
+        "lossTolerant": false,
+        "annotationData": null,
+        "defaultConcurrentTasks": {
+          "TIMER_DRIVEN": "1",
+          "EVENT_DRIVEN": "0",
+          "CRON_DRIVEN": "1"
+        },
+        "defaultSchedulingPeriod": {
+          "TIMER_DRIVEN": "0 sec",
+          "CRON_DRIVEN": "* * * * * ?"
+        }
+      },
+      "validationErrors": null,
+      "extensionMissing": false
+    },
+    "success": true,
+    "errors": [],
+    "rolledBack": false,
+    "allErrors": [],
+    "controllerServiceErrors": []
+  },
+  "success": true,
+  "enableAfterSave": true,
+  "errorMessages": null
+}

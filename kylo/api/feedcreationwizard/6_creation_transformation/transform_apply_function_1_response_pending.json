@@ -1,0 +1,161 @@
+{
+  "progress": 0.0,
+  "results": {
+    "query": "SELECT * FROM b1f768c90c0e4e18a8650b6c50059d82",
+    "columns": [
+      {
+        "displayName": "time",
+        "hiveColumnLabel": "time",
+        "field": "time",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 0,
+        "comment": null,
+        "precisionScale": null
+      },
+      {
+        "displayName": "application",
+        "hiveColumnLabel": "application",
+        "field": "application",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 1,
+        "comment": null,
+        "precisionScale": null
+      },
+      {
+        "displayName": "failures_total",
+        "hiveColumnLabel": "failures_total",
+        "field": "failures_total",
+        "dataType": "double",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 2,
+        "comment": null,
+        "precisionScale": null
+      },
+      {
+        "displayName": "datetime",
+        "hiveColumnLabel": "datetime",
+        "field": "datetime",
+        "dataType": "timestamp",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 3,
+        "comment": null,
+        "precisionScale": null
+      }
+    ],
+    "columnFieldMap": {
+      "failures_total": {
+        "displayName": "failures_total",
+        "hiveColumnLabel": "failures_total",
+        "field": "failures_total",
+        "dataType": "double",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 2,
+        "comment": null,
+        "precisionScale": null
+      },
+      "datetime": {
+        "displayName": "datetime",
+        "hiveColumnLabel": "datetime",
+        "field": "datetime",
+        "dataType": "timestamp",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 3,
+        "comment": null,
+        "precisionScale": null
+      },
+      "application": {
+        "displayName": "application",
+        "hiveColumnLabel": "application",
+        "field": "application",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 1,
+        "comment": null,
+        "precisionScale": null
+      },
+      "time": {
+        "displayName": "time",
+        "hiveColumnLabel": "time",
+        "field": "time",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 0,
+        "comment": null,
+        "precisionScale": null
+      }
+    },
+    "columnDisplayNameMap": {
+      "failures_total": {
+        "displayName": "failures_total",
+        "hiveColumnLabel": "failures_total",
+        "field": "failures_total",
+        "dataType": "double",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 2,
+        "comment": null,
+        "precisionScale": null
+      },
+      "datetime": {
+        "displayName": "datetime",
+        "hiveColumnLabel": "datetime",
+        "field": "datetime",
+        "dataType": "timestamp",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 3,
+        "comment": null,
+        "precisionScale": null
+      },
+      "application": {
+        "displayName": "application",
+        "hiveColumnLabel": "application",
+        "field": "application",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 1,
+        "comment": null,
+        "precisionScale": null
+      },
+      "time": {
+        "displayName": "time",
+        "hiveColumnLabel": "time",
+        "field": "time",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "b1f768c90c0e4e18a8650b6c50059d82",
+        "databaseName": null,
+        "index": 0,
+        "comment": null,
+        "precisionScale": null
+      }
+    },
+    "rows": [],
+    "validationResults": null,
+    "empty": true
+  },
+  "status": "PENDING",
+  "table": "b1f768c90c0e4e18a8650b6c50059d82"
+}

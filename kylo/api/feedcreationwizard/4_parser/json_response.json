@@ -1,0 +1,105 @@
+{
+  "name": null,
+  "description": null,
+  "charset": null,
+  "properties": {},
+  "fields": [
+    {
+      "sampleValues": [
+        "{}"
+      ],
+      "name": "crs",
+      "description": "",
+      "nativeDataType": "struct<properties:struct<name:string>,type:string>",
+      "derivedDataType": "struct<properties:struct<name:string>,type:string>",
+      "primaryKey": false,
+      "nullable": true,
+      "modifiable": true,
+      "dataTypeDescriptor": {
+        "numeric": false,
+        "date": false,
+        "complex": true
+      },
+      "updatedTracker": false,
+      "precisionScale": null,
+      "createdTracker": false,
+      "tags": null,
+      "descriptionWithoutNewLines": "",
+      "dataTypeWithPrecisionAndScale": "struct<properties:struct<name:string>,type:string>"
+    },
+    {
+      "sampleValues": [
+        "[{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]"
+      ],
+      "name": "features",
+      "description": "",
+      "nativeDataType": "array<struct<geometry:struct<coordinates:array<double>,type:string>,geometry_name:string,id:string,properties:struct<citta:string,cpid:string,cucode:string,data_time:string,indirizzo:string,maxcurrent:string,maxpower:string,mincurrent:string,plug:string,plug_id:string,postal_code:string,regione:string,serial_number:string,stato:string,stato_ricarica:string>,type:string>>",
+      "derivedDataType": "array<struct<geometry:struct<coordinates:array<double>,type:string>,geometry_name:string,id:string,properties:struct<citta:string,cpid:string,cucode:string,data_time:string,indirizzo:string,maxcurrent:string,maxpower:string,mincurrent:string,plug:string,plug_id:string,postal_code:string,regione:string,serial_number:string,stato:string,stato_ricarica:string>,type:string>>",
+      "primaryKey": false,
+      "nullable": true,
+      "modifiable": true,
+      "dataTypeDescriptor": {
+        "numeric": false,
+        "date": false,
+        "complex": true
+      },
+      "updatedTracker": false,
+      "precisionScale": null,
+      "createdTracker": false,
+      "tags": null,
+      "descriptionWithoutNewLines": "",
+      "dataTypeWithPrecisionAndScale": "array<struct<geometry:struct<coordinates:array<double>,type:string>,geometry_name:string,id:string,properties:struct<citta:string,cpid:string,cucode:string,data_time:string,indirizzo:string,maxcurrent:string,maxpower:string,mincurrent:string,plug:string,plug_id:string,postal_code:string,regione:string,serial_number:string,stato:string,stato_ricarica:string>,type:string>>"
+    },
+    {
+      "sampleValues": [
+        "174"
+      ],
+      "name": "totalFeatures",
+      "description": "",
+      "nativeDataType": "bigint",
+      "derivedDataType": "bigint",
+      "primaryKey": false,
+      "nullable": true,
+      "modifiable": true,
+      "dataTypeDescriptor": {
+        "numeric": true,
+        "date": false,
+        "complex": false
+      },
+      "updatedTracker": false,
+      "precisionScale": null,
+      "createdTracker": false,
+      "tags": null,
+      "descriptionWithoutNewLines": "",
+      "dataTypeWithPrecisionAndScale": "bigint"
+    },
+    {
+      "sampleValues": [
+        "FeatureCollection"
+      ],
+      "name": "type",
+      "description": "",
+      "nativeDataType": "string",
+      "derivedDataType": "string",
+      "primaryKey": false,
+      "nullable": true,
+      "modifiable": true,
+      "dataTypeDescriptor": {
+        "numeric": false,
+        "date": false,
+        "complex": false
+      },
+      "updatedTracker": false,
+      "precisionScale": null,
+      "createdTracker": false,
+      "tags": null,
+      "descriptionWithoutNewLines": "",
+      "dataTypeWithPrecisionAndScale": "string"
+    }
+  ],
+  "schemaName": null,
+  "databaseName": null,
+  "hiveFormat": "ROW FORMAT SERDE 'org.apache.hive.hcatalog.data.JsonSerDe' STORED AS INPUTFORMAT 'org.apache.hadoop.mapred.TextInputFormat' OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.IgnoreKeyTextOutputFormat'",
+  "structured": true,
+  "id": "59d873ab-4a6b-4889-a7c9-c85b189c0b92"
+}

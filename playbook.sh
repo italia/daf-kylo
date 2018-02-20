@@ -7,10 +7,6 @@ case $1 in
 	kubectl apply -f kubernetes/deployment --recursive
 	kubectl apply -f kubernetes/service --recursive
 	;;
-  elasticsearch)
-	kubectl apply -f kubernetes/deployment/elasticsearch.yaml
-	kubectl apply -f kubernetes/service/elasticsearch.yaml
-	;;
   activemq)
 	kubectl apply -f kubernetes/deployment/activemq.yaml
 	kubectl apply -f kubernetes/service/activemq.yaml

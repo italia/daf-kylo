@@ -1,0 +1,163 @@
+{
+  "owner": {
+    "displayName": "Data Lake Administrator",
+    "email": null,
+    "enabled": true,
+    "groups": [
+      "admin",
+      "user"
+    ],
+    "systemName": "dladmin"
+  },
+  "allowedActions": {
+    "actions": [
+      {
+        "systemName": "accessTemplate",
+        "actions": [
+          {
+            "systemName": "editTemplate"
+          },
+          {
+            "systemName": "deleteTemplate"
+          },
+          {
+            "systemName": "exportTemplate"
+          },
+          {
+            "systemName": "createFeedFromTemplate"
+          },
+          {
+            "systemName": "changeTemplatePermissions"
+          }
+        ]
+      }
+    ]
+  },
+  "roleMemberships": [],
+  "feedRoleMemberships": [],
+  "properties": [
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "PutFile",
+      "processorId": "b8f6e7cc-eb6d-36b0-d661-4155cef818b0",
+      "processGroupId": "b43b3b44-0161-1000-262a-68d474c8520c",
+      "processorType": "org.apache.nifi.processors.standard.PutFile",
+      "key": "Directory",
+      "value": "/home/daf/standard_ingestion_folder/${daf.standard.dataset}",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Directory",
+        "displayName": "Directory",
+        "description": "The directory to which files should be written. You may use expression language such as /aa/bb/${path}",
+        "defaultValue": null,
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": "/home/daf/standard_ingestion_folder/${daf.standard.dataset}",
+      "userEditable": false,
+      "renderType": "text",
+      "renderOptions": {},
+      "selected": true,
+      "inputProperty": false,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "idKey": "b43b3b44-0161-1000-262a-68d474c8520c-b8f6e7cc-eb6d-36b0-d661-4155cef818b0-Directory",
+      "nameKey": "NiFi Flow-PutFile-Directory",
+      "processorNameTypeKey": "PutFile-org.apache.nifi.processors.standard.PutFile-Directory"
+    }
+  ],
+  "nonInputProcessors": [
+    {
+      "properties": [
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "PutFile",
+          "processorId": "b8f6e7cc-eb6d-36b0-d661-4155cef818b0",
+          "processGroupId": "b43b3b44-0161-1000-262a-68d474c8520c",
+          "processorType": "org.apache.nifi.processors.standard.PutFile",
+          "key": "Directory",
+          "value": "/home/daf/standard_ingestion_folder/${daf.standard.dataset}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Directory",
+            "displayName": "Directory",
+            "description": "The directory to which files should be written. You may use expression language such as /aa/bb/${path}",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "/home/daf/standard_ingestion_folder/${daf.standard.dataset}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "idKey": "b43b3b44-0161-1000-262a-68d474c8520c-b8f6e7cc-eb6d-36b0-d661-4155cef818b0-Directory",
+          "nameKey": "NiFi Flow-PutFile-Directory",
+          "processorNameTypeKey": "PutFile-org.apache.nifi.processors.standard.PutFile-Directory"
+        }
+      ],
+      "type": "org.apache.nifi.processors.standard.PutFile",
+      "name": "PutFile",
+      "id": "b8f6e7cc-eb6d-36b0-d661-4155cef818b0",
+      "groupName": "NiFi Flow",
+      "groupId": "b43b3b44-0161-1000-262a-68d474c8520c",
+      "inputProcessor": false,
+      "userDefinedInputProcessor": false
+    }
+  ],
+  "inputProcessors": [],
+  "id": "79501f53-bf15-4245-a105-6194bc7350c0",
+  "nifiTemplateId": "ae6e4f5f-79dd-47b3-9b45-a2c1839bd233",
+  "templateName": "ordinary-to-standard",
+  "updateDate": 1519147571528,
+  "createDate": 1519147310091,
+  "icon": "compare_arrows",
+  "iconColor": "#AB47BC",
+  "description": null,
+  "state": "ENABLED",
+  "defineTable": false,
+  "reusableTemplate": false,
+  "reusableTemplateConnections": [],
+  "registeredDatasourceDefinitions": [
+    {
+      "processorType": "org.apache.nifi.processors.standard.PutFile",
+      "processorName": "PutFile",
+      "processorId": "b8f6e7cc-eb6d-36b0-0000-000000000000",
+      "datasourceDefinition": {
+        "processorType": "org.apache.nifi.processors.standard.PutFile",
+        "connectionType": "DESTINATION",
+        "datasourcePropertyKeys": [
+          "Directory"
+        ],
+        "datasourceType": "DirectoryDatasource",
+        "identityString": "${Directory}",
+        "description": null,
+        "title": "${Directory}"
+      }
+    }
+  ],
+  "order": 10,
+  "templateOrder": null,
+  "feedsCount": 1,
+  "templateTableOption": "NO_TABLE",
+  "timeBetweenStartingBatchJobs": 1000,
+  "stream": false,
+  "allowPreconditions": false,
+  "dataTransformation": false,
+  "isStream": false
+}

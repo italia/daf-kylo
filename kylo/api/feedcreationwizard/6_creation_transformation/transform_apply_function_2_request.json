@@ -1,0 +1,9 @@
+{
+  "policies": [],
+  "script": "import org.apache.spark.sql._\nvar df = parent\ndf = df.drop(\"time\")\ndf\n",
+  "parent": {
+    "table": "b1f768c90c0e4e18a8650b6c50059d82",
+    "script": "import org.apache.spark.sql._\nvar df = sqlContext.sql(\"SELECT tbl10.`time`, tbl10.`application`, tbl10.`failures_total` FROM `tecnologia__monitoraggio`.`cdc_o_apm` tbl10\")\ndf = df.limit(1000)\ndf = df.select(df(\"*\"), functions.unix_timestamp(functions.trim(df(\"time\")), \"dd/MM/yyyy HH:mm\").cast(\"timestamp\").as(\"datetime\"))\ndf\n"
+  },
+  "datasources": []
+}

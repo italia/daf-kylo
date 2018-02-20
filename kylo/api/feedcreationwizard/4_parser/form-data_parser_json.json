@@ -1,0 +1,8 @@
+{
+  "name": "JSON",
+  "objectClassType": "com.thinkbiganalytics.discovery.parsers.hadoop.JsonFileSchemaParser",
+  "objectShortClassType": "JsonFileSchemaParser",
+  "supportsBinary": false,
+  "generatesHiveSerde": true,
+  "clientHelper": null
+}

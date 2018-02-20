@@ -16,7 +16,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: 10.98.74.120:5000/tba-nifi.1.4.0:1.0.1
+      - image: 10.98.74.120:5000/tba-nifi.1.4.0:1.1.0
         name: tba-nifi
         imagePullPolicy: IfNotPresent
         lifecycle:
@@ -36,11 +36,22 @@ spec:
           mountPath: /usr/nifi/logs
           subPath: tba/evergreen2/nifi/log
           readOnly: false
+        - name: glusterfsvol
+          mountPath: /tmp/kylo-nifi/failed-flows
+          subPath: tba/evergreen2/nifi/failed-flows
+          readOnly: false
+        - name: glusterfsvol
+          mountPath: /usr/nifi/extentions
+          subPath: tba/evergreen2/nifi/extentions
+          readOnly: false
         - name: sparkhome
           mountPath: /opt/cloudera/parcels/
           readOnly: true
         - name: sparkconf
           mountPath: /etc/spark2/
+          readOnly: true
+        - name: spark1conf
+          mountPath: /etc/spark/
           readOnly: true
         - name: alternatives
           mountPath: /etc/alternatives/
@@ -48,6 +59,10 @@ spec:
         - name: glusterfsvol
           mountPath: /usr/nifi/daf.keytab
           subPath: tba/security/daf.keytab
+          readOnly: true
+        - name: glusterfsvol
+          mountPath: /etc/security/
+          subPath: tba/security/
           readOnly: true
         - name: nifi-config
           mountPath: /usr/nifi/conf
@@ -64,6 +79,13 @@ spec:
           readOnly: true
         - name: hive
           mountPath: /etc/hive
+          readOnly: true
+        - name: hbase
+          mountPath: /etc/hbase
+          readOnly: true
+        - name: glusterfsvol
+          mountPath: /usr/nifi/scripts
+          subPath: nifi/scripts/edge1
           readOnly: true
         #- name: daf-root-ca
         #  mountPath: /etc/ssl/certs
@@ -99,6 +121,12 @@ spec:
       - name: sparkconf
         hostPath:
           path: /etc/spark2/
+      - name: spark1conf
+        hostPath:
+          path: /etc/spark/
+      - name: hbase
+        hostPath:
+          path: /etc/hbase/
       - name: hive
         hostPath:
           path: /etc/hive/
@@ -110,4 +138,6 @@ spec:
           path: /home
       imagePullSecrets:
       - name: regsecret
+      nodeSelector:
+        kubernetes.io/hostname: edge1.platform.daf.gov.it
 status: {}
