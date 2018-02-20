@@ -50,9 +50,9 @@ nifi:
 
 .PHONY: build-kylo
 build-kylo:
-	git clone https://github.com/fabiannecci/kylo.git ../kylok8s | true
+	git clone https://github.com/italia/kylo.git ../kylok8s | true
 	cd ../kylok8s && \
-	git checkout teamdigitale && \
+	git checkout release/0.8.4-daf-kylo && \
 	git pull && \
 	mvn clean install -DskipTests && \
 	mkdir install/install-tar/target/kylo && \
