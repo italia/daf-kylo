@@ -16,7 +16,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: 10.98.74.120:5000/tba-kylo-ui.8.4:1.0.2-SNAPSHOT
+      - image: 10.98.74.120:5000/tba-kylo-ui.8.4:1.0.3-SNAPSHOT
         name: tba-kylo-ui
         imagePullPolicy: IfNotPresent
         ports:
