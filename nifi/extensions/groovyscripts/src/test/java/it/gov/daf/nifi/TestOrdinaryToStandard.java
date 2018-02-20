@@ -15,6 +15,7 @@
  */
 package it.gov.daf.nifi;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.nifi.processors.script.ExecuteScript;
 import org.apache.nifi.script.ScriptingComponentUtils;
@@ -26,10 +27,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringReader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -52,8 +49,11 @@ public class TestOrdinaryToStandard extends BaseScriptTest {
 
         ClassLoader classLoader = getClass().getClassLoader();
 
+        File dafStandardJSON = new File(classLoader.getResource("standard/standard.json").toURI());
+
         Map<String, String> attributes = new HashMap<>();
         attributes.put("metadata.table.fieldStructure", IOUtils.toString(classLoader.getResourceAsStream("standard/metadata.table.fieldStructure")));
+        attributes.put("daf.standard.json", FileUtils.readFileToString(dafStandardJSON, "UTF-8"));
 
         File standardJsonFile = new File(classLoader.getResource("standard/standard.json").toURI());
         runner.setProperty("standardJsonObjectFile", standardJsonFile.getAbsolutePath());

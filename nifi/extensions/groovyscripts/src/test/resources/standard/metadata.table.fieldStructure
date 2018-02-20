@@ -1,5 +1,5 @@
 CODICE_MUSEO|int|ISILIdentifier|0|0|0|CODICE_MUSEO
-CODICE_SEDE|int||0|0|0|CODICE_SEDE
+CODICE_SEDE|int|sites[0].identifier|0|0|0|CODICE_SEDE
 PROVINCIA_SEDE|string|sites[0].address.province|0|0|0|PROVINCIA_SEDE
 COMUNE_SEDE|string|sites[0].address.city|0|0|0|COMUNE_SEDE
 DENOMINAZIONE_MUSEO|string|institutionalName.def|0|0|0|DENOMINAZIONE_MUSEO

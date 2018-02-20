@@ -11,8 +11,8 @@ session = (ProcessSession) session
 flowFile = session.get()
 if (!flowFile) return
 
-String standardJsonObjectFile = standardJsonObjectFile.evaluateAttributeExpressions(flowFile).value
-def metadataTableFieldStructure = flowFile.getAttribute("metadata.table.fieldStructure");
+def metadataTableFieldStructure = flowFile.getAttribute("metadata.table.fieldStructure")
+def dafStandardJson = flowFile.getAttribute("daf.standard.json")
 
 def columnToJson = [:]
 metadataTableFieldStructure.splitEachLine('\\|') { cell ->
@@ -25,7 +25,7 @@ session.read(flowFile, { inputStream ->
 } as InputStreamCallback)
 
 
-standardJson = new JsonSlurper().parseText(new File(standardJsonObjectFile).getText())
+standardJson = new JsonSlurper().parseText(dafStandardJson)
 
 def writeJsonValue(json, path, value) {
     def paths = StringUtils.split(path, ".")
@@ -59,8 +59,6 @@ columnToJson.each { k, v ->
 }
 
 def standardJsonOutput = JsonOutput.toJson(standardJson)
-
-log.info("{}", JsonOutput.prettyPrint(standardJsonOutput))
 
 flowFile = session.write(flowFile, { outputStream ->
     IOUtils.write(standardJsonOutput, outputStream)
