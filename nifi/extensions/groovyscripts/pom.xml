@@ -4,11 +4,11 @@
   <parent>
     <artifactId>teamdigitale-daf-nifi-extension</artifactId>
     <groupId>it.gov.daf</groupId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.1.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <artifactId>teamdigitale-daf-nifi-groovyscripts</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.1.0</version>
   <dependencies>
     <dependency>
       <groupId>commons-io</groupId>
