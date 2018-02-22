@@ -1,0 +1,997 @@
+{
+  "owner": {
+    "displayName": "Data Lake Administrator",
+    "email": null,
+    "enabled": true,
+    "groups": [
+      "admin",
+      "user"
+    ],
+    "systemName": "dladmin"
+  },
+  "allowedActions": {
+    "actions": [
+      {
+        "systemName": "accessTemplate",
+        "actions": [
+          {
+            "systemName": "editTemplate"
+          },
+          {
+            "systemName": "deleteTemplate"
+          },
+          {
+            "systemName": "exportTemplate"
+          },
+          {
+            "systemName": "createFeedFromTemplate"
+          },
+          {
+            "systemName": "changeTemplatePermissions"
+          }
+        ]
+      }
+    ]
+  },
+  "roleMemberships": [
+  ],
+  "feedRoleMemberships": [
+  ],
+  "properties": [
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "ListSFTP",
+      "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+      "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+      "key": "File Filter Regex",
+      "value": ".*csv",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "File Filter Regex",
+        "displayName": "File Filter Regex",
+        "description": "Provides a Java Regular Expression for filtering Filenames; if a filter is supplied, only files whose names match that Regular Expression will be fetched",
+        "defaultValue": null,
+        "allowableValues": null,
+        "required": false,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": false,
+        "identifiesControllerService": null
+      },
+      "templateValue": ".*csv",
+      "userEditable": true,
+      "renderType": "text",
+      "renderOptions": {
+      },
+      "selected": true,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-ListSFTP-File Filter Regex",
+      "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-File Filter Regex",
+      "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-File Filter Regex"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "ListSFTP",
+      "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+      "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+      "key": "Hostname",
+      "value": "",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Hostname",
+        "displayName": "Hostname",
+        "description": "The fully qualified hostname or IP address of the remote system",
+        "defaultValue": null,
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": "193.203.230.209",
+      "userEditable": true,
+      "renderType": "text",
+      "renderOptions": {
+      },
+      "selected": true,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-ListSFTP-Hostname",
+      "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-Hostname",
+      "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-Hostname"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "ListSFTP",
+      "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+      "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+      "key": "Password",
+      "value": null,
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Password",
+        "displayName": "Password",
+        "description": "Password for the user account",
+        "defaultValue": null,
+        "allowableValues": null,
+        "required": false,
+        "sensitive": true,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": "******",
+      "userEditable": true,
+      "renderType": "password",
+      "renderOptions": {
+        "selectCustom": "false"
+      },
+      "selected": true,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": true,
+      "required": false,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-ListSFTP-Password",
+      "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-Password",
+      "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-Password"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "ListSFTP",
+      "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+      "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+      "key": "Remote Path",
+      "value": ".",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Remote Path",
+        "displayName": "Remote Path",
+        "description": "The path on the remote system from which to pull or push files",
+        "defaultValue": ".",
+        "allowableValues": null,
+        "required": false,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": "/out/strum_pagamento",
+      "userEditable": true,
+      "renderType": "text",
+      "renderOptions": {
+      },
+      "selected": true,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": false,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-ListSFTP-Remote Path",
+      "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-Remote Path",
+      "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-Remote Path"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "ListSFTP",
+      "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+      "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+      "key": "Search Recursively",
+      "value": "false",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Search Recursively",
+        "displayName": "Search Recursively",
+        "description": "If true, will pull files from arbitrarily nested subdirectories; otherwise, will not traverse subdirectories",
+        "defaultValue": "false",
+        "allowableValues": [
+          {
+            "displayName": "true",
+            "value": "true",
+            "description": null
+          },
+          {
+            "displayName": "false",
+            "value": "false",
+            "description": null
+          }
+        ],
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": false,
+        "identifiesControllerService": null
+      },
+      "templateValue": "false",
+      "userEditable": true,
+      "renderType": "select",
+      "renderOptions": {
+      },
+      "selected": true,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-ListSFTP-Search Recursively",
+      "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-Search Recursively",
+      "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-Search Recursively"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "ListSFTP",
+      "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+      "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+      "key": "Username",
+      "value": "",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Username",
+        "displayName": "Username",
+        "description": "Username",
+        "defaultValue": null,
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": "gov_80188230587",
+      "userEditable": true,
+      "renderType": "text",
+      "renderOptions": {
+      },
+      "selected": true,
+      "inputProperty": true,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-ListSFTP-Username",
+      "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-Username",
+      "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-Username"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "FetchSFTP",
+      "processorId": "4f9915f3-1e86-3928-d761-96f43692ccfe",
+      "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+      "key": "Completion Strategy",
+      "value": "None",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Completion Strategy",
+        "displayName": "Completion Strategy",
+        "description": "Specifies what to do with the original file on the server once it has been pulled into NiFi. If the Completion Strategy fails, a warning will be logged but the data will still be transferred.",
+        "defaultValue": "None",
+        "allowableValues": [
+          {
+            "displayName": "None",
+            "value": "None",
+            "description": "Leave the file as-is"
+          },
+          {
+            "displayName": "Move File",
+            "value": "Move File",
+            "description": "Move the file to the directory specified by the <Move Destination Directory> property"
+          },
+          {
+            "displayName": "Delete File",
+            "value": "Delete File",
+            "description": "Deletes the original file from the remote system"
+          }
+        ],
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": false,
+        "identifiesControllerService": null
+      },
+      "templateValue": "None",
+      "userEditable": false,
+      "renderType": "select",
+      "renderOptions": {
+      },
+      "selected": true,
+      "inputProperty": false,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-FetchSFTP-Completion Strategy",
+      "processorNameTypeKey": "FetchSFTP-org.apache.nifi.processors.standard.FetchSFTP-Completion Strategy",
+      "idKey": "b830d304-0161-1000-551e-491ffc22ec68-4f9915f3-1e86-3928-d761-96f43692ccfe-Completion Strategy"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "FetchSFTP",
+      "processorId": "4f9915f3-1e86-3928-d761-96f43692ccfe",
+      "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+      "key": "Hostname",
+      "value": "${sftp.remote.host}",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Hostname",
+        "displayName": "Hostname",
+        "description": "The fully-qualified hostname or IP address of the host to fetch the data from",
+        "defaultValue": null,
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": "193.203.230.209",
+      "userEditable": false,
+      "renderType": "text",
+      "renderOptions": {
+      },
+      "selected": true,
+      "inputProperty": false,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-FetchSFTP-Hostname",
+      "processorNameTypeKey": "FetchSFTP-org.apache.nifi.processors.standard.FetchSFTP-Hostname",
+      "idKey": "b830d304-0161-1000-551e-491ffc22ec68-4f9915f3-1e86-3928-d761-96f43692ccfe-Hostname"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "FetchSFTP",
+      "processorId": "4f9915f3-1e86-3928-d761-96f43692ccfe",
+      "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+      "key": "Password",
+      "value": null,
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Password",
+        "displayName": "Password",
+        "description": "Password for the user account",
+        "defaultValue": null,
+        "allowableValues": null,
+        "required": false,
+        "sensitive": true,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": "******",
+      "userEditable": true,
+      "renderType": "password",
+      "renderOptions": {
+        "selectCustom": "false"
+      },
+      "selected": true,
+      "inputProperty": false,
+      "containsConfigurationVariables": false,
+      "sensitive": true,
+      "required": false,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-FetchSFTP-Password",
+      "processorNameTypeKey": "FetchSFTP-org.apache.nifi.processors.standard.FetchSFTP-Password",
+      "idKey": "b830d304-0161-1000-551e-491ffc22ec68-4f9915f3-1e86-3928-d761-96f43692ccfe-Password"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "FetchSFTP",
+      "processorId": "4f9915f3-1e86-3928-d761-96f43692ccfe",
+      "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+      "key": "Remote File",
+      "value": "${path}/${filename}",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Remote File",
+        "displayName": "Remote File",
+        "description": "The fully qualified filename on the remote system",
+        "defaultValue": null,
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": "${path}/${filename}",
+      "userEditable": false,
+      "renderType": "text",
+      "renderOptions": {
+      },
+      "selected": true,
+      "inputProperty": false,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-FetchSFTP-Remote File",
+      "processorNameTypeKey": "FetchSFTP-org.apache.nifi.processors.standard.FetchSFTP-Remote File",
+      "idKey": "b830d304-0161-1000-551e-491ffc22ec68-4f9915f3-1e86-3928-d761-96f43692ccfe-Remote File"
+    },
+    {
+      "processGroupName": "NiFi Flow",
+      "processorName": "FetchSFTP",
+      "processorId": "4f9915f3-1e86-3928-d761-96f43692ccfe",
+      "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+      "key": "Username",
+      "value": "${sftp.listing.user}",
+      "expressionProperties": null,
+      "propertyDescriptor": {
+        "name": "Username",
+        "displayName": "Username",
+        "description": "Username",
+        "defaultValue": null,
+        "allowableValues": null,
+        "required": true,
+        "sensitive": false,
+        "dynamic": false,
+        "supportsEl": true,
+        "identifiesControllerService": null
+      },
+      "templateValue": "gov_80188230587",
+      "userEditable": false,
+      "renderType": "text",
+      "renderOptions": {
+      },
+      "selected": true,
+      "inputProperty": false,
+      "containsConfigurationVariables": false,
+      "sensitive": false,
+      "required": true,
+      "templateProperty": null,
+      "nameKey": "NiFi Flow-FetchSFTP-Username",
+      "processorNameTypeKey": "FetchSFTP-org.apache.nifi.processors.standard.FetchSFTP-Username",
+      "idKey": "b830d304-0161-1000-551e-491ffc22ec68-4f9915f3-1e86-3928-d761-96f43692ccfe-Username"
+    }
+  ],
+  "nonInputProcessors": [
+    {
+      "properties": [
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "FetchSFTP",
+          "processorId": "4f9915f3-1e86-3928-d761-96f43692ccfe",
+          "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+          "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+          "key": "Completion Strategy",
+          "value": "None",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Completion Strategy",
+            "displayName": "Completion Strategy",
+            "description": "Specifies what to do with the original file on the server once it has been pulled into NiFi. If the Completion Strategy fails, a warning will be logged but the data will still be transferred.",
+            "defaultValue": "None",
+            "allowableValues": [
+              {
+                "displayName": "None",
+                "value": "None",
+                "description": "Leave the file as-is"
+              },
+              {
+                "displayName": "Move File",
+                "value": "Move File",
+                "description": "Move the file to the directory specified by the <Move Destination Directory> property"
+              },
+              {
+                "displayName": "Delete File",
+                "value": "Delete File",
+                "description": "Deletes the original file from the remote system"
+              }
+            ],
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null
+          },
+          "templateValue": "None",
+          "userEditable": false,
+          "renderType": "select",
+          "renderOptions": {
+          },
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-FetchSFTP-Completion Strategy",
+          "processorNameTypeKey": "FetchSFTP-org.apache.nifi.processors.standard.FetchSFTP-Completion Strategy",
+          "idKey": "b830d304-0161-1000-551e-491ffc22ec68-4f9915f3-1e86-3928-d761-96f43692ccfe-Completion Strategy"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "FetchSFTP",
+          "processorId": "4f9915f3-1e86-3928-d761-96f43692ccfe",
+          "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+          "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+          "key": "Hostname",
+          "value": "${sftp.remote.host}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Hostname",
+            "displayName": "Hostname",
+            "description": "The fully-qualified hostname or IP address of the host to fetch the data from",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "193.203.230.209",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {
+          },
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-FetchSFTP-Hostname",
+          "processorNameTypeKey": "FetchSFTP-org.apache.nifi.processors.standard.FetchSFTP-Hostname",
+          "idKey": "b830d304-0161-1000-551e-491ffc22ec68-4f9915f3-1e86-3928-d761-96f43692ccfe-Hostname"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "FetchSFTP",
+          "processorId": "4f9915f3-1e86-3928-d761-96f43692ccfe",
+          "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+          "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+          "key": "Password",
+          "value": null,
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Password",
+            "displayName": "Password",
+            "description": "Password for the user account",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": true,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "******",
+          "userEditable": true,
+          "renderType": "password",
+          "renderOptions": {
+            "selectCustom": "false"
+          },
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": true,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-FetchSFTP-Password",
+          "processorNameTypeKey": "FetchSFTP-org.apache.nifi.processors.standard.FetchSFTP-Password",
+          "idKey": "b830d304-0161-1000-551e-491ffc22ec68-4f9915f3-1e86-3928-d761-96f43692ccfe-Password"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "FetchSFTP",
+          "processorId": "4f9915f3-1e86-3928-d761-96f43692ccfe",
+          "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+          "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+          "key": "Remote File",
+          "value": "${path}/${filename}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Remote File",
+            "displayName": "Remote File",
+            "description": "The fully qualified filename on the remote system",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${path}/${filename}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {
+          },
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-FetchSFTP-Remote File",
+          "processorNameTypeKey": "FetchSFTP-org.apache.nifi.processors.standard.FetchSFTP-Remote File",
+          "idKey": "b830d304-0161-1000-551e-491ffc22ec68-4f9915f3-1e86-3928-d761-96f43692ccfe-Remote File"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "FetchSFTP",
+          "processorId": "4f9915f3-1e86-3928-d761-96f43692ccfe",
+          "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+          "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+          "key": "Username",
+          "value": "${sftp.listing.user}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Username",
+            "displayName": "Username",
+            "description": "Username",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "gov_80188230587",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {
+          },
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-FetchSFTP-Username",
+          "processorNameTypeKey": "FetchSFTP-org.apache.nifi.processors.standard.FetchSFTP-Username",
+          "idKey": "b830d304-0161-1000-551e-491ffc22ec68-4f9915f3-1e86-3928-d761-96f43692ccfe-Username"
+        }
+      ],
+      "type": "org.apache.nifi.processors.standard.FetchSFTP",
+      "name": "FetchSFTP",
+      "id": "4f9915f3-1e86-3928-d761-96f43692ccfe",
+      "groupName": "NiFi Flow",
+      "groupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "inputProcessor": false,
+      "userDefinedInputProcessor": false
+    }
+  ],
+  "inputProcessors": [
+    {
+      "properties": [
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "ListSFTP",
+          "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+          "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+          "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+          "key": "File Filter Regex",
+          "value": ".*csv",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "File Filter Regex",
+            "displayName": "File Filter Regex",
+            "description": "Provides a Java Regular Expression for filtering Filenames; if a filter is supplied, only files whose names match that Regular Expression will be fetched",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null
+          },
+          "templateValue": ".*csv",
+          "userEditable": true,
+          "renderType": "text",
+          "renderOptions": {
+          },
+          "selected": true,
+          "inputProperty": true,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-ListSFTP-File Filter Regex",
+          "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-File Filter Regex",
+          "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-File Filter Regex"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "ListSFTP",
+          "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+          "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+          "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+          "key": "Hostname",
+          "value": "",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Hostname",
+            "displayName": "Hostname",
+            "description": "The fully qualified hostname or IP address of the remote system",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "193.203.230.209",
+          "userEditable": true,
+          "renderType": "text",
+          "renderOptions": {
+          },
+          "selected": true,
+          "inputProperty": true,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-ListSFTP-Hostname",
+          "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-Hostname",
+          "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-Hostname"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "ListSFTP",
+          "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+          "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+          "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+          "key": "Password",
+          "value": null,
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Password",
+            "displayName": "Password",
+            "description": "Password for the user account",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": true,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "******",
+          "userEditable": true,
+          "renderType": "password",
+          "renderOptions": {
+            "selectCustom": "false"
+          },
+          "selected": true,
+          "inputProperty": true,
+          "containsConfigurationVariables": false,
+          "sensitive": true,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-ListSFTP-Password",
+          "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-Password",
+          "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-Password"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "ListSFTP",
+          "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+          "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+          "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+          "key": "Remote Path",
+          "value": ".",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Remote Path",
+            "displayName": "Remote Path",
+            "description": "The path on the remote system from which to pull or push files",
+            "defaultValue": ".",
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "/out/strum_pagamento",
+          "userEditable": true,
+          "renderType": "text",
+          "renderOptions": {
+          },
+          "selected": true,
+          "inputProperty": true,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-ListSFTP-Remote Path",
+          "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-Remote Path",
+          "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-Remote Path"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "ListSFTP",
+          "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+          "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+          "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+          "key": "Search Recursively",
+          "value": "false",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Search Recursively",
+            "displayName": "Search Recursively",
+            "description": "If true, will pull files from arbitrarily nested subdirectories; otherwise, will not traverse subdirectories",
+            "defaultValue": "false",
+            "allowableValues": [
+              {
+                "displayName": "true",
+                "value": "true",
+                "description": null
+              },
+              {
+                "displayName": "false",
+                "value": "false",
+                "description": null
+              }
+            ],
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": false,
+            "identifiesControllerService": null
+          },
+          "templateValue": "false",
+          "userEditable": true,
+          "renderType": "select",
+          "renderOptions": {
+          },
+          "selected": true,
+          "inputProperty": true,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-ListSFTP-Search Recursively",
+          "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-Search Recursively",
+          "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-Search Recursively"
+        },
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "ListSFTP",
+          "processorId": "74335935-ebe4-3977-e826-4fac9b196d59",
+          "processGroupId": "b830d304-0161-1000-551e-491ffc22ec68",
+          "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+          "key": "Username",
+          "value": "",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "Username",
+            "displayName": "Username",
+            "description": "Username",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": true,
+            "sensitive": false,
+            "dynamic": false,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "gov_80188230587",
+          "userEditable": true,
+          "renderType": "text",
+          "renderOptions": {
+          },
+          "selected": true,
+          "inputProperty": true,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": true,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-ListSFTP-Username",
+          "processorNameTypeKey": "ListSFTP-org.apache.nifi.processors.standard.ListSFTP-Username",
+          "idKey": "b830d304-0161-1000-551e-491ffc22ec68-74335935-ebe4-3977-e826-4fac9b196d59-Username"
+        }
+      ],
+      "type": "org.apache.nifi.processors.standard.ListSFTP",
+      "name": "ListSFTP",
+      "id": "74335935-ebe4-3977-e826-4fac9b196d59",
+      "groupName": "NiFi Flow",
+      "groupId": "b830d304-0161-1000-551e-491ffc22ec68",
+      "inputProcessor": true,
+      "userDefinedInputProcessor": false
+    }
+  ],
+  "id": "0f41d617-9e57-4963-9f92-08caedfdd574",
+  "nifiTemplateId": "ef8735cf-75d1-4eca-aade-2551640b0386",
+  "templateName": "SFTP Ingest",
+  "updateDate": 1519214634454,
+  "createDate": 1519214634454,
+  "icon": "loop",
+  "iconColor": "#FFCA28",
+  "description": null,
+  "state": "ENABLED",
+  "defineTable": true,
+  "reusableTemplate": false,
+  "reusableTemplateConnections": [
+    {
+      "feedOutputPortName": "filesystem-to-dataset-ingest",
+      "reusableTemplateInputPortName": "dataset-ingest",
+      "inputPortDisplayName": "dataset-ingest"
+    }
+  ],
+  "registeredDatasourceDefinitions": [
+    {
+      "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+      "processorName": "FetchSFTP",
+      "processorId": "4f9915f3-1e86-3928-0000-000000000000",
+      "datasourceDefinition": {
+        "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
+        "connectionType": "SOURCE",
+        "datasourcePropertyKeys": [
+          "Remote File",
+          "Hostname"
+        ],
+        "datasourceType": "FTPDatasource",
+        "identityString": "${Remote File},${Hostname}",
+        "description": null,
+        "title": "${Remote File},${Hostname}"
+      }
+    },
+    {
+      "processorType": "com.thinkbiganalytics.nifi.v2.ingest.MergeTable",
+      "processorName": "Merge Table",
+      "processorId": "3e1c06b5-54ca-32ea-c8fb-27bab8a888cd",
+      "datasourceDefinition": {
+        "processorType": "com.thinkbiganalytics.nifi.v2.ingest.MergeTable",
+        "connectionType": "DESTINATION",
+        "datasourcePropertyKeys": [
+          "Target schema",
+          "Target table"
+        ],
+        "datasourceType": "HiveDatasource",
+        "identityString": "${Target schema}.${Target table}",
+        "description": null,
+        "title": "${Target schema}.${Target table}"
+      }
+    },
+    {
+      "processorType": "org.apache.nifi.processors.hadoop.PutHDFS",
+      "processorName": "Upload to HDFS",
+      "processorId": "54bd7f08-450a-30f4-90f9-200378ea952c",
+      "datasourceDefinition": {
+        "processorType": "org.apache.nifi.processors.hadoop.PutHDFS",
+        "connectionType": "DESTINATION",
+        "datasourcePropertyKeys": [
+          "Directory"
+        ],
+        "datasourceType": "HDFSDatasource",
+        "identityString": "${Directory}",
+        "description": null,
+        "title": "${Directory}"
+      }
+    }
+  ],
+  "order": 2,
+  "templateOrder": null,
+  "feedsCount": 0,
+  "templateTableOption": "DEFINE_TABLE",
+  "timeBetweenStartingBatchJobs": 1000,
+  "stream": false,
+  "allowPreconditions": false,
+  "dataTransformation": false,
+  "isStream": false
+}
