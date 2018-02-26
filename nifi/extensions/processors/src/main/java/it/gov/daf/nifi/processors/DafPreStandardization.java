@@ -5,9 +5,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
+import it.gov.daf.nifi.processors.models.DataTransformation;
 import it.gov.daf.nifi.processors.models.FlatSchema;
 import it.gov.daf.nifi.processors.models.TransformationStep;
-import it.gov.daf.nifi.processors.models.Transformations;
 import org.apache.nifi.annotation.behavior.EventDriven;
 import org.apache.nifi.annotation.behavior.InputRequirement;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
@@ -194,11 +194,11 @@ public class DafPreStandardization extends AbstractProcessor {
 
             final List<String> sTransformations = getTransformations(mapper, root);
             final List<TransformationStep> transformationSteps =
-                    Transformations.gensTransformations(sTransformations, flatSchemaList);
-            final Transformations transformations = new Transformations(datasetName, transformationSteps);
+                    DataTransformation.gensTransformations(sTransformations, flatSchemaList);
+            final DataTransformation dataTransformation = new DataTransformation(datasetName, transformationSteps);
 
             if (!transformationSteps.isEmpty()){
-                flowFile = session.putAttribute(flowFile, OUTPUT_JOB_PARAMS, mapper.writeValueAsString(transformations));
+                flowFile = session.putAttribute(flowFile, OUTPUT_JOB_PARAMS, mapper.writeValueAsString(dataTransformation));
             }
             logger.info("added transformationSteps {} to flow", transformationSteps.toArray());
             session.getProvenanceReporter().fetch(flowFile, datasetName, stopWatch.getElapsed(TimeUnit.MILLISECONDS));
