@@ -13,7 +13,48 @@ spec:
       labels:
         io.kompose.service: tba-nifi
     spec:
-      hostNetwork: true
+      hostAliases:
+      - ip: "192.168.0.23"
+        hostnames:
+          - "master.platform.daf.gov.it"
+          - "master"
+      - ip: "192.168.0.22"
+        hostnames:
+          - "slave1.platform.daf.gov.it"
+          - "slave1"
+      - ip: "192.168.0.24"
+        hostnames:
+          - "slave2.platform.daf.gov.it"
+          - "slave2"
+      - ip: "192.168.0.36"
+        hostnames:
+          - "slave3.platform.daf.gov.it"
+          - "slave3"
+      - ip: "192.168.0.26"
+        hostnames:
+          - "slave4.platform.daf.gov.it"
+          - "slave4"
+      - ip: "192.168.0.26"
+        hostnames:
+          - "slave4.platform.daf.gov.it"
+          - "slave4"
+      - ip: "192.168.0.20"
+        hostnames:
+          - "edge1.platform.daf.gov.it"
+          - "edge1"
+      - ip: "192.168.0.21"
+        hostnames:
+          - "edge2.platform.daf.gov.it"
+          - "edge2"
+      - ip: "192.168.0.27"
+        hostnames:
+          - "edge3.platform.daf.gov.it"
+          - "edge3"
+      - ip: "192.168.0.29"
+        hostnames:
+          - "idm.daf.gov.it"
+          - "idm"
+      hostNetwork: false #replaced to true to remove service exposed
       dnsPolicy: ClusterFirstWithHostNet
       containers:
       - image: 10.98.74.120:5000/tba-nifi.1.4.0:1.1.0
