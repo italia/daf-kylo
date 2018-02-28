@@ -1,7 +1,7 @@
 # Ingestion Pipeline
 
 To goal of this document is to provide a design-document for the [ingestion and standardization process](https://daf-docs.readthedocs.io/en/latest/datamgmt/dataset_conventions.html#ingestion-pipeline-steps).
-The process is formalized as a Nifi flow composed by two processors.
+The process is formalized as a **Nifi** flow composed by two processors.
 The first processor, given a dataset name does:
 
 1. query the catalog service
@@ -40,13 +40,13 @@ as attributes:
 - a datasetUri
 - a List of [IngestionSteps](./src/main/java/it/gov/daf/nifi/processors/models/IngestionStep.java).
 
-The class IngestionSteps translates the information from the file `transformation.json` and add details about the transformations.
+The class **IngestionStep** translates the information from the file `transformation.json` and add details about the transformations.
 In particular, for each IngestionStep is defined:
 - a priority
 - a name
 - a list of [StepDetails](./src/main/java/it/gov/daf/nifi/processors/models/StepDetail.java)
 
-Finally, a StepDetail holds information about:
+Finally, a **StepDetail** holds information about:
 
 - the column
 - an optional vocabulary path
