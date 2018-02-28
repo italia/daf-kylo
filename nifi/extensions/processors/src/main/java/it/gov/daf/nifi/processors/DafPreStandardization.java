@@ -5,9 +5,9 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectReader;
+import it.gov.daf.nifi.processors.models.IngestionFlow;
 import it.gov.daf.nifi.processors.models.FlatSchema;
-import it.gov.daf.nifi.processors.models.TransformationStep;
-import it.gov.daf.nifi.processors.models.Transformations;
+import it.gov.daf.nifi.processors.models.IngestionStep;
 import org.apache.nifi.annotation.behavior.EventDriven;
 import org.apache.nifi.annotation.behavior.InputRequirement;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
@@ -185,7 +185,7 @@ public class DafPreStandardization extends AbstractProcessor {
 
             //parse the response and get the flat schema
             final JsonNode root = mapper.readTree(response.getResponseBodyAsBytes());
-            final List<FlatSchema> flatSchemaList = getFlatSchemas(mapper, root).collect(toList());
+            final List<FlatSchema> flatSchemaList = getFlatSchema(mapper, root).collect(toList());
 
             if (flatSchemaList.size() == 0){
                 logger.error("cannot find flat schema for dataset ");
@@ -193,14 +193,17 @@ public class DafPreStandardization extends AbstractProcessor {
             }
 
             final List<String> sTransformations = getTransformations(mapper, root);
-            final List<TransformationStep> transformationSteps =
-                    Transformations.gensTransformations(sTransformations, flatSchemaList);
-            final Transformations transformations = new Transformations(datasetName, transformationSteps);
+            final List<IngestionStep> ingestionSteps =
+                    IngestionFlow.gensTransformations(sTransformations, flatSchemaList);
+            final IngestionFlow dataTransformation = new IngestionFlow(
+                    datasetName,
+                    getPhysicalUri(mapper, root),
+                    ingestionSteps);
 
-            if (!transformationSteps.isEmpty()){
-                flowFile = session.putAttribute(flowFile, OUTPUT_JOB_PARAMS, mapper.writeValueAsString(transformations));
+            if (!ingestionSteps.isEmpty()){
+                flowFile = session.putAttribute(flowFile, OUTPUT_JOB_PARAMS, mapper.writeValueAsString(dataTransformation));
             }
-            logger.info("added transformationSteps {} to flow", transformationSteps.toArray());
+            logger.info("added transformationSteps {} to flow", ingestionSteps.toArray());
             session.getProvenanceReporter().fetch(flowFile, datasetName, stopWatch.getElapsed(TimeUnit.MILLISECONDS));
             session.transfer(flowFile, REL_SUCCESS);
 
@@ -212,7 +215,14 @@ public class DafPreStandardization extends AbstractProcessor {
     }
 
 
-    private List<String> getTransformations(ObjectMapper mapper, JsonNode root) throws IOException {
+    /**
+     * This method is public to be testable
+     * @param mapper
+     * @param root
+     * @return
+     * @throws IOException
+     */
+    public static List<String> getTransformations(ObjectMapper mapper, JsonNode root) throws IOException {
         final JsonNode node = root.at("/operational/ingestion_pipeline");
         if (node.isMissingNode()) {
             return new ArrayList<>();
@@ -223,7 +233,13 @@ public class DafPreStandardization extends AbstractProcessor {
         }
     }
 
-    private Stream<FlatSchema> getFlatSchemas(ObjectMapper mapper, JsonNode root) {
+    /**
+     * This method is public to be testable
+     * @param mapper
+     * @param root
+     * @return
+     */
+    public static Stream<FlatSchema> getFlatSchema(ObjectMapper mapper, JsonNode root) {
         final JsonNode list = root.at("/dataschema/flatSchema");
 
         return StreamSupport.stream(list.spliterator(), false)
@@ -236,5 +252,16 @@ public class DafPreStandardization extends AbstractProcessor {
                     }
                 })
                 .filter(Objects::nonNull);
+    }
+
+    /**
+     * This method is public to be testable
+     * @param root
+     * @return
+     */
+    public static String getPhysicalUri(ObjectMapper mapper, JsonNode root) throws IOException {
+        final JsonNode node = root.at("/operational/physical_uri");
+        if (node.isMissingNode()) throw new NullPointerException("missing value for /operational/physical_uri");
+        return node.textValue();
     }
 }

@@ -4,7 +4,7 @@ The goal of this component is to create the methods call plu the need parameters
 
 The process is composed by 4 steps:
 
-1. to retrieve the list of the transformationSteps to apply from  `Operational.ingestion_pipeline`
+1. to retrieve the list of the steps to apply from  `Operational.ingestion_pipeline`
 ```yaml
 
   ingestion_pipeline:
