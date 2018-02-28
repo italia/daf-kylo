@@ -120,6 +120,12 @@ kubectl apply -f config-map/kylo-ui.yaml
 
 As pointed out above, once this is done *ldap login* will be substituted by *default login* , this will allow to log in with default user `dladmin/thinkbig`. This has to be done to create users with the same name that those exist in ldap in order to grant them permissions (same functionality but for groups [is currently being fixed by R&D](https://kylo-io.atlassian.net/browse/KYLO-496)) . Once user/s (or group/s) is/are created change back `config-map/kylo-services.yaml` and `config-map/kylo-ui.yaml` and redeploy again. Ldap is now good to go.
 
+## Log configuration
+
+## Custom Processors
+
+[Here](./nifi/extensions/processors/Readme,md) you can find additional information about custom processors created for the [DAF](https://teamdigitale.governo.it/it/projects/daf.htm).
+
 # Licensing
 
 Copyright (c) the respective contributors, as shown by the AUTHORS file.
