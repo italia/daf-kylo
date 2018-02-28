@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.dreamhead.moco.HttpServer;
 import com.github.dreamhead.moco.Runner;
 import it.gov.daf.nifi.processors.DafPreStandardization;
-import it.gov.daf.nifi.processors.models.DataTransformation;
+import it.gov.daf.nifi.processors.models.IngestionFlow;
 import org.apache.nifi.flowfile.FlowFile;
 import org.apache.nifi.processor.ProcessSession;
 import org.apache.nifi.util.TestRunner;
@@ -82,12 +82,10 @@ public class TestPreStandardization {
             assertThat(sParamaters.length(), notNullValue());
 
             ObjectMapper mapper = new ObjectMapper();
-            final DataTransformation dataTransformation = mapper.readValue(sParamaters, DataTransformation.class);
+            final IngestionFlow dataTransformation = mapper.readValue(sParamaters, IngestionFlow.class);
 
             dataTransformation.getSteps().forEach(System.out::println);
-
-            assertThat(dataTransformation.getSteps().size(), is(6));
-
+            assertThat(dataTransformation.getSteps().size(), is(5));
 
         } finally {
             runner.stop();
