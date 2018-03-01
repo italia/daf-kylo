@@ -90,8 +90,44 @@ public class TestPreStandardization {
         } finally {
             runner.stop();
         }
+    }
 
+    @Test
+    public void testCatalogWorkingMovimentTuristici() throws IOException, URISyntaxException {
+        final URI uri = getClass().getResource("/json/movimenti-turistici.json").toURI();
+        String body = new String(Files.readAllBytes(Paths.get(uri)));
 
+        HttpServer server = httpServer(9000);
+        server.response(body);
+        Runner runner = runner(server);
+        runner.start();
+
+        try {
+            final TestRunner testRunner =
+                    createRunner("http://localhost:9000/", "test", "test", "test");
+
+            ProcessSession session = testRunner.getProcessSessionFactory().createSession();
+            FlowFile ff = session.create();
+            testRunner.enqueue(ff);
+            testRunner.run();
+
+            testRunner.assertTransferCount(DafPreStandardization.REL_SUCCESS, 1);
+
+            final String sParamaters = testRunner.getFlowFilesForRelationship(DafPreStandardization.REL_SUCCESS)
+                    .get(0)
+                    .getAttribute(DafPreStandardization.OUTPUT_JOB_PARAMS);
+            log.info("the sParamaters are {}", sParamaters);
+            assertThat(sParamaters.length(), notNullValue());
+
+            ObjectMapper mapper = new ObjectMapper();
+            final IngestionFlow dataTransformation = mapper.readValue(sParamaters, IngestionFlow.class);
+
+            dataTransformation.getSteps().forEach(System.out::println);
+            assertThat(dataTransformation.getSteps().size(), is(5));
+
+        } finally {
+            runner.stop();
+        }
     }
 
 }
