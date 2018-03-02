@@ -1,6 +1,7 @@
 package it.gov.daf.nifi.processors.models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,7 +14,7 @@ public class IngestionStep implements Serializable {
 
     private String name;
 
-    private List<StepDetail> stepDetails;
+    private List<StepDetail> stepDetails = new ArrayList<>();
 
     public IngestionStep() {
     }
