@@ -124,7 +124,7 @@ As pointed out above, once this is done *ldap login* will be substituted by *def
 
 ## Custom Processors
 
-[Here](./nifi/extensions/processors/Readme,md) you can find additional information about custom processors created for the [DAF](https://teamdigitale.governo.it/it/projects/daf.htm).
+[Here](./nifi/extensions/processors/Readme.md) you can find additional information about custom processors created for the [DAF](https://teamdigitale.governo.it/it/projects/daf.htm).
 
 # Licensing
 
