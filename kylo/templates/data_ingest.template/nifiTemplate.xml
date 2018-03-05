@@ -1,0 +1,1884 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.1">
+  <description></description>
+  <groupId>118869f3-0160-1000-df7f-71a39e685173</groupId>
+  <name>Data Ingest</name>
+  <snippet>
+    <connections>
+      <id>8a7147cd-754e-31ff-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>a754e970-343a-3c9c-0000-000000000000</id>
+        <type>OUTPUT_PORT</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>e16bccb0-6a71-3f40-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>960219de-2be8-326b-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>2a2ed2fe-8c02-3091-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>Success</selectedRelationships>
+      <source>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>fed24daa-096b-313e-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>a674d6f6-2365-3b7c-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>fee9e341-38ea-377d-0000-000000000000</id>
+        <type>OUTPUT_PORT</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>2a2ed2fe-8c02-3091-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>aa206f0a-61c1-34c4-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>d8bb71d5-b3f7-3206-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>nodata</selectedRelationships>
+      <source>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>a3eb6450-1f53-3e1e-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>b1e561d3-ea8a-3519-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>e16bccb0-6a71-3f40-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>table-avro</selectedRelationships>
+      <source>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>fd815cea-f90f-35ef-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>bcda6242-0787-35b2-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>a754e970-343a-3c9c-0000-000000000000</id>
+        <type>OUTPUT_PORT</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>unmatched</selectedRelationships>
+      <source>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>fd815cea-f90f-35ef-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>cadad086-70ba-376b-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>fd815cea-f90f-35ef-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>38777a21-f46d-3f2d-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>dd036294-8774-33ba-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>38777a21-f46d-3f2d-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>719e87ad-b373-38fe-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>e1d9d152-a4bf-35c5-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>a3eb6450-1f53-3e1e-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>ff66ed3f-b948-38ce-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>2b4171dd-df03-3246-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>83b7711f-dff2-39f1-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>failure</selectedRelationships>
+      <source>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>a3eb6450-1f53-3e1e-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>6533578f-0042-3ad5-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>38777a21-f46d-3f2d-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>8afd1ea8-d8a4-3186-0000-000000000000</groupId>
+        <id>a3eb6450-1f53-3e1e-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <controllerServices>
+      <id>8cdd51c3-3443-31e1-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <bundle>
+        <artifact>kylo-nifi-core-service-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
+      </bundle>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>client-password</key>
+          <value>
+            <name>client-password</name>
+          </value>
+        </entry>
+        <entry>
+          <key>SSL Context Service</key>
+          <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>SSL Context Service</name>
+          </value>
+        </entry>
+        <entry>
+          <key>client-username</key>
+          <value>
+            <name>client-username</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Implementation</key>
+          <value>
+            <name>Implementation</name>
+          </value>
+        </entry>
+        <entry>
+          <key>rest-client-url</key>
+          <value>
+            <name>rest-client-url</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>Kylo Metadata Service</name>
+      <persistsState>false</persistsState>
+      <properties>
+        <entry>
+          <key>client-password</key>
+          <value></value>
+        </entry>
+        <entry>
+          <key>SSL Context Service</key>
+        </entry>
+        <entry>
+          <key>client-username</key>
+          <value>dladmin</value>
+        </entry>
+        <entry>
+          <key>Implementation</key>
+          <value>REMOTE</value>
+        </entry>
+        <entry>
+          <key>rest-client-url</key>
+          <value>http://localhost:8400/proxy/v1/metadata</value>
+        </entry>
+      </properties>
+      <state>ENABLED</state>
+      <type>com.thinkbiganalytics.nifi.v2.core.metadata.MetadataProviderSelectorService</type>
+    </controllerServices>
+    <controllerServices>
+      <id>9d2a90ff-736e-3584-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <bundle>
+        <artifact>nifi-dbcp-service-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.3.0</version>
+      </bundle>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>Validation-query</key>
+          <value>
+            <name>Validation-query</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Database Connection URL</key>
+          <value>
+            <name>Database Connection URL</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Max Wait Time</key>
+          <value>
+            <name>Max Wait Time</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Database Driver Class Name</key>
+          <value>
+            <name>Database Driver Class Name</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Database User</key>
+          <value>
+            <name>Database User</name>
+          </value>
+        </entry>
+        <entry>
+          <key>database-driver-locations</key>
+          <value>
+            <name>database-driver-locations</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Max Total Connections</key>
+          <value>
+            <name>Max Total Connections</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Password</key>
+          <value>
+            <name>Password</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>Kylo MySQL</name>
+      <persistsState>false</persistsState>
+      <properties>
+        <entry>
+          <key>Validation-query</key>
+        </entry>
+        <entry>
+          <key>Database Connection URL</key>
+          <value>jdbc:mysql://localhost</value>
+        </entry>
+        <entry>
+          <key>Max Wait Time</key>
+          <value>500 millis</value>
+        </entry>
+        <entry>
+          <key>Database Driver Class Name</key>
+          <value>org.mariadb.jdbc.Driver</value>
+        </entry>
+        <entry>
+          <key>Database User</key>
+          <value>root</value>
+        </entry>
+        <entry>
+          <key>database-driver-locations</key>
+          <value>file:///opt/nifi/mysql/mariadb-java-client-1.5.7.jar</value>
+        </entry>
+        <entry>
+          <key>Max Total Connections</key>
+          <value>8</value>
+        </entry>
+        <entry>
+          <key>Password</key>
+        </entry>
+      </properties>
+      <state>ENABLED</state>
+      <type>org.apache.nifi.dbcp.DBCPConnectionPool</type>
+    </controllerServices>
+    <controllerServices>
+      <id>d84c8f77-e214-35b2-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <bundle>
+        <artifact>kylo-nifi-core-service-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
+      </bundle>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>Spring Context Service</key>
+          <value>
+            <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.spring.SpringContextService</identifiesControllerService>
+            <name>Spring Context Service</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>Kylo Cleanup Service</name>
+      <persistsState>false</persistsState>
+      <properties>
+        <entry>
+          <key>Spring Context Service</key>
+          <value>e822fbcd-3f44-31c9-0000-000000000000</value>
+        </entry>
+      </properties>
+      <state>ENABLED</state>
+      <type>com.thinkbiganalytics.nifi.v2.core.cleanup.JmsCleanupEventService</type>
+    </controllerServices>
+    <controllerServices>
+      <id>e822fbcd-3f44-31c9-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <bundle>
+        <artifact>kylo-nifi-core-service-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
+      </bundle>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>Configuraton Classes</key>
+          <value>
+            <name>Configuraton Classes</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>SpringContextLoaderService</name>
+      <persistsState>false</persistsState>
+      <properties>
+        <entry>
+          <key>Configuraton Classes</key>
+        </entry>
+      </properties>
+      <state>ENABLED</state>
+      <type>com.thinkbiganalytics.nifi.v2.core.spring.SpringContextLoaderService</type>
+    </controllerServices>
+    <labels>
+      <id>40873921-c18f-39ec-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>7.047477913733019</x>
+        <y>894.8114689660142</y>
+      </position>
+      <height>172.5148162841797</height>
+      <label>Cleanup</label>
+      <style>
+        <entry>
+          <key>background-color</key>
+          <value>#dbdbdb</value>
+        </entry>
+        <entry>
+          <key>font-size</key>
+          <value>18px</value>
+        </entry>
+      </style>
+      <width>1538.88671875</width>
+    </labels>
+    <outputPorts>
+      <id>a754e970-343a-3c9c-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>1314.5356915797693</x>
+        <y>738.2057462862922</y>
+      </position>
+      <comments></comments>
+      <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+      <name>to-standard-ingest</name>
+      <state>STOPPED</state>
+      <transmitting>false</transmitting>
+      <type>OUTPUT_PORT</type>
+    </outputPorts>
+    <outputPorts>
+      <id>fee9e341-38ea-377d-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>1216.7180267880267</x>
+        <y>949.1986218339498</y>
+      </position>
+      <comments></comments>
+      <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+      <name>to-standard-cleanup</name>
+      <state>STOPPED</state>
+      <transmitting>false</transmitting>
+      <type>OUTPUT_PORT</type>
+    </outputPorts>
+    <processors>
+      <id>83b7711f-dff2-39f1-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>651.5392054866606</x>
+        <y>0.0</y>
+      </position>
+      <bundle>
+        <artifact>kylo-nifi-core-v1-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Release All</key>
+            <value>
+              <name>Release All</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed category</key>
+            <value>
+              <name>System feed category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>High-Water Mark</key>
+            <value>
+              <name>High-Water Mark</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Mode</key>
+            <value>
+              <name>Mode</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>
+              <name>System feed name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
+              <name>Metadata Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Value Property Name</key>
+            <value>
+              <name>High-Water Mark Value Property Name</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Release All</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>System feed category</key>
+            <value>${metadata.category.systemName}</value>
+          </entry>
+          <entry>
+            <key>High-Water Mark</key>
+            <value>highWaterMark</value>
+          </entry>
+          <entry>
+            <key>Mode</key>
+            <value>REJECT</value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>${metadata.systemFeedName}</value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>8cdd51c3-3443-31e1-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Value Property Name</key>
+            <value>water.mark</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Failed - Release Highwater Mark</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style>
+        <entry>
+          <key>background-color</key>
+          <value>#f21308</value>
+        </entry>
+      </style>
+      <type>com.thinkbiganalytics.nifi.v2.core.watermark.ReleaseHighWaterMark</type>
+    </processors>
+    <processors>
+      <id>a3eb6450-1f53-3e1e-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>654.2453210721069</x>
+        <y>230.3673019148746</y>
+      </position>
+      <bundle>
+        <artifact>kylo-nifi-core-v1-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Source Fields</key>
+            <value>
+              <name>Source Fields</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Wait Time</key>
+            <value>
+              <name>Max Wait Time</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Output Type</key>
+            <value>
+              <name>Output Type</name>
+            </value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Property Name</key>
+            <value>
+              <name>High-Water Mark Property Name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Output Delimiter</key>
+            <value>
+              <name>Output Delimiter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum Time Unit</key>
+            <value>
+              <name>Minimum Time Unit</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>
+              <name>System feed name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Load Strategy</key>
+            <value>
+              <name>Load Strategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Source Database Connection</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
+              <name>Source Database Connection</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed category</key>
+            <value>
+              <name>System feed category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Source Table</key>
+            <value>
+              <name>Source Table</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Backoff Period</key>
+            <value>
+              <name>Backoff Period</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Overlap Period</key>
+            <value>
+              <name>Overlap Period</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Date Field</key>
+            <value>
+              <name>Date Field</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
+              <name>Metadata Service</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Source Fields</key>
+            <value>${metadata.table.sourceFields}</value>
+          </entry>
+          <entry>
+            <key>Max Wait Time</key>
+            <value>0 seconds</value>
+          </entry>
+          <entry>
+            <key>Output Type</key>
+            <value>DELIMITED</value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Property Name</key>
+            <value>water.mark</value>
+          </entry>
+          <entry>
+            <key>Output Delimiter</key>
+            <value>,</value>
+          </entry>
+          <entry>
+            <key>Minimum Time Unit</key>
+            <value>NONE</value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>${metadata.systemFeedName}</value>
+          </entry>
+          <entry>
+            <key>Load Strategy</key>
+            <value>FULL_LOAD</value>
+          </entry>
+          <entry>
+            <key>Source Database Connection</key>
+            <value>9d2a90ff-736e-3584-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>System feed category</key>
+            <value>${metadata.category.systemName}</value>
+          </entry>
+          <entry>
+            <key>Source Table</key>
+            <value>${metadata.table.sourceTableSchema.name}</value>
+          </entry>
+          <entry>
+            <key>Backoff Period</key>
+            <value>300 seconds</value>
+          </entry>
+          <entry>
+            <key>Overlap Period</key>
+            <value>300 seconds</value>
+          </entry>
+          <entry>
+            <key>Date Field</key>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>8cdd51c3-3443-31e1-0000-000000000000</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>1 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Fetch RDBMS Data</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>nodata</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style>
+        <entry>
+          <key>background-color</key>
+          <value>#3cff00</value>
+        </entry>
+      </style>
+      <type>com.thinkbiganalytics.nifi.v2.ingest.GetTableData</type>
+    </processors>
+    <processors>
+      <id>d8bb71d5-b3f7-3206-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>1254.793905193692</x>
+        <y>225.0592041015625</y>
+      </position>
+      <bundle>
+        <artifact>kylo-nifi-core-v1-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Release All</key>
+            <value>
+              <name>Release All</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed category</key>
+            <value>
+              <name>System feed category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>High-Water Mark</key>
+            <value>
+              <name>High-Water Mark</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Mode</key>
+            <value>
+              <name>Mode</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>
+              <name>System feed name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
+              <name>Metadata Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Value Property Name</key>
+            <value>
+              <name>High-Water Mark Value Property Name</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Release All</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>System feed category</key>
+            <value>${metadata.category.systemName}</value>
+          </entry>
+          <entry>
+            <key>High-Water Mark</key>
+            <value>highWaterMark</value>
+          </entry>
+          <entry>
+            <key>Mode</key>
+            <value>COMMIT</value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>${metadata.systemFeedName}</value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>8cdd51c3-3443-31e1-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Value Property Name</key>
+            <value>water.mark</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>No Data - Release Highwater Mark</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style>
+        <entry>
+          <key>background-color</key>
+          <value>#f21308</value>
+        </entry>
+      </style>
+      <type>com.thinkbiganalytics.nifi.v2.core.watermark.ReleaseHighWaterMark</type>
+    </processors>
+    <processors>
+      <id>e16bccb0-6a71-3f40-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>1862.863337094237</x>
+        <y>463.18458733308034</y>
+      </position>
+      <bundle>
+        <artifact>nifi-update-attribute-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.3.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Delete Attributes Expression</key>
+            <value>
+              <name>Delete Attributes Expression</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Store State</key>
+            <value>
+              <name>Store State</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFieldStructure</key>
+            <value>
+              <name>metadata.table.feedFieldStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>skipHeader</key>
+            <value>
+              <name>skipHeader</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value>
+              <name>Stateful Variables Initial Value</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Delete Attributes Expression</key>
+          </entry>
+          <entry>
+            <key>Store State</key>
+            <value>Store state locally</value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFieldStructure</key>
+            <value>${db.table.avro.schema}</value>
+          </entry>
+          <entry>
+            <key>skipHeader</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value></value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>DB Avro Ingest Parameters</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>set state fail</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+    </processors>
+    <processors>
+      <id>fd815cea-f90f-35ef-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>1258.107416043942</x>
+        <y>466.262245496152</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.3.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Routing Strategy</key>
+            <value>
+              <name>Routing Strategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>table-avro</key>
+            <value>
+              <name>table-avro</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Routing Strategy</key>
+            <value>Route to Property name</value>
+          </entry>
+          <entry>
+            <key>table-avro</key>
+            <value>${db.table.output.format:equals('AVRO')}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Detect DB Avro Ingest</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>table-avro</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>unmatched</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+    </processors>
+    <processors>
+      <id>fed24daa-096b-313e-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>54.50888623599167</x>
+        <y>929.8286793618263</y>
+      </position>
+      <bundle>
+        <artifact>kylo-nifi-core-v1-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Metadata Provider Service</key>
+            <value>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
+              <name>Metadata Provider Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed category</key>
+            <value>
+              <name>System feed category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Feed Cleanup Event Service</key>
+            <value>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.cleanup.CleanupEventService</identifiesControllerService>
+              <name>Feed Cleanup Event Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>
+              <name>System feed name</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Metadata Provider Service</key>
+            <value>8cdd51c3-3443-31e1-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>System feed category</key>
+            <value>${metadata.category.systemName}</value>
+          </entry>
+          <entry>
+            <key>Feed Cleanup Event Service</key>
+            <value>d84c8f77-e214-35b2-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>${metadata.systemFeedName}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>TriggerCleanup</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>Success</name>
+      </relationships>
+      <style>
+        <entry>
+          <key>background-color</key>
+          <value>#ff9900</value>
+        </entry>
+      </style>
+      <type>com.thinkbiganalytics.nifi.v2.metadata.TriggerCleanup</type>
+    </processors>
+    <processors>
+      <id>ff66ed3f-b948-38ce-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>231.04846845100292</y>
+      </position>
+      <bundle>
+        <artifact>kylo-nifi-core-v1-nar</artifact>
+        <group>default</group>
+        <version>unversioned</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>System feed category</key>
+            <value>
+              <name>System feed category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>High-Water Mark</key>
+            <value>
+              <name>High-Water Mark</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Yield Count</key>
+            <value>
+              <name>Max Yield Count</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Initial Value</key>
+            <value>
+              <name>Initial Value</name>
+            </value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>
+              <name>System feed name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>
+              <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
+              <name>Metadata Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Value Property Name</key>
+            <value>
+              <name>High-Water Mark Value Property Name</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Active Water Mark Strategy</key>
+            <value>
+              <name>Active Water Mark Strategy</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>System feed category</key>
+            <value>${metadata.category.systemName}</value>
+          </entry>
+          <entry>
+            <key>High-Water Mark</key>
+            <value>highWaterMark</value>
+          </entry>
+          <entry>
+            <key>Max Yield Count</key>
+            <value>50</value>
+          </entry>
+          <entry>
+            <key>Initial Value</key>
+            <value>1970-01-01T00:00:00</value>
+          </entry>
+          <entry>
+            <key>System feed name</key>
+            <value>${metadata.systemFeedName}</value>
+          </entry>
+          <entry>
+            <key>Metadata Service</key>
+            <value>8cdd51c3-3443-31e1-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>High-Water Mark Value Property Name</key>
+            <value>water.mark</value>
+          </entry>
+          <entry>
+            <key>Active Water Mark Strategy</key>
+            <value>YIELD</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Database</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>activeFailure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>com.thinkbiganalytics.nifi.v2.core.watermark.LoadHighWaterMark</type>
+    </processors>
+    <processors>
+      <id>2a2ed2fe-8c02-3091-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>631.0420883893967</x>
+        <y>926.1943391938012</y>
+      </position>
+      <bundle>
+        <artifact>nifi-update-attribute-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.3.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>feed</key>
+            <value>
+              <name>feed</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hive.profile.root</key>
+            <value>
+              <name>hive.profile.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hdfs.ingest.root</key>
+            <value>
+              <name>hdfs.ingest.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Delete Attributes Expression</key>
+            <value>
+              <name>Delete Attributes Expression</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Store State</key>
+            <value>
+              <name>Store State</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value>
+              <name>Stateful Variables Initial Value</name>
+            </value>
+          </entry>
+          <entry>
+            <key>category</key>
+            <value>
+              <name>category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hive.ingest.root</key>
+            <value>
+              <name>hive.ingest.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hive.master.root</key>
+            <value>
+              <name>hive.master.root</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>feed</key>
+            <value>${metadata.systemFeedName}</value>
+          </entry>
+          <entry>
+            <key>hive.profile.root</key>
+            <value>${config.hive.profile.root}</value>
+          </entry>
+          <entry>
+            <key>hdfs.ingest.root</key>
+            <value>${config.hdfs.ingest.root}</value>
+          </entry>
+          <entry>
+            <key>Delete Attributes Expression</key>
+          </entry>
+          <entry>
+            <key>Store State</key>
+            <value>Store state locally</value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value></value>
+          </entry>
+          <entry>
+            <key>category</key>
+            <value>${metadata.category.systemName}</value>
+          </entry>
+          <entry>
+            <key>hive.ingest.root</key>
+            <value>${config.hive.ingest.root}</value>
+          </entry>
+          <entry>
+            <key>hive.master.root</key>
+            <value>${config.hive.master.root}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Initialize Cleanup Parameters</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>set state fail</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style>
+        <entry>
+          <key>background-color</key>
+          <value>#11f237</value>
+        </entry>
+      </style>
+      <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+    </processors>
+    <processors>
+      <id>38777a21-f46d-3f2d-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>656.4847164154053</x>
+        <y>463.91699544380117</y>
+      </position>
+      <bundle>
+        <artifact>nifi-update-attribute-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.3.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>hive.profile.root</key>
+            <value>
+              <name>hive.profile.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Store State</key>
+            <value>
+              <name>Store State</name>
+            </value>
+          </entry>
+          <entry>
+            <key>spark.input_folder</key>
+            <value>
+              <name>spark.input_folder</name>
+            </value>
+          </entry>
+          <entry>
+            <key>archiveId</key>
+            <value>
+              <name>archiveId</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldPoliciesJson</key>
+            <value>
+              <name>metadata.table.fieldPoliciesJson</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hdfs.archive.root</key>
+            <value>
+              <name>hdfs.archive.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Delete Attributes Expression</key>
+            <value>
+              <name>Delete Attributes Expression</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetTblProperties</key>
+            <value>
+              <name>metadata.table.targetTblProperties</name>
+            </value>
+          </entry>
+          <entry>
+            <key>kylo.tmp.baseFolder</key>
+            <value>
+              <name>kylo.tmp.baseFolder</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFieldStructure</key>
+            <value>
+              <name>metadata.table.feedFieldStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionStructure</key>
+            <value>
+              <name>metadata.table.partitionStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hive.ingest.root</key>
+            <value>
+              <name>hive.ingest.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hive.master.root</key>
+            <value>
+              <name>hive.master.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldIndexString</key>
+            <value>
+              <name>metadata.table.fieldIndexString</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetFormat</key>
+            <value>
+              <name>metadata.table.targetFormat</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldStructure</key>
+            <value>
+              <name>metadata.table.fieldStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>nifi.home</key>
+            <value>
+              <name>nifi.home</name>
+            </value>
+          </entry>
+          <entry>
+            <key>skipHeader</key>
+            <value>
+              <name>skipHeader</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value>
+              <name>Stateful Variables Initial Value</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionSpecs</key>
+            <value>
+              <name>metadata.table.partitionSpecs</name>
+            </value>
+          </entry>
+          <entry>
+            <key>feed</key>
+            <value>
+              <name>feed</name>
+            </value>
+          </entry>
+          <entry>
+            <key>hdfs.ingest.root</key>
+            <value>
+              <name>hdfs.ingest.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>category</key>
+            <value>
+              <name>category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetMergeStrategy</key>
+            <value>
+              <name>metadata.table.targetMergeStrategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFormat</key>
+            <value>
+              <name>metadata.table.feedFormat</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>hive.profile.root</key>
+            <value>${config.hive.profile.root}</value>
+          </entry>
+          <entry>
+            <key>Store State</key>
+            <value>Store state locally</value>
+          </entry>
+          <entry>
+            <key>spark.input_folder</key>
+            <value>/tmp/kylo-nifi/spark</value>
+          </entry>
+          <entry>
+            <key>archiveId</key>
+            <value>${now():format('yyyyMMddHHmmss')}_${UUID()}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldPoliciesJson</key>
+            <value>${metadata.table.fieldPoliciesJson}</value>
+          </entry>
+          <entry>
+            <key>hdfs.archive.root</key>
+            <value>${config.hdfs.archive.root}</value>
+          </entry>
+          <entry>
+            <key>Delete Attributes Expression</key>
+          </entry>
+          <entry>
+            <key>metadata.table.targetTblProperties</key>
+            <value>${metadata.table.targetTblProperties}</value>
+          </entry>
+          <entry>
+            <key>kylo.tmp.baseFolder</key>
+            <value>/tmp/kylo-nifi</value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFieldStructure</key>
+            <value>${metadata.table.feedFieldStructure}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionStructure</key>
+            <value>${metadata.table.partitionStructure}</value>
+          </entry>
+          <entry>
+            <key>hive.ingest.root</key>
+            <value>${config.hive.ingest.root}</value>
+          </entry>
+          <entry>
+            <key>hive.master.root</key>
+            <value>${config.hive.master.root}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldIndexString</key>
+            <value>${metadata.table.fieldIndexString}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetFormat</key>
+            <value>${metadata.table.targetFormat}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldStructure</key>
+            <value>${metadata.table.fieldStructure}</value>
+          </entry>
+          <entry>
+            <key>nifi.home</key>
+            <value>${config.nifi.home}</value>
+          </entry>
+          <entry>
+            <key>skipHeader</key>
+            <value>${metadata.options.skipHeader}</value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value></value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionSpecs</key>
+            <value>${metadata.table.partitionSpecs}</value>
+          </entry>
+          <entry>
+            <key>feed</key>
+            <value>${metadata.systemFeedName}</value>
+          </entry>
+          <entry>
+            <key>hdfs.ingest.root</key>
+            <value>${config.hdfs.ingest.root}</value>
+          </entry>
+          <entry>
+            <key>category</key>
+            <value>${metadata.category.systemName}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetMergeStrategy</key>
+            <value>${metadata.table.targetMergeStrategy}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFormat</key>
+            <value>${metadata.table.feedFormat}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Initialize Feed Parameters</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>set state fail</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style>
+        <entry>
+          <key>background-color</key>
+          <value>#11f237</value>
+        </entry>
+      </style>
+      <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+    </processors>
+    <processors>
+      <id>719e87ad-b373-38fe-0000-000000000000</id>
+      <parentGroupId>8afd1ea8-d8a4-3186-0000-000000000000</parentGroupId>
+      <position>
+        <x>7.784637451171875</x>
+        <y>459.91565942237776</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.3.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Keep Source File</key>
+            <value>
+              <name>Keep Source File</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum File Age</key>
+            <value>
+              <name>Minimum File Age</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Polling Interval</key>
+            <value>
+              <name>Polling Interval</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Input Directory</key>
+            <value>
+              <name>Input Directory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Age</key>
+            <value>
+              <name>Maximum File Age</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>
+              <name>Batch Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Size</key>
+            <value>
+              <name>Maximum File Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum File Size</key>
+            <value>
+              <name>Minimum File Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Ignore Hidden Files</key>
+            <value>
+              <name>Ignore Hidden Files</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Recurse Subdirectories</key>
+            <value>
+              <name>Recurse Subdirectories</name>
+            </value>
+          </entry>
+          <entry>
+            <key>File Filter</key>
+            <value>
+              <name>File Filter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Path Filter</key>
+            <value>
+              <name>Path Filter</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Keep Source File</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Minimum File Age</key>
+            <value>0 sec</value>
+          </entry>
+          <entry>
+            <key>Polling Interval</key>
+            <value>0 sec</value>
+          </entry>
+          <entry>
+            <key>Input Directory</key>
+            <value>/var/dropzone</value>
+          </entry>
+          <entry>
+            <key>Maximum File Age</key>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>100</value>
+          </entry>
+          <entry>
+            <key>Maximum File Size</key>
+          </entry>
+          <entry>
+            <key>Minimum File Size</key>
+            <value>0 B</value>
+          </entry>
+          <entry>
+            <key>Ignore Hidden Files</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Recurse Subdirectories</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>File Filter</key>
+            <value>mydata\d{1,3}.csv</value>
+          </entry>
+          <entry>
+            <key>Path Filter</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>15 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Filesystem</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style>
+        <entry>
+          <key>background-color</key>
+          <value>#11f237</value>
+        </entry>
+      </style>
+      <type>org.apache.nifi.processors.standard.GetFile</type>
+    </processors>
+  </snippet>
+  <timestamp>12/01/2017 11:11:59 GMT</timestamp>
+</template>
