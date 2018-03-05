@@ -33,10 +33,8 @@
       }
     ]
   },
-  "roleMemberships": [
-  ],
-  "feedRoleMemberships": [
-  ],
+  "roleMemberships": [],
+  "feedRoleMemberships": [],
   "properties": [
     {
       "processGroupName": "NiFi Flow",
@@ -62,8 +60,7 @@
       "templateValue": ".*csv",
       "userEditable": true,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": true,
       "containsConfigurationVariables": false,
@@ -98,8 +95,7 @@
       "templateValue": "",
       "userEditable": true,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": true,
       "containsConfigurationVariables": false,
@@ -171,8 +167,7 @@
       "templateValue": ".",
       "userEditable": true,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": true,
       "containsConfigurationVariables": false,
@@ -218,8 +213,7 @@
       "templateValue": "false",
       "userEditable": true,
       "renderType": "select",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": true,
       "containsConfigurationVariables": false,
@@ -254,8 +248,7 @@
       "templateValue": "",
       "userEditable": true,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": true,
       "containsConfigurationVariables": false,
@@ -306,8 +299,7 @@
       "templateValue": "None",
       "userEditable": false,
       "renderType": "select",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -342,8 +334,7 @@
       "templateValue": "${sftp.remote.host}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -415,8 +406,7 @@
       "templateValue": "${path}/${filename}",
       "userEditable": true,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -451,8 +441,7 @@
       "templateValue": "${sftp.listing.user}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -487,8 +476,7 @@
       "templateValue": "${now():format('yyyyMMddHHmmss')}_${UUID()}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -523,8 +511,7 @@
       "templateValue": "${metadata.category.systemName}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -559,8 +546,7 @@
       "templateValue": "${metadata.systemFeedName}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -595,8 +581,7 @@
       "templateValue": "${config.hdfs.archive.root}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -631,8 +616,7 @@
       "templateValue": "${config.hdfs.ingest.root}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -667,8 +651,7 @@
       "templateValue": "${config.hive.ingest.root}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -703,8 +686,7 @@
       "templateValue": "${config.hive.master.root}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -739,8 +721,7 @@
       "templateValue": "${config.hive.profile.root}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -775,8 +756,7 @@
       "templateValue": "${metadata.table.feedFieldStructure}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -811,8 +791,7 @@
       "templateValue": "${metadata.table.feedFormat}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -847,8 +826,7 @@
       "templateValue": "${metadata.table.fieldPoliciesJson}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -883,8 +861,7 @@
       "templateValue": "${metadata.table.fieldStructure}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -919,8 +896,7 @@
       "templateValue": "${metadata.table.targetFormat}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -955,8 +931,7 @@
       "templateValue": "${metadata.table.targetMergeStrategy}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -991,8 +966,7 @@
       "templateValue": "${metadata.table.targetTblProperties}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -1027,8 +1001,7 @@
       "templateValue": "${config.nifi.home}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -1063,8 +1036,7 @@
       "templateValue": "${metadata.options.skipHeader}",
       "userEditable": false,
       "renderType": "text",
-      "renderOptions": {
-      },
+      "renderOptions": {},
       "selected": true,
       "inputProperty": false,
       "containsConfigurationVariables": false,
@@ -1103,8 +1075,7 @@
           "templateValue": "${now():format('yyyyMMddHHmmss')}_${UUID()}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1139,8 +1110,7 @@
           "templateValue": "${metadata.category.systemName}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1175,8 +1145,7 @@
           "templateValue": "${metadata.systemFeedName}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1211,8 +1180,7 @@
           "templateValue": "${config.hdfs.archive.root}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1247,8 +1215,7 @@
           "templateValue": "${config.hdfs.ingest.root}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1283,8 +1250,7 @@
           "templateValue": "${config.hive.ingest.root}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1319,8 +1285,7 @@
           "templateValue": "${config.hive.master.root}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1355,8 +1320,7 @@
           "templateValue": "${config.hive.profile.root}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1391,8 +1355,7 @@
           "templateValue": "${metadata.table.feedFieldStructure}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1427,8 +1390,7 @@
           "templateValue": "${metadata.table.feedFormat}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1463,8 +1425,7 @@
           "templateValue": "${metadata.table.fieldPoliciesJson}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1499,8 +1460,7 @@
           "templateValue": "${metadata.table.fieldStructure}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1535,8 +1495,7 @@
           "templateValue": "${metadata.table.targetFormat}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1571,8 +1530,7 @@
           "templateValue": "${metadata.table.targetMergeStrategy}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1607,8 +1565,7 @@
           "templateValue": "${metadata.table.targetTblProperties}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1643,8 +1600,7 @@
           "templateValue": "${config.nifi.home}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1679,8 +1635,7 @@
           "templateValue": "${metadata.options.skipHeader}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1742,8 +1697,7 @@
           "templateValue": "None",
           "userEditable": false,
           "renderType": "select",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1778,8 +1732,7 @@
           "templateValue": "${sftp.remote.host}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1851,8 +1804,7 @@
           "templateValue": "${path}/${filename}",
           "userEditable": true,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1887,8 +1839,7 @@
           "templateValue": "${sftp.listing.user}",
           "userEditable": false,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": false,
           "containsConfigurationVariables": false,
@@ -1936,8 +1887,7 @@
           "templateValue": ".*csv",
           "userEditable": true,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": true,
           "containsConfigurationVariables": false,
@@ -1972,8 +1922,7 @@
           "templateValue": "",
           "userEditable": true,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": true,
           "containsConfigurationVariables": false,
@@ -2045,8 +1994,7 @@
           "templateValue": ".",
           "userEditable": true,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": true,
           "containsConfigurationVariables": false,
@@ -2092,8 +2040,7 @@
           "templateValue": "false",
           "userEditable": true,
           "renderType": "select",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": true,
           "containsConfigurationVariables": false,
@@ -2128,8 +2075,7 @@
           "templateValue": "",
           "userEditable": true,
           "renderType": "text",
-          "renderOptions": {
-          },
+          "renderOptions": {},
           "selected": true,
           "inputProperty": true,
           "containsConfigurationVariables": false,
