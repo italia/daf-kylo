@@ -54,6 +54,10 @@ spec:
         hostnames:
           - "idm.daf.gov.it"
           - "idm"
+      - ip: "192.168.0.43"
+        hostnames:
+          - "master.elasticsearch.daf.gov.it"
+          - "master"
       hostNetwork: false #replaced to true to remove service exposed
       dnsPolicy: ClusterFirstWithHostNet
       containers:
