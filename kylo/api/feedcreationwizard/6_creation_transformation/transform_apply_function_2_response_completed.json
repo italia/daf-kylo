@@ -1,0 +1,5367 @@
+{
+  "profile": [
+    {
+      "columnName": "application",
+      "metricType": "COLUMN_DATATYPE",
+      "metricValue": "StringType"
+    },
+    {
+      "columnName": "application",
+      "metricType": "COLUMN_NULLABLE",
+      "metricValue": "true"
+    },
+    {
+      "columnName": "application",
+      "metricType": "COLUMN_METADATA",
+      "metricValue": "{\"HIVE_TYPE_STRING\":\"string\"}"
+    },
+    {
+      "columnName": "application",
+      "metricType": "NULL_COUNT",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "application",
+      "metricType": "TOTAL_COUNT",
+      "metricValue": "1000"
+    },
+    {
+      "columnName": "application",
+      "metricType": "UNIQUE_COUNT",
+      "metricValue": "14"
+    },
+    {
+      "columnName": "application",
+      "metricType": "PERC_NULL_VALUES",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "application",
+      "metricType": "PERC_UNIQUE_VALUES",
+      "metricValue": "1.4"
+    },
+    {
+      "columnName": "application",
+      "metricType": "PERC_DUPLICATE_VALUES",
+      "metricValue": "98.6"
+    },
+    {
+      "columnName": "application",
+      "metricType": "TOP_N_VALUES",
+      "metricValue": "1^AACTIVEDIRECTORY CDC^A660^B2^AOPENCMS^A86^B3^AGESTIONE DOCUMENTALE^A79^B"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MAX_LENGTH",
+      "metricValue": "27"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MIN_LENGTH",
+      "metricValue": "4"
+    },
+    {
+      "columnName": "application",
+      "metricType": "LONGEST_STRING",
+      "metricValue": "AMMINISTRAZIONE ATTIVA SIAM"
+    },
+    {
+      "columnName": "application",
+      "metricType": "SHORTEST_STRING",
+      "metricValue": "SICR"
+    },
+    {
+      "columnName": "application",
+      "metricType": "EMPTY_COUNT",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "application",
+      "metricType": "PERC_EMPTY_VALUES",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MIN_STRING_CASE",
+      "metricValue": "ACTIVEDIRECTORY CDC"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MAX_STRING_CASE",
+      "metricValue": "SICR"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MIN_STRING_ICASE",
+      "metricValue": "ACTIVEDIRECTORY CDC"
+    },
+    {
+      "columnName": "application",
+      "metricType": "MAX_STRING_ICASE",
+      "metricValue": "SICR"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "COLUMN_DATATYPE",
+      "metricValue": "DoubleType"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "COLUMN_NULLABLE",
+      "metricValue": "true"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "COLUMN_METADATA",
+      "metricValue": "{\"HIVE_TYPE_STRING\":\"double\"}"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "NULL_COUNT",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "TOTAL_COUNT",
+      "metricValue": "1000"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "UNIQUE_COUNT",
+      "metricValue": "114"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "PERC_NULL_VALUES",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "PERC_UNIQUE_VALUES",
+      "metricValue": "11.4"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "PERC_DUPLICATE_VALUES",
+      "metricValue": "88.6"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "TOP_N_VALUES",
+      "metricValue": "1^A0.0^A763^B2^A1.0^A35^B3^A2.0^A17^B"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "MAX",
+      "metricValue": "16276.0"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "MIN",
+      "metricValue": "0.0"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "SUM",
+      "metricValue": "94633.0"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "MEAN",
+      "metricValue": "94.63299999999992"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "STDDEV",
+      "metricValue": "901.3753370882745"
+    },
+    {
+      "columnName": "failures_total",
+      "metricType": "VARIANCE",
+      "metricValue": "812477.4983110004"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "COLUMN_DATATYPE",
+      "metricValue": "TimestampType"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "COLUMN_NULLABLE",
+      "metricValue": "true"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "COLUMN_METADATA",
+      "metricValue": "{}"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "NULL_COUNT",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "TOTAL_COUNT",
+      "metricValue": "1000"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "UNIQUE_COUNT",
+      "metricValue": "273"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "PERC_NULL_VALUES",
+      "metricValue": "0"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "PERC_UNIQUE_VALUES",
+      "metricValue": "27.3"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "PERC_DUPLICATE_VALUES",
+      "metricValue": "72.7"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "TOP_N_VALUES",
+      "metricValue": "1^A2018-01-23 11:00:00.0^A16^B2^A2018-02-02 10:00:00.0^A14^B3^A2018-01-29 10:00:00.0^A13^B"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "MAX_TIMESTAMP",
+      "metricValue": "2018-02-05 23:00:00.0"
+    },
+    {
+      "columnName": "datetime",
+      "metricType": "MIN_TIMESTAMP",
+      "metricValue": "2018-01-22 00:00:00.0"
+    }
+  ],
+  "results": {
+    "query": "SELECT * FROM a281be00b8464fb8bb35a3ed61e031e7",
+    "columns": [
+      {
+        "displayName": "application",
+        "hiveColumnLabel": "application",
+        "field": "application",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "a281be00b8464fb8bb35a3ed61e031e7",
+        "databaseName": null,
+        "index": 0,
+        "comment": null,
+        "precisionScale": null
+      },
+      {
+        "displayName": "failures_total",
+        "hiveColumnLabel": "failures_total",
+        "field": "failures_total",
+        "dataType": "double",
+        "nativeDataType": null,
+        "tableName": "a281be00b8464fb8bb35a3ed61e031e7",
+        "databaseName": null,
+        "index": 1,
+        "comment": null,
+        "precisionScale": null
+      },
+      {
+        "displayName": "datetime",
+        "hiveColumnLabel": "datetime",
+        "field": "datetime",
+        "dataType": "timestamp",
+        "nativeDataType": null,
+        "tableName": "a281be00b8464fb8bb35a3ed61e031e7",
+        "databaseName": null,
+        "index": 2,
+        "comment": null,
+        "precisionScale": null
+      }
+    ],
+    "columnFieldMap": {
+      "failures_total": {
+        "displayName": "failures_total",
+        "hiveColumnLabel": "failures_total",
+        "field": "failures_total",
+        "dataType": "double",
+        "nativeDataType": null,
+        "tableName": "a281be00b8464fb8bb35a3ed61e031e7",
+        "databaseName": null,
+        "index": 1,
+        "comment": null,
+        "precisionScale": null
+      },
+      "datetime": {
+        "displayName": "datetime",
+        "hiveColumnLabel": "datetime",
+        "field": "datetime",
+        "dataType": "timestamp",
+        "nativeDataType": null,
+        "tableName": "a281be00b8464fb8bb35a3ed61e031e7",
+        "databaseName": null,
+        "index": 2,
+        "comment": null,
+        "precisionScale": null
+      },
+      "application": {
+        "displayName": "application",
+        "hiveColumnLabel": "application",
+        "field": "application",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "a281be00b8464fb8bb35a3ed61e031e7",
+        "databaseName": null,
+        "index": 0,
+        "comment": null,
+        "precisionScale": null
+      }
+    },
+    "columnDisplayNameMap": {
+      "failures_total": {
+        "displayName": "failures_total",
+        "hiveColumnLabel": "failures_total",
+        "field": "failures_total",
+        "dataType": "double",
+        "nativeDataType": null,
+        "tableName": "a281be00b8464fb8bb35a3ed61e031e7",
+        "databaseName": null,
+        "index": 1,
+        "comment": null,
+        "precisionScale": null
+      },
+      "datetime": {
+        "displayName": "datetime",
+        "hiveColumnLabel": "datetime",
+        "field": "datetime",
+        "dataType": "timestamp",
+        "nativeDataType": null,
+        "tableName": "a281be00b8464fb8bb35a3ed61e031e7",
+        "databaseName": null,
+        "index": 2,
+        "comment": null,
+        "precisionScale": null
+      },
+      "application": {
+        "displayName": "application",
+        "hiveColumnLabel": "application",
+        "field": "application",
+        "dataType": "string",
+        "nativeDataType": null,
+        "tableName": "a281be00b8464fb8bb35a3ed61e031e7",
+        "databaseName": null,
+        "index": 0,
+        "comment": null,
+        "precisionScale": null
+      }
+    },
+    "rows": [
+      {
+        "failures_total": 10.0,
+        "datetime": 1516892400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517493600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516629600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516849200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517479200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517288400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517317200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 3.0,
+        "datetime": 1517756400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517346000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 212.0,
+        "datetime": 1516802400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 9.0,
+        "datetime": 1516899600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517814000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516791600000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517302800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516608000000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516885200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517241600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517572800000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 16276.0,
+        "datetime": 1517799600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516784400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 31.0,
+        "datetime": 1517842800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 3.0,
+        "datetime": 1517158800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 72.0,
+        "datetime": 1516870800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516694400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516795200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517122800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517302800000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1516626000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 167.0,
+        "datetime": 1516881600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517317200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 18.0,
+        "datetime": 1517828400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517652000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516629600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517572800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517587200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 124.0,
+        "datetime": 1516982400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 6.0,
+        "datetime": 1516989600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516744800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516622400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517295600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517464800000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517230800000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517572800000,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516698000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517493600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1517220000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516741200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517486400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516752000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517554800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517475600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517310000000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516708800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 294.0,
+        "datetime": 1516881600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517493600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517569200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517504400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517468400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517295600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517220000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517313600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516881600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517220000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517292000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516582800000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517666400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516813200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517223600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517292000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517504400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 84.0,
+        "datetime": 1517702400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516780800000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516896000000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517623200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517551200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517176800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517482800000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516575600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516964400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517007600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516611600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516586400000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 339.0,
+        "datetime": 1517310000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517839200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517536800000,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516629600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516622400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517500800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517104800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516867200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 116.0,
+        "datetime": 1516611600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517220000000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516748400000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516795200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517173200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516802400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516968000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516716000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516971600000,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516809600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517817600000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517576400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516881600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517209200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 74.0,
+        "datetime": 1517338800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516802400000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516608000000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 21.0,
+        "datetime": 1517011200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 37.0,
+        "datetime": 1516698000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517846400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517814000000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517331600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517810400000,
+        "application": "SICR"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516896000000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517464800000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517313600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517234400000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516676400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 57.0,
+        "datetime": 1516946400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516777200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 12.0,
+        "datetime": 1517562000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516705200000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517464800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 254.0,
+        "datetime": 1517850000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516878000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517583600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517302800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517576400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517558400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 13.0,
+        "datetime": 1517774400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516950000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 217.0,
+        "datetime": 1516777200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517839200000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516608000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517770800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517299200000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516694400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517842800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 79.0,
+        "datetime": 1517832000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517220000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517446800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517565600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517810400000,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517868000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517648400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516608000000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 7.0,
+        "datetime": 1516957200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517493600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517126400000,
+        "application": "SICR"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517576400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516881600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 6.0,
+        "datetime": 1517223600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517799600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 55.0,
+        "datetime": 1516701600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516791600000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517846400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517302800000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 84.0,
+        "datetime": 1517295600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516809600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516784400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516957200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517000400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517479200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517677200000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517223600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 3277.0,
+        "datetime": 1517299200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517562000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516716000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 5.0,
+        "datetime": 1517292000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516867200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516575600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517738400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516888800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516705200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517479200000,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516899600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516964400000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516896000000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517828400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 45.0,
+        "datetime": 1516716000000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 46.0,
+        "datetime": 1517500800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516629600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517320800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516888800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516953600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517220000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516863600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 469.0,
+        "datetime": 1516896000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517140800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517500800000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517497200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 912.0,
+        "datetime": 1516802400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 568.0,
+        "datetime": 1517450400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517518800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1517565600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516741200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516921200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516867200000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 42.0,
+        "datetime": 1516964400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517486400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516784400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516626000000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517814000000,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516579200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517191200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 20.0,
+        "datetime": 1516892400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516705200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517054400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1517601600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517191200000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517475600000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 1080.0,
+        "datetime": 1517850000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517828400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517439600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 3.0,
+        "datetime": 1516647600000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516618800000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517050800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516888800000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517846400000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516633200000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516705200000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517792400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 103.0,
+        "datetime": 1517144400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516723200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516708800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 3.0,
+        "datetime": 1516960800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516888800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517230800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516957200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516676400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 56.0,
+        "datetime": 1516690800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517115600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 89.0,
+        "datetime": 1516953600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516791600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516694400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 199.0,
+        "datetime": 1517493600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516964400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517655600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516618800000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516604400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516874400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517778000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517331600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517590800000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 1213.0,
+        "datetime": 1517511600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517324400000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516806000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517238000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516892400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 9.0,
+        "datetime": 1516845600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516881600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517104800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516636800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517817600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517216400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516888800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517824800000,
+        "application": "AREA CONTROLLO ENTI"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516788000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516629600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517472000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517162400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517817600000,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516780800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517835600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517119200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517475600000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 154.0,
+        "datetime": 1516845600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516831200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 22.0,
+        "datetime": 1516600800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 4034.0,
+        "datetime": 1517716800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517317200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517490000000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517727600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516806000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516726800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517155200000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517223600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517029200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 404.0,
+        "datetime": 1517734800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516636800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517583600000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516816800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 3.0,
+        "datetime": 1517824800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516712400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 21.0,
+        "datetime": 1517648400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517112000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516874400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517245200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517490000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517493600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516694400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517814000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517328000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 639.0,
+        "datetime": 1517032800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 4.0,
+        "datetime": 1516953600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516611600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517054400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 23.0,
+        "datetime": 1516838400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516842000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 6.0,
+        "datetime": 1517734800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517068800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517702400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 154.0,
+        "datetime": 1517835600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517018400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517868000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 174.0,
+        "datetime": 1516870800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517450400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516982400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 55.0,
+        "datetime": 1517680800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517220000000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516874400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517482800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516604400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517637600000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517569200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516629600000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517785200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517194800000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 319.0,
+        "datetime": 1516957200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517835600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516622400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516964400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517637600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516964400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516957200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517554800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516773600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517828400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516759200000,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM"
+      },
+      {
+        "failures_total": 9.0,
+        "datetime": 1516626000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517227200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517648400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517824800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516752000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516658400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 2212.0,
+        "datetime": 1517565600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 13.0,
+        "datetime": 1517695200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516885200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517817600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516777200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517486400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516780800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516968000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516896000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516730400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517338800000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517749200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516611600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516982400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517493600000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516870800000,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM"
+      },
+      {
+        "failures_total": 3.0,
+        "datetime": 1517032800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517068800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516626000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1517828400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517569200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517817600000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517720400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516950000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 586.0,
+        "datetime": 1517158800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516690800000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516953600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517490000000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517824800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 14.0,
+        "datetime": 1516600800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517486400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517716800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517468400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516618800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517824800000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 5.0,
+        "datetime": 1516928400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516615200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517504400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 167.0,
+        "datetime": 1517587200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517814000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 70.0,
+        "datetime": 1517472000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517230800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516950000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516698000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1516874400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 35.0,
+        "datetime": 1517256000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516608000000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517216400000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517130000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 501.0,
+        "datetime": 1517234400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517295600000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516719600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517320800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517572800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516860000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516867200000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517018400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 8843.0,
+        "datetime": 1516838400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516993200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516942800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 42.0,
+        "datetime": 1517245200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516708800000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 458.0,
+        "datetime": 1517284800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517644800000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517234400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517083200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517058000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517839200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517295600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517590800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517500800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 12.0,
+        "datetime": 1517558400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516708800000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517562000000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516665600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517554800000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516788000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517626800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517547600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516608000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517688000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517832000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516802400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 8.0,
+        "datetime": 1517180400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516870800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517562000000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517464800000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517572800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 151.0,
+        "datetime": 1517220000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517680800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516888800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516687200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517558400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516791600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 31.0,
+        "datetime": 1516788000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 62.0,
+        "datetime": 1517572800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 62.0,
+        "datetime": 1517565600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517216400000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517828400000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516824000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 17.0,
+        "datetime": 1516806000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516881600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517493600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 8.0,
+        "datetime": 1516716000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517014800000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517490000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517482800000,
+        "application": "SICR"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517760000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517299200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516773600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516615200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517014800000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517598000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517281200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 4.0,
+        "datetime": 1517475600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 343.0,
+        "datetime": 1517486400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 26.0,
+        "datetime": 1516860000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517299200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516582800000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517320800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517216400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 227.0,
+        "datetime": 1517306400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516867200000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516755600000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517817600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517554800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516964400000,
+        "application": "AREA CONTROLLO ENTI"
+      },
+      {
+        "failures_total": 64.0,
+        "datetime": 1516860000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516968000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517043600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517763600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517810400000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517324400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516888800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516644000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516964400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 16.0,
+        "datetime": 1517486400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516960800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516780800000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1516698000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517637600000,
+        "application": "SERVIZI ARUBA"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517306400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517173200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517828400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516788000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516647600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 46.0,
+        "datetime": 1516935600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 7.0,
+        "datetime": 1516647600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 35.0,
+        "datetime": 1517317200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1851.0,
+        "datetime": 1516888800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516629600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517443200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517810400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516608000000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516881600000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517760000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517558400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516708800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 179.0,
+        "datetime": 1517796000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516690800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516964400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516780800000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517814000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517565600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516618800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517241600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517454000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516611600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516618800000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 22.0,
+        "datetime": 1517680800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517313600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 64.0,
+        "datetime": 1517562000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517094000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517320800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516694400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517821200000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516809600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517713200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1517216400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517569200000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516705200000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517493600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 14.0,
+        "datetime": 1517331600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516629600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517486400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 22.0,
+        "datetime": 1517569200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 4.0,
+        "datetime": 1516971600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517839200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517299200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517313600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516878000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 22.0,
+        "datetime": 1516784400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516712400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517641200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516795200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 73.0,
+        "datetime": 1517760000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517313600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517673600000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516687200000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 9.0,
+        "datetime": 1517778000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517173200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517486400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517259600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517569200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517468400000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517608800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516816800000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516687200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516773600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516654800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517490000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 437.0,
+        "datetime": 1516957200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516690800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517216400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516968000000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 1313.0,
+        "datetime": 1517266800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516784400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 50.0,
+        "datetime": 1517565600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 22.0,
+        "datetime": 1517313600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517324400000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 41.0,
+        "datetime": 1516647600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 155.0,
+        "datetime": 1516604400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516856400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517324400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517317200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517605200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516878000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516600800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517223600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1517079600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517623200000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517835600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517310000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516975200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517497200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517832000000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 46.0,
+        "datetime": 1517223600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517245200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517331600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 9.0,
+        "datetime": 1516608000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516777200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517490000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516622400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517821200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517482800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516590000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517482800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 107.0,
+        "datetime": 1517108400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516953600000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517223600000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516950000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516860000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516705200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517338800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517320800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516712400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517472000000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516867200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516719600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517317200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516924800000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516791600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1516892400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517338800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517479200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516698000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517709600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 124.0,
+        "datetime": 1517292000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516687200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 41.0,
+        "datetime": 1516701600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 32.0,
+        "datetime": 1517320800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517277600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517562000000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 12.0,
+        "datetime": 1516917600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517238000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517832000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516975200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516802400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517295600000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516950000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517821200000,
+        "application": "SICR"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517860800000,
+        "application": "SICR"
+      },
+      {
+        "failures_total": 177.0,
+        "datetime": 1517468400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516874400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 21.0,
+        "datetime": 1517187600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517580000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517472000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517227200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516705200000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517817600000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516626000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517212800000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517155200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516719600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516874400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516708800000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 7.0,
+        "datetime": 1517810400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517580000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516651200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516899600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517497200000,
+        "application": "AREA CONTROLLO"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516806000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517338800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 48.0,
+        "datetime": 1516676400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516629600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517313600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517234400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516759200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517828400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 47.0,
+        "datetime": 1517562000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516784400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517547600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516716000000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517817600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516975200000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517317200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517306400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516708800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517230800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516644000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517706000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517479200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 5.0,
+        "datetime": 1516662000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517814000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517014800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 82.0,
+        "datetime": 1516615200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516622400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 112.0,
+        "datetime": 1517216400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517536800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517569200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 6.0,
+        "datetime": 1516723200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517310000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516698000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517562000000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517810400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517580000000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517860800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517817600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517216400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516856400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516896000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516788000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516618800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516626000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516784400000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517133600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517562000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517482800000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517655600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516867200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517835600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 32.0,
+        "datetime": 1517468400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517302800000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 68.0,
+        "datetime": 1516788000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517457600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516615200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516960800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516813200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516885200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517176800000,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517310000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517554800000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517562000000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517562000000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1516622400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517468400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516611600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516716000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 17.0,
+        "datetime": 1517637600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516975200000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 21.0,
+        "datetime": 1516982400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 85.0,
+        "datetime": 1516608000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 6.0,
+        "datetime": 1516867200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517497200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516924800000,
+        "application": "SICR"
+      },
+      {
+        "failures_total": 178.0,
+        "datetime": 1516633200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517252400000,
+        "application": "SERVIZI ARUBA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517310000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517554800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 8.0,
+        "datetime": 1516968000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517223600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517839200000,
+        "application": "AMMINISTRAZIONE ATTIVA SIAM"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517594400000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1516752000000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517508000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1516867200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517598000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 13.0,
+        "datetime": 1516611600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517479200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516834800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517151600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516953600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517299200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517562000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517558400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517637600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517310000000,
+        "application": "SERVIZI ARUBA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517565600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516597200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517295600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 88.0,
+        "datetime": 1517554800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517032800000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517306400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516716000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 11.0,
+        "datetime": 1517540400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517497200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1204.0,
+        "datetime": 1517011200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516802400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517500800000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516834800000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516626000000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516784400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516777200000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 11.0,
+        "datetime": 1516834800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 6.0,
+        "datetime": 1516878000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517580000000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517216400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517842800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517479200000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516867200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516690800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516798800000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516626000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516813200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517090400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517090400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 13.0,
+        "datetime": 1517677200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517824800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 110.0,
+        "datetime": 1517482800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516791600000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517468400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517490000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517482800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 355.0,
+        "datetime": 1516950000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516874400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 13.0,
+        "datetime": 1517482800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517565600000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516957200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 8.0,
+        "datetime": 1516906800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1516971600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517760000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517032800000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516611600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516960800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517839200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 52.0,
+        "datetime": 1517158800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516953600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 32.0,
+        "datetime": 1516852800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 11.0,
+        "datetime": 1516870800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517241600000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 8.0,
+        "datetime": 1517220000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 99.0,
+        "datetime": 1517306400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517331600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516618800000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517536800000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517342400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 367.0,
+        "datetime": 1517670000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517565600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517216400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516600800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516690800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 141.0,
+        "datetime": 1517853600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516716000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517252400000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516615200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516867200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516780800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517824800000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 1044.0,
+        "datetime": 1517774400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 163.0,
+        "datetime": 1516694400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517479200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517504400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516626000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517220000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516824000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516644000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517828400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516867200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 110.0,
+        "datetime": 1517648400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517324400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 627.0,
+        "datetime": 1517227200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516647600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516878000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517562000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517572800000,
+        "application": "PORTALE SOLE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517608800000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517828400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 12122.0,
+        "datetime": 1516968000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517554800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516719600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 12.0,
+        "datetime": 1517824800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 26.0,
+        "datetime": 1516906800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517806800000,
+        "application": "AREA CONTROLLO ENTI"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517230800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 12.0,
+        "datetime": 1516899600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517562000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 3.0,
+        "datetime": 1517238000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517310000000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517313600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517839200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516892400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517212800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517140800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517238000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517468400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516834800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517598000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516690800000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517299200000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517824800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517119200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517054400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517583600000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517760000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517731200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 177.0,
+        "datetime": 1516701600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 6.0,
+        "datetime": 1517659200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517569200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516978800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516878000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516604400000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517194800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 4.0,
+        "datetime": 1517295600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517580000000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516827600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 37.0,
+        "datetime": 1517583600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517835600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 500.0,
+        "datetime": 1517043600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516953600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517223600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517475600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1517835600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516633200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516615200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 27.0,
+        "datetime": 1517450400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517216400000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 10.0,
+        "datetime": 1516881600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516989600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517227200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517299200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517749200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517475600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517716800000,
+        "application": "AREA CONTROLLO"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517839200000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517846400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516626000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1516788000000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 7.0,
+        "datetime": 1517068800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516971600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517569200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 637.0,
+        "datetime": 1517328000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517796000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516777200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517166000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516654800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516892400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516960800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517576400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517846400000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 28.0,
+        "datetime": 1516813200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 12.0,
+        "datetime": 1517475600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516788000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517572800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517025600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517810400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517850000000,
+        "application": "AREA GIURIDICA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517493600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516705200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516953600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517828400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 4.0,
+        "datetime": 1516676400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516644000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517799600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517266800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516701600000,
+        "application": "AREA CONTROLLO ENTI"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516748400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516802400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517346000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517558400000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517317200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517068800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 21.0,
+        "datetime": 1516640400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517479200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517472000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 32.0,
+        "datetime": 1517302800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516953600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517454000000,
+        "application": "GESTIONE DEL PERSONALE"
+      },
+      {
+        "failures_total": 4.0,
+        "datetime": 1517295600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517745600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516989600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516723200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517832000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517162400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 354.0,
+        "datetime": 1517551200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517828400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517716800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517238000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517814000000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516860000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517817600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517832000000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 15129.0,
+        "datetime": 1516705200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517785200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 7374.0,
+        "datetime": 1516924800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 2.0,
+        "datetime": 1516950000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517490000000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516622400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516968000000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517594400000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517223600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516658400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516615200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516690800000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517299200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516788000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517216400000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516629600000,
+        "application": "OPENCMS"
+      },
+      {
+        "failures_total": 220.0,
+        "datetime": 1516716000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517464800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1516957200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517572800000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517490000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517835600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517821200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516734000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517558400000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516968000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517320800000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 209.0,
+        "datetime": 1517295600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516888800000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517713200000,
+        "application": "SERVIZI DI UTILITA"
+      },
+      {
+        "failures_total": 17.0,
+        "datetime": 1516885200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516881600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 58.0,
+        "datetime": 1517331600000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 164.0,
+        "datetime": 1516960800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516968000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517216400000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517745600000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516838400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 1.0,
+        "datetime": 1517752800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517472000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517248800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516896000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516705200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516698000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517576400000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516906800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1517479200000,
+        "application": "GESTIONE DOCUMENTALE"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516698000000,
+        "application": "FINANZA TERRITORIALE"
+      },
+      {
+        "failures_total": 28.0,
+        "datetime": 1517788800000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 0.0,
+        "datetime": 1516870800000,
+        "application": "ACTIVEDIRECTORY FS CDC"
+      },
+      {
+        "failures_total": 313.0,
+        "datetime": 1517526000000,
+        "application": "ACTIVEDIRECTORY CDC"
+      },
+      {
+        "failures_total": 54.0,
+        "datetime": 1517839200000,
+        "application": "ACTIVEDIRECTORY CDC"
+      }
+    ],
+    "validationResults": null,
+    "empty": false
+  },
+  "status": "SUCCESS",
+  "table": "a281be00b8464fb8bb35a3ed61e031e7"
+}

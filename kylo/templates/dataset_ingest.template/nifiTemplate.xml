@@ -294,6 +294,12 @@
             </value>
           </entry>
           <entry>
+            <key>filename</key>
+            <value>
+              <name>filename</name>
+            </value>
+          </entry>
+          <entry>
             <key>Store State</key>
             <value>
               <name>Store State</name>
@@ -305,12 +311,6 @@
               <name>Stateful Variables Initial Value</name>
             </value>
           </entry>
-          <entry>
-            <key>filename</key>
-            <value>
-              <name>filename</name>
-            </value>
-          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
@@ -320,15 +320,15 @@
             <key>Delete Attributes Expression</key>
           </entry>
           <entry>
+            <key>filename</key>
+            <value>${filename}.failure</value>
+          </entry>
+          <entry>
             <key>Store State</key>
             <value>Do not store state</value>
           </entry>
           <entry>
             <key>Stateful Variables Initial Value</key>
-          </entry>
-          <entry>
-            <key>filename</key>
-            <value>${filename}.failure</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -363,9 +363,63 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>Keep Source File</key>
+            <value>
+              <name>Keep Source File</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum File Age</key>
+            <value>
+              <name>Minimum File Age</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Polling Interval</key>
+            <value>
+              <name>Polling Interval</name>
+            </value>
+          </entry>
+          <entry>
             <key>Input Directory</key>
             <value>
               <name>Input Directory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Age</key>
+            <value>
+              <name>Maximum File Age</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>
+              <name>Batch Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum File Size</key>
+            <value>
+              <name>Maximum File Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Minimum File Size</key>
+            <value>
+              <name>Minimum File Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Ignore Hidden Files</key>
+            <value>
+              <name>Ignore Hidden Files</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Recurse Subdirectories</key>
+            <value>
+              <name>Recurse Subdirectories</name>
             </value>
           </entry>
           <entry>
@@ -380,68 +434,48 @@
               <name>Path Filter</name>
             </value>
           </entry>
-          <entry>
-            <key>Batch Size</key>
-            <value>
-              <name>Batch Size</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Keep Source File</key>
-            <value>
-              <name>Keep Source File</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Recurse Subdirectories</key>
-            <value>
-              <name>Recurse Subdirectories</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Polling Interval</key>
-            <value>
-              <name>Polling Interval</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Ignore Hidden Files</key>
-            <value>
-              <name>Ignore Hidden Files</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Minimum File Age</key>
-            <value>
-              <name>Minimum File Age</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Maximum File Age</key>
-            <value>
-              <name>Maximum File Age</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Minimum File Size</key>
-            <value>
-              <name>Minimum File Size</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Maximum File Size</key>
-            <value>
-              <name>Maximum File Size</name>
-            </value>
-          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
+            <key>Keep Source File</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Minimum File Age</key>
+            <value>5 sec</value>
+          </entry>
+          <entry>
+            <key>Polling Interval</key>
+            <value>0 sec</value>
+          </entry>
+          <entry>
             <key>Input Directory</key>
             <value>/home/d_mc/EDUC/istruzione/miur_scuole_edifici_cup_cantieri</value>
+          </entry>
+          <entry>
+            <key>Maximum File Age</key>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>100</value>
+          </entry>
+          <entry>
+            <key>Maximum File Size</key>
+          </entry>
+          <entry>
+            <key>Minimum File Size</key>
+            <value>0 B</value>
+          </entry>
+          <entry>
+            <key>Ignore Hidden Files</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Recurse Subdirectories</key>
+            <value>false</value>
           </entry>
           <entry>
             <key>File Filter</key>
@@ -449,40 +483,6 @@
           </entry>
           <entry>
             <key>Path Filter</key>
-          </entry>
-          <entry>
-            <key>Batch Size</key>
-            <value>100</value>
-          </entry>
-          <entry>
-            <key>Keep Source File</key>
-            <value>false</value>
-          </entry>
-          <entry>
-            <key>Recurse Subdirectories</key>
-            <value>false</value>
-          </entry>
-          <entry>
-            <key>Polling Interval</key>
-            <value>0 sec</value>
-          </entry>
-          <entry>
-            <key>Ignore Hidden Files</key>
-            <value>true</value>
-          </entry>
-          <entry>
-            <key>Minimum File Age</key>
-            <value>5 sec</value>
-          </entry>
-          <entry>
-            <key>Maximum File Age</key>
-          </entry>
-          <entry>
-            <key>Minimum File Size</key>
-            <value>0 B</value>
-          </entry>
-          <entry>
-            <key>Maximum File Size</key>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -534,12 +534,6 @@
             </value>
           </entry>
           <entry>
-            <key>Stateful Variables Initial Value</key>
-            <value>
-              <name>Stateful Variables Initial Value</name>
-            </value>
-          </entry>
-          <entry>
             <key>metadata.table.feedFieldStructure</key>
             <value>
               <name>metadata.table.feedFieldStructure</name>
@@ -549,6 +543,12 @@
             <key>skipHeader</key>
             <value>
               <name>skipHeader</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value>
+              <name>Stateful Variables Initial Value</name>
             </value>
           </entry>
         </descriptors>
@@ -564,16 +564,16 @@
             <value>Store state locally</value>
           </entry>
           <entry>
-            <key>Stateful Variables Initial Value</key>
-            <value></value>
-          </entry>
-          <entry>
             <key>metadata.table.feedFieldStructure</key>
             <value>${db.table.avro.schema}</value>
           </entry>
           <entry>
             <key>skipHeader</key>
             <value>false</value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value></value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -612,21 +612,27 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Directory</key>
+            <key>Group</key>
             <value>
-              <name>Directory</name>
+              <name>Group</name>
             </value>
           </entry>
           <entry>
-            <key>Conflict Resolution Strategy</key>
+            <key>Owner</key>
             <value>
-              <name>Conflict Resolution Strategy</name>
+              <name>Owner</name>
             </value>
           </entry>
           <entry>
             <key>Create Missing Directories</key>
             <value>
               <name>Create Missing Directories</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Permissions</key>
+            <value>
+              <name>Permissions</name>
             </value>
           </entry>
           <entry>
@@ -642,21 +648,15 @@
             </value>
           </entry>
           <entry>
-            <key>Permissions</key>
+            <key>Directory</key>
             <value>
-              <name>Permissions</name>
+              <name>Directory</name>
             </value>
           </entry>
           <entry>
-            <key>Owner</key>
+            <key>Conflict Resolution Strategy</key>
             <value>
-              <name>Owner</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Group</key>
-            <value>
-              <name>Group</name>
+              <name>Conflict Resolution Strategy</name>
             </value>
           </entry>
         </descriptors>
@@ -665,16 +665,17 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Directory</key>
-            <value>${absolute.path}</value>
+            <key>Group</key>
           </entry>
           <entry>
-            <key>Conflict Resolution Strategy</key>
-            <value>fail</value>
+            <key>Owner</key>
           </entry>
           <entry>
             <key>Create Missing Directories</key>
             <value>true</value>
+          </entry>
+          <entry>
+            <key>Permissions</key>
           </entry>
           <entry>
             <key>Maximum File Count</key>
@@ -683,13 +684,12 @@
             <key>Last Modified Time</key>
           </entry>
           <entry>
-            <key>Permissions</key>
+            <key>Directory</key>
+            <value>${absolute.path}</value>
           </entry>
           <entry>
-            <key>Owner</key>
-          </entry>
-          <entry>
-            <key>Group</key>
+            <key>Conflict Resolution Strategy</key>
+            <value>fail</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -728,15 +728,15 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Routing Strategy</key>
-            <value>
-              <name>Routing Strategy</name>
-            </value>
-          </entry>
-          <entry>
             <key>zip</key>
             <value>
               <name>zip</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Routing Strategy</key>
+            <value>
+              <name>Routing Strategy</name>
             </value>
           </entry>
         </descriptors>
@@ -745,12 +745,12 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Routing Strategy</key>
-            <value>Route to Property name</value>
-          </entry>
-          <entry>
             <key>zip</key>
             <value>${filename:endsWith('.zip')}</value>
+          </entry>
+          <entry>
+            <key>Routing Strategy</key>
+            <value>Route to Property name</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -854,15 +854,45 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Delete Attributes Expression</key>
+            <key>hive.profile.root</key>
             <value>
-              <name>Delete Attributes Expression</name>
+              <name>hive.profile.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetFormat</key>
+            <value>
+              <name>metadata.table.targetFormat</name>
             </value>
           </entry>
           <entry>
             <key>Store State</key>
             <value>
               <name>Store State</name>
+            </value>
+          </entry>
+          <entry>
+            <key>spark.input_folder</key>
+            <value>
+              <name>spark.input_folder</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldStructure</key>
+            <value>
+              <name>metadata.table.fieldStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>nifi.home</key>
+            <value>
+              <name>nifi.home</name>
+            </value>
+          </entry>
+          <entry>
+            <key>skipHeader</key>
+            <value>
+              <name>skipHeader</name>
             </value>
           </entry>
           <entry>
@@ -878,9 +908,9 @@
             </value>
           </entry>
           <entry>
-            <key>category</key>
+            <key>metadata.table.fieldPoliciesJson</key>
             <value>
-              <name>category</name>
+              <name>metadata.table.fieldPoliciesJson</name>
             </value>
           </entry>
           <entry>
@@ -902,21 +932,15 @@
             </value>
           </entry>
           <entry>
-            <key>hive.ingest.root</key>
+            <key>Delete Attributes Expression</key>
             <value>
-              <name>hive.ingest.root</name>
+              <name>Delete Attributes Expression</name>
             </value>
           </entry>
           <entry>
-            <key>hive.master.root</key>
+            <key>metadata.table.targetTblProperties</key>
             <value>
-              <name>hive.master.root</name>
-            </value>
-          </entry>
-          <entry>
-            <key>hive.profile.root</key>
-            <value>
-              <name>hive.profile.root</name>
+              <name>metadata.table.targetTblProperties</name>
             </value>
           </entry>
           <entry>
@@ -932,27 +956,21 @@
             </value>
           </entry>
           <entry>
-            <key>metadata.table.feedFormat</key>
+            <key>category</key>
             <value>
-              <name>metadata.table.feedFormat</name>
+              <name>category</name>
             </value>
           </entry>
           <entry>
-            <key>metadata.table.fieldPoliciesJson</key>
+            <key>hive.ingest.root</key>
             <value>
-              <name>metadata.table.fieldPoliciesJson</name>
+              <name>hive.ingest.root</name>
             </value>
           </entry>
           <entry>
-            <key>metadata.table.fieldStructure</key>
+            <key>hive.master.root</key>
             <value>
-              <name>metadata.table.fieldStructure</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetFormat</key>
-            <value>
-              <name>metadata.table.targetFormat</name>
+              <name>hive.master.root</name>
             </value>
           </entry>
           <entry>
@@ -962,27 +980,9 @@
             </value>
           </entry>
           <entry>
-            <key>metadata.table.targetTblProperties</key>
+            <key>metadata.table.feedFormat</key>
             <value>
-              <name>metadata.table.targetTblProperties</name>
-            </value>
-          </entry>
-          <entry>
-            <key>nifi.home</key>
-            <value>
-              <name>nifi.home</name>
-            </value>
-          </entry>
-          <entry>
-            <key>skipHeader</key>
-            <value>
-              <name>skipHeader</name>
-            </value>
-          </entry>
-          <entry>
-            <key>spark.input_folder</key>
-            <value>
-              <name>spark.input_folder</name>
+              <name>metadata.table.feedFormat</name>
             </value>
           </entry>
         </descriptors>
@@ -991,11 +991,156 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Delete Attributes Expression</key>
+            <key>hive.profile.root</key>
+            <value>/app/tba/model.db</value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetFormat</key>
+            <value>STORED AS PARQUET</value>
           </entry>
           <entry>
             <key>Store State</key>
             <value>Store state locally</value>
+          </entry>
+          <entry>
+            <key>spark.input_folder</key>
+            <value>/tmp/kylo-nifi/spark</value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldStructure</key>
+            <value>AREAGEOGRAFICA|string||0|0|0|AREAGEOGRAFICA
+CODICEISTITUTORIFERIMENTO|string||0|0|0|CODICEISTITUTORIFERIMENTO
+CODICESCUOLA|string||0|0|0|CODICESCUOLA
+DENOMINAZIONESCUOLA|string||0|0|0|DENOMINAZIONESCUOLA
+DESCRIZIONECOMUNE|string||0|0|0|DESCRIZIONECOMUNE
+DESCRIZIONETIPOLOGIAGRADOISTRUZIONESCUOLA|string||0|0|0|DESCRIZIONETIPOLOGIAGRADOISTRUZIONESCUOLA
+INDIRIZZOSCUOLA|string||0|0|0|INDIRIZZOSCUOLA
+PROVINCIA|string||0|0|0|PROVINCIA
+REGIONE|string||0|0|0|REGIONE
+CODICEEDIFICIO|string||0|0|0|CODICEEDIFICIO
+SIGLAPROVINCIA|string||0|0|0|SIGLAPROVINCIA
+STATOEDIFICIO|string||0|0|0|STATOEDIFICIO
+VINCOLIIDROGEOLOGICI|string||0|0|0|VINCOLIIDROGEOLOGICI
+VINCOLIPAESAGGIO|string||0|0|0|VINCOLIPAESAGGIO
+EDIFICIOVETUSTO|string||0|0|0|EDIFICIOVETUSTO
+VINCOLIZONASISMICA|string||0|0|0|VINCOLIZONASISMICA
+PROGETTAZIONEANTISISMICA|string||0|0|0|PROGETTAZIONEANTISISMICA
+USOSCOLASTICO|string||0|0|0|USOSCOLASTICO
+ALTRIUSI|string||0|0|0|ALTRIUSI
+ANNOCOSTRUZIONE|string||0|0|0|ANNOCOSTRUZIONE
+FASCIAETACOSTRUZIONE|string||0|0|0|FASCIAETACOSTRUZIONE
+ANNOADATTAMENTO|string||0|0|0|ANNOADATTAMENTO
+FASCIAETAADATTAMENTO|string||0|0|0|FASCIAETAADATTAMENTO
+NUMEROPIANI|string||0|0|0|NUMEROPIANI
+SPERFICIEAREATOTALE|string||0|0|0|SPERFICIEAREATOTALE
+SPERFICIEAREALIBERA|string||0|0|0|SPERFICIEAREALIBERA
+VOLUME|string||0|0|0|VOLUME
+SPAZIDIDATTICI|string||0|0|0|SPAZIDIDATTICI
+AULAMAGNA|string||0|0|0|AULAMAGNA
+MENSA|string||0|0|0|MENSA
+PALESTRAPISCINA|string||0|0|0|PALESTRAPISCINA
+SPAZIAMMINISTRATIVI|string||0|0|0|SPAZIAMMINISTRATIVI
+SCUOLABUS|string||0|0|0|SCUOLABUS
+TRASPORTIPUBBLICIURBANI|string||0|0|0|TRASPORTIPUBBLICIURBANI
+TRASPORTIPUBBLICIINTERURBANI|string||0|0|0|TRASPORTIPUBBLICIINTERURBANI
+TRASPORTIFERROVIARI|string||0|0|0|TRASPORTIFERROVIARI
+MEZZIPRIVATI|string||0|0|0|MEZZIPRIVATI
+TRASPORTODISABILI|string||0|0|0|TRASPORTODISABILI
+Linea_finanziamento|string||0|0|0|Linea_finanziamento
+COMUNE|string||0|0|0|COMUNE
+FONTE|string||0|0|0|FONTE
+Data_aggiornamento_lavori|string||0|0|0|Data_aggiornamento_lavori
+Data_inizio|string||0|0|0|Data_inizio
+Data_fine|string||0|0|0|Data_fine
+ENTE_RICHIEDENTE|string||0|0|0|ENTE_RICHIEDENTE
+TIPOLOGIA_ENTE_RICHIEDENTE|string||0|0|0|TIPOLOGIA_ENTE_RICHIEDENTE
+COD_PRINC|string||0|0|0|COD_PRINC
+OGGETTO_INTERVENTO|string||0|0|0|OGGETTO_INTERVENTO
+INFO_AGGIUNTIVE|string||0|0|0|INFO_AGGIUNTIVE
+LATITUDINE|string||0|0|0|LATITUDINE
+LONGITUDINE|string||0|0|0|LONGITUDINE
+TIPO_INTERVENTO|string||0|0|0|TIPO_INTERVENTO
+STATO_LAVORI|string||0|0|0|STATO_LAVORI
+CUP|string||0|0|0|CUP
+Importo_totale_opera|string||0|0|0|Importo_totale_opera
+Finanziamento_Provvedimento|string||0|0|0|Finanziamento_Provvedimento
+DESCRIZIONE_SINTETICA_CUP|string||0|0|0|DESCRIZIONE_SINTETICA_CUP
+ANNO_DECISIONE|string||0|0|0|ANNO_DECISIONE
+STATO_PROGETTO|string||0|0|0|STATO_PROGETTO
+COSTO_PROGETTO|string||0|0|0|COSTO_PROGETTO
+FINANZIAMENTO_PROGETTO|string||0|0|0|FINANZIAMENTO_PROGETTO
+CODICE_STATO|string||0|0|0|CODICE_STATO
+STATO|string||0|0|0|STATO
+CODICE_AREA_GEOGRAFICA|string||0|0|0|CODICE_AREA_GEOGRAFICA
+AREA_GEOGRAFICA|string||0|0|0|AREA_GEOGRAFICA
+CODICE_REGIONE|string||0|0|0|CODICE_REGIONE
+CODICE_PROVINCIA|string||0|0|0|CODICE_PROVINCIA
+SIGLA_PROVINCIA|string||0|0|0|SIGLA_PROVINCIA
+CODICE_COMUNE|string||0|0|0|CODICE_COMUNE
+PIVA_CODFISCALE_SOG_TITOLARE|string||0|0|0|PIVA_CODFISCALE_SOG_TITOLARE
+SOGGETTO_TITOLARE|string||0|0|0|SOGGETTO_TITOLARE
+INDIRIZZO_SOG_TITOLARE|string||0|0|0|INDIRIZZO_SOG_TITOLARE
+TIPO_INDIRIZZO_SOG_TITOLARE|string||0|0|0|TIPO_INDIRIZZO_SOG_TITOLARE
+NUM_CIVICO_SOG_TITOLARE|string||0|0|0|NUM_CIVICO_SOG_TITOLARE
+LOCALITA_SOG_TITOLARE|string||0|0|0|LOCALITA_SOG_TITOLARE
+CAP_SOGGETTO_TITOLARE|string||0|0|0|CAP_SOGGETTO_TITOLARE
+COMUNE_SOGGETTO_TITOLARE|string||0|0|0|COMUNE_SOGGETTO_TITOLARE
+CODICE_COMUNE_SOGG_TITOLARE|string||0|0|0|CODICE_COMUNE_SOGG_TITOLARE
+CODICE_SOTTOCATEG_SOGGETTO|string||0|0|0|CODICE_SOTTOCATEG_SOGGETTO
+SOTTOCATEGORIA_SOGGETTO|string||0|0|0|SOTTOCATEGORIA_SOGGETTO
+CODICE_CATEGORIA_SOGGETTO|string||0|0|0|CODICE_CATEGORIA_SOGGETTO
+CATEGORIA_SOGGETTO|string||0|0|0|CATEGORIA_SOGGETTO
+CODICE_AREA_SOGGETTO|string||0|0|0|CODICE_AREA_SOGGETTO
+AREA_SOGGETTO|string||0|0|0|AREA_SOGGETTO
+CODICE_NATURA_INTERVENTO|string||0|0|0|CODICE_NATURA_INTERVENTO
+NATURA_INTERVENTO|string||0|0|0|NATURA_INTERVENTO
+CODICE_TIPO_INTERVENTO|string||0|0|0|CODICE_TIPO_INTERVENTO
+TIPOLOGIA_INTERVENTO|string||0|0|0|TIPOLOGIA_INTERVENTO
+CODICE_AREA_INTERVENTO|string||0|0|0|CODICE_AREA_INTERVENTO
+AREA_INTERVENTO|string||0|0|0|AREA_INTERVENTO
+CODICE_SETTORE_INTERVENTO|string||0|0|0|CODICE_SETTORE_INTERVENTO
+SETTORE_INTERVENTO|string||0|0|0|SETTORE_INTERVENTO
+CODICE_SOTTOSETTORE_INTERVENTO|string||0|0|0|CODICE_SOTTOSETTORE_INTERVENTO
+SOTTOSETTORE_INTERVENTO|string||0|0|0|SOTTOSETTORE_INTERVENTO
+CODICE_CATEGORIA_INTERVENTO|string||0|0|0|CODICE_CATEGORIA_INTERVENTO
+CATEGORIA_INTERVENTO|string||0|0|0|CATEGORIA_INTERVENTO
+SOGGETTO_RICHIEDENTE|string||0|0|0|SOGGETTO_RICHIEDENTE
+TIPOLOGIA_CUP|string||0|0|0|TIPOLOGIA_CUP
+DESCRIZIONE_INTERVENTO|string||0|0|0|DESCRIZIONE_INTERVENTO
+STRUTTURA_INFRASTRUTTURA|string||0|0|0|STRUTTURA_INFRASTRUTTURA
+INDIRIZZO_INTERVENTO|string||0|0|0|INDIRIZZO_INTERVENTO
+NUMERO_DELIBERA_CIPE|string||0|0|0|NUMERO_DELIBERA_CIPE
+ANNO_DELIBERA|string||0|0|0|ANNO_DELIBERA
+FLAG_LEGGE_OBIETTIVO|string||0|0|0|FLAG_LEGGE_OBIETTIVO
+FINANZA_PROGETTO|string||0|0|0|FINANZA_PROGETTO
+FLAG_TIPO_GENERICO|string||0|0|0|FLAG_TIPO_GENERICO
+CUP_IN_RELAZIONE|string||0|0|0|CUP_IN_RELAZIONE
+RUOLO_IN_RELAZIONE|string||0|0|0|RUOLO_IN_RELAZIONE
+DESC_TIPO_RELAZIONE|string||0|0|0|DESC_TIPO_RELAZIONE
+DATA_ULTIMA_MODIFICA_SSC|string||0|0|0|DATA_ULTIMA_MODIFICA_SSC
+DATA_ULTIMA_MODIFICA_UTENTE|string||0|0|0|DATA_ULTIMA_MODIFICA_UTENTE
+DATA_CHIUSURA_REVOCA|string||0|0|0|DATA_CHIUSURA_REVOCA
+CODICE_LOCALE_PROGETTO|string||0|0|0|CODICE_LOCALE_PROGETTO
+CODICE_STRUMENTO_PROGRAM|string||0|0|0|CODICE_STRUMENTO_PROGRAM
+STRUMENTO_PROGRAMMAZIONE|string||0|0|0|STRUMENTO_PROGRAMMAZIONE
+CODICE_COPERTURA_FINANZIARIA|string||0|0|0|CODICE_COPERTURA_FINANZIARIA
+COPERTURA_FINANZIARIA|string||0|0|0|COPERTURA_FINANZIARIA
+SPONSORIZZAZIONI|string||0|0|0|SPONSORIZZAZIONI
+ALTRE_INFORMAZIONI|string||0|0|0|ALTRE_INFORMAZIONI
+DATA_GENERAZIONE_CUP|string||0|0|0|DATA_GENERAZIONE_CUP
+CONTROLLO_QUALITA|string||0|0|0|CONTROLLO_QUALITA
+CUP_MASTER|string||0|0|0|CUP_MASTER
+RAGIONI_COLLEGAMENTO|string||0|0|0|RAGIONI_COLLEGAMENTO
+LINK_OPENCOESIONE|string||0|0|0|LINK_OPENCOESIONE
+LINK_SCUOLE_SICURE|string||0|0|0|LINK_SCUOLE_SICURE</value>
+          </entry>
+          <entry>
+            <key>nifi.home</key>
+            <value>/usr/nifi</value>
+          </entry>
+          <entry>
+            <key>skipHeader</key>
+            <value>true</value>
           </entry>
           <entry>
             <key>Stateful Variables Initial Value</key>
@@ -1006,8 +1151,8 @@
             <value>${now():format('yyyyMMddHHmmss')}_${UUID()}</value>
           </entry>
           <entry>
-            <key>category</key>
-            <value>default_org</value>
+            <key>metadata.table.fieldPoliciesJson</key>
+            <value>[{"profile":false,"index":false,"fieldName":"AREAGEOGRAFICA","feedFieldName":"AREAGEOGRAFICA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICEISTITUTORIFERIMENTO","feedFieldName":"CODICEISTITUTORIFERIMENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICESCUOLA","feedFieldName":"CODICESCUOLA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DENOMINAZIONESCUOLA","feedFieldName":"DENOMINAZIONESCUOLA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DESCRIZIONECOMUNE","feedFieldName":"DESCRIZIONECOMUNE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DESCRIZIONETIPOLOGIAGRADOISTRUZIONESCUOLA","feedFieldName":"DESCRIZIONETIPOLOGIAGRADOISTRUZIONESCUOLA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"INDIRIZZOSCUOLA","feedFieldName":"INDIRIZZOSCUOLA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PROVINCIA","feedFieldName":"PROVINCIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"REGIONE","feedFieldName":"REGIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICEEDIFICIO","feedFieldName":"CODICEEDIFICIO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SIGLAPROVINCIA","feedFieldName":"SIGLAPROVINCIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STATOEDIFICIO","feedFieldName":"STATOEDIFICIO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"VINCOLIIDROGEOLOGICI","feedFieldName":"VINCOLIIDROGEOLOGICI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"VINCOLIPAESAGGIO","feedFieldName":"VINCOLIPAESAGGIO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"EDIFICIOVETUSTO","feedFieldName":"EDIFICIOVETUSTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"VINCOLIZONASISMICA","feedFieldName":"VINCOLIZONASISMICA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PROGETTAZIONEANTISISMICA","feedFieldName":"PROGETTAZIONEANTISISMICA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"USOSCOLASTICO","feedFieldName":"USOSCOLASTICO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ALTRIUSI","feedFieldName":"ALTRIUSI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ANNOCOSTRUZIONE","feedFieldName":"ANNOCOSTRUZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FASCIAETACOSTRUZIONE","feedFieldName":"FASCIAETACOSTRUZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ANNOADATTAMENTO","feedFieldName":"ANNOADATTAMENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FASCIAETAADATTAMENTO","feedFieldName":"FASCIAETAADATTAMENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"NUMEROPIANI","feedFieldName":"NUMEROPIANI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SPERFICIEAREATOTALE","feedFieldName":"SPERFICIEAREATOTALE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SPERFICIEAREALIBERA","feedFieldName":"SPERFICIEAREALIBERA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"VOLUME","feedFieldName":"VOLUME","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SPAZIDIDATTICI","feedFieldName":"SPAZIDIDATTICI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"AULAMAGNA","feedFieldName":"AULAMAGNA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"MENSA","feedFieldName":"MENSA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PALESTRAPISCINA","feedFieldName":"PALESTRAPISCINA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SPAZIAMMINISTRATIVI","feedFieldName":"SPAZIAMMINISTRATIVI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SCUOLABUS","feedFieldName":"SCUOLABUS","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TRASPORTIPUBBLICIURBANI","feedFieldName":"TRASPORTIPUBBLICIURBANI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TRASPORTIPUBBLICIINTERURBANI","feedFieldName":"TRASPORTIPUBBLICIINTERURBANI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TRASPORTIFERROVIARI","feedFieldName":"TRASPORTIFERROVIARI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"MEZZIPRIVATI","feedFieldName":"MEZZIPRIVATI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TRASPORTODISABILI","feedFieldName":"TRASPORTODISABILI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Linea_finanziamento","feedFieldName":"Linea_finanziamento","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COMUNE","feedFieldName":"COMUNE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FONTE","feedFieldName":"FONTE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Data_aggiornamento_lavori","feedFieldName":"Data_aggiornamento_lavori","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Data_inizio","feedFieldName":"Data_inizio","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Data_fine","feedFieldName":"Data_fine","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ENTE_RICHIEDENTE","feedFieldName":"ENTE_RICHIEDENTE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TIPOLOGIA_ENTE_RICHIEDENTE","feedFieldName":"TIPOLOGIA_ENTE_RICHIEDENTE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COD_PRINC","feedFieldName":"COD_PRINC","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"OGGETTO_INTERVENTO","feedFieldName":"OGGETTO_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"INFO_AGGIUNTIVE","feedFieldName":"INFO_AGGIUNTIVE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"LATITUDINE","feedFieldName":"LATITUDINE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"LONGITUDINE","feedFieldName":"LONGITUDINE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TIPO_INTERVENTO","feedFieldName":"TIPO_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STATO_LAVORI","feedFieldName":"STATO_LAVORI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CUP","feedFieldName":"CUP","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Importo_totale_opera","feedFieldName":"Importo_totale_opera","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Finanziamento_Provvedimento","feedFieldName":"Finanziamento_Provvedimento","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DESCRIZIONE_SINTETICA_CUP","feedFieldName":"DESCRIZIONE_SINTETICA_CUP","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ANNO_DECISIONE","feedFieldName":"ANNO_DECISIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STATO_PROGETTO","feedFieldName":"STATO_PROGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COSTO_PROGETTO","feedFieldName":"COSTO_PROGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FINANZIAMENTO_PROGETTO","feedFieldName":"FINANZIAMENTO_PROGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_STATO","feedFieldName":"CODICE_STATO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STATO","feedFieldName":"STATO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_AREA_GEOGRAFICA","feedFieldName":"CODICE_AREA_GEOGRAFICA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"AREA_GEOGRAFICA","feedFieldName":"AREA_GEOGRAFICA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_REGIONE","feedFieldName":"CODICE_REGIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_PROVINCIA","feedFieldName":"CODICE_PROVINCIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SIGLA_PROVINCIA","feedFieldName":"SIGLA_PROVINCIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_COMUNE","feedFieldName":"CODICE_COMUNE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PIVA_CODFISCALE_SOG_TITOLARE","feedFieldName":"PIVA_CODFISCALE_SOG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SOGGETTO_TITOLARE","feedFieldName":"SOGGETTO_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"INDIRIZZO_SOG_TITOLARE","feedFieldName":"INDIRIZZO_SOG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TIPO_INDIRIZZO_SOG_TITOLARE","feedFieldName":"TIPO_INDIRIZZO_SOG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"NUM_CIVICO_SOG_TITOLARE","feedFieldName":"NUM_CIVICO_SOG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"LOCALITA_SOG_TITOLARE","feedFieldName":"LOCALITA_SOG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CAP_SOGGETTO_TITOLARE","feedFieldName":"CAP_SOGGETTO_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COMUNE_SOGGETTO_TITOLARE","feedFieldName":"COMUNE_SOGGETTO_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_COMUNE_SOGG_TITOLARE","feedFieldName":"CODICE_COMUNE_SOGG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_SOTTOCATEG_SOGGETTO","feedFieldName":"CODICE_SOTTOCATEG_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SOTTOCATEGORIA_SOGGETTO","feedFieldName":"SOTTOCATEGORIA_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_CATEGORIA_SOGGETTO","feedFieldName":"CODICE_CATEGORIA_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CATEGORIA_SOGGETTO","feedFieldName":"CATEGORIA_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_AREA_SOGGETTO","feedFieldName":"CODICE_AREA_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"AREA_SOGGETTO","feedFieldName":"AREA_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_NATURA_INTERVENTO","feedFieldName":"CODICE_NATURA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"NATURA_INTERVENTO","feedFieldName":"NATURA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_TIPO_INTERVENTO","feedFieldName":"CODICE_TIPO_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TIPOLOGIA_INTERVENTO","feedFieldName":"TIPOLOGIA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_AREA_INTERVENTO","feedFieldName":"CODICE_AREA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"AREA_INTERVENTO","feedFieldName":"AREA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_SETTORE_INTERVENTO","feedFieldName":"CODICE_SETTORE_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SETTORE_INTERVENTO","feedFieldName":"SETTORE_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_SOTTOSETTORE_INTERVENTO","feedFieldName":"CODICE_SOTTOSETTORE_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SOTTOSETTORE_INTERVENTO","feedFieldName":"SOTTOSETTORE_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_CATEGORIA_INTERVENTO","feedFieldName":"CODICE_CATEGORIA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CATEGORIA_INTERVENTO","feedFieldName":"CATEGORIA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SOGGETTO_RICHIEDENTE","feedFieldName":"SOGGETTO_RICHIEDENTE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TIPOLOGIA_CUP","feedFieldName":"TIPOLOGIA_CUP","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DESCRIZIONE_INTERVENTO","feedFieldName":"DESCRIZIONE_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STRUTTURA_INFRASTRUTTURA","feedFieldName":"STRUTTURA_INFRASTRUTTURA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"INDIRIZZO_INTERVENTO","feedFieldName":"INDIRIZZO_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"NUMERO_DELIBERA_CIPE","feedFieldName":"NUMERO_DELIBERA_CIPE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ANNO_DELIBERA","feedFieldName":"ANNO_DELIBERA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FLAG_LEGGE_OBIETTIVO","feedFieldName":"FLAG_LEGGE_OBIETTIVO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FINANZA_PROGETTO","feedFieldName":"FINANZA_PROGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FLAG_TIPO_GENERICO","feedFieldName":"FLAG_TIPO_GENERICO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CUP_IN_RELAZIONE","feedFieldName":"CUP_IN_RELAZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"RUOLO_IN_RELAZIONE","feedFieldName":"RUOLO_IN_RELAZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DESC_TIPO_RELAZIONE","feedFieldName":"DESC_TIPO_RELAZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DATA_ULTIMA_MODIFICA_SSC","feedFieldName":"DATA_ULTIMA_MODIFICA_SSC","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DATA_ULTIMA_MODIFICA_UTENTE","feedFieldName":"DATA_ULTIMA_MODIFICA_UTENTE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DATA_CHIUSURA_REVOCA","feedFieldName":"DATA_CHIUSURA_REVOCA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_LOCALE_PROGETTO","feedFieldName":"CODICE_LOCALE_PROGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_STRUMENTO_PROGRAM","feedFieldName":"CODICE_STRUMENTO_PROGRAM","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STRUMENTO_PROGRAMMAZIONE","feedFieldName":"STRUMENTO_PROGRAMMAZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_COPERTURA_FINANZIARIA","feedFieldName":"CODICE_COPERTURA_FINANZIARIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COPERTURA_FINANZIARIA","feedFieldName":"COPERTURA_FINANZIARIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SPONSORIZZAZIONI","feedFieldName":"SPONSORIZZAZIONI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ALTRE_INFORMAZIONI","feedFieldName":"ALTRE_INFORMAZIONI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DATA_GENERAZIONE_CUP","feedFieldName":"DATA_GENERAZIONE_CUP","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CONTROLLO_QUALITA","feedFieldName":"CONTROLLO_QUALITA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CUP_MASTER","feedFieldName":"CUP_MASTER","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"RAGIONI_COLLEGAMENTO","feedFieldName":"RAGIONI_COLLEGAMENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"LINK_OPENCOESIONE","feedFieldName":"LINK_OPENCOESIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"LINK_SCUOLE_SICURE","feedFieldName":"LINK_SCUOLE_SICURE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false}]</value>
           </entry>
           <entry>
             <key>feed</key>
@@ -1022,16 +1167,11 @@
             <value>/app/tba/etl</value>
           </entry>
           <entry>
-            <key>hive.ingest.root</key>
-            <value>/app/tba/model.db</value>
+            <key>Delete Attributes Expression</key>
           </entry>
           <entry>
-            <key>hive.master.root</key>
-            <value>/daf</value>
-          </entry>
-          <entry>
-            <key>hive.profile.root</key>
-            <value>/app/tba/model.db</value>
+            <key>metadata.table.targetTblProperties</key>
+            <value>tblproperties("parquet.compression"="SNAPPY")</value>
           </entry>
           <entry>
             <key>kylo.tmp.baseFolder</key>
@@ -1166,165 +1306,25 @@ LINK_OPENCOESIONE|string||0|0|0|LINK_OPENCOESIONE
 LINK_SCUOLE_SICURE|string||0|0|0|LINK_SCUOLE_SICURE</value>
           </entry>
           <entry>
-            <key>metadata.table.feedFormat</key>
-            <value>ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
- WITH SERDEPROPERTIES ( 'separatorChar' = '|' ,'escapeChar' = '\\' ,'quoteChar' = '\"') STORED AS TEXTFILE</value>
+            <key>category</key>
+            <value>default_org</value>
           </entry>
           <entry>
-            <key>metadata.table.fieldPoliciesJson</key>
-            <value>[{"profile":false,"index":false,"fieldName":"AREAGEOGRAFICA","feedFieldName":"AREAGEOGRAFICA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICEISTITUTORIFERIMENTO","feedFieldName":"CODICEISTITUTORIFERIMENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICESCUOLA","feedFieldName":"CODICESCUOLA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DENOMINAZIONESCUOLA","feedFieldName":"DENOMINAZIONESCUOLA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DESCRIZIONECOMUNE","feedFieldName":"DESCRIZIONECOMUNE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DESCRIZIONETIPOLOGIAGRADOISTRUZIONESCUOLA","feedFieldName":"DESCRIZIONETIPOLOGIAGRADOISTRUZIONESCUOLA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"INDIRIZZOSCUOLA","feedFieldName":"INDIRIZZOSCUOLA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PROVINCIA","feedFieldName":"PROVINCIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"REGIONE","feedFieldName":"REGIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICEEDIFICIO","feedFieldName":"CODICEEDIFICIO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SIGLAPROVINCIA","feedFieldName":"SIGLAPROVINCIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STATOEDIFICIO","feedFieldName":"STATOEDIFICIO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"VINCOLIIDROGEOLOGICI","feedFieldName":"VINCOLIIDROGEOLOGICI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"VINCOLIPAESAGGIO","feedFieldName":"VINCOLIPAESAGGIO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"EDIFICIOVETUSTO","feedFieldName":"EDIFICIOVETUSTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"VINCOLIZONASISMICA","feedFieldName":"VINCOLIZONASISMICA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PROGETTAZIONEANTISISMICA","feedFieldName":"PROGETTAZIONEANTISISMICA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"USOSCOLASTICO","feedFieldName":"USOSCOLASTICO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ALTRIUSI","feedFieldName":"ALTRIUSI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ANNOCOSTRUZIONE","feedFieldName":"ANNOCOSTRUZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FASCIAETACOSTRUZIONE","feedFieldName":"FASCIAETACOSTRUZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ANNOADATTAMENTO","feedFieldName":"ANNOADATTAMENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FASCIAETAADATTAMENTO","feedFieldName":"FASCIAETAADATTAMENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"NUMEROPIANI","feedFieldName":"NUMEROPIANI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SPERFICIEAREATOTALE","feedFieldName":"SPERFICIEAREATOTALE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SPERFICIEAREALIBERA","feedFieldName":"SPERFICIEAREALIBERA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"VOLUME","feedFieldName":"VOLUME","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SPAZIDIDATTICI","feedFieldName":"SPAZIDIDATTICI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"AULAMAGNA","feedFieldName":"AULAMAGNA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"MENSA","feedFieldName":"MENSA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PALESTRAPISCINA","feedFieldName":"PALESTRAPISCINA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SPAZIAMMINISTRATIVI","feedFieldName":"SPAZIAMMINISTRATIVI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SCUOLABUS","feedFieldName":"SCUOLABUS","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TRASPORTIPUBBLICIURBANI","feedFieldName":"TRASPORTIPUBBLICIURBANI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TRASPORTIPUBBLICIINTERURBANI","feedFieldName":"TRASPORTIPUBBLICIINTERURBANI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TRASPORTIFERROVIARI","feedFieldName":"TRASPORTIFERROVIARI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"MEZZIPRIVATI","feedFieldName":"MEZZIPRIVATI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TRASPORTODISABILI","feedFieldName":"TRASPORTODISABILI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Linea_finanziamento","feedFieldName":"Linea_finanziamento","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COMUNE","feedFieldName":"COMUNE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FONTE","feedFieldName":"FONTE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Data_aggiornamento_lavori","feedFieldName":"Data_aggiornamento_lavori","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Data_inizio","feedFieldName":"Data_inizio","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Data_fine","feedFieldName":"Data_fine","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ENTE_RICHIEDENTE","feedFieldName":"ENTE_RICHIEDENTE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TIPOLOGIA_ENTE_RICHIEDENTE","feedFieldName":"TIPOLOGIA_ENTE_RICHIEDENTE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COD_PRINC","feedFieldName":"COD_PRINC","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"OGGETTO_INTERVENTO","feedFieldName":"OGGETTO_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"INFO_AGGIUNTIVE","feedFieldName":"INFO_AGGIUNTIVE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"LATITUDINE","feedFieldName":"LATITUDINE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"LONGITUDINE","feedFieldName":"LONGITUDINE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TIPO_INTERVENTO","feedFieldName":"TIPO_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STATO_LAVORI","feedFieldName":"STATO_LAVORI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CUP","feedFieldName":"CUP","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Importo_totale_opera","feedFieldName":"Importo_totale_opera","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Finanziamento_Provvedimento","feedFieldName":"Finanziamento_Provvedimento","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DESCRIZIONE_SINTETICA_CUP","feedFieldName":"DESCRIZIONE_SINTETICA_CUP","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ANNO_DECISIONE","feedFieldName":"ANNO_DECISIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STATO_PROGETTO","feedFieldName":"STATO_PROGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COSTO_PROGETTO","feedFieldName":"COSTO_PROGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FINANZIAMENTO_PROGETTO","feedFieldName":"FINANZIAMENTO_PROGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_STATO","feedFieldName":"CODICE_STATO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STATO","feedFieldName":"STATO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_AREA_GEOGRAFICA","feedFieldName":"CODICE_AREA_GEOGRAFICA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"AREA_GEOGRAFICA","feedFieldName":"AREA_GEOGRAFICA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_REGIONE","feedFieldName":"CODICE_REGIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_PROVINCIA","feedFieldName":"CODICE_PROVINCIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SIGLA_PROVINCIA","feedFieldName":"SIGLA_PROVINCIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_COMUNE","feedFieldName":"CODICE_COMUNE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PIVA_CODFISCALE_SOG_TITOLARE","feedFieldName":"PIVA_CODFISCALE_SOG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SOGGETTO_TITOLARE","feedFieldName":"SOGGETTO_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"INDIRIZZO_SOG_TITOLARE","feedFieldName":"INDIRIZZO_SOG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TIPO_INDIRIZZO_SOG_TITOLARE","feedFieldName":"TIPO_INDIRIZZO_SOG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"NUM_CIVICO_SOG_TITOLARE","feedFieldName":"NUM_CIVICO_SOG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"LOCALITA_SOG_TITOLARE","feedFieldName":"LOCALITA_SOG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CAP_SOGGETTO_TITOLARE","feedFieldName":"CAP_SOGGETTO_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COMUNE_SOGGETTO_TITOLARE","feedFieldName":"COMUNE_SOGGETTO_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_COMUNE_SOGG_TITOLARE","feedFieldName":"CODICE_COMUNE_SOGG_TITOLARE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_SOTTOCATEG_SOGGETTO","feedFieldName":"CODICE_SOTTOCATEG_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SOTTOCATEGORIA_SOGGETTO","feedFieldName":"SOTTOCATEGORIA_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_CATEGORIA_SOGGETTO","feedFieldName":"CODICE_CATEGORIA_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CATEGORIA_SOGGETTO","feedFieldName":"CATEGORIA_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_AREA_SOGGETTO","feedFieldName":"CODICE_AREA_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"AREA_SOGGETTO","feedFieldName":"AREA_SOGGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_NATURA_INTERVENTO","feedFieldName":"CODICE_NATURA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"NATURA_INTERVENTO","feedFieldName":"NATURA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_TIPO_INTERVENTO","feedFieldName":"CODICE_TIPO_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TIPOLOGIA_INTERVENTO","feedFieldName":"TIPOLOGIA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_AREA_INTERVENTO","feedFieldName":"CODICE_AREA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"AREA_INTERVENTO","feedFieldName":"AREA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_SETTORE_INTERVENTO","feedFieldName":"CODICE_SETTORE_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SETTORE_INTERVENTO","feedFieldName":"SETTORE_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_SOTTOSETTORE_INTERVENTO","feedFieldName":"CODICE_SOTTOSETTORE_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SOTTOSETTORE_INTERVENTO","feedFieldName":"SOTTOSETTORE_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_CATEGORIA_INTERVENTO","feedFieldName":"CODICE_CATEGORIA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CATEGORIA_INTERVENTO","feedFieldName":"CATEGORIA_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SOGGETTO_RICHIEDENTE","feedFieldName":"SOGGETTO_RICHIEDENTE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TIPOLOGIA_CUP","feedFieldName":"TIPOLOGIA_CUP","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DESCRIZIONE_INTERVENTO","feedFieldName":"DESCRIZIONE_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STRUTTURA_INFRASTRUTTURA","feedFieldName":"STRUTTURA_INFRASTRUTTURA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"INDIRIZZO_INTERVENTO","feedFieldName":"INDIRIZZO_INTERVENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"NUMERO_DELIBERA_CIPE","feedFieldName":"NUMERO_DELIBERA_CIPE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ANNO_DELIBERA","feedFieldName":"ANNO_DELIBERA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FLAG_LEGGE_OBIETTIVO","feedFieldName":"FLAG_LEGGE_OBIETTIVO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FINANZA_PROGETTO","feedFieldName":"FINANZA_PROGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FLAG_TIPO_GENERICO","feedFieldName":"FLAG_TIPO_GENERICO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CUP_IN_RELAZIONE","feedFieldName":"CUP_IN_RELAZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"RUOLO_IN_RELAZIONE","feedFieldName":"RUOLO_IN_RELAZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DESC_TIPO_RELAZIONE","feedFieldName":"DESC_TIPO_RELAZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DATA_ULTIMA_MODIFICA_SSC","feedFieldName":"DATA_ULTIMA_MODIFICA_SSC","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DATA_ULTIMA_MODIFICA_UTENTE","feedFieldName":"DATA_ULTIMA_MODIFICA_UTENTE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DATA_CHIUSURA_REVOCA","feedFieldName":"DATA_CHIUSURA_REVOCA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_LOCALE_PROGETTO","feedFieldName":"CODICE_LOCALE_PROGETTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_STRUMENTO_PROGRAM","feedFieldName":"CODICE_STRUMENTO_PROGRAM","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"STRUMENTO_PROGRAMMAZIONE","feedFieldName":"STRUMENTO_PROGRAMMAZIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CODICE_COPERTURA_FINANZIARIA","feedFieldName":"CODICE_COPERTURA_FINANZIARIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COPERTURA_FINANZIARIA","feedFieldName":"COPERTURA_FINANZIARIA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SPONSORIZZAZIONI","feedFieldName":"SPONSORIZZAZIONI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"ALTRE_INFORMAZIONI","feedFieldName":"ALTRE_INFORMAZIONI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DATA_GENERAZIONE_CUP","feedFieldName":"DATA_GENERAZIONE_CUP","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CONTROLLO_QUALITA","feedFieldName":"CONTROLLO_QUALITA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CUP_MASTER","feedFieldName":"CUP_MASTER","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"RAGIONI_COLLEGAMENTO","feedFieldName":"RAGIONI_COLLEGAMENTO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"LINK_OPENCOESIONE","feedFieldName":"LINK_OPENCOESIONE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"LINK_SCUOLE_SICURE","feedFieldName":"LINK_SCUOLE_SICURE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false}]</value>
+            <key>hive.ingest.root</key>
+            <value>/app/tba/model.db</value>
           </entry>
           <entry>
-            <key>metadata.table.fieldStructure</key>
-            <value>AREAGEOGRAFICA|string||0|0|0|AREAGEOGRAFICA
-CODICEISTITUTORIFERIMENTO|string||0|0|0|CODICEISTITUTORIFERIMENTO
-CODICESCUOLA|string||0|0|0|CODICESCUOLA
-DENOMINAZIONESCUOLA|string||0|0|0|DENOMINAZIONESCUOLA
-DESCRIZIONECOMUNE|string||0|0|0|DESCRIZIONECOMUNE
-DESCRIZIONETIPOLOGIAGRADOISTRUZIONESCUOLA|string||0|0|0|DESCRIZIONETIPOLOGIAGRADOISTRUZIONESCUOLA
-INDIRIZZOSCUOLA|string||0|0|0|INDIRIZZOSCUOLA
-PROVINCIA|string||0|0|0|PROVINCIA
-REGIONE|string||0|0|0|REGIONE
-CODICEEDIFICIO|string||0|0|0|CODICEEDIFICIO
-SIGLAPROVINCIA|string||0|0|0|SIGLAPROVINCIA
-STATOEDIFICIO|string||0|0|0|STATOEDIFICIO
-VINCOLIIDROGEOLOGICI|string||0|0|0|VINCOLIIDROGEOLOGICI
-VINCOLIPAESAGGIO|string||0|0|0|VINCOLIPAESAGGIO
-EDIFICIOVETUSTO|string||0|0|0|EDIFICIOVETUSTO
-VINCOLIZONASISMICA|string||0|0|0|VINCOLIZONASISMICA
-PROGETTAZIONEANTISISMICA|string||0|0|0|PROGETTAZIONEANTISISMICA
-USOSCOLASTICO|string||0|0|0|USOSCOLASTICO
-ALTRIUSI|string||0|0|0|ALTRIUSI
-ANNOCOSTRUZIONE|string||0|0|0|ANNOCOSTRUZIONE
-FASCIAETACOSTRUZIONE|string||0|0|0|FASCIAETACOSTRUZIONE
-ANNOADATTAMENTO|string||0|0|0|ANNOADATTAMENTO
-FASCIAETAADATTAMENTO|string||0|0|0|FASCIAETAADATTAMENTO
-NUMEROPIANI|string||0|0|0|NUMEROPIANI
-SPERFICIEAREATOTALE|string||0|0|0|SPERFICIEAREATOTALE
-SPERFICIEAREALIBERA|string||0|0|0|SPERFICIEAREALIBERA
-VOLUME|string||0|0|0|VOLUME
-SPAZIDIDATTICI|string||0|0|0|SPAZIDIDATTICI
-AULAMAGNA|string||0|0|0|AULAMAGNA
-MENSA|string||0|0|0|MENSA
-PALESTRAPISCINA|string||0|0|0|PALESTRAPISCINA
-SPAZIAMMINISTRATIVI|string||0|0|0|SPAZIAMMINISTRATIVI
-SCUOLABUS|string||0|0|0|SCUOLABUS
-TRASPORTIPUBBLICIURBANI|string||0|0|0|TRASPORTIPUBBLICIURBANI
-TRASPORTIPUBBLICIINTERURBANI|string||0|0|0|TRASPORTIPUBBLICIINTERURBANI
-TRASPORTIFERROVIARI|string||0|0|0|TRASPORTIFERROVIARI
-MEZZIPRIVATI|string||0|0|0|MEZZIPRIVATI
-TRASPORTODISABILI|string||0|0|0|TRASPORTODISABILI
-Linea_finanziamento|string||0|0|0|Linea_finanziamento
-COMUNE|string||0|0|0|COMUNE
-FONTE|string||0|0|0|FONTE
-Data_aggiornamento_lavori|string||0|0|0|Data_aggiornamento_lavori
-Data_inizio|string||0|0|0|Data_inizio
-Data_fine|string||0|0|0|Data_fine
-ENTE_RICHIEDENTE|string||0|0|0|ENTE_RICHIEDENTE
-TIPOLOGIA_ENTE_RICHIEDENTE|string||0|0|0|TIPOLOGIA_ENTE_RICHIEDENTE
-COD_PRINC|string||0|0|0|COD_PRINC
-OGGETTO_INTERVENTO|string||0|0|0|OGGETTO_INTERVENTO
-INFO_AGGIUNTIVE|string||0|0|0|INFO_AGGIUNTIVE
-LATITUDINE|string||0|0|0|LATITUDINE
-LONGITUDINE|string||0|0|0|LONGITUDINE
-TIPO_INTERVENTO|string||0|0|0|TIPO_INTERVENTO
-STATO_LAVORI|string||0|0|0|STATO_LAVORI
-CUP|string||0|0|0|CUP
-Importo_totale_opera|string||0|0|0|Importo_totale_opera
-Finanziamento_Provvedimento|string||0|0|0|Finanziamento_Provvedimento
-DESCRIZIONE_SINTETICA_CUP|string||0|0|0|DESCRIZIONE_SINTETICA_CUP
-ANNO_DECISIONE|string||0|0|0|ANNO_DECISIONE
-STATO_PROGETTO|string||0|0|0|STATO_PROGETTO
-COSTO_PROGETTO|string||0|0|0|COSTO_PROGETTO
-FINANZIAMENTO_PROGETTO|string||0|0|0|FINANZIAMENTO_PROGETTO
-CODICE_STATO|string||0|0|0|CODICE_STATO
-STATO|string||0|0|0|STATO
-CODICE_AREA_GEOGRAFICA|string||0|0|0|CODICE_AREA_GEOGRAFICA
-AREA_GEOGRAFICA|string||0|0|0|AREA_GEOGRAFICA
-CODICE_REGIONE|string||0|0|0|CODICE_REGIONE
-CODICE_PROVINCIA|string||0|0|0|CODICE_PROVINCIA
-SIGLA_PROVINCIA|string||0|0|0|SIGLA_PROVINCIA
-CODICE_COMUNE|string||0|0|0|CODICE_COMUNE
-PIVA_CODFISCALE_SOG_TITOLARE|string||0|0|0|PIVA_CODFISCALE_SOG_TITOLARE
-SOGGETTO_TITOLARE|string||0|0|0|SOGGETTO_TITOLARE
-INDIRIZZO_SOG_TITOLARE|string||0|0|0|INDIRIZZO_SOG_TITOLARE
-TIPO_INDIRIZZO_SOG_TITOLARE|string||0|0|0|TIPO_INDIRIZZO_SOG_TITOLARE
-NUM_CIVICO_SOG_TITOLARE|string||0|0|0|NUM_CIVICO_SOG_TITOLARE
-LOCALITA_SOG_TITOLARE|string||0|0|0|LOCALITA_SOG_TITOLARE
-CAP_SOGGETTO_TITOLARE|string||0|0|0|CAP_SOGGETTO_TITOLARE
-COMUNE_SOGGETTO_TITOLARE|string||0|0|0|COMUNE_SOGGETTO_TITOLARE
-CODICE_COMUNE_SOGG_TITOLARE|string||0|0|0|CODICE_COMUNE_SOGG_TITOLARE
-CODICE_SOTTOCATEG_SOGGETTO|string||0|0|0|CODICE_SOTTOCATEG_SOGGETTO
-SOTTOCATEGORIA_SOGGETTO|string||0|0|0|SOTTOCATEGORIA_SOGGETTO
-CODICE_CATEGORIA_SOGGETTO|string||0|0|0|CODICE_CATEGORIA_SOGGETTO
-CATEGORIA_SOGGETTO|string||0|0|0|CATEGORIA_SOGGETTO
-CODICE_AREA_SOGGETTO|string||0|0|0|CODICE_AREA_SOGGETTO
-AREA_SOGGETTO|string||0|0|0|AREA_SOGGETTO
-CODICE_NATURA_INTERVENTO|string||0|0|0|CODICE_NATURA_INTERVENTO
-NATURA_INTERVENTO|string||0|0|0|NATURA_INTERVENTO
-CODICE_TIPO_INTERVENTO|string||0|0|0|CODICE_TIPO_INTERVENTO
-TIPOLOGIA_INTERVENTO|string||0|0|0|TIPOLOGIA_INTERVENTO
-CODICE_AREA_INTERVENTO|string||0|0|0|CODICE_AREA_INTERVENTO
-AREA_INTERVENTO|string||0|0|0|AREA_INTERVENTO
-CODICE_SETTORE_INTERVENTO|string||0|0|0|CODICE_SETTORE_INTERVENTO
-SETTORE_INTERVENTO|string||0|0|0|SETTORE_INTERVENTO
-CODICE_SOTTOSETTORE_INTERVENTO|string||0|0|0|CODICE_SOTTOSETTORE_INTERVENTO
-SOTTOSETTORE_INTERVENTO|string||0|0|0|SOTTOSETTORE_INTERVENTO
-CODICE_CATEGORIA_INTERVENTO|string||0|0|0|CODICE_CATEGORIA_INTERVENTO
-CATEGORIA_INTERVENTO|string||0|0|0|CATEGORIA_INTERVENTO
-SOGGETTO_RICHIEDENTE|string||0|0|0|SOGGETTO_RICHIEDENTE
-TIPOLOGIA_CUP|string||0|0|0|TIPOLOGIA_CUP
-DESCRIZIONE_INTERVENTO|string||0|0|0|DESCRIZIONE_INTERVENTO
-STRUTTURA_INFRASTRUTTURA|string||0|0|0|STRUTTURA_INFRASTRUTTURA
-INDIRIZZO_INTERVENTO|string||0|0|0|INDIRIZZO_INTERVENTO
-NUMERO_DELIBERA_CIPE|string||0|0|0|NUMERO_DELIBERA_CIPE
-ANNO_DELIBERA|string||0|0|0|ANNO_DELIBERA
-FLAG_LEGGE_OBIETTIVO|string||0|0|0|FLAG_LEGGE_OBIETTIVO
-FINANZA_PROGETTO|string||0|0|0|FINANZA_PROGETTO
-FLAG_TIPO_GENERICO|string||0|0|0|FLAG_TIPO_GENERICO
-CUP_IN_RELAZIONE|string||0|0|0|CUP_IN_RELAZIONE
-RUOLO_IN_RELAZIONE|string||0|0|0|RUOLO_IN_RELAZIONE
-DESC_TIPO_RELAZIONE|string||0|0|0|DESC_TIPO_RELAZIONE
-DATA_ULTIMA_MODIFICA_SSC|string||0|0|0|DATA_ULTIMA_MODIFICA_SSC
-DATA_ULTIMA_MODIFICA_UTENTE|string||0|0|0|DATA_ULTIMA_MODIFICA_UTENTE
-DATA_CHIUSURA_REVOCA|string||0|0|0|DATA_CHIUSURA_REVOCA
-CODICE_LOCALE_PROGETTO|string||0|0|0|CODICE_LOCALE_PROGETTO
-CODICE_STRUMENTO_PROGRAM|string||0|0|0|CODICE_STRUMENTO_PROGRAM
-STRUMENTO_PROGRAMMAZIONE|string||0|0|0|STRUMENTO_PROGRAMMAZIONE
-CODICE_COPERTURA_FINANZIARIA|string||0|0|0|CODICE_COPERTURA_FINANZIARIA
-COPERTURA_FINANZIARIA|string||0|0|0|COPERTURA_FINANZIARIA
-SPONSORIZZAZIONI|string||0|0|0|SPONSORIZZAZIONI
-ALTRE_INFORMAZIONI|string||0|0|0|ALTRE_INFORMAZIONI
-DATA_GENERAZIONE_CUP|string||0|0|0|DATA_GENERAZIONE_CUP
-CONTROLLO_QUALITA|string||0|0|0|CONTROLLO_QUALITA
-CUP_MASTER|string||0|0|0|CUP_MASTER
-RAGIONI_COLLEGAMENTO|string||0|0|0|RAGIONI_COLLEGAMENTO
-LINK_OPENCOESIONE|string||0|0|0|LINK_OPENCOESIONE
-LINK_SCUOLE_SICURE|string||0|0|0|LINK_SCUOLE_SICURE</value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetFormat</key>
-            <value>STORED AS PARQUET</value>
+            <key>hive.master.root</key>
+            <value>/daf</value>
           </entry>
           <entry>
             <key>metadata.table.targetMergeStrategy</key>
             <value>DEDUPE_AND_MERGE</value>
           </entry>
           <entry>
-            <key>metadata.table.targetTblProperties</key>
-            <value>tblproperties("parquet.compression"="SNAPPY")</value>
-          </entry>
-          <entry>
-            <key>nifi.home</key>
-            <value>/usr/nifi</value>
-          </entry>
-          <entry>
-            <key>skipHeader</key>
-            <value>true</value>
-          </entry>
-          <entry>
-            <key>spark.input_folder</key>
-            <value>/tmp/kylo-nifi/spark</value>
+            <key>metadata.table.feedFormat</key>
+            <value>ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+ WITH SERDEPROPERTIES ( 'separatorChar' = '|' ,'escapeChar' = '\\' ,'quoteChar' = '\"') STORED AS TEXTFILE</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -1368,21 +1368,27 @@ LINK_SCUOLE_SICURE|string||0|0|0|LINK_SCUOLE_SICURE</value>
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Directory</key>
+            <key>Group</key>
             <value>
-              <name>Directory</name>
+              <name>Group</name>
             </value>
           </entry>
           <entry>
-            <key>Conflict Resolution Strategy</key>
+            <key>Owner</key>
             <value>
-              <name>Conflict Resolution Strategy</name>
+              <name>Owner</name>
             </value>
           </entry>
           <entry>
             <key>Create Missing Directories</key>
             <value>
               <name>Create Missing Directories</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Permissions</key>
+            <value>
+              <name>Permissions</name>
             </value>
           </entry>
           <entry>
@@ -1398,21 +1404,15 @@ LINK_SCUOLE_SICURE|string||0|0|0|LINK_SCUOLE_SICURE</value>
             </value>
           </entry>
           <entry>
-            <key>Permissions</key>
+            <key>Directory</key>
             <value>
-              <name>Permissions</name>
+              <name>Directory</name>
             </value>
           </entry>
           <entry>
-            <key>Owner</key>
+            <key>Conflict Resolution Strategy</key>
             <value>
-              <name>Owner</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Group</key>
-            <value>
-              <name>Group</name>
+              <name>Conflict Resolution Strategy</name>
             </value>
           </entry>
         </descriptors>
@@ -1421,16 +1421,17 @@ LINK_SCUOLE_SICURE|string||0|0|0|LINK_SCUOLE_SICURE</value>
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Directory</key>
-            <value>${absolute.path}</value>
+            <key>Group</key>
           </entry>
           <entry>
-            <key>Conflict Resolution Strategy</key>
-            <value>fail</value>
+            <key>Owner</key>
           </entry>
           <entry>
             <key>Create Missing Directories</key>
             <value>true</value>
+          </entry>
+          <entry>
+            <key>Permissions</key>
           </entry>
           <entry>
             <key>Maximum File Count</key>
@@ -1439,13 +1440,12 @@ LINK_SCUOLE_SICURE|string||0|0|0|LINK_SCUOLE_SICURE</value>
             <key>Last Modified Time</key>
           </entry>
           <entry>
-            <key>Permissions</key>
+            <key>Directory</key>
+            <value>${absolute.path}</value>
           </entry>
           <entry>
-            <key>Owner</key>
-          </entry>
-          <entry>
-            <key>Group</key>
+            <key>Conflict Resolution Strategy</key>
+            <value>fail</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -1551,6 +1551,12 @@ LINK_SCUOLE_SICURE|string||0|0|0|LINK_SCUOLE_SICURE</value>
             </value>
           </entry>
           <entry>
+            <key>filename</key>
+            <value>
+              <name>filename</name>
+            </value>
+          </entry>
+          <entry>
             <key>Store State</key>
             <value>
               <name>Store State</name>
@@ -1562,12 +1568,6 @@ LINK_SCUOLE_SICURE|string||0|0|0|LINK_SCUOLE_SICURE</value>
               <name>Stateful Variables Initial Value</name>
             </value>
           </entry>
-          <entry>
-            <key>filename</key>
-            <value>
-              <name>filename</name>
-            </value>
-          </entry>
         </descriptors>
         <executionNode>ALL</executionNode>
         <lossTolerant>false</lossTolerant>
@@ -1577,15 +1577,15 @@ LINK_SCUOLE_SICURE|string||0|0|0|LINK_SCUOLE_SICURE</value>
             <key>Delete Attributes Expression</key>
           </entry>
           <entry>
+            <key>filename</key>
+            <value>${filename}.read</value>
+          </entry>
+          <entry>
             <key>Store State</key>
             <value>Do not store state</value>
           </entry>
           <entry>
             <key>Stateful Variables Initial Value</key>
-          </entry>
-          <entry>
-            <key>filename</key>
-            <value>${filename}.read</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -1603,5 +1603,5 @@ LINK_SCUOLE_SICURE|string||0|0|0|LINK_SCUOLE_SICURE</value>
       <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
     </processors>
   </snippet>
-  <timestamp>02/05/2018 14:34:49 GMT</timestamp>
+  <timestamp>02/08/2018 09:18:27 GMT</timestamp>
 </template>

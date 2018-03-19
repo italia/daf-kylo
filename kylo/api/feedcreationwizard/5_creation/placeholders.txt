@@ -28,9 +28,24 @@ From the specific template response we have to take the user editable properties
 the path DAF_TEMPLATE.inputProcessors[0].properties and have the userEditable property to true. Inside these properties
 there are other template  specific placeholders
 
+{DAF_SCHEDULING_STRATEGY}: The scheduling strategy, TIMER_DRIVEN or CRON_DRIVEN
+{DAF_SCHEDULING_INTERVAL_OR_CRON}: The interval (eg. 10 sec, 30 sec, 1 min, 5 min) or the CRON expression
+
+{DAF_MERGE_STRATEGY}: The merge strategy to use possible values are:
+SYNC: Sync will completely overwrite the target table with the source data.
+MERGE: Merge will append the data into the target partitions.
+DEDUPE_AND_MERGE: Dedupe and merge will insert into the target partition but ensure no duplicate rows are remaining.
+PK_MERGE: PK Merge will insert or update existing rows matching the  same primary key.
+ROLLING_SYNC: Rolling Sync will overwrite target partitions only when present in source.
+
 Specific for template:
 
 Template: Dataset Ingest
-{DAF_INPUT_DIRECTORY} : /daf_input_directory
-{DAF_INPUT_REGEXP_FILTER} : daf_input_regexp_filter //check how to escape
+{DAF_INPUT_DIRECTORY}: /daf_input_directory
+{DAF_INPUT_REGEXP_FILTER}: daf_input_regexp_filter //check how to escape
 
+Template: Webservice Ingest
+{DAF_WS_URL}: The url of the webservice
+{DAF_WS_USERNAME}: The username to access the webservice
+{DAF_WS_PASSWORD}: The password to access the webservice
+{DAF_DATASET_NAME}: This template needs this information to generate a unique filename to the data downloaded from the webservice

@@ -90,4 +90,18 @@ public class TestJSONArrayToMultiline {
         result.assertContentEquals(classLoader.getResourceAsStream("json/notvalid.json"));
     }
 
+//    @Test
+//    public void testJSONArrayBigFile() throws Exception {
+//        final TestRunner runner = TestRunners.newTestRunner(new DafJSONArrayToMultiline());
+//        runner.setValidateExpressionUsage(false);
+//        runner.assertValid();
+//
+//        ClassLoader classLoader = getClass().getClassLoader();
+//        runner.enqueue(classLoader.getResourceAsStream("json/verybigarray.json"));
+//        runner.run();
+//
+//        final List<MockFlowFile> successFlowFiles = runner.getFlowFilesForRelationship("success");
+//        MockFlowFile result = successFlowFiles.get(0);
+//        result.getSize();
+//    }
 }

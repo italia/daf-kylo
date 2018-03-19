@@ -5,34 +5,13 @@
   <name>Webservice Ingest</name>
   <snippet>
     <connections>
-      <id>a750fc8e-3820-3663-0000-000000000000</id>
+      <id>83eeaed8-4a63-3836-0000-000000000000</id>
       <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
       <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
       <backPressureObjectThreshold>10000</backPressureObjectThreshold>
       <destination>
         <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>c919a079-afb3-36d7-0000-000000000000</id>
-        <type>OUTPUT_PORT</type>
-      </destination>
-      <flowFileExpiration>0 sec</flowFileExpiration>
-      <labelIndex>1</labelIndex>
-      <name></name>
-      <selectedRelationships>success</selectedRelationships>
-      <source>
-        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>dfe86aa1-012a-3f4a-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </source>
-      <zIndex>0</zIndex>
-    </connections>
-    <connections>
-      <id>f317aaaa-62e7-3155-0000-000000000000</id>
-      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
-      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-      <destination>
-        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>88478275-4b87-3821-0000-000000000000</id>
+        <id>3e4916ee-5b61-3e14-0000-000000000000</id>
         <type>PROCESSOR</type>
       </destination>
       <flowFileExpiration>0 sec</flowFileExpiration>
@@ -41,19 +20,19 @@
       <selectedRelationships>success</selectedRelationships>
       <source>
         <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>66e99f1b-0f6d-3da0-0000-000000000000</id>
+        <id>2e6c4019-9ab1-3154-0000-000000000000</id>
         <type>PROCESSOR</type>
       </source>
       <zIndex>0</zIndex>
     </connections>
     <connections>
-      <id>5897f300-5a62-302d-0000-000000000000</id>
+      <id>c4dde33c-c9e9-3383-0000-000000000000</id>
       <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
       <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
       <backPressureObjectThreshold>10000</backPressureObjectThreshold>
       <destination>
         <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>c919a079-afb3-36d7-0000-000000000000</id>
+        <id>70592724-3c2a-3563-0000-000000000000</id>
         <type>OUTPUT_PORT</type>
       </destination>
       <flowFileExpiration>0 sec</flowFileExpiration>
@@ -62,40 +41,19 @@
       <selectedRelationships>unmatched</selectedRelationships>
       <source>
         <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>88478275-4b87-3821-0000-000000000000</id>
+        <id>e6fe24be-8bfe-32d6-0000-000000000000</id>
         <type>PROCESSOR</type>
       </source>
       <zIndex>0</zIndex>
     </connections>
     <connections>
-      <id>706340a8-7991-3574-0000-000000000000</id>
+      <id>c5c38278-570f-3114-0000-000000000000</id>
       <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
       <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
       <backPressureObjectThreshold>10000</backPressureObjectThreshold>
       <destination>
         <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>66e99f1b-0f6d-3da0-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </destination>
-      <flowFileExpiration>0 sec</flowFileExpiration>
-      <labelIndex>1</labelIndex>
-      <name></name>
-      <selectedRelationships>success</selectedRelationships>
-      <source>
-        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>8cdce117-789c-36a7-0000-000000000000</id>
-        <type>PROCESSOR</type>
-      </source>
-      <zIndex>0</zIndex>
-    </connections>
-    <connections>
-      <id>79482517-bb48-31df-0000-000000000000</id>
-      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
-      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-      <destination>
-        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>dfe86aa1-012a-3f4a-0000-000000000000</id>
+        <id>d1b3c057-1329-368d-0000-000000000000</id>
         <type>PROCESSOR</type>
       </destination>
       <flowFileExpiration>0 sec</flowFileExpiration>
@@ -104,17 +62,151 @@
       <selectedRelationships>table-avro</selectedRelationships>
       <source>
         <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
-        <id>88478275-4b87-3821-0000-000000000000</id>
+        <id>e6fe24be-8bfe-32d6-0000-000000000000</id>
         <type>PROCESSOR</type>
       </source>
       <zIndex>0</zIndex>
     </connections>
+    <connections>
+      <id>e9c3393b-5c19-35f6-0000-000000000000</id>
+      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
+        <id>e6fe24be-8bfe-32d6-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
+        <id>3e4916ee-5b61-3e14-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>ff44274a-8ecc-30b9-0000-000000000000</id>
+      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
+        <id>70592724-3c2a-3563-0000-000000000000</id>
+        <type>OUTPUT_PORT</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>3ee97e4a-1798-3042-0000-000000000000</groupId>
+        <id>d1b3c057-1329-368d-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <controllerServices>
+      <id>d1e5c317-7a53-30ef-0000-000000000000</id>
+      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
+      <bundle>
+        <artifact>nifi-ssl-context-service-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.4.0</version>
+      </bundle>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>Keystore Filename</key>
+          <value>
+            <name>Keystore Filename</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Keystore Password</key>
+          <value>
+            <name>Keystore Password</name>
+          </value>
+        </entry>
+        <entry>
+          <key>key-password</key>
+          <value>
+            <name>key-password</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Keystore Type</key>
+          <value>
+            <name>Keystore Type</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Truststore Filename</key>
+          <value>
+            <name>Truststore Filename</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Truststore Password</key>
+          <value>
+            <name>Truststore Password</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Truststore Type</key>
+          <value>
+            <name>Truststore Type</name>
+          </value>
+        </entry>
+        <entry>
+          <key>SSL Protocol</key>
+          <value>
+            <name>SSL Protocol</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>StandardSSLContextService</name>
+      <persistsState>false</persistsState>
+      <properties>
+        <entry>
+          <key>Keystore Filename</key>
+        </entry>
+        <entry>
+          <key>Keystore Password</key>
+        </entry>
+        <entry>
+          <key>key-password</key>
+        </entry>
+        <entry>
+          <key>Keystore Type</key>
+        </entry>
+        <entry>
+          <key>Truststore Filename</key>
+          <value>/usr/lib/jvm/default-jvm/jre/lib/security/cacerts</value>
+        </entry>
+        <entry>
+          <key>Truststore Password</key>
+        </entry>
+        <entry>
+          <key>Truststore Type</key>
+          <value>JKS</value>
+        </entry>
+        <entry>
+          <key>SSL Protocol</key>
+        </entry>
+      </properties>
+      <state>ENABLED</state>
+      <type>org.apache.nifi.ssl.StandardSSLContextService</type>
+    </controllerServices>
     <outputPorts>
-      <id>c919a079-afb3-36d7-0000-000000000000</id>
+      <id>70592724-3c2a-3563-0000-000000000000</id>
       <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
       <position>
-        <x>1266.050914129208</x>
-        <y>284.71372487118066</y>
+        <x>1266.0509141292082</x>
+        <y>284.7137248711806</y>
       </position>
       <comments></comments>
       <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
@@ -124,10 +216,100 @@
       <type>OUTPUT_PORT</type>
     </outputPorts>
     <processors>
-      <id>88478275-4b87-3821-0000-000000000000</id>
+      <id>d1b3c057-1329-368d-0000-000000000000</id>
       <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
       <position>
-        <x>1209.6226385933808</x>
+        <x>1814.378559643676</x>
+        <y>11.0</y>
+      </position>
+      <bundle>
+        <artifact>nifi-update-attribute-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.4.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Delete Attributes Expression</key>
+            <value>
+              <name>Delete Attributes Expression</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Store State</key>
+            <value>
+              <name>Store State</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value>
+              <name>Stateful Variables Initial Value</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFieldStructure</key>
+            <value>
+              <name>metadata.table.feedFieldStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>skipHeader</key>
+            <value>
+              <name>skipHeader</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Delete Attributes Expression</key>
+          </entry>
+          <entry>
+            <key>Store State</key>
+            <value>Store state locally</value>
+          </entry>
+          <entry>
+            <key>Stateful Variables Initial Value</key>
+            <value></value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFieldStructure</key>
+            <value>${db.table.avro.schema}</value>
+          </entry>
+          <entry>
+            <key>skipHeader</key>
+            <value>false</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>DB Avro Ingest Parameters</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>set state fail</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <state>STOPPED</state>
+      <style></style>
+      <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
+    </processors>
+    <processors>
+      <id>e6fe24be-8bfe-32d6-0000-000000000000</id>
+      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
+      <position>
+        <x>1209.622638593381</x>
         <y>14.077658163071646</y>
       </position>
       <bundle>
@@ -185,7 +367,7 @@
       <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
     </processors>
     <processors>
-      <id>8cdce117-789c-36a7-0000-000000000000</id>
+      <id>2e6c4019-9ab1-3154-0000-000000000000</id>
       <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
       <position>
         <x>0.0</x>
@@ -202,51 +384,15 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Proxy Host</key>
-            <value>
-              <name>Proxy Host</name>
-            </value>
-          </entry>
-          <entry>
-            <key>redirect-cookie-policy</key>
-            <value>
-              <name>redirect-cookie-policy</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Filename</key>
-            <value>
-              <name>Filename</name>
-            </value>
-          </entry>
-          <entry>
-            <key>User Agent</key>
-            <value>
-              <name>User Agent</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Proxy Port</key>
-            <value>
-              <name>Proxy Port</name>
-            </value>
-          </entry>
-          <entry>
             <key>URL</key>
             <value>
               <name>URL</name>
             </value>
           </entry>
           <entry>
-            <key>Connection Timeout</key>
+            <key>Filename</key>
             <value>
-              <name>Connection Timeout</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Data Timeout</key>
-            <value>
-              <name>Data Timeout</name>
+              <name>Filename</name>
             </value>
           </entry>
           <entry>
@@ -263,6 +409,30 @@
             </value>
           </entry>
           <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Timeout</key>
+            <value>
+              <name>Connection Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Data Timeout</key>
+            <value>
+              <name>Data Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>User Agent</key>
+            <value>
+              <name>User Agent</name>
+            </value>
+          </entry>
+          <entry>
             <key>Accept Content-Type</key>
             <value>
               <name>Accept Content-Type</name>
@@ -275,9 +445,21 @@
             </value>
           </entry>
           <entry>
-            <key>Password</key>
+            <key>redirect-cookie-policy</key>
             <value>
-              <name>Password</name>
+              <name>redirect-cookie-policy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Proxy Host</key>
+            <value>
+              <name>Proxy Host</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Proxy Port</key>
+            <value>
+              <name>Proxy Port</name>
             </value>
           </entry>
         </descriptors>
@@ -286,25 +468,23 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Proxy Host</key>
-          </entry>
-          <entry>
-            <key>redirect-cookie-policy</key>
-            <value>default</value>
+            <key>URL</key>
+            <value>{DAF_WS_URL}</value>
           </entry>
           <entry>
             <key>Filename</key>
             <value>{DAF_DATASET_NAME}_${now():format('yyyyMMddHHmmss')}</value>
           </entry>
           <entry>
-            <key>User Agent</key>
+            <key>SSL Context Service</key>
+            <value>d1e5c317-7a53-30ef-0000-000000000000</value>
           </entry>
           <entry>
-            <key>Proxy Port</key>
+            <key>Username</key>
+            <value>{DAF_WS_USERNAME}</value>
           </entry>
           <entry>
-            <key>URL</key>
-            <value>{DAF_WS_URL}</value>
+            <key>Password</key>
           </entry>
           <entry>
             <key>Connection Timeout</key>
@@ -315,11 +495,7 @@
             <value>30 sec</value>
           </entry>
           <entry>
-            <key>SSL Context Service</key>
-          </entry>
-          <entry>
-            <key>Username</key>
-            <value>{DAF_WS_USERNAME}</value>
+            <key>User Agent</key>
           </entry>
           <entry>
             <key>Accept Content-Type</key>
@@ -330,7 +506,14 @@
             <value>true</value>
           </entry>
           <entry>
-            <key>Password</key>
+            <key>redirect-cookie-policy</key>
+            <value>default</value>
+          </entry>
+          <entry>
+            <key>Proxy Host</key>
+          </entry>
+          <entry>
+            <key>Proxy Port</key>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -348,11 +531,11 @@
       <type>org.apache.nifi.processors.standard.GetHTTP</type>
     </processors>
     <processors>
-      <id>dfe86aa1-012a-3f4a-0000-000000000000</id>
+      <id>3e4916ee-5b61-3e14-0000-000000000000</id>
       <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
       <position>
-        <x>1814.3785596436758</x>
-        <y>11.0</y>
+        <x>593.6607207397733</x>
+        <y>3.0288918144290164</y>
       </position>
       <bundle>
         <artifact>nifi-update-attribute-nar</artifact>
@@ -377,99 +560,9 @@
             </value>
           </entry>
           <entry>
-            <key>metadata.table.feedFieldStructure</key>
-            <value>
-              <name>metadata.table.feedFieldStructure</name>
-            </value>
-          </entry>
-          <entry>
-            <key>skipHeader</key>
-            <value>
-              <name>skipHeader</name>
-            </value>
-          </entry>
-          <entry>
             <key>Stateful Variables Initial Value</key>
             <value>
               <name>Stateful Variables Initial Value</name>
-            </value>
-          </entry>
-        </descriptors>
-        <executionNode>ALL</executionNode>
-        <lossTolerant>false</lossTolerant>
-        <penaltyDuration>30 sec</penaltyDuration>
-        <properties>
-          <entry>
-            <key>Delete Attributes Expression</key>
-          </entry>
-          <entry>
-            <key>Store State</key>
-            <value>Store state locally</value>
-          </entry>
-          <entry>
-            <key>metadata.table.feedFieldStructure</key>
-            <value>${db.table.avro.schema}</value>
-          </entry>
-          <entry>
-            <key>skipHeader</key>
-            <value>false</value>
-          </entry>
-          <entry>
-            <key>Stateful Variables Initial Value</key>
-            <value></value>
-          </entry>
-        </properties>
-        <runDurationMillis>0</runDurationMillis>
-        <schedulingPeriod>0 sec</schedulingPeriod>
-        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-        <yieldDuration>1 sec</yieldDuration>
-      </config>
-      <name>DB Avro Ingest Parameters</name>
-      <relationships>
-        <autoTerminate>true</autoTerminate>
-        <name>set state fail</name>
-      </relationships>
-      <relationships>
-        <autoTerminate>false</autoTerminate>
-        <name>success</name>
-      </relationships>
-      <state>STOPPED</state>
-      <style></style>
-      <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
-    </processors>
-    <processors>
-      <id>66e99f1b-0f6d-3da0-0000-000000000000</id>
-      <parentGroupId>3ee97e4a-1798-3042-0000-000000000000</parentGroupId>
-      <position>
-        <x>593.6607207397733</x>
-        <y>3.0288918144290733</y>
-      </position>
-      <bundle>
-        <artifact>nifi-update-attribute-nar</artifact>
-        <group>org.apache.nifi</group>
-        <version>1.4.0</version>
-      </bundle>
-      <config>
-        <bulletinLevel>WARN</bulletinLevel>
-        <comments></comments>
-        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-        <descriptors>
-          <entry>
-            <key>hive.profile.root</key>
-            <value>
-              <name>hive.profile.root</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Store State</key>
-            <value>
-              <name>Store State</name>
-            </value>
-          </entry>
-          <entry>
-            <key>spark.input_folder</key>
-            <value>
-              <name>spark.input_folder</name>
             </value>
           </entry>
           <entry>
@@ -479,9 +572,15 @@
             </value>
           </entry>
           <entry>
-            <key>metadata.table.fieldPoliciesJson</key>
+            <key>category</key>
             <value>
-              <name>metadata.table.fieldPoliciesJson</name>
+              <name>category</name>
+            </value>
+          </entry>
+          <entry>
+            <key>feed</key>
+            <value>
+              <name>feed</name>
             </value>
           </entry>
           <entry>
@@ -491,33 +590,9 @@
             </value>
           </entry>
           <entry>
-            <key>Delete Attributes Expression</key>
+            <key>hdfs.ingest.root</key>
             <value>
-              <name>Delete Attributes Expression</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetTblProperties</key>
-            <value>
-              <name>metadata.table.targetTblProperties</name>
-            </value>
-          </entry>
-          <entry>
-            <key>kylo.tmp.baseFolder</key>
-            <value>
-              <name>kylo.tmp.baseFolder</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.feedFieldStructure</key>
-            <value>
-              <name>metadata.table.feedFieldStructure</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionStructure</key>
-            <value>
-              <name>metadata.table.partitionStructure</name>
+              <name>hdfs.ingest.root</name>
             </value>
           </entry>
           <entry>
@@ -533,9 +608,57 @@
             </value>
           </entry>
           <entry>
+            <key>hive.profile.root</key>
+            <value>
+              <name>hive.profile.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>kylo.tmp.baseFolder</key>
+            <value>
+              <name>kylo.tmp.baseFolder</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFieldStructure</key>
+            <value>
+              <name>metadata.table.feedFieldStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFormat</key>
+            <value>
+              <name>metadata.table.feedFormat</name>
+            </value>
+          </entry>
+          <entry>
             <key>metadata.table.fieldIndexString</key>
             <value>
               <name>metadata.table.fieldIndexString</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldPoliciesJson</key>
+            <value>
+              <name>metadata.table.fieldPoliciesJson</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldStructure</key>
+            <value>
+              <name>metadata.table.fieldStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionSpecs</key>
+            <value>
+              <name>metadata.table.partitionSpecs</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionStructure</key>
+            <value>
+              <name>metadata.table.partitionStructure</name>
             </value>
           </entry>
           <entry>
@@ -545,9 +668,15 @@
             </value>
           </entry>
           <entry>
-            <key>metadata.table.fieldStructure</key>
+            <key>metadata.table.targetMergeStrategy</key>
             <value>
-              <name>metadata.table.fieldStructure</name>
+              <name>metadata.table.targetMergeStrategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetTblProperties</key>
+            <value>
+              <name>metadata.table.targetTblProperties</name>
             </value>
           </entry>
           <entry>
@@ -563,45 +692,9 @@
             </value>
           </entry>
           <entry>
-            <key>Stateful Variables Initial Value</key>
+            <key>spark.input_folder</key>
             <value>
-              <name>Stateful Variables Initial Value</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionSpecs</key>
-            <value>
-              <name>metadata.table.partitionSpecs</name>
-            </value>
-          </entry>
-          <entry>
-            <key>feed</key>
-            <value>
-              <name>feed</name>
-            </value>
-          </entry>
-          <entry>
-            <key>hdfs.ingest.root</key>
-            <value>
-              <name>hdfs.ingest.root</name>
-            </value>
-          </entry>
-          <entry>
-            <key>category</key>
-            <value>
-              <name>category</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetMergeStrategy</key>
-            <value>
-              <name>metadata.table.targetMergeStrategy</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.feedFormat</key>
-            <value>
-              <name>metadata.table.feedFormat</name>
+              <name>spark.input_folder</name>
             </value>
           </entry>
         </descriptors>
@@ -610,47 +703,35 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>hive.profile.root</key>
-            <value>${config.hive.profile.root}</value>
+            <key>Delete Attributes Expression</key>
           </entry>
           <entry>
             <key>Store State</key>
             <value>Store state locally</value>
           </entry>
           <entry>
-            <key>spark.input_folder</key>
-            <value>/tmp/kylo-nifi/spark</value>
+            <key>Stateful Variables Initial Value</key>
+            <value></value>
           </entry>
           <entry>
             <key>archiveId</key>
             <value>${now():format('yyyyMMddHHmmss')}_${UUID()}</value>
           </entry>
           <entry>
-            <key>metadata.table.fieldPoliciesJson</key>
-            <value>${metadata.table.fieldPoliciesJson}</value>
+            <key>category</key>
+            <value>${metadata.category.systemName}</value>
+          </entry>
+          <entry>
+            <key>feed</key>
+            <value>${metadata.systemFeedName}</value>
           </entry>
           <entry>
             <key>hdfs.archive.root</key>
             <value>${config.hdfs.archive.root}</value>
           </entry>
           <entry>
-            <key>Delete Attributes Expression</key>
-          </entry>
-          <entry>
-            <key>metadata.table.targetTblProperties</key>
-            <value>${metadata.table.targetTblProperties}</value>
-          </entry>
-          <entry>
-            <key>kylo.tmp.baseFolder</key>
-            <value>/tmp/kylo-nifi</value>
-          </entry>
-          <entry>
-            <key>metadata.table.feedFieldStructure</key>
-            <value>${metadata.table.feedFieldStructure}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionStructure</key>
-            <value>${metadata.table.partitionStructure}</value>
+            <key>hdfs.ingest.root</key>
+            <value>${config.hdfs.ingest.root}</value>
           </entry>
           <entry>
             <key>hive.ingest.root</key>
@@ -661,16 +742,52 @@
             <value>${config.hive.master.root}</value>
           </entry>
           <entry>
+            <key>hive.profile.root</key>
+            <value>${config.hive.profile.root}</value>
+          </entry>
+          <entry>
+            <key>kylo.tmp.baseFolder</key>
+            <value>/tmp/kylo-nifi</value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFieldStructure</key>
+            <value>${metadata.table.feedFieldStructure}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFormat</key>
+            <value>${metadata.table.feedFormat}</value>
+          </entry>
+          <entry>
             <key>metadata.table.fieldIndexString</key>
             <value>${metadata.table.fieldIndexString}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldPoliciesJson</key>
+            <value>${metadata.table.fieldPoliciesJson}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldStructure</key>
+            <value>${metadata.table.fieldStructure}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionSpecs</key>
+            <value>${metadata.table.partitionSpecs}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionStructure</key>
+            <value>${metadata.table.partitionStructure}</value>
           </entry>
           <entry>
             <key>metadata.table.targetFormat</key>
             <value>${metadata.table.targetFormat}</value>
           </entry>
           <entry>
-            <key>metadata.table.fieldStructure</key>
-            <value>${metadata.table.fieldStructure}</value>
+            <key>metadata.table.targetMergeStrategy</key>
+            <value>${metadata.table.targetMergeStrategy}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetTblProperties</key>
+            <value>${metadata.table.targetTblProperties}</value>
           </entry>
           <entry>
             <key>nifi.home</key>
@@ -681,32 +798,8 @@
             <value>${metadata.options.skipHeader}</value>
           </entry>
           <entry>
-            <key>Stateful Variables Initial Value</key>
-            <value></value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionSpecs</key>
-            <value>${metadata.table.partitionSpecs}</value>
-          </entry>
-          <entry>
-            <key>feed</key>
-            <value>${metadata.systemFeedName}</value>
-          </entry>
-          <entry>
-            <key>hdfs.ingest.root</key>
-            <value>${config.hdfs.ingest.root}</value>
-          </entry>
-          <entry>
-            <key>category</key>
-            <value>${metadata.category.systemName}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetMergeStrategy</key>
-            <value>${metadata.table.targetMergeStrategy}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.feedFormat</key>
-            <value>${metadata.table.feedFormat}</value>
+            <key>spark.input_folder</key>
+            <value>/tmp/kylo-nifi/spark</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -733,5 +826,5 @@
       <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
     </processors>
   </snippet>
-  <timestamp>01/30/2018 14:40:45 GMT</timestamp>
+  <timestamp>02/15/2018 09:19:29 GMT</timestamp>
 </template>

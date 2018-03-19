@@ -78,9 +78,15 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
-            <key>Delete Attributes Expression</key>
+            <key>metadata.table.fieldIndexString</key>
             <value>
-              <name>Delete Attributes Expression</name>
+              <name>metadata.table.fieldIndexString</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetFormat</key>
+            <value>
+              <name>metadata.table.targetFormat</name>
             </value>
           </entry>
           <entry>
@@ -90,21 +96,33 @@
             </value>
           </entry>
           <entry>
+            <key>spark.input_folder</key>
+            <value>
+              <name>spark.input_folder</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldStructure</key>
+            <value>
+              <name>metadata.table.fieldStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>nifi.home</key>
+            <value>
+              <name>nifi.home</name>
+            </value>
+          </entry>
+          <entry>
             <key>Stateful Variables Initial Value</key>
             <value>
               <name>Stateful Variables Initial Value</name>
             </value>
           </entry>
           <entry>
-            <key>category</key>
+            <key>metadata.table.fieldPoliciesJson</key>
             <value>
-              <name>category</name>
-            </value>
-          </entry>
-          <entry>
-            <key>feed</key>
-            <value>
-              <name>feed</name>
+              <name>metadata.table.fieldPoliciesJson</name>
             </value>
           </entry>
           <entry>
@@ -114,9 +132,69 @@
             </value>
           </entry>
           <entry>
+            <key>metadata.table.partitionSpecs</key>
+            <value>
+              <name>metadata.table.partitionSpecs</name>
+            </value>
+          </entry>
+          <entry>
+            <key>feed</key>
+            <value>
+              <name>feed</name>
+            </value>
+          </entry>
+          <entry>
             <key>hdfs.ingest.root</key>
             <value>
               <name>hdfs.ingest.root</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.dataTransformation.datasourceIds</key>
+            <value>
+              <name>metadata.dataTransformation.datasourceIds</name>
+            </value>
+          </entry>
+          <entry>
+            <key>spark.version</key>
+            <value>
+              <name>spark.version</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Delete Attributes Expression</key>
+            <value>
+              <name>Delete Attributes Expression</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetTblProperties</key>
+            <value>
+              <name>metadata.table.targetTblProperties</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFieldStructure</key>
+            <value>
+              <name>metadata.table.feedFieldStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.dataTransformation.dataTransformScript</key>
+            <value>
+              <name>metadata.dataTransformation.dataTransformScript</name>
+            </value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionStructure</key>
+            <value>
+              <name>metadata.table.partitionStructure</name>
+            </value>
+          </entry>
+          <entry>
+            <key>category</key>
+            <value>
+              <name>category</name>
             </value>
           </entry>
           <entry>
@@ -132,87 +210,9 @@
             </value>
           </entry>
           <entry>
-            <key>metadata.dataTransformation.datasourceIds</key>
-            <value>
-              <name>metadata.dataTransformation.datasourceIds</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.dataTransformation.dataTransformScript</key>
-            <value>
-              <name>metadata.dataTransformation.dataTransformScript</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.feedFieldStructure</key>
-            <value>
-              <name>metadata.table.feedFieldStructure</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.fieldIndexString</key>
-            <value>
-              <name>metadata.table.fieldIndexString</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.fieldPoliciesJson</key>
-            <value>
-              <name>metadata.table.fieldPoliciesJson</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.fieldStructure</key>
-            <value>
-              <name>metadata.table.fieldStructure</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionSpecs</key>
-            <value>
-              <name>metadata.table.partitionSpecs</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionStructure</key>
-            <value>
-              <name>metadata.table.partitionStructure</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetFormat</key>
-            <value>
-              <name>metadata.table.targetFormat</name>
-            </value>
-          </entry>
-          <entry>
             <key>metadata.table.targetMergeStrategy</key>
             <value>
               <name>metadata.table.targetMergeStrategy</name>
-            </value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetTblProperties</key>
-            <value>
-              <name>metadata.table.targetTblProperties</name>
-            </value>
-          </entry>
-          <entry>
-            <key>nifi.home</key>
-            <value>
-              <name>nifi.home</name>
-            </value>
-          </entry>
-          <entry>
-            <key>spark.input_folder</key>
-            <value>
-              <name>spark.input_folder</name>
-            </value>
-          </entry>
-          <entry>
-            <key>spark.version</key>
-            <value>
-              <name>spark.version</name>
             </value>
           </entry>
         </descriptors>
@@ -221,31 +221,83 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
-            <key>Delete Attributes Expression</key>
+            <key>metadata.table.fieldIndexString</key>
+            <value>${metadata.table.fieldIndexString}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.targetFormat</key>
+            <value>${metadata.table.targetFormat}</value>
           </entry>
           <entry>
             <key>Store State</key>
             <value>Store state locally</value>
           </entry>
           <entry>
+            <key>spark.input_folder</key>
+            <value>/tmp</value>
+          </entry>
+          <entry>
+            <key>metadata.table.fieldStructure</key>
+            <value>${metadata.table.fieldStructure}</value>
+          </entry>
+          <entry>
+            <key>nifi.home</key>
+            <value>${config.nifi.home}</value>
+          </entry>
+          <entry>
             <key>Stateful Variables Initial Value</key>
             <value></value>
           </entry>
           <entry>
-            <key>category</key>
-            <value>${metadata.category.systemName}</value>
-          </entry>
-          <entry>
-            <key>feed</key>
-            <value>${metadata.systemFeedName}</value>
+            <key>metadata.table.fieldPoliciesJson</key>
+            <value>${metadata.table.fieldPoliciesJson}</value>
           </entry>
           <entry>
             <key>feedts</key>
             <value>${now():format('yyyyMMddHHmmss')}</value>
           </entry>
           <entry>
+            <key>metadata.table.partitionSpecs</key>
+            <value>${metadata.table.partitionSpecs}</value>
+          </entry>
+          <entry>
+            <key>feed</key>
+            <value>${metadata.systemFeedName}</value>
+          </entry>
+          <entry>
             <key>hdfs.ingest.root</key>
             <value>${config.hdfs.ingest.root}</value>
+          </entry>
+          <entry>
+            <key>metadata.dataTransformation.datasourceIds</key>
+            <value>${metadata.dataTransformation.datasourceIds}</value>
+          </entry>
+          <entry>
+            <key>spark.version</key>
+            <value>${config.spark.version}</value>
+          </entry>
+          <entry>
+            <key>Delete Attributes Expression</key>
+          </entry>
+          <entry>
+            <key>metadata.table.targetTblProperties</key>
+            <value>${metadata.table.targetTblProperties}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.feedFieldStructure</key>
+            <value>${metadata.table.feedFieldStructure}</value>
+          </entry>
+          <entry>
+            <key>metadata.dataTransformation.dataTransformScript</key>
+            <value>${metadata.dataTransformation.dataTransformScript}</value>
+          </entry>
+          <entry>
+            <key>metadata.table.partitionStructure</key>
+            <value>${metadata.table.partitionStructure}</value>
+          </entry>
+          <entry>
+            <key>category</key>
+            <value>${metadata.category.systemName}</value>
           </entry>
           <entry>
             <key>hive.ingest.root</key>
@@ -256,60 +308,8 @@
             <value>${config.hive.master.root}</value>
           </entry>
           <entry>
-            <key>metadata.dataTransformation.datasourceIds</key>
-            <value>${metadata.dataTransformation.datasourceIds}</value>
-          </entry>
-          <entry>
-            <key>metadata.dataTransformation.dataTransformScript</key>
-            <value>${metadata.dataTransformation.dataTransformScript}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.feedFieldStructure</key>
-            <value>${metadata.table.feedFieldStructure}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.fieldIndexString</key>
-            <value>${metadata.table.fieldIndexString}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.fieldPoliciesJson</key>
-            <value>${metadata.table.fieldPoliciesJson}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.fieldStructure</key>
-            <value>${metadata.table.fieldStructure}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionSpecs</key>
-            <value>${metadata.table.partitionSpecs}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.partitionStructure</key>
-            <value>${metadata.table.partitionStructure}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetFormat</key>
-            <value>${metadata.table.targetFormat}</value>
-          </entry>
-          <entry>
             <key>metadata.table.targetMergeStrategy</key>
             <value>${metadata.table.targetMergeStrategy}</value>
-          </entry>
-          <entry>
-            <key>metadata.table.targetTblProperties</key>
-            <value>${metadata.table.targetTblProperties}</value>
-          </entry>
-          <entry>
-            <key>nifi.home</key>
-            <value>${config.nifi.home}</value>
-          </entry>
-          <entry>
-            <key>spark.input_folder</key>
-            <value>/tmp</value>
-          </entry>
-          <entry>
-            <key>spark.version</key>
-            <value>${config.spark.version}</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>
@@ -353,27 +353,15 @@
         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
         <descriptors>
           <entry>
+            <key>character-set</key>
+            <value>
+              <name>character-set</name>
+            </value>
+          </entry>
+          <entry>
             <key>File Size</key>
             <value>
               <name>File Size</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Batch Size</key>
-            <value>
-              <name>Batch Size</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Data Format</key>
-            <value>
-              <name>Data Format</name>
-            </value>
-          </entry>
-          <entry>
-            <key>Unique FlowFiles</key>
-            <value>
-              <name>Unique FlowFiles</name>
             </value>
           </entry>
           <entry>
@@ -383,9 +371,21 @@
             </value>
           </entry>
           <entry>
-            <key>character-set</key>
+            <key>Batch Size</key>
             <value>
-              <name>character-set</name>
+              <name>Batch Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Unique FlowFiles</key>
+            <value>
+              <name>Unique FlowFiles</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Data Format</key>
+            <value>
+              <name>Data Format</name>
             </value>
           </entry>
         </descriptors>
@@ -394,27 +394,27 @@
         <penaltyDuration>30 sec</penaltyDuration>
         <properties>
           <entry>
+            <key>character-set</key>
+            <value>UTF-8</value>
+          </entry>
+          <entry>
             <key>File Size</key>
             <value>0 B</value>
+          </entry>
+          <entry>
+            <key>generate-ff-custom-text</key>
           </entry>
           <entry>
             <key>Batch Size</key>
             <value>1</value>
           </entry>
           <entry>
-            <key>Data Format</key>
-            <value>Binary</value>
-          </entry>
-          <entry>
             <key>Unique FlowFiles</key>
             <value>false</value>
           </entry>
           <entry>
-            <key>generate-ff-custom-text</key>
-          </entry>
-          <entry>
-            <key>character-set</key>
-            <value>UTF-8</value>
+            <key>Data Format</key>
+            <value>Binary</value>
           </entry>
         </properties>
         <runDurationMillis>0</runDurationMillis>

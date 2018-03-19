@@ -1,0 +1,352 @@
+{
+  "owner": {
+    "displayName": "Data Lake Administrator",
+    "email": null,
+    "enabled": true,
+    "groups": [
+      "admin",
+      "user"
+    ],
+    "systemName": "dladmin"
+  },
+  "allowedActions": {
+    "actions": [
+      {
+        "systemName": "accessFeed",
+        "actions": [
+          {
+            "systemName": "editFeedSummary"
+          },
+          {
+            "systemName": "accessFeedDetails",
+            "actions": [
+              {
+                "systemName": "editFeedDetails"
+              },
+              {
+                "systemName": "deleteFeed"
+              },
+              {
+                "systemName": "enableFeed"
+              },
+              {
+                "systemName": "exportFeed"
+              }
+            ]
+          },
+          {
+            "systemName": "accessFeedOperations"
+          },
+          {
+            "systemName": "changeFeedPermissions"
+          }
+        ]
+      }
+    ]
+  },
+  "id": "1aafe19c-0e66-40ae-b5c2-e6fb6e1dc47c",
+  "feedId": "1aafe19c-0e66-40ae-b5c2-e6fb6e1dc47c",
+  "templateId": "79501f53-bf15-4245-a105-6194bc7350c0",
+  "inputProcessorType": "org.apache.nifi.jms.processors.ConsumeJMS",
+  "inputProcessorName": "Receive Index Request",
+  "templateName": "ordinary-to-standard",
+  "schedule": {
+    "processorId": null,
+    "schedulingPeriod": "0 sec",
+    "schedulingStrategy": "TIMER_DRIVEN",
+    "concurrentTasks": 1,
+    "executionNode": null,
+    "preconditions": null
+  },
+  "feedName": "Ordinary To Standard",
+  "systemFeedName": "ordinary_to_standard",
+  "description": "Generates standard dataset from an ordinary dataset",
+  "category": {
+    "owner": null,
+    "allowedActions": null,
+    "roleMemberships": [],
+    "feedRoleMemberships": [],
+    "id": "ac148153-e54f-41f6-b9f4-f1c190eb0d5f",
+    "name": "System",
+    "systemName": "system",
+    "icon": "cloud",
+    "iconColor": "#FFCA28",
+    "description": "System Data",
+    "securityGroups": null,
+    "userFields": null,
+    "userProperties": null,
+    "relatedFeeds": 0,
+    "createDate": 1512127244328,
+    "updateDate": 1519147571528
+  },
+  "table": {
+    "fieldStructure": "",
+    "existingTableName": null,
+    "tableSchema": {
+      "name": null,
+      "description": null,
+      "charset": null,
+      "properties": {},
+      "fields": [],
+      "schemaName": null,
+      "databaseName": null,
+      "id": "d7859308-36c4-4e6c-a149-36398a9afb7e"
+    },
+    "sourceTableSchema": {
+      "name": "NA",
+      "description": null,
+      "charset": null,
+      "properties": {},
+      "fields": [],
+      "schemaName": null,
+      "databaseName": null,
+      "id": "0ac7750f-b132-44cb-849e-e57db0dae30a"
+    },
+    "feedTableSchema": {
+      "name": null,
+      "description": null,
+      "charset": null,
+      "properties": {},
+      "fields": [],
+      "schemaName": null,
+      "databaseName": null,
+      "id": "43d7719b-b574-4279-96a7-5f33176d99da"
+    },
+    "method": "SAMPLE_FILE",
+    "description": "",
+    "fieldPolicies": [],
+    "partitions": [],
+    "tableType": null,
+    "incrementalDateField": null,
+    "sourceTableIncrementalDateField": null,
+    "options": {
+      "compress": false,
+      "auditLogging": true,
+      "encrypt": false,
+      "trackHistory": false,
+      "compressionFormat": null
+    },
+    "feedFormat": "ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde' WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\\\' ,'quoteChar' = '\"') STORED AS TEXTFILE",
+    "targetFormat": null,
+    "targetTblProperties": "",
+    "targetMergeStrategy": "DEDUPE_AND_MERGE",
+    "fieldPoliciesJson": "[]",
+    "fieldIndexString": "",
+    "partitionStructure": "",
+    "partitionSpecs": "",
+    "fieldsString": "",
+    "sourceFields": "NA",
+    "sourceFieldsCommaString": "NA",
+    "feedFieldStructure": "",
+    "nullableFields": "",
+    "primaryKeyFields": "",
+    "sourceTargetFieldMap": {},
+    "targetSourceFieldMap": {}
+  },
+  "createDate": 1519147571528,
+  "updateDate": 1519147571528,
+  "dataTransformation": {
+    "chartViewModel": null,
+    "datasourceIds": null,
+    "dataTransformScript": null,
+    "sql": null,
+    "states": []
+  },
+  "active": true,
+  "state": "ENABLED",
+  "nifiProcessGroupId": "b445d3de-0161-1000-c8f4-313a8be5cd08",
+  "options": {
+    "skipHeader": false
+  },
+  "registeredTemplate": {
+    "owner": {
+      "displayName": "Data Lake Administrator",
+      "email": null,
+      "enabled": true,
+      "groups": [
+        "admin",
+        "user"
+      ],
+      "systemName": "dladmin"
+    },
+    "allowedActions": {
+      "actions": [
+        {
+          "systemName": "accessTemplate",
+          "actions": [
+            {
+              "systemName": "editTemplate"
+            },
+            {
+              "systemName": "deleteTemplate"
+            },
+            {
+              "systemName": "exportTemplate"
+            },
+            {
+              "systemName": "createFeedFromTemplate"
+            },
+            {
+              "systemName": "changeTemplatePermissions"
+            }
+          ]
+        }
+      ]
+    },
+    "roleMemberships": [],
+    "feedRoleMemberships": [],
+    "properties": [
+      {
+        "processGroupName": "NiFi Flow",
+        "processorName": "PutFile",
+        "processorId": "b8f6e7cc-eb6d-36b0-d661-4155cef818b0",
+        "processGroupId": "b43b3b44-0161-1000-262a-68d474c8520c",
+        "processorType": "org.apache.nifi.processors.standard.PutFile",
+        "key": "Directory",
+        "value": "/home/daf/standard_ingestion_folder/${daf.standard.dataset}",
+        "expressionProperties": null,
+        "propertyDescriptor": {
+          "name": "Directory",
+          "displayName": "Directory",
+          "description": "The directory to which files should be written. You may use expression language such as /aa/bb/${path}",
+          "defaultValue": null,
+          "allowableValues": null,
+          "required": true,
+          "sensitive": false,
+          "dynamic": false,
+          "supportsEl": true,
+          "identifiesControllerService": null
+        },
+        "templateValue": "/home/daf/standard_ingestion_folder/${daf.standard.dataset}",
+        "userEditable": false,
+        "renderType": "text",
+        "renderOptions": {},
+        "selected": true,
+        "inputProperty": false,
+        "containsConfigurationVariables": false,
+        "sensitive": false,
+        "required": true,
+        "templateProperty": null,
+        "idKey": "b43b3b44-0161-1000-262a-68d474c8520c-b8f6e7cc-eb6d-36b0-d661-4155cef818b0-Directory",
+        "nameKey": "NiFi Flow-PutFile-Directory",
+        "processorNameTypeKey": "PutFile-org.apache.nifi.processors.standard.PutFile-Directory"
+      }
+    ],
+    "nonInputProcessors": null,
+    "inputProcessors": [
+      {
+        "properties": [],
+        "type": "org.apache.nifi.jms.processors.ConsumeJMS",
+        "name": "Receive Index Request",
+        "id": "de53893b-5088-3fb2-0000-000000000000",
+        "groupName": null,
+        "groupId": "3ee97e4a-1798-3042-0000-000000000000",
+        "inputProcessor": true,
+        "userDefinedInputProcessor": false
+      }
+    ],
+    "id": "79501f53-bf15-4245-a105-6194bc7350c0",
+    "nifiTemplateId": "ae6e4f5f-79dd-47b3-9b45-a2c1839bd233",
+    "templateName": "ordinary-to-standard",
+    "updateDate": 1519147571528,
+    "createDate": 1519147310091,
+    "icon": "compare_arrows",
+    "iconColor": "#AB47BC",
+    "description": null,
+    "state": "ENABLED",
+    "defineTable": false,
+    "reusableTemplate": false,
+    "reusableTemplateConnections": [],
+    "registeredDatasourceDefinitions": [
+      {
+        "processorType": "org.apache.nifi.processors.standard.PutFile",
+        "processorName": "PutFile",
+        "processorId": "b8f6e7cc-eb6d-36b0-0000-000000000000",
+        "datasourceDefinition": {
+          "processorType": "org.apache.nifi.processors.standard.PutFile",
+          "connectionType": "DESTINATION",
+          "datasourcePropertyKeys": [
+            "Directory"
+          ],
+          "datasourceType": "DirectoryDatasource",
+          "identityString": "${Directory}",
+          "description": null,
+          "title": "${Directory}"
+        }
+      }
+    ],
+    "order": 10,
+    "templateOrder": null,
+    "feedsCount": 1,
+    "templateTableOption": "NO_TABLE",
+    "timeBetweenStartingBatchJobs": 1000,
+    "stream": false,
+    "allowPreconditions": false,
+    "dataTransformation": false,
+    "isStream": false
+  },
+  "userProperties": [
+    {
+      "description": "The owner of the dataset. Must be a single user, not an organization.",
+      "displayName": "daf_owner",
+      "order": 5,
+      "required": false,
+      "systemName": "daf_owner",
+      "locked": true,
+      "value": null
+    },
+    {
+      "description": "Specifies the standard dataset this ordinary dataset is mapped to",
+      "displayName": "daf_standard_dataset",
+      "order": 4,
+      "required": false,
+      "systemName": "daf_standard_dataset",
+      "locked": true,
+      "value": null
+    },
+    {
+      "description": "The format of the Dataset, current supported values are json or csv. If specified there will be a validation of the input file, otherwise the file will be ingested as it is.",
+      "displayName": "daf_format",
+      "order": 3,
+      "required": false,
+      "systemName": "daf_format",
+      "locked": true,
+      "value": null
+    },
+    {
+      "description": "The type of the Dataset ordinary/standard/derived",
+      "displayName": "daf_type",
+      "order": 0,
+      "required": true,
+      "systemName": "daf_type",
+      "locked": true,
+      "value": "system"
+    },
+    {
+      "description": "The sub domain of the Dataset",
+      "displayName": "daf_subdomain",
+      "order": 2,
+      "required": true,
+      "systemName": "daf_subdomain",
+      "locked": true,
+      "value": "system"
+    },
+    {
+      "description": "The domain of the Dataset",
+      "displayName": "daf_domain",
+      "order": 1,
+      "required": true,
+      "systemName": "daf_domain",
+      "locked": true,
+      "value": "system"
+    }
+  ],
+  "categoryAndFeedDisplayName": "System.Ordinary To Standard",
+  "categoryName": "System",
+  "new": false,
+  "categoryId": "ac148153-e54f-41f6-b9f4-f1c190eb0d5f",
+  "systemCategoryName": "system",
+  "categoryIcon": "cloud",
+  "categoryIconColor": "#FFCA28",
+  "reusableFeed": false
+}

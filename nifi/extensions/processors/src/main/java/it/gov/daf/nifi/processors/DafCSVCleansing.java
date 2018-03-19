@@ -24,6 +24,8 @@ import org.apache.nifi.processor.exception.ProcessException;
 import org.apache.nifi.processor.util.StandardValidators;
 import org.apache.nifi.util.StopWatch;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
@@ -147,8 +149,8 @@ public class DafCSVCleansing extends AbstractProcessor {
 
         try {
             flowFile = session.write(flowFile, (in, out) -> {
-                CSVReader reader = new CSVReaderBuilder(new InputStreamReader(in)).withCSVParser(parser).build();
-                CSVWriter writer = new CSVWriter(new OutputStreamWriter(out), separatorChar, quoteChar, escapeChar, CSVWriter.DEFAULT_LINE_END);
+                CSVReader reader = new CSVReaderBuilder(new BufferedReader(new InputStreamReader(in))).withCSVParser(parser).build();
+                CSVWriter writer = new CSVWriter(new BufferedWriter(new OutputStreamWriter(out)), separatorChar, quoteChar, escapeChar, CSVWriter.DEFAULT_LINE_END);
 
                 reader.forEach(row -> {
                     String[] cleanLine = new String[row.length];
@@ -157,8 +159,9 @@ public class DafCSVCleansing extends AbstractProcessor {
                         cleanLine[i] = StringUtils.replaceAll(row[i], "\r\n|\n|\r", " ");
                     }
                     writer.writeNext(cleanLine);
-                    writer.flushQuietly();
                 });
+
+                writer.close();
             });
         } catch (Exception ex) {
             logger.error("Error CSV processing", ex);

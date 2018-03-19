@@ -16,7 +16,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: 10.98.74.120:5000/tba-nifi.1.4.0:1.0.8-SNAPSHOT
+      - image: 10.98.74.120:5000/tba-nifi.1.4.0:1.1.1-SNAPSHOT
         name: tba-nifi
         imagePullPolicy: IfNotPresent
         lifecycle:
@@ -39,6 +39,10 @@ spec:
         - name: glusterfsvol
           mountPath: /tmp/kylo-nifi/failed-flows
           subPath: tba/evergreen2/nifi/failed-flows
+          readOnly: false
+        - name: glusterfsvol
+          mountPath: /usr/nifi/extentions
+          subPath: tba/evergreen2/nifi/extentions
           readOnly: false
         - name: sparkhome
           mountPath: /opt/cloudera/parcels/

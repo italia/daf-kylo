@@ -1,0 +1,56 @@
+[
+  {
+    "priority": 1,
+    "id": "text_to_utf_8",
+    "name": "text to utf-8",
+    "description": ""
+  },
+  {
+    "priority": 2,
+    "id": "empty_values_to_null",
+    "name": "empty values to null",
+    "description": ""
+  },
+  {
+    "priority": 3,
+    "id": "url_to_standard",
+    "name": "url to standard",
+    "description": ""
+  },
+  {
+    "priority": 4,
+    "id": "date_to_ISO8601",
+    "name": "date to ISO8601",
+    "description": ""
+  },
+  {
+    "priority": 5,
+    "id": "validate_vocabulary",
+    "name": "validate vocabulary",
+    "description": ""
+  },
+  {
+    "priority": 6,
+    "id": "enrich_address",
+    "name": "enrich address",
+    "description": ""
+  },
+  {
+    "priority": 7,
+    "id": "add_row_id",
+    "name": "add row id",
+    "description": ""
+  },
+  {
+    "priority": 8,
+    "id": "add_ingestion_date",
+    "name": "add ingestion date",
+    "description": ""
+  },
+  {
+    "priority": 9,
+    "id": "add_update_date",
+    "name": "add update date",
+    "description": ""
+  }
+]

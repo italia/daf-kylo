@@ -39,8 +39,8 @@
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Set Parameters",
-      "processorId": "d8dd0f5b-3794-337d-dbb9-221d0de248bc",
-      "processGroupId": "015e103a-4c8c-1146-82cd-9011f8a6ad11",
+      "processorId": "a3239972-7206-3d91-bce4-a94a50faf918",
+      "processGroupId": "0411387b-dbee-1ff5-d23e-40349b151bd5",
       "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
       "key": "searchengine",
       "value": "${config.search.engine}",
@@ -68,14 +68,14 @@
       "required": false,
       "templateProperty": null,
       "nameKey": "NiFi Flow-Set Parameters-searchengine",
-      "idKey": "015e103a-4c8c-1146-82cd-9011f8a6ad11-d8dd0f5b-3794-337d-dbb9-221d0de248bc-searchengine",
-      "processorNameTypeKey": "Set Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-searchengine"
+      "processorNameTypeKey": "Set Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-searchengine",
+      "idKey": "0411387b-dbee-1ff5-d23e-40349b151bd5-a3239972-7206-3d91-bce4-a94a50faf918-searchengine"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update Elasticsearch",
-      "processorId": "d94f9816-2a51-3bb3-2bb7-92910d648f86",
-      "processGroupId": "015e103a-4c8c-1146-82cd-9011f8a6ad11",
+      "processorId": "bab448ab-240e-3317-bc17-873c4790781c",
+      "processGroupId": "0411387b-dbee-1ff5-d23e-40349b151bd5",
       "processorType": "org.apache.nifi.processors.elasticsearch.PutElasticsearchHttp",
       "key": "elasticsearch-http-url",
       "value": "${config.search.es.rest.url}",
@@ -103,14 +103,14 @@
       "required": true,
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update Elasticsearch-elasticsearch-http-url",
-      "idKey": "015e103a-4c8c-1146-82cd-9011f8a6ad11-d94f9816-2a51-3bb3-2bb7-92910d648f86-elasticsearch-http-url",
-      "processorNameTypeKey": "Update Elasticsearch-org.apache.nifi.processors.elasticsearch.PutElasticsearchHttp-elasticsearch-http-url"
+      "processorNameTypeKey": "Update Elasticsearch-org.apache.nifi.processors.elasticsearch.PutElasticsearchHttp-elasticsearch-http-url",
+      "idKey": "0411387b-dbee-1ff5-d23e-40349b151bd5-bab448ab-240e-3317-bc17-873c4790781c-elasticsearch-http-url"
     },
     {
       "processGroupName": "NiFi Flow",
       "processorName": "Update Solr",
-      "processorId": "f8e67e51-642f-31c1-b02f-5129d6b4265a",
-      "processGroupId": "015e103a-4c8c-1146-82cd-9011f8a6ad11",
+      "processorId": "4893b8c7-36b6-3517-801d-744061e9fe44",
+      "processGroupId": "0411387b-dbee-1ff5-d23e-40349b151bd5",
       "processorType": "org.apache.nifi.processors.solr.PutSolrContentStream",
       "key": "Solr Location",
       "value": "${config.search.solr.url}",
@@ -138,8 +138,8 @@
       "required": true,
       "templateProperty": null,
       "nameKey": "NiFi Flow-Update Solr-Solr Location",
-      "idKey": "015e103a-4c8c-1146-82cd-9011f8a6ad11-f8e67e51-642f-31c1-b02f-5129d6b4265a-Solr Location",
-      "processorNameTypeKey": "Update Solr-org.apache.nifi.processors.solr.PutSolrContentStream-Solr Location"
+      "processorNameTypeKey": "Update Solr-org.apache.nifi.processors.solr.PutSolrContentStream-Solr Location",
+      "idKey": "0411387b-dbee-1ff5-d23e-40349b151bd5-4893b8c7-36b6-3517-801d-744061e9fe44-Solr Location"
     }
   ],
   "nonInputProcessors": [
@@ -147,55 +147,9 @@
       "properties": [
         {
           "processGroupName": "NiFi Flow",
-          "processorName": "Set Parameters",
-          "processorId": "d8dd0f5b-3794-337d-dbb9-221d0de248bc",
-          "processGroupId": "015e103a-4c8c-1146-82cd-9011f8a6ad11",
-          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
-          "key": "searchengine",
-          "value": "${config.search.engine}",
-          "expressionProperties": null,
-          "propertyDescriptor": {
-            "name": "searchengine",
-            "displayName": "searchengine",
-            "description": "",
-            "defaultValue": null,
-            "allowableValues": null,
-            "required": false,
-            "sensitive": false,
-            "dynamic": true,
-            "supportsEl": true,
-            "identifiesControllerService": null
-          },
-          "templateValue": "${config.search.engine}",
-          "userEditable": false,
-          "renderType": "text",
-          "renderOptions": {},
-          "selected": true,
-          "inputProperty": false,
-          "containsConfigurationVariables": false,
-          "sensitive": false,
-          "required": false,
-          "templateProperty": null,
-          "nameKey": "NiFi Flow-Set Parameters-searchengine",
-          "idKey": "015e103a-4c8c-1146-82cd-9011f8a6ad11-d8dd0f5b-3794-337d-dbb9-221d0de248bc-searchengine",
-          "processorNameTypeKey": "Set Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-searchengine"
-        }
-      ],
-      "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
-      "name": "Set Parameters",
-      "id": "d8dd0f5b-3794-337d-dbb9-221d0de248bc",
-      "groupName": "NiFi Flow",
-      "groupId": "015e103a-4c8c-1146-82cd-9011f8a6ad11",
-      "inputProcessor": false,
-      "userDefinedInputProcessor": false
-    },
-    {
-      "properties": [
-        {
-          "processGroupName": "NiFi Flow",
           "processorName": "Update Elasticsearch",
-          "processorId": "d94f9816-2a51-3bb3-2bb7-92910d648f86",
-          "processGroupId": "015e103a-4c8c-1146-82cd-9011f8a6ad11",
+          "processorId": "bab448ab-240e-3317-bc17-873c4790781c",
+          "processGroupId": "0411387b-dbee-1ff5-d23e-40349b151bd5",
           "processorType": "org.apache.nifi.processors.elasticsearch.PutElasticsearchHttp",
           "key": "elasticsearch-http-url",
           "value": "${config.search.es.rest.url}",
@@ -223,15 +177,61 @@
           "required": true,
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update Elasticsearch-elasticsearch-http-url",
-          "idKey": "015e103a-4c8c-1146-82cd-9011f8a6ad11-d94f9816-2a51-3bb3-2bb7-92910d648f86-elasticsearch-http-url",
-          "processorNameTypeKey": "Update Elasticsearch-org.apache.nifi.processors.elasticsearch.PutElasticsearchHttp-elasticsearch-http-url"
+          "processorNameTypeKey": "Update Elasticsearch-org.apache.nifi.processors.elasticsearch.PutElasticsearchHttp-elasticsearch-http-url",
+          "idKey": "0411387b-dbee-1ff5-d23e-40349b151bd5-bab448ab-240e-3317-bc17-873c4790781c-elasticsearch-http-url"
         }
       ],
       "type": "org.apache.nifi.processors.elasticsearch.PutElasticsearchHttp",
       "name": "Update Elasticsearch",
-      "id": "d94f9816-2a51-3bb3-2bb7-92910d648f86",
+      "id": "bab448ab-240e-3317-bc17-873c4790781c",
       "groupName": "NiFi Flow",
-      "groupId": "015e103a-4c8c-1146-82cd-9011f8a6ad11",
+      "groupId": "0411387b-dbee-1ff5-d23e-40349b151bd5",
+      "inputProcessor": false,
+      "userDefinedInputProcessor": false
+    },
+    {
+      "properties": [
+        {
+          "processGroupName": "NiFi Flow",
+          "processorName": "Set Parameters",
+          "processorId": "a3239972-7206-3d91-bce4-a94a50faf918",
+          "processGroupId": "0411387b-dbee-1ff5-d23e-40349b151bd5",
+          "processorType": "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "key": "searchengine",
+          "value": "${config.search.engine}",
+          "expressionProperties": null,
+          "propertyDescriptor": {
+            "name": "searchengine",
+            "displayName": "searchengine",
+            "description": "",
+            "defaultValue": null,
+            "allowableValues": null,
+            "required": false,
+            "sensitive": false,
+            "dynamic": true,
+            "supportsEl": true,
+            "identifiesControllerService": null
+          },
+          "templateValue": "${config.search.engine}",
+          "userEditable": false,
+          "renderType": "text",
+          "renderOptions": {},
+          "selected": true,
+          "inputProperty": false,
+          "containsConfigurationVariables": false,
+          "sensitive": false,
+          "required": false,
+          "templateProperty": null,
+          "nameKey": "NiFi Flow-Set Parameters-searchengine",
+          "processorNameTypeKey": "Set Parameters-org.apache.nifi.processors.attributes.UpdateAttribute-searchengine",
+          "idKey": "0411387b-dbee-1ff5-d23e-40349b151bd5-a3239972-7206-3d91-bce4-a94a50faf918-searchengine"
+        }
+      ],
+      "type": "org.apache.nifi.processors.attributes.UpdateAttribute",
+      "name": "Set Parameters",
+      "id": "a3239972-7206-3d91-bce4-a94a50faf918",
+      "groupName": "NiFi Flow",
+      "groupId": "0411387b-dbee-1ff5-d23e-40349b151bd5",
       "inputProcessor": false,
       "userDefinedInputProcessor": false
     },
@@ -240,8 +240,8 @@
         {
           "processGroupName": "NiFi Flow",
           "processorName": "Update Solr",
-          "processorId": "f8e67e51-642f-31c1-b02f-5129d6b4265a",
-          "processGroupId": "015e103a-4c8c-1146-82cd-9011f8a6ad11",
+          "processorId": "4893b8c7-36b6-3517-801d-744061e9fe44",
+          "processGroupId": "0411387b-dbee-1ff5-d23e-40349b151bd5",
           "processorType": "org.apache.nifi.processors.solr.PutSolrContentStream",
           "key": "Solr Location",
           "value": "${config.search.solr.url}",
@@ -269,51 +269,34 @@
           "required": true,
           "templateProperty": null,
           "nameKey": "NiFi Flow-Update Solr-Solr Location",
-          "idKey": "015e103a-4c8c-1146-82cd-9011f8a6ad11-f8e67e51-642f-31c1-b02f-5129d6b4265a-Solr Location",
-          "processorNameTypeKey": "Update Solr-org.apache.nifi.processors.solr.PutSolrContentStream-Solr Location"
+          "processorNameTypeKey": "Update Solr-org.apache.nifi.processors.solr.PutSolrContentStream-Solr Location",
+          "idKey": "0411387b-dbee-1ff5-d23e-40349b151bd5-4893b8c7-36b6-3517-801d-744061e9fe44-Solr Location"
         }
       ],
       "type": "org.apache.nifi.processors.solr.PutSolrContentStream",
       "name": "Update Solr",
-      "id": "f8e67e51-642f-31c1-b02f-5129d6b4265a",
+      "id": "4893b8c7-36b6-3517-801d-744061e9fe44",
       "groupName": "NiFi Flow",
-      "groupId": "015e103a-4c8c-1146-82cd-9011f8a6ad11",
+      "groupId": "0411387b-dbee-1ff5-d23e-40349b151bd5",
       "inputProcessor": false,
       "userDefinedInputProcessor": false
     }
   ],
   "inputProcessors": [],
   "id": "82c7802e-e578-43e2-b9fa-1c2923b5920e",
-  "nifiTemplateId": "b5cad157-c363-4695-9c31-c025e9075bbd",
+  "nifiTemplateId": "d052d85d-a818-4475-b423-baa601408887",
   "templateName": "Index Text Service",
-  "updateDate": 1517998961953,
+  "updateDate": 1518601741970,
   "createDate": 1512127242681,
-  "icon": "comment",
-  "iconColor": "#FF8A65",
-  "description": "Global Text Index Service",
+  "icon": null,
+  "iconColor": null,
+  "description": null,
   "state": "ENABLED",
   "defineTable": false,
   "reusableTemplate": false,
   "reusableTemplateConnections": [],
-  "registeredDatasourceDefinitions": [
-    {
-      "processorType": "org.apache.nifi.jms.processors.ConsumeJMS",
-      "processorName": "Receive Index Request",
-      "processorId": "0d8dc6ae-4698-307f-0000-000000000000",
-      "datasourceDefinition": {
-        "processorType": "org.apache.nifi.jms.processors.ConsumeJMS",
-        "connectionType": "SOURCE",
-        "datasourcePropertyKeys": [
-          "Destination Name"
-        ],
-        "datasourceType": "JMSDatasource",
-        "identityString": "${Destination Name}",
-        "description": null,
-        "title": "${Destination Name}"
-      }
-    }
-  ],
-  "order": 5,
+  "registeredDatasourceDefinitions": [],
+  "order": 10,
   "templateOrder": null,
   "feedsCount": 1,
   "templateTableOption": "NO_TABLE",
