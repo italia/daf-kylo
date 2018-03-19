@@ -32,8 +32,19 @@ public class TestMetaCatalogParsing {
     }
 
     @Test
-    public void getTransformationsTest() throws IOException {
-        final URL url = getClass().getResource("/json/standardization-dataschema.json");
+    public void validateTransformations1() throws IOException {
+        getTransformationsTest("/json/movimenti-turistici.json");
+    }
+
+
+    @Test
+    public void validateTranformation2() throws IOException {
+        getTransformationsTest("/json/standardization-dataschema.json");
+    }
+
+
+    private void getTransformationsTest(String path) throws IOException {
+        final URL url = getClass().getResource(path);
         final ObjectMapper objectMapper = new ObjectMapper();
         final JsonNode root = objectMapper.readTree(url);
 
@@ -43,8 +54,18 @@ public class TestMetaCatalogParsing {
     }
 
     @Test
-    public void getFlatSchemaTest() throws IOException {
-        final URL url = getClass().getResource("/json/standardization-dataschema.json");
+    public void getFlatSchemaTest1() throws IOException {
+        getFlatSchemaTest("/json/standardization-dataschema.json");
+    }
+
+    @Test
+    public void getFlatSchemaTest2() throws IOException {
+        getFlatSchemaTest("/json/movimenti-turistici.json");
+    }
+
+
+    private void getFlatSchemaTest(String path) throws IOException {
+        final URL url = getClass().getResource(path);
         final ObjectMapper objectMapper = new ObjectMapper();
         final JsonNode root = objectMapper.readTree(url);
 
