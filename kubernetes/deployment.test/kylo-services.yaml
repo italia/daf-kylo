@@ -1,0 +1,93 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: tba-kylo-services
+  name: tba-kylo-services
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: tba-kylo-services
+    spec:
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+      containers:
+      - image: nexus.teamdigitale.test/tba-kylo-services.8.4:1.0.3-SNAPSHOT
+        name: tba-kylo-services
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8420
+        resources: {}
+        volumeMounts:
+        - mountPath: /opt/kylo/kylo-services/conf
+          name: kylo-services-config
+        - mountPath: /opt/kylo/kylo-services/spark-shell
+          name: kylo-services-spark
+        - name: glusterfsvol
+          mountPath: /var/log/kylo-services
+          subPath: tba/evergreen2/kylo-services/log
+        - name: glusterfsvol
+          mountPath: /etc/security/
+          subPath: tba/security/
+          readOnly: true
+        - name: sparkhome
+          mountPath: /opt/cloudera/parcels/
+          readOnly: true
+        - name: sparkconf
+          mountPath: /etc/spark2/
+          readOnly: true
+        - name: alternatives
+          mountPath: /etc/alternatives/
+          readOnly: true
+        - name: hosts
+          mountPath: /etc/extra_hosts
+          readOnly: true
+        - name: krb5conf
+          mountPath: /etc/krb5.conf
+          readOnly: true
+        - name: hadoop
+          mountPath: /etc/hadoop
+          readOnly: true
+        #- name: daf-root-ca
+        #  mountPath: /etc/ssl/certs
+      restartPolicy: Always
+      volumes:
+      - name: glusterfsvol
+        persistentVolumeClaim:
+          claimName: gluster-claim
+
+      - name: kylo-services-config
+        configMap:
+          name: kylo-services
+      - name: kylo-services-spark
+        configMap:
+          name: kylo-services-spark
+      - name: hosts
+        hostPath:
+          path: /etc/hosts
+      - name: krb5conf
+        hostPath:
+          path: /etc/krb5.conf
+      - name: hadoop
+        hostPath:
+          path: /etc/hadoop
+      - name: sparkhome
+        hostPath:
+          path: /opt/cloudera/parcels/
+      - name: alternatives
+        hostPath:
+          path: /etc/alternatives/
+      - name: sparkconf
+        hostPath:
+          path: /etc/spark2/
+
+     # - name: daf-root-ca
+     #   secret:
+     #     secretName: daf-root-ca
+      imagePullSecrets:
+      - name: regsecret
+status: {}

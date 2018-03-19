@@ -1,0 +1,44 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: tba-elasticsearch
+  name: tba-elasticsearch
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        io.kompose.service: tba-elasticsearch
+    spec:
+      containers:
+      - image:  nexus.teamdigitale.test/tba-elasticsearch.5.6.4:1.0.2-SNAPSHOT
+        name: tba-elasticsearch
+        imagePullPolicy: IfNotPresent
+        lifecycle:
+          postStart:
+            exec:
+              command:
+                - "sh"
+                - "-c"
+                - >
+                  while ! curl --output /dev/null --silent --head --fail http://localhost:9200; do sleep 1; done;
+                  /opt/kylo/bin/create-kylo-indexes-es.sh localhost 9200 1 1
+        ports:
+        - containerPort: 9200
+        - containerPort: 9300
+        resources: {}
+        volumeMounts:
+        - name: glusterfsvol
+          mountPath: /usr/share/elasticsearch/data
+          subPath: tba/evergreen2/elasticsearch/data
+      restartPolicy: Always
+      volumes:
+      - name: glusterfsvol
+        persistentVolumeClaim:
+          claimName: gluster-claim
+      imagePullSecrets:
+      - name: regsecret
+
+status: {}
