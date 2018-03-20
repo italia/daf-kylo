@@ -6,8 +6,8 @@ The first processor, given a dataset name does:
 
 1. query the catalog service
 2. extract all the information about the dataset fields and the ingestion steps
-3. create an instance of [IngestionFlow](src/main/java/it/gov/daf/nifi/processors/models/IngestionFlow.Java) with all the [IngestionStep](src/main/java/it/gov/daf/nifi/processors/models/IngestionStep.java)s.
-4. send all them as output of the processor.
+3. create an instance of [IngestionFlow]() with all the [IngestionStep]()s.
+4. send all them as output
 
 The second processor, given as input the an object of type `IngestionFlow`:
 1. calls the spark job defined into the [daf-job-ingestion](https://github.com/teamdigitale/daf-job-ingestion) to execute the ingestion pipeline
@@ -25,7 +25,7 @@ The supported dataTransformation are:
       - "add row id",
       - "add ingestion date",
       - "add update date"
-
+      
 And are named in the file [transformations.json](./transformations.json).
 Each transformation has:
 
