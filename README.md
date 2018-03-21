@@ -83,17 +83,31 @@ for instance:
 Please ensure previously configuration of kubectl has been done. 'How to' can be found in: [TeamDigitale onboarding , 'Setup Kubernetes'](https://docs.google.com/document/d/1KqeaZ2yj7rofslqzklYTCLb3AxPnV1mzOgSXOuTHTyw/edit?ts=59faf23f&pli=1#heading=h.vvi8emze7m35)
 
 After config is done, **deploy** into kubernetes cluster can be performed by: `./playbook.sh [component]`
+#### Production
 
 for instance:
   ```
-  ./playbook.sh activemq
+  ./playbook.sh prod activemq
   ```
 
 or **delete** by: `./cleanup.sh [component]`
 
 for instance:
   ```
-  ./cleanup.sh activemq
+  ./cleanup.sh prod activemq
+  ```
+#### Test
+
+for instance:
+  ```
+  ./playbook.sh test activemq
+  ```
+
+or **delete** by: `./cleanup.sh [component]`
+
+for instance:
+  ```
+  ./cleanup.sh test activemq
   ```
 
 ### Configuration Ldap
