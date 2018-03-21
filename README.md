@@ -90,7 +90,7 @@ for instance:
   ./playbook.sh prod activemq
   ```
 
-or **delete** by: `./cleanup.sh [component]`
+or **delete** by: `./cleanup.sh [environment] [component]`
 
 for instance:
   ```
@@ -103,7 +103,7 @@ for instance:
   ./playbook.sh test activemq
   ```
 
-or **delete** by: `./cleanup.sh [component]`
+or **delete** by: `./cleanup.sh [environment] [component]`
 
 for instance:
   ```
