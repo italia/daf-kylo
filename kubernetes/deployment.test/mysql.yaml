@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: tba-mysql
+  name: tba-mysql
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: tba-mysql
+    spec:
+      containers:
+      - env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: hadoop
+        image: nexus.teamdigitale.test/tba-mysql.10.3:1.1.0
+        name: tba-mysql
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3306
+        resources: {}
+        volumeMounts:
+        - name: glusterfsvol
+          mountPath: /var/lib/mysql
+          subPath: tba/evergreen2/mysql/data
+          readOnly: false
+      restartPolicy: Always
+      volumes:
+      - name: glusterfsvol
+        persistentVolumeClaim:
+          claimName: gluster-claim
+      imagePullSecrets:
+      - name: regsecret
+status: {}

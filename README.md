@@ -25,26 +25,39 @@ brew install kubectl rpm make git
 ```
 
 In order to be able to build most of Docker images kylo code will be required (source and compiled). To get this run:
-
+#### Production
 ```
-make daf-kylo
-make build-kylo
+make -f Makefile daf-kylo
+make -f Makefile build-kylo
 ```
 
+#### Test
+```
+make -f Makefile.test daf-kylo
+make -f Makefile.test build-kylo
+```
 
 This will use `Makefile` to download the code and compile it.
 
 ### Build Docker images of the components
 Once this is completed build every image:
-
+#### Production
 ```
 make activemq
-make elasticsearch
 make mysql
 make kylo-services
 make kylo-ui
 make nifi
 ```
+#### Test
+```
+make -f Makefile.test activemq
+make -f Makefile.test mysql
+make -f Makefile.test kylo-services
+make -f Makefile.test kylo-ui
+make -f Makefile.test nifi
+```
+
 This will use `Makefile` to download the basic empty images and build our custom docker images with required tagging.
 
 
@@ -56,10 +69,16 @@ Please ensure previously configuration of docker client as well as correct taggi
 After config and proper tagging has been done, push can be performed by: `docker push [repositoryurl:repositoryport/artifact:version]`
 
 for instance:
-  ```
-  docker push nexus.default.svc.cluster.local:5000/tba-kylo-services.8.4.0:1.0.0
-  ```
 
+#### Production
+  ```
+    ./nexus_push.sh prod
+  ```
+#### Test
+  ```
+    ./nexus_push.sh test
+  ```
+  
 ### Deploy components in kubernetes cluster
 Please ensure previously configuration of kubectl has been done. 'How to' can be found in: [TeamDigitale onboarding , 'Setup Kubernetes'](https://docs.google.com/document/d/1KqeaZ2yj7rofslqzklYTCLb3AxPnV1mzOgSXOuTHTyw/edit?ts=59faf23f&pli=1#heading=h.vvi8emze7m35)
 
