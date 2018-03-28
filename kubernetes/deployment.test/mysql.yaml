@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         io.kompose.service: tba-mysql
+        nifi: "true"
     spec:
       containers:
       - env:

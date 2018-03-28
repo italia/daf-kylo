@@ -11,6 +11,7 @@ spec:
     metadata:
       labels:
         io.kompose.service: tba-activemq
+        nifi: "true"
     spec:
       containers:
       - image: nexus.teamdigitale.test/tba-activemq.5.15.1:1.1.0

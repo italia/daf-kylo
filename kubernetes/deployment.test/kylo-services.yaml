@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         io.kompose.service: tba-kylo-services
+        nifi: "true"
     spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
@@ -21,7 +22,9 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8420
-        resources: {}
+        resources:
+          limits:
+            memory: 4096Mi
         volumeMounts:
         - mountPath: /opt/kylo/kylo-services/conf
           name: kylo-services-config

@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         io.kompose.service: tba-nifi
+        nifi: "true"
     spec:
       hostNetwork: false
       dnsPolicy: ClusterFirstWithHostNet
@@ -22,7 +23,9 @@ spec:
         ports:
         - containerPort: 8080
         - containerPort: 8033 # To test basic templates inside nifi
-        resources: {}
+        resources:
+          limits:
+            memory: 16384Mi
         volumeMounts:
         - name: glusterfsvol
           mountPath: /usr/nifi/data
@@ -135,6 +138,4 @@ spec:
           path: /home
 #      imagePullSecrets:
 #      - name: regsecret
-      nodeSelector:
-        node-type: nifi-worker
 status: {}
