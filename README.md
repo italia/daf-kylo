@@ -109,39 +109,41 @@ for instance:
   ```
   ./cleanup.sh test activemq
   ```
+### Mysql Configuration
+By default the kylo database is not created in mysql container, so you have to create it.
 
 ### Configuration Ldap
-By default ldap configuration is on, which means that if redeploy of kylo-services or kylo-ui happens nothing will break. Bare in mind though that after first time deployment is done (first time kylo is deployed in kubernetes cluster) *ldap login* has to be deactivated and *default login* activated.
+To configure Ldap authentication:
+1. Edit the config-maps kylo-services.yaml & kylo-ui.yaml as it follows:
 
-This is done as follows:
-
-`config-map/kylo-services.yaml` shoud be changed to from:
+`config-map/kylo-services.yaml` shoud be:
+#### Production
 ```
-#Default profile
-#spring.profiles.include=native,nifi-v1.2,auth-file,auth-kylo,search-esr,jms-activemq
-spring.profiles.include=native,nifi-v1.2,auth-ldap,auth-kylo,search-esr,jms-activemq
+    security.auth.ldap.server.uri=ldap://idm.daf.gov.it:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.authDn=uid=admin,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxxx
 ```
-to
-```#Default profile
-spring.profiles.include=native,nifi-v1.2,auth-file,auth-kylo,search-esr,jms-activemq
-#spring.profiles.include=native,nifi-v1.2,auth-ldap,auth-kylo,search-esr,jms-activemq
+#### Test
+```   
+    security.auth.ldap.server.uri=ldap://idm.teamdigitale.test:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.authDn=uid=application,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxxx
 ```
 
 equivalent should be done in `config-map/kylo-ui.yaml`
+#### Production
+```
+    security.auth.ldap.server.uri=ldap://idm.daf.gov.it:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.authDn=uid=admin,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxxxx
+```
+#### Test
 
 ```
-#Default profile
-#spring.profiles.active=native,auth-kylo,auth-file
-spring.profiles.active=native,auth-kylo,auth-ldap
+    security.auth.ldap.server.uri=ldap://idm.teamdigitale.test:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.authDn=uid=application,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxxxx
 ```
-changing it to
-
-```
-#Default profile
-spring.profiles.active=native,auth-kylo,auth-file
-#spring.profiles.active=native,auth-kylo,auth-ldap
-```
-
 After these two changes redeploy as follows:
 ```
 kubectl delete -f config-map/kylo-services.yaml
@@ -150,6 +152,11 @@ kubectl delete -f config-map/kylo-ui.yaml
 kubectl apply -f config-map/kylo-services.yaml
 kubectl apply -f config-map/kylo-ui.yaml
 ```
+
+2. Go to idm.teamdigitale.test and create an user such as *dladmin* with a password *password*
+
+
+After these you are able to login into kylo ui!
 
 As pointed out above, once this is done *ldap login* will be substituted by *default login* , this will allow to log in with default user `dladmin/thinkbig`. This has to be done to create users with the same name that those exist in ldap in order to grant them permissions (same functionality but for groups [is currently being fixed by R&D](https://kylo-io.atlassian.net/browse/KYLO-496)) . Once user/s (or group/s) is/are created change back `config-map/kylo-services.yaml` and `config-map/kylo-ui.yaml` and redeploy again. Ldap is now good to go.
 

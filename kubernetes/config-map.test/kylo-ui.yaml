@@ -83,7 +83,7 @@ data:
 
     security.auth.file.users=file:///opt/kylo/kylo-ui/conf/users.properties
     security.auth.file.groups=file:///opt/kylo/kylo-ui/conf/groups.properties
-    #security.auth.file.password.hash.enabled=false
+      #security.auth.file.password.hash.enabled=false
     #security.auth.file.password.hash.algorithm=MD5
     #security.auth.file.password.hash.encoding=base64
 
@@ -95,8 +95,8 @@ data:
 
     ## auth-ldap: If this profile is active then these properties should uncommented and updated appropriately
 
-    security.auth.ldap.server.uri=ldap://idm.daf.gov.it:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
-    security.auth.ldap.server.authDn=uid=admin,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.uri=ldap://idm.teamdigitale.test:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.authDn=uid=application,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
     security.auth.ldap.server.password=xxxxxx
     ### user DN patterns are separated by '|'
     security.auth.ldap.authenticator.userDnPatterns=uid={0}
@@ -108,7 +108,7 @@ data:
     ## auth-ad: If this profile is active then these properties should uncommented and updated appropriately
 
 
-    #security.auth.ad.server.uri=ldap://idm.daf.gov.it
+    #security.auth.ad.server.uri=ldap://idm.teamdigitale.test
     #security.auth.ad.server.domain=cn=users,cn=accounts,dc=daf,dc=gov,dc=it
     ## These remaining properties are optional
     #security.auth.ad.user.enableGroups=true

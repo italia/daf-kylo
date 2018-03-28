@@ -145,9 +145,9 @@ data:
 
     ## auth-ldap: If this profile is active then these properties should uncommented and updated appropriately
 
-    security.auth.ldap.server.uri=ldap://idm.daf.gov.it:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
-    security.auth.ldap.server.authDn=uid=admin,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
-    security.auth.ldap.server.password=xxxxx
+    security.auth.ldap.server.uri=ldap://idm.teamdigitale.test:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.authDn=uid=application,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxx
     ### user DN patterns are separated by '|'
     security.auth.ldap.authenticator.userDnPatterns=uid={0}
     security.auth.ldap.user.enableGroups=false
@@ -156,7 +156,7 @@ data:
 
     ## auth-ad: If this profile is active then these properties should uncommented and updated appropriately
 
-    #security.auth.ad.server.uri=ldap://idm.daf.gov.it
+    #security.auth.ad.server.uri=ldap://idm.teamdigitale.test
     #security.auth.ad.server.domain=cn=users,cn=accounts,dc=daf,dc=gov,dc=it
     #security.auth.ad.server.searchFilter=(&(objectClass=user)(sAMAccountName={1}))
     #security.auth.ad.user.enableGroups=true
