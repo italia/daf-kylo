@@ -138,4 +138,6 @@ spec:
           path: /home
 #      imagePullSecrets:
 #      - name: regsecret
+      nodeSelector:
+        nifi: "true"
 status: {}

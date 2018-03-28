@@ -93,4 +93,6 @@ spec:
      #     secretName: daf-root-ca
       imagePullSecrets:
       - name: regsecret
+      nodeSelector:
+        nifi: "true"
 status: {}

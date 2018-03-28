@@ -21,6 +21,7 @@ case $2 in
 	kubectl delete -f kubernetes/service/mysql.yaml
 	;;
   kylo-services)
+  kubectl delete -f kubernetes/config-map$ENV/kylo-services-spark.yaml
 	kubectl delete -f kubernetes/config-map$ENV/kylo-services.yaml
 	kubectl delete -f kubernetes/deployment$ENV/kylo-services.yaml
 	kubectl delete -f kubernetes/service/kylo-services.yaml

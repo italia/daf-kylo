@@ -41,4 +41,6 @@ spec:
           name: kylo-ui
       imagePullSecrets:
       - name: regsecret
+      nodeSelector:
+        nifi: "true"
 status: {}

@@ -37,4 +37,6 @@ spec:
           claimName: gluster-claim
       imagePullSecrets:
       - name: regsecret
+      nodeSelector:
+        nifi: "true"
 status: {}
