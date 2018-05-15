@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.dreamhead.moco.HttpServer;
 import com.github.dreamhead.moco.Runner;
 import it.gov.daf.nifi.processors.DafPreStandardization;
-import it.gov.daf.nifi.processors.models.IngestionFlow;
+import it.gov.daf.nifi.processors.models2.IngestionFlow;
 import org.apache.nifi.flowfile.FlowFile;
 import org.apache.nifi.processor.ProcessSession;
 import org.apache.nifi.util.TestRunner;

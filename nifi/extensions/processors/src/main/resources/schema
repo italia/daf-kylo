@@ -1,0 +1,559 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "dataschema": {
+      "$id": "/properties/dataschema",
+      "type": "object",
+      "properties": {
+        "avro": {
+          "$id": "/properties/dataschema/properties/avro",
+          "type": "object",
+          "properties": {
+            "name": {
+              "$id": "/properties/dataschema/properties/avro/properties/name",
+              "type": "string",
+              "title": "The Name Schema ",
+              "default": "",
+              "examples": [
+                "reg_sardegna_mov_turistici"
+              ]
+            },
+            "type": {
+              "$id": "/properties/dataschema/properties/avro/properties/type",
+              "type": "string",
+              "title": "The Type Schema ",
+              "default": "",
+              "examples": [
+                "record"
+              ]
+            },
+            "namespace": {
+              "$id": "/properties/dataschema/properties/avro/properties/namespace",
+              "type": "string",
+              "title": "The Namespace Schema ",
+              "default": "",
+              "examples": [
+                "daf://default_org/SOCI/reg_sardegna_mov_turistici"
+              ]
+            },
+            "aliases": {
+              "$id": "/properties/dataschema/properties/avro/properties/aliases",
+              "type": "array",
+              "items": {
+                "$id": "/properties/dataschema/properties/avro/properties/aliases/items",
+                "type": "string",
+                "title": "The 0th Schema ",
+                "default": "",
+                "examples": [
+                  "reg_sardegna_mov_turistici"
+                ]
+              }
+            },
+            "fields": {
+              "$id": "/properties/dataschema/properties/avro/properties/fields",
+              "type": "array",
+              "items": {
+                "$id": "/properties/dataschema/properties/avro/properties/fields/items",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "$id": "/properties/dataschema/properties/avro/properties/fields/items/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema ",
+                    "default": "",
+                    "examples": [
+                      "anno"
+                    ]
+                  },
+                  "type": {
+                    "$id": "/properties/dataschema/properties/avro/properties/fields/items/properties/type",
+                    "type": "string",
+                    "title": "The Type Schema ",
+                    "default": "",
+                    "examples": [
+                      "int"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "flatSchema": {
+          "$id": "/properties/dataschema/properties/flatSchema",
+          "type": "array",
+          "items": {
+            "$id": "/properties/dataschema/properties/flatSchema/items",
+            "type": "object",
+            "properties": {
+              "name": {
+                "$id": "/properties/dataschema/properties/flatSchema/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema ",
+                "default": "",
+                "examples": [
+                  "anno"
+                ]
+              },
+              "type": {
+                "$id": "/properties/dataschema/properties/flatSchema/items/properties/type",
+                "type": "string",
+                "title": "The Type Schema ",
+                "default": "",
+                "examples": [
+                  "int"
+                ]
+              },
+              "metadata": {
+                "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata",
+                "type": "object",
+                "properties": {
+                  "semantics": {
+                    "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/semantics",
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/semantics/properties/id",
+                        "type": "string",
+                        "title": "The Id Schema ",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ]
+                      },
+                      "context": {
+                        "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/semantics/properties/context",
+                        "type": "string",
+                        "title": "The Context Schema ",
+                        "default": "",
+                        "examples": [
+                          ""
+                        ]
+                      }
+                    }
+                  },
+                  "desc": {
+                    "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/desc",
+                    "type": "string",
+                    "title": "The Desc Schema ",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ]
+                  },
+                  "tag": {
+                    "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/tag",
+                    "type": "array"
+                  },
+                  "field_type": {
+                    "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/field_type",
+                    "type": "string",
+                    "title": "The Field_type Schema ",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ]
+                  },
+                  "constr": {
+                    "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/constr",
+                    "type": "array",
+                    "items": {
+                      "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/constr/items",
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/constr/items/properties/type",
+                          "type": "string",
+                          "title": "The Type Schema ",
+                          "default": "",
+                          "examples": [
+                            ""
+                          ]
+                        },
+                        "param": {
+                          "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/constr/items/properties/param",
+                          "type": "string",
+                          "title": "The Param Schema ",
+                          "default": "",
+                          "examples": [
+                            ""
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "required": {
+                    "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/required",
+                    "type": "integer",
+                    "title": "The Required Schema ",
+                    "default": 0,
+                    "examples": [
+                      0
+                    ]
+                  },
+                  "cat": {
+                    "$id": "/properties/dataschema/properties/flatSchema/items/properties/metadata/properties/cat",
+                    "type": "string",
+                    "title": "The Cat Schema ",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "kyloSchema": {
+          "$id": "/properties/dataschema/properties/kyloSchema",
+          "type": "string",
+          "title": "The Kyloschema Schema ",
+          "default": "",
+          "examples": [
+            "{\"name\":null,\"description\":null,\"charset\":\"UTF-8\",\"properties\":{},\"fields\":[{\"sampleValues\":[\"2013\",\"2013\",\"2013\",\"2013\",\"2013\",\"2013\",\"2013\",\"2013\",\"2013\"],\"name\":\"anno\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"int\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":true,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"int\"},{\"sampleValues\":[\"CA\",\"CA\",\"CA\",\"CA\",\"CA\",\"CA\",\"CA\",\"CA\",\"CA\"],\"name\":\"provincia\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"string\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":false,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"string\"},{\"sampleValues\":[\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\",\"1\"],\"name\":\"mese\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"int\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":true,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"int\"},{\"sampleValues\":[\"ExtraAlberghiero - Complementari\",\"ExtraAlberghiero - B&B e Alloggi Privati\",\"Alberghiero\",\"Alberghiero\",\"ExtraAlberghiero - Complementari\",\"ExtraAlberghiero - B&B e Alloggi Privati\",\"ExtraAlberghiero - Complementari\",\"Alberghiero\",\"ExtraAlberghiero - B&B e Alloggi Privati\"],\"name\":\"macrotipologia\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"string\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":false,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"string\"},{\"sampleValues\":[\"Francia\",\"Francia\",\"Francia\",\"Paesi Bassi\",\"Paesi Bassi\",\"Paesi Bassi\",\"Germania\",\"Germania\",\"Germania\"],\"name\":\"descrizione\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"string\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":false,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"string\"},{\"sampleValues\":[\"62\",\"7\",\"98\",\"22\",\"6\",\"2\",\"15\",\"119\",\"1\"],\"name\":\"arrivi\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"int\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":true,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"int\"},{\"sampleValues\":[\"190\",\"13\",\"228\",\"80\",\"20\",\"15\",\"39\",\"254\",\"1\"],\"name\":\"presenze\",\"description\":\"\",\"nativeDataType\":null,\"derivedDataType\":\"int\",\"primaryKey\":false,\"nullable\":true,\"modifiable\":true,\"dataTypeDescriptor\":{\"numeric\":true,\"date\":false,\"complex\":false},\"updatedTracker\":false,\"precisionScale\":null,\"createdTracker\":false,\"tags\":null,\"descriptionWithoutNewLines\":\"\",\"dataTypeWithPrecisionAndScale\":\"int\"}],\"schemaName\":null,\"databaseName\":null,\"hiveFormat\":\"ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'\\n WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\\\\\\\' ,'quoteChar' = '\\\\\\\"') STORED AS TEXTFILE\",\"structured\":false,\"id\":\"52046de8-4411-4c81-808c-4c88fc79c68a\"}"
+          ]
+        }
+      }
+    },
+    "operational": {
+      "$id": "/properties/operational",
+      "type": "object",
+      "properties": {
+        "dataset_type": {
+          "$id": "/properties/operational/properties/dataset_type",
+          "type": "string",
+          "title": "The Dataset_type Schema ",
+          "default": "",
+          "examples": [
+            "batch"
+          ]
+        },
+        "read_type": {
+          "$id": "/properties/operational/properties/read_type",
+          "type": "string",
+          "title": "The Read_type Schema ",
+          "default": "",
+          "examples": [
+            "update"
+          ]
+        },
+        "is_std": {
+          "$id": "/properties/operational/properties/is_std",
+          "type": "boolean",
+          "title": "The Is_std Schema ",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "logical_uri": {
+          "$id": "/properties/operational/properties/logical_uri",
+          "type": "string",
+          "title": "The Logical_uri Schema ",
+          "default": "",
+          "examples": [
+            "daf://dataset/default_org/EDUC__turismo/reg_sardegna_mov_turistici"
+          ]
+        },
+        "theme": {
+          "$id": "/properties/operational/properties/theme",
+          "type": "string",
+          "title": "The Theme Schema ",
+          "default": "",
+          "examples": [
+            "EDUC"
+          ]
+        },
+        "subtheme": {
+          "$id": "/properties/operational/properties/subtheme",
+          "type": "string",
+          "title": "The Subtheme Schema ",
+          "default": "",
+          "examples": [
+            "turismo"
+          ]
+        },
+        "group_own": {
+          "$id": "/properties/operational/properties/group_own",
+          "type": "string",
+          "title": "The Group_own Schema ",
+          "default": "",
+          "examples": [
+            "d_ale"
+          ]
+        },
+        "storage_info": {
+          "$id": "/properties/operational/properties/storage_info",
+          "type": "object",
+          "properties": {
+            "hdfs": {
+              "$id": "/properties/operational/properties/storage_info/properties/hdfs",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "$id": "/properties/operational/properties/storage_info/properties/hdfs/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema ",
+                  "default": "",
+                  "examples": [
+                    "hdfs_daf"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "physical_uri": {
+          "$id": "/properties/operational/properties/physical_uri",
+          "type": "string",
+          "title": "The Physical_uri Schema ",
+          "default": "",
+          "examples": [
+            "/daf/ordinary/default_org/EDUC__turismo/default_org_o_reg_sardegna_mov_turistici"
+          ]
+        },
+        "input_src": {
+          "$id": "/properties/operational/properties/input_src",
+          "type": "object",
+          "properties": {
+            "sftp": {
+              "$id": "/properties/operational/properties/input_src/properties/sftp",
+              "type": "array",
+              "items": {
+                "$id": "/properties/operational/properties/input_src/properties/sftp/items",
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "$id": "/properties/operational/properties/input_src/properties/sftp/items/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema ",
+                    "default": "",
+                    "examples": [
+                      "sftp_daf"
+                    ]
+                  },
+                  "param": {
+                    "$id": "/properties/operational/properties/input_src/properties/sftp/items/properties/param",
+                    "type": "string",
+                    "title": "The Param Schema ",
+                    "default": "",
+                    "examples": [
+                      "format=csv, sep=undefined"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ingestion_pipeline": {
+          "$id": "/properties/operational/properties/ingestion_pipeline",
+          "type": "array",
+          "items": {
+            "$id": "/properties/operational/properties/ingestion_pipeline/items",
+            "type": "string",
+            "title": "The 0th Schema ",
+            "default": "",
+            "examples": [
+              "text to utf-8",
+              "empty values to null",
+              "date to ISO8601",
+              "url to standard",
+              "vocabulary validation",
+              "enrich address",
+              "add row id",
+              "add ingestion date",
+              "add update date"
+            ]
+          }
+        }
+      }
+    },
+    "dcatapit": {
+      "$id": "/properties/dcatapit",
+      "type": "object",
+      "properties": {
+        "name": {
+          "$id": "/properties/dcatapit/properties/name",
+          "type": "string",
+          "title": "The Name Schema ",
+          "default": "",
+          "examples": [
+            "reg_sardegna_mov_turistici"
+          ]
+        },
+        "notes": {
+          "$id": "/properties/dcatapit/properties/notes",
+          "type": "string",
+          "title": "The Notes Schema ",
+          "default": "",
+          "examples": [
+            "reg_sardegna_mov_turistici"
+          ]
+        },
+        "relationships_as_object": {
+          "$id": "/properties/dcatapit/properties/relationships_as_object",
+          "type": "array"
+        },
+        "holder_identifier": {
+          "$id": "/properties/dcatapit/properties/holder_identifier",
+          "type": "string",
+          "title": "The Holder_identifier Schema ",
+          "default": "",
+          "examples": [
+            "default_org"
+          ]
+        },
+        "identifier": {
+          "$id": "/properties/dcatapit/properties/identifier",
+          "type": "string",
+          "title": "The Identifier Schema ",
+          "default": "",
+          "examples": [
+            "reg_sardegna_mov_turistici"
+          ]
+        },
+        "tags": {
+          "$id": "/properties/dcatapit/properties/tags",
+          "type": "array",
+          "items": {
+            "$id": "/properties/dcatapit/properties/tags/items",
+            "type": "object",
+            "properties": {
+              "name": {
+                "$id": "/properties/dcatapit/properties/tags/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema ",
+                "default": "",
+                "examples": [
+                  "SOCI"
+                ]
+              },
+              "state": {
+                "$id": "/properties/dcatapit/properties/tags/items/properties/state",
+                "type": "string",
+                "title": "The State Schema ",
+                "default": "",
+                "examples": [
+                  "active"
+                ]
+              },
+              "display_name": {
+                "$id": "/properties/dcatapit/properties/tags/items/properties/display_name",
+                "type": "string",
+                "title": "The Display_name Schema ",
+                "default": "",
+                "examples": [
+                  "SOCI"
+                ]
+              },
+              "id": {
+                "$id": "/properties/dcatapit/properties/tags/items/properties/id",
+                "type": "string",
+                "title": "The Id Schema ",
+                "default": "",
+                "examples": [
+                  "f5feb374-3e24-417a-969e-17f00d7e6458"
+                ]
+              }
+            }
+          }
+        },
+        "groups": {
+          "$id": "/properties/dcatapit/properties/groups",
+          "type": "array"
+        },
+        "modified": {
+          "$id": "/properties/dcatapit/properties/modified",
+          "type": "string",
+          "title": "The Modified Schema ",
+          "default": "",
+          "examples": [
+            "2017-07-23"
+          ]
+        },
+        "alternate_identifier": {
+          "$id": "/properties/dcatapit/properties/alternate_identifier",
+          "type": "string",
+          "title": "The Alternate_identifier Schema ",
+          "default": "",
+          "examples": [
+            "reg_sardegna_mov_turistici"
+          ]
+        },
+        "relationships_as_subject": {
+          "$id": "/properties/dcatapit/properties/relationships_as_subject",
+          "type": "array"
+        },
+        "holder_name": {
+          "$id": "/properties/dcatapit/properties/holder_name",
+          "type": "string",
+          "title": "The Holder_name Schema ",
+          "default": "",
+          "examples": [
+            "default_org"
+          ]
+        },
+        "publisher_identifier": {
+          "$id": "/properties/dcatapit/properties/publisher_identifier",
+          "type": "string",
+          "title": "The Publisher_identifier Schema ",
+          "default": "",
+          "examples": [
+            "default_org"
+          ]
+        },
+        "resources": {
+          "$id": "/properties/dcatapit/properties/resources",
+          "type": "array"
+        },
+        "frequency": {
+          "$id": "/properties/dcatapit/properties/frequency",
+          "type": "string",
+          "title": "The Frequency Schema ",
+          "default": "",
+          "examples": [
+            "unknown"
+          ]
+        },
+        "title": {
+          "$id": "/properties/dcatapit/properties/title",
+          "type": "string",
+          "title": "The Title Schema ",
+          "default": "",
+          "examples": [
+            "reg_sardegna_mov_turistici"
+          ]
+        },
+        "owner_org": {
+          "$id": "/properties/dcatapit/properties/owner_org",
+          "type": "string",
+          "title": "The Owner_org Schema ",
+          "default": "",
+          "examples": [
+            "default_org"
+          ]
+        },
+        "theme": {
+          "$id": "/properties/dcatapit/properties/theme",
+          "type": "string",
+          "title": "The Theme Schema ",
+          "default": "",
+          "examples": [
+            "SOCI"
+          ]
+        },
+        "publisher_name": {
+          "$id": "/properties/dcatapit/properties/publisher_name",
+          "type": "string",
+          "title": "The Publisher_name Schema ",
+          "default": "",
+          "examples": [
+            "default_org"
+          ]
+        }
+      }
+    }
+  }
+}

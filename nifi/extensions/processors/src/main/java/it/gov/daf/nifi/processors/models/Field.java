@@ -15,72 +15,72 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "id",
-    "context"
+    "name",
+    "type"
 })
-public class Semantics {
+public class Field {
 
     /**
-     * The Id Schema 
+     * The Name Schema 
      * <p>
      * 
      * 
      */
-    @JsonProperty("id")
-    private String id = "";
+    @JsonProperty("name")
+    private String name = "";
     /**
-     * The Context Schema 
+     * The Type Schema 
      * <p>
      * 
      * 
      */
-    @JsonProperty("context")
-    private String context = "";
+    @JsonProperty("type")
+    private String type = "";
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
-     * The Id Schema 
+     * The Name Schema 
      * <p>
      * 
      * 
      */
-    @JsonProperty("id")
-    public String getId() {
-        return id;
+    @JsonProperty("name")
+    public String getName() {
+        return name;
     }
 
     /**
-     * The Id Schema 
+     * The Name Schema 
      * <p>
      * 
      * 
      */
-    @JsonProperty("id")
-    public void setId(String id) {
-        this.id = id;
+    @JsonProperty("name")
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
-     * The Context Schema 
+     * The Type Schema 
      * <p>
      * 
      * 
      */
-    @JsonProperty("context")
-    public String getContext() {
-        return context;
+    @JsonProperty("type")
+    public String getType() {
+        return type;
     }
 
     /**
-     * The Context Schema 
+     * The Type Schema 
      * <p>
      * 
      * 
      */
-    @JsonProperty("context")
-    public void setContext(String context) {
-        this.context = context;
+    @JsonProperty("type")
+    public void setType(String type) {
+        this.type = type;
     }
 
     @JsonAnyGetter
@@ -95,12 +95,12 @@ public class Semantics {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("id", id).append("context", context).append("additionalProperties", additionalProperties).toString();
+        return new ToStringBuilder(this).append("name", name).append("type", type).append("additionalProperties", additionalProperties).toString();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(context).append(id).append(additionalProperties).toHashCode();
+        return new HashCodeBuilder().append(name).append(additionalProperties).append(type).toHashCode();
     }
 
     @Override
@@ -108,11 +108,11 @@ public class Semantics {
         if (other == this) {
             return true;
         }
-        if ((other instanceof Semantics) == false) {
+        if ((other instanceof Field) == false) {
             return false;
         }
-        Semantics rhs = ((Semantics) other);
-        return new EqualsBuilder().append(context, rhs.context).append(id, rhs.id).append(additionalProperties, rhs.additionalProperties).isEquals();
+        Field rhs = ((Field) other);
+        return new EqualsBuilder().append(name, rhs.name).append(additionalProperties, rhs.additionalProperties).append(type, rhs.type).isEquals();
     }
 
 }

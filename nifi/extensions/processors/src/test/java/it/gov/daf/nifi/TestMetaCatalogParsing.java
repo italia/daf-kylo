@@ -3,7 +3,7 @@ package it.gov.daf.nifi;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import it.gov.daf.nifi.processors.DafPreStandardization;
-import it.gov.daf.nifi.processors.models.FlatSchema;
+import it.gov.daf.nifi.processors.models2.FlatSchema;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

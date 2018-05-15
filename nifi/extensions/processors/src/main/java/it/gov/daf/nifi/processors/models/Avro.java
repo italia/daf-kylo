@@ -1,7 +1,9 @@
 
 package it.gov.daf.nifi.processors.models;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
@@ -17,9 +19,11 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 @JsonPropertyOrder({
     "name",
     "type",
-    "metadata"
+    "namespace",
+    "aliases",
+    "fields"
 })
-public class FlatSchema {
+public class Avro {
 
     /**
      * The Name Schema 
@@ -37,8 +41,18 @@ public class FlatSchema {
      */
     @JsonProperty("type")
     private String type = "";
-    @JsonProperty("metadata")
-    private Metadata metadata;
+    /**
+     * The Namespace Schema 
+     * <p>
+     * 
+     * 
+     */
+    @JsonProperty("namespace")
+    private String namespace = "";
+    @JsonProperty("aliases")
+    private List<String> aliases = new ArrayList<String>();
+    @JsonProperty("fields")
+    private List<Field> fields = new ArrayList<Field>();
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -86,14 +100,46 @@ public class FlatSchema {
         this.type = type;
     }
 
-    @JsonProperty("metadata")
-    public Metadata getMetadata() {
-        return metadata;
+    /**
+     * The Namespace Schema 
+     * <p>
+     * 
+     * 
+     */
+    @JsonProperty("namespace")
+    public String getNamespace() {
+        return namespace;
     }
 
-    @JsonProperty("metadata")
-    public void setMetadata(Metadata metadata) {
-        this.metadata = metadata;
+    /**
+     * The Namespace Schema 
+     * <p>
+     * 
+     * 
+     */
+    @JsonProperty("namespace")
+    public void setNamespace(String namespace) {
+        this.namespace = namespace;
+    }
+
+    @JsonProperty("aliases")
+    public List<String> getAliases() {
+        return aliases;
+    }
+
+    @JsonProperty("aliases")
+    public void setAliases(List<String> aliases) {
+        this.aliases = aliases;
+    }
+
+    @JsonProperty("fields")
+    public List<Field> getFields() {
+        return fields;
+    }
+
+    @JsonProperty("fields")
+    public void setFields(List<Field> fields) {
+        this.fields = fields;
     }
 
     @JsonAnyGetter
@@ -108,12 +154,12 @@ public class FlatSchema {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("name", name).append("type", type).append("metadata", metadata).append("additionalProperties", additionalProperties).toString();
+        return new ToStringBuilder(this).append("name", name).append("type", type).append("namespace", namespace).append("aliases", aliases).append("fields", fields).append("additionalProperties", additionalProperties).toString();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(name).append(metadata).append(additionalProperties).append(type).toHashCode();
+        return new HashCodeBuilder().append(aliases).append(name).append(namespace).append(additionalProperties).append(type).append(fields).toHashCode();
     }
 
     @Override
@@ -121,11 +167,11 @@ public class FlatSchema {
         if (other == this) {
             return true;
         }
-        if ((other instanceof FlatSchema) == false) {
+        if ((other instanceof Avro) == false) {
             return false;
         }
-        FlatSchema rhs = ((FlatSchema) other);
-        return new EqualsBuilder().append(name, rhs.name).append(metadata, rhs.metadata).append(additionalProperties, rhs.additionalProperties).append(type, rhs.type).isEquals();
+        Avro rhs = ((Avro) other);
+        return new EqualsBuilder().append(aliases, rhs.aliases).append(name, rhs.name).append(namespace, rhs.namespace).append(additionalProperties, rhs.additionalProperties).append(type, rhs.type).append(fields, rhs.fields).isEquals();
     }
 
 }
