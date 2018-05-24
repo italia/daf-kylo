@@ -1,12 +1,13 @@
 default: all
 
-REGISTRY=nexus.default.svc.cluster.local:5000
+REGISTRY=nexus.daf.teamdigitale.it
 
 
 .PHONY: activemq
 activemq:
 	docker build -t tba-activemq -f docker/activemq/Dockerfile docker/activemq
 	docker tag tba-activemq $(REGISTRY)/tba-activemq.5.15.1:1.1.0
+	docker push $(REGISTRY)/tba-activemq.5.15.1:1.1.0
 
 .PHONY: mysql
 mysql:
@@ -14,6 +15,7 @@ mysql:
 	cp -R ../kylok8s/install/install-tar/target/kylo/setup/sql/mysql/kylo/* docker/mysql/dist
 	docker build -t tba-mysql -f docker/mysql/Dockerfile docker/mysql
 	docker tag tba-mysql $(REGISTRY)/tba-mysql.10.3:1.1.0
+	docker push $(REGISTRY)/tba-mysql.10.3:1.1.0
 	rm -dr docker/mysql/dist
 
 .PHONY: kylo-services
@@ -26,6 +28,7 @@ kylo-services:
 		cp -R ../kylok8s/install/install-tar/target/kylo/lib docker/kylo-services/dist
 		docker build -t tba-kylo-services -f docker/kylo-services/Dockerfile docker/kylo-services
 		docker tag tba-kylo-services $(REGISTRY)/tba-kylo-services.8.4:1.1.0
+		docker push tba-kylo-services $(REGISTRY)/tba-kylo-services.8.4:1.1.0
 		rm -dr docker/kylo-services/dist
 
 .PHONY: kylo-ui
@@ -66,3 +69,9 @@ daf-kylo:
     git pull && \
     cd nifi/extensions && \
     mvn clean install
+
+
+clean:
+	rm -rf ../daf-kylo8s
+	rm -rf ../kylok8s
+	rm -rf docker

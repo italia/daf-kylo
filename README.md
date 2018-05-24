@@ -23,8 +23,17 @@ brew tap caskroom/cask
 brew update
 brew install kubectl rpm make git
 ```
+For Ubuntu
+```
+sudo apt install kubectl rpm make git
+```
 
 In order to be able to build most of Docker images kylo code will be required (source and compiled). To get this run:
+
+```
+make clean
+```
+to cleanup the build
 
 ```
 make daf-kylo
@@ -39,7 +48,7 @@ Once this is completed build every image:
 
 ```
 make activemq
-make elasticsearch
+# make elasticsearch # not linked anymore
 make mysql
 make kylo-services
 make kylo-ui
