@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     io.kompose.service: tba-nifi
+    nifi: "true"
   name: tba-nifi
 spec:
   replicas: 1
@@ -19,10 +20,10 @@ spec:
       - image: nexus.daf.teamdigitale.it/tba-nifi.1.4.0:1.1.1-SNAPSHOT
         name: tba-nifi
         imagePullPolicy: IfNotPresent
-        lifecycle:
-          postStart:
-            exec:
-             command: ["/bin/sh", "-c", " echo \"nameserver 10.96.0.10\n$(cat /etc/resolv.conf)\" > /etc/resolv.conf"]
+        # lifecycle:
+        #   postStart:
+        #     exec:
+        #      command: ["/bin/sh", "-c", " echo \"nameserver 10.96.0.10\n$(cat /etc/resolv.conf)\" > /etc/resolv.conf"]
         ports:
         - containerPort: 8080
         - containerPort: 8033 # To test basic templates inside nifi
@@ -138,6 +139,8 @@ spec:
           path: /home
       imagePullSecrets:
       - name: regsecret
+      # nodeSelector:
+      #   kubernetes.io/hostname: edge1.platform.daf.gov.it
       nodeSelector:
-        kubernetes.io/hostname: edge1.platform.daf.gov.it
+        nifi: "true"
 status: {}

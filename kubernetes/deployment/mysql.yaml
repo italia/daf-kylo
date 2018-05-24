@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     io.kompose.service: tba-mysql
+    nifi: "true"
   name: tba-mysql
 spec:
   replicas: 1
@@ -35,4 +36,6 @@ spec:
           claimName: gluster-claim
       imagePullSecrets:
       - name: regsecret
+      nodeSelector:
+        nifi: "true"
 status: {}

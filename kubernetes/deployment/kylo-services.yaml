@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         io.kompose.service: tba-kylo-services
+        nifi: "true"
     spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
@@ -84,10 +85,8 @@ spec:
       - name: sparkconf
         hostPath:
           path: /etc/spark2/
-
-     # - name: daf-root-ca
-     #   secret:
-     #     secretName: daf-root-ca
+      nodeSelector:
+        nifi: "true"
       imagePullSecrets:
       - name: regsecret
 status: {}

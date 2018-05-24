@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     io.kompose.service: tba-kylo-ui
+    nifi: "true"
   name: tba-kylo-ui
 spec:
   replicas: 1
@@ -38,4 +39,6 @@ spec:
           name: kylo-ui
       imagePullSecrets:
       - name: regsecret
+      nodeSelector:
+        nifi: "true"
 status: {}

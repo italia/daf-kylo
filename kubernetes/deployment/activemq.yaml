@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     io.kompose.service: tba-activemq
+    nifi: "true"
   name: tba-activemq
 spec:
   replicas: 1
@@ -11,6 +12,7 @@ spec:
     metadata:
       labels:
         io.kompose.service: tba-activemq
+        nifi: "true"
     spec:
       containers:
       - image: nexus.daf.teamdigitale.it/tba-activemq.5.15.1:1.1.0
@@ -36,4 +38,6 @@ spec:
           claimName: gluster-claim
       imagePullSecrets:
       - name: regsecret
+      nodeSelector:
+        nifi: "true"
 status: {}
