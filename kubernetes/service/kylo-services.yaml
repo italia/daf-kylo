@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    io.kompose.service: tba-kylo-services
+    app: tba-kylo-services
   name: tba-kylo-services
 spec:
   type: "NodePort"
@@ -20,6 +20,6 @@ spec:
     targetPort: 8451
     nodePort: 31493
   selector:
-    io.kompose.service: tba-kylo-services
+    app: tba-kylo-services
 status:
   loadBalancer: {}
