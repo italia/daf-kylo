@@ -86,6 +86,8 @@ for instance:
   ./cleanup.sh activemq
   ```
 
+> Note that NIFI has additional extra hosts to resolve extra-kubernetes cluster services.
+
 ### Configuration Ldap
 By default ldap configuration is on, which means that if redeploy of kylo-services or kylo-ui happens nothing will break. Bare in mind though that after first time deployment is done (first time kylo is deployed in kubernetes cluster) *ldap login* has to be deactivated and *default login* activated.
 
