@@ -232,7 +232,7 @@ data:
     # limitations under the License.
     # #L%
     ###
-    jms.activemq.broker.url=tcp://tba-activemq:61616
+    jms.activemq.broker.url=tcp://tba-activemq.default.svc.cluster.local:61616
     #jms.activemq.broker.username=admin
     #jms.activemq.broker.password=admin
     ##Redeliver policy for the Listeners when they fail (http://activemq.apache.org/redelivery-policy.html)
@@ -276,8 +276,8 @@ data:
     java.arg.1=-Dorg.apache.jasper.compiler.disablejsr199=true
 
     # JVM memory settings
-    java.arg.2=-Xms4g
-    java.arg.3=-Xmx4g
+    java.arg.2=-Xms16g
+    java.arg.3=-Xmx16g
 
     # Enable Remote Debugging
     #java.arg.debug=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000

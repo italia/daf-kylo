@@ -1,18 +1,16 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    io.kompose.service: tba-activemq
-    nifi: "true"
   name: tba-activemq
 spec:
+  selector:
+    matchLabels:
+      app: tba-activemq
   replicas: 1
-  strategy: {}
   template:
     metadata:
       labels:
-        io.kompose.service: tba-activemq
-        nifi: "true"
+        app: tba-activemq
     spec:
       containers:
       - image: nexus.daf.teamdigitale.it/tba-activemq.5.15.1:1.1.0
@@ -26,7 +24,6 @@ spec:
         - containerPort: 61613
         - containerPort: 1883
         - containerPort: 61614
-        resources: {}
         volumeMounts:
         - name: glusterfsvol
           mountPath: /opt/activemq/data
@@ -36,8 +33,5 @@ spec:
       - name: glusterfsvol
         persistentVolumeClaim:
           claimName: gluster-claim
-      imagePullSecrets:
-      - name: regsecret
       nodeSelector:
         nifi: "true"
-status: {}

@@ -1,18 +1,16 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    io.kompose.service: tba-mysql
-    nifi: "true"
   name: tba-mysql
 spec:
+  selector:
+    matchLabels:
+      app: tba-mysql
   replicas: 1
-  strategy:
-    type: Recreate
   template:
     metadata:
       labels:
-        io.kompose.service: tba-mysql
+        app: tba-mysql
     spec:
       containers:
       - env:
@@ -23,7 +21,6 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3306
-        resources: {}
         volumeMounts:
         - name: glusterfsvol
           mountPath: /var/lib/mysql
@@ -34,8 +31,5 @@ spec:
       - name: glusterfsvol
         persistentVolumeClaim:
           claimName: gluster-claim
-      imagePullSecrets:
-      - name: regsecret
       nodeSelector:
         nifi: "true"
-status: {}

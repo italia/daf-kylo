@@ -1,28 +1,25 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    io.kompose.service: tba-kylo-ui
-    nifi: "true"
   name: tba-kylo-ui
 spec:
+  selector:
+    matchLabels:
+      app: tba-kylo-ui
   replicas: 1
-  strategy:
-    type: Recreate
   template:
     metadata:
       labels:
-        io.kompose.service: tba-kylo-ui
+        app: tba-kylo-ui
     spec:
-      hostNetwork: true
-      dnsPolicy: ClusterFirstWithHostNet
+      hostNetwork: false #changed by Fabio from true
+      # dnsPolicy: ClusterFirstWithHostNet
       containers:
       - image: nexus.daf.teamdigitale.it/tba-kylo-ui.8.4:1.1.0
         name: tba-kylo-ui
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8400
-        resources: {}
         volumeMounts:
         - mountPath: /opt/kylo/kylo-ui/conf
           name: kylo-ui-config
@@ -37,8 +34,5 @@ spec:
       - name: kylo-ui-config
         configMap:
           name: kylo-ui
-      imagePullSecrets:
-      - name: regsecret
       nodeSelector:
         nifi: "true"
-status: {}

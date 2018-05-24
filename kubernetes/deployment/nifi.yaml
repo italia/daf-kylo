@@ -1,18 +1,16 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    io.kompose.service: tba-nifi
-    nifi: "true"
   name: tba-nifi
 spec:
+  selector:
+    matchLabels:
+      app: tba-nifi
   replicas: 1
-  strategy:
-    type: Recreate
   template:
     metadata:
       labels:
-        io.kompose.service: tba-nifi
+        app: tba-nifi
     spec:
       hostAliases:
       - ip: "192.168.0.23"
@@ -72,7 +70,6 @@ spec:
         ports:
         - containerPort: 8080
         - containerPort: 8033 # To test basic templates inside nifi
-        resources: {}
         volumeMounts:
         - name: glusterfsvol
           mountPath: /usr/nifi/data
@@ -182,10 +179,7 @@ spec:
       - name: home
         hostPath:
           path: /home
-      imagePullSecrets:
-      - name: regsecret
       # nodeSelector:
       #   kubernetes.io/hostname: edge1.platform.daf.gov.it
       nodeSelector:
         nifi: "true"
-status: {}

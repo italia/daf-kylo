@@ -43,7 +43,7 @@ make build-kylo
 
 This will use `Makefile` to download the code and compile it.
 
-### Build Docker images of the components
+### Build Docker images of the components and push to the private registry
 Once this is completed build every image:
 
 ```
@@ -56,6 +56,8 @@ make nifi
 ```
 This will use `Makefile` to download the basic empty images and build our custom docker images with required tagging.
 
+TO_REMOVE
+--------
 
 ### Push Docker images to local artifactory repository
 Please ensure previously configuration of docker client as well as correct tagging the image has been performed. 'How to' can be found in:
@@ -68,6 +70,9 @@ for instance:
   ```
   docker push nexus.default.svc.cluster.local:5000/tba-kylo-services.8.4.0:1.0.0
   ```
+
+TO_REMOVE
+--------
 
 ### Deploy components in kubernetes cluster
 Please ensure previously configuration of kubectl has been done. 'How to' can be found in: [TeamDigitale onboarding , 'Setup Kubernetes'](https://docs.google.com/document/d/1KqeaZ2yj7rofslqzklYTCLb3AxPnV1mzOgSXOuTHTyw/edit?ts=59faf23f&pli=1#heading=h.vvi8emze7m35)
