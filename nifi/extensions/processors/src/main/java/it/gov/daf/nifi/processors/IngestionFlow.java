@@ -1,4 +1,6 @@
-package it.gov.daf.nifi.processors.models;
+package it.gov.daf.nifi.processors;
+
+import it.gov.daf.nifi.processors.models.FlatSchema;
 
 import java.io.Serializable;
 import java.util.ArrayList;

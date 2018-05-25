@@ -24,6 +24,11 @@
       <artifactId>junit</artifactId>
     </dependency>
     <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>2.4</version>
+    </dependency>
+    <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
     </dependency>
@@ -74,6 +79,23 @@
           <source>1.8</source>
           <target>1.8</target>
         </configuration>
+      </plugin>
+        <plugin>
+          <groupId>org.jsonschema2pojo</groupId>
+          <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+          <version>0.5.1</version>
+          <configuration>
+              <sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
+              <targetPackage>it.gov.daf.nifi.processors.models</targetPackage>
+              <outputDirectory>${basedir}/src/main/java/</outputDirectory>
+          </configuration>
+          <executions>
+              <execution>
+                  <goals>
+                      <goal>generate</goal>
+                  </goals>
+              </execution>
+          </executions>
       </plugin>
     </plugins>
   </build>

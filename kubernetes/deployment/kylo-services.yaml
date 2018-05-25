@@ -1,32 +1,31 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    io.kompose.service: tba-kylo-services
   name: tba-kylo-services
 spec:
+  selector:
+    matchLabels:
+      app: tba-kylo-services
   replicas: 1
-  strategy:
-    type: Recreate
   template:
     metadata:
       labels:
-        io.kompose.service: tba-kylo-services
+        app: tba-kylo-services
     spec:
-      hostNetwork: true
-      dnsPolicy: ClusterFirstWithHostNet
+      # hostNetwork: true # changed by Fabio from true to false
+      # dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: 10.98.74.120:5000/tba-kylo-services.8.4:1.1.0
+      - image: nexus.daf.teamdigitale.it/tba-kylo-services.8.4:1.1.0
         name: tba-kylo-services
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8420
-        resources: {}
         volumeMounts:
         - mountPath: /opt/kylo/kylo-services/conf
           name: kylo-services-config
-        - mountPath: /opt/kylo/kylo-services/spark-shell
-          name: kylo-services-spark
+        # commented by Fabio and asked to Davide it looks is not used
+        # - mountPath: /opt/kylo/kylo-services/spark-shell
+        #   name: kylo-services-spark
         - name: glusterfsvol
           mountPath: /var/log/kylo-services
           subPath: tba/evergreen2/kylo-services/log
@@ -59,13 +58,12 @@ spec:
       - name: glusterfsvol
         persistentVolumeClaim:
           claimName: gluster-claim
-
       - name: kylo-services-config
         configMap:
           name: kylo-services
-      - name: kylo-services-spark
-        configMap:
-          name: kylo-services-spark
+      # - name: kylo-services-spark
+      #   configMap:
+      #     name: kylo-services-spark
       - name: hosts
         hostPath:
           path: /etc/hosts
@@ -84,10 +82,5 @@ spec:
       - name: sparkconf
         hostPath:
           path: /etc/spark2/
-
-     # - name: daf-root-ca
-     #   secret:
-     #     secretName: daf-root-ca
-      imagePullSecrets:
-      - name: regsecret
-status: {}
+      nodeSelector:
+        nifi: "true"

@@ -1,4 +1,4 @@
-package it.gov.daf.nifi.processors.models;
+package it.gov.daf.nifi.processors;
 
 import java.io.Serializable;
 
