@@ -89,7 +89,7 @@ data:
     # Spring Datasource properties for spring batch and the default data source
     # NOTE: Cloudera default password for root access to mysql is "cloudera"
     #
-    spring.datasource.url=jdbc:mysql://tba-mysql.default.svc.cluster.info:3306/kylo
+    spring.datasource.url=jdbc:mysql://tba-mysql:3306/kylo
     spring.datasource.username=root
     spring.datasource.password=hadoop
     spring.datasource.maxActive=30
@@ -2080,4 +2080,3 @@ data:
   version.txt: |-
     version=0.8.4
     build.date=2017-10-18 17:13
-

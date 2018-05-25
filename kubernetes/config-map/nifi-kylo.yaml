@@ -27,8 +27,8 @@ data:
     spring.profiles.active=jms-activemq
 
     ###
-    jms.activemq.broker.url=tcp://tba-activemq.default.svc.cluster.info:61616
-    spring.activemq.broker-url=tcp://tba-activemq.default.svc.cluster.info:61616
+    jms.activemq.broker.url=tcp://tba-activemq:61616
+    spring.activemq.broker-url=tcp://tba-activemq:61616
 
 
     ## Back up location to write the Feed stats data if NiFi goes down
