@@ -124,7 +124,7 @@ data:
 
     zuul.prefix=/proxy
     zuul.routes.api.path=/**
-    zuul.routes.api.url=http://tba-kylo-services.default.svc.cluster.info:8420/api
+    zuul.routes.api.url=http://tba-kylo-services:8420/api
     ribbon.eureka.enabled=false
     zuul.debug.request=false
     ###Up the timeout so the UI doenst come back with Read Socket Timeout for longer running transactions
@@ -146,7 +146,7 @@ data:
     #security.rememberme.useSecureCookie=
 
     loginRestClientConfig.https=${server.ssl.enabled}
-    loginRestClientConfig.host=tba-kylo-ui.default.svc.cluster.info
+    loginRestClientConfig.host=tba-kylo-ui
     loginRestClientConfig.port=${server.port}
     loginRestClientConfig.path=${zuul.prefix}
     loginRestClientConfig.keystorePath=${server.ssl.key-store}
