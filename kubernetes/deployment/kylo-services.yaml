@@ -35,7 +35,7 @@ spec:
           - "slave4"
       - ip: "192.168.0.26"
         hostnames:
-          - "slave4.platform.daf.gov.it"
+          - "slave5.platform.daf.gov.it"
           - "slave4"
       - ip: "192.168.0.20"
         hostnames:
@@ -49,6 +49,14 @@ spec:
         hostnames:
           - "edge3.platform.daf.gov.it"
           - "edge3"
+      - ip: "192.168.0.53"
+        hostnames:
+          - "edge4.platform.daf.gov.it"
+          - "edge4"
+      - ip: "192.168.0.54"
+        hostnames:
+          - "edge5.platform.daf.gov.it"
+          - "edge5"
       - ip: "192.168.0.29"
         hostnames:
           - "idm.daf.gov.it"
@@ -86,17 +94,17 @@ spec:
         - name: alternatives
           mountPath: /etc/alternatives/
           readOnly: true
-        - name: hosts
-          mountPath: /etc/extra_hosts
-          readOnly: true
+        # - name: hosts
+        #   mountPath: /etc/extra_hosts
+        #   readOnly: true
         - name: krb5conf
           mountPath: /etc/krb5.conf
           readOnly: true
         - name: hadoop
           mountPath: /etc/hadoop
           readOnly: true
-        - name: daf-root-ca
-         mountPath: /etc/ssl/certs
+        # - name: daf-root-ca
+        #   mountPath: /etc/ssl/certs
       restartPolicy: Always
       volumes:
       - name: glusterfsvol
