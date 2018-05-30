@@ -33,10 +33,10 @@ spec:
         hostnames:
           - "slave4.platform.daf.gov.it"
           - "slave4"
-      - ip: "192.168.0.26"
+      - ip: "192.168.0.55"
         hostnames:
           - "slave5.platform.daf.gov.it"
-          - "slave4"
+          - "slave5"
       - ip: "192.168.0.20"
         hostnames:
           - "edge1.platform.daf.gov.it"
