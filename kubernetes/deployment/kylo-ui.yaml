@@ -12,6 +12,59 @@ spec:
       labels:
         app: tba-kylo-ui
     spec:
+      hostAliases:
+      - ip: "192.168.0.23"
+        hostnames:
+          - "master.platform.daf.gov.it"
+          - "master"
+      - ip: "192.168.0.22"
+        hostnames:
+          - "slave1.platform.daf.gov.it"
+          - "slave1"
+      - ip: "192.168.0.24"
+        hostnames:
+          - "slave2.platform.daf.gov.it"
+          - "slave2"
+      - ip: "192.168.0.36"
+        hostnames:
+          - "slave3.platform.daf.gov.it"
+          - "slave3"
+      - ip: "192.168.0.26"
+        hostnames:
+          - "slave4.platform.daf.gov.it"
+          - "slave4"
+      - ip: "192.168.0.55"
+        hostnames:
+          - "slave5.platform.daf.gov.it"
+          - "slave5"
+      - ip: "192.168.0.20"
+        hostnames:
+          - "edge1.platform.daf.gov.it"
+          - "edge1"
+      - ip: "192.168.0.21"
+        hostnames:
+          - "edge2.platform.daf.gov.it"
+          - "edge2"
+      - ip: "192.168.0.27"
+        hostnames:
+          - "edge3.platform.daf.gov.it"
+          - "edge3"
+      - ip: "192.168.0.53"
+        hostnames:
+          - "edge4.platform.daf.gov.it"
+          - "edge4"
+      - ip: "192.168.0.54"
+        hostnames:
+          - "edge5.platform.daf.gov.it"
+          - "edge5"
+      - ip: "192.168.0.29"
+        hostnames:
+          - "idm.daf.gov.it"
+          - "idm"
+      - ip: "192.168.0.43"
+        hostnames:
+          - "master.elasticsearch.daf.gov.it"
+          - "master"
       hostNetwork: false #changed by Fabio from true
       # dnsPolicy: ClusterFirstWithHostNet
       containers:
