@@ -210,7 +210,7 @@ data:
 
     hive.userImpersonation.enabled=false
     hive.datasource.driverClassName=org.apache.hive.jdbc.HiveDriver
-    hive.datasource.url=jdbc:hive2://master.platform.daf.gov.it:10000/default;principal=hive/master.platform.daf.gov.it@DAF.GOV.IT
+    hive.datasource.url=jdbc:hive2://master.novalocal:10000/default;principal=hive/master.novalocal@DAF.GOV.IT
     hive.datasource.username=daf
     hive.datasource.password=xxxxxx
     hive.datasource.validationQuery=show tables
@@ -269,7 +269,7 @@ data:
     nifi.service.kylo_mysql.database_user=root
     nifi.service.kylo_mysql.password=hadoop
 
-    nifi.service.hive_thrift_service.database_connection_url=jdbc:hive2://master.platform.daf.gov.it:10000/default;principal=hive/master.platform.daf.gov.it@DAF.GOV.IT
+    nifi.service.hive_thrift_service.database_connection_url=jdbc:hive2://master.novalocal:10000/default;principal=hive/master.novalocal@DAF.GOV.IT
     nifi.service.hive_thrift_service.kerberos_principal=nifi
     nifi.service.hive_thrift_service.kerberos_keytab=/usr/nifi/daf.keytab
     nifi.service.hive_thrift_service.hadoop_configuration_resources=/etc/hadoop/conf/core-site.xml,/etc/hadoop/conf/hdfs-site.xml
@@ -675,7 +675,7 @@ data:
     # #L%
     ###
     # Elasticsearch (rest client) configuration
-    search.rest.host=master.elasticsearch.daf.gov.it
+    search.rest.host=elk-master-1.teamdigitale.test
     search.rest.port=9200
 
 
@@ -703,7 +703,7 @@ data:
     # #L%
     ###
     # Elasticsearch configuration
-    search.host=master.elasticsearch.daf.gov.it
+    search.host=elk-master-1.teamdigitale.test
     search.clusterName=demo-cluster
     search.restPort=9200
     search.transportPort=9300
