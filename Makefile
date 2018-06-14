@@ -62,7 +62,7 @@ build-kylo:
 daf-kylo:
 	git clone https://github.com/italia/daf-kylo.git ../daf-kylo8s | true
 	cd ../daf-kylo8s && \
-    git checkout develop && \
+    git checkout master && \
     git pull && \
     cd nifi/extensions && \
     mvn clean install
