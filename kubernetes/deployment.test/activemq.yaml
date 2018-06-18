@@ -11,9 +11,10 @@ spec:
     metadata:
       labels:
         io.kompose.service: tba-activemq
+        nifi: "true"
     spec:
       containers:
-      - image: nexus.teamdigitale.test/tba-activemq.5.15.1:1.0.2-SNAPSHOT
+      - image: nexus.teamdigitale.test/tba-activemq.5.15.1:1.1.0
         name: tba-activemq
         imagePullPolicy: IfNotPresent
         ports:
@@ -36,4 +37,6 @@ spec:
           claimName: gluster-claim
       imagePullSecrets:
       - name: regsecret
+      nodeSelector:
+        nifi: "true"
 status: {}

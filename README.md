@@ -23,41 +23,43 @@ brew tap caskroom/cask
 brew update
 brew install kubectl rpm make git
 ```
-For Ubuntu
-```
-sudo apt install kubectl rpm make git
-```
 
 In order to be able to build most of Docker images kylo code will be required (source and compiled). To get this run:
-
+#### Production
 ```
-make clean
-```
-to cleanup the build
-
-```
-make daf-kylo
-make build-kylo
+make -f Makefile daf-kylo
+make -f Makefile build-kylo
 ```
 
+#### Test
+```
+make -f Makefile.test daf-kylo
+make -f Makefile.test build-kylo
+```
 
 This will use `Makefile` to download the code and compile it.
 
-### Build Docker images of the components and push to the private registry
+### Build Docker images of the components
 Once this is completed build every image:
-
+#### Production
 ```
 make activemq
-# make elasticsearch # not linked anymore
 make mysql
 make kylo-services
 make kylo-ui
 make nifi
 ```
+#### Test
+```
+make -f Makefile.test activemq
+make -f Makefile.test mysql
+make -f Makefile.test kylo-services
+make -f Makefile.test kylo-ui
+make -f Makefile.test nifi
+```
+
 This will use `Makefile` to download the basic empty images and build our custom docker images with required tagging.
 
-TO_REMOVE
---------
 
 ### Push Docker images to local artifactory repository
 Please ensure previously configuration of docker client as well as correct tagging the image has been performed. 'How to' can be found in:
@@ -67,64 +69,81 @@ Please ensure previously configuration of docker client as well as correct taggi
 After config and proper tagging has been done, push can be performed by: `docker push [repositoryurl:repositoryport/artifact:version]`
 
 for instance:
-  ```
-  docker push nexus.default.svc.cluster.local:5000/tba-kylo-services.8.4.0:1.0.0
-  ```
 
-TO_REMOVE
---------
-
+#### Production
+  ```
+    ./nexus_push.sh prod
+  ```
+#### Test
+  ```
+    ./nexus_push.sh test
+  ```
+  
 ### Deploy components in kubernetes cluster
 Please ensure previously configuration of kubectl has been done. 'How to' can be found in: [TeamDigitale onboarding , 'Setup Kubernetes'](https://docs.google.com/document/d/1KqeaZ2yj7rofslqzklYTCLb3AxPnV1mzOgSXOuTHTyw/edit?ts=59faf23f&pli=1#heading=h.vvi8emze7m35)
 
 After config is done, **deploy** into kubernetes cluster can be performed by: `./playbook.sh [component]`
+#### Production
 
 for instance:
   ```
-  ./playbook.sh activemq
+  ./playbook.sh prod activemq
   ```
 
-or **delete** by: `./cleanup.sh [component]`
+or **delete** by: `./cleanup.sh [environment] [component]`
 
 for instance:
   ```
-  ./cleanup.sh activemq
+  ./cleanup.sh prod activemq
+  ```
+#### Test
+
+for instance:
+  ```
+  ./playbook.sh test activemq
   ```
 
-> Note that NIFI has additional extra hosts to resolve extra-kubernetes cluster services.
+or **delete** by: `./cleanup.sh [environment] [component]`
+
+for instance:
+  ```
+  ./cleanup.sh test activemq
+  ```
+### Mysql Configuration
+By default the kylo database is not created in mysql container, so you have to create it.
 
 ### Configuration Ldap
-By default ldap configuration is on, which means that if redeploy of kylo-services or kylo-ui happens nothing will break. Bare in mind though that after first time deployment is done (first time kylo is deployed in kubernetes cluster) *ldap login* has to be deactivated and *default login* activated.
+To configure Ldap authentication:
+1. Edit the config-maps kylo-services.yaml & kylo-ui.yaml as it follows:
 
-This is done as follows:
-
-`config-map/kylo-services.yaml` shoud be changed to from:
+`config-map/kylo-services.yaml` shoud be:
+#### Production
 ```
-#Default profile
-#spring.profiles.include=native,nifi-v1.2,auth-file,auth-kylo,search-esr,jms-activemq
-spring.profiles.include=native,nifi-v1.2,auth-ldap,auth-kylo,search-esr,jms-activemq
+    security.auth.ldap.server.uri=ldap://idm.daf.gov.it:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.authDn=uid=admin,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxxx
 ```
-to
-```#Default profile
-spring.profiles.include=native,nifi-v1.2,auth-file,auth-kylo,search-esr,jms-activemq
-#spring.profiles.include=native,nifi-v1.2,auth-ldap,auth-kylo,search-esr,jms-activemq
+#### Test
+```   
+    security.auth.ldap.server.uri=ldap://idm.teamdigitale.test:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.authDn=uid=application,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxxx
 ```
 
 equivalent should be done in `config-map/kylo-ui.yaml`
+#### Production
+```
+    security.auth.ldap.server.uri=ldap://idm.daf.gov.it:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.authDn=uid=admin,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxxxx
+```
+#### Test
 
 ```
-#Default profile
-#spring.profiles.active=native,auth-kylo,auth-file
-spring.profiles.active=native,auth-kylo,auth-ldap
+    security.auth.ldap.server.uri=ldap://idm.teamdigitale.test:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.authDn=uid=application,cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+    security.auth.ldap.server.password=xxxxxx
 ```
-changing it to
-
-```
-#Default profile
-spring.profiles.active=native,auth-kylo,auth-file
-#spring.profiles.active=native,auth-kylo,auth-ldap
-```
-
 After these two changes redeploy as follows:
 ```
 kubectl delete -f config-map/kylo-services.yaml
@@ -133,6 +152,11 @@ kubectl delete -f config-map/kylo-ui.yaml
 kubectl apply -f config-map/kylo-services.yaml
 kubectl apply -f config-map/kylo-ui.yaml
 ```
+
+2. Go to idm.teamdigitale.test and create an user such as *dladmin* with a password *password*
+
+
+After these you are able to login into kylo ui!
 
 As pointed out above, once this is done *ldap login* will be substituted by *default login* , this will allow to log in with default user `dladmin/thinkbig`. This has to be done to create users with the same name that those exist in ldap in order to grant them permissions (same functionality but for groups [is currently being fixed by R&D](https://kylo-io.atlassian.net/browse/KYLO-496)) . Once user/s (or group/s) is/are created change back `config-map/kylo-services.yaml` and `config-map/kylo-ui.yaml` and redeploy again. Ldap is now good to go.
 
