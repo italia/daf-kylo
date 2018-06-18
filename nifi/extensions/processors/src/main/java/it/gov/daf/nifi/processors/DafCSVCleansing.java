@@ -29,7 +29,6 @@ import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -44,41 +43,41 @@ public class DafCSVCleansing extends AbstractProcessor {
 
     // Relationships
     public static final Relationship REL_SUCCESS = new Relationship.Builder()
-        .name("success")
-        .description("Successful result.")
-        .build();
+            .name("success")
+            .description("Successful result.")
+            .build();
 
     public static final Relationship REL_FAILURE = new Relationship.Builder()
-        .name("failure")
-        .description("Error in the CSV file")
-        .build();
+            .name("failure")
+            .description("Error in the CSV file")
+            .build();
 
     public static final PropertyDescriptor SEPARATOR_CHAR = new PropertyDescriptor.Builder()
-        .name("Separator Char")
-        .description("The CSV Separator Char")
-        .required(true)
-        .defaultValue(",")
-        .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
-        .expressionLanguageSupported(true)
-        .build();
+            .name("Separator Char")
+            .description("The CSV Separator Char")
+            .required(true)
+            .defaultValue(",")
+            .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
+            .expressionLanguageSupported(true)
+            .build();
 
     public static final PropertyDescriptor QUOTE_CHAR = new PropertyDescriptor.Builder()
-        .name("Quote Char")
-        .description("The CSV Quote Char")
-        .required(true)
-        .defaultValue("\"")
-        .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
-        .expressionLanguageSupported(true)
-        .build();
+            .name("Quote Char")
+            .description("The CSV Quote Char")
+            .required(true)
+            .defaultValue("\"")
+            .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
+            .expressionLanguageSupported(true)
+            .build();
 
     public static final PropertyDescriptor ESCAPE_CHAR = new PropertyDescriptor.Builder()
-        .name("Escape Char")
-        .description("The CSV Escape Char")
-        .required(true)
-        .defaultValue("\\")
-        .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
-        .expressionLanguageSupported(true)
-        .build();
+            .name("Escape Char")
+            .description("The CSV Escape Char")
+            .required(true)
+            .defaultValue("\\")
+            .addValidator(StandardValidators.NON_EMPTY_VALIDATOR)
+            .expressionLanguageSupported(true)
+            .build();
 
     private final Set<Relationship> relationships;
 
@@ -150,118 +149,20 @@ public class DafCSVCleansing extends AbstractProcessor {
 
         try {
             flowFile = session.write(flowFile, (in, out) -> {
-//                CSVReader reader = new CSVReaderBuilder(new BufferedReader(new InputStreamReader(in))).withCSVParser(parser).build();
-//                CSVWriter writer = new CSVWriter(new BufferedWriter(new OutputStreamWriter(out)), separatorChar, quoteChar, escapeChar, CSVWriter.DEFAULT_LINE_END);
-//                final int[] count = {0};
-//                reader.forEach(row -> {
-//                    String[] cleanLine = new String[row.length];
-//
-//                    for (int i = 0; i < row.length; i++) {
-//                        cleanLine[i] = StringUtils.replaceAll(row[i], "\r\n|\n|\r", " ");
-//                    }
-//                    writer.writeNext(cleanLine);
-//                    try {
-//                        count[0]++;
-////                        if(count[0]%10000==0){
-//                            logger.info(" # "+count[0]);
-////                    }
-//                        if(count[0]%1000==0){
-////                            System.out.println(" # "+count[0]);
-//
-//                            logger.info( " TOTAL MEMORY :"+ Runtime.getRuntime().totalMemory());
-//                            logger.info(" FREE MEMORY :"+ Runtime.getRuntime().freeMemory());
-//                            logger.info(" faccio il flush all riga "+count[0]);
-//                            writer.flush();
-//                        }
-//                    } catch (Exception e) {
-//                        logger.info(" # "+count[0]);
-//                        logger.info(" riga: " + row);
-//                        e.printStackTrace();
-//                    }
-//                });
-//
-//                writer.close();
-//primo test
-//                CSVReader reader = new CSVReaderBuilder(new BufferedReader(new InputStreamReader(in))).withCSVParser(parser).build();
-//                CSVWriter writer = new CSVWriter(new BufferedWriter(new OutputStreamWriter(out)), separatorChar, quoteChar, escapeChar, CSVWriter.DEFAULT_LINE_END);
-//                int j = 0;
-//                String[] row=null;
-//                String[] pre_row=null;
-//                try {
-//                    while ((row = reader.readNext()) != null) {
-//                        String[] cleanLine = new String[row.length];
-//                        logger.info("row.length " + row.length);
-//                        logger.info("row.id " + row[0]);
-//                        for (int i = 0; i < row.length; i++) {
-////                            cleanLine[i] = StringUtils.replaceAll(row[i], "\r\n|\n|\r", " ");
-//                            try {
-//                                cleanLine[i] = StringUtils.replaceAll(row[i], "\r\n|\n|\r", " ");
-//                            }
-//                            catch(Exception ex) {
-//                                logger.error(new Integer(i).toString());
-//                                logger.error(new Integer(j).toString());
-//                                logger.error(row[i]);
-//                                logger.error(ex.toString());
-//                                logger.info(ex.getMessage());
-//                            }
-//
-//                        }
-//                        cleanLine=null;
-////                        writer.writeNext(cleanLine);
-//                        if (j%100==0) {
-//                            logger.info("j= " + j);
-////                            logger.info("row= " + Arrays.toString(row));
-////                            logger.info("row.length= " + row.length);
-//
-//
-//                        }
-//                        // Every 5000 rows
-//                        // force flush
-////                        if ((j % 5000) == 0) {
-////                            writer.flush();
-////                        }
-//                        j++;
-//                    pre_row=row;
-//                    }
-//                }catch(Exception ex){
-//                    logger.info(ex.getMessage());
-//                    logger.error(Arrays.toString(pre_row));
-//                    logger.error(Arrays.toString(row));
-//
-//                    //                    logger.info("j : "+j);
-////                    logger.info("row : "+row);
-//                }
-//                writer.close();
-//
-//                });
-                    int j = 0;
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-                    CSVWriter writer = new CSVWriter(new BufferedWriter(new OutputStreamWriter(out)), separatorChar, quoteChar, escapeChar, CSVWriter.DEFAULT_LINE_END);
-                    String line = null;
-                    while ((line = reader.readLine()) != null) {
-                        try {
-                            String[] row = parser.parseLine(line);
-                            String[] cleanLine = new String[row.length];
+                CSVReader reader = new CSVReaderBuilder(new BufferedReader(new InputStreamReader(in))).withCSVParser(parser).build();
+                CSVWriter writer = new CSVWriter(new BufferedWriter(new OutputStreamWriter(out)), separatorChar, quoteChar, escapeChar, CSVWriter.DEFAULT_LINE_END);
 
-                            for (int i = 0; i < row.length; i++) {
-                                cleanLine[i] = StringUtils.replaceAll(row[i], "\r\n|\n|\r", " ");
-                            }
-                            writer.writeNext(cleanLine);
-                        } catch (Exception ex) {
-                            logger.error("Malformed line " + line);
-                            logger.error("Parsing error ", ex);
-                        }
-                        finally {
-                            j++;
-                            if(j % 1000 == 0) {
-                                // flush file
-                                writer.flush();
-                            }
-                        }
+                reader.forEach(row -> {
+                    String[] cleanLine = new String[row.length];
+
+                    for (int i = 0; i < row.length; i++) {
+                        cleanLine[i] = StringUtils.replaceAll(row[i], "\r\n|\n|\r", " ");
                     }
-
-                    writer.close();
+                    writer.writeNext(cleanLine);
                 });
+
+                writer.close();
+            });
         } catch (Exception ex) {
             logger.error("Error CSV processing", ex);
             logger.info("Transferred {} to 'failure'", new Object[]{flowFile});
