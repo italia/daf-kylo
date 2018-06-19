@@ -17,7 +17,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: nexus.teamdigitale.test/tba-kylo-services.8.4:1.1.0
+      - image: nexus.teamdigitale.test/tba-kylo-services.9.1:1.1.0
         name: tba-kylo-services
         imagePullPolicy: IfNotPresent
         ports:
@@ -55,8 +55,6 @@ spec:
         - name: hadoop
           mountPath: /etc/hadoop
           readOnly: true
-        #- name: daf-root-ca
-        #  mountPath: /etc/ssl/certs
       restartPolicy: Always
       volumes:
       - name: glusterfsvol

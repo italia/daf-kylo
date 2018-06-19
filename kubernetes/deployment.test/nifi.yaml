@@ -130,14 +130,9 @@ spec:
       - name: hive
         hostPath:
           path: /etc/hive/
-      #- name: daf-root-ca
-      #  secret:
-      #    secretName: daf-root-ca
       - name: home
         hostPath:
           path: /home
-#      imagePullSecrets:
-#      - name: regsecret
       nodeSelector:
         nifi: "true"
 status: {}
