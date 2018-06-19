@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: kylo-services
-  namespace: kylo0.9.1
+  namespace: kylo0-9-1
 data:
   application-context.xml: |-
     <?xml version="1.0" encoding="UTF-8"?>

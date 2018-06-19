@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: kylo-ui
-  namespace: default
+  namespace: kylo0-9-1
 data:
   log4j.properties: |-
     ###

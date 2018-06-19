@@ -33,9 +33,9 @@ case $2 in
   	kubectl apply -f kubernetes/service/kylo-services.yaml
 	;;
   kylo-ui)
-	kubectl apply -f kubernetes/config-map$ENV/kylo-ui.yaml
-  	kubectl apply -f kubernetes/deployment$ENV/kylo-ui.yaml
-  	kubectl apply -f kubernetes/service/kylo-ui.yaml
+	kubectl apply --namespace="kylo0-9-1"cd -f kubernetes/config-map$ENV/kylo-ui.yaml
+  	kubectl apply --namespace="kylo0-9-1" -f kubernetes/deployment$ENV/kylo-ui.yaml
+  	kubectl apply --namespace="kylo0-9-1" -f kubernetes/service/kylo-ui.yaml
 	;;
   nifi)
 	kubectl apply -f kubernetes/config-map$ENV/nifi.yaml

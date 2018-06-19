@@ -27,9 +27,9 @@ case $2 in
 	kubectl delete -f kubernetes/service/kylo-services.yaml
     ;;
   kylo-ui)
-	kubectl delete -f kubernetes/config-map$ENV/kylo-ui.yaml
-	kubectl delete -f kubernetes/deployment$ENV/kylo-ui.yaml
-	kubectl delete -f kubernetes/service/kylo-ui.yaml
+	kubectl delete --namespace="kylo0-9-1" -f kubernetes/config-map$ENV/kylo-ui.yaml
+	kubectl delete --namespace="kylo0-9-1" -f kubernetes/deployment$ENV/kylo-ui.yaml
+	kubectl delete --namespace="kylo0-9-1" -f kubernetes/service/kylo-ui.yaml
 	;;
   nifi)
 	kubectl delete -f kubernetes/config-map$ENV/nifi.yaml
