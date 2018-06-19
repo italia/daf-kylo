@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: tba-kylo-ui
+    app: tba-kylo-ui
   name: tba-kylo-ui
 spec:
   replicas: 1
@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        io.kompose.service: tba-kylo-ui
+        app: tba-kylo-ui
         nifi: "true"
     spec:
       hostNetwork: true

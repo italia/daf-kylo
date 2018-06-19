@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: tba-kylo-services
+    app: tba-kylo-services
   name: tba-kylo-services
 spec:
   replicas: 1
@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        io.kompose.service: tba-kylo-services
+        app: tba-kylo-services
         nifi: "true"
     spec:
       hostNetwork: true
@@ -87,15 +87,8 @@ spec:
       - name: sparkconf
         hostPath:
           path: /etc/spark2/
-
-     # - name: daf-root-ca
-     #   secret:
-     #     secretName: daf-root-ca
       imagePullSecrets:
       - name: regsecret
-<<<<<<< HEAD
-=======
       nodeSelector:
         nifi: "true"
->>>>>>> test-deploy
 status: {}
