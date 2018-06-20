@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: tba-activemq
+    app: tba-activemq
   name: tba-activemq
 spec:
   replicas: 1
@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        io.kompose.service: tba-activemq
+        app: tba-activemq
         nifi: "true"
     spec:
       containers:

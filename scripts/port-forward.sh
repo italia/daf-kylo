@@ -12,5 +12,10 @@ nifi)
     echo "nifi service pod is $nifipod"
     kubectl port-forward $nifipod 8080:8080
     ;;
+activemq)
+    activemqpod=$(kubectl get pods -o yaml | sed -En 's/name: tba-activemq-(.*)-(.*)/tba-activemq-\1-\2/p')
+    echo "activemq service pod is $activemqpod"
+    kubectl port-forward $activemqpod 8161:8161
+    ;;
 esac
 
