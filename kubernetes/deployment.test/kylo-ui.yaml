@@ -2,8 +2,8 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: tba-kylo-ui
-  name: tba-kylo-ui
+    app: tba-kylo-ui0-9-1
+  name: tba-kylo-ui0-9-1
 spec:
   replicas: 1
   strategy:
@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        app: tba-kylo-ui
+        app: tba-kylo-ui0-9-1
         nifi: "true"
     spec:
       hostNetwork: true
@@ -21,13 +21,13 @@ spec:
         name: tba-kylo-ui
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 8400
+        - containerPort: 8401
         resources:
           limits:
             memory: 2096Mi
         volumeMounts:
         - mountPath: /opt/kylo/kylo-ui/conf
-          name: kylo-ui-config
+          name: kylo-ui-config0-9-1
         - mountPath: /var/log/kylo-ui
           subPath: tba/evergreen2/kylo-ui/log
           name: glusterfsvol
@@ -36,9 +36,9 @@ spec:
       - name: glusterfsvol
         persistentVolumeClaim:
           claimName: gluster-claim
-      - name: kylo-ui-config
+      - name: kylo-ui-config0-9-1
         configMap:
-          name: kylo-ui
+          name: kylo-ui0-9-1
       imagePullSecrets:
       - name: regsecret
       nodeSelector:

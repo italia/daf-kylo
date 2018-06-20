@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: kylo-services
-  namespace: kylo0-9-1
+  name: kylo-services0-9-1
+  namespace: default
 data:
   application-context.xml: |-
     <?xml version="1.0" encoding="UTF-8"?>
@@ -166,7 +166,7 @@ data:
     #
     # Server port
     #
-    server.port=8420
+    server.port=8421
     # server.port=8443
     ##### ADD IF SSL is needed
     ###
