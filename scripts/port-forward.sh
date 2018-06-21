@@ -4,7 +4,7 @@ case $1 in
 
 kylo-ui)
     kylouipod=$(kubectl get pods -o yaml | sed -En 's/name: tba-kylo-ui-(.*)-(.*)/tba-kylo-ui-\1-\2/p')
-    echo "kylo ui pod is kylouipod"
+    echo "kylo ui pod is $kylouipod"
     kubectl port-forward $kylouipod 8400:8400
   ;;
 nifi)
@@ -16,6 +16,11 @@ activemq)
     activemqpod=$(kubectl get pods -o yaml | sed -En 's/name: tba-activemq-(.*)-(.*)/tba-activemq-\1-\2/p')
     echo "activemq service pod is $activemqpod"
     kubectl port-forward $activemqpod 8161:8161
+    ;;
+mysql)
+    mysqlpod=$(kubectl get pods -o yaml | sed -En 's/name: tba-mysql-(.*)-(.*)/tba-mysql-\1-\2/p')
+    echo "mysql service pod is $mysqlpod"
+    kubectl port-forward $mysqlpod 3306:3306
     ;;
 esac
 
