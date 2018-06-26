@@ -28,8 +28,8 @@ spec:
         volumeMounts:
         - mountPath: /opt/kylo/kylo-services/conf
           name: kylo-services-config
-        - mountPath: /opt/kylo/kylo-services/spark-shell
-          name: kylo-services-spark
+#        - mountPath: /opt/kylo/kylo-services/spark-shell
+#          name: kylo-services-spark
         - name: glusterfsvol
           mountPath: /var/log/kylo-services
           subPath: tba/evergreen2/kylo-services/log
@@ -66,9 +66,9 @@ spec:
       - name: kylo-services-config
         configMap:
           name: kylo-services
-      - name: kylo-services-spark
-        configMap:
-          name: kylo-services-spark
+#      - name: kylo-services-spark
+#        configMap:
+#          name: kylo-services-spark
       - name: hosts
         hostPath:
           path: /etc/hosts
