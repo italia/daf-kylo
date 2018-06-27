@@ -64,9 +64,15 @@ spec:
       - name: kylo-services-config
         configMap:
           name: kylo-services
+<<<<<<< HEAD
       - name: kylo-services-spark-config
         configMap:
           name: kylo-services-spark
+=======
+#      - name: kylo-services-spark
+#        configMap:
+#          name: kylo-services-spark
+>>>>>>> dcb04b86b90409d2621040385bfc3cc39bde2275
       - name: hosts
         hostPath:
           path: /etc/hosts
