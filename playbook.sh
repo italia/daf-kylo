@@ -31,7 +31,6 @@ case $2 in
   	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services-spark.yaml
 	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services.yaml
   	kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/kylo-services.yaml
-  	kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/kylo-services.yaml
   	kubectl apply --namespace="$namespace" -f kubernetes/service/kylo-services.yaml
 	;;
   kylo-ui)

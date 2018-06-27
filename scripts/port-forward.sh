@@ -12,5 +12,10 @@ nifi)
     echo "nifi service pod is $nifipod"
     kubectl port-forward $nifipod 8080:8080
     ;;
+mysql)
+    nifipod=$(kubectl get pods -o yaml | sed -En 's/name: tba-mysql-(.*)-(.*)/tba-mysql-\1-\2/p')
+    echo "nifi service pod is $nifipod"
+    kubectl port-forward $nifipod 3306:3306
+    ;;
 esac
 

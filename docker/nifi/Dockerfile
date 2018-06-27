@@ -2,7 +2,7 @@
 FROM openjdk:alpine
 
 # Set environment
-ENV NIFI_VERSION=1.4.0
+ENV NIFI_VERSION=1.6.0
 ENV GLIBC_VERSION=2.25-r0
 
 # Install required packages

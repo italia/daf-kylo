@@ -2,8 +2,8 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: tba-kylo-services0-9-1
-  name: tba-kylo-services0-9-1
+    app: tba-kylo-services
+  name: tba-kylo-services
 spec:
   replicas: 1
   strategy:
@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        app: tba-kylo-services0-9-1
+        app: tba-kylo-services
         nifi: "true"
     spec:
       hostNetwork: true
@@ -21,15 +21,15 @@ spec:
         name: tba-kylo-services
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 8421
+        - containerPort: 8420
         resources:
           limits:
-            memory: 4096Mi
+            memory: 6096Mi
         volumeMounts:
         - mountPath: /opt/kylo/kylo-services/conf
-          name: kylo-services-config0-9-1
+          name: kylo-services-config
         - mountPath: /opt/kylo/kylo-services/spark-shell
-          name: kylo-services-spark0-9-1
+          name: kylo-services-spark-config
         - name: glusterfsvol
           mountPath: /var/log/kylo-services
           subPath: tba/evergreen2/kylo-services/log
@@ -61,12 +61,12 @@ spec:
         persistentVolumeClaim:
           claimName: gluster-claim
 
-      - name: kylo-services-config0-9-1
+      - name: kylo-services-config
         configMap:
-          name: kylo-services0-9-1
-      - name: kylo-services-spark0-9-1
+          name: kylo-services
+      - name: kylo-services-spark-config
         configMap:
-          name: kylo-services-spark0-9-1
+          name: kylo-services-spark
       - name: hosts
         hostPath:
           path: /etc/hosts

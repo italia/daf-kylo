@@ -1,4 +1,4 @@
-# Base java image
+# Base java imfkylo-services/libage
 FROM openjdk:alpine
 
 ENV GLIBC_VERSION=2.25-r0

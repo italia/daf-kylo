@@ -2,24 +2,24 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: tba-kylo-services0-9-1
-  name: tba-kylo-services0-9-1
+    app: tba-kylo-services
+  name: tba-kylo-services
 spec:
   type: "NodePort"
   ports:
-  - name: "8421"
-    port: 8421
-    targetPort: 8421
-    nodePort: 31421
+  - name: "8420"
+    port: 8420
+    targetPort: 8420
+    nodePort: 31420
+  - name: "8450"
+    port: 8450
+    targetPort: 8450
+    nodePort: 31429
   - name: "8451"
     port: 8451
     targetPort: 8451
-    nodePort: 31430
-  - name: "8452"
-    port: 8452
-    targetPort: 8452
-    nodePort: 31494
+    nodePort: 31493
   selector:
-    app: tba-kylo-services0-9-1
+    app: tba-kylo-services
 status:
   loadBalancer: {}

@@ -34,7 +34,6 @@ kylo-ui:
 		cp -R ../kylo0.9.1/install/install-tar/target/kylo/kylo-ui/lib docker/kylo-ui/dist/kylo-ui
 		cp -R ../kylo0.9.1/install/install-tar/target/kylo/kylo-ui/plugin docker/kylo-ui/dist/kylo-ui
 		cp -R ../kylo0.9.1/install/install-tar/target/kylo/bin docker/kylo-ui/dist
-		cp -R ../kylo0.9.1/install/install-tar/target/kylo/lib docker/kylo-ui/dist
 		docker build -t tba-kylo-ui -f docker/kylo-ui/Dockerfile docker/kylo-ui
 		docker tag tba-kylo-ui $(REGISTRY)/tba-kylo-ui.9.1:1.1.0
 		rm -dr docker/kylo-ui/dist
@@ -45,7 +44,7 @@ nifi:
 		cp -R ../kylo0.9.1/install/install-tar/target/kylo/setup/nifi/* docker/nifi/dist
 		cp -R ../daf-kylo8s/nifi/extensions/processors/target/*.nar docker/nifi/dist/daf
 		docker build -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
-		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.4.0:1.1.1-SNAPSHOT
+		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.6.0:1.1.2-SNAPSHOT
 		rm -dr docker/nifi/dist
 
 .PHONY: build-kylo

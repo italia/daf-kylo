@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: kylo-services0-9-1
+  name: kylo-services
   namespace: default
 data:
   application-context.xml: |-
@@ -89,7 +89,7 @@ data:
     # Spring Datasource properties for spring batch and the default data source
     # NOTE: Cloudera default password for root access to mysql is "cloudera"
     #
-    spring.datasource.url=jdbc:mysql://tba-mysql:3306/kylo0_9_1
+    spring.datasource.url=jdbc:mysql://tba-mysql:3306/kylo
     spring.datasource.username=root
     spring.datasource.password=hadoop
     spring.datasource.maxActive=30
@@ -166,7 +166,7 @@ data:
     #
     # Server port
     #
-    server.port=8421
+    server.port=8420
     # server.port=8443
     ##### ADD IF SSL is needed
     ###
@@ -206,8 +206,6 @@ data:
     metadata.datasource.validationQuery=SELECT 1
     metadata.datasource.testOnBorrow=true
 
-
-
     hive.userImpersonation.enabled=false
     hive.datasource.driverClassName=org.apache.hive.jdbc.HiveDriver
     hive.datasource.url=jdbc:hive2://master.novalocal:10000/default;principal=hive/master.novalocal@DAF.GOV.IT
@@ -215,12 +213,9 @@ data:
     hive.datasource.password=xxxxxx
     hive.datasource.validationQuery=show tables
 
-
-
-    ##Also Clouder  url should be /metastore instead of /hive
+    ##Also Cloudera url should be /metastore instead of /hive
     hive.metastore.datasource.driverClassName=org.postgresql.Driver
     hive.metastore.datasource.url=jdbc:postgresql://master/metastore
-    #hive.metastore.datasource.url=jdbc:mysql://localhost:3306/metastore
     hive.metastore.datasource.username=hive
     hive.metastore.datasource.password=xxxxxx
     hive.metastore.datasource.validationQuery=SELECT 1
@@ -291,7 +286,7 @@ data:
     ## Spark configuration
     nifi.executesparkjob.sparkhome=/opt/cloudera/parcels/CDH/lib/spark
     nifi.executesparkjob.sparkmaster=yarn
-    nifi.executesparkjob.driver_memory=1024m
+    nifi.executesparkjob.driver_memory=2048m
     nifi.executesparkjob.number_of_executors=1
     nifi.executesparkjob.executor_cores=1
     ##comment the line below on cloudera
@@ -380,7 +375,7 @@ data:
     #nifi.auto.align=false
 
     # update database on kylo-services start
-    liquibase.enabled=true
+    liquibase.enabled=false
     liquibase.change-log=classpath:com/thinkbiganalytics/db/master.xml
 
     # NiFi settings
@@ -417,9 +412,6 @@ data:
     # Add the new property to support the updated templates
     config.nifi.kylo.applicationJarDirectory=/usr/nifi/current/lib/app
 
-    # Add new property to support remote process groups in a NiFi non-clustered environment
-    kylo.template.remote-process-groups.enabled=true
-
     # Add this section to support Teradata ingest via Kylo template (using TDCH)
     ################################ Teradata Ingest via Kylo Template ################################################
     # When using data_ingest__teradata.template.zip, set these properties, start Kylo, and import the template
@@ -446,7 +438,12 @@ data:
     #nifi.service.kylo-teradata-dbc.password=${nifi.service.standardtdchconnectionservice.password}
     ###################################################################################################################
 
+    # By default Kylo will allow you to use Remote Process groups and reusable flows only in a NiFi clustered environment.
+    # Set this property to true if you want to use kylo with remote process groups in a non NiFi clustered environment.
+    # This will provide additional options when registering the reusable template in kylo.
+    kylo.template.remote-process-groups.enabled=true
 
+    search.history.data.reindexing.enabled=false
 
   spark.properties: |-
     ###
@@ -483,10 +480,10 @@ data:
     spark.shell.deployMode=cluster
     spark.shell.master=yarn
     spark.shell.sparkHome=/opt/cloudera/parcels/SPARK2/lib/spark2
-    spark.shell.jars=/opt/kylo/kylo-services/lib/mariadb-java-client-1.5.7.jar
+    spark.shell.jars=/opt/kylo/kylo-services/lib/mariadb-java-client-1.5.7.jar:/opt/kylo/kylo-services/lib/postgresql-42.1.4.jar
     spark.shell.sparkArgs=--driver-memory 3g --executor-memory 5g --driver-java-options -Djava.security.egd=file:/dev/./urandom
-    #spark.shell.registrationUrl=http://192.168.0.20:8420/api/v1/spark/shell/register
-    spark.shell.appResource=/opt/kylo/kylo-services/lib/app/kylo-spark-shell-client-v2-0.8.4.jar
+    spark.shell.registrationUrl=http://tba-kylo-services:8400/api/v1/spark/shell/register
+    spark.shell.appResource=/opt/kylo/kylo-services/lib/app/kylo-spark-shell-client-v2-0.9.1.jar
     spark.shell.verbose=true
     spark.shell.clientTimeout=240
 
@@ -741,7 +738,7 @@ data:
     ###
     # Elasticsearch configuration
     search.host=elk-master-1.teamdigitale.test
-    search.clusterName=demo-cluster
+    search.clusterName=ELK_Staging
     search.restPort=9200
     search.transportPort=9300
 
@@ -792,7 +789,7 @@ data:
     # Copyright (C) 2017 ThinkBig Analytics
     # %%
     # Licensed under the Apache License, Version 2.0 (the "License");
-    # you may not use this file except in compliance with the License.
+    # you may not use this file e:qxcept in compliance with the License.
     # You may obtain a copy of the License at
     #
     #     http://www.apache.org/licenses/LICENSE-2.0
@@ -2115,6 +2112,6 @@ data:
       "star_border"
     ]
   version.txt: |-
-    version=0.8.4
-    build.date=2017-10-18 17:13
+    version=0.9.1
+    build.date=2018-06-20 17:13
 
