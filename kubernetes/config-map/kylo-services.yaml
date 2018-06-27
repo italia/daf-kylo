@@ -435,7 +435,7 @@ data:
     #server.port = 8450
 
     # Spark UI port number
-    #spark.ui.port = 8451
+    #spark.ui.port = 8450
 
     # Indicates how to communicate with the Spark Shell process when it is managed
     # externally using an init script or systemd. Comment the below lines to have

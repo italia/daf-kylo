@@ -75,9 +75,6 @@ spec:
         volumeMounts:
         - mountPath: /opt/kylo/kylo-services/conf
           name: kylo-services-config
-        # commented by Fabio and asked to Davide it looks is not used
-        # - mountPath: /opt/kylo/kylo-services/spark-shell
-        #   name: kylo-services-spark
         - name: glusterfsvol
           mountPath: /var/log/kylo-services
           subPath: tba/evergreen2/kylo-services/log
@@ -94,17 +91,12 @@ spec:
         - name: alternatives
           mountPath: /etc/alternatives/
           readOnly: true
-        # - name: hosts
-        #   mountPath: /etc/extra_hosts
-        #   readOnly: true
         - name: krb5conf
           mountPath: /etc/krb5.conf
           readOnly: true
         - name: hadoop
           mountPath: /etc/hadoop
           readOnly: true
-        # - name: daf-root-ca
-        #   mountPath: /etc/ssl/certs
       restartPolicy: Always
       volumes:
       - name: glusterfsvol
@@ -113,12 +105,6 @@ spec:
       - name: kylo-services-config
         configMap:
           name: kylo-services
-      # - name: kylo-services-spark
-      #   configMap:
-      #     name: kylo-services-spark
-      # - name: hosts
-      #   hostPath:
-      #     path: /etc/hosts
       - name: krb5conf
         hostPath:
           path: /etc/krb5.conf

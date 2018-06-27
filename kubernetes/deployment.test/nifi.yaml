@@ -17,7 +17,7 @@ spec:
       hostNetwork: false
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: nexus.teamdigitale.test/tba-nifi.1.4.0:1.1.1-SNAPSHOT
+      - image: nexus.teamdigitale.test/tba-nifi.1.6.0:1.1.2-SNAPSHOT
         name: tba-nifi
         imagePullPolicy: IfNotPresent
         ports:
@@ -25,7 +25,7 @@ spec:
         - containerPort: 8033 # To test basic templates inside nifi
         resources:
           limits:
-            memory: 16384Mi
+            memory: 8384Mi
         volumeMounts:
         - name: glusterfsvol
           mountPath: /usr/nifi/data
@@ -130,14 +130,9 @@ spec:
       - name: hive
         hostPath:
           path: /etc/hive/
-      #- name: daf-root-ca
-      #  secret:
-      #    secretName: daf-root-ca
       - name: home
         hostPath:
           path: /home
-#      imagePullSecrets:
-#      - name: regsecret
       nodeSelector:
         nifi: "true"
 status: {}
