@@ -3,7 +3,7 @@ default: all
 REGISTRY=nexus.teamdigitale.test
 
 
-.PHONY: activemq
+.PHONY: activemq 
 activemq:
 	docker build -t tba-activemq -f docker/activemq/Dockerfile docker/activemq
 	docker tag tba-activemq $(REGISTRY)/tba-activemq.5.15.1:1.1.0
