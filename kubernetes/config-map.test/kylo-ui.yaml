@@ -83,7 +83,7 @@ data:
 
     security.auth.file.users=file:///opt/kylo/kylo-ui/conf/users.properties
     security.auth.file.groups=file:///opt/kylo/kylo-ui/conf/groups.properties
-      #security.auth.file.password.hash.enabled=false
+    #security.auth.file.password.hash.enabled=false
     #security.auth.file.password.hash.algorithm=MD5
     #security.auth.file.password.hash.encoding=base64
 

@@ -26,9 +26,13 @@ RUN wget -q https://downloads.cloudera.com/connectors/impala_jdbc_2.5.42.1062.zi
 RUN unzip impala_jdbc_2.5.42.1062.zip
 RUN unzip ClouderaImpalaJDBC-2.5.42.1062/ClouderaImpalaJDBC4_2.5.42.zip
 
-RUN mv ClouderaImpalaJDBC4_2.5.42/ImpalaJDBC4.jar /opt/kylo/kylo-services/plugin && \
-    mv ClouderaImpalaJDBC4_2.5.42/TCLIServiceClient.jar /opt/kylo/kylo-services/plugin && \
-    mv ClouderaImpalaJDBC4_2.5.42/ql.jar /opt/kylo/kylo-services/plugin
+RUN cp ClouderaImpalaJDBC4_2.5.42/ImpalaJDBC4.jar /opt/kylo/kylo-services/plugin && \
+    cp ClouderaImpalaJDBC4_2.5.42/TCLIServiceClient.jar /opt/kylo/kylo-services/plugin && \
+    cp ClouderaImpalaJDBC4_2.5.42/ql.jar /opt/kylo/kylo-services/plugin
+
+RUN mv ClouderaImpalaJDBC4_2.5.42/ImpalaJDBC4.jar /opt/kylo/kylo-services/lib && \
+    mv ClouderaImpalaJDBC4_2.5.42/TCLIServiceClient.jar /opt/kylo/kylo-services/lib && \
+    mv ClouderaImpalaJDBC4_2.5.42/ql.jar /opt/kylo/kylo-services/lib
 
 #Create kylo user and groups
 RUN adduser -S -s /bin/bash kylo
