@@ -28,16 +28,10 @@ case $2 in
 	kubectl apply --namespace="$namespace" -f kubernetes/service/mysql.yaml
 	;;
   kylo-services)
-<<<<<<< HEAD
   	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services-spark.yaml
 	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services.yaml
   	kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/kylo-services.yaml
   	kubectl apply --namespace="$namespace" -f kubernetes/service/kylo-services.yaml
-=======
-	kubectl apply -f kubernetes/config-map$ENV/kylo-services.yaml
-  	kubectl apply -f kubernetes/deployment$ENV/kylo-services.yaml
-  	kubectl apply -f kubernetes/service/kylo-services.yaml
->>>>>>> dcb04b86b90409d2621040385bfc3cc39bde2275
 	;;
   kylo-ui)
 	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-ui.yaml
