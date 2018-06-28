@@ -15,6 +15,10 @@ spec:
     port: 8080
     targetPort: 8080
     nodePort: 31081
+  - name: "8082"
+    port: 8082
+    targetPort: 8082
+    nodePort: 30082
   selector:
     app: tba-nifi
 status:

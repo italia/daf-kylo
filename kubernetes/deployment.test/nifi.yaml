@@ -23,6 +23,7 @@ spec:
         ports:
         - containerPort: 8080
         - containerPort: 8033
+        - containerPort: 8082
         resources:
           limits:
             memory: 8384Mi
@@ -73,7 +74,6 @@ spec:
         - name: krb5conf
           mountPath: /etc/krb5.conf
           readOnly: true
-          # da aggiungere sulla macchina
         - name: hadoop
           mountPath: /etc/hadoop
           readOnly: true
