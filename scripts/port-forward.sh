@@ -1,17 +1,6 @@
 #!/bin/bash
-if [ "$1" = 'test' ]
-then
-    export KUBECONFIG='/home/davide/.kube_test.conf'
-    echo $KUBECONFIG
-elif [ "$1" = 'prod' ]
-    then
-    export KUBECONFIG='/home/davide/.kube.conf'
-    echo $KUBECONFIG
-fi
 
-echo $ENV
-
-case $2 in
+case $1 in
 
 kylo-ui)
     kylouipod=$(kubectl get pods -o yaml | sed -En 's/name: tba-kylo-ui-(.*)-(.*)/tba-kylo-ui-\1-\2/p')
