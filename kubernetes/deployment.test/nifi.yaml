@@ -22,7 +22,7 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
-        - containerPort: 8033 # To test basic templates inside nifi
+        - containerPort: 8033
         resources:
           limits:
             memory: 8384Mi
@@ -87,8 +87,6 @@ spec:
           mountPath: /usr/nifi/scripts
           subPath: nifi/scripts/edge1
           readOnly: true
-        #- name: daf-root-ca
-        #  mountPath: /etc/ssl/certs
         - name: home
           mountPath: /home
           readOnly: false
