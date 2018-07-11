@@ -37,6 +37,14 @@ spec:
         hostnames:
           - "slave5.platform.daf.gov.it"
           - "slave5"
+      - ip: "192.168.0.56"
+        hostnames:
+          - "slave6.platform.daf.gov.it"
+          - "slave6"
+      - ip: "192.168.0.135"
+        hostnames:
+          - "slave-prod-7.platform.daf.gov.it"
+          - "slave-prod-7"
       - ip: "192.168.0.20"
         hostnames:
           - "edge1.platform.daf.gov.it"
@@ -71,10 +79,6 @@ spec:
       - image: nexus.daf.teamdigitale.it/tba-nifi.1.4.0:1.1.1-SNAPSHOT
         name: tba-nifi
         imagePullPolicy: IfNotPresent
-        # lifecycle:
-        #   postStart:
-        #     exec:
-        #      command: ["/bin/sh", "-c", " echo \"nameserver 10.96.0.10\n$(cat /etc/resolv.conf)\" > /etc/resolv.conf"]
         ports:
         - containerPort: 8080
         - containerPort: 8033 # To test basic templates inside nifi
@@ -181,13 +185,8 @@ spec:
       - name: hive
         hostPath:
           path: /etc/hive/
-      #- name: daf-root-ca
-      #  secret:
-      #    secretName: daf-root-ca
       - name: home
         hostPath:
           path: /home
-      # nodeSelector:
-      #   kubernetes.io/hostname: edge1.platform.daf.gov.it
       nodeSelector:
         nifi: "true"

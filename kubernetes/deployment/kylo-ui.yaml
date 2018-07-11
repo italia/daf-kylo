@@ -37,6 +37,14 @@ spec:
         hostnames:
           - "slave5.platform.daf.gov.it"
           - "slave5"
+      - ip: "192.168.0.56"
+        hostnames:
+          - "slave6.platform.daf.gov.it"
+          - "slave6"
+      - ip: "192.168.0.135"
+        hostnames:
+          - "slave-prod-7.platform.daf.gov.it"
+          - "slave-prod-7"
       - ip: "192.168.0.20"
         hostnames:
           - "edge1.platform.daf.gov.it"
