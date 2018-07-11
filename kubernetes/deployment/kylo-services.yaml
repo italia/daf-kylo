@@ -37,6 +37,26 @@ spec:
         hostnames:
           - "slave5.platform.daf.gov.it"
           - "slave5"
+      - ip: "192.168.0.56"
+        hostnames:
+          - "slave6.platform.daf.gov.it"
+          - "slave6"
+      - ip: "192.168.0.135"
+        hostnames:
+          - "slave-prod-7.platform.daf.gov.it"
+          - "slave-prod-7"
+      - ip: "192.168.0.132"
+        hostnames:
+          - "slave-prod-8.platform.daf.gov.it"
+          - "slave-prod-8"
+      - ip: "192.168.0.134"
+        hostnames:
+          - "slave-prod-9.platform.daf.gov.it"
+          - "slave-prod-9"
+      - ip: "192.168.0.133"
+        hostnames:
+          - "slave-prod-10.platform.daf.gov.it "
+          - "slave-prod-10"
       - ip: "192.168.0.20"
         hostnames:
           - "edge1.platform.daf.gov.it"
@@ -65,7 +85,8 @@ spec:
         hostnames:
           - "master.elasticsearch.daf.gov.it"
           - "master"
-      hostNetwork: false #replaced to true to remove service exposed
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
       - image: nexus.daf.teamdigitale.it/tba-kylo-services.8.4:1.1.0
         name: tba-kylo-services
