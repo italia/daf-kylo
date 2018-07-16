@@ -1,0 +1,26 @@
+{
+  "name": "dafKylo",
+  "version": "0.1.0",
+  "description": "Kylo Cluster Feed",
+  "main": "index.js",
+  "author": "Davide Gazzè",
+  "license": "TBD",
+  "bin": {
+    "dafKylo": "./index.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "async": "^2.4.0",
+    "commander": "^2.9.0",
+    "config": "^1.26.1",
+    "json-stable-stringify": "^1.0.1",
+    "lodash": "^4.17.4",
+    "progress": "^2.0.0",
+    "progress-bar": "^0.1.1",
+    "promise": "^7.1.1",
+    "request": "^2.81.0",
+    "sync-request": "^6.0.0",
+    "xmldom": "^0.1.27",
+    "xpath": "0.0.24"
+  }
+}
