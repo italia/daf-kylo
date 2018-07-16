@@ -2,6 +2,11 @@
 
 case $1 in
 
+kylo-services)
+    kyloservicespod=$(kubectl get pods -o yaml | sed -En 's/name: tba-kylo-services-(.*)-(.*)/tba-kylo-services-\1-\2/p')
+    echo "kylo ui pod is $kyloservicespod"
+    kubectl port-forward $kyloservicespod 8420:8420
+  ;;
 kylo-ui)
     kylouipod=$(kubectl get pods -o yaml | sed -En 's/name: tba-kylo-ui-(.*)-(.*)/tba-kylo-ui-\1-\2/p')
     echo "kylo ui pod is $kylouipod"
