@@ -27,8 +27,11 @@ mysql)
     echo "mysql service pod is $mysqlpod"
     kubectl port-forward $mysqlpod 3306:3306
     ;;
+nifi-cluster)
+    kubectl port-forward svc/tba-nifi 8080:8080
+    ;;
 *)
     echo "Sorry, I can not get a $2 pod for you!"
-    echo "Cases are nifi, kylo-ui, mysql, activemq";;
+    echo "Cases are nifi, nifi-cluster, kylo-services, kylo-ui, mysql, activemq";;
 esac
 
