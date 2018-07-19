@@ -220,7 +220,6 @@ data:
     ##Also Clouder  url should be /metastore instead of /hive
     hive.metastore.datasource.driverClassName=org.postgresql.Driver
     hive.metastore.datasource.url=jdbc:postgresql://master/metastore
-    #hive.metastore.datasource.url=jdbc:mysql://localhost:3306/metastore
     hive.metastore.datasource.username=hive
     hive.metastore.datasource.password=xxxxxx
     hive.metastore.datasource.validationQuery=SELECT 1
@@ -380,7 +379,7 @@ data:
     #nifi.auto.align=false
 
     # update database on kylo-services start
-    liquibase.enabled=true
+    liquibase.enabled=false
     liquibase.change-log=classpath:com/thinkbiganalytics/db/master.xml
 
     # NiFi settings
@@ -435,7 +434,7 @@ data:
     #server.port = 8450
 
     # Spark UI port number
-    #spark.ui.port = 8450
+    #spark.ui.port = 8451
 
     # Indicates how to communicate with the Spark Shell process when it is managed
     # externally using an init script or systemd. Comment the below lines to have

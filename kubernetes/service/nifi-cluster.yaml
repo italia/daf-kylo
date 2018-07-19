@@ -1,29 +1,20 @@
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    app: tba-nifi
-  name: tba-nifi
+ name: tba-nifi
+ labels:
+   app: tba-nifi
 spec:
-  type: "NodePort"
-  ports:
-  - name: "nifi-http"
-    port: 8080
-    targetPort: 8080
-    nodePort: 31081
-  - name: "listerner-processor"
-    port: 8033
-    targetPort: 8033
-    nodePort: 31083
-  - name: "nifi-input"
-    port: 9998
-    targetPort: 9998
-    nodePort: 31998
-  - name: "nifi-cluster"
-    port: 9999
-    targetPort: 9999
-    nodePort: 31999
-  selector:
-    app: tba-nifi
-status:
-  loadBalancer: {}
+ selector:
+   app: tba-nifi
+ clusterIP: None   #headless
+ ports:
+ ports:
+ - name: "nifi-http"
+   port: 8080
+ - name: "listerner"
+   port: 8033
+ - name: "nifi-input"
+   port: 9998
+ - name: "nifi-cluster"
+   port: 9999
