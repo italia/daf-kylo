@@ -40,7 +40,7 @@ spec:
       containers:
       - name: tba-nifi
         # TODO: modify image to support NIFI_ADDITIONAL_SEARCH_DOMAINS, move other setting in to config map
-        image: nexus.teamdigitale.test/tba-nifi.1.6.0:0.8.9-CLUSTER
+        image: nexus.teamdigitale.test/tba-nifi.1.6.0:0.7.1-CLUSTER
         env:
         - name: NIFI_ADDITIONAL_SEARCH_DOMAINS
           value: "tba-nifi.default.svc.cluster.local teamdigitale.test"
@@ -56,7 +56,7 @@ spec:
           containerPort: 8033
         resources:
           limits:
-            memory: 8192Mi
+            memory: 12000Mi
         volumeMounts:
         - name: private
           mountPath: /usr/nifi/data
