@@ -1,0 +1,32 @@
+[
+  {
+    description: null,
+    memberCount: 1,
+    systemName: "analysts",
+    title: "Analysts",
+  },
+  {
+    description: null,
+    memberCount: 1,
+    systemName: "designers",
+    title: "Designers",
+  },
+  {
+    description: null,
+    memberCount: 1,
+    systemName: "admin",
+    title: "Administrators",
+  },
+  {
+    description: null,
+    memberCount: 1,
+    systemName: "operations",
+    title: "Operations",
+  },
+  {
+    description: null,
+    memberCount: 4,
+    systemName: "user",
+    title: "Users",
+  },
+]
