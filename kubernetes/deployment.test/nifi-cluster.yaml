@@ -121,9 +121,11 @@ spec:
           mountPath: /var/dropzone
           subPath: nifi/shared/dropzone
           readOnly: false
-        - name: home
+        - name: glusterfsvol
           mountPath: /home
+          subPath: nifi/shared/dropzone
           readOnly: false
+      restartPolicy: Always
       volumes:
       - name: glusterfsvol
         persistentVolumeClaim:
@@ -161,9 +163,6 @@ spec:
       - name: hive
         hostPath:
           path: /etc/hive/
-      - name: home
-        hostPath:
-          path: /home
   volumeClaimTemplates:
   - metadata:
       name: private
