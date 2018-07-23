@@ -28,7 +28,7 @@ case $2 in
 	kubectl apply --namespace="$namespace" -f kubernetes/service/mysql.yaml
 	;;
   kylo-services)
-  	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services-spark.yaml
+  	#kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services-spark.yaml
 	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services.yaml
   	kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/kylo-services.yaml
   	kubectl apply --namespace="$namespace" -f kubernetes/service/kylo-services.yaml
@@ -43,5 +43,11 @@ case $2 in
 	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
   	kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/nifi.yaml
   	kubectl apply --namespace="$namespace" -f kubernetes/service/nifi.yaml
+  	;;
+  nifi-cluster)
+	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-cluster.yaml
+	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
+  	kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/nifi-cluster.yaml
+  	kubectl apply --namespace="$namespace" -f kubernetes/service/nifi-cluster.yaml
 	;;
 esac

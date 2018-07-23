@@ -55,6 +55,7 @@ RUN ln -f -s /usr/nifi/kylo/daf/teamdigitale-daf-nifi-processors-*.nar /usr/nifi
 RUN mkdir -p /usr/nifi/activemq
 RUN mkdir -p /usr/nifi/drivers
 RUN mkdir -p /usr/nifi/drivers/impala
+RUN mkdir -p /usr/nifi/conf.temp
 
 RUN wget http://central.maven.org/maven2/org/apache/activemq/activemq-all/5.15.0/activemq-all-5.15.0.jar -P /usr/nifi/activemq/
 RUN wget http://central.maven.org/maven2/org/mariadb/jdbc/mariadb-java-client/2.1.0/mariadb-java-client-2.1.0.jar -P /usr/nifi/drivers/
@@ -75,5 +76,8 @@ python3 -m ensurepip && \
 rm -r /usr/lib/python*/ensurepip && \
 pip3 install --upgrade pip setuptools thrift_sasl==0.2.1 sasl impyla hdfs polling requests_kerberos
 
+ADD scripts/ /scripts
+RUN chmod a+x /scripts/*
+
 # Start nifi
-CMD ["/usr/nifi/bin/nifi.sh", "run"]
+CMD /scripts/setup.sh ; /usr/nifi/bin/nifi.sh run

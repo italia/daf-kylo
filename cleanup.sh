@@ -23,7 +23,7 @@ case $2 in
 	kubectl delete --namespace="$namespace" -f kubernetes/service/mysql.yaml
 	;;
   kylo-services)
-    kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services-spark.yaml
+    #kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services-spark.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/kylo-services.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/service/kylo-services.yaml
@@ -38,5 +38,11 @@ case $2 in
 	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
     kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/nifi.yaml
     kubectl delete --namespace="$namespace" -f kubernetes/service/nifi.yaml
+    ;;
+  nifi-cluster)
+	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-cluster.yaml
+	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
+    kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/nifi-cluster.yaml
+    kubectl delete --namespace="$namespace" -f kubernetes/service/nifi-cluster.yaml
     ;;
 esac

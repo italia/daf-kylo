@@ -1,116 +1,79 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: apps/v1beta2
+kind: StatefulSet
 metadata:
   name: tba-nifi
+  labels:
+    app: tba-nifi
 spec:
+  serviceName: tba-nifi
+  replicas: 2
   selector:
     matchLabels:
       app: tba-nifi
-  replicas: 1
   template:
     metadata:
       labels:
         app: tba-nifi
+        nifi-cluster: "true"
     spec:
+      #hostNetwork: false                      # NOTE: Do not change because it is used the services
+      affinity:
+        podAntiAffinity:
+              preferredDuringSchedulingIgnoredDuringExecution:
+              - weight: 100
+                podAffinityTerm:
+                  labelSelector:
+                    matchExpressions:
+                    - key: nifi-cluster
+                      operator: In
+                      values:
+                      - "true"
+                  topologyKey: kubernetes.io/hostname
       hostAliases:
-      - ip: "192.168.0.23"
+      - ip: "192.168.30.12"
         hostnames:
-          - "master.platform.daf.gov.it"
+          - "master.novalocal"
           - "master"
-      - ip: "192.168.0.22"
-        hostnames:
-          - "slave1.platform.daf.gov.it"
-          - "slave1"
-      - ip: "192.168.0.24"
-        hostnames:
-          - "slave2.platform.daf.gov.it"
-          - "slave2"
-      - ip: "192.168.0.36"
-        hostnames:
-          - "slave3.platform.daf.gov.it"
-          - "slave3"
-      - ip: "192.168.0.26"
-        hostnames:
-          - "slave4.platform.daf.gov.it"
-          - "slave4"
-      - ip: "192.168.0.55"
-        hostnames:
-          - "slave5.platform.daf.gov.it"
-          - "slave5"
-      - ip: "192.168.0.56"
-        hostnames:
-          - "slave6.platform.daf.gov.it"
-          - "slave6"
-      - ip: "192.168.0.135"
-        hostnames:
-          - "slave-prod-7.platform.daf.gov.it"
-          - "slave-prod-7"
-      - ip: "192.168.0.132"
-        hostnames:
-          - "slave-prod-8.platform.daf.gov.it"
-          - "slave-prod-8"
-      - ip: "192.168.0.134"
-        hostnames:
-          - "slave-prod-9.platform.daf.gov.it"
-          - "slave-prod-9"
-      - ip: "192.168.0.133"
-        hostnames:
-          - "slave-prod-10.platform.daf.gov.it "
-          - "slave-prod-10"
-      - ip: "192.168.0.20"
-        hostnames:
-          - "edge1.platform.daf.gov.it"
-          - "edge1"
-      - ip: "192.168.0.21"
-        hostnames:
-          - "edge2.platform.daf.gov.it"
-          - "edge2"
-      - ip: "192.168.0.27"
-        hostnames:
-          - "edge3.platform.daf.gov.it"
-          - "edge3"
-      - ip: "192.168.0.53"
-        hostnames:
-          - "edge4.platform.daf.gov.it"
-          - "edge4"
-      - ip: "192.168.0.54"
-        hostnames:
-          - "edge5.platform.daf.gov.it"
-          - "edge5"
-      - ip: "192.168.0.29"
-        hostnames:
-          - "idm.daf.gov.it"
-          - "idm"
-      - ip: "192.168.0.43"
-        hostnames:
-          - "master.elasticsearch.daf.gov.it"
-          - "master"
-      hostNetwork: false
-      dnsPolicy: ClusterFirstWithHostNet
+      restartPolicy: Always
+      nodeSelector:
+        nifi-cluster: "true"
       containers:
-      - image: nexus.daf.teamdigitale.it/tba-nifi.1.4.0:1.1.1-SNAPSHOT
-        name: tba-nifi
-        imagePullPolicy: IfNotPresent
+      - name: tba-nifi
+        # TODO: modify image to support NIFI_ADDITIONAL_SEARCH_DOMAINS, move other setting in to config map
+        image: nexus.teamdigitale.test/tba-nifi.1.6.0:0.7.1-CLUSTER
+        env:
+        - name: NIFI_ADDITIONAL_SEARCH_DOMAINS
+          value: "tba-nifi.default.svc.cluster.local teamdigitale.test"
+          # NOTE: must match the StatefulSet name.
         ports:
-        - containerPort: 8080
-        - containerPort: 8033 # To test basic templates inside nifi
+        - name: nifi-http
+          containerPort: 8080
+        - name: nifi-input
+          containerPort: 9998
+        - name: nifi-cluster
+          containerPort: 9999
+        - name: listener
+          containerPort: 8033
+        resources:
+          limits:
+            memory: 12000Mi
         volumeMounts:
-        - name: glusterfsvol
+        - name: private
           mountPath: /usr/nifi/data
           subPath: tba/evergreen2/nifi/data
           readOnly: false
-        - name: glusterfsvol
+        - name: private
           mountPath: /usr/nifi/logs
           subPath: tba/evergreen2/nifi/log
           readOnly: false
-        - name: glusterfsvol
+        - name: private
           mountPath: /tmp/kylo-nifi/failed-flows
           subPath: tba/evergreen2/nifi/failed-flows
           readOnly: false
         - name: glusterfsvol
           mountPath: /usr/nifi/extentions
           subPath: tba/evergreen2/nifi/extentions
-          readOnly: false
+          readOnly: true     # NOTE: was false
         - name: sparkhome
           mountPath: /opt/cloudera/parcels/
           readOnly: true
@@ -132,7 +95,7 @@ spec:
           subPath: tba/security/
           readOnly: true
         - name: nifi-config
-          mountPath: /usr/nifi/conf
+          mountPath: /usr/nifi/conf.temp
         - name: nifi-kylo
           mountPath: /usr/nifi/ext-config
         - name: hosts
@@ -154,22 +117,20 @@ spec:
           mountPath: /usr/nifi/scripts
           subPath: nifi/scripts/edge1
           readOnly: true
-        #- name: daf-root-ca
-        #  mountPath: /etc/ssl/certs
-        - name: home
+        - name: glusterfsvol
           mountPath: /home
+          subPath: nifi/shared/dropzone
           readOnly: false
-      restartPolicy: Always
       volumes:
-      - name: nifi-config
-        configMap:
-          name: nifi
-      - name: nifi-kylo
-        configMap:
-          name: nifi-kylo
       - name: glusterfsvol
         persistentVolumeClaim:
           claimName: gluster-claim
+      - name: nifi-config
+        configMap:
+          name: nifi-cluster
+      - name: nifi-kylo
+        configMap:
+          name: nifi-kylo
       - name: hosts
         hostPath:
           path: /etc/hosts
@@ -197,8 +158,11 @@ spec:
       - name: hive
         hostPath:
           path: /etc/hive/
-      - name: home
-        hostPath:
-          path: /home
-      nodeSelector:
-        nifi: "true"
+  volumeClaimTemplates:
+  - metadata:
+      name: private
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 24Gi

@@ -23,25 +23,26 @@ spec:
         ports:
         - containerPort: 8080
         - containerPort: 8033
+        - containerPort: 8082
         resources:
           limits:
-            memory: 8384Mi
+            memory: 4384Mi
         volumeMounts:
         - name: glusterfsvol
           mountPath: /usr/nifi/data
-          subPath: tba/evergreen2/nifi/data
+          subPath: tbaTest/evergreen2/nifi/data
           readOnly: false
         - name: glusterfsvol
           mountPath: /usr/nifi/logs
-          subPath: tba/evergreen2/nifi/log
+          subPath: tbaTest/evergreen2/nifi/log
           readOnly: false
         - name: glusterfsvol
           mountPath: /tmp/kylo-nifi/failed-flows
-          subPath: tba/evergreen2/nifi/failed-flows
+          subPath: tbaTest/evergreen2/nifi/failed-flows
           readOnly: false
         - name: glusterfsvol
           mountPath: /usr/nifi/extentions
-          subPath: tba/evergreen2/nifi/extentions
+          subPath: tbaTest/evergreen2/nifi/extentions
           readOnly: false
         - name: sparkhome
           mountPath: /opt/cloudera/parcels/
@@ -73,7 +74,6 @@ spec:
         - name: krb5conf
           mountPath: /etc/krb5.conf
           readOnly: true
-          # da aggiungere sulla macchina
         - name: hadoop
           mountPath: /etc/hadoop
           readOnly: true
