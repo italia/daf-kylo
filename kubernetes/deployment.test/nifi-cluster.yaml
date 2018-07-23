@@ -118,8 +118,11 @@ spec:
           subPath: nifi/scripts/edge1
           readOnly: true
         - name: glusterfsvol
-          mountPath: /home
+          mountPath: /var/dropzone
           subPath: nifi/shared/dropzone
+          readOnly: false
+        - name: home
+          mountPath: /home
           readOnly: false
       volumes:
       - name: glusterfsvol
@@ -158,6 +161,9 @@ spec:
       - name: hive
         hostPath:
           path: /etc/hive/
+      - name: home
+        hostPath:
+          path: /home
   volumeClaimTemplates:
   - metadata:
       name: private
