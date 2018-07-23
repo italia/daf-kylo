@@ -118,7 +118,7 @@ spec:
           subPath: nifi/scripts/edge1
           readOnly: true
         - name: glusterfsvol
-          mountPath: /var/dropzone
+          mountPath: /home
           subPath: nifi/shared/dropzone
           readOnly: false
       volumes:
