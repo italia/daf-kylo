@@ -1,0 +1,10 @@
+{
+  "displayName":"test",
+  "email":"test@test.com",
+  "enabled":true,
+  "groups":[
+    "admin",
+    "designers"
+  ],
+  "systemName":"test"
+}

@@ -10,7 +10,7 @@ then
     ENV=''
 fi
 
-echo $ENV
+echo "Working on $1 environment"
 
 case $2 in
 
@@ -34,15 +34,20 @@ case $2 in
 	kubectl delete --namespace="$namespace" -f kubernetes/service/kylo-ui.yaml
 	;;
   nifi)
-	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi.yaml
-	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
+    kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi.yaml
+    kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
     kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/nifi.yaml
     kubectl delete --namespace="$namespace" -f kubernetes/service/nifi.yaml
     ;;
   nifi-cluster)
-	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-cluster.yaml
-	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
-    kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/nifi-cluster.yaml
-    kubectl delete --namespace="$namespace" -f kubernetes/service/nifi-cluster.yaml
+    if [ "$1" = 'test' ]
+    then
+        kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-cluster.yaml
+        kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
+        kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/nifi-cluster.yaml
+        kubectl delete --namespace="$namespace" -f kubernetes/service/nifi-cluster.yaml
+    else
+        echo "This feature is not available for production environment"
+    fi
     ;;
 esac

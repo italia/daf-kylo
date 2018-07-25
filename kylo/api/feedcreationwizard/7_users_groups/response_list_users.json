@@ -1,0 +1,42 @@
+[
+  {
+    displayName: "Analyst",
+    email: null,
+    enabled: true,
+    groups: [
+      "analysts",
+      "user",
+    ],
+    systemName: "analyst",
+  },
+  {
+    displayName: "Designer",
+    email: null,
+    enabled: true,
+    groups: [
+      "designers",
+      "user",
+    ],
+    systemName: "designer",
+  },
+  {
+    displayName: "Operator",
+    email: null,
+    enabled: true,
+    groups: [
+      "operations",
+      "user",
+    ],
+    systemName: "operator",
+  },
+  {
+    displayName: "Data Lake Administrator",
+    email: null,
+    enabled: true,
+    groups: [
+      "admin",
+      "user",
+    ],
+    systemName: "dladmin",
+  },
+]

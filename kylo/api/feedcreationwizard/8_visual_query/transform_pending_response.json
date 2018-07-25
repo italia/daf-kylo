@@ -1,0 +1,5 @@
+{
+  "progress": 0.0, // It goes from 0 to 1
+  "status": "PENDING", // It becames complet when progress is 1
+  "table": "af0ca62f0a75427aa0685f9d49e8c932"
+}

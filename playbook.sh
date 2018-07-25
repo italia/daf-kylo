@@ -10,7 +10,7 @@ then
     ENV=''
 fi
 
-echo $ENV
+echo "Working on $1 environment"
 
 case $2 in
 
@@ -45,9 +45,14 @@ case $2 in
   	kubectl apply --namespace="$namespace" -f kubernetes/service/nifi.yaml
   	;;
   nifi-cluster)
-	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-cluster.yaml
-	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
-  	kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/nifi-cluster.yaml
-  	kubectl apply --namespace="$namespace" -f kubernetes/service/nifi-cluster.yaml
+    if [ "$1" = 'test' ]
+    then
+        kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-cluster.yaml
+        kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
+        kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/nifi-cluster.yaml
+        kubectl apply --namespace="$namespace" -f kubernetes/service/nifi-cluster.yaml
+    else
+        echo "This feature is not available for production environment"
+    fi
 	;;
 esac
