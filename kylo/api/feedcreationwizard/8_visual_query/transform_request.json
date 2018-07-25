@@ -1,0 +1,13 @@
+{
+  "policies": [],
+  "pageSpec": {
+    "firstRow": 0,
+    "numRows": 64,
+    "firstCol": 0,
+    "numCols": 1000
+  },
+  "doProfile": false,
+  "doValidate": true,
+  "script": "import org.apache.spark.sql._\nvar df = sqlContext.sql(\"SELECT tbl10.`agency_id` AS `agency_id_1`, tbl10.`agency_name` AS `agency_name_1`, tbl10.`agency_url` AS `agency_url_1`, tbl10.`agency_timezone` AS `agency_timezone_1`, tbl10.`agency_lang` AS `agency_lang_1`, tbl10.`agency_phone` AS `agency_phone_1`, tbl10.`num` AS `num_1`, tbl10.`processing_dttm` AS `processing_dttm_1`, tbl11.`agency_id` AS `agency_id_2`, tbl11.`agency_name` AS `agency_name_2`, tbl11.`agency_url` AS `agency_url_2`, tbl11.`agency_timezone` AS `agency_timezone_2`, tbl11.`agency_lang` AS `agency_lang_2`, tbl11.`agency_phone` AS `agency_phone_2`, tbl11.`num` AS `num_2`, tbl11.`processing_dttm` AS `processing_dttm_2` FROM `agri__organizzazioni`.`agency_infer_ale` tbl10 INNER JOIN `agri__organizzazioni`.`agency_infer_ale` tbl11 ON tbl11.`agency_id` = tbl10.`agency_id`\")\ndf = df.limit(1000)\ndf\n", // The query you use
+  "datasources": []
+}
