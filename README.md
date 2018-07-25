@@ -56,6 +56,7 @@ make -f Makefile.test mysql
 make -f Makefile.test kylo-services
 make -f Makefile.test kylo-ui
 make -f Makefile.test nifi
+make -f Makefile.test nifi-cluster
 ```
 
 This will use `Makefile` to download the basic empty images and build our custom docker images with required tagging.
