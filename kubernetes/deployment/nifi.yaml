@@ -55,7 +55,7 @@ spec:
           - "slave-prod-9"
       - ip: "192.168.0.133"
         hostnames:
-          - "slave-prod-10.platform.daf.gov.it "
+          - "slave-prod-10.platform.daf.gov.it"
           - "slave-prod-10"
       - ip: "192.168.0.20"
         hostnames:
