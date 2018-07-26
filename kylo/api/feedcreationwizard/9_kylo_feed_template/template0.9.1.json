@@ -41,7 +41,7 @@
 		"existingTableName": null,
 		"structured": false,
 		"targetMergeStrategy": "DEDUPE_AND_MERGE",
-		"feedFormat": {DAF_PARSER.hiveFormat}",
+		"feedFormat": "{DAF_PARSER.hiveFormat}",
 		"targetFormat": "STORED AS PARQUET",
 		"feedTblProperties": null,
 		"fieldPolicies": [
