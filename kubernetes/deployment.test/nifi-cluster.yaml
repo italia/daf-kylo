@@ -110,6 +110,9 @@ spec:
         - name: hive
           mountPath: /etc/hive
           readOnly: true
+        - name: kafka
+          mountPath: /etc/kafka/conf
+          readOnly: true
         - name: hbase
           mountPath: /etc/hbase
           readOnly: true
@@ -151,6 +154,9 @@ spec:
       - name: alternatives
         hostPath:
           path: /etc/alternatives/
+      - name: kafka
+        hostPath:
+          path: /etc/alternatives/kafka-conf
       - name: sparkconf
         hostPath:
           path: /etc/spark2/
