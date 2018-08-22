@@ -16,8 +16,10 @@ spec:
     spec:
       hostNetwork: false
       dnsPolicy: ClusterFirstWithHostNet
+      imagePullSecrets:
+        - name: regsecret
       containers:
-      - image: nexus.teamdigitale.test/tba-nifi.1.6.0:1.1.2-SNAPSHOT
+      - image: nexus.teamdigitale.test/tba-nifi.1.6.0:1.1.1-SNAPSHOT
         name: tba-nifi
         imagePullPolicy: IfNotPresent
         ports:
