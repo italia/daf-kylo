@@ -17,7 +17,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: nexus.teamdigitale.test/tba-kylo-services.9.1:1.1.0
+      - image: nexus.teamdigitale.test/tba-kylo-services.9.1:1.0.3-FIX
         name: tba-kylo-services
         imagePullPolicy: IfNotPresent
         ports:
@@ -40,6 +40,9 @@ spec:
           readOnly: true
         - name: sparkconf
           mountPath: /etc/spark2/
+          readOnly: true
+        - name: spark1conf
+          mountPath: /etc/spark/
           readOnly: true
         - name: alternatives
           mountPath: /etc/alternatives/
@@ -76,6 +79,9 @@ spec:
       - name: alternatives
         hostPath:
           path: /etc/alternatives/
+      - name: spark1conf
+        hostPath:
+          path: /etc/spark/
       - name: sparkconf
         hostPath:
           path: /etc/spark2/
