@@ -29,11 +29,6 @@ spec:
                       values:
                       - "true"
                   topologyKey: kubernetes.io/hostname
-      hostAliases:
-      - ip: "192.168.30.12"
-        hostnames:
-          - "master.novalocal"
-          - "master"
       restartPolicy: Always
       nodeSelector:
         nifi-cluster: "true"
