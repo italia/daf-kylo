@@ -12,5 +12,3 @@ spec:
     port: 8080
   selector:
     app: tba-nifi
-status:
-  loadBalancer: {}
