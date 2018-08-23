@@ -17,7 +17,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: nexus.teamdigitale.test/tba-kylo-ui.9.1:1.1.0
+      - image: nexus.teamdigitale.test/tba-kylo-ui.9.1:1.0.2-FIX
         name: tba-kylo-ui
         imagePullPolicy: IfNotPresent
         ports:
