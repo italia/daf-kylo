@@ -29,18 +29,13 @@ spec:
                       values:
                       - "true"
                   topologyKey: kubernetes.io/hostname
-      hostAliases:
-      - ip: "192.168.30.12"
-        hostnames:
-          - "master.novalocal"
-          - "master"
       restartPolicy: Always
       nodeSelector:
         nifi-cluster: "true"
       containers:
       - name: tba-nifi
         # TODO: modify image to support NIFI_ADDITIONAL_SEARCH_DOMAINS, move other setting in to config map
-        image: nexus.teamdigitale.test/tba-nifi.1.6.0:0.7.1-CLUSTER
+        image: nexus.teamdigitale.test/tba-nifi.1.6.0:0.7.5-CLUSTERFIX
         env:
         - name: NIFI_ADDITIONAL_SEARCH_DOMAINS
           value: "tba-nifi.default.svc.cluster.local teamdigitale.test"

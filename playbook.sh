@@ -39,11 +39,16 @@ case $2 in
   	kubectl apply --namespace="$namespace" -f kubernetes/service/kylo-ui.yaml
 	;;
   nifi)
-	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi.yaml
-	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
-  	kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/nifi.yaml
-  	kubectl apply --namespace="$namespace" -f kubernetes/service/nifi.yaml
-  	;;
+    if [ "$1" = 'prod' ]
+    then
+	      kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi.yaml
+	      kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
+  	    kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/nifi.yaml
+  	    kubectl apply --namespace="$namespace" -f kubernetes/service/nifi.yaml
+    else
+        echo "This feature is deprecated for testing environment; use nifi-cluster"
+    fi
+  ;;
   nifi-cluster)
     if [ "$1" = 'test' ]
     then
