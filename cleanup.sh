@@ -14,6 +14,11 @@ echo "Working on $1 environment"
 
 case $2 in
 
+  all)
+	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV --recursive
+	kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV --recursive
+	kubectl apply --namespace="$namespace" -f kubernetes/service --recursive
+	;;
   activemq)
 	kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/activemq.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/service/activemq.yaml
@@ -34,10 +39,15 @@ case $2 in
 	kubectl delete --namespace="$namespace" -f kubernetes/service/kylo-ui.yaml
 	;;
   nifi)
-    kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi.yaml
-    kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
-    kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/nifi.yaml
-    kubectl delete --namespace="$namespace" -f kubernetes/service/nifi.yaml
+    if [ "$1" = 'prod' ]
+    then
+        kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi.yaml
+        kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
+        kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/nifi.yaml
+        kubectl delete --namespace="$namespace" -f kubernetes/service/nifi.yaml
+    else
+        echo "This feature is deprecated for testing environment; use nifi-cluster"
+    fi
     ;;
   nifi-cluster)
     if [ "$1" = 'test' ]
