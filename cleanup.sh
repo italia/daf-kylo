@@ -15,9 +15,9 @@ echo "Working on $1 environment"
 case $2 in
 
   all)
-	kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV --recursive
-	kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV --recursive
-	kubectl apply --namespace="$namespace" -f kubernetes/service --recursive
+	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV --recursive
+	kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV --recursive
+	kubectl delete --namespace="$namespace" -f kubernetes/service --recursive
 	;;
   activemq)
 	kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/activemq.yaml
