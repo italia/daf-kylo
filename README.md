@@ -1,5 +1,10 @@
 # daf-kylo
 
+## Getting started with Kubernetes
+```
+./playbook.sh test all
+```
+
 ## Kylo Stack
 
 [Kylo stack dependencies](http://kylo.readthedocs.io/en/v0.8.3/installation/Dependencies.html#kylo-stack-dependencies)

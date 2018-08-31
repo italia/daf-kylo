@@ -32,6 +32,8 @@ spec:
       restartPolicy: Always
       nodeSelector:
         nifi-cluster: "true"
+      imagePullSecrets:
+        - name: regsecret
       containers:
       - name: tba-nifi
         # TODO: modify image to support NIFI_ADDITIONAL_SEARCH_DOMAINS, move other setting in to config map
