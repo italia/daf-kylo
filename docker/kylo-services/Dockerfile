@@ -42,8 +42,7 @@ RUN adduser kylo kylo
 #Grant ownership to kylo over kylo :)
 RUN chown -R kylo:kylo /opt/kylo
 
-ENV SPARK_HOME=/opt/cloudera/parcels/SPARK2/lib/spark2
-
+ENV SPARK_HOME=/opt/cloudera/parcels/CDH-5.12.2-1.cdh5.12.2.p0.4/lib/spark
 EXPOSE 8420
 # RUN kylo-service
 CMD ["java", "-cp", "/opt/kylo/kylo-services/conf:/opt/kylo/kylo-services/lib/*:/opt/kylo/kylo-services/lib/nifi-v1.2/*:/opt/kylo/kylo-services/plugin/*", "com.thinkbiganalytics.server.KyloServerApplication"]

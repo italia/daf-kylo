@@ -56,7 +56,6 @@ make -f Makefile.test mysql
 make -f Makefile.test kylo-services
 make -f Makefile.test kylo-ui
 make -f Makefile.test nifi
-make -f Makefile.test nifi-cluster
 ```
 
 This will use `Makefile` to download the basic empty images and build our custom docker images with required tagging.
@@ -160,6 +159,13 @@ kubectl apply -f config-map/kylo-ui.yaml
 After these you are able to login into kylo ui!
 
 As pointed out above, once this is done *ldap login* will be substituted by *default login* , this will allow to log in with default user `dladmin/thinkbig`. This has to be done to create users with the same name that those exist in ldap in order to grant them permissions (same functionality but for groups [is currently being fixed by R&D](https://kylo-io.atlassian.net/browse/KYLO-496)) . Once user/s (or group/s) is/are created change back `config-map/kylo-services.yaml` and `config-map/kylo-ui.yaml` and redeploy again. Ldap is now good to go.
+
+### Bootstrap note
+When kylo starts for the first time it need liquibase for creating Kylo DB, make sure that in the application.properties in kylo-service's config map:
+
+```
+liquibase.enabled=true
+```
 
 ## Log configuration
 
