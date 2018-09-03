@@ -2,3 +2,4 @@ it.gov.daf.nifi.processors.DafCSVCleansing
 it.gov.daf.nifi.processors.DafJSONCleansing
 it.gov.daf.nifi.processors.DafJSONArrayToMultiline
 it.gov.daf.nifi.processors.DafPreStandardization
+it.gov.daf.nifi.processors.DafPutKudu
