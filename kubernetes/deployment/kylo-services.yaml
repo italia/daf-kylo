@@ -17,6 +17,14 @@ spec:
         hostnames:
           - "master.platform.daf.gov.it"
           - "master"
+      - ip: "192.168.0.181"
+        hostnames:
+          - "master-2.platform.daf.gov.it"
+          - "master"
+      - ip: "192.168.0.180"
+        hostnames:
+          - "master-3.platform.daf.gov.it"
+          - "master"
       - ip: "192.168.0.22"
         hostnames:
           - "slave1.platform.daf.gov.it"
