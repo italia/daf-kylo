@@ -52,10 +52,10 @@ nifi:
 
 .PHONY: build-kylo
 build-kylo:
-	git clone https://github.com/italia/kylo.git ../kylok8s | true
+	git clone https://github.com/Teradata/kylo.git ../kylok8s | true
 	cd ../kylok8s && \
-	git checkout release/0.9.1-daf && \
-        git apply kylo/patch/hive_patch.patch && \
+	git checkout release/0.9.1 && \
+        git apply ../daf-kylo/kylo/patch/hive_patch.patch && \
 	git pull && \
 	mvn clean install -DskipTests && \
 	mkdir install/install-tar/target/kylo && \
