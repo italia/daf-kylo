@@ -149,5 +149,3 @@ spec:
       - name: sparkconf
         hostPath:
           path: /etc/spark2/
-      nodeSelector:
-        nifi: "true"

@@ -10,15 +10,15 @@ spec:
   - name: "8420"
     port: 8420
     targetPort: 8420
-    nodePort: 31420
+    nodePort: 31720
   - name: "8450"
     port: 8450
     targetPort: 8450
-    nodePort: 31429
+    nodePort: 31728
   - name: "8451"
     port: 8451
     targetPort: 8451
-    nodePort: 31493
+    nodePort: 31793
   selector:
     app: tba-kylo-services
 status:
