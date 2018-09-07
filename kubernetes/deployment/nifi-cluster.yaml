@@ -16,6 +16,87 @@ spec:
         app: tba-nifi
         nifi-cluster: "true"
     spec:
+      hostAliases:
+         - ip: "192.168.0.23"
+           hostnames:
+             - "master.platform.daf.gov.it"
+             - "master"
+         - ip: "192.168.0.181"
+           hostnames:
+             - "master-2.platform.daf.gov.it"
+             - "master"
+         - ip: "192.168.0.180"
+           hostnames:
+             - "master-3.platform.daf.gov.it"
+             - "master"
+         - ip: "192.168.0.22"
+           hostnames:
+             - "slave1.platform.daf.gov.it"
+             - "slave1"
+         - ip: "192.168.0.24"
+           hostnames:
+             - "slave2.platform.daf.gov.it"
+             - "slave2"
+         - ip: "192.168.0.36"
+           hostnames:
+             - "slave3.platform.daf.gov.it"
+             - "slave3"
+         - ip: "192.168.0.26"
+           hostnames:
+             - "slave4.platform.daf.gov.it"
+             - "slave4"
+         - ip: "192.168.0.55"
+           hostnames:
+             - "slave5.platform.daf.gov.it"
+             - "slave5"
+         - ip: "192.168.0.56"
+           hostnames:
+             - "slave6.platform.daf.gov.it"
+             - "slave6"
+         - ip: "192.168.0.135"
+           hostnames:
+             - "slave-prod-7.platform.daf.gov.it"
+             - "slave-prod-7"
+         - ip: "192.168.0.132"
+           hostnames:
+             - "slave-prod-8.platform.daf.gov.it"
+             - "slave-prod-8"
+         - ip: "192.168.0.134"
+           hostnames:
+             - "slave-prod-9.platform.daf.gov.it"
+             - "slave-prod-9"
+         - ip: "192.168.0.133"
+           hostnames:
+             - "slave-prod-10.platform.daf.gov.it"
+             - "slave-prod-10"
+         - ip: "192.168.0.20"
+           hostnames:
+             - "edge1.platform.daf.gov.it"
+             - "edge1"
+         - ip: "192.168.0.21"
+           hostnames:
+             - "edge2.platform.daf.gov.it"
+             - "edge2"
+         - ip: "192.168.0.27"
+           hostnames:
+             - "edge3.platform.daf.gov.it"
+             - "edge3"
+         - ip: "192.168.0.53"
+           hostnames:
+             - "edge4.platform.daf.gov.it"
+             - "edge4"
+         - ip: "192.168.0.54"
+           hostnames:
+             - "edge5.platform.daf.gov.it"
+             - "edge5"
+         - ip: "192.168.0.29"
+           hostnames:
+             - "idm.daf.gov.it"
+             - "idm"
+         - ip: "192.168.0.43"
+           hostnames:
+             - "master.elasticsearch.daf.gov.it"
+             - "master"
       #hostNetwork: false                      # NOTE: Do not change because it is used the services
       affinity:
         podAntiAffinity:
@@ -37,10 +118,10 @@ spec:
       containers:
       - name: tba-nifi
         # TODO: modify image to support NIFI_ADDITIONAL_SEARCH_DOMAINS, move other setting in to config map
-        image: nexus.teamdigitale.test/tba-nifi.1.6.0:0.7.5-CLUSTERFIX
+        image: nexus.daf.teamdigitale.it/tba-nifi.1.6.0:1.0.1-CLUSTER
         env:
         - name: NIFI_ADDITIONAL_SEARCH_DOMAINS
-          value: "tba-nifi.default.svc.cluster.local teamdigitale.test"
+          value: "tba-nifi.sec.svc.cluster.local"
           # NOTE: must match the StatefulSet name.
         ports:
         - name: nifi-http

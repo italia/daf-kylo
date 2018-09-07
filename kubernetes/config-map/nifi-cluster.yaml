@@ -1,0 +1,847 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nifi-cluster
+  namespace: default
+data:
+  nifi.properties: |
+    # Licensed to the Apache Software Foundation (ASF) under one or more
+    # contributor license agreements.  See the NOTICE file distributed with
+    # this work for additional information regarding copyright ownership.
+    # The ASF licenses this file to You under the Apache License, Version 2.0
+    # (the "License"); you may not use this file except in compliance with
+    # the License.  You may obtain a copy of the License at
+    #
+    #     http://www.apache.org/licenses/LICENSE-2.0
+    #
+    # Unless required by applicable law or agreed to in writing, software
+    # distributed under the License is distributed on an "AS IS" BASIS,
+    # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    # See the License for the specific language governing permissions and
+    # limitations under the License.
+
+    # Core Properties #
+    nifi.flow.configuration.file=./data/flow.xml.gz
+    nifi.flow.configuration.archive.enabled=true
+    nifi.flow.configuration.archive.dir=./data/archive/
+    nifi.flow.configuration.archive.max.time=30 days
+    nifi.flow.configuration.archive.max.storage=500 MB
+    nifi.flow.configuration.archive.max.count=
+    nifi.flowcontroller.autoResumeState=true
+    nifi.flowcontroller.graceful.shutdown.period=10 sec
+    nifi.flowservice.writedelay.interval=500 ms
+    nifi.administrative.yield.duration=30 sec
+    # If a component has no work to do (is "bored"), how long should we wait before checking again for work?
+    nifi.bored.yield.duration=10 millis
+
+    nifi.authorizer.configuration.file=./conf/authorizers.xml
+    nifi.login.identity.provider.configuration.file=./conf/login-identity-providers.xml
+    nifi.templates.directory=./data/templates
+    nifi.ui.banner.text=
+    nifi.ui.autorefresh.interval=30 sec
+    nifi.nar.library.directory=./lib
+    nifi.nar.working.directory=./work/nar/
+    nifi.documentation.working.directory=./work/docs/components
+
+    ####################
+    # State Management #
+    ####################
+    nifi.state.management.configuration.file=./conf/state-management.xml
+    # The ID of the local state provider
+    nifi.state.management.provider.local=local-provider
+    # The ID of the cluster-wide state provider. This will be ignored if NiFi is not clustered but must be populated if running in a cluster.
+    nifi.state.management.provider.cluster=zk-provider
+    # Specifies whether or not this instance of NiFi should run an embedded ZooKeeper server
+    nifi.state.management.embedded.zookeeper.start=false
+    # Properties file that provides the ZooKeeper properties to use if <nifi.state.management.embedded.zookeeper.start> is set to true
+    nifi.state.management.embedded.zookeeper.properties=./conf/zookeeper.properties
+
+
+    # H2 Settings
+    nifi.database.directory=./data/database_repository
+    nifi.h2.url.append=;LOCK_TIMEOUT=25000;WRITE_DELAY=0;AUTO_SERVER=FALSE
+
+    # FlowFile Repository
+    nifi.flowfile.repository.implementation=org.apache.nifi.controller.repository.WriteAheadFlowFileRepository
+    nifi.flowfile.repository.directory=./data/flowfile_repository
+    nifi.flowfile.repository.partitions=4
+    nifi.flowfile.repository.checkpoint.interval=2 mins
+    nifi.flowfile.repository.always.sync=false
+
+    nifi.swap.manager.implementation=org.apache.nifi.controller.FileSystemSwapManager
+    nifi.queue.swap.threshold=20000
+    nifi.swap.in.period=5 sec
+    nifi.swap.in.threads=1
+    nifi.swap.out.period=5 sec
+    nifi.swap.out.threads=4
+
+    # Content Repository
+    nifi.content.repository.implementation=org.apache.nifi.controller.repository.FileSystemRepository
+    nifi.content.claim.max.appendable.size=10 MB
+    nifi.content.claim.max.flow.files=100
+    nifi.content.repository.directory.default=./data/content_repository
+    nifi.content.repository.archive.max.retention.period=12 hours
+    nifi.content.repository.archive.max.usage.percentage=50%
+    nifi.content.repository.archive.enabled=true
+    nifi.content.repository.always.sync=false
+    nifi.content.viewer.url=/nifi-content-viewer/
+
+    # Provenance Repository Properties
+    nifi.provenance.repository.implementation=com.thinkbiganalytics.nifi.provenance.repo.KyloVolatileProvenanceEventRepository
+    # nifi.provenance.repository.implementation=org.apache.nifi.provenance.PersistentProvenanceRepository
+    nifi.provenance.repository.debug.frequency=1_000_000
+    nifi.provenance.repository.encryption.key.provider.implementation=
+    nifi.provenance.repository.encryption.key.provider.location=
+    nifi.provenance.repository.encryption.key.id=
+    nifi.provenance.repository.encryption.key=
+
+    # Persistent Provenance Repository Properties
+    nifi.provenance.repository.directory.default=./data/provenance_repository
+    nifi.provenance.repository.max.storage.time=24 hours
+    nifi.provenance.repository.max.storage.size=1 GB
+    nifi.provenance.repository.rollover.time=30 secs
+    nifi.provenance.repository.rollover.size=100 MB
+    nifi.provenance.repository.query.threads=2
+    nifi.provenance.repository.index.threads=2
+    nifi.provenance.repository.compress.on.rollover=true
+    nifi.provenance.repository.always.sync=false
+    nifi.provenance.repository.journal.count=16
+    # Comma-separated list of fields. Fields that are not indexed will not be searchable. Valid fields are:
+    # EventType, FlowFileUUID, Filename, TransitURI, ProcessorID, AlternateIdentifierURI, Relationship, Details
+    nifi.provenance.repository.indexed.fields=EventType, FlowFileUUID, Filename, ProcessorID, Relationship
+    # FlowFile Attributes that should be indexed and made searchable.  Some examples to consider are filename, uuid, mime.type
+    nifi.provenance.repository.indexed.attributes=
+    # Large values for the shard size will result in more Java heap usage when searching the Provenance Repository
+    # but should provide better performance
+    nifi.provenance.repository.index.shard.size=500 MB
+    # Indicates the maximum length that a FlowFile attribute can be when retrieving a Provenance Event from
+    # the repository. If the length of any attribute exceeds this value, it will be truncated when the event is retrieved.
+    nifi.provenance.repository.max.attribute.length=65536
+
+    # Volatile Provenance Respository Properties
+    nifi.provenance.repository.buffer.size=100000
+
+    # Component Status Repository
+    nifi.components.status.repository.implementation=org.apache.nifi.controller.status.history.VolatileComponentStatusRepository
+    nifi.components.status.repository.buffer.size=1440
+    nifi.components.status.snapshot.frequency=1 min
+
+    # Site to Site properties
+    nifi.remote.input.host=
+    nifi.remote.input.secure=false
+    nifi.remote.input.socket.port=9998
+    nifi.remote.input.http.enabled=true
+    nifi.remote.input.http.transaction.ttl=30 sec
+    nifi.remote.contents.cache.expiration=30 secs
+
+    # web properties #
+    nifi.web.war.directory=./lib
+    nifi.web.http.host=
+    nifi.web.http.port=8080
+    nifi.web.http.network.interface.default=eth0
+    nifi.web.https.host=
+    nifi.web.https.port=
+    nifi.web.https.network.interface.default=
+    nifi.web.jetty.working.directory=./work/jetty
+    nifi.web.jetty.threads=200
+
+    # security properties #
+    nifi.sensitive.props.key=
+    nifi.sensitive.props.key.protected=
+    nifi.sensitive.props.algorithm=PBEWITHMD5AND256BITAES-CBC-OPENSSL
+    nifi.sensitive.props.provider=BC
+    nifi.sensitive.props.additional.keys=
+
+    nifi.security.keystore=
+    nifi.security.keystoreType=
+    nifi.security.keystorePasswd=
+    nifi.security.keyPasswd=
+    nifi.security.truststore=
+    nifi.security.truststoreType=
+    nifi.security.truststorePasswd=
+    nifi.security.needClientAuth=
+    nifi.security.user.authorizer=file-provider
+    nifi.security.user.login.identity.provider=
+    nifi.security.ocsp.responder.url=
+    nifi.security.ocsp.responder.certificate=
+
+    # Identity Mapping Properties #
+    # These properties allow normalizing user identities such that identities coming from different identity providers
+    # (certificates, LDAP, Kerberos) can be treated the same internally in NiFi. The following example demonstrates normalizing
+    # DNs from certificates and principals from Kerberos into a common identity string:
+    #
+    # nifi.security.identity.mapping.pattern.dn=^CN=(.*?), OU=(.*?), O=(.*?), L=(.*?), ST=(.*?), C=(.*?)$
+    # nifi.security.identity.mapping.value.dn=$1@$2
+    # nifi.security.identity.mapping.pattern.kerb=^(.*?)/instance@(.*?)$
+    # nifi.security.identity.mapping.value.kerb=$1@$2
+
+    # cluster common properties (all nodes must have same values) #
+    nifi.cluster.protocol.heartbeat.interval=15 sec
+    nifi.cluster.protocol.is.secure=false
+
+    # cluster node properties (only configure for cluster nodes) #
+    nifi.cluster.is.node=true
+    nifi.cluster.node.address=
+    nifi.cluster.node.protocol.port=9999
+    nifi.cluster.node.protocol.threads=25
+    nifi.cluster.node.protocol.max.threads=50
+    nifi.cluster.node.event.history.size=25
+    nifi.cluster.node.connection.timeout=500 sec
+    nifi.cluster.node.read.timeout=500 sec
+    nifi.cluster.firewall.file=
+    nifi.cluster.flow.election.max.wait.time=5 mins
+    nifi.cluster.flow.election.max.candidates=3
+
+    nifi.cluster.node.max.concurrent.requests=500
+    nifi.cluster.node.request.replication.claim.timeout=20 secs
+
+    # zookeeper properties, used for cluster management #
+    nifi.zookeeper.connect.string=master:2181
+    nifi.zookeeper.connect.timeout=500 secs
+    nifi.zookeeper.session.timeout=500 secs
+    nifi.zookeeper.root.node=/tba-nifi-cluster
+
+    # kerberos #
+    nifi.kerberos.krb5.file=/etc/krb5.conf
+
+    # kerberos service principal #
+    nifi.kerberos.service.principal=daf@PLATFORM.DAF.LOCAL
+    nifi.kerberos.service.keytab.location=/usr/nifi/daf.keytab
+
+    # kerberos spnego principal #
+    nifi.kerberos.spnego.principal=
+    nifi.kerberos.spnego.keytab.location=
+    nifi.kerberos.spnego.authentication.expiration=12 hours
+
+    # external properties files for variable registry
+    # supports a comma delimited list of file locations
+    nifi.variable.registry.properties=
+    nifi.web.http.network.interface.lo=lo
+  activemq.properties: |-
+    ###
+    # #%L
+    # kylo-jms-service-activemq
+    # %%
+    # Copyright (C) 2017 ThinkBig Analytics
+    # %%
+    # Licensed under the Apache License, Version 2.0 (the "License");
+    # you may not use this file except in compliance with the License.
+    # You may obtain a copy of the License at
+    #
+    #     http://www.apache.org/licenses/LICENSE-2.0
+    #
+    # Unless required by applicable law or agreed to in writing, software
+    # distributed under the License is distributed on an "AS IS" BASIS,
+    # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    # See the License for the specific language governing permissions and
+    # limitations under the License.
+    # #L%
+    ###
+    jms.activemq.broker.url=tcp://tba-activemq:61616
+    #jms.activemq.broker.username=admin
+    #jms.activemq.broker.password=admin
+    ##Redeliver policy for the Listeners when they fail (http://activemq.apache.org/redelivery-policy.html)
+    #jms.maximumRedeliveries=100
+    #jms.redeliveryDelay=1000
+    #jms.maximumRedeliveryDelay=600000L
+    #jms.backOffMultiplier=5
+    #jms.useExponentialBackOff=false
+  bootstrap.conf: |
+    #
+    # Licensed to the Apache Software Foundation (ASF) under one or more
+    # contributor license agreements.  See the NOTICE file distributed with
+    # this work for additional information regarding copyright ownership.
+    # The ASF licenses this file to You under the Apache License, Version 2.0
+    # (the "License"); you may not use this file except in compliance with
+    # the License.  You may obtain a copy of the License at
+    #
+    #   http://www.apache.org/licenses/LICENSE-2.0
+    #
+    # Unless required by applicable law or agreed to in writing, software
+    # distributed under the License is distributed on an "AS IS" BASIS,
+    # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    # See the License for the specific language governing permissions and
+    # limitations under the License.
+    #
+
+    # Java command to use when running NiFi
+    java=java
+
+    # Username to use when running NiFi. This value will be ignored on Windows.
+    run.as=
+
+    # Configure where NiFi's lib and conf directories live
+    lib.dir=./lib
+    conf.dir=./conf
+
+    # How long to wait after telling NiFi to shutdown before explicitly killing the Process
+    graceful.shutdown.seconds=20
+
+    # Disable JSR 199 so that we can use JSP's without running a JDK
+    java.arg.1=-Dorg.apache.jasper.compiler.disablejsr199=true
+
+    # JVM memory settings
+    java.arg.2=-Xms10g
+    java.arg.3=-Xmx10g
+
+    # Enable Remote Debugging
+    #java.arg.debug=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000
+
+    java.arg.4=-Djava.net.preferIPv4Stack=true
+
+    # allowRestrictedHeaders is required for Cluster/Node communications to work properly
+    java.arg.5=-Dsun.net.http.allowRestrictedHeaders=true
+    java.arg.6=-Djava.protocol.handler.pkgs=sun.net.www.protocol
+
+    # JAVA 8 tuning as describe on hortonwork guide
+
+    java.arg.7=-XX:ReservedCodeCacheSize=256m
+    java.arg.8=-XX:CodeCacheMinimumFreeSpace=10m
+    java.arg.9=-XX:+UseCodeCacheFlushing
+
+
+    # The G1GC is still considered experimental but has proven to be very advantageous in providing great
+    # performance without significant "stop-the-world" delays.
+    java.arg.13=-XX:+UseG1GC
+
+    #Set headless mode by default
+    java.arg.14=-Djava.awt.headless=true
+
+    # Master key in hexadecimal format for encrypted sensitive configuration values
+    nifi.bootstrap.sensitive.key=
+
+    # Sets the provider of SecureRandom to /dev/urandom to prevent blocking on VMs
+    java.arg.15=-Djava.security.egd=file:/dev/urandom
+
+    java.arg.16=-Dkylo.nifi.configPath=./ext-config
+    ###
+    # Notification Services for notifying interested parties when NiFi is stopped, started, dies
+    ###
+
+    # XML File that contains the definitions of the notification services
+    notification.services.file=./conf/bootstrap-notification-services.xml
+
+    # In the case that we are unable to send a notification for an event, how many times should we retry?
+    notification.max.attempts=5
+
+    # Comma-separated list of identifiers that are present in the notification.services.file; which services should be used to notify when NiFi is started?
+    #nifi.start.notification.services=email-notification
+
+    # Comma-separated list of identifiers that are present in the notification.services.file; which services should be used to notify when NiFi is stopped?
+    #nifi.stop.notification.services=email-notification
+
+    # Comma-separated list of identifiers that are present in the notification.services.file; which services should be used to notify when NiFi dies?
+    #nifi.dead.notification.services=email-notification
+  zookeeper.properties: |-
+    #
+    #
+    # Licensed to the Apache Software Foundation (ASF) under one
+    # or more contributor license agreements.  See the NOTICE file
+    # distributed with this work for additional information
+    # regarding copyright ownership.  The ASF licenses this file
+    # to you under the Apache License, Version 2.0 (the
+    # "License"); you may not use this file except in compliance
+    # with the License.  You may obtain a copy of the License at
+    #
+    #   http://www.apache.org/licenses/LICENSE-2.0
+    #
+    # Unless required by applicable law or agreed to in writing,
+    # software distributed under the License is distributed on an
+    # "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    # KIND, either express or implied.  See the License for the
+    # specific language governing permissions and limitations
+    # under the License.
+    #
+    #
+    #
+
+    clientPort=2181
+    initLimit=10
+    autopurge.purgeInterval=24
+    syncLimit=5
+    tickTime=2000
+    dataDir=./data/state/zookeeper
+    autopurge.snapRetainCount=30
+
+    #
+    # Specifies the servers that are part of this zookeeper ensemble. For
+    # every NiFi instance running an embedded zookeeper, there needs to be
+    # a server entry below. For instance:
+    #
+    # server.1=nifi-node1-hostname:2888:3888
+    # server.2=nifi-node2-hostname:2888:3888
+    # server.3=nifi-node3-hostname:2888:3888
+    #
+    # The index of the server corresponds to the myid file that gets created
+    # in the dataDir of each node running an embedded zookeeper. See the
+    # administration guide for more details.
+    #
+
+    server.1=
+  logback.xml: |-
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!--
+      Licensed to the Apache Software Foundation (ASF) under one or more
+      contributor license agreements.  See the NOTICE file distributed with
+      this work for additional information regarding copyright ownership.
+      The ASF licenses this file to You under the Apache License, Version 2.0
+      (the "License"); you may not use this file except in compliance with
+      the License.  You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+    -->
+
+    <configuration scan="true" scanPeriod="30 seconds">
+        <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+            <resetJUL>true</resetJUL>
+        </contextListener>
+
+        <appender name="APP_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${org.apache.nifi.bootstrap.config.log.dir}/nifi-app.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <!--
+                  For daily rollover, use 'app_%d.log'.
+                  For hourly rollover, use 'app_%d{yyyy-MM-dd_HH}.log'.
+                  To GZIP rolled files, replace '.log' with '.log.gz'.
+                  To ZIP rolled files, replace '.log' with '.log.zip'.
+                -->
+                <fileNamePattern>${org.apache.nifi.bootstrap.config.log.dir}/nifi-app_%d.%i.log</fileNamePattern>
+                <maxFileSize>1024MB</maxFileSize>
+                <!-- keep 30 log files worth of history -->
+                <maxHistory>30</maxHistory>
+            </rollingPolicy>
+            <immediateFlush>true</immediateFlush>
+            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <pattern>%date %level [%thread] %F:%L %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="USER_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${org.apache.nifi.bootstrap.config.log.dir}/nifi-user.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <!--
+                  For daily rollover, use 'user_%d.log'.
+                  For hourly rollover, use 'user_%d{yyyy-MM-dd_HH}.log'.
+                  To GZIP rolled files, replace '.log' with '.log.gz'.
+                  To ZIP rolled files, replace '.log' with '.log.zip'.
+                -->
+                <fileNamePattern>${org.apache.nifi.bootstrap.config.log.dir}/nifi-user_%d.log</fileNamePattern>
+                <!-- keep 30 log files worth of history -->
+                <maxHistory>30</maxHistory>
+            </rollingPolicy>
+            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <pattern>%date %level [%thread] %F:%L %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="BOOTSTRAP_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${org.apache.nifi.bootstrap.config.log.dir}/nifi-bootstrap.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <!--
+                  For daily rollover, use 'user_%d.log'.
+                  For hourly rollover, use 'user_%d{yyyy-MM-dd_HH}.log'.
+                  To GZIP rolled files, replace '.log' with '.log.gz'.
+                  To ZIP rolled files, replace '.log' with '.log.zip'.
+                -->
+                <fileNamePattern>${org.apache.nifi.bootstrap.config.log.dir}/nifi-bootstrap_%d.log</fileNamePattern>
+                <!-- keep 5 log files worth of history -->
+                <maxHistory>5</maxHistory>
+            </rollingPolicy>
+            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <pattern>%date %level [%thread] %F:%L %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                <pattern>%date %level [%thread] %F:%L %msg%n</pattern>
+            </encoder>
+        </appender>
+        <!-- valid logging levels: TRACE, DEBUG, INFO, WARN, ERROR -->
+        <logger name="org.apache.nifi" level="INFO"/>
+        <logger name="org.apache.nifi.processors" level="WARN"/>
+        <logger name="org.apache.nifi.processors.standard.LogAttribute" level="INFO"/>
+        <logger name="org.apache.nifi.processors.standard.LogMessage" level="INFO"/>
+        <logger name="org.apache.nifi.controller.repository.StandardProcessSession" level="WARN" />
+
+
+        <logger name="org.apache.zookeeper.ClientCnxn" level="ERROR" />
+        <logger name="org.apache.zookeeper.server.NIOServerCnxn" level="ERROR" />
+        <logger name="org.apache.zookeeper.server.NIOServerCnxnFactory" level="ERROR" />
+        <logger name="org.apache.zookeeper.server.quorum" level="ERROR" />
+        <logger name="org.apache.zookeeper.ZooKeeper" level="ERROR" />
+        <logger name="org.apache.zookeeper.server.PrepRequestProcessor" level="ERROR" />
+
+        <logger name="org.apache.calcite.runtime.CalciteException" level="OFF" />
+
+        <logger name="org.apache.curator.framework.recipes.leader.LeaderSelector" level="OFF" />
+        <logger name="org.apache.curator.ConnectionState" level="OFF" />
+
+        <!-- Logger for managing logging statements for nifi clusters. -->
+        <logger name="org.apache.nifi.cluster" level="INFO"/>
+
+        <!-- Logger for logging HTTP requests received by the web server. -->
+        <logger name="org.apache.nifi.server.JettyServer" level="INFO"/>
+
+        <!-- Logger for managing logging statements for jetty -->
+        <logger name="org.eclipse.jetty" level="INFO"/>
+
+        <!-- Suppress non-error messages due to excessive logging by class or library -->
+        <logger name="com.sun.jersey.spi.container.servlet.WebComponent" level="ERROR"/>
+        <logger name="com.sun.jersey.spi.spring" level="ERROR"/>
+        <logger name="org.springframework" level="ERROR"/>
+
+        <!-- Suppress non-error messages due to known warning about redundant path annotation (NIFI-574) -->
+        <logger name="com.sun.jersey.spi.inject.Errors" level="ERROR"/>
+
+        <!--
+            Logger for capturing user events. We do not want to propagate these
+            log events to the root logger. These messages are only sent to the
+            user-log appender.
+        -->
+        <logger name="org.apache.nifi.web.security" level="INFO" additivity="false">
+            <appender-ref ref="USER_FILE"/>
+        </logger>
+        <logger name="org.apache.nifi.web.api.config" level="INFO" additivity="false">
+            <appender-ref ref="USER_FILE"/>
+        </logger>
+        <logger name="org.apache.nifi.authorization" level="INFO" additivity="false">
+            <appender-ref ref="USER_FILE"/>
+        </logger>
+        <logger name="org.apache.nifi.cluster.authorization" level="INFO" additivity="false">
+            <appender-ref ref="USER_FILE"/>
+        </logger>
+        <logger name="org.apache.nifi.web.filter.RequestLogger" level="INFO" additivity="false">
+            <appender-ref ref="USER_FILE"/>
+        </logger>
+
+
+        <!--
+            Logger for capturing Bootstrap logs and NiFi's standard error and standard out.
+        -->
+        <logger name="org.apache.nifi.bootstrap" level="INFO" additivity="false">
+            <appender-ref ref="BOOTSTRAP_FILE" />
+        </logger>
+        <logger name="org.apache.nifi.bootstrap.Command" level="INFO" additivity="false">
+            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="BOOTSTRAP_FILE" />
+        </logger>
+
+        <!-- Everything written to NiFi's Standard Out will be logged with the logger org.apache.nifi.StdOut at INFO level -->
+        <logger name="org.apache.nifi.StdOut" level="INFO" additivity="false">
+            <appender-ref ref="BOOTSTRAP_FILE" />
+        </logger>
+
+        <!-- Everything written to NiFi's Standard Error will be logged with the logger org.apache.nifi.StdErr at ERROR level -->
+        <logger name="org.apache.nifi.StdErr" level="ERROR" additivity="false">
+            <appender-ref ref="BOOTSTRAP_FILE" />
+        </logger>
+
+
+        <root level="INFO">
+            <appender-ref ref="APP_FILE"/>
+        </root>
+    </configuration>
+  login-identity-providers.xml: |-
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <!--
+      Licensed to the Apache Software Foundation (ASF) under one or more
+      contributor license agreements.  See the NOTICE file distributed with
+      this work for additional information regarding copyright ownership.
+      The ASF licenses this file to You under the Apache License, Version 2.0
+      (the "License"); you may not use this file except in compliance with
+      the License.  You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+    -->
+    <!--
+        This file lists the login identity providers to use when running securely. In order
+        to use a specific provider it must be configured here and it's identifier
+        must be specified in the nifi.properties file.
+    -->
+    <loginIdentityProviders>
+        <!--
+            Identity Provider for users logging in with username/password against an LDAP server.
+
+            'Authentication Strategy' - How the connection to the LDAP server is authenticated. Possible
+                values are ANONYMOUS, SIMPLE, LDAPS, or START_TLS.
+
+            'Manager DN' - The DN of the manager that is used to bind to the LDAP server to search for users.
+            'Manager Password' - The password of the manager that is used to bind to the LDAP server to
+                search for users.
+
+            'TLS - Keystore' - Path to the Keystore that is used when connecting to LDAP using LDAPS or START_TLS.
+            'TLS - Keystore Password' - Password for the Keystore that is used when connecting to LDAP
+                using LDAPS or START_TLS.
+            'TLS - Keystore Type' - Type of the Keystore that is used when connecting to LDAP using
+                LDAPS or START_TLS (i.e. JKS or PKCS12).
+            'TLS - Truststore' - Path to the Truststore that is used when connecting to LDAP using LDAPS or START_TLS.
+            'TLS - Truststore Password' - Password for the Truststore that is used when connecting to
+                LDAP using LDAPS or START_TLS.
+            'TLS - Truststore Type' - Type of the Truststore that is used when connecting to LDAP using
+                LDAPS or START_TLS (i.e. JKS or PKCS12).
+            'TLS - Client Auth' - Client authentication policy when connecting to LDAP using LDAPS or START_TLS.
+                Possible values are REQUIRED, WANT, NONE.
+            'TLS - Protocol' - Protocol to use when connecting to LDAP using LDAPS or START_TLS. (i.e. TLS,
+                TLSv1.1, TLSv1.2, etc).
+            'TLS - Shutdown Gracefully' - Specifies whether the TLS should be shut down gracefully
+                before the target context is closed. Defaults to false.
+
+            'Referral Strategy' - Strategy for handling referrals. Possible values are FOLLOW, IGNORE, THROW.
+            'Connect Timeout' - Duration of connect timeout. (i.e. 10 secs).
+            'Read Timeout' - Duration of read timeout. (i.e. 10 secs).
+
+            'Url' - Space-separated list of URLs of the LDAP servers (i.e. ldap://<hostname>:<port>).
+            'User Search Base' - Base DN for searching for users (i.e. CN=Users,DC=example,DC=com).
+            'User Search Filter' - Filter for searching for users against the 'User Search Base'.
+                (i.e. sAMAccountName={0}). The user specified name is inserted into '{0}'.
+
+            'Identity Strategy' - Strategy to identify users. Possible values are USE_DN and USE_USERNAME.
+                The default functionality if this property is missing is USE_DN in order to retain
+                backward compatibility. USE_DN will use the full DN of the user entry if possible.
+                USE_USERNAME will use the username the user logged in with.
+            'Authentication Expiration' - The duration of how long the user authentication is valid
+                for. If the user never logs out, they will be required to log back in following
+                this duration.
+        -->
+        <!-- To enable the ldap-provider remove 2 lines. This is 1 of 2.
+        <provider>
+            <identifier>ldap-provider</identifier>
+            <class>org.apache.nifi.ldap.LdapProvider</class>
+            <property name="Authentication Strategy">START_TLS</property>
+
+            <property name="Manager DN"></property>
+            <property name="Manager Password"></property>
+
+            <property name="TLS - Keystore"></property>
+            <property name="TLS - Keystore Password"></property>
+            <property name="TLS - Keystore Type"></property>
+            <property name="TLS - Truststore"></property>
+            <property name="TLS - Truststore Password"></property>
+            <property name="TLS - Truststore Type"></property>
+            <property name="TLS - Client Auth"></property>
+            <property name="TLS - Protocol"></property>
+            <property name="TLS - Shutdown Gracefully"></property>
+
+            <property name="Referral Strategy">FOLLOW</property>
+            <property name="Connect Timeout">10 secs</property>
+            <property name="Read Timeout">10 secs</property>
+
+            <property name="Url"></property>
+            <property name="User Search Base"></property>
+            <property name="User Search Filter"></property>
+
+            <property name="Identity Strategy">USE_DN</property>
+            <property name="Authentication Expiration">12 hours</property>
+        </provider>
+        To enable the ldap-provider remove 2 lines. This is 2 of 2. -->
+
+        <!--
+            Identity Provider for users logging in with username/password against a Kerberos KDC server.
+
+            'Default Realm' - Default realm to provide when user enters incomplete user principal (i.e. NIFI.APACHE.ORG).
+            'Authentication Expiration' - The duration of how long the user authentication is valid for. If the user never logs out, they will be required to log back in following this duration.
+        -->
+        <!-- To enable the kerberos-provider remove 2 lines. This is 1 of 2.
+        <provider>
+            <identifier>kerberos-provider</identifier>
+            <class>org.apache.nifi.kerberos.KerberosProvider</class>
+            <property name="Default Realm">NIFI.APACHE.ORG</property>
+            <property name="Authentication Expiration">12 hours</property>
+        </provider>
+        To enable the kerberos-provider remove 2 lines. This is 2 of 2. -->
+    </loginIdentityProviders>
+  state-management.xml: |-
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <!--
+      Licensed to the Apache Software Foundation (ASF) under one or more
+      contributor license agreements.  See the NOTICE file distributed with
+      this work for additional information regarding copyright ownership.
+      The ASF licenses this file to You under the Apache License, Version 2.0
+      (the "License"); you may not use this file except in compliance with
+      the License.  You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+    -->
+    <!--
+      This file provides a mechanism for defining and configuring the State Providers
+      that should be used for storing state locally and across a NiFi cluster. In order
+      to use a specific provider, it must be configured here and its identifier
+      must be specified in the nifi.properties file.
+    -->
+    <stateManagement>
+        <!--
+            State Provider that stores state locally in a configurable directory. This Provider requires the following properties:
+
+            Directory - the directory to store components' state in. If the directory being used is a sub-directory of the NiFi installation, it
+                        is important that the directory be copied over to the new version when upgrading NiFi.
+            Always Sync - If set to true, any change to the repository will be synchronized to the disk, meaning that NiFi will ask the operating system not to cache the information. This is very
+                    expensive and can significantly reduce NiFi performance. However, if it is false, there could be the potential for data loss if either there is a sudden power loss or the
+                    operating system crashes. The default value is false.
+            Partitions - The number of partitions.
+            Checkpoint Interval - The amount of time between checkpoints.
+         -->
+        <local-provider>
+            <id>local-provider</id>
+            <class>org.apache.nifi.controller.state.providers.local.WriteAheadLocalStateProvider</class>
+            <property name="Directory">./data/state/local</property>
+            <property name="Always Sync">false</property>
+            <property name="Partitions">16</property>
+            <property name="Checkpoint Interval">2 mins</property>
+        </local-provider>
+
+        <!--
+            State Provider that is used to store state in ZooKeeper. This Provider requires the following properties:
+
+            Root Node - the root node in ZooKeeper where state should be stored. The default is '/nifi', but it is advisable to change this to a different value if not using
+                       the embedded ZooKeeper server and if multiple NiFi instances may all be using the same ZooKeeper Server.
+
+            Connect String - A comma-separated list of host:port pairs to connect to ZooKeeper. For example, myhost.mydomain:2181,host2.mydomain:5555,host3:6666
+
+            Session Timeout - Specifies how long this instance of NiFi is allowed to be disconnected from ZooKeeper before creating a new ZooKeeper Session. Default value is "30 seconds"
+
+            Access Control - Specifies which Access Controls will be applied to the ZooKeeper ZNodes that are created by this State Provider. This value must be set to one of:
+                                - Open  : ZNodes will be open to any ZooKeeper client.
+                                - CreatorOnly  : ZNodes will be accessible only by the creator. The creator will have full access to create children, read, write, delete, and administer the ZNodes.
+                                                 This option is available only if access to ZooKeeper is secured via Kerberos or if a Username and Password are set.
+        -->
+        <cluster-provider>
+            <id>zk-provider</id>
+            <class>org.apache.nifi.controller.state.providers.zookeeper.ZooKeeperStateProvider</class>
+            <property name="Connect String">master:2181</property>
+            <property name="Root Node">/nifi</property>
+            <property name="Session Timeout">10 seconds</property>
+            <property name="Access Control">Open</property>
+        </cluster-provider>
+    </stateManagement>
+  authorizers.xml: |-
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <!--
+      Licensed to the Apache Software Foundation (ASF) under one or more
+      contributor license agreements.  See the NOTICE file distributed with
+      this work for additional information regarding copyright ownership.
+      The ASF licenses this file to You under the Apache License, Version 2.0
+      (the "License"); you may not use this file except in compliance with
+      the License.  You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+    -->
+    <!--
+        This file lists the authority providers to use when running securely. In order
+        to use a specific provider it must be configured here and it's identifier
+        must be specified in the nifi.properties file.
+    -->
+    <authorizers>
+
+        <!--
+            The FileAuthorizer is NiFi's provided authorizer and has the following properties:
+
+            - Authorizations File - The file where the FileAuthorizer will store policies.
+
+            - Users File - The file where the FileAuthorizer will store users and groups.
+
+            - Initial Admin Identity - The identity of an initial admin user that will be granted access to the UI and
+                given the ability to create additional users, groups, and policies. The value of this property could be
+                a DN when using certificates or LDAP, or a Kerberos principal. This property will only be used when there
+                are no other users, groups, and policies defined. If this property is specified then a Legacy Authorized
+                Users File can not be specified.
+
+                NOTE: Any identity mapping rules specified in nifi.properties will also be applied to the initial admin identity,
+                so the value should be the unmapped identity.
+
+            - Legacy Authorized Users File - The full path to an existing authorized-users.xml that will be automatically
+                converted to the new authorizations model. If this property is specified then an Initial Admin Identity can
+                not be specified, and this property will only be used when there are no other users, groups, and policies defined.
+
+            - Node Identity [unique key] - The identity of a NiFi cluster node. When clustered, a property for each node
+                should be defined, so that every node knows about every other node. If not clustered these properties can be ignored.
+                The name of each property must be unique, for example for a three node cluster:
+                "Node Identity A", "Node Identity B", "Node Identity C" or "Node Identity 1", "Node Identity 2", "Node Identity 3"
+
+                NOTE: Any identity mapping rules specified in nifi.properties will also be applied to the node identities,
+                so the values should be the unmapped identities (i.e. full DN from a certificate).
+        -->
+        <authorizer>
+            <identifier>file-provider</identifier>
+            <class>org.apache.nifi.authorization.FileAuthorizer</class>
+            <property name="Authorizations File">./conf/authorizations.xml</property>
+            <property name="Users File">./conf/users.xml</property>
+            <property name="Initial Admin Identity"></property>
+            <property name="Legacy Authorized Users File"></property>
+
+            <!-- Provide the identity (typically a DN) of each node when clustered, see above description of Node Identity.
+            <property name="Node Identity 1"></property>
+            <property name="Node Identity 2"></property>
+            -->
+        </authorizer>
+    </authorizers>
+  bootstrap-notification-services.xml: |-
+    <?xml version="1.0"?>
+    <!--
+      Licensed to the Apache Software Foundation (ASF) under one or more
+      contributor license agreements.  See the NOTICE file distributed with
+      this work for additional information regarding copyright ownership.
+      The ASF licenses this file to You under the Apache License, Version 2.0
+      (the "License"); you may not use this file except in compliance with
+      the License.  You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+    -->
+    <services>
+        <!-- This file is used to define how interested parties are notified when events in NiFi's lifecycle occur. -->
+        <!-- The format of this file is:
+            <services>
+                <service>
+                    <id>service-identifier</id>
+                    <class>org.apache.nifi.notifications.DesiredNotificationService</class>
+                    <property name="property name">property value</property>
+                    <property name="another property">another property value</property>
+                </service>
+            </services>
+
+            This file can contain 0 to many different service definitions.
+            The id can then be referenced from the bootstrap.conf file in order to configure the notification service
+            to be used when particular lifecycle events occur.
+        -->
+
+    <!--
+         <service>
+            <id>email-notification</id>
+            <class>org.apache.nifi.bootstrap.notification.email.EmailNotificationService</class>
+            <property name="SMTP Hostname"></property>
+            <property name="SMTP Port"></property>
+            <property name="SMTP Username"></property>
+            <property name="SMTP Password"></property>
+            <property name="SMTP TLS"></property>
+            <property name="From"></property>
+            <property name="To"></property>
+         </service>
+    -->
+    <!--
+         <service>
+            <id>http-notification</id>
+            <class>org.apache.nifi.bootstrap.notification.http.HttpNotificationService</class>
+            <property name="URL"></property>
+         </service>
+    -->
+    </services>
