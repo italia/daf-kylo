@@ -33,7 +33,6 @@ case $2 in
 	kubectl delete --namespace="$namespace" -f kubernetes/service/mysql.yaml
 	;;
   kylo-services)
-    #kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services-spark.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/kylo-services.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/service/kylo-services.yaml
