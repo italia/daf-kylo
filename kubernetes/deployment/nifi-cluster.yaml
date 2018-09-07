@@ -1,0 +1,176 @@
+apiVersion: apps/v1beta2
+kind: StatefulSet
+metadata:
+  name: tba-nifi
+  labels:
+    app: tba-nifi
+spec:
+  serviceName: tba-nifi
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tba-nifi
+  template:
+    metadata:
+      labels:
+        app: tba-nifi
+        nifi-cluster: "true"
+    spec:
+      #hostNetwork: false                      # NOTE: Do not change because it is used the services
+      affinity:
+        podAntiAffinity:
+              preferredDuringSchedulingIgnoredDuringExecution:
+              - weight: 100
+                podAffinityTerm:
+                  labelSelector:
+                    matchExpressions:
+                    - key: nifi-cluster
+                      operator: In
+                      values:
+                      - "true"
+                  topologyKey: kubernetes.io/hostname
+      restartPolicy: Always
+      nodeSelector:
+        nifi-cluster: "true"
+      imagePullSecrets:
+        - name: regsecret
+      containers:
+      - name: tba-nifi
+        # TODO: modify image to support NIFI_ADDITIONAL_SEARCH_DOMAINS, move other setting in to config map
+        image: nexus.teamdigitale.test/tba-nifi.1.6.0:0.7.5-CLUSTERFIX
+        env:
+        - name: NIFI_ADDITIONAL_SEARCH_DOMAINS
+          value: "tba-nifi.default.svc.cluster.local teamdigitale.test"
+          # NOTE: must match the StatefulSet name.
+        ports:
+        - name: nifi-http
+          containerPort: 8080
+        - name: nifi-input
+          containerPort: 9998
+        - name: nifi-cluster
+          containerPort: 9999
+        - name: listener
+          containerPort: 8033
+        resources:
+          limits:
+            memory: 12000Mi
+        volumeMounts:
+        - name: private
+          mountPath: /usr/nifi/data
+          subPath: tba/evergreen2/nifi/data
+          readOnly: false
+        - name: private
+          mountPath: /usr/nifi/logs
+          subPath: tba/evergreen2/nifi/log
+          readOnly: false
+        - name: private
+          mountPath: /tmp/kylo-nifi/failed-flows
+          subPath: tba/evergreen2/nifi/failed-flows
+          readOnly: false
+        - name: glusterfsvol
+          mountPath: /usr/nifi/extentions
+          subPath: tba/evergreen2/nifi/extentions
+          readOnly: true     # NOTE: was false
+        - name: sparkhome
+          mountPath: /opt/cloudera/parcels/
+          readOnly: true
+        - name: sparkconf
+          mountPath: /etc/spark2/
+          readOnly: true
+        - name: spark1conf
+          mountPath: /etc/spark/
+          readOnly: true
+        - name: alternatives
+          mountPath: /etc/alternatives/
+          readOnly: true
+        - name: glusterfsvol
+          mountPath: /usr/nifi/daf.keytab
+          subPath: tba/security/daf.keytab
+          readOnly: true
+        - name: glusterfsvol
+          mountPath: /etc/security/
+          subPath: tba/security/
+          readOnly: true
+        - name: nifi-config
+          mountPath: /usr/nifi/conf.temp
+        - name: nifi-kylo
+          mountPath: /usr/nifi/ext-config
+        - name: hosts
+          mountPath: /etc/extra_hosts
+          readOnly: true
+        - name: krb5conf
+          mountPath: /etc/krb5.conf
+          readOnly: true
+        - name: hadoop
+          mountPath: /etc/hadoop
+          readOnly: true
+        - name: hive
+          mountPath: /etc/hive
+          readOnly: true
+        - name: kafka
+          mountPath: /etc/kafka/conf
+          readOnly: true
+        - name: hbase
+          mountPath: /etc/hbase
+          readOnly: true
+        - name: glusterfsvol
+          mountPath: /usr/nifi/scripts
+          subPath: nifi/scripts/edge1
+          readOnly: true
+        - name: glusterfsvol
+          mountPath: /var/dropzone
+          subPath: nifi/shared/dropzone
+          readOnly: false
+        - name: glusterfsvol
+          mountPath: /home
+          subPath: nifi/shared/dropzone
+          readOnly: false
+      restartPolicy: Always
+      volumes:
+      - name: glusterfsvol
+        persistentVolumeClaim:
+          claimName: gluster-claim
+      - name: nifi-config
+        configMap:
+          name: nifi-cluster
+      - name: nifi-kylo
+        configMap:
+          name: nifi-kylo
+      - name: hosts
+        hostPath:
+          path: /etc/hosts
+      - name: krb5conf
+        hostPath:
+          path: /etc/krb5.conf
+      - name: hadoop
+        hostPath:
+          path: /etc/hadoop
+      - name: sparkhome
+        hostPath:
+          path: /opt/cloudera/parcels/
+      - name: alternatives
+        hostPath:
+          path: /etc/alternatives/
+      - name: kafka
+        hostPath:
+          path: /etc/alternatives/kafka-conf
+      - name: sparkconf
+        hostPath:
+          path: /etc/spark2/
+      - name: spark1conf
+        hostPath:
+          path: /etc/spark/
+      - name: hbase
+        hostPath:
+          path: /etc/hbase/
+      - name: hive
+        hostPath:
+          path: /etc/hive/
+  volumeClaimTemplates:
+  - metadata:
+      name: private
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 24Gi
