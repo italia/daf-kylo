@@ -27,8 +27,7 @@ kylo-services:
 		cp -R ../kylok8s/install/install-tar/target/kylo/bin docker/kylo-services/dist
 		cp -R ../kylok8s/install/install-tar/target/kylo/lib docker/kylo-services/dist
 		docker build -t tba-kylo-services -f docker/kylo-services/Dockerfile docker/kylo-services
-		docker tag tba-kylo-services $(REGISTRY)/tba-kylo-services.8.4:1.1.0
-		docker push $(REGISTRY)/tba-kylo-services.8.4:1.1.0
+		docker tag tba-kylo-services $(REGISTRY)/tba-kylo-services.9.1:1.0.1
 		rm -dr docker/kylo-services/dist
 
 .PHONY: kylo-ui
@@ -39,8 +38,7 @@ kylo-ui:
 		cp -R ../kylok8s/install/install-tar/target/kylo/bin docker/kylo-ui/dist
 		cp -R ../kylok8s/install/install-tar/target/kylo/lib docker/kylo-ui/dist
 		docker build -t tba-kylo-ui -f docker/kylo-ui/Dockerfile docker/kylo-ui
-		docker tag tba-kylo-ui $(REGISTRY)/tba-kylo-ui.8.4:1.1.0
-		docker push $(REGISTRY)/tba-kylo-ui.8.4:1.1.0
+		docker tag tba-kylo-ui $(REGISTRY)/tba-kylo-ui.9.1:1.0.0
 		rm -dr docker/kylo-ui/dist
 
 .PHONY: nifi
@@ -49,15 +47,15 @@ nifi:
 		cp -R ../kylok8s/install/install-tar/target/kylo/setup/nifi/* docker/nifi/dist
 		cp -R ../daf-kylo8s/nifi/extensions/processors/target/*.nar docker/nifi/dist/daf
 		docker build -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
-		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.4.0:1.1.1-SNAPSHOT
-		docker push $(REGISTRY)/tba-nifi.1.4.0:1.1.1-SNAPSHOT
+		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.6.0:1.0.1-CLUSTER
 		rm -dr docker/nifi/dist
 
 .PHONY: build-kylo
 build-kylo:
 	git clone https://github.com/italia/kylo.git ../kylok8s | true
 	cd ../kylok8s && \
-	git checkout release/0.8.4-daf-kylo && \
+	git checkout release/0.9.1-daf && \
+    git apply kylo/patch/hive_patch.patch && \
 	git pull && \
 	mvn clean install -DskipTests && \
 	mkdir install/install-tar/target/kylo && \
@@ -71,7 +69,6 @@ daf-kylo:
     git pull && \
     cd nifi/extensions && \
     mvn clean install
-
 
 clean:
 	rm -rf ../daf-kylo8s

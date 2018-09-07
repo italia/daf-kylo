@@ -52,7 +52,8 @@ nifi:
 build-kylo:
 	git clone https://github.com/Teradata/kylo.git ${KYLO_SERVICES_PATH} | true
 	cd ${KYLO_SERVICES_PATH} && \
-	git checkout tags/v0.9.1 && \
+	git checkout release/0.9.1-daf && \
+    git apply kylo/patch/hive_patch.patch && \
 	mvn clean install -DskipTests=true -U && \
 	mkdir -p install/install-tar/target/kylo && \
 	tar -C install/install-tar/target/kylo -xvf install/install-tar/target/kylo-*-dependencies.tar.gz

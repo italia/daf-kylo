@@ -1,0 +1,95 @@
+diff --git a/commons/commons-jdbc/src/main/java/com/thinkbiganalytics/jdbc/util/DatabaseType.java b/commons/commons-jdbc/src/main/java/com/thinkbiganalytics/jdbc/util/DatabaseType.java
+index 6fa844668..707081875 100644
+--- a/commons/commons-jdbc/src/main/java/com/thinkbiganalytics/jdbc/util/DatabaseType.java
++++ b/commons/commons-jdbc/src/main/java/com/thinkbiganalytics/jdbc/util/DatabaseType.java
+@@ -39,6 +39,7 @@ import javax.sql.DataSource;
+  */
+ public enum DatabaseType {
+     // For the preview pattern: {0}=columns, {1}=schema, {2}=table, {3}=limit
++    IMPALA("Impala", "jdbc:impala:", "select 1", "SELECT {0} FROM {1}.{2} LIMIT {3}"),
+     HIVE("Hive", "jdbc:hive2:", "select 1", "SELECT {0} FROM {1}.{2} LIMIT {3}"),
+     DERBY("Apache Derby", "jdbc:derby:", "select 1", "SELECT {0} FROM {1}.{2} LIMIT {3}"),
+     DB2("DB2", "jdbc:db2", "select 1 from sysibm.sysdummy1", "SELECT {0} FROM {1}.{2} FETCH FIRST {3} ROWS ONLY"),
+diff --git a/integrations/nifi/nifi-nar-bundles/nifi-core-bundle/nifi-core-processors/src/main/java/com/thinkbiganalytics/ingest/TableMergeSyncSupport.java b/integrations/nifi/nifi-nar-bundles/nifi-core-bundle/nifi-core-processors/src/main/java/com/thinkbiganalytics/ingest/TableMergeSyncSupport.java
+index fc82d34e8..a0f5b9e72 100644
+--- a/integrations/nifi/nifi-nar-bundles/nifi-core-bundle/nifi-core-processors/src/main/java/com/thinkbiganalytics/ingest/TableMergeSyncSupport.java
++++ b/integrations/nifi/nifi-nar-bundles/nifi-core-bundle/nifi-core-processors/src/main/java/com/thinkbiganalytics/ingest/TableMergeSyncSupport.java
+@@ -145,8 +145,17 @@ public class TableMergeSyncSupport implements Serializable {
+         // 3. Drop the sync table. Since it is a managed table it will drop the old data
+         dropTable(targetSchema, targetTable);
+
+-        // 4. Rename the sync table
++        // 4. Make the table external
++        String markExternal = "ALTER TABLE " + targetSchema + "." + syncTable + " SET TBLPROPERTIES('EXTERNAL'='TRUE')";
++        doExecuteSQL(markExternal);
++
++        // 5. Rename the sync table
+         renameTable(targetSchema, syncTable, targetTable);
++
++
++        // 6. Unmark the table external
++        String unmarkExternal = "ALTER TABLE " + targetSchema + "." + targetTable + " SET TBLPROPERTIES('EXTERNAL'='FALSE')";
++        doExecuteSQL(unmarkExternal);
+     }
+
+     /**
+diff --git a/integrations/nifi/nifi-nar-bundles/nifi-core-bundle/nifi-core-processors/src/test/java/com/thinkbiganalytics/ingest/TableMergeSyncSupportTest.java b/integrations/nifi/nifi-nar-bundles/nifi-core-bundle/nifi-core-processors/src/test/java/com/thinkbiganalytics/ingest/TableMergeSyncSupportTest.java
+index 7ec8739a1..ffea64db2 100644
+--- a/integrations/nifi/nifi-nar-bundles/nifi-core-bundle/nifi-core-processors/src/test/java/com/thinkbiganalytics/ingest/TableMergeSyncSupportTest.java
++++ b/integrations/nifi/nifi-nar-bundles/nifi-core-bundle/nifi-core-processors/src/test/java/com/thinkbiganalytics/ingest/TableMergeSyncSupportTest.java
+@@ -89,6 +89,43 @@ public class TableMergeSyncSupportTest {
+         mergeSyncSupport.enableDynamicPartitions();
+     }
+
++    /**
++     * Extract the HDFS location of the table data.
++     *
++     * @param schema the schema or database name
++     * @param table  the table name
++     * @return the HDFS location of the table data
++     */
++    private String extractTableDirectory(String schema, String table) {
++        hiveShell.execute("use " + HiveUtils.quoteIdentifier(schema));
++        List<String> description = hiveShell.executeQuery("show table extended like " + HiveUtils.quoteIdentifier(table));
++        for(String line : description) {
++            if (line.startsWith("location:")) {
++                // Take table directory
++                return line.substring(9, line.lastIndexOf("/"));
++            }
++        }
++        return null;
++    }
++    @Test
++    /**
++     * Tests if HDFS location is correct
++     */
++    public void checkSyncLocationHDFS() throws Exception {
++        // This the check id the schema pre and after a sync is the same
++        String describePre = extractTableDirectory(sourceSchema, sourceTable);
++        // Test without Partitions
++        mergeSyncSupport.doSync(sourceSchema, sourceTable, targetSchema, targetTableNP, specNP, processingPartition);
++        String describePost = extractTableDirectory(targetSchema, targetTableNP);
++        if((describePre == null) || (describePost == null)) assert(false);
++        assert(describePre.equals(describePost));
++        // Test with Partitions
++        mergeSyncSupport.doSync(sourceSchema, sourceTable, targetSchema, targetTable, spec, processingPartition);
++        describePost = extractTableDirectory(targetSchema, targetTable);
++        if((describePre == null) || (describePost == null)) assert(false);
++        assert(describePre.equals(describePost));
++    }
++
+     @Test
+     public void testPartitionBatches() {
+         List<PartitionBatch> batches = fetchPartitionBatches();
+diff --git a/ui/ui-app/package-lock.json b/ui/ui-app/package-lock.json
+index 0baba8720..b7c89d28f 100644
+--- a/ui/ui-app/package-lock.json
++++ b/ui/ui-app/package-lock.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "kylo",
+-  "version": "0.9.1-1-SNAPSHOT",
++  "version": "0.9.1-2-SNAPSHOT",
+   "lockfileVersion": 1,
+   "requires": true,
+   "dependencies": {
