@@ -2,10 +2,8 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: kylo-services
-  namespace: default
 data:
   application-context.xml: |-
-    <?xml version="1.0" encoding="UTF-8"?>
     <!--
       #%L
       thinkbig-service-app
@@ -89,7 +87,7 @@ data:
     # Spring Datasource properties for spring batch and the default data source
     # NOTE: Cloudera default password for root access to mysql is "cloudera"
     #
-    spring.datasource.url=jdbc:mysql://tba-mysql:3306/kylo
+    spring.datasource.url=jdbc:mysql://tba-mysql.default:3306/kylo_sec
     spring.datasource.username=root
     spring.datasource.password=hadoop
     spring.datasource.maxActive=30
@@ -142,7 +140,6 @@ data:
     #authenticationService.username=
     #authenticationService.password={cipher}
     #authenticationService.password=
-
     ## auth-ldap: If this profile is active then these properties should uncommented and updated appropriately
 
     security.auth.ldap.server.uri=ldap://idm.daf.gov.it:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
@@ -206,22 +203,18 @@ data:
     metadata.datasource.validationQuery=SELECT 1
     metadata.datasource.testOnBorrow=true
 
-
-
     hive.userImpersonation.enabled=false
     hive.datasource.driverClassName=org.apache.hive.jdbc.HiveDriver
     hive.datasource.url=jdbc:hive2://master.platform.daf.gov.it:10000/default;principal=hive/master.platform.daf.gov.it@DAF.GOV.IT
     hive.datasource.username=daf
-    hive.datasource.password=xxxxxx
+    hive.datasource.password=xxxxx
     hive.datasource.validationQuery=show tables
 
-
-
-    ##Also Clouder  url should be /metastore instead of /hive
+    ##Also Cloudera url should be /metastore instead of /hive
     hive.metastore.datasource.driverClassName=org.postgresql.Driver
     hive.metastore.datasource.url=jdbc:postgresql://master/metastore
     hive.metastore.datasource.username=hive
-    hive.metastore.datasource.password=xxxxxx
+    hive.metastore.datasource.password=xxxxx
     hive.metastore.datasource.validationQuery=SELECT 1
     hive.metastore.datasource.testOnBorrow=true
 
@@ -290,7 +283,7 @@ data:
     ## Spark configuration
     nifi.executesparkjob.sparkhome=/opt/cloudera/parcels/CDH/lib/spark
     nifi.executesparkjob.sparkmaster=yarn
-    nifi.executesparkjob.driver_memory=1024m
+    nifi.executesparkjob.driver_memory=2048m
     nifi.executesparkjob.number_of_executors=1
     nifi.executesparkjob.executor_cores=1
     ##comment the line below on cloudera
@@ -379,13 +372,14 @@ data:
     #nifi.auto.align=false
 
     # update database on kylo-services start
-    liquibase.enabled=false
+    liquibase.enabled=true
     liquibase.change-log=classpath:com/thinkbiganalytics/db/master.xml
-
+    ## N.B. it is recommended to use *liquibase.enabled=true* during the first time of kylo start and on kylo upgrade
+    ## please put it false otherwise
     # NiFi settings
 
 
-    nifi.service.kylo_mysql.database_connection_url=jdbc:mariadb://tba-mysql:3306
+    nifi.service.kylo_mysql.database_connection_url=jdbc:mariadb://tba-mysql.default:3306
     nifi.service.kylo_mysql.database_driver_class_name=org.mariadb.jdbc.Driver
     nifi.service.kylo_mysql.database-driver-locations=file:///usr/nifi/drivers/mariadb-java-client-2.1.0.jar
     nifi.service.kylo_mysql.database_user=root
@@ -409,6 +403,45 @@ data:
 
     jms.activemq.broker.url=tcp://tba-activemq:61616
 
+    #UPDATE for Kylo 0.9.1
+    # Add the new property
+    kylo.feed.mgr.hive.target.syncColumnDescriptions=true
+
+    # Add the new property to support the updated templates
+    config.nifi.kylo.applicationJarDirectory=/usr/nifi/current/lib/app
+
+    # Add this section to support Teradata ingest via Kylo template (using TDCH)
+    ################################ Teradata Ingest via Kylo Template ################################################
+    # When using data_ingest__teradata.template.zip, set these properties, start Kylo, and import the template
+    # These values are defaults. Modify them as per your environment.
+    #
+    # StandardTdchConnectionService parameters
+    # Ensure that the TDCH and Hive paths are correct
+    #nifi.service.standardtdchconnectionservice.jdbc_driver_class=com.teradata.jdbc.TeraDriver
+    #nifi.service.standardtdchconnectionservice.jdbc_connection_url=jdbc:teradata://localhost
+    #nifi.service.standardtdchconnectionservice.username=dbc
+    #nifi.service.standardtdchconnectionservice.password=
+    #nifi.service.standardtdchconnectionservice.tdch_jar_path=/usr/lib/tdch/1.5/lib/teradata-connector-1.5.4.jar
+    #nifi.service.standardtdchconnectionservice.hive_conf_path=/usr/hdp/current/hive-client/conf
+    #nifi.service.standardtdchconnectionservice.hive_lib_path=/usr/hdp/current/hive-client/lib
+
+    # Kylo-Teradata-DBC connection parameters
+    # Ensure that the driver paths are correct
+    #nifi.service.kylo-teradata-dbc.database_driver_location(s)=file:///opt/nifi/teradata/terajdbc4.jar,file:///opt/nifi/teradata/tdgssconfig.jar
+
+    # The below parameters will use the values supplied for StandardTdchConnectionService above. Update them if needed (by default, you can leave them as such)
+    #nifi.service.kylo-teradata-dbc.database_connection_url=${nifi.service.standardtdchconnectionservice.jdbc_connection_url}
+    #nifi.service.kylo-teradata-dbc.database_driver_class_name=${nifi.service.standardtdchconnectionservice.jdbc_driver_class}
+    #nifi.service.kylo-teradata-dbc.database_user=${nifi.service.standardtdchconnectionservice.username}
+    #nifi.service.kylo-teradata-dbc.password=${nifi.service.standardtdchconnectionservice.password}
+    ###################################################################################################################
+
+    # By default Kylo will allow you to use Remote Process groups and reusable flows only in a NiFi clustered environment.
+    # Set this property to true if you want to use kylo with remote process groups in a non NiFi clustered environment.
+    # This will provide additional options when registering the reusable template in kylo.
+    kylo.template.remote-process-groups.enabled=true
+
+    search.history.data.reindexing.enabled=false
 
   spark.properties: |-
     ###
@@ -427,28 +460,30 @@ data:
     # distributed under the License is distributed on an "AS IS" BASIS,
     # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     # See the License for the specific language governing permissions and
-    # limitations under the License.
+    # limitatips aons under the License.
     # #L%
     ###
     # Server port number
-    #server.port = 8450
+    server.port = 8454
+    #server.port = 0
 
     # Spark UI port number
-    #spark.ui.port = 8451
+    #spark.ui.port = 8454
 
     # Indicates how to communicate with the Spark Shell process when it is managed
     # externally using an init script or systemd. Comment the below lines to have
     # Kylo manage the Spark Shell process.
     #spark.shell.server.host = localhost
-    #spark.shell.server.port = 8450
+    spark.shell.server.port = 8453
 
     spark.shell.deployMode=cluster
     spark.shell.master=yarn
-    spark.shell.sparkHome=/opt/cloudera/parcels/SPARK2/lib/spark2
-    spark.shell.jars=/opt/kylo/kylo-services/lib/mariadb-java-client-1.5.7.jar
-    spark.shell.sparkArgs=--driver-memory 3g --executor-memory 5g --driver-java-options -Djava.security.egd=file:/dev/./urandom
+    spark.shell.sparkHome=/opt/cloudera/parcels/CDH/lib/spark
+    #spark.shell.jars=/opt/kylo/kylo-services/lib/mariadb-java-client-1.5.7.jar
+    spark.shell.sparkArgs=--conf spark.driver.userClassPathFirst=true
     #spark.shell.registrationUrl=http://192.168.0.20:8420/api/v1/spark/shell/register
-    spark.shell.appResource=/opt/kylo/kylo-services/lib/app/kylo-spark-shell-client-v2-0.8.4.jar
+    spark.shell.sparkArgs=--driver-memory 3g --executor-memory 5g --driver-java-options -Djava.security.egd=file:/dev/./urandom
+    spark.shell.appResource=/opt/kylo/kylo-services/lib/app/kylo-spark-shell-client-v2-0.9.1.2-SNAPSHOT.jar
     spark.shell.verbose=true
     spark.shell.clientTimeout=240
 
@@ -734,9 +769,9 @@ data:
     log4j.rootLogger=INFO, file
     log4j.logger.com.thinkbiganalytics=INFO
     log4j.logger.org=WARN
-    ##log4j.logger.org.modeshape.jcr.clustering.ClusteringService=DEBUG
-    ##log4j.logger.org.jgroups=DEBUG
-    ##log4j.logger.org.hibernate.SQL=DEBUG
+    ##log4j.logger.org.modeshape.jcr.clustering.ClusteringService=INFO
+    ##log4j.logger.org.jgroups=INFO
+    ##log4j.logger.org.hibernate.SQL=INFO
 
     # Direct log messages to a log file
     log4j.appender.file=org.apache.log4j.DailyRollingFileAppender
@@ -2077,5 +2112,6 @@ data:
       "star_border"
     ]
   version.txt: |-
-    version=0.8.4
-    build.date=2017-10-18 17:13
+    version=0.9.1
+    build.date=2018-06-20 17:13
+

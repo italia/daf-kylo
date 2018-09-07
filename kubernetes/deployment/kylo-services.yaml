@@ -96,7 +96,7 @@ spec:
       hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: nexus.daf.teamdigitale.it/tba-kylo-services.8.4:1.1.0
+      - image: nexus.daf.teamdigitale.it/tba-kylo-services.9.1:1.0.1
         name: tba-kylo-services
         imagePullPolicy: IfNotPresent
         ports:
