@@ -77,13 +77,15 @@ for instance:
 
 #### Production
   ```
-    ./nexus_push.sh prod
+    ./nexus_push.sh prod [namespace]
   ```
 #### Test
   ```
-    ./nexus_push.sh test
+    ./nexus_push.sh test [namespace]
   ```
-  
+
+The [namespace] is optional.
+
 ### Deploy components in kubernetes cluster
 Please ensure previously configuration of kubectl has been done. 'How to' can be found in: [TeamDigitale onboarding , 'Setup Kubernetes'](https://docs.google.com/document/d/1KqeaZ2yj7rofslqzklYTCLb3AxPnV1mzOgSXOuTHTyw/edit?ts=59faf23f&pli=1#heading=h.vvi8emze7m35)
 
@@ -158,8 +160,9 @@ kubectl apply -f config-map/kylo-services.yaml
 kubectl apply -f config-map/kylo-ui.yaml
 ```
 
-2. Go to idm.teamdigitale.test and create an user such as *dladmin* with a password *password*
+In the above example, it is not take in account the [namespace].
 
+2. Go to idm.teamdigitale.test and create an user such as *dladmin* with a password *password*
 
 After these you are able to login into kylo ui!
 
