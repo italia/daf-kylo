@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-namespace="default"
+namespace="sec"
 
 if [ "$1" = 'test' ]
 then
@@ -10,7 +10,12 @@ then
     ENV=''
 fi
 
-echo "Working on $1 environment"
+if [[ $# -eq 3 ]] ; then
+    namespace=$3
+    echo "some message $namespace"
+fi
+
+echo "Working on '$1' environment on namespace '$namespace'"
 
 case $2 in
 

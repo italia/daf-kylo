@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-namespace="default"
+namespace="sec"
 
 if [ "$1" = 'test' ]
 then
@@ -10,7 +10,12 @@ then
     ENV=''
 fi
 
-echo "Working on $1 environment"
+if [[ $# -eq 3 ]] ; then
+    namespace=$3
+    echo "some message $namespace"
+fi
+
+echo "Working on '$1' environment on namespace '$namespace'"
 
 case $2 in
 
@@ -50,14 +55,9 @@ case $2 in
     fi
   ;;
   nifi-cluster)
-    if [ "$1" = 'test' ]
-    then
-        kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-cluster.yaml
-        kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
-        kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/nifi-cluster.yaml
-        kubectl apply --namespace="$namespace" -f kubernetes/service/nifi-cluster.yaml
-    else
-        echo "This feature is not available for production environment"
-    fi
+    kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-cluster.yaml
+    kubectl apply --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
+    kubectl apply --namespace="$namespace" -f kubernetes/deployment$ENV/nifi-cluster.yaml
+    kubectl apply --namespace="$namespace" -f kubernetes/service/nifi-cluster.yaml
 	;;
 esac
