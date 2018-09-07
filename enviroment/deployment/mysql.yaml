@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: { mysql-name }
+spec:
+  selector:
+    matchLabels:
+      app: { mysql-app }
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: { mysql-name }
+    spec:
+      containers:
+      - env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: hadoop
+        image: { mysql-image }
+        name: tba-mysql
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: glusterfsvol
+          mountPath: /var/lib/mysql
+          subPath: tba/evergreen2/mysql/data
+          readOnly: false
+      restartPolicy: Always
+      volumes:
+      - name: glusterfsvol
+        persistentVolumeClaim:
+          claimName: { mysql-gluster-claim }
+      nodeSelector:
+        nifi: "true"

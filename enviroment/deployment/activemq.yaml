@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: { activemq-name }
+spec:
+  selector:
+    matchLabels:
+      app: { activemq-app }
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: { activemq-app }
+    spec:
+      containers:
+      - image: { activemq-image }
+        name: { activemq-name }
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5601
+        - containerPort: 61616
+        - containerPort: 8161
+        - containerPort: 5672
+        - containerPort: 61613
+        - containerPort: 1883
+        - containerPort: 61614
+        volumeMounts:
+        - name: glusterfsvol
+          mountPath: /opt/activemq/data
+          subPath: { activemq-tba-dir }
+      restartPolicy: Always
+      volumes:
+      - name: glusterfsvol
+        persistentVolumeClaim:
+          claimName: { activemq-gluster-claim }
+      nodeSelector:
+        nifi: "true"

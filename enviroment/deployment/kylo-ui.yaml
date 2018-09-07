@@ -1,0 +1,111 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: { kylo-ui-name }
+spec:
+  selector:
+    matchLabels:
+      app: { kylo-ui-app }
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: { kylo-ui-app }
+    spec:
+      hostAliases:
+      - ip: "192.168.0.23"
+        hostnames:
+          - "master.platform.daf.gov.it"
+          - "master"
+      - ip: "192.168.0.22"
+        hostnames:
+          - "slave1.platform.daf.gov.it"
+          - "slave1"
+      - ip: "192.168.0.24"
+        hostnames:
+          - "slave2.platform.daf.gov.it"
+          - "slave2"
+      - ip: "192.168.0.36"
+        hostnames:
+          - "slave3.platform.daf.gov.it"
+          - "slave3"
+      - ip: "192.168.0.26"
+        hostnames:
+          - "slave4.platform.daf.gov.it"
+          - "slave4"
+      - ip: "192.168.0.55"
+        hostnames:
+          - "slave5.platform.daf.gov.it"
+          - "slave5"
+      - ip: "192.168.0.56"
+        hostnames:
+          - "slave6.platform.daf.gov.it"
+          - "slave6"
+      - ip: "192.168.0.135"
+        hostnames:
+          - "slave-prod-7.platform.daf.gov.it"
+          - "slave-prod-7"
+      - ip: "192.168.0.132"
+        hostnames:
+          - "slave-prod-8.platform.daf.gov.it"
+          - "slave-prod-8"
+      - ip: "192.168.0.134"
+        hostnames:
+          - "slave-prod-9.platform.daf.gov.it"
+          - "slave-prod-9"
+      - ip: "192.168.0.133"
+        hostnames:
+          - "slave-prod-10.platform.daf.gov.it"
+          - "slave-prod-10"
+      - ip: "192.168.0.20"
+        hostnames:
+          - "edge1.platform.daf.gov.it"
+          - "edge1"
+      - ip: "192.168.0.21"
+        hostnames:
+          - "edge2.platform.daf.gov.it"
+          - "edge2"
+      - ip: "192.168.0.27"
+        hostnames:
+          - "edge3.platform.daf.gov.it"
+          - "edge3"
+      - ip: "192.168.0.53"
+        hostnames:
+          - "edge4.platform.daf.gov.it"
+          - "edge4"
+      - ip: "192.168.0.54"
+        hostnames:
+          - "edge5.platform.daf.gov.it"
+          - "edge5"
+      - ip: "192.168.0.29"
+        hostnames:
+          - "idm.daf.gov.it"
+          - "idm"
+      - ip: "192.168.0.43"
+        hostnames:
+          - "master.elasticsearch.daf.gov.it"
+          - "master"
+      hostNetwork: false #changed by Fabio from true
+      # dnsPolicy: ClusterFirstWithHostNet
+      containers:
+      - image: { kylo-ui-image }
+        name: tba-kylo-ui
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8400
+        volumeMounts:
+        - mountPath: /opt/kylo/kylo-ui/conf
+          name: kylo-ui-config
+        - mountPath: /var/log/kylo-ui
+          subPath: tba/evergreen2/kylo-ui/log
+          name: glusterfsvol
+      restartPolicy: Always
+      volumes:
+      - name: glusterfsvol
+        persistentVolumeClaim:
+          claimName: { kylo-ui-gluster-claimg }
+      - name: kylo-ui-config
+        configMap:
+          name: kylo-ui
+      nodeSelector:
+        nifi: "true"

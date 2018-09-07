@@ -1,0 +1,91 @@
+config-map/kylo-services.yaml
+    hive.datasource.url=jdbc:hive2://master.novalocal:10000/default;principal=hive/master.novalocal@DAF.GOV.IT
+    hive.datasource.username=daf
+    hive.datasource.password=xxxx
+    hive.metastore.datasource.url=jdbc:postgresql://master/metastore
+    hive.metastore.datasource.username=hive
+    hive.metastore.datasource.password=xxxx
+    kerberos.hive.kerberosPrincipal=daf@DAF.GOV.IT
+    kerberos.hive.keytabLocation=/etc/security/daf.keytab
+    nifi.service.kylo_mysql.database_user=root
+    nifi.service.kylo_mysql.password=hadoop
+    nifi.service.hive_thrift_service.database_connection_url=jdbc:hive2://master.novalocal:10000/default;principal=hive/master.novalocal@DAF.GOV.IT
+    nifi.service.hive_thrift_service.kerberos_principal=nifi
+    nifi.service.hive_thrift_service.kerberos_keytab=/usr/nifi/daf.keytab
+    nifi.all_processors.kerberos_principal=daf@DAF.GOV.IT
+    nifi.all_processors.kerberos_keytab=/usr/nifi/daf.keytab
+    nifi.service.kylo_mysql.database_connection_url=jdbc:mariadb://tba-mysql.default:3306
+    nifi.service.kylo_mysql.database-driver-locations=file:///usr/nifi/drivers/mariadb-java-client-2.1.0.jar
+    nifi.service.kylo_mysql.database_user=root
+    nifi.service.kylo_mysql.password=hadoop
+    jms.activemq.broker.url=tcp://tba-activemq:61616
+    spark.shell.deployMode=client
+    spark.shell.master=yarn
+    spark.shell.sparkHome=/opt/cloudera/parcels/SPARK2/lib/spark2
+    spark.shell.jars=/opt/kylo/kylo-services/lib/mariadb-java-client-1.5.7.jar
+    spark.shell.sparkArgs=--driver-memory 3g --executor-memory 5g --driver-java-options -Djava.security.egd=file:/dev/./urandom  spark.driver.userClassPathFirst=true
+    #spark.shell.registrationUrl=http://192.168.0.20:8420/api/v1/spark/shell/register
+    spark.shell.appResource=/opt/kylo/kylo-services/lib/app/kylo-spark-shell-client-v2-0.9.1.jar
+    spark.shell.verbose=true
+    spark.shell.clientTimeout=240
+    kerberos.spark.kerberosEnabled=true
+    kerberos.spark.keytabLocation=/etc/security/daf.keytab
+    kerberos.spark.kerberosPrincipal=daf@DAF.GOV.IT
+    version=0.9.1
+config-map/kylo-ui.yaml
+	security.auth.ldap.server.uri=ldap://idm.teamdigitale.test:389/cn=users,cn=accounts,dc=daf,dc=gov,dc=it
+	security.auth.ldap.user.groupsBase=cn=groups,cn=accounts,dc=daf,dc=gov,dc=it
+	zuul.routes.api.url=http://tba-kylo-services:8420/api
+config-map/nifi.yaml
+    nifi.cluster.is.node=true
+    nifi.cluster.node.protocol.port=9999
+    nifi.kerberos.service.principal=daf@PLATFORM.DAF.LOCAL
+    nifi.kerberos.service.keytab.location=/usr/nifi/daf.keytab
+    jms.activemq.broker.url=tcp://tba-activemq:61616
+config-map/nifi-kylo.yaml
+    jms.activemq.broker.url=tcp://tba-activemq:61616
+    spring.activemq.broker-url=tcp://tba-activemq:61616
+deployment/activemq.yaml
+	activemq-name=tba-activemq
+	activemq-app=tba-activemq
+	activemq-image=nexus.daf.teamdigitale.it/tba-activemq.5.15.1:1.1.0
+	activemq-tba-dir=tba/evergreen2/activemq/data
+	activemq-gluster-claim=gluster-claim
+deployment/kylo-services.yaml
+    kylo-services-name=tba-kylo-services
+    kylo-services-app=tba-kylo-services
+    tba-kylo-service-image=nexus.teamdigitale.test/tba-kylo-services.9.1:1.0.5-FIX
+    kylo-services-gluster-claim=gluster-claim
+deployment/kylo-ui.yaml
+    kylo-ui-name=tba-kylo-ui
+    kylo-ui-app=tba-kylo-ui
+    tba-kylo-ui-image=nexus.teamdigitale.test/tba-kylo-ui.9.1:1.0.5-FIX
+    kylo-ui-gluster-claim=gluster-claim
+deployment/mysql.yaml
+    mysql-name=tba-kylo-ui
+    mysql-app=tba-kylo-ui
+    mysql-image=nexus.teamdigitale.test/tba-mysql.10.3:1.1.0
+    mysql-gluster-claim=gluster-claim
+deployment/nifi-cluster.yaml
+    nifi-cluster-name=tba-nifi-cluster
+    nifi-cluster-app=tba-kylo-ui
+    tba-nifi-cluster-image=nexus.teamdigitale.test/tba-nifi.1.6.0:1.2.6-CLUSTER
+    nifi-cluster-gluster-claim=gluster-claim
+    nifi-cluster-replicas=3
+    match-tba-nifi=tba-nifi
+    nifi-cluster-gluster-claim=gluster-claim
+services/activemq.yaml
+   tba-activemq-app=tba-activemq
+   tba-activemq-name=tba-activemq
+services/kylo-services.yaml
+   tba-kylo-services-app=tba-kylo-services
+   tba-kylo-services-name=tba-kylo-services
+services/kylo-ui.yaml
+   tba-kylo-ui-app=tba-kylo-ui
+   tba-kylo-ui-name=tba-kylo-ui
+services/mysql.yaml
+   tba-mysql-app=tba-mysql
+   tba-mysql-name=tba-mysql
+services/nifi-cluster.yaml
+   tba-nifi-name=tba-nifi
+   tba-nifi-app=tba-nifi
