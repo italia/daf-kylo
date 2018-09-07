@@ -55,14 +55,9 @@ case $2 in
     fi
     ;;
   nifi-cluster)
-    if [ "$1" = 'test' ]
-    then
-        kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-cluster.yaml
-        kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
-        kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/nifi-cluster.yaml
-        kubectl delete --namespace="$namespace" -f kubernetes/service/nifi-cluster.yaml
-    else
-        echo "This feature is not available for production environment"
-    fi
+    kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-cluster.yaml
+    kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/nifi-kylo.yaml
+    kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/nifi-cluster.yaml
+    kubectl delete --namespace="$namespace" -f kubernetes/service/nifi-cluster.yaml
     ;;
 esac
