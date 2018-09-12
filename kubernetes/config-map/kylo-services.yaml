@@ -891,6 +891,15 @@ data:
         "connectionType": "SOURCE"
       },
       {
+        "processorType": "org.apache.nifi.processors.standard.ListSFTP",
+        "datasourcePropertyKeys": [
+          "Hostname",
+          "Remote File"
+        ],
+        "datasourceType": "FTPDatasource",
+        "connectionType": "SOURCE"
+      },
+      {
         "processorType": "org.apache.nifi.processors.standard.GetFile",
         "datasourcePropertyKeys":["Input Directory","File Filter"],
         "datasourceType":"DirectoryDatasource",
