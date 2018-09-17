@@ -12,6 +12,8 @@ spec:
       labels:
         app: tba-kylo-services
     spec:
+      nodeSelector:
+        nifi-cluster: "true"
       hostAliases:
       - ip: "192.168.0.23"
         hostnames:
