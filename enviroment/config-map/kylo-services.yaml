@@ -481,7 +481,7 @@ data:
     spark.shell.sparkHome={ spark.shell.sparkHome }
     spark.shell.jars={ spark.shell.jars }
     spark.shell.sparkArgs={ spark.shell.sparkArgs }
-    #spark.shell.registrationUrl=http://192.168.0.20:8420/api/v1/spark/shell/register
+    spark.shell.registrationUrl=http://tba-kylo-ui:8400/proxy/v1/spark/shell/register
     spark.shell.appResource={ park.shell.appResource }
     spark.shell.verbose={ spark.shell.verbose }
     spark.shell.clientTimeout={ spark.shell.clientTimeout }
