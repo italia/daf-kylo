@@ -278,7 +278,7 @@ data:
     # 3) Global property replacement.  properties starting with "nifi.all_processors.<PROPERTY_KEY> will globally replace the value when the template is instantiated
     ##Below are Ambari configuration options for Hive Metastore and Spark location
     config.hive.schema=hive
-    config.metadata.url=http://kylo-ui:8400/proxy/v1/metadata
+    config.metadata.url=http://tba-kylo-ui:8400/proxy/v1/metadata
 
     ## Spark configuration
     nifi.executesparkjob.sparkhome=/opt/cloudera/parcels/CDH/lib/spark
@@ -464,28 +464,26 @@ data:
     # #L%
     ###
     # Server port number
-    server.port = 8454
-    #server.port = 0
+    #server.port = 8450
+    #server.port=0
 
     # Spark UI port number
-    #spark.ui.port = 8454
+    #spark.ui.port = 8451
 
     # Indicates how to communicate with the Spark Shell process when it is managed
     # externally using an init script or systemd. Comment the below lines to have
     # Kylo manage the Spark Shell process.
-    #spark.shell.server.host = localhost
-    spark.shell.server.port = 8453
+    #spark.shell.server.host=localhost
+    #spark.shell.server.port=8450
 
-    spark.shell.deployMode=cluster
+    spark.shell.deployMode=client
     spark.shell.master=yarn
-    spark.shell.sparkHome=/opt/cloudera/parcels/CDH/lib/spark
-    #spark.shell.jars=/opt/kylo/kylo-services/lib/mariadb-java-client-1.5.7.jar
-    spark.shell.sparkArgs=--conf spark.driver.userClassPathFirst=true
-    #spark.shell.registrationUrl=http://192.168.0.20:8420/api/v1/spark/shell/register
-    spark.shell.sparkArgs=--driver-memory 3g --executor-memory 5g --driver-java-options -Djava.security.egd=file:/dev/./urandom
+    spark.shell.sparkArgs=--driver-memory 5012m --executor-memory 3012m --driver-class-path /opt/kylo/kylo-services/conf:/opt/kylo/kylo-services/lib/mariadb-java-client-1.5.7.jar
     spark.shell.appResource=/opt/kylo/kylo-services/lib/app/kylo-spark-shell-client-v2-0.9.1.2-SNAPSHOT.jar
     spark.shell.verbose=true
-    spark.shell.clientTimeout=240
+    spark.shell.clientTimeout=5240
+    spark.shell.registrationUrl=http://tba-kylo-ui:8400/proxy/v1/spark/shell/register
+    spark.shell.proxyUser=false
 
     kerberos.spark.kerberosEnabled=true
     kerberos.spark.keytabLocation=/etc/security/daf.keytab

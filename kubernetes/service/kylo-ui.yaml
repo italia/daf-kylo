@@ -10,7 +10,7 @@ spec:
   - name: "8400"
     port: 8400
     targetPort: 8400
-    nodePort: 31400
+    nodePort: 31401
   selector:
     app: tba-kylo-ui
 status:
