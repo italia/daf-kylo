@@ -32,4 +32,4 @@ spec:
         persistentVolumeClaim:
           claimName: gluster-claim
       nodeSelector:
-        nifi: "true"
+        nifi-cluster: "true"
