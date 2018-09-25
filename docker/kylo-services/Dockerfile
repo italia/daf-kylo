@@ -1,5 +1,6 @@
 # Base java image
 FROM openjdk:alpine
+#openjdk:8-jdk-alpine
 
 ENV GLIBC_VERSION=2.25-r0
 
