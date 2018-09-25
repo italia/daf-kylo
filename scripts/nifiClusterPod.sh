@@ -1,5 +1,11 @@
 #!/bin/bash
 
+namespace="sec"
+if [[ $# -eq 2 ]] ; then
+    namespace=$2
+    echo "some message $namespace"
+fi
+
 nifiservicepod="tba-nifi-0"
 
 case $1 in
@@ -16,4 +22,4 @@ case $1 in
 esac
 
 echo "NiFi pod is $nifiservicepod"
-kubectl exec -it $nifiservicepod -- /bin/bash
+kubectl exec -it --namespace="$namespace" $nifiservicepod -- /bin/bash

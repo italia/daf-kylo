@@ -24,4 +24,4 @@ fi
 echo "Port-forward su namespace: $namespace"
 
 echo "NiFi pod is $nifiservicepod"
-kubectl exec -it $namespace $nifiservicepod -- tail -1000f /usr/nifi/logs/nifi-app.log
+kubectl exec -it --namespace="$namespace" $nifiservicepod -- tail -1000f /usr/nifi/logs/nifi-app.log

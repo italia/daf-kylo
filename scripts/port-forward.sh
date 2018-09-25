@@ -28,7 +28,7 @@ nifi)
     kubectl port-forward $namespace $nifipod 8080:8080
     ;;
 activemq)
-    activemqpod=$(kubectl get pods $namespace  -o yaml | sed -En 's/name: tba-activemq-(.*)-(.*)/tba-activemq-\1-\2/p')
+    activemqpod=$(kubectl get pods $namespace -o yaml | sed -En 's/name: tba-activemq-(.*)-(.*)/tba-activemq-\1-\2/p')
     echo "activemq service pod is $activemqpod"
     kubectl port-forward $namespace $activemqpod 8161:8161
     ;;
