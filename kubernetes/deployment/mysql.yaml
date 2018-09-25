@@ -33,3 +33,4 @@ spec:
           claimName: gluster-claim
       nodeSelector:
         nifi-cluster: "true"
+        nifi: "true"

@@ -14,6 +14,7 @@ spec:
     spec:
       nodeSelector:
         nifi-cluster: "true"
+        nifi: "true"
       hostAliases:
       - ip: "192.168.0.23"
         hostnames:
@@ -96,7 +97,7 @@ spec:
           - "master.elasticsearch.daf.gov.it"
           - "master"
       hostNetwork: false #changed by Fabio from true
-      # dnsPolicy: ClusterFirstWithHostNet
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
       - image: nexus.daf.teamdigitale.it/tba-kylo-ui.9.1:1.0.0
         name: tba-kylo-ui
@@ -117,5 +118,3 @@ spec:
       - name: kylo-ui-config
         configMap:
           name: kylo-ui
-      nodeSelector:
-        nifi: "true"

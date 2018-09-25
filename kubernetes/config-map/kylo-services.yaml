@@ -195,7 +195,6 @@ data:
     #spring.jpa.show-sql=true
     #spring.jpa.hibernate.ddl-auto=validate
 
-
     metadata.datasource.driverClassName=${spring.datasource.driverClassName}
     metadata.datasource.url=${spring.datasource.url}
     metadata.datasource.username=${spring.datasource.username}
