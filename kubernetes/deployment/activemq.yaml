@@ -12,6 +12,7 @@ spec:
       labels:
         app: tba-activemq
     spec:
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
       - image: nexus.daf.teamdigitale.it/tba-activemq.5.15.1:1.1.0
         name: tba-activemq
@@ -24,14 +25,32 @@ spec:
         - containerPort: 61613
         - containerPort: 1883
         - containerPort: 61614
+        resources:
+          limits:
+            memory: 5500Mi
         volumeMounts:
         - name: glusterfsvol
           mountPath: /opt/activemq/data
           subPath: tba/evergreen2/activemq/data
+        - name: activemq-config
+          mountPath: /opt/activemq/conf/activemq.xml
+          subPath: activemq.xml
+        - name: activemq-config
+          mountPath: /opt/activemq/conf/log4j.properties
+          subPath: log4j.properties
+        - name: activemq-config
+          mountPath: /opt/activemq/conf/logging.properties
+          subPath: logging.properties
+        - name: activemq-config
+          mountPath: /opt/activemq/bin/env
+          subPath: env
       restartPolicy: Always
       volumes:
       - name: glusterfsvol
         persistentVolumeClaim:
           claimName: gluster-claim
+      - name: activemq-config
+        configMap:
+          name: activemq
       nodeSelector:
         nifi-cluster: "true"
