@@ -24,10 +24,25 @@ spec:
         - containerPort: 61613
         - containerPort: 1883
         - containerPort: 61614
+        resources:
+          limits:
+            memory: 5500Mi
         volumeMounts:
         - name: glusterfsvol
           mountPath: /opt/activemq/data
           subPath: { activemq-tba-dir }
+        - name: activemq-config
+          mountPath: /opt/activemq/conf/activemq.xml
+          subPath: activemq.xml
+        - name: activemq-config
+          mountPath: /opt/activemq/conf/log4j.properties
+          subPath: log4j.properties
+        - name: activemq-config
+          mountPath: /opt/activemq/conf/logging.properties
+          subPath: logging.properties
+        - name: activemq-config
+          mountPath: /opt/activemq/bin/env
+          subPath: envx
       restartPolicy: Always
       volumes:
       - name: glusterfsvol

@@ -1,0 +1,360 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: activemq
+data:
+  activemq.xml: |-
+    <!--
+        Licensed to the Apache Software Foundation (ASF) under one or more
+        contributor license agreements.  See the NOTICE file distributed with
+        this work for additional information regarding copyright ownership.
+        The ASF licenses this file to You under the Apache License, Version 2.0
+        (the "License"); you may not use this file except in compliance with
+        the License.  You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+    -->
+    <!-- START SNIPPET: example -->
+    <beans
+      xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+        <!-- Allows us to use system properties as variables in this configuration file -->
+        <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <property name="locations">
+                <value>file:${activemq.conf}/credentials.properties</value>
+            </property>
+        </bean>
+
+        <!-- Allows accessing the server log -->
+        <bean id="logQuery" class="io.fabric8.insight.log.log4j.Log4jLogQuery"
+              lazy-init="false" scope="singleton"
+              init-method="start" destroy-method="stop">
+        </bean>
+
+        <!--
+            The <broker> element is used to configure the ActiveMQ broker.
+        -->
+        <broker xmlns="http://activemq.apache.org/schema/core" brokerName="localhost" dataDirectory="${activemq.data}">
+
+          <destinationPolicy>
+              <policyMap>
+                <policyEntries>
+                  <policyEntry topic=">" >
+                      <!-- The constantPendingMessageLimitStrategy is used to prevent
+                           slow topic consumers to block producers and affect other consumers
+                           by limiting the number of messages that are retained
+                           For more information, see:
+
+                           http://activemq.apache.org/slow-consumer-handling.html
+
+                      -->
+                    <pendingMessageLimitStrategy>
+                      <constantPendingMessageLimitStrategy limit="1000"/>
+                    </pendingMessageLimitStrategy>
+                  </policyEntry>
+                </policyEntries>
+              </policyMap>
+          </destinationPolicy>
+
+          <!--
+              The managementContext is used to configure how ActiveMQ is exposed in
+              JMX. By default, ActiveMQ uses the MBean server that is started by
+              the JVM. For more information, see:
+
+              http://activemq.apache.org/jmx.html
+          -->
+          <managementContext>
+              <managementContext createConnector="false"/>
+          </managementContext>
+          <!--
+              Configure message persistence for the broker. The default persistence
+              mechanism is the KahaDB store (identified by the kahaDB tag).
+              For more information, see:
+
+              http://activemq.apache.org/persistence.html
+          -->
+          <persistenceAdapter>
+              <kahaDB directory="${activemq.data}/kahadb"/>
+          </persistenceAdapter>
+
+
+          <!--
+            The systemUsage controls the maximum amount of space the broker will
+            use before disabling caching and/or slowing down producers. For more information, see:
+            http://activemq.apache.org/producer-flow-control.html
+          -->
+          <systemUsage>
+            <systemUsage>
+                <memoryUsage>
+                    <memoryUsage percentOfJvmHeap="70" />
+                </memoryUsage>
+                <storeUsage>
+                    <storeUsage limit="100 gb"/>
+                </storeUsage>
+                <tempUsage>
+                    <tempUsage limit="50 gb"/>
+                </tempUsage>
+            </systemUsage>
+          </systemUsage>
+          <!--
+              The transport connectors expose ActiveMQ over a given protocol to
+              clients and other brokers. For more information, see:
+
+              http://activemq.apache.org/configuring-transports.html
+          -->
+          <transportConnectors>
+              <!-- DOS protection, limit concurrent connections to 1000 and frame size to 100MB -->
+              <transportConnector name="openwire" uri="tcp://0.0.0.0:61616?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+              <transportConnector name="amqp" uri="amqp://0.0.0.0:5672?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+              <transportConnector name="stomp" uri="stomp://0.0.0.0:61613?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+              <transportConnector name="mqtt" uri="mqtt://0.0.0.0:1883?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+              <transportConnector name="ws" uri="ws://0.0.0.0:61614?maximumConnections=1000&amp;wireFormat.maxFrameSize=104857600"/>
+          </transportConnectors>
+
+          <!-- destroy the spring context on shutdown to stop jetty -->
+          <shutdownHooks>
+              <bean xmlns="http://www.springframework.org/schema/beans" class="org.apache.activemq.hooks.SpringContextHook" />
+          </shutdownHooks>
+
+        </broker>
+
+        <!--
+            Enable web consoles, REST and Ajax APIs and demos
+            The web consoles requires by default login, you can disable this in the jetty.xml file
+
+            Take a look at ${ACTIVEMQ_HOME}/conf/jetty.xml for more details
+        -->
+        <import resource="jetty.xml"/>
+    </beans>
+    <!-- END SNIPPET: example -->
+  log4j.properties: |-
+    ## ---------------------------------------------------------------------------
+    ## Licensed to the Apache Software Foundation (ASF) under one or more
+    ## contributor license agreements.  See the NOTICE file distributed with
+    ## this work for additional information regarding copyright ownership.
+    ## The ASF licenses this file to You under the Apache License, Version 2.0
+    ## (the "License"); you may not use this file except in compliance with
+    ## the License.  You may obtain a copy of the License at
+    ##
+    ## http://www.apache.org/licenses/LICENSE-2.0
+    ##
+    ## Unless required by applicable law or agreed to in writing, software
+    ## distributed under the License is distributed on an "AS IS" BASIS,
+    ## WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    ## See the License for the specific language governing permissions and
+    ## limitations under the License.
+    ## ---------------------------------------------------------------------------
+
+    #
+    # This file controls most of the logging in ActiveMQ which is mainly based around
+    # the commons logging API.
+    #
+    #log4j.rootLogger=INFO, console, logfile
+    #log4j.logger.org.apache.activemq.spring=WARN
+    #log4j.logger.org.apache.activemq.web.handler=WARN
+    #log4j.logger.org.springframework=WARN
+    #log4j.logger.org.apache.xbean=WARN
+    #log4j.logger.org.apache.camel=INFO
+    #log4j.logger.org.eclipse.jetty=WARN
+    log4j.rootLogger=DEBUG, console, logfile
+    log4j.logger.org.apache.activemq.spring=INFO
+    log4j.logger.org.apache.activemq.web.handler=INFO
+    log4j.logger.org.springframework=INFO
+    log4j.logger.org.apache.xbean=INFO
+    log4j.logger.org.apache.camel=INFO
+    log4j.logger.org.eclipse.jetty=INFO
+    # When debugging or reporting problems to the ActiveMQ team,
+    # comment out the above lines and uncomment the next.
+
+    #log4j.rootLogger=DEBUG, logfile, console
+
+    # Or for more fine grained debug logging uncomment one of these
+    #log4j.logger.org.apache.activemq=DEBUG
+    #log4j.logger.org.apache.camel=DEBUG
+
+    # Console appender
+    log4j.appender.console=org.apache.log4j.ConsoleAppender
+    log4j.appender.console.layout=org.apache.log4j.PatternLayout
+    log4j.appender.console.layout.ConversionPattern=%5p | %m%n
+    log4j.appender.console.threshold=INFO
+
+    # File appender
+    log4j.appender.logfile=org.apache.log4j.RollingFileAppender
+    log4j.appender.logfile.file=${activemq.data}/activemq.log
+    log4j.appender.logfile.maxFileSize=20001024KB
+    log4j.appender.logfile.maxBackupIndex=5
+    log4j.appender.logfile.append=true
+    log4j.appender.logfile.layout=org.apache.log4j.PatternLayout
+    log4j.appender.logfile.layout.ConversionPattern=%d | %-5p | %m | %c | %t%n
+    # use some of the following patterns to see MDC logging data
+    #
+    # %X{activemq.broker}
+    # %X{activemq.connector}
+    # %X{activemq.destination}
+    #
+    ## e.g.
+    ##
+    ## log4j.appender.logfile.layout.ConversionPattern=%d | %-20.20X{activemq.connector} | %-5p | %m | %c | %t%n
+    #
+    #log4j.throwableRenderer=org.apache.log4j.EnhancedThrowableRenderer
+    #
+    ############
+    ## Audit log
+    ############
+    #
+    #log4j.additivity.org.apache.activemq.audit=false
+    #log4j.logger.org.apache.activemq.audit=INFO, audit
+    #
+    #log4j.appender.audit=org.apache.log4j.RollingFileAppender
+    #log4j.appender.audit.file=${activemq.data}/audit.log
+    #log4j.appender.audit.maxFileSize=1024KB
+    #log4j.appender.audit.maxBackupIndex=5
+    #log4j.appender.audit.append=true
+    #log4j.appender.audit.layout=org.apache.log4j.PatternLayout
+    #log4j.appender.audit.layout.ConversionPattern=%-5p | %m | %t%n
+  logging.properties: |-
+    ## ---------------------------------------------------------------------------
+    ## Licensed to the Apache Software Foundation (ASF) under one or more
+    ## contributor license agreements.  See the NOTICE file distributed with
+    ## this work for additional information regarding copyright ownership.
+    ## The ASF licenses this file to You under the Apache License, Version 2.0
+    ## (the "License"); you may not use this file except in compliance with
+    ## the License.  You may obtain a copy of the License at
+    ##
+    ## http://www.apache.org/licenses/LICENSE-2.0
+    ##
+    ## Unless required by applicable law or agreed to in writing, software
+    ## distributed under the License is distributed on an "AS IS" BASIS,
+    ## WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    ## See the License for the specific language governing permissions and
+    ## limitations under the License.
+    ## ---------------------------------------------------------------------------
+
+    #
+    # This file controls logging which is done over the java.logging API
+    #
+
+    #handlers = java.util.logging.ConsoleHandler
+    #java.util.logging.ConsoleHandler.level=INFO
+    #java.util.logging.ConsoleHandler.formatter=java.util.logging.SimpleFormatter
+  env: |-
+    #!/bin/sh
+    # ------------------------------------------------------------------------
+    # Licensed to the Apache Software Foundation (ASF) under one or more
+    # contributor license agreements.  See the NOTICE file distributed with
+    # this work for additional information regarding copyright ownership.
+    # The ASF licenses this file to You under the Apache License, Version 2.0
+    # (the "License"); you may not use this file except in compliance with
+    # the License.  You may obtain a copy of the License at
+    #
+    # http://www.apache.org/licenses/LICENSE-2.0
+    #
+    # Unless required by applicable law or agreed to in writing, software
+    # distributed under the License is distributed on an "AS IS" BASIS,
+    # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    # See the License for the specific language governing permissions and
+    # limitations under the License.
+    # ------------------------------------------------------------------------
+    #
+    # Configuration file for running Apache Active MQ as standalone provider.
+    #
+    # This file overwrites the predefined settings of the sysv init-script.
+    # You can also use alternate location for default settings -
+    # invoke the init-script without a argument an review help section "Configuration of this script"
+    # /etc/default/activemq <activemq user home>/.activemqrc <activemq installation dir>/bin/env
+
+    # Active MQ installation dirs
+    # ACTIVEMQ_HOME="<Installationdir>/"
+    # ACTIVEMQ_BASE="$ACTIVEMQ_HOME"
+    # ACTIVEMQ_CONF="$ACTIVEMQ_BASE/conf"
+    # ACTIVEMQ_DATA="$ACTIVEMQ_BASE/data"
+    # ACTIVEMQ_TMP="$ACTIVEMQ_BASE/tmp"
+
+    # Set jvm memory configuration (minimal/maximum amount of memory)
+    ACTIVEMQ_OPTS_MEMORY="-Xms64M -Xmx4G"
+
+    if [ -z "$ACTIVEMQ_OPTS" ] ; then
+        ACTIVEMQ_OPTS="$ACTIVEMQ_OPTS_MEMORY -Djava.util.logging.config.file=logging.properties -Djava.security.auth.login.config=$ACTIVEMQ_CONF/login.config"
+    fi
+
+    # Uncomment to enable audit logging
+    #ACTIVEMQ_OPTS="$ACTIVEMQ_OPTS -Dorg.apache.activemq.audit=true"
+
+    # Set jvm jmx configuration
+    # This enables jmx access over a configured jmx-tcp-port.
+    # You have to configure the first four settings if you run a ibm jvm, caused by the
+    # fact that IBM's jvm does not support VirtualMachine.attach(PID).
+    # JMX access is needed for quering a running activemq instance to gain data or to
+    # trigger management operations.
+    #
+    # Example for ${ACTIVEMQ_CONF}/jmx.access:
+    # ---
+    # # The "monitorRole" role has readonly access.
+    # # The "controlRole" role has readwrite access.
+    # monitorRole readonly
+    # controlRole readwrite
+    # ---
+    #
+    # Example for ${ACTIVEMQ_CONF}/jmx.password:
+    # ---
+    # # The "monitorRole" role has password "abc123".
+    # # # The "controlRole" role has password "abcd1234".
+    # monitorRole abc123
+    # controlRole abcd1234
+    # ---
+    #
+    # ACTIVEMQ_SUNJMX_START="$ACTIVEMQ_SUNJMX_START -Dcom.sun.management.jmxremote.port=11099 "
+    # ACTIVEMQ_SUNJMX_START="$ACTIVEMQ_SUNJMX_START -Dcom.sun.management.jmxremote.password.file=${ACTIVEMQ_CONF}/jmx.password"
+    # ACTIVEMQ_SUNJMX_START="$ACTIVEMQ_SUNJMX_START -Dcom.sun.management.jmxremote.access.file=${ACTIVEMQ_CONF}/jmx.access"
+    # ACTIVEMQ_SUNJMX_START="$ACTIVEMQ_SUNJMX_START -Dcom.sun.management.jmxremote.ssl=false"
+    ACTIVEMQ_SUNJMX_START="$ACTIVEMQ_SUNJMX_START -Dcom.sun.management.jmxremote"
+
+    # Set jvm jmx configuration for controlling the broker process
+    # You only have to configure the first four settings if you run a ibm jvm, caused by the
+    # fact that IBM's jvm does not support VirtualMachine.attach(PID)
+    # (see also com.sun.management.jmxremote.port, .jmx.password.file and .jmx.access.file )
+    #ACTIVEMQ_SUNJMX_CONTROL="--jmxurl service:jmx:rmi:///jndi/rmi://127.0.0.1:1099/jmxrmi --jmxuser controlRole --jmxpassword abcd1234"
+    ACTIVEMQ_SUNJMX_CONTROL=""
+
+    # Specify the queue manager URL for using "browse" option of sysv initscript
+    if [ -z "$ACTIVEMQ_QUEUEMANAGERURL" ]; then
+        ACTIVEMQ_QUEUEMANAGERURL="--amqurl tcp://localhost:61616"
+    fi
+
+    # Set additional JSE arguments
+    if [ -z "$ACTIVEMQ_SSL_OPTS" ] ; then
+        #ACTIVEMQ_SSL_OPTS="-Djava.security.properties=$ACTIVEMQ_CONF/java.security"
+        ACTIVEMQ_SSL_OPTS=""
+    fi
+
+    # Uncomment to enable remote debugging
+    #ACTIVEMQ_DEBUG_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
+
+    # ActiveMQ tries to shutdown the broker by jmx,
+    # after a specified number of seconds send SIGKILL
+    if [ -z "$ACTIVEMQ_KILL_MAXSECONDS" ]; then
+        ACTIVEMQ_KILL_MAXSECONDS=30
+    fi
+
+    # Configure a user with non root privileges, if no user is specified do not change user
+    # (the entire activemq installation should be owned by this user)
+    ACTIVEMQ_USER=""
+
+    # location of the pidfile
+    # ACTIVEMQ_PIDFILE="$ACTIVEMQ_DATA/activemq.pid"
+
+    # Location of the java installation
+    # Specify the location of your java installation using JAVA_HOME, or specify the
+    # path to the "java" binary using JAVACMD
+    # (set JAVACMD to "auto" for automatic detection)
+    #JAVA_HOME=""
+    JAVACMD="auto"

@@ -25,6 +25,7 @@ case $2 in
 	kubectl delete --namespace="$namespace" -f kubernetes/service --recursive
 	;;
   activemq)
+	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/activemq.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/activemq.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/service/activemq.yaml
 	;;
