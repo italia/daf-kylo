@@ -53,7 +53,7 @@ spec:
           containerPort: 8033
         resources:
           limits:
-            memory: 12000Mi
+            memory: 11000Mi
         volumeMounts:
         - name: private
           mountPath: /usr/nifi/data
