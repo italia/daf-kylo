@@ -17,9 +17,9 @@
 | Elasticsearch 	| 5.6.4 	|
 | MariaDB		      | 10.3 		|
 | Spark			      | 2.2.0		|
-| Kylo-Services		| 8.4.0		|
-| Kylo-UI     		| 8.4.0		|
-| NiFi		        | 1.4.0		|
+| Kylo-Services		| 9.1.0		|
+| Kylo-UI     		| 9.1.0		|
+| NiFi		        | 1.6.0		|
 
 ### Install required dependencies
 
