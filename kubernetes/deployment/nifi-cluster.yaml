@@ -6,7 +6,7 @@ metadata:
     app: tba-nifi
 spec:
   serviceName: tba-nifi
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: tba-nifi
@@ -122,7 +122,7 @@ spec:
         image: nexus.daf.teamdigitale.it/tba-nifi.1.6.0:1.0.1-CLUSTER
         env:
         - name: NIFI_ADDITIONAL_SEARCH_DOMAINS
-          value: "tba-nifi.sec.svc.cluster.local"
+          value: "tba-nifi.default.svc.cluster.local"
           # NOTE: must match the StatefulSet name.
         ports:
         - name: nifi-http
@@ -137,15 +137,15 @@ spec:
           limits:
             memory: 13000Mi
         volumeMounts:
-        - name: private
+        - name: gluster
           mountPath: /usr/nifi/data
           subPath: nifi/data
           readOnly: false
-        - name: private
+        - name: gluster
           mountPath: /usr/nifi/logs
           subPath: nifi/log
           readOnly: false
-        - name: private
+        - name: gluster
           mountPath: /tmp/kylo-nifi/failed-flows
           subPath: nifi/failed-flows
           readOnly: false
@@ -154,7 +154,7 @@ spec:
           subPath: tba/evergreen2/nifi/extentions
           readOnly: true     # NOTE: was false
         - name: sparkhome
-          mountPath: /opt/cloudera/parcels/
+          mountPath: /opt/cloudera/pa./rcels/
           readOnly: true
         - name: sparkconf
           mountPath: /etc/spark2/
@@ -249,7 +249,7 @@ spec:
           path: /etc/hive/
   volumeClaimTemplates:
   - metadata:
-      name: private
+      name: gluster
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
