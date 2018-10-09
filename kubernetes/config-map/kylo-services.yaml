@@ -476,7 +476,7 @@ data:
     #spark.shell.server.port=8450
 
     spark.shell.deployMode=client
-    spark.shell.master=yarn
+    spark.shell.master=local
     spark.shell.sparkArgs=--driver-memory 5012m --executor-memory 3012m --driver-class-path /opt/kylo/kylo-services/conf:/opt/kylo/kylo-services/lib/mariadb-java-client-1.5.7.jar
     spark.shell.appResource=/opt/kylo/kylo-services/lib/app/kylo-spark-shell-client-v2-0.9.1.2-SNAPSHOT.jar
     spark.shell.verbose=true
