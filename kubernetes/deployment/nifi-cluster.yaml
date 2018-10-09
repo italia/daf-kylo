@@ -137,15 +137,15 @@ spec:
           limits:
             memory: 13000Mi
         volumeMounts:
-        - name: private
+        - name: gluster
           mountPath: /usr/nifi/data
           subPath: nifi/data
           readOnly: false
-        - name: private
+        - name: gluster
           mountPath: /usr/nifi/logs
           subPath: nifi/log
           readOnly: false
-        - name: private
+        - name: gluster
           mountPath: /tmp/kylo-nifi/failed-flows
           subPath: nifi/failed-flows
           readOnly: false
