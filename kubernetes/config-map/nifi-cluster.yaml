@@ -179,7 +179,7 @@ data:
     nifi.cluster.protocol.is.secure=false
 
     # cluster node properties (only configure for cluster nodes) #
-    nifi.cluster.is.node=true
+    nifi.cluster.is.node=false
     nifi.cluster.node.address=
     nifi.cluster.node.protocol.port=9999
     nifi.cluster.node.protocol.threads=25
