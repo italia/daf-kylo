@@ -6,7 +6,7 @@ metadata:
     app: tba-nifi
 spec:
   serviceName: tba-nifi
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: tba-nifi
