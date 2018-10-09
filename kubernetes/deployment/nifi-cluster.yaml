@@ -249,7 +249,7 @@ spec:
           path: /etc/hive/
   volumeClaimTemplates:
   - metadata:
-      name: private
+      name: gluster
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
