@@ -26,8 +26,8 @@ data:
     spring.profiles.active=jms-activemq
 
     ###
-    jms.activemq.broker.url=tcp://tba-activemq.sec:61616
-    spring.activemq.broker-url=tcp://tba-activemq.sec:61616
+    jms.activemq.broker.url=tcp://tba-activemq:61616
+    spring.activemq.broker-url=tcp://tba-activemq:61616
     #jms.activemq.broker.username=admin
     #jms.activemq.broker.password=admin
     ##Redeliver policy for the Listeners when they fail (http://activemq.apache.org/redelivery-policy.html)

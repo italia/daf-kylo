@@ -306,7 +306,7 @@ data:
     config.category.system.prefix=
 
     # Set the JMS server hostname for the Kylo hosted JMS server
-    config.elasticsearch.jms.url=tcp://tba-activemq.sec:61616
+    config.elasticsearch.jms.url=tcp://tba-activemq:61616
 
     # Set the nifi home folder
     config.nifi.home=/usr/nifi
@@ -388,7 +388,7 @@ data:
     nifi.service.kylo_metadata_service.rest_client_user_name=dladmin
 
     nifi.service.jmsconnectionfactoryprovider.mq_client_libraries_path_(i.e.,_/usr/jms/lib)=/usr/nifi/activemq
-    nifi.service.jmsconnectionfactoryprovider.broker_uri=tcp://tba-activemq.sec:61616
+    nifi.service.jmsconnectionfactoryprovider.broker_uri=tcp://tba-activemq:61616
 
 
     nifi.service.hive_thrift_service.database_user=root
@@ -400,7 +400,7 @@ data:
     nifi.executesparkjob[validate_and_split_records].spark_configurations=spark.default.parallelism=4
     nifi.executesparkjob[profile_data].spark_configurations=spark.default.parallelism=4
 
-    jms.activemq.broker.url=tcp://tba-activemq.sec:61616
+    jms.activemq.broker.url=tcp://tba-activemq:61616
 
     #UPDATE for Kylo 0.9.1
     # Add the new property
