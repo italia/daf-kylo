@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-namespace="sec"
+namespace="default"
 
 if [ "$1" = 'test' ]
 then

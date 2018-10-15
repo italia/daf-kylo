@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-namespace="sec"
+namespace="default"
 
 if [ "$1" = 'test' ]
 then
@@ -37,7 +37,7 @@ case $2 in
 	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-services.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/kylo-services.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/service/kylo-services.yaml
-    ;;
+	;;
   kylo-ui)
 	kubectl delete --namespace="$namespace" -f kubernetes/config-map$ENV/kylo-ui.yaml
 	kubectl delete --namespace="$namespace" -f kubernetes/deployment$ENV/kylo-ui.yaml

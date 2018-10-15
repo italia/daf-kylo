@@ -94,27 +94,27 @@ After config is done, **deploy** into kubernetes cluster can be performed by: `.
 
 for instance:
   ```
-  ./playbook.sh prod activemq
+  ./playbook.sh prod activemq [namespace]
   ```
 
 or **delete** by: `./cleanup.sh [environment] [component]`
 
 for instance:
   ```
-  ./cleanup.sh prod activemq
+  ./cleanup.sh prod activemq [namespace]
   ```
 #### Test
 
 for instance:
   ```
-  ./playbook.sh test activemq
+  ./playbook.sh test activemq [namespace]
   ```
 
 or **delete** by: `./cleanup.sh [environment] [component]`
 
 for instance:
   ```
-  ./cleanup.sh test activemq
+  ./cleanup.sh test activemq [namespace]
   ```
 ### Mysql Configuration
 By default the kylo database is not created in mysql container, so you have to create it.
