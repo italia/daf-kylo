@@ -24,7 +24,7 @@ spec:
         volumeMounts:
         - name: glusterfsvol
           mountPath: /var/lib/mysql
-          subPath: tba/evergreen2/mysql/data
+          subPath: tba-singlenode/evergreen2/mysql/data
           readOnly: false
       restartPolicy: Always
       volumes:
@@ -32,5 +32,4 @@ spec:
         persistentVolumeClaim:
           claimName: gluster-claim
       nodeSelector:
-        nifi-cluster: "true"
-        nifi: "true"
+        edge: "true"
