@@ -95,13 +95,6 @@ spec:
         hostnames:
           - "master.elasticsearch.daf.gov.it"
           - "master.elasticsearch"
-      - ip: "10.43.101.80"
-        hostnames:
-          - "tba-activemq.sec.svc.cluster.local"
-          - "tba-activemq.sec.svc.cluster"
-          - "tba-activemq.sec.svc"
-          - "tba-activemq.sec"
-          - "tba-activemq" # Workaround for unstable k8s dns
       containers:
       - image: nexus.daf.teamdigitale.it/tba-kylo-services.9.1:1.0.1
         name: tba-kylo-services

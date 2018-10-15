@@ -135,7 +135,7 @@ spec:
           containerPort: 8033
         resources:
           limits:
-            memory: 13000Mi
+            memory: 20000Mi
         volumeMounts:
         - name: gluster
           mountPath: /usr/nifi/data
