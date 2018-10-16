@@ -1,6 +1,6 @@
 #!/bin/bash
 
-namespace="sec"
+namespace="default"
 if [[ $# -eq 2 ]] ; then
     namespace=$2
     echo "some message $namespace"
@@ -15,10 +15,12 @@ case $1 in
 1)
     nifiservicepod="tba-nifi-1"
 ;;
-
+2)
+    nifiservicepod="tba-nifi-2"
+;;
 *)
     echo "Sorry, you specifiy a not existed pod!"
-    echo "Use just 0 or 1";;
+    echo "Insert the number of pod [0, 1, 2]";;
 esac
 
 echo "NiFi pod is $nifiservicepod"
