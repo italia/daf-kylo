@@ -115,7 +115,7 @@ spec:
         - containerPort: 8400
         resources:
           limits:
-            memory: 8096Mi
+            memory: 10096Mi
         volumeMounts:
         - mountPath: /opt/kylo/kylo-ui/conf
           name: kylo-ui-config
