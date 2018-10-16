@@ -14,7 +14,6 @@ spec:
     spec:
       nodeSelector:
         nifi-cluster: "true"
-        nifi: "true"
       hostAliases:
       - ip: "192.168.0.23"
         hostnames:
@@ -96,14 +95,27 @@ spec:
         hostnames:
           - "master.elasticsearch.daf.gov.it"
           - "master"
-      hostNetwork: false #changed by Fabio from true
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                  - tba-kylo-services
+            topologyKey: "kubernetes.io/hostname"
+      hostNetwork: true
       dnsPolicy: ClusterFirstWithHostNet
       containers:
-      - image: nexus.daf.teamdigitale.it/tba-kylo-ui.9.1:1.0.0
+      - image: nexus.daf.teamdigitale.it/tba-kylo-ui.9.1:3.0.0
         name: tba-kylo-ui
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8400
+        resources:
+          limits:
+            memory: 12096Mi
         volumeMounts:
         - mountPath: /opt/kylo/kylo-ui/conf
           name: kylo-ui-config
@@ -111,6 +123,7 @@ spec:
           subPath: tba/evergreen2/kylo-ui/log
           name: glusterfsvol
       restartPolicy: Always
+      
       volumes:
       - name: glusterfsvol
         persistentVolumeClaim:
