@@ -29,20 +29,27 @@ data:
     ###
     jms.activemq.broker.url=tcp://tba-activemq:61616
     spring.activemq.broker-url=tcp://tba-activemq:61616
-
+    #jms.activemq.broker.username=admin
+    #jms.activemq.broker.password=admin
+    ##Redeliver policy for the Listeners when they fail (http://activemq.apache.org/redelivery-policy.html)
+    jms.maximumRedeliveries=2
+    #jms.redeliveryDelay=1000
+    #jms.maximumRedeliveryDelay=600000L
+    #jms.backOffMultiplier=5
+    #jms.useExponentialBackOff=false
 
     ## Back up location to write the Feed stats data if NiFi goes down
     kylo.provenance.cache.location=/usr/nifi/dump/feed-event-statistics.gz
 
     ## The maximum number of starting flow files per feed during the given run interval to send to ops manager
-    kylo.provenance.max.starting.events=5
+    kylo.provenance.max.starting.events=500
 
     ## The number of starting flow files allowed to be sent through until the throttle mechanism in engaged.
     # if the feed starting processor gets more than this number of events during a rolling window based upon the kylo.provenance.event.throttle.threshold.time.millis timefame events will be throttled back to 1 per second until its slowed down
-    kylo.provenance.event.count.throttle.threshold=15
+    kylo.provenance.event.count.throttle.threshold=500
 
-    ## Throttle timefame used to check the rolling window to determine if rapid fire is occurring
-    kylo.provenance.event.throttle.threshold.time.millis=1000
+    ## Throttle timeframe used to check the rolling window to determine if rapid fire is occurring
+    kylo.e.event.throttle.threshold.time.millis=1000
 
     ## run interval to gather stats and send to ops manager
     kylo.provenance.run.interval.millis=3000

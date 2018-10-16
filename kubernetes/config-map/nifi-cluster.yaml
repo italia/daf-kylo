@@ -179,7 +179,7 @@ data:
     nifi.cluster.protocol.is.secure=false
 
     # cluster node properties (only configure for cluster nodes) #
-    nifi.cluster.is.node=false
+    nifi.cluster.is.node=true
     nifi.cluster.node.address=
     nifi.cluster.node.protocol.port=9999
     nifi.cluster.node.protocol.threads=25
@@ -189,7 +189,7 @@ data:
     nifi.cluster.node.read.timeout=250 secs
     nifi.cluster.firewall.file=
     nifi.cluster.flow.election.max.wait.time=5 mins
-    nifi.cluster.flow.election.max.candidates=3
+    nifi.cluster.flow.election.max.candidates=2
 
     nifi.cluster.node.max.concurrent.requests=500
     nifi.cluster.node.request.replication.claim.timeout=20 secs
@@ -240,7 +240,7 @@ data:
     #jms.activemq.broker.username=admin
     #jms.activemq.broker.password=admin
     ##Redeliver policy for the Listeners when they fail (http://activemq.apache.org/redelivery-policy.html)
-    #jms.maximumRedeliveries=100
+    jms.maximumRedeliveries=100000
     #jms.redeliveryDelay=1000
     #jms.maximumRedeliveryDelay=600000
     #jms.backOffMultiplier=5
@@ -280,8 +280,8 @@ data:
     java.arg.1=-Dorg.apache.jasper.compiler.disablejsr199=true
 
     # JVM memory settings
-    java.arg.2=-Xms1g
-    java.arg.3=-Xmx10g
+    java.arg.2=-Xms4g
+    java.arg.3=-Xmx16g
 
     # Enable Remote Debugging
     #java.arg.debug=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000
@@ -293,7 +293,6 @@ data:
     java.arg.6=-Djava.protocol.handler.pkgs=sun.net.www.protocol
 
     # JAVA 8 tuning as describe on hortonwork guide
-
     java.arg.7=-XX:ReservedCodeCacheSize=256m
     java.arg.8=-XX:CodeCacheMinimumFreeSpace=10m
     java.arg.9=-XX:+UseCodeCacheFlushing
