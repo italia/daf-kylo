@@ -28,7 +28,6 @@ spec:
         resources:
           limits:
             memory: 5500Mi
-        resources: {}
         volumeMounts:
         - name: glusterfsvol
           mountPath: /opt/activemq/data

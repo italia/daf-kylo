@@ -115,7 +115,7 @@ spec:
         - containerPort: 8400
         resources:
           limits:
-            memory: 10096Mi
+            memory: 12096Mi
         volumeMounts:
         - mountPath: /opt/kylo/kylo-ui/conf
           name: kylo-ui-config
@@ -123,6 +123,7 @@ spec:
           subPath: tba/evergreen2/kylo-ui/log
           name: glusterfsvol
       restartPolicy: Always
+      
       volumes:
       - name: glusterfsvol
         persistentVolumeClaim:

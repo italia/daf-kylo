@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tba-nifi
+  labels:
+    app: tba-nifi
+spec:
+  selector:
+    app: tba-nifi
+  clusterIP: None   #headless
+  ports:
+  - name: "nifi-http"
+    port: 8080
+  - name: "listerner"
+    port: 8033
+  - name: "nifi-input"
+    port: 9998
+  - name: "nifi-cluster"
+    port: 9999

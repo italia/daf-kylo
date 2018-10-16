@@ -16,20 +16,24 @@ spec:
         app: tba-nifi
         nifi-cluster: "true"
     spec:
-      #hostNetwork: false                      # NOTE: Do not change because it is used the services
+      hostAliases:
+      - ip: "192.168.20.20"
+        hostnames:
+        - "elk-master-1.teamdigitale.test"
+        - "elk-master-1"
+      hostNetwork: false                      # NOTE: Do not change because it is used the services
       affinity:
         podAntiAffinity:
-              preferredDuringSchedulingIgnoredDuringExecution:
-              - weight: 100
-                podAffinityTerm:
-                  labelSelector:
-                    matchExpressions:
-                    - key: nifi-cluster
-                      operator: In
-                      values:
-                      - "true"
-                  topologyKey: kubernetes.io/hostname
-      restartPolicy: Always
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: nifi-cluster
+                  operator: In
+                  values:
+                  - "true"
+              topologyKey: kubernetes.io/hostname
       nodeSelector:
         nifi-cluster: "true"
       imagePullSecrets:
@@ -37,7 +41,7 @@ spec:
       containers:
       - name: tba-nifi
         # TODO: modify image to support NIFI_ADDITIONAL_SEARCH_DOMAINS, move other setting in to config map
-        image: nexus.teamdigitale.test/tba-nifi.1.6.0:0.7.5-CLUSTERFIX
+        image: nexus.teamdigitale.test/tba-nifi.1.6.0:9.3.0
         env:
         - name: NIFI_ADDITIONAL_SEARCH_DOMAINS
           value: "tba-nifi.default.svc.cluster.local teamdigitale.test"
@@ -53,7 +57,7 @@ spec:
           containerPort: 8033
         resources:
           limits:
-            memory: 11000Mi
+            memory: 13G
         volumeMounts:
         - name: private
           mountPath: /usr/nifi/data

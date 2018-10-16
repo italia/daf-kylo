@@ -9,7 +9,6 @@ spec:
    app: tba-nifi
  clusterIP: None   #headless
  ports:
- ports:
  - name: "nifi-http"
    port: 8080
  - name: "listerner"

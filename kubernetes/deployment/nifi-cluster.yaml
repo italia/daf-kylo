@@ -6,7 +6,7 @@ metadata:
     app: tba-nifi
 spec:
   serviceName: tba-nifi
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: tba-nifi
@@ -98,7 +98,7 @@ spec:
              - "master.elasticsearch.daf.gov.it"
              - "master"
       #hostNetwork: false                      # NOTE: Do not change because it is used the services
-      dnsPolicy: ClusterFirstWithHostNet
+      #dnsPolicy: ClusterFirstWithHostNet
       affinity:
         podAntiAffinity:
               preferredDuringSchedulingIgnoredDuringExecution:
@@ -119,7 +119,7 @@ spec:
       containers:
       - name: tba-nifi
         # TODO: modify image to support NIFI_ADDITIONAL_SEARCH_DOMAINS, move other setting in to config map
-        image: nexus.daf.teamdigitale.it/tba-nifi.1.6.0:1.0.1-CLUSTER
+        image: nexus.daf.teamdigitale.it/tba-nifi.1.6.0:9.3.0
         env:
         - name: NIFI_ADDITIONAL_SEARCH_DOMAINS
           value: "tba-nifi.default.svc.cluster.local"
@@ -135,7 +135,7 @@ spec:
           containerPort: 8033
         resources:
           limits:
-            memory: 20000Mi
+            memory: 32000Mi
         volumeMounts:
         - name: gluster
           mountPath: /usr/nifi/data
@@ -154,7 +154,7 @@ spec:
           subPath: tba/evergreen2/nifi/extentions
           readOnly: true     # NOTE: was false
         - name: sparkhome
-          mountPath: /opt/cloudera/pa./rcels/
+          mountPath: /opt/cloudera/parcels/
           readOnly: true
         - name: sparkconf
           mountPath: /etc/spark2/
