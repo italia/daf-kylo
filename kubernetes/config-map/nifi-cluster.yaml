@@ -65,7 +65,7 @@ data:
     nifi.flowfile.repository.directory=./data/flowfile_repository
     nifi.flowfile.repository.partitions=4
     nifi.flowfile.repository.checkpoint.interval=2 mins
-    nifi.flowfile.repository.always.sync=false
+    nifi.flowfile.repository.always.sync=true
 
     nifi.swap.manager.implementation=org.apache.nifi.controller.FileSystemSwapManager
     nifi.queue.swap.threshold=20000
@@ -190,15 +190,16 @@ data:
     nifi.cluster.firewall.file=
     nifi.cluster.flow.election.max.wait.time=5 mins
     nifi.cluster.flow.election.max.candidates=2
+    nifi.cluster.node.max.concurrent.requests=1000
 
     nifi.cluster.node.max.concurrent.requests=500
     nifi.cluster.node.request.replication.claim.timeout=20 secs
 
     # zookeeper properties, used for cluster management #
-    nifi.zookeeper.connect.string=master:2181
-    nifi.zookeeper.connect.timeout=500 secs
-    nifi.zookeeper.session.timeout=500 secs
-    nifi.zookeeper.root.node=/tba-nifi-cluster
+    nifi.zookeeper.connect.string=master:2181,master-2:2181,master-3:2181
+    nifi.zookeeper.connect.timeout=10 secs
+    nifi.zookeeper.session.timeout=10 secs
+    nifi.zookeeper.root.node=/tba-nifi-cluster-2
 
     # kerberos #
     nifi.kerberos.krb5.file=/etc/krb5.conf
@@ -281,7 +282,7 @@ data:
 
     # JVM memory settings
     java.arg.2=-Xms4g
-    java.arg.3=-Xmx16g
+    java.arg.3=-Xmx20g
 
     # Enable Remote Debugging
     #java.arg.debug=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000
@@ -291,12 +292,9 @@ data:
     # allowRestrictedHeaders is required for Cluster/Node communications to work properly
     java.arg.5=-Dsun.net.http.allowRestrictedHeaders=true
     java.arg.6=-Djava.protocol.handler.pkgs=sun.net.www.protocol
-
-    # JAVA 8 tuning as describe on hortonwork guide
     java.arg.7=-XX:ReservedCodeCacheSize=256m
     java.arg.8=-XX:CodeCacheMinimumFreeSpace=10m
     java.arg.9=-XX:+UseCodeCacheFlushing
-
 
     # The G1GC is still considered experimental but has proven to be very advantageous in providing great
     # performance without significant "stop-the-world" delays.
@@ -480,13 +478,16 @@ data:
         <logger name="org.apache.curator.ConnectionState" level="OFF" />
 
         <!-- Logger for managing logging statements for nifi clusters. -->
-        <logger name="org.apache.nifi.cluster" level="INFO"/>
+        <logger name="org.apache.nifi.cluster" level="ERROR"/>
 
         <!-- Logger for logging HTTP requests received by the web server. -->
-        <logger name="org.apache.nifi.server.JettyServer" level="INFO"/>
+        <logger name="org.apache.nifi.server.JettyServer" level="ERROR"/>
 
         <!-- Logger for managing logging statements for jetty -->
-        <logger name="org.eclipse.jetty" level="INFO"/>
+        <logger name="org.eclipse.jetty" level="ERROR"/>
+        <!-- Logger for deadlock -->
+        <logger name="org.apache.nifi.processors.standard.FetchSFTP" level="DEBUG" />
+        <logger name="org.apache.nifi.processors.standard.RouteOnAttribute" level="DEBUG" />
 
         <!-- Suppress non-error messages due to excessive logging by class or library -->
         <logger name="com.sun.jersey.spi.container.servlet.WebComponent" level="ERROR"/>
@@ -501,19 +502,19 @@ data:
             log events to the root logger. These messages are only sent to the
             user-log appender.
         -->
-        <logger name="org.apache.nifi.web.security" level="INFO" additivity="false">
+        <logger name="org.apache.nifi.web.security" level="ERROR" additivity="false">
             <appender-ref ref="USER_FILE"/>
         </logger>
-        <logger name="org.apache.nifi.web.api.config" level="INFO" additivity="false">
+        <logger name="org.apache.nifi.web.api.config" level="ERROR" additivity="false">
             <appender-ref ref="USER_FILE"/>
         </logger>
-        <logger name="org.apache.nifi.authorization" level="INFO" additivity="false">
+        <logger name="org.apache.nifi.authorization" level="ERROR" additivity="false">
             <appender-ref ref="USER_FILE"/>
         </logger>
-        <logger name="org.apache.nifi.cluster.authorization" level="INFO" additivity="false">
+        <logger name="org.apache.nifi.cluster.authorization" level="ERROR" additivity="false">
             <appender-ref ref="USER_FILE"/>
         </logger>
-        <logger name="org.apache.nifi.web.filter.RequestLogger" level="INFO" additivity="false">
+        <logger name="org.apache.nifi.web.filter.RequestLogger" level="ERROR" additivity="false">
             <appender-ref ref="USER_FILE"/>
         </logger>
 
@@ -521,16 +522,16 @@ data:
         <!--
             Logger for capturing Bootstrap logs and NiFi's standard error and standard out.
         -->
-        <logger name="org.apache.nifi.bootstrap" level="INFO" additivity="false">
+        <logger name="org.apache.nifi.bootstrap" level="ERROR" additivity="false">
             <appender-ref ref="BOOTSTRAP_FILE" />
         </logger>
-        <logger name="org.apache.nifi.bootstrap.Command" level="INFO" additivity="false">
+        <logger name="org.apache.nifi.bootstrap.Command" level="ERROR" additivity="false">
             <appender-ref ref="CONSOLE" />
             <appender-ref ref="BOOTSTRAP_FILE" />
         </logger>
 
         <!-- Everything written to NiFi's Standard Out will be logged with the logger org.apache.nifi.StdOut at INFO level -->
-        <logger name="org.apache.nifi.StdOut" level="INFO" additivity="false">
+        <logger name="org.apache.nifi.StdOut" level="ERROR" additivity="false">
             <appender-ref ref="BOOTSTRAP_FILE" />
         </logger>
 
@@ -538,7 +539,6 @@ data:
         <logger name="org.apache.nifi.StdErr" level="ERROR" additivity="false">
             <appender-ref ref="BOOTSTRAP_FILE" />
         </logger>
-
 
         <root level="INFO">
             <appender-ref ref="APP_FILE"/>

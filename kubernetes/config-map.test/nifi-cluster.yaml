@@ -191,6 +191,7 @@ data:
     nifi.cluster.firewall.file=
     nifi.cluster.flow.election.max.wait.time=5 mins
     nifi.cluster.flow.election.max.candidates=2
+    nifi.cluster.node.max.concurrent.requests=1000
 
     # zookeeper properties, used for cluster management #
     nifi.zookeeper.connect.string=master:2181
@@ -279,7 +280,7 @@ data:
 
     # JVM memory settings
     java.arg.2=-Xms1g
-    java.arg.3=-Xmx10g
+    java.arg.3=-Xmx13g
 
     # Enable Remote Debugging
     #java.arg.debug=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000

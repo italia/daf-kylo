@@ -17,6 +17,34 @@ spec:
         nifi-cluster: "true"
     spec:
       hostAliases:
+      - ip: "192.168.30.12"
+        hostnames:
+        - "master.novalocal"
+        - "master"
+      - ip: "192.168.30.13"
+        hostnames:
+        - "slave1.novalocal"
+        - "slave1"
+      - ip: "192.168.30.18"
+        hostnames:
+        - "edge1.novalocal"
+        - "edge1"
+      - ip: "192.168.30.14"
+        hostnames:
+        - "slave2.novalocal"
+        - "slave2"
+      - ip: "192.168.30.19"
+        hostnames:
+        - "edge2.novalocal"
+        - "edge2"
+      - ip: "192.168.20.53"
+        hostnames:
+        - "idm.teamdigitale.test"
+        - "idm"
+      - ip: "192.168.20.5"
+        hostnames:
+        - "nifi-staging.novalocal"
+        - "nifi"
       - ip: "192.168.20.20"
         hostnames:
         - "elk-master-1.teamdigitale.test"
@@ -41,7 +69,7 @@ spec:
       containers:
       - name: tba-nifi
         # TODO: modify image to support NIFI_ADDITIONAL_SEARCH_DOMAINS, move other setting in to config map
-        image: nexus.teamdigitale.test/tba-nifi.1.6.0:9.3.0
+        image: nexus.teamdigitale.test/tba-nifi.1.7.0:9.3.1
         env:
         - name: NIFI_ADDITIONAL_SEARCH_DOMAINS
           value: "tba-nifi.default.svc.cluster.local teamdigitale.test"
@@ -57,7 +85,7 @@ spec:
           containerPort: 8033
         resources:
           limits:
-            memory: 13G
+            memory: 16G
         volumeMounts:
         - name: private
           mountPath: /usr/nifi/data

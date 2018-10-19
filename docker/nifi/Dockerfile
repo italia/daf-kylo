@@ -2,7 +2,7 @@
 FROM openjdk:alpine
 
 # Set environment
-ENV NIFI_VERSION=1.6.0
+ENV NIFI_VERSION=1.7.0
 ENV GLIBC_VERSION=2.25-r0
 
 # Install required packages
@@ -14,12 +14,12 @@ RUN wget -qO- https://archive.apache.org/dist/nifi/$NIFI_VERSION/nifi-$NIFI_VERS
     mv nifi-$NIFI_VERSION /usr && mv /usr/nifi-$NIFI_VERSION /usr/nifi
 
 
-
 # Install glibc
-RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub && \
+RUN wget --no-cache -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
     wget -q https://github.com/sgerrand/alpine-pkg-glibc/releases/download/$GLIBC_VERSION/glibc-$GLIBC_VERSION.apk && \
     apk add glibc-$GLIBC_VERSION.apk && \
     rm glibc-$GLIBC_VERSION.apk
+
 
 RUN rm -r /usr/nifi/conf
 

@@ -378,7 +378,7 @@ data:
     # NiFi settings
 
 
-    nifi.service.kylo_mysql.database_connection_url=jdbc:mariadb://tba-mysql.default:3306
+    nifi.service.kylo_mysql.database_connection_url=jdbc:mariadb://tba-mysql:3306
     nifi.service.kylo_mysql.database_driver_class_name=org.mariadb.jdbc.Driver
     nifi.service.kylo_mysql.database-driver-locations=file:///usr/nifi/drivers/mariadb-java-client-2.1.0.jar
     nifi.service.kylo_mysql.database_user=root
@@ -401,6 +401,11 @@ data:
     nifi.executesparkjob[profile_data].spark_configurations=spark.default.parallelism=4
 
     jms.activemq.broker.url=tcp://tba-activemq:61616
+    jms.maximumRedeliveries=100000
+    #jms.redeliveryDelay=1000
+    #jms.maximumRedeliveryDelay=600000L
+    #jms.backOffMultiplier=5
+    #jms.useExponentialBackOff=false
 
     #UPDATE for Kylo 0.9.1
     # Add the new property
@@ -464,7 +469,7 @@ data:
     ###
     # Server port number
     #server.port = 8450
-    #server.port=0
+    server.port=0
 
     # Spark UI port number
     #spark.ui.port = 8451
@@ -475,13 +480,14 @@ data:
     #spark.shell.server.host=localhost
     #spark.shell.server.port=8450
 
-    spark.shell.deployMode=client
-    spark.shell.master=local
-    spark.shell.sparkArgs=--driver-memory 5012m --executor-memory 3012m --driver-class-path /opt/kylo/kylo-services/conf:/opt/kylo/kylo-services/lib/mariadb-java-client-1.5.7.jar
-    spark.shell.appResource=/opt/kylo/kylo-services/lib/app/kylo-spark-shell-client-v2-0.9.1.2-SNAPSHOT.jar
+    spark.shell.deployMode=cluster
+    spark.shell.master=yarn
+    spark.shell.sparkHome=/opt/cloudera/parcels/SPARK2/lib/spark2
+    spark.shell.sparkArgs=--driver-memory 2048m --executor-memory 5058m
+    spark.shell.appResource=/opt/kylo/kylo-services/lib/app/kylo-spark-shell-client-v2-0.9.1.3.jar
     spark.shell.verbose=true
-    spark.shell.clientTimeout=5240
-    spark.shell.registrationUrl=http://tba-kylo-ui:8400/proxy/v1/spark/shell/register
+    spark.shell.clientTimeout=5400
+    #spark.shell.registrationUrl=http://tba-kylo-ui:8400/proxy/v1/spark/shell/register
     spark.shell.proxyUser=false
 
     kerberos.spark.kerberosEnabled=true
@@ -881,18 +887,18 @@ data:
       {
         "processorType": "org.apache.nifi.processors.standard.FetchSFTP",
         "datasourcePropertyKeys": [
-          "Hostname",
           "Remote File"
         ],
+        "identityString":"${RemoteFile}",
         "datasourceType": "FTPDatasource",
         "connectionType": "SOURCE"
       },
       {
         "processorType": "org.apache.nifi.processors.standard.ListSFTP",
         "datasourcePropertyKeys": [
-          "Hostname",
           "Remote File"
         ],
+        "identityString":"${RemoteFile}",
         "datasourceType": "FTPDatasource",
         "connectionType": "SOURCE"
       },
@@ -2118,6 +2124,5 @@ data:
       "star_border"
     ]
   version.txt: |-
-    version=0.9.1
-    build.date=2018-06-20 17:13
-
+    version=0.9.1.3
+    build.date=2018-10-10 09:00

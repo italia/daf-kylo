@@ -22,14 +22,14 @@ spec:
         - "elk-master-1.teamdigitale.test"
         - "elk-master-1"
       containers:
-      - image: nexus.teamdigitale.test/tba-kylo-services.9.1:3.0.0
+      - image: nexus.teamdigitale.test/tba-kylo-services.9.1:3.0.1
         name: tba-kylo-services
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8420
         resources:
           limits:
-            memory: 9096Mi
+            memory: 7096Mi
         volumeMounts:
         - mountPath: /opt/kylo/kylo-services/conf
           name: kylo-services-config

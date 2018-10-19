@@ -83,13 +83,3 @@ index 7ec8739a1..ffea64db2 100644
          List<PartitionBatch> batches = fetchPartitionBatches();
 diff --git a/ui/ui-app/package-lock.json b/ui/ui-app/package-lock.json
 index 0baba8720..b7c89d28f 100644
---- a/ui/ui-app/package-lock.json
-+++ b/ui/ui-app/package-lock.json
-@@ -1,6 +1,6 @@
- {
-   "name": "kylo",
--  "version": "0.9.1-1-",
-+  "version": "0.9.1-2-SNAPSHOT",
-   "lockfileVersion": 1,
-   "requires": true,
-   "dependencies": {

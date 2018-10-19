@@ -42,11 +42,11 @@ data:
     kylo.provenance.cache.location=/usr/nifi/dump/feed-event-statistics.gz
 
     ## The maximum number of starting flow files per feed during the given run interval to send to ops manager
-    kylo.provenance.max.starting.events=1000
+    kylo.provenance.max.starting.events=10
 
     ## The number of starting flow files allowed to be sent through until the throttle mechanism in engaged.
     # if the feed starting processor gets more than this number of events during a rolling window based upon the kylo.provenance.event.throttle.threshold.time.millis timefame events will be throttled back to 1 per second until its slowed down
-    kylo.provenance.event.count.throttle.threshold=1000
+    kylo.provenance.event.count.throttle.threshold=10
 
     ## Throttle timefame used to check the rolling window to determine if rapid fire is occurring
     kylo.provenance.event.throttle.threshold.time.millis=1000
