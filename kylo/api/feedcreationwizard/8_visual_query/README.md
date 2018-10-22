@@ -1,3 +1,5 @@
+In this ReadMe the 127.0.0.1:8400 must be replaced with the Kylo-UI url
+
 Show tables:
 GET http://127.0.0.1:8400/proxy/v1/hive/tables?table=a
 Request:
