@@ -39,7 +39,7 @@ data:
 
 
     ## Back up location to write the Feed stats data if NiFi goes down
-    kylo.provenance.cache.location=/usr/nifi/dump/feed-event-statistics.gz
+    kylo.provenance.cache.location=/usr/nifi/data/dump/feed-event-statistics.gz
 
     ## The maximum number of starting flow files per feed during the given run interval to send to ops manager
     kylo.provenance.max.starting.events=10
