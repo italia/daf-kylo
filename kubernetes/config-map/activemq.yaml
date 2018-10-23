@@ -196,14 +196,14 @@ data:
     #log4j.rootLogger=DEBUG, logfile, console
 
     # Or for more fine grained debug logging uncomment one of these
-    #log4j.logger.org.apache.activemq=DEBUG
+    log4j.logger.org.apache.activemq=DEBUG
     #log4j.logger.org.apache.camel=DEBUG
 
     # Console appender
     log4j.appender.console=org.apache.log4j.ConsoleAppender
     log4j.appender.console.layout=org.apache.log4j.PatternLayout
     log4j.appender.console.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %5p | %m%n
-    log4j.appender.console.threshold=INFO
+    log4j.appender.console.threshold=DEBUG
 
     # File appender
     log4j.appender.logfile=org.apache.log4j.RollingFileAppender
@@ -298,7 +298,7 @@ data:
     # ACTIVEMQ_TMP="$ACTIVEMQ_BASE/tmp"
 
     # Set jvm memory configuration (minimal/maximum amount of memory)
-    ACTIVEMQ_OPTS_MEMORY="-Xms64M -Xmx4G"
+    ACTIVEMQ_OPTS_MEMORY="-Xms64M -Xmx6G"
 
     if [ -z "$ACTIVEMQ_OPTS" ] ; then
         ACTIVEMQ_OPTS="$ACTIVEMQ_OPTS_MEMORY -Djava.util.logging.config.file=logging.properties -Djava.security.auth.login.config=$ACTIVEMQ_CONF/login.config"
