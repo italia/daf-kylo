@@ -57,5 +57,5 @@ spec:
       imagePullSecrets:
       - name: regsecret
       nodeSelector:
-        nifi: "true"
+        nifi-cluster: "true"
 status: {}
