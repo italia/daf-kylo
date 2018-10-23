@@ -27,7 +27,7 @@ spec:
         - containerPort: 61614
         resources:
           limits:
-            memory: 5500Mi
+            memory: 8000Mi
         volumeMounts:
         - name: glusterfsvol
           mountPath: /opt/activemq/data
