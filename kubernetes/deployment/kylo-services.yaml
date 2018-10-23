@@ -98,7 +98,7 @@ spec:
         - "master.elasticsearch.daf.gov.it"
         - "master.elasticsearch"
       containers:
-      - image: nexus.daf.teamdigitale.it/tba-kylo-services.9.1:3.0.0
+      - image: nexus.daf.teamdigitale.it/tba-kylo-services.9.1:3.0.1
         name: tba-kylo-services
         imagePullPolicy: IfNotPresent
         ports:
