@@ -86,7 +86,7 @@ data:
     nifi.content.viewer.url=/nifi-content-viewer/
 
     # Provenance Repository Properties
-    nifi.provenance.repository.implementation=com.thinkbiganalytics.nifi.provenance.repo.KyloPersistentProvenanceEventRepository
+    nifi.provenance.repository.implementation=com.thinkbiganalytics.nifi.provenance.repo.KyloVolatileProvenanceEventRepository
     # nifi.provenance.repository.implementation=org.apache.nifi.provenance.PersistentProvenanceRepository
     nifi.provenance.repository.debug.frequency=1_000_000
     nifi.provenance.repository.encryption.key.provider.implementation=
@@ -105,6 +105,7 @@ data:
     nifi.provenance.repository.compress.on.rollover=true
     nifi.provenance.repository.always.sync=false
     nifi.provenance.repository.journal.count=16
+    nifi.provenance.repository.concurrent.merge.threads=1
     # Comma-separated list of fields. Fields that are not indexed will not be searchable. Valid fields are:
     # EventType, FlowFileUUID, Filename, TransitURI, ProcessorID, AlternateIdentifierURI, Relationship, Details
     nifi.provenance.repository.indexed.fields=EventType, FlowFileUUID, Filename, ProcessorID, Relationship
