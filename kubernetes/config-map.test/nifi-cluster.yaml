@@ -87,7 +87,7 @@ data:
     nifi.content.viewer.url=/nifi-content-viewer/
 
     # Provenance Repository Properties
-    nifi.provenance.repository.implementation=com.thinkbiganalytics.nifi.provenance.repo.KyloVolatileProvenanceEventRepository
+    nifi.provenance.repository.implementation=com.thinkbiganalytics.nifi.provenance.repo.KyloPersistentProvenanceEventRepository
     # nifi.provenance.repository.implementation=org.apache.nifi.provenance.PersistentProvenanceRepository
     nifi.provenance.repository.debug.frequency=1_000_000
     nifi.provenance.repository.encryption.key.provider.implementation=

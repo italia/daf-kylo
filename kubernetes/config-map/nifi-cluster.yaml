@@ -86,7 +86,7 @@ data:
     nifi.content.viewer.url=/nifi-content-viewer/
 
     # Provenance Repository Properties
-    nifi.provenance.repository.implementation=com.thinkbiganalytics.nifi.provenance.repo.KyloVolatileProvenanceEventRepository
+    nifi.provenance.repository.implementation=com.thinkbiganalytics.nifi.provenance.repo.KyloPersistentProvenanceEventRepository
     # nifi.provenance.repository.implementation=org.apache.nifi.provenance.PersistentProvenanceRepository
     nifi.provenance.repository.debug.frequency=1_000_000
     nifi.provenance.repository.encryption.key.provider.implementation=
@@ -486,9 +486,6 @@ data:
 
         <!-- Logger for managing logging statements for jetty -->
         <logger name="org.eclipse.jetty" level="ERROR"/>
-        <!-- Logger for deadlock -->
-        <logger name="org.apache.nifi.processors.standard.FetchSFTP" level="DEBUG" />
-        <logger name="org.apache.nifi.processors.standard.RouteOnAttribute" level="DEBUG" />
 
         <!-- Suppress non-error messages due to excessive logging by class or library -->
         <logger name="com.sun.jersey.spi.container.servlet.WebComponent" level="ERROR"/>
