@@ -70,7 +70,6 @@ data:
                         <individualDeadLetterStrategy queuePrefix="DLQ." useQueueForQueueMessages="true"/>
                       </deadLetterStrategy>
                   </policyEntry>
-
                   <policyEntry queue="thinkbig.provenance-event-stats">
                     <deadLetterStrategy>
                       <!--
@@ -203,7 +202,7 @@ data:
     # Console appender
     log4j.appender.console=org.apache.log4j.ConsoleAppender
     log4j.appender.console.layout=org.apache.log4j.PatternLayout
-    log4j.appender.console.layout.ConversionPattern=%5p | %m%n
+    log4j.appender.console.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %5p | %m%n
     log4j.appender.console.threshold=INFO
 
     # File appender
