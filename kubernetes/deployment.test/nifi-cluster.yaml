@@ -49,6 +49,9 @@ spec:
         hostnames:
         - "elk-master-1.teamdigitale.test"
         - "elk-master-1"
+      - ip: "192.168.20.30"
+        hostnames:
+        - "sftp.teamdigitale.test"
       hostNetwork: false                      # NOTE: Do not change because it is used the services
       affinity:
         podAntiAffinity:
