@@ -37,9 +37,6 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8400
-        resources:
-          limits:
-            memory: 5096Mi
         volumeMounts:
         - mountPath: /opt/kylo/kylo-ui/conf
           name: kylo-ui-config

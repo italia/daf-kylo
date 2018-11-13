@@ -29,7 +29,7 @@ spec:
         - containerPort: 8420
         resources:
           limits:
-            memory: 7096Mi
+            memory: 6096Mi
         volumeMounts:
         - mountPath: /opt/kylo/kylo-services/conf
           name: kylo-services-config
