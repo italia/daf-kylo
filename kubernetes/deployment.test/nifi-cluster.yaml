@@ -21,6 +21,14 @@ spec:
         hostnames:
         - "master.novalocal"
         - "master"
+      - ip: "192.168.30.56"
+        hostnames:
+        - "cloudera-master-staging-2.novalocal"
+        - "master-staging-2"
+      - ip: "192.168.30.57"
+        hostnames:
+        - "cloudera-master-staging-3.novalocal"
+        - "master-staging-3"
       - ip: "192.168.30.13"
         hostnames:
         - "slave1.novalocal"
