@@ -207,6 +207,10 @@ spec:
           mountPath: /home
           subPath: nifi/shared/dropzone
           readOnly: false
+        - name: glusterfsvol
+          mountPath: /var/rdf
+          subPath: ontopia/virtuoso/data1
+          readOnly: false
       volumes:
       - name: glusterfsvol
         persistentVolumeClaim:
