@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.2">
     <description></description>
-    <groupId>6bf44960-0162-1000-bfbd-679dedf72c23</groupId>
+    <groupId>a95459a9-0165-1000-4d8a-b3ef8d95d8a1</groupId>
     <name>Kafka Ingest</name>
     <snippet>
         <connections>
@@ -338,6 +338,32 @@
             <comments></comments>
             <descriptors>
                 <entry>
+                    <key>client-password</key>
+                    <value>
+                        <name>client-password</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>SSL Context Service</key>
+                    <value>
+                        <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                        <name>SSL Context Service</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>client-username</key>
+                    <value>
+                        <name>client-username</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Spring Context Service</key>
+                    <value>
+                        <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.spring.SpringContextService</identifiesControllerService>
+                        <name>Spring Context Service</name>
+                    </value>
+                </entry>
+                <entry>
                     <key>Implementation</key>
                     <value>
                         <name>Implementation</name>
@@ -349,36 +375,24 @@
                         <name>rest-client-url</name>
                     </value>
                 </entry>
-                <entry>
-                    <key>client-username</key>
-                    <value>
-                        <name>client-username</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>client-password</key>
-                    <value>
-                        <name>client-password</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>Spring Context Service</key>
-                    <value>
-                        <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.spring.SpringContextService</identifiesControllerService>
-                        <name>Spring Context Service</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>SSL Context Service</key>
-                    <value>
-                        <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
-                        <name>SSL Context Service</name>
-                    </value>
-                </entry>
             </descriptors>
             <name>Kylo Metadata Service</name>
             <persistsState>false</persistsState>
             <properties>
+                <entry>
+                    <key>client-password</key>
+                    <value></value>
+                </entry>
+                <entry>
+                    <key>SSL Context Service</key>
+                </entry>
+                <entry>
+                    <key>client-username</key>
+                    <value>dladmin</value>
+                </entry>
+                <entry>
+                    <key>Spring Context Service</key>
+                </entry>
                 <entry>
                     <key>Implementation</key>
                     <value>REMOTE</value>
@@ -388,17 +402,7 @@
                     <value>http://tba-kylo-ui:8400/proxy/v1/metadata</value>
                 </entry>
                 <entry>
-                    <key>client-username</key>
-                    <value>dladmin</value>
-                </entry>
-                <entry>
-                    <key>client-password</key>
-                </entry>
-                <entry>
-                    <key>Spring Context Service</key>
-                </entry>
-                <entry>
-                    <key>SSL Context Service</key>
+                    <key>Cleanup Event Service</key>
                 </entry>
             </properties>
             <state>DISABLED</state>
@@ -504,6 +508,12 @@
                         </value>
                     </entry>
                     <entry>
+                        <key>filename</key>
+                        <value>
+                            <name>filename</name>
+                        </value>
+                    </entry>
+                    <entry>
                         <key>Store State</key>
                         <value>
                             <name>Store State</name>
@@ -515,12 +525,6 @@
                             <name>Stateful Variables Initial Value</name>
                         </value>
                     </entry>
-                    <entry>
-                        <key>filename</key>
-                        <value>
-                            <name>filename</name>
-                        </value>
-                    </entry>
                 </descriptors>
                 <executionNode>PRIMARY</executionNode>
                 <lossTolerant>false</lossTolerant>
@@ -530,15 +534,15 @@
                         <key>Delete Attributes Expression</key>
                     </entry>
                     <entry>
+                        <key>filename</key>
+                        <value>${filename}.read</value>
+                    </entry>
+                    <entry>
                         <key>Store State</key>
                         <value>Do not store state</value>
                     </entry>
                     <entry>
                         <key>Stateful Variables Initial Value</key>
-                    </entry>
-                    <entry>
-                        <key>filename</key>
-                        <value>${filename}.read</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -573,15 +577,15 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>Routing Strategy</key>
-                        <value>
-                            <name>Routing Strategy</name>
-                        </value>
-                    </entry>
-                    <entry>
                         <key>zip</key>
                         <value>
                             <name>zip</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Routing Strategy</key>
+                        <value>
+                            <name>Routing Strategy</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -590,12 +594,12 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>Routing Strategy</key>
-                        <value>Route to Property name</value>
-                    </entry>
-                    <entry>
                         <key>zip</key>
                         <value>${filename:endsWith('.zip')}</value>
+                    </entry>
+                    <entry>
+                        <key>Routing Strategy</key>
+                        <value>Route to Property name</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -634,13 +638,6 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>Feed Cleanup Event Service</key>
-                        <value>
-                            <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.cleanup.CleanupEventService</identifiesControllerService>
-                            <name>Feed Cleanup Event Service</name>
-                        </value>
-                    </entry>
-                    <entry>
                         <key>Metadata Provider Service</key>
                         <value>
                             <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.metadata.MetadataProviderService</identifiesControllerService>
@@ -651,6 +648,13 @@
                         <key>System feed category</key>
                         <value>
                             <name>System feed category</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Feed Cleanup Event Service</key>
+                        <value>
+                            <identifiesControllerService>com.thinkbiganalytics.nifi.core.api.cleanup.CleanupEventService</identifiesControllerService>
+                            <name>Feed Cleanup Event Service</name>
                         </value>
                     </entry>
                     <entry>
@@ -665,16 +669,16 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>Feed Cleanup Event Service</key>
-                        <value>acf1e048-42b3-39d8-0000-000000000000</value>
-                    </entry>
-                    <entry>
                         <key>Metadata Provider Service</key>
                         <value>13b63bf7-8fa7-35a4-0000-000000000000</value>
                     </entry>
                     <entry>
                         <key>System feed category</key>
                         <value>${metadata.category.systemName}</value>
+                    </entry>
+                    <entry>
+                        <key>Feed Cleanup Event Service</key>
+                        <value>acf1e048-42b3-39d8-0000-000000000000</value>
                     </entry>
                     <entry>
                         <key>System feed name</key>
@@ -718,21 +722,27 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>Directory</key>
+                        <key>Group</key>
                         <value>
-                            <name>Directory</name>
+                            <name>Group</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Conflict Resolution Strategy</key>
+                        <key>Owner</key>
                         <value>
-                            <name>Conflict Resolution Strategy</name>
+                            <name>Owner</name>
                         </value>
                     </entry>
                     <entry>
                         <key>Create Missing Directories</key>
                         <value>
                             <name>Create Missing Directories</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Permissions</key>
+                        <value>
+                            <name>Permissions</name>
                         </value>
                     </entry>
                     <entry>
@@ -748,21 +758,15 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>Permissions</key>
+                        <key>Directory</key>
                         <value>
-                            <name>Permissions</name>
+                            <name>Directory</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Owner</key>
+                        <key>Conflict Resolution Strategy</key>
                         <value>
-                            <name>Owner</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Group</key>
-                        <value>
-                            <name>Group</name>
+                            <name>Conflict Resolution Strategy</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -771,16 +775,17 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>Directory</key>
-                        <value>${absolute.path}</value>
+                        <key>Group</key>
                     </entry>
                     <entry>
-                        <key>Conflict Resolution Strategy</key>
-                        <value>fail</value>
+                        <key>Owner</key>
                     </entry>
                     <entry>
                         <key>Create Missing Directories</key>
                         <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>Permissions</key>
                     </entry>
                     <entry>
                         <key>Maximum File Count</key>
@@ -789,13 +794,12 @@
                         <key>Last Modified Time</key>
                     </entry>
                     <entry>
-                        <key>Permissions</key>
+                        <key>Directory</key>
+                        <value>${absolute.path}</value>
                     </entry>
                     <entry>
-                        <key>Owner</key>
-                    </entry>
-                    <entry>
-                        <key>Group</key>
+                        <key>Conflict Resolution Strategy</key>
+                        <value>fail</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -895,6 +899,24 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
+                        <key>feed</key>
+                        <value>
+                            <name>feed</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>hive.profile.root</key>
+                        <value>
+                            <name>hive.profile.root</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>hdfs.ingest.root</key>
+                        <value>
+                            <name>hdfs.ingest.root</name>
+                        </value>
+                    </entry>
+                    <entry>
                         <key>Delete Attributes Expression</key>
                         <value>
                             <name>Delete Attributes Expression</name>
@@ -919,18 +941,6 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>feed</key>
-                        <value>
-                            <name>feed</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>hdfs.ingest.root</key>
-                        <value>
-                            <name>hdfs.ingest.root</name>
-                        </value>
-                    </entry>
-                    <entry>
                         <key>hive.ingest.root</key>
                         <value>
                             <name>hive.ingest.root</name>
@@ -942,17 +952,23 @@
                             <name>hive.master.root</name>
                         </value>
                     </entry>
-                    <entry>
-                        <key>hive.profile.root</key>
-                        <value>
-                            <name>hive.profile.root</name>
-                        </value>
-                    </entry>
                 </descriptors>
                 <executionNode>PRIMARY</executionNode>
                 <lossTolerant>false</lossTolerant>
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
+                    <entry>
+                        <key>feed</key>
+                        <value>${metadata.systemFeedName}</value>
+                    </entry>
+                    <entry>
+                        <key>hive.profile.root</key>
+                        <value>${config.hive.profile.root}</value>
+                    </entry>
+                    <entry>
+                        <key>hdfs.ingest.root</key>
+                        <value>${config.hdfs.ingest.root}</value>
+                    </entry>
                     <entry>
                         <key>Delete Attributes Expression</key>
                     </entry>
@@ -969,24 +985,12 @@
                         <value>${metadata.category.systemName}</value>
                     </entry>
                     <entry>
-                        <key>feed</key>
-                        <value>${metadata.systemFeedName}</value>
-                    </entry>
-                    <entry>
-                        <key>hdfs.ingest.root</key>
-                        <value>${config.hdfs.ingest.root}</value>
-                    </entry>
-                    <entry>
                         <key>hive.ingest.root</key>
                         <value>${config.hive.ingest.root}</value>
                     </entry>
                     <entry>
                         <key>hive.master.root</key>
                         <value>${config.hive.master.root}</value>
-                    </entry>
-                    <entry>
-                        <key>hive.profile.root</key>
-                        <value>${config.hive.profile.root}</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -1107,12 +1111,6 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>Stateful Variables Initial Value</key>
-                        <value>
-                            <name>Stateful Variables Initial Value</name>
-                        </value>
-                    </entry>
-                    <entry>
                         <key>metadata.table.feedFieldStructure</key>
                         <value>
                             <name>metadata.table.feedFieldStructure</name>
@@ -1122,6 +1120,12 @@
                         <key>skipHeader</key>
                         <value>
                             <name>skipHeader</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Stateful Variables Initial Value</key>
+                        <value>
+                            <name>Stateful Variables Initial Value</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -1137,16 +1141,16 @@
                         <value>Store state locally</value>
                     </entry>
                     <entry>
-                        <key>Stateful Variables Initial Value</key>
-                        <value></value>
-                    </entry>
-                    <entry>
                         <key>metadata.table.feedFieldStructure</key>
                         <value>${db.table.avro.schema}</value>
                     </entry>
                     <entry>
                         <key>skipHeader</key>
                         <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>Stateful Variables Initial Value</key>
+                        <value></value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -1191,6 +1195,12 @@
                         </value>
                     </entry>
                     <entry>
+                        <key>filename</key>
+                        <value>
+                            <name>filename</name>
+                        </value>
+                    </entry>
+                    <entry>
                         <key>Store State</key>
                         <value>
                             <name>Store State</name>
@@ -1202,12 +1212,6 @@
                             <name>Stateful Variables Initial Value</name>
                         </value>
                     </entry>
-                    <entry>
-                        <key>filename</key>
-                        <value>
-                            <name>filename</name>
-                        </value>
-                    </entry>
                 </descriptors>
                 <executionNode>PRIMARY</executionNode>
                 <lossTolerant>false</lossTolerant>
@@ -1217,15 +1221,15 @@
                         <key>Delete Attributes Expression</key>
                     </entry>
                     <entry>
+                        <key>filename</key>
+                        <value>${filename}.failure</value>
+                    </entry>
+                    <entry>
                         <key>Store State</key>
                         <value>Do not store state</value>
                     </entry>
                     <entry>
                         <key>Stateful Variables Initial Value</key>
-                    </entry>
-                    <entry>
-                        <key>filename</key>
-                        <value>${filename}.failure</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -1260,15 +1264,45 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>Delete Attributes Expression</key>
+                        <key>hive.profile.root</key>
                         <value>
-                            <name>Delete Attributes Expression</name>
+                            <name>hive.profile.root</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>metadata.table.targetFormat</key>
+                        <value>
+                            <name>metadata.table.targetFormat</name>
                         </value>
                     </entry>
                     <entry>
                         <key>Store State</key>
                         <value>
                             <name>Store State</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>spark.input_folder</key>
+                        <value>
+                            <name>spark.input_folder</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>metadata.table.fieldStructure</key>
+                        <value>
+                            <name>metadata.table.fieldStructure</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>nifi.home</key>
+                        <value>
+                            <name>nifi.home</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>skipHeader</key>
+                        <value>
+                            <name>skipHeader</name>
                         </value>
                     </entry>
                     <entry>
@@ -1284,9 +1318,9 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>category</key>
+                        <key>metadata.table.fieldPoliciesJson</key>
                         <value>
-                            <name>category</name>
+                            <name>metadata.table.fieldPoliciesJson</name>
                         </value>
                     </entry>
                     <entry>
@@ -1308,21 +1342,15 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>hive.ingest.root</key>
+                        <key>Delete Attributes Expression</key>
                         <value>
-                            <name>hive.ingest.root</name>
+                            <name>Delete Attributes Expression</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>hive.master.root</key>
+                        <key>metadata.table.targetTblProperties</key>
                         <value>
-                            <name>hive.master.root</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>hive.profile.root</key>
-                        <value>
-                            <name>hive.profile.root</name>
+                            <name>metadata.table.targetTblProperties</name>
                         </value>
                     </entry>
                     <entry>
@@ -1338,27 +1366,21 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>metadata.table.feedFormat</key>
+                        <key>category</key>
                         <value>
-                            <name>metadata.table.feedFormat</name>
+                            <name>category</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>metadata.table.fieldPoliciesJson</key>
+                        <key>hive.ingest.root</key>
                         <value>
-                            <name>metadata.table.fieldPoliciesJson</name>
+                            <name>hive.ingest.root</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>metadata.table.fieldStructure</key>
+                        <key>hive.master.root</key>
                         <value>
-                            <name>metadata.table.fieldStructure</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>metadata.table.targetFormat</key>
-                        <value>
-                            <name>metadata.table.targetFormat</name>
+                            <name>hive.master.root</name>
                         </value>
                     </entry>
                     <entry>
@@ -1368,27 +1390,9 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>metadata.table.targetTblProperties</key>
+                        <key>metadata.table.feedFormat</key>
                         <value>
-                            <name>metadata.table.targetTblProperties</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>nifi.home</key>
-                        <value>
-                            <name>nifi.home</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>skipHeader</key>
-                        <value>
-                            <name>skipHeader</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>spark.input_folder</key>
-                        <value>
-                            <name>spark.input_folder</name>
+                            <name>metadata.table.feedFormat</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -1397,11 +1401,59 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>Delete Attributes Expression</key>
+                        <key>hive.profile.root</key>
+                        <value>/app/tba/model.db</value>
+                    </entry>
+                    <entry>
+                        <key>metadata.table.targetFormat</key>
+                        <value>STORED AS PARQUET</value>
                     </entry>
                     <entry>
                         <key>Store State</key>
                         <value>Store state locally</value>
+                    </entry>
+                    <entry>
+                        <key>spark.input_folder</key>
+                        <value>/tmp/kylo-nifi/spark</value>
+                    </entry>
+                    <entry>
+                        <key>metadata.table.fieldStructure</key>
+                        <value>REA|string||0|0|0|REA
+PARTITA_IVA|string||0|0|0|PARTITA_IVA
+DIDATTICA_SOCIALE|string||0|0|0|DIDATTICA_SOCIALE
+FATTORIE_DIDATTICHE_SOCIALI|string||0|0|0|FATTORIE_DIDATTICHE_SOCIALI
+RAGIONE_SOCIALE|string||0|0|0|RAGIONE_SOCIALE
+INDIRIZZO|string||0|0|0|INDIRIZZO
+CAP|string||0|0|0|CAP
+COMUNE|string||0|0|0|COMUNE
+PROV|string||0|0|0|PROV
+TELEFONO|string||0|0|0|TELEFONO
+TELEFONO_2|string||0|0|0|TELEFONO_2
+FAX|string||0|0|0|FAX
+E-MAIL|string||0|0|0|E-MAIL
+E-MAIL_2|string||0|0|0|E-MAIL_2
+SITO|string||0|0|0|SITO
+SITO_2|string||0|0|0|SITO_2
+Tipologia|string||0|0|0|Tipologia
+Settore_produttivo|string||0|0|0|Settore_produttivo
+Orario_di_vendita|string||0|0|0|Orario_di_vendita
+Punto_vendita|string||0|0|0|Punto_vendita
+Periodo_consigliato|string||0|0|0|Periodo_consigliato
+Orari|string||0|0|0|Orari
+Offerta_territoriale|string||0|0|0|Offerta_territoriale
+Ricettività|string||0|0|0|Ricettività
+Offerte_didattiche|string||0|0|0|Offerte_didattiche
+Posizione_sul_territorio|string||0|0|0|Posizione_sul_territorio
+Servizi_aggiuntivi|string||0|0|0|Servizi_aggiuntivi
+Coordinate|string||0|0|0|Coordinate</value>
+                    </entry>
+                    <entry>
+                        <key>nifi.home</key>
+                        <value>/usr/nifi</value>
+                    </entry>
+                    <entry>
+                        <key>skipHeader</key>
+                        <value>true</value>
                     </entry>
                     <entry>
                         <key>Stateful Variables Initial Value</key>
@@ -1412,8 +1464,8 @@
                         <value>${now():format('yyyyMMddHHmmss')}_${UUID()}</value>
                     </entry>
                     <entry>
-                        <key>category</key>
-                        <value>test_ingestion_2</value>
+                        <key>metadata.table.fieldPoliciesJson</key>
+                        <value>[{"profile":false,"index":false,"fieldName":"REA","feedFieldName":"REA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PARTITA_IVA","feedFieldName":"PARTITA_IVA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DIDATTICA_SOCIALE","feedFieldName":"DIDATTICA_SOCIALE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FATTORIE_DIDATTICHE_SOCIALI","feedFieldName":"FATTORIE_DIDATTICHE_SOCIALI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"RAGIONE_SOCIALE","feedFieldName":"RAGIONE_SOCIALE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"INDIRIZZO","feedFieldName":"INDIRIZZO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CAP","feedFieldName":"CAP","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COMUNE","feedFieldName":"COMUNE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PROV","feedFieldName":"PROV","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TELEFONO","feedFieldName":"TELEFONO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TELEFONO_2","feedFieldName":"TELEFONO_2","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FAX","feedFieldName":"FAX","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"E-MAIL","feedFieldName":"E-MAIL","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"E-MAIL_2","feedFieldName":"E-MAIL_2","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SITO","feedFieldName":"SITO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SITO_2","feedFieldName":"SITO_2","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Tipologia","feedFieldName":"Tipologia","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Settore_produttivo","feedFieldName":"Settore_produttivo","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Orario_di_vendita","feedFieldName":"Orario_di_vendita","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Punto_vendita","feedFieldName":"Punto_vendita","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Periodo_consigliato","feedFieldName":"Periodo_consigliato","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Orari","feedFieldName":"Orari","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Offerta_territoriale","feedFieldName":"Offerta_territoriale","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Ricettività","feedFieldName":"Ricettività","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Offerte_didattiche","feedFieldName":"Offerte_didattiche","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Posizione_sul_territorio","feedFieldName":"Posizione_sul_territorio","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Servizi_aggiuntivi","feedFieldName":"Servizi_aggiuntivi","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Coordinate","feedFieldName":"Coordinate","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false}]</value>
                     </entry>
                     <entry>
                         <key>feed</key>
@@ -1428,16 +1480,11 @@
                         <value>/app/tba/etl</value>
                     </entry>
                     <entry>
-                        <key>hive.ingest.root</key>
-                        <value>/app/tba/model.db</value>
+                        <key>Delete Attributes Expression</key>
                     </entry>
                     <entry>
-                        <key>hive.master.root</key>
-                        <value>/daf</value>
-                    </entry>
-                    <entry>
-                        <key>hive.profile.root</key>
-                        <value>/app/tba/model.db</value>
+                        <key>metadata.table.targetTblProperties</key>
+                        <value>tblproperties("parquet.compression"="SNAPPY")</value>
                     </entry>
                     <entry>
                         <key>kylo.tmp.baseFolder</key>
@@ -1475,68 +1522,25 @@ Servizi_aggiuntivi|string||0|0|0|Servizi_aggiuntivi
 Coordinate|string||0|0|0|Coordinate</value>
                     </entry>
                     <entry>
-                        <key>metadata.table.feedFormat</key>
-                        <value>ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
- WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\' ,'quoteChar' = '\"') STORED AS TEXTFILE</value>
+                        <key>category</key>
+                        <value>test_ingestion_2</value>
                     </entry>
                     <entry>
-                        <key>metadata.table.fieldPoliciesJson</key>
-                        <value>[{"profile":false,"index":false,"fieldName":"REA","feedFieldName":"REA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PARTITA_IVA","feedFieldName":"PARTITA_IVA","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"DIDATTICA_SOCIALE","feedFieldName":"DIDATTICA_SOCIALE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FATTORIE_DIDATTICHE_SOCIALI","feedFieldName":"FATTORIE_DIDATTICHE_SOCIALI","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"RAGIONE_SOCIALE","feedFieldName":"RAGIONE_SOCIALE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"INDIRIZZO","feedFieldName":"INDIRIZZO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"CAP","feedFieldName":"CAP","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"COMUNE","feedFieldName":"COMUNE","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"PROV","feedFieldName":"PROV","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TELEFONO","feedFieldName":"TELEFONO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"TELEFONO_2","feedFieldName":"TELEFONO_2","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"FAX","feedFieldName":"FAX","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"E-MAIL","feedFieldName":"E-MAIL","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"E-MAIL_2","feedFieldName":"E-MAIL_2","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SITO","feedFieldName":"SITO","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"SITO_2","feedFieldName":"SITO_2","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Tipologia","feedFieldName":"Tipologia","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Settore_produttivo","feedFieldName":"Settore_produttivo","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Orario_di_vendita","feedFieldName":"Orario_di_vendita","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Punto_vendita","feedFieldName":"Punto_vendita","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Periodo_consigliato","feedFieldName":"Periodo_consigliato","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Orari","feedFieldName":"Orari","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Offerta_territoriale","feedFieldName":"Offerta_territoriale","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Ricettività","feedFieldName":"Ricettività","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Offerte_didattiche","feedFieldName":"Offerte_didattiche","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Posizione_sul_territorio","feedFieldName":"Posizione_sul_territorio","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Servizi_aggiuntivi","feedFieldName":"Servizi_aggiuntivi","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false},{"profile":false,"index":false,"fieldName":"Coordinate","feedFieldName":"Coordinate","standardization":[],"validation":[],"domainTypeId":null,"partitionColumn":false}]</value>
+                        <key>hive.ingest.root</key>
+                        <value>/app/tba/model.db</value>
                     </entry>
                     <entry>
-                        <key>metadata.table.fieldStructure</key>
-                        <value>REA|string||0|0|0|REA
-PARTITA_IVA|string||0|0|0|PARTITA_IVA
-DIDATTICA_SOCIALE|string||0|0|0|DIDATTICA_SOCIALE
-FATTORIE_DIDATTICHE_SOCIALI|string||0|0|0|FATTORIE_DIDATTICHE_SOCIALI
-RAGIONE_SOCIALE|string||0|0|0|RAGIONE_SOCIALE
-INDIRIZZO|string||0|0|0|INDIRIZZO
-CAP|string||0|0|0|CAP
-COMUNE|string||0|0|0|COMUNE
-PROV|string||0|0|0|PROV
-TELEFONO|string||0|0|0|TELEFONO
-TELEFONO_2|string||0|0|0|TELEFONO_2
-FAX|string||0|0|0|FAX
-E-MAIL|string||0|0|0|E-MAIL
-E-MAIL_2|string||0|0|0|E-MAIL_2
-SITO|string||0|0|0|SITO
-SITO_2|string||0|0|0|SITO_2
-Tipologia|string||0|0|0|Tipologia
-Settore_produttivo|string||0|0|0|Settore_produttivo
-Orario_di_vendita|string||0|0|0|Orario_di_vendita
-Punto_vendita|string||0|0|0|Punto_vendita
-Periodo_consigliato|string||0|0|0|Periodo_consigliato
-Orari|string||0|0|0|Orari
-Offerta_territoriale|string||0|0|0|Offerta_territoriale
-Ricettività|string||0|0|0|Ricettività
-Offerte_didattiche|string||0|0|0|Offerte_didattiche
-Posizione_sul_territorio|string||0|0|0|Posizione_sul_territorio
-Servizi_aggiuntivi|string||0|0|0|Servizi_aggiuntivi
-Coordinate|string||0|0|0|Coordinate</value>
-                    </entry>
-                    <entry>
-                        <key>metadata.table.targetFormat</key>
-                        <value>STORED AS PARQUET</value>
+                        <key>hive.master.root</key>
+                        <value>/daf</value>
                     </entry>
                     <entry>
                         <key>metadata.table.targetMergeStrategy</key>
                         <value>DEDUPE_AND_MERGE</value>
                     </entry>
                     <entry>
-                        <key>metadata.table.targetTblProperties</key>
-                        <value>tblproperties("parquet.compression"="SNAPPY")</value>
-                    </entry>
-                    <entry>
-                        <key>nifi.home</key>
-                        <value>/usr/nifi</value>
-                    </entry>
-                    <entry>
-                        <key>skipHeader</key>
-                        <value>true</value>
-                    </entry>
-                    <entry>
-                        <key>spark.input_folder</key>
-                        <value>/tmp/kylo-nifi/spark</value>
+                        <key>metadata.table.feedFormat</key>
+                        <value>ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+ WITH SERDEPROPERTIES ( 'separatorChar' = ',' ,'escapeChar' = '\\' ,'quoteChar' = '\"') STORED AS TEXTFILE</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -1580,21 +1584,9 @@ Coordinate|string||0|0|0|Coordinate</value>
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>bootstrap.servers</key>
-                        <value>
-                            <name>bootstrap.servers</name>
-                        </value>
-                    </entry>
-                    <entry>
                         <key>security.protocol</key>
                         <value>
                             <name>security.protocol</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>sasl.kerberos.service.name</key>
-                        <value>
-                            <name>sasl.kerberos.service.name</name>
                         </value>
                     </entry>
                     <entry>
@@ -1602,36 +1594,6 @@ Coordinate|string||0|0|0|Coordinate</value>
                         <value>
                             <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
                             <name>ssl.context.service</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>topic</key>
-                        <value>
-                            <name>topic</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>group.id</key>
-                        <value>
-                            <name>group.id</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>auto.offset.reset</key>
-                        <value>
-                            <name>auto.offset.reset</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>key-attribute-encoding</key>
-                        <value>
-                            <name>key-attribute-encoding</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>message-demarcator</key>
-                        <value>
-                            <name>message-demarcator</name>
                         </value>
                     </entry>
                     <entry>
@@ -1646,41 +1608,59 @@ Coordinate|string||0|0|0|Coordinate</value>
                             <name>max-uncommit-offset-wait</name>
                         </value>
                     </entry>
+                    <entry>
+                        <key>group.id</key>
+                        <value>
+                            <name>group.id</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>bootstrap.servers</key>
+                        <value>
+                            <name>bootstrap.servers</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>topic</key>
+                        <value>
+                            <name>topic</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>message-demarcator</key>
+                        <value>
+                            <name>message-demarcator</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>key-attribute-encoding</key>
+                        <value>
+                            <name>key-attribute-encoding</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>auto.offset.reset</key>
+                        <value>
+                            <name>auto.offset.reset</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>sasl.kerberos.service.name</key>
+                        <value>
+                            <name>sasl.kerberos.service.name</name>
+                        </value>
+                    </entry>
                 </descriptors>
                 <executionNode>ALL</executionNode>
                 <lossTolerant>false</lossTolerant>
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>bootstrap.servers</key>
-                        <value>nifi-staging.novalocal:9092</value>
-                    </entry>
-                    <entry>
                         <key>security.protocol</key>
                         <value>PLAINTEXT</value>
                     </entry>
                     <entry>
-                        <key>sasl.kerberos.service.name</key>
-                    </entry>
-                    <entry>
                         <key>ssl.context.service</key>
-                    </entry>
-                    <entry>
-                        <key>topic</key>
-                    </entry>
-                    <entry>
-                        <key>group.id</key>
-                    </entry>
-                    <entry>
-                        <key>auto.offset.reset</key>
-                        <value>latest</value>
-                    </entry>
-                    <entry>
-                        <key>key-attribute-encoding</key>
-                        <value>utf-8</value>
-                    </entry>
-                    <entry>
-                        <key>message-demarcator</key>
                     </entry>
                     <entry>
                         <key>max.poll.records</key>
@@ -1689,6 +1669,30 @@ Coordinate|string||0|0|0|Coordinate</value>
                     <entry>
                         <key>max-uncommit-offset-wait</key>
                         <value>1 secs</value>
+                    </entry>
+                    <entry>
+                        <key>group.id</key>
+                    </entry>
+                    <entry>
+                        <key>bootstrap.servers</key>
+                        <value>nifi-staging.novalocal:9092</value>
+                    </entry>
+                    <entry>
+                        <key>topic</key>
+                    </entry>
+                    <entry>
+                        <key>message-demarcator</key>
+                    </entry>
+                    <entry>
+                        <key>key-attribute-encoding</key>
+                        <value>utf-8</value>
+                    </entry>
+                    <entry>
+                        <key>auto.offset.reset</key>
+                        <value>latest</value>
+                    </entry>
+                    <entry>
+                        <key>sasl.kerberos.service.name</key>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -1723,21 +1727,27 @@ Coordinate|string||0|0|0|Coordinate</value>
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>Directory</key>
+                        <key>Group</key>
                         <value>
-                            <name>Directory</name>
+                            <name>Group</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Conflict Resolution Strategy</key>
+                        <key>Owner</key>
                         <value>
-                            <name>Conflict Resolution Strategy</name>
+                            <name>Owner</name>
                         </value>
                     </entry>
                     <entry>
                         <key>Create Missing Directories</key>
                         <value>
                             <name>Create Missing Directories</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Permissions</key>
+                        <value>
+                            <name>Permissions</name>
                         </value>
                     </entry>
                     <entry>
@@ -1753,21 +1763,15 @@ Coordinate|string||0|0|0|Coordinate</value>
                         </value>
                     </entry>
                     <entry>
-                        <key>Permissions</key>
+                        <key>Directory</key>
                         <value>
-                            <name>Permissions</name>
+                            <name>Directory</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Owner</key>
+                        <key>Conflict Resolution Strategy</key>
                         <value>
-                            <name>Owner</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Group</key>
-                        <value>
-                            <name>Group</name>
+                            <name>Conflict Resolution Strategy</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -1776,16 +1780,17 @@ Coordinate|string||0|0|0|Coordinate</value>
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>Directory</key>
-                        <value>${absolute.path}</value>
+                        <key>Group</key>
                     </entry>
                     <entry>
-                        <key>Conflict Resolution Strategy</key>
-                        <value>fail</value>
+                        <key>Owner</key>
                     </entry>
                     <entry>
                         <key>Create Missing Directories</key>
                         <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>Permissions</key>
                     </entry>
                     <entry>
                         <key>Maximum File Count</key>
@@ -1794,13 +1799,12 @@ Coordinate|string||0|0|0|Coordinate</value>
                         <key>Last Modified Time</key>
                     </entry>
                     <entry>
-                        <key>Permissions</key>
+                        <key>Directory</key>
+                        <value>${absolute.path}</value>
                     </entry>
                     <entry>
-                        <key>Owner</key>
-                    </entry>
-                    <entry>
-                        <key>Group</key>
+                        <key>Conflict Resolution Strategy</key>
+                        <value>fail</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -1822,5 +1826,5 @@ Coordinate|string||0|0|0|Coordinate</value>
             <type>org.apache.nifi.processors.standard.PutFile</type>
         </processors>
     </snippet>
-    <timestamp>09/03/2018 16:08:39 GMT</timestamp>
+    <timestamp>10/15/2018 17:30:51 GMT</timestamp>
 </template>
