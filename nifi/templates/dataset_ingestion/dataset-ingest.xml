@@ -4567,7 +4567,7 @@
                     <entry>
                         <key>Directory</key>
                         <value>${daf.category.folder}/${daf.domain}__${daf.subdomain}/${feed}/
-                            ${daf.category.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/</value>
+${daf.category.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -6929,23 +6929,23 @@
                     <entry>
                         <key>Script Body</key>
                         <value>def flowFile = session.get()
-                            if(!flowFile) return
-                            def json = flowFile.getAttribute("metadata.table.fieldPoliciesJson");
-                            def inputFolder = flowFile.getAttribute("spark.input_folder")
-                            def feed = flowFile.getAttribute("feed")
-                            def category = flowFile.getAttribute("category")
-                            def feedts = flowFile.getAttribute("feedts")
-                            def folder = new File(inputFolder + "/"+category+"/"+feed+"/"+feedts)
-                            // If it doesn't exist
-                            if( !folder.exists() ) {
-                            // Create all folders
-                            folder.mkdirs()
-                            }
-                            def jsonFile = new File(folder,feed+"_field_policy.json")
-                            jsonFile.write(json)
-                            flowFile = session.putAttribute(flowFile,"table_field_policy_json_file",jsonFile.getCanonicalPath())
-                            session.transfer(flowFile, REL_SUCCESS)
-                        </value>
+    if(!flowFile) return
+    def json = flowFile.getAttribute("metadata.table.fieldPoliciesJson");
+    def inputFolder = flowFile.getAttribute("spark.input_folder")
+    def feed = flowFile.getAttribute("feed")
+    def category = flowFile.getAttribute("category")
+    def feedts = flowFile.getAttribute("feedts")
+    def folder = new File(inputFolder + "/"+category+"/"+feed+"/"+feedts)
+    // If it doesn't exist
+    if( !folder.exists() ) {
+    // Create all folders
+    folder.mkdirs()
+    }
+    def jsonFile = new File(folder,feed+"_field_policy.json")
+    jsonFile.write(json)
+    flowFile = session.putAttribute(flowFile,"table_field_policy_json_file",jsonFile.getCanonicalPath())
+    session.transfer(flowFile, REL_SUCCESS)
+</value>
                     </entry>
                     <entry>
                         <key>Module Directory</key>
@@ -7250,12 +7250,12 @@
                     <entry>
                         <key>Directory</key>
                         <value>${daf.type.folder}/kylo
-                            ${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}
-                            ${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}
-                            ${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/valid
-                            ${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/invalid
-                            ${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/feed
-                            ${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/profile</value>
+${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}
+${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}
+${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/valid
+${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/invalid
+${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/feed
+${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/profile</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -7382,7 +7382,7 @@
                     <entry>
                         <key>Directory</key>
                         <value>${daf.type.folder}
-                            ${daf.type.folder}/${daf.domain}__${daf.subdomain}</value>
+${daf.type.folder}/${daf.domain}__${daf.subdomain}</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -8948,8 +8948,8 @@
                     <entry>
                         <key>Statement</key>
                         <value>alter table ${daf.domain}__${daf.subdomain}.${feed}_feed add
-                            if not exists partition (processing_dttm=${feedts})
-                            location '${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/feed/${feedts}/'</value>
+    if not exists partition (processing_dttm=${feedts})
+    location '${daf.type.folder}/kylo/${daf.domain}__${daf.subdomain}/${feed}/feed/${feedts}/'</value>
                     </entry>
                     <entry>
                         <key>Database Connection Pooling Service</key>
@@ -9290,37 +9290,37 @@
                     <entry>
                         <key>Script Body</key>
                         <value>import org.apache.nifi.controller.ControllerService
-                            import org.apache.nifi.processor.ProcessSession
+import org.apache.nifi.processor.ProcessSession
 
-                            session = (ProcessSession) session
+session = (ProcessSession) session
 
-                            flowFile = session.get()
-                            if (!flowFile) return
+flowFile = session.get()
+if (!flowFile) return
 
-                            lookup = context.controllerServiceLookup
-                            impalaThriftServiceName = impalaThriftServiceName.evaluateAttributeExpressions(flowFile).value
-                            invalidateMetadata = invalidateMetadata.evaluateAttributeExpressions(flowFile).value
+lookup = context.controllerServiceLookup
+impalaThriftServiceName = impalaThriftServiceName.evaluateAttributeExpressions(flowFile).value
+invalidateMetadata = invalidateMetadata.evaluateAttributeExpressions(flowFile).value
 
-                            def dbcpServiceCS = lookup.getControllerServiceIdentifiers(ControllerService).find {
-                            cs -&gt; lookup.getControllerServiceName(cs) == impalaThriftServiceName
-                            }
-                            def impalaConnection = lookup.getControllerService(dbcpServiceCS)?.getConnection()
-                            def statement = impalaConnection.prepareCall(invalidateMetadata)
+def dbcpServiceCS = lookup.getControllerServiceIdentifiers(ControllerService).find {
+    cs -&gt; lookup.getControllerServiceName(cs) == impalaThriftServiceName
+}
+def impalaConnection = lookup.getControllerService(dbcpServiceCS)?.getConnection()
+def statement = impalaConnection.prepareCall(invalidateMetadata)
 
-                            try {
-                            statement.execute()
-                            } catch (Exception ex) {
-                            log.error(ex.message)
-                            flowFile = session.putAttribute(flowFile, context.getName() + " Exit code", "FAILED")
-                            flowFile = session.putAttribute(flowFile, context.getName() + " Exit description", ex.message)
-                            flowFile = session.putAttribute(flowFile, "kylo.jobExitDescription", ex.message)
-                            impalaConnection?.close()
-                            session.transfer(flowFile, REL_FAILURE)
-                            return -1
-                            }
+try {
+    statement.execute()
+} catch (Exception ex) {
+    log.error(ex.message)
+    flowFile = session.putAttribute(flowFile, context.getName() + " Exit code", "FAILED")
+    flowFile = session.putAttribute(flowFile, context.getName() + " Exit description", ex.message)
+    flowFile = session.putAttribute(flowFile, "kylo.jobExitDescription", ex.message)
+    impalaConnection?.close()
+    session.transfer(flowFile, REL_FAILURE)
+    return -1
+}
 
-                            impalaConnection?.close()
-                            session.transfer(flowFile, REL_SUCCESS)</value>
+impalaConnection?.close()
+session.transfer(flowFile, REL_SUCCESS)</value>
                     </entry>
                     <entry>
                         <key>Module Directory</key>
@@ -10863,10 +10863,10 @@
                     <entry>
                         <key>hiveTableNames</key>
                         <value>${feed}_feed
-                            ${feed}_valid
-                            ${feed}_invalid
-                            ${feed}_profile
-                            ${feed}</value>
+${feed}_valid
+${feed}_invalid
+${feed}_profile
+${feed}</value>
                     </entry>
                     <entry>
                         <key>hiveSchema</key>
@@ -10984,41 +10984,41 @@
                     <entry>
                         <key>Script Body</key>
                         <value>import groovy.sql.Sql
-                            import org.apache.nifi.controller.ControllerService
-                            import org.apache.nifi.processor.ProcessSession
+import org.apache.nifi.controller.ControllerService
+import org.apache.nifi.processor.ProcessSession
 
-                            session = (ProcessSession) session
+session = (ProcessSession) session
 
-                            flowFile = session.get()
-                            if (!flowFile) return
+flowFile = session.get()
+if (!flowFile) return
 
-                            lookup = context.controllerServiceLookup
-                            hiveThriftServiceName = hiveThriftServiceName.evaluateAttributeExpressions(flowFile).value
-                            grantRoleQueryList = grantRoleQuery.evaluateAttributeExpressions(flowFile).value
+lookup = context.controllerServiceLookup
+hiveThriftServiceName = hiveThriftServiceName.evaluateAttributeExpressions(flowFile).value
+grantRoleQueryList = grantRoleQuery.evaluateAttributeExpressions(flowFile).value
 
-                            def dbcpServiceCS = lookup.getControllerServiceIdentifiers(ControllerService).find {
-                            cs -&gt; lookup.getControllerServiceName(cs) == hiveThriftServiceName
-                            }
-                            def hiveConnection = lookup.getControllerService(dbcpServiceCS)?.getConnection()
-                            def sql = new Sql(hiveConnection)
+def dbcpServiceCS = lookup.getControllerServiceIdentifiers(ControllerService).find {
+    cs -&gt; lookup.getControllerServiceName(cs) == hiveThriftServiceName
+}
+def hiveConnection = lookup.getControllerService(dbcpServiceCS)?.getConnection()
+def sql = new Sql(hiveConnection)
 
-                            try {
-                            // this should not fail
-                            grantRoleQueryList.split(";").each {
-                            sql.execute(it)
-                            }
-                            } catch (Exception ex) {
-                            log.error(ex.message)
-                            flowFile = session.putAttribute(flowFile, context.getName() + " Exit code", "FAILED")
-                            flowFile = session.putAttribute(flowFile, context.getName() + " Exit description", ex.message)
-                            flowFile = session.putAttribute(flowFile, "kylo.jobExitDescription", ex.message)
-                            hiveConnection?.close()
-                            session.transfer(flowFile, REL_FAILURE)
-                            return -1
-                            }
+try {
+    // this should not fail
+    grantRoleQueryList.split(";").each {
+        sql.execute(it)
+    }
+} catch (Exception ex) {
+    log.error(ex.message)
+    flowFile = session.putAttribute(flowFile, context.getName() + " Exit code", "FAILED")
+    flowFile = session.putAttribute(flowFile, context.getName() + " Exit description", ex.message)
+    flowFile = session.putAttribute(flowFile, "kylo.jobExitDescription", ex.message)
+    hiveConnection?.close()
+    session.transfer(flowFile, REL_FAILURE)
+    return -1
+}
 
-                            hiveConnection?.close()
-                            session.transfer(flowFile, REL_SUCCESS)</value>
+hiveConnection?.close()
+session.transfer(flowFile, REL_SUCCESS)</value>
                     </entry>
                     <entry>
                         <key>Module Directory</key>
@@ -11633,5 +11633,5 @@
             <yieldDuration>10 sec</yieldDuration>
         </remoteProcessGroups>
     </snippet>
-    <timestamp>02/14/2019 15:30:17 GMT</timestamp>
+    <timestamp>02/15/2019 15:30:23 GMT</timestamp>
 </template>
