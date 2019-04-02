@@ -1,5 +1,6 @@
 # Base java image
-FROM openjdk:alpine
+# Version 3.7 because on 3.8 Python could not find a version that satisfies the requirement cffi!=1.11.3,>=1.8
+FROM openjdk:alpine3.7
 
 # Set environment
 ENV NIFI_VERSION=1.7.0
@@ -29,15 +30,26 @@ ADD dist/ /usr/nifi/kylo
 RUN mkdir -p /usr/nifi/lib/app
 RUN mkdir -p /usr/nifi/dump
 
-RUN ln -f -s /usr/nifi/kylo/kylo-nifi-core-service-nar-*.nar /usr/nifi/lib/kylo-nifi-core-service-nar.nar
-RUN ln -f -s /usr/nifi/kylo/kylo-nifi-standard-services-nar-*.nar /usr/nifi/lib/kylo-nifi-standard-services-nar.nar
+################################################################################
+################################################################################
+##
+##   WARNING !!! WARNING !!! WARNING !!! WARNING !!! WARNING !!! WARNING !!!
+##
+## When you upgrade to a new version of Kylo or Nifi please double check that
+## you are still making symbolic links to the correct version ho the NARs (e.g.
+## v1 vs v1.2)
+##
+##
 
-RUN ln -f -s /usr/nifi/kylo/kylo-nifi-core-v1-nar-*.nar /usr/nifi/lib/kylo-nifi-core-nar.nar
-RUN ln -f -s /usr/nifi/kylo/kylo-nifi-spark-v1-nar-*.nar /usr/nifi/lib/kylo-nifi-spark-nar.nar
-RUN ln -f -s /usr/nifi/kylo/kylo-nifi-spark-service-v1-nar-*.nar /usr/nifi/lib/kylo-nifi-spark-service-nar.nar
-RUN ln -f -s /usr/nifi/kylo/kylo-nifi-hadoop-v1-nar-*.nar /usr/nifi/lib/kylo-nifi-hadoop-nar.nar
-RUN ln -f -s /usr/nifi/kylo/kylo-nifi-hadoop-service-v1-nar-*.nar /usr/nifi/lib/kylo-nifi-hadoop-service-nar.nar
+RUN ln -f -s /usr/nifi/kylo/kylo-nifi-core-service-v1.2-nar-*.nar /usr/nifi/lib/kylo-nifi-core-service-nar.nar
+RUN ln -f -s /usr/nifi/kylo/kylo-nifi-standard-services-v1.2-nar-*.nar /usr/nifi/lib/kylo-nifi-standard-services-nar.nar
+RUN ln -f -s /usr/nifi/kylo/kylo-nifi-core-v1.2-nar-*.nar /usr/nifi/lib/kylo-nifi-core-nar.nar
+RUN ln -f -s /usr/nifi/kylo/kylo-nifi-spark-v1.2-nar-*.nar /usr/nifi/lib/kylo-nifi-spark-nar.nar
+RUN ln -f -s /usr/nifi/kylo/kylo-nifi-spark-service-v1.2-nar-*.nar /usr/nifi/lib/kylo-nifi-spark-service-nar.nar
+RUN ln -f -s /usr/nifi/kylo/kylo-nifi-hadoop-v1.2-nar-*.nar /usr/nifi/lib/kylo-nifi-hadoop-nar.nar
+RUN ln -f -s /usr/nifi/kylo/kylo-nifi-hadoop-service-v1.2-nar-*.nar /usr/nifi/lib/kylo-nifi-hadoop-service-nar.nar
 RUN ln -f -s /usr/nifi/kylo/kylo-nifi-elasticsearch-v1-nar-*.nar /usr/nifi/lib/kylo-nifi-elasticsearch-nar.nar
+RUN ln -f -s /usr/nifi/kylo/kylo-nifi-teradata-tdch-nar-*.nar /usr/nifi/lib/kylo-nifi-teradata-tdch-nar.nar
 
 # Create links for custom kylo provenance
 RUN ln -f -s /usr/nifi/kylo/kylo-nifi-provenance-repo-v1.2-nar-*.nar /usr/nifi/lib/kylo-nifi-provenance-repo-nar.nar
@@ -46,6 +58,13 @@ RUN ln -f -s /usr/nifi/kylo/kylo-nifi-provenance-repo-v1.2-nar-*.nar /usr/nifi/l
 RUN ln -f -s /usr/nifi/kylo/kylo-spark-validate-cleanse-v2-*-jar-with-dependencies.jar /usr/nifi/lib/app/kylo-spark-validate-cleanse-jar-with-dependencies.jar
 RUN ln -f -s /usr/nifi/kylo/kylo-spark-job-profiler-v2-*-jar-with-dependencies.jar /usr/nifi/lib/app/kylo-spark-job-profiler-jar-with-dependencies.jar
 RUN ln -f -s /usr/nifi/kylo/kylo-spark-interpreter-v2-*-jar-with-dependencies.jar /usr/nifi/lib/app/kylo-spark-interpreter-jar-with-dependencies.jar
+RUN ln -f -s /usr/nifi/kylo/kylo-spark-merge-table-v2-*-jar-with-dependencies.jar /usr/nifi/lib/app/kylo-spark-merge-table-jar-with-dependencies.jar
+RUN ln -f -s /usr/nifi/kylo/kylo-spark-multi-exec-v2-*-jar-with-dependencies.jar /usr/nifi/lib/app/kylo-spark-multi-exec-jar-with-dependencies.jar
+
+##
+##
+################################################################################
+################################################################################
 
 # Create links for Teamdigitale custom processors
 RUN ln -f -s /usr/nifi/kylo/daf/teamdigitale-daf-nifi-processors-*.nar /usr/nifi/lib/teamdigitale-daf-nifi-processors.nar

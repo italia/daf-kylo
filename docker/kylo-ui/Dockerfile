@@ -1,5 +1,5 @@
 # Base java imfkylo-services/libage
-FROM openjdk:alpine
+FROM openjdk:alpine3.7
 
 ENV GLIBC_VERSION=2.25-r0
 
@@ -8,7 +8,7 @@ RUN apk add --update --no-cache wget mysql-client ca-certificates bash java-snap
     update-ca-certificates
 
 # Install glibc
-RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub && \
+RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
     wget -q https://github.com/sgerrand/alpine-pkg-glibc/releases/download/$GLIBC_VERSION/glibc-$GLIBC_VERSION.apk && \
     apk add glibc-$GLIBC_VERSION.apk && \
     rm glibc-$GLIBC_VERSION.apk

@@ -464,6 +464,8 @@ data:
         <logger name="org.apache.nifi.processors.standard.LogAttribute" level="INFO"/>
         <logger name="org.apache.nifi.processors.standard.LogMessage" level="INFO"/>
         <logger name="org.apache.nifi.controller.repository.StandardProcessSession" level="WARN" />
+        #<logger name="com.thinkbiganalytics.nifi.provenance" level="DEBUG"/>
+        #<logger name="com.thinkbiganalytics.nifi.v2.core.feedinit.FeedInitializationChangeEventConsumer" level="DEBUG"/>
 
 
         <logger name="org.apache.zookeeper.ClientCnxn" level="ERROR" />

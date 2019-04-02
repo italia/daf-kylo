@@ -1,5 +1,5 @@
 # Base java image
-FROM openjdk:alpine
+FROM openjdk:alpine3.7
 
 # Set environment
 ENV ACTIVEMQ_VERSION 5.15.1

@@ -2,18 +2,20 @@ default: all
 
 REGISTRY=nexus.teamdigitale.test
 KYLO_SERVICES_PATH=../kylo0.9.1
+#CLEAN=--no-cache
+CLEAN=
 
-.PHONY: activemq 
+.PHONY: activemq
 activemq:
-	docker build -t tba-activemq -f docker/activemq/Dockerfile docker/activemq
-	docker tag tba-activemq $REGISTRY/tba-activemq.5.15.1:1.1.0
+	docker build $(CLEAN) -t tba-activemq -f docker/activemq/Dockerfile docker/activemq
+	docker tag tba-activemq $(REGISTRY)/tba-activemq.5.15.1:1.1.0
 
 .PHONY: mysql
 mysql:
 	mkdir -p docker/mysql/dist
 	cp -R ${KYLO_SERVICES_PATH}/install/install-tar/target/kylo/setup/sql/mysql/kylo/* docker/mysql/dist
-	docker build -t tba-mysql -f docker/mysql/Dockerfile docker/mysql
-	docker tag tba-mysql $REGISTRY/tba-mysql.10.3:1.1.0
+	docker build $(CLEAN) -t tba-mysql -f docker/mysql/Dockerfile docker/mysql
+	docker tag tba-mysql $(REGISTRY)/tba-mysql.10.3:1.1.0
 	rm -dr docker/mysql/dist
 
 .PHONY: kylo-services
@@ -24,8 +26,8 @@ kylo-services:
 		cp -R ${KYLO_SERVICES_PATH}/install/install-tar/target/kylo/kylo-services/plugin docker/kylo-services/dist/kylo-services
 		cp -R ${KYLO_SERVICES_PATH}/install/install-tar/target/kylo/bin docker/kylo-services/dist
 		cp -R ${KYLO_SERVICES_PATH}/install/install-tar/target/kylo/lib docker/kylo-services/dist
-		docker build -t tba-kylo-services -f docker/kylo-services/Dockerfile docker/kylo-services
-		docker tag tba-kylo-services ${REGISTRY}/tba-kylo-services.9.1:3.0.1
+		docker build $(CLEAN) -t tba-kylo-services -f docker/kylo-services/Dockerfile docker/kylo-services
+		docker tag tba-kylo-services $(REGISTRY)/tba-kylo-services.9.1:3.0.1
 		rm -dr docker/kylo-services/dist
 
 .PHONY: kylo-ui
@@ -35,17 +37,20 @@ kylo-ui:
 		cp -R ${KYLO_SERVICES_PATH}/install/install-tar/target/kylo/kylo-ui/plugin docker/kylo-ui/dist/kylo-ui
 		cp -R ${KYLO_SERVICES_PATH}/install/install-tar/target/kylo/bin docker/kylo-ui/dist
 		cp -R ${KYLO_SERVICES_PATH}/install/install-tar/target/kylo/lib docker/kylo-ui/dist
-		docker build -t tba-kylo-ui -f docker/kylo-ui/Dockerfile docker/kylo-ui
-		docker tag tba-kylo-ui ${REGISTRY}/tba-kylo-ui.9.1:3.0.1
+		docker build $(CLEAN) -t tba-kylo-ui -f docker/kylo-ui/Dockerfile docker/kylo-ui
+		docker tag tba-kylo-ui $(REGISTRY)/tba-kylo-ui.9.1:3.0.1
 		rm -dr docker/kylo-ui/dist
 
 .PHONY: nifi
 nifi:
 		mkdir -p docker/nifi/dist/daf
 		cp -R ${KYLO_SERVICES_PATH}/install/install-tar/target/kylo/setup/nifi/* docker/nifi/dist
+		# Apply KYLO-2894 fix
+		if [ ! -e ~/kylo-nifi-provenance-repo-v1.2-nar-0.9.1.4-SNAPSHOT.nar ]; then wget https://s3-us-west-2.amazonaws.com/thinkbig.kylo/KYLO-2894/kylo-nifi-provenance-repo-v1.2-nar-0.9.1.4-SNAPSHOT.nar -O ~/kylo-nifi-provenance-repo-v1.2-nar-0.9.1.4-SNAPSHOT.nar; fi
+		cp ~/kylo-nifi-provenance-repo-v1.2-nar-0.9.1.4-SNAPSHOT.nar docker/nifi/dist/kylo-nifi-provenance-repo-v1.2-nar-0.9.1.3.nar
 		cp -R ./nifi/extensions/processors/target/*.nar docker/nifi/dist/daf
-		docker build -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
-		docker tag tba-nifi ${REGISTRY}/tba-nifi.1.7.0:9.3.1
+		docker build $(CLEAN) -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
+		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.7.0:9.3.1
 		rm -dr docker/nifi/dist
 
 .PHONY: build-kylo

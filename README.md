@@ -7,7 +7,7 @@
 
 ## Kylo Stack
 
-[Kylo stack dependencies](http://kylo.readthedocs.io/en/v0.8.3/installation/Dependencies.html#kylo-stack-dependencies)
+[Kylo stack dependencies](http://kylo.readthedocs.io/en/v0.9.1/installation/Dependencies.html#kylo-stack-dependencies)
 
 ### Kylo components
 

@@ -29,6 +29,10 @@ spec:
         hostnames:
         - "cloudera-master-staging-3.novalocal"
         - "master-staging-3"
+      - ip: "192.168.30.24"
+        hostnames:
+        - "cloudera-slave-10.novalocal"
+        - "slave10"
       - ip: "192.168.30.13"
         hostnames:
         - "slave1.novalocal"
@@ -79,8 +83,7 @@ spec:
         - name: regsecret
       containers:
       - name: tba-nifi
-        # TODO: modify image to support NIFI_ADDITIONAL_SEARCH_DOMAINS, move other setting in to config map
-        image: nexus.teamdigitale.test/tba-nifi.1.7.0:9.3.1
+        image: nexus.teamdigitale.test/tba-nifi.1.7.0.fix:9.3.1
         env:
         - name: NIFI_ADDITIONAL_SEARCH_DOMAINS
           value: "tba-nifi.default.svc.cluster.local teamdigitale.test"
