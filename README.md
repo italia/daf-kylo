@@ -43,6 +43,8 @@ make -f Makefile.test build-kylo
 ```
 
 This will use `Makefile` to download the code and compile it.
+### Login to nexus repository 
+`docker login nexus.daf.teamdigitale.it`
 
 ### Build Docker images of the components
 Once this is completed build every image:
@@ -67,6 +69,7 @@ This will use `Makefile` to download the basic empty images and build our custom
 
 
 ### Push Docker images to local artifactory repository
+Check if this docker setting are correct and to do in the installation
 Please ensure previously configuration of docker client as well as correct tagging the image has been performed. 'How to' can be found in:
 [TeamDigitale onboarding  'Setup Docker '](https://docs.google.com/document/d/1KqeaZ2yj7rofslqzklYTCLb3AxPnV1mzOgSXOuTHTyw/edit?ts=59faf23f&pli=1#heading=h.ubxuumcef218)
 [TeamDigitale onboarding  'Push Docker Image'](https://docs.google.com/document/d/1KqeaZ2yj7rofslqzklYTCLb3AxPnV1mzOgSXOuTHTyw/edit?ts=59faf23f&pli=1#heading=h.47zm3aqq5wip)

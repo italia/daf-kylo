@@ -32,7 +32,7 @@ kylo-services:
 		cp -R ${KYLO_SERVICES_PATH}/install/install-tar/target/kylo/bin docker/kylo-services/dist
 		cp -R ${KYLO_SERVICES_PATH}/install/install-tar/target/kylo/lib docker/kylo-services/dist
 		docker build $(CLEAN) -t tba-kylo-services -f docker/kylo-services/Dockerfile docker/kylo-services
-		docker tag tba-kylo-services $(REGISTRY)/tba-kylo-services.9.1:3.0.1
+		docker tag tba-kylo-services $(REGISTRY)/tba-kylo-services-fix.9.1:3.0.1
 		rm -dr docker/kylo-services/dist
 
 .PHONY: kylo-ui
@@ -60,7 +60,7 @@ nifi:
 		cp nifi/patch/kylo-nifi-provenance-repo-v1.2-nar-0.9.1.4-SNAPSHOT.nar docker/nifi/dist/kylo-nifi-provenance-repo-v1.2-nar-0.9.1.3.nar
 		cp -R ./nifi/extensions/processors/target/*.nar docker/nifi/dist/daf
 		docker build $(CLEAN) -t tba-nifi -f docker/nifi/Dockerfile docker/nifi
-		docker tag tba-nifi $(REGISTRY)/tba-nifi.1.7.0:9.3.1
+		docker tag tba-nifi $(REGISTRY)/tba-nifi-fix.1.7.0:9.3.1
 		rm -dr docker/nifi/dist
 
 .PHONY: build-kylo
@@ -84,4 +84,3 @@ daf-kylo:
 
 clean:
 	rm -rf ${KYLO_SERVICES_PATH}
-	rm -rf docker
