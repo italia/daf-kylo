@@ -2,52 +2,8 @@
 <template encoding-version="1.2">
     <description></description>
     <groupId>b8199846-5449-3c12-b739-cd9434d2e46b</groupId>
-    <name>opendata_kafka</name>
+    <name>opendata_ingestion_31_05</name>
     <snippet>
-        <connections>
-            <id>095aef9f-a1d2-3b20-0000-000000000000</id>
-            <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <bends>
-                <x>1183.964856629172</x>
-                <y>205.41153848891236</y>
-            </bends>
-            <destination>
-                <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
-                <id>a498a228-01a8-3f22-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <name></name>
-            <source>
-                <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
-                <id>43f34f95-c6c4-3ea5-0000-000000000000</id>
-                <type>INPUT_PORT</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
-            <id>09f9517f-9b86-3f0d-0000-000000000000</id>
-            <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <destination>
-                <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
-                <id>a8e6c8c7-a72a-3d60-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <name></name>
-            <source>
-                <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
-                <id>43f34f95-c6c4-3ea5-0000-000000000000</id>
-                <type>INPUT_PORT</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
         <connections>
             <id>0b03a6fc-2d6e-3947-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
@@ -112,13 +68,17 @@
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>2187c3fc-45e8-3d50-0000-000000000000</id>
+            <id>1b2f9948-add2-3e10-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
-                <x>789.2802557990938</x>
-                <y>45.331216223287356</y>
+                <x>2070.8853258071035</x>
+                <y>722.9270273411585</y>
+            </bends>
+            <bends>
+                <x>2069.8300889906973</x>
+                <y>265.79665624740846</y>
             </bends>
             <destination>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
@@ -128,10 +88,11 @@
             <flowFileExpiration>0 sec</flowFileExpiration>
             <labelIndex>1</labelIndex>
             <name></name>
+            <selectedRelationships>retry</selectedRelationships>
             <source>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
-                <id>43f34f95-c6c4-3ea5-0000-000000000000</id>
-                <type>INPUT_PORT</type>
+                <id>905d182f-2ab8-364c-0000-000000000000</id>
+                <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
@@ -220,35 +181,6 @@
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>55f89359-fe0f-3d9d-0000-000000000000</id>
-            <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <bends>
-                <x>2105.264739275889</x>
-                <y>227.17578125</y>
-            </bends>
-            <bends>
-                <x>2102.545989275889</x>
-                <y>537.532958984375</y>
-            </bends>
-            <destination>
-                <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
-                <id>f990af69-8d43-345d-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <name></name>
-            <selectedRelationships>original</selectedRelationships>
-            <source>
-                <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
-                <id>171c7b8d-626e-3e8b-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
             <id>58da8d98-166d-3f0a-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
@@ -295,6 +227,14 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <bends>
+                <x>2710.9956668627688</x>
+                <y>1402.5824834488503</y>
+            </bends>
+            <bends>
+                <x>2769.6173709643313</x>
+                <y>1541.8471318863503</y>
+            </bends>
             <destination>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
                 <id>9fc37bed-db90-3c11-0000-000000000000</id>
@@ -318,7 +258,7 @@
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
                 <x>1346.6654438834694</x>
-                <y>694.8986010357926</y>
+                <y>696.4418139264176</y>
             </bends>
             <destination>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
@@ -379,6 +319,27 @@
             <zIndex>0</zIndex>
         </connections>
         <connections>
+            <id>8053a52a-ea2a-3e7d-0000-000000000000</id>
+            <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
+                <id>72875f23-a910-3ae4-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
+                <id>8cf0b6fc-1504-3800-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
             <id>8a67578e-4fc8-374f-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
@@ -406,7 +367,7 @@
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
                 <x>1198.6848992639357</x>
-                <y>2618.4788787669386</y>
+                <y>2620.0220916575636</y>
             </bends>
             <destination>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
@@ -430,8 +391,8 @@
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
-                <x>1011.6591601417451</x>
-                <y>324.96915567641236</y>
+                <x>1211.5054049537569</x>
+                <y>251.90299356703736</y>
             </bends>
             <destination>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
@@ -455,7 +416,7 @@
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
                 <x>998.6848992639358</x>
-                <y>2618.4788787669386</y>
+                <y>2620.0220916575636</y>
             </bends>
             <destination>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
@@ -543,7 +504,7 @@
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
                 <x>398.6848992639358</x>
-                <y>2618.4788787669386</y>
+                <y>2620.0220916575636</y>
             </bends>
             <destination>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
@@ -568,7 +529,7 @@
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
-                <id>72875f23-a910-3ae4-0000-000000000000</id>
+                <id>8cf0b6fc-1504-3800-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -587,13 +548,21 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <bends>
+                <x>2028.4243883071035</x>
+                <y>1168.9548593724085</y>
+            </bends>
+            <bends>
+                <x>2032.385692018041</x>
+                <y>1207.7934824192835</y>
+            </bends>
             <destination>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
                 <id>46c3aac2-83f3-3d04-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
+            <labelIndex>0</labelIndex>
             <name></name>
             <selectedRelationships>failure</selectedRelationships>
             <source>
@@ -625,10 +594,18 @@
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>e838b049-fbcc-35da-0000-000000000000</id>
+            <id>ed2299ef-9ab9-3910-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <bends>
+                <x>1971.1739247950886</x>
+                <y>507.23070489992006</y>
+            </bends>
+            <bends>
+                <x>1968.0874990138386</x>
+                <y>652.909171696795</y>
+            </bends>
             <destination>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
                 <id>4b309765-8ad8-313c-0000-000000000000</id>
@@ -652,7 +629,7 @@
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
                 <x>1223.8901299768263</x>
-                <y>2301.8509490794386</y>
+                <y>2303.3941619700636</y>
             </bends>
             <destination>
                 <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
@@ -691,17 +668,38 @@
             </source>
             <zIndex>0</zIndex>
         </connections>
+        <connections>
+            <id>ff695d65-5b7f-3ece-0000-000000000000</id>
+            <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
+                <id>3b0a2e74-9780-34ce-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <selectedRelationships>failure</selectedRelationships>
+            <source>
+                <groupId>2101450a-3b09-341f-0000-000000000000</groupId>
+                <id>8cf0b6fc-1504-3800-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
         <inputPorts>
             <id>43f34f95-c6c4-3ea5-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>667.3169673062035</x>
-                <y>224.65665252879126</y>
+                <y>226.19986541941626</y>
             </position>
             <comments></comments>
             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
             <name>Copy of RemotePortToOpendata</name>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <type>INPUT_PORT</type>
         </inputPorts>
         <labels>
@@ -709,7 +707,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>0.0</x>
-                <y>1299.7347376106172</y>
+                <y>1301.2779505012422</y>
             </position>
             <height>967.2638244628906</height>
             <label>SET OWNERS AND PERMISSIONS</label>
@@ -726,7 +724,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>2187.474229552891</x>
-                <y>1083.4973665933594</y>
+                <y>1085.0405794839844</y>
             </position>
             <height>684.2537689208984</height>
             <label>FAILURE REGION</label>
@@ -746,7 +744,7 @@
             <id>171c7b8d-626e-3e8b-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
-                <x>1465.7549126157328</x>
+                <x>1479.6437675962015</x>
                 <y>0.0</y>
             </position>
             <bundle>
@@ -855,7 +853,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>614.8685626644532</x>
-                <y>2042.5589049358132</y>
+                <y>2044.1021178264382</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -960,7 +958,7 @@
                 <autoTerminate>true</autoTerminate>
                 <name>output stream</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style>
                 <entry>
                     <key>background-color</key>
@@ -974,7 +972,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>618.8934802669922</x>
-                <y>2417.9436103901826</y>
+                <y>2419.4868232808076</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1301,7 +1299,7 @@
                 <autoTerminate>false</autoTerminate>
                 <name>Retry</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
         </processors>
@@ -1310,7 +1308,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>609.4888223335265</x>
-                <y>1551.741487144035</y>
+                <y>1553.28470003466</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1320,7 +1318,7 @@
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
                 <comments>Imposta il proprietario della cartella a livello dell'organizzazione
-</comments>
+                </comments>
                 <concurrentlySchedulableTaskCount>0</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
@@ -1416,7 +1414,7 @@
                 <autoTerminate>true</autoTerminate>
                 <name>output stream</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style>
                 <entry>
                     <key>background-color</key>
@@ -1430,7 +1428,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>1677.8732474069861</x>
-                <y>1368.8964078408872</y>
+                <y>1370.4396207315122</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -1496,7 +1494,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>2255.9956668627688</x>
-                <y>1158.7752807892084</y>
+                <y>1160.3184936798334</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -1563,7 +1561,7 @@
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style>
                 <entry>
                     <key>background-color</key>
@@ -1576,8 +1574,8 @@
             <id>4b309765-8ad8-313c-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
-                <x>1522.702098268041</x>
-                <y>760.9098085937708</y>
+                <x>1513.0875600489949</x>
+                <y>731.5887636718958</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -1734,7 +1732,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>143.37844788284292</x>
-                <y>2042.5589049358132</y>
+                <y>2044.1021178264382</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1744,7 +1742,7 @@
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
                 <comments>Imposta il proprietario della cartella a livello della tabella
-</comments>
+                </comments>
                 <concurrentlySchedulableTaskCount>0</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
@@ -1840,7 +1838,7 @@
                 <autoTerminate>true</autoTerminate>
                 <name>output stream</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style>
                 <entry>
                     <key>background-color</key>
@@ -1854,7 +1852,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>143.37844788284292</x>
-                <y>1785.576514555214</y>
+                <y>1787.119727445839</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -1864,7 +1862,7 @@
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
                 <comments>Imposta i permessi a livello del db
-</comments>
+                </comments>
                 <concurrentlySchedulableTaskCount>0</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
@@ -1960,7 +1958,7 @@
                 <autoTerminate>true</autoTerminate>
                 <name>output stream</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style>
                 <entry>
                     <key>background-color</key>
@@ -1974,7 +1972,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>819.2000901275268</x>
-                <y>755.7552178747901</y>
+                <y>757.2984307654151</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -2050,7 +2048,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>988.9105751546615</x>
-                <y>1127.0378671849085</y>
+                <y>1128.5810800755335</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -2060,7 +2058,7 @@
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
                 <comments>Viene creato il json da inviare a superset
-</comments>
+                </comments>
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
@@ -2142,7 +2140,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>1229.5434334968832</x>
-                <y>1874.439660058033</y>
+                <y>1875.982872948658</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -2209,7 +2207,7 @@
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style>
                 <entry>
                     <key>background-color</key>
@@ -2223,7 +2221,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>2255.9956668627688</x>
-                <y>1361.0392705582253</y>
+                <y>1362.5824834488503</y>
             </position>
             <bundle>
                 <artifact>nifi-hadoop-nar</artifact>
@@ -2355,7 +2353,7 @@
                     </entry>
                     <entry>
                         <key>Directory</key>
-                        <value>/daf/opendata/failed/${path}</value>
+                        <value>/daf/opendata/failed/${daf.organization}/${daf.db}/${daf.table}</value>
                     </entry>
                     <entry>
                         <key>Conflict Resolution Strategy</key>
@@ -2401,7 +2399,7 @@
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
         </processors>
@@ -2410,7 +2408,7 @@
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>609.4888223335265</x>
-                <y>1785.576514555214</y>
+                <y>1787.119727445839</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -2515,7 +2513,7 @@
                 <autoTerminate>true</autoTerminate>
                 <name>output stream</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style>
                 <entry>
                     <key>background-color</key>
@@ -2528,8 +2526,8 @@
             <id>8cf0b6fc-1504-3800-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
-                <x>2240.1824942992484</x>
-                <y>725.7613203299325</y>
+                <x>1214.1732169554984</x>
+                <y>1390.9898359549325</y>
             </position>
             <bundle>
                 <artifact>nifi-scripting-nar</artifact>
@@ -2592,49 +2590,49 @@
                     <entry>
                         <key>Script Body</key>
                         <value>import org.apache.nifi.controller.ControllerService
-import org.apache.nifi.processor.ProcessSession
+                            import org.apache.nifi.processor.ProcessSession
 
-session = (ProcessSession) session
+                            session = (ProcessSession) session
 
-flowFile = session.get()
-if (!flowFile) return
+                            flowFile = session.get()
+                            if (!flowFile) return
 
-lookup = context.controllerServiceLookup
-impalaThriftServiceName = impalaThriftServiceName.evaluateAttributeExpressions(flowFile).value
-invalidateMetadata = invalidateMetadata.evaluateAttributeExpressions(flowFile).value
+                            lookup = context.controllerServiceLookup
+                            impalaThriftServiceName = impalaThriftServiceName.evaluateAttributeExpressions(flowFile).value
+                            invalidateMetadata = invalidateMetadata.evaluateAttributeExpressions(flowFile).value
 
-def numb = (flowFile.getAttribute('count') as int)
+                            def numb = (flowFile.getAttribute('count') as int)
 
-//we already got one file, let's get the rest NUMB-1 files from incoming queue
-def flowFiles = session.get(numb-1)
-if (!flowFiles || flowFiles.size()&lt;numb-1){
-    //rollback everything we got from incoming queue
-    session.rollback()
-}else{
-    //transfer first and other files to success
-    log.info('-------------------Execute 1 operation for {} incoming files-----------------', numb)
-    def dbcpServiceCS = lookup.getControllerServiceIdentifiers(ControllerService).find {
-    cs -&gt; lookup.getControllerServiceName(cs) == impalaThriftServiceName
-}
-def impalaConnection = lookup.getControllerService(dbcpServiceCS)?.getConnection()
-def statement = impalaConnection.prepareCall(invalidateMetadata)
+                            //we already got one file, let's get the rest NUMB-1 files from incoming queue
+                            def flowFiles = session.get(numb-1)
+                            if (!flowFiles || flowFiles.size()&lt;numb-1){
+                            //rollback everything we got from incoming queue
+                            session.rollback()
+                            }else{
+                            //transfer first and other files to success
+                            log.info('-------------------Execute 1 operation for {} incoming files-----------------', numb)
+                            def dbcpServiceCS = lookup.getControllerServiceIdentifiers(ControllerService).find {
+                            cs -&gt; lookup.getControllerServiceName(cs) == impalaThriftServiceName
+                            }
+                            def impalaConnection = lookup.getControllerService(dbcpServiceCS)?.getConnection()
+                            def statement = impalaConnection.prepareCall(invalidateMetadata)
 
-try {
-    statement.execute()
-} catch (Exception ex) {
-    log.error(ex.message)
-    flowFile = session.putAttribute(flowFile, context.getName() + " Exit code", "FAILED")
-    flowFile = session.putAttribute(flowFile, context.getName() + " Exit description", ex.message)
-    flowFile = session.putAttribute(flowFile, "kylo.jobExitDescription", ex.message)
-    impalaConnection?.close()
-    session.transfer(flowFile, REL_FAILURE)
-    return -1
-}
+                            try {
+                            statement.execute()
+                            } catch (Exception ex) {
+                            log.error(ex.message)
+                            flowFile = session.putAttribute(flowFile, context.getName() + " Exit code", "FAILED")
+                            flowFile = session.putAttribute(flowFile, context.getName() + " Exit description", ex.message)
+                            flowFile = session.putAttribute(flowFile, "kylo.jobExitDescription", ex.message)
+                            impalaConnection?.close()
+                            session.transfer(flowFile, REL_FAILURE)
+                            return -1
+                            }
 
-impalaConnection?.close()
-session.transfer(flowFile, REL_SUCCESS)
-}
-</value>
+                            impalaConnection?.close()
+                            session.transfer(flowFile, REL_SUCCESS)
+                            }
+                        </value>
                     </entry>
                     <entry>
                         <key>Module Directory</key>
@@ -2676,8 +2674,8 @@ session.transfer(flowFile, REL_SUCCESS)
             <id>905d182f-2ab8-364c-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
-                <x>1519.326854127416</x>
-                <y>1127.0378671849085</y>
+                <x>1516.1739247950886</x>
+                <y>1128.5810800755335</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -2702,6 +2700,12 @@ session.transfer(flowFile, REL_SUCCESS)
                         </value>
                     </entry>
                     <entry>
+                        <key>retry</key>
+                        <value>
+                            <name>retry</name>
+                        </value>
+                    </entry>
+                    <entry>
                         <key>success</key>
                         <value>
                             <name>success</name>
@@ -2721,6 +2725,10 @@ session.transfer(flowFile, REL_SUCCESS)
                         <value>${failure:contains('true'):or(${execution.error:isEmpty():not()})}</value>
                     </entry>
                     <entry>
+                        <key>retry</key>
+                        <value>${failure:contains('retry')}</value>
+                    </entry>
+                    <entry>
                         <key>success</key>
                         <value>${failure:contains('false'):and(${execution.status:equals('0')})}</value>
                     </entry>
@@ -2735,6 +2743,10 @@ session.transfer(flowFile, REL_SUCCESS)
             <relationships>
                 <autoTerminate>false</autoTerminate>
                 <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>retry</name>
             </relationships>
             <relationships>
                 <autoTerminate>false</autoTerminate>
@@ -2753,7 +2765,7 @@ session.transfer(flowFile, REL_SUCCESS)
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>2255.9956668627688</x>
-                <y>1603.5313537872553</y>
+                <y>1605.0745666778803</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -2823,8 +2835,8 @@ session.transfer(flowFile, REL_SUCCESS)
             <id>a498a228-01a8-3f22-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
-                <x>1504.9082635291675</x>
-                <y>184.65665252879126</y>
+                <x>1516.1739247950886</x>
+                <y>199.10489471629126</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -2834,7 +2846,7 @@ session.transfer(flowFile, REL_SUCCESS)
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
                 <comments>Viene eseguito un comando da command line. Il comando esegue uno script python che sostanzialmente crea database e tabella su Impala se non esiste.
-</comments>
+                </comments>
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
@@ -2910,7 +2922,7 @@ session.transfer(flowFile, REL_SUCCESS)
                     </entry>
                     <entry>
                         <key>Max Attribute Length</key>
-                        <value>256</value>
+                        <value>2000</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -2933,7 +2945,7 @@ session.transfer(flowFile, REL_SUCCESS)
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>612.221004817026</x>
-                <y>404.22836376727537</y>
+                <y>405.77157665790037</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -2999,7 +3011,7 @@ session.transfer(flowFile, REL_SUCCESS)
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>628.4763182608793</x>
-                <y>2689.0141471436946</y>
+                <y>2690.5573600343196</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -3065,7 +3077,7 @@ session.transfer(flowFile, REL_SUCCESS)
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>333.14906643780193</x>
-                <y>1127.0378671849085</y>
+                <y>1128.5810800755335</y>
             </position>
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
@@ -3123,7 +3135,7 @@ session.transfer(flowFile, REL_SUCCESS)
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
         </processors>
@@ -3132,7 +3144,7 @@ session.transfer(flowFile, REL_SUCCESS)
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>461.3870277596927</x>
-                <y>1345.3159433567835</y>
+                <y>1346.8591562474085</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -3237,7 +3249,7 @@ session.transfer(flowFile, REL_SUCCESS)
                 <autoTerminate>true</autoTerminate>
                 <name>output stream</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style>
                 <entry>
                     <key>background-color</key>
@@ -3251,7 +3263,7 @@ session.transfer(flowFile, REL_SUCCESS)
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
                 <x>129.1422341987609</x>
-                <y>1551.741487144035</y>
+                <y>1553.28470003466</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -3356,7 +3368,7 @@ session.transfer(flowFile, REL_SUCCESS)
                 <autoTerminate>true</autoTerminate>
                 <name>output stream</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style>
                 <entry>
                     <key>background-color</key>
@@ -3369,8 +3381,8 @@ session.transfer(flowFile, REL_SUCCESS)
             <id>f990af69-8d43-345d-0000-000000000000</id>
             <parentGroupId>2101450a-3b09-341f-0000-000000000000</parentGroupId>
             <position>
-                <x>1512.2969124465408</x>
-                <y>465.68749200929506</y>
+                <x>1516.1739247950886</x>
+                <y>467.23070489992006</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -3497,10 +3509,10 @@ session.transfer(flowFile, REL_SUCCESS)
                 <autoTerminate>false</autoTerminate>
                 <name>unmatched</name>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
         </processors>
     </snippet>
-    <timestamp>05/27/2019 06:33:22 GMT</timestamp>
+    <timestamp>05/31/2019 07:25:28 GMT</timestamp>
 </template>
