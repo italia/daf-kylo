@@ -1,6 +1,5 @@
 # Daf-Kylo for PDND (Piattaforma Digitale Nazionale Dati), previously DAF (Data & Analytics Framework)
 
-<!-- > Insert here the application logo and badges if present. -->
 
 > In order to install and use this repo you may deploy all the components into a _cloudera_ shared edge node.
 
@@ -16,7 +15,6 @@ In brief, is an attempt to establish a central Chief Data Officer (CDO) for the 
 
 ## What is Daf-Kylo?
 
-<!--> Insert here an extended description of the project with informations about context, goals, stakeholders, use cases, and finally the role of the project within the PDND with links to other repositories requiring this code or this code depends on. Embed also screenshots or video if present to give a preview of the application.-->
 > Daf-Kylo repository contains the set of components used to deploy and manage the PDND data ingestion process.
 
 > Folder /docker contains all the docker files for build images of daf-kylo components.
@@ -32,7 +30,6 @@ In brief, is an attempt to establish a central Chief Data Officer (CDO) for the 
 
 
 
-<!--> Insert here informations about files and folders structure, branch model adopted and release policy.-->
 
 ### Prerequisites 
 
@@ -56,7 +53,6 @@ Project Daf-Kylo depends by the following components.
 
 ## How to install and use Daf-Kylo 
 
-<!--> Insert here a brief documentation to use this project as an end-user (not a developer) if applicable, including pre-requisites and internal and external dependencies. Insert a link to an extended documentation (user manual) if present.-->
 
 ### MacOS and Linux
 Installing Daf-Kylo on Unix-like systems requires a package manager such as Homebrew. You can download and install Homebrew following the instructions given in the [Homebrew official website]([https://brew.sh/](https://brew.sh/)). Once you have installed Homebrew, you can follow some steps to complete the setup. First step is Homebrew cask installation. Open a terminal and type the following command to install Homebrew cask:
@@ -74,7 +70,6 @@ brew install kubectl rpm make git
 
 ## How to build Daf-Kylo
 
-<!--> Insert here a brief documentation for the developer to build, test and contribute. Insert a link to an extended documentation (developer manual) if present.-->
 To build most of Docker images, kylo code is required (source and compiled). To get it run, you have to download and compile it, using `Makefile`, by typing the following commands (production and test environment):
 
   #### Production  
@@ -97,7 +92,6 @@ docker login nexus.daf.teamdigitale.it
 
 ### Build Docker images of the components  
 Once this is completed, you can build every image (production and test environment), by typing the following comands:  
-<!-- This will use `Makefile` to download the basic empty images and build our custom docker images with required tagging. -->
   #### Production  
 ```  
 make activemq
